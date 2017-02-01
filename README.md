@@ -3,7 +3,7 @@
 How to start locally:
 
 ```
-Start Storybook: npm run storybook
+npm run storybook
 ```
 
 Then open [http://localhost:9001](http://localhost:9001/) in your browser.
