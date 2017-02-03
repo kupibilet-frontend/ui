@@ -1,0 +1,30 @@
+{
+  "name": "kupibilet-uikit",
+  "version": "1.0.0",
+  "description": "UI kit for kupibilet web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start-storybook -p 9001 -c .storybook",
+    "build": "build-storybook",
+    "lint:css": "stylelint \"./components/**/*.js\"",
+    "lint:js": "eslint \"./components/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.amazon/frontend/ui"
+  },
+  "author": "Kupibilet.ru Frontend Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
+    "eslint-config-kupibilet": "^6.1.0",
+    "stylelint-config-kupibilet": "^2.0.1",
+    "stylelint-processor-styled-components": "0.0.4"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.2"
+  }
+}
