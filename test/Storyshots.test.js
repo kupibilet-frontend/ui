@@ -1,3 +1,3 @@
-import initStoryshots from 'storyshots'
+const initStoryshots = require('storyshots').default
 
 initStoryshots()
