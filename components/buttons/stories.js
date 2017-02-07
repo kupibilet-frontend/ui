@@ -1,20 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
+import { text } from '@kadira/storybook-addon-knobs'
+
 import Button from './index'
 
-storiesOf('Buttons', module)
-  .addDecorator((story) => (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-      }}
-    >
-      {story()}
-    </div>
-  ))
-  .add('Button', () => (
-    <Button>Авиабилеты</Button>
-  ))
+storiesOf('Buttons', module).addWithInfo(
+  'Button',
+  `
+    description
+  `,
+  () => (
+    <Button>{text('text', 'Авиабилеты')}</Button>
+  ),
+)

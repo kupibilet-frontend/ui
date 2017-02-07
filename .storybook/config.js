@@ -1,9 +1,29 @@
-import { configure } from '@kadira/storybook';
+import { configure, setAddon, addDecorator } from '@kadira/storybook'
+import centered from '@kadira/react-storybook-decorator-centered'
+import { withKnobs } from '@kadira/storybook-addon-knobs'
+import infoAddon from '@kadira/react-storybook-addon-info'
 
-const req = require.context('../components', true, /stories.js$/)
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-function loadStories() {
-  req.keys().forEach((filename) => req(filename))
+
+setAddon(infoAddon)
+
+addDecorator(centered)
+addDecorator(withKnobs)
+
+
+const theme = {
+  main: 'mediumseagreen',
 }
 
-configure(loadStories, module)
+addDecorator((story) => (
+  <ThemeProvider theme={theme}>
+    {story()}
+  </ThemeProvider>
+))
+
+const req = require.context('../components', true, /stories.js$/)
+const loadStories = () => req.keys().forEach((filename) => req(filename))
+
+configure((loadStories), module)

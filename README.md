@@ -1,6 +1,6 @@
 # UI kit for Kupibilet.ru
 
-How to start locally:
+## How to start locally:
 
 ```
 npm run storybook
@@ -8,7 +8,15 @@ npm run storybook
 
 Then open [http://localhost:9001](http://localhost:9001/) in your browser.
 
-References:
+
+## Supported addons
+
+* [react-storybook-addon-info](https://github.com/storybooks/react-storybook-addon-info)
+* [storybook-addon-options](https://github.com/storybooks/storybook-addon-options)
+* [storybook-addon-knobs](https://github.com/storybooks/storybook-addon-knobs)
+
+
+## References:
 
 1. https://ant.design/components/
 2. http://dev.office.com/fabric#/components

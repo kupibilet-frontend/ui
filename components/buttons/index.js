@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const ButtonText = styled.button`
   -webkit-font-smoothing: antialiased;
   align-items: center;
-  background: #38afff;
+  background: ${(props) => props.theme.main};
   border-radius: 2rem;
   border: none;
   color: white;

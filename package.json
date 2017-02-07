@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 9001 -c .storybook",
     "build": "build-storybook",
-    "lint:css": "stylelint \"./components/**/*.js\"",
-    "lint:js": "eslint \"./components/**/*.js\"",
+    "lint:css": "stylelint ./components/**/*.js",
+    "lint:js": "eslint ./components/**/*.js",
+    "jest": "jest",
     "postinstall": "move-bin"
   },
   "repository": {
@@ -18,15 +19,23 @@
   "author": "Kupibilet.ru Frontend Team",
   "license": "MIT",
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
+    "@kadira/react-storybook-decorator-centered": "^1.0.0",
     "@kadira/storybook": "^2.35.3",
-    "eslint-config-kupibilet": "^6.1.0",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
+    "@kadira/storybook-addon-options": "^1.0.1",
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.22.0",
+    "eslint-config-kupibilet": "^8.1.1",
+    "jest": "^18.1.0",
     "move-binaries-to-bin": "^1.0.1",
-    "stylelint-config-kupibilet": "^2.0.1",
+    "stylelint-config-kupibilet": "^3.0.0",
     "stylelint-processor-styled-components": "0.0.4"
   },
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "storyshots": "^3.2.1",
     "styled-components": "^1.4.2"
   }
 }
