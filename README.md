@@ -14,6 +14,7 @@ Then open [http://localhost:9001](http://localhost:9001/) in your browser.
 * [react-storybook-addon-info](https://github.com/storybooks/react-storybook-addon-info)
 * [storybook-addon-options](https://github.com/storybooks/storybook-addon-options)
 * [storybook-addon-knobs](https://github.com/storybooks/storybook-addon-knobs)
+* [storyshots](https://github.com/storybooks/storyshots)
 
 
 ## References:
