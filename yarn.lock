@@ -127,6 +127,10 @@
     webpack-dev-middleware "^1.6.0"
     webpack-hot-middleware "^2.13.2"
 
+"@kupibilet/icons@^2.0.32":
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-2.0.32.tgz#24f8d2f281bf093d4580229bc098979ff1a1ff29"
+
 JSONStream@^0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-0.8.4.tgz#91657dfe6ff857483066132b4618b62e8f4887bd"
