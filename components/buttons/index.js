@@ -4,7 +4,6 @@ import { button } from '../../utils/reset'
 
 const ButtonText = styled.button`
   ${button}
-  ${({ theme }) => theme.font}
   align-items: center;
   background: ${({ theme }) => theme.color.primary};
   border-radius: 2rem;

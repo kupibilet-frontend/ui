@@ -5,7 +5,7 @@ import infoAddon from '@kadira/react-storybook-addon-info'
 import initIcons from '@kupibilet/icons'
 
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import ThemeProvider from '../components/theme-provider'
 
 import mockInfoAddon from '../addons/mock-info'
 import * as theme from '../theme'
@@ -23,7 +23,7 @@ addDecorator(withKnobs)
 
 addDecorator((story) => {
   initIcons()
-  
+
   return (
     <ThemeProvider theme={theme}>
       {story()}
