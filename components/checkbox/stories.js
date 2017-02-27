@@ -11,7 +11,7 @@ storiesOf('Checkbox', module).addWithInfo(
   `,
   () => (
     <Checkbox>{text('text', 'Авиабилеты')}</Checkbox>
-  )
+  ),
 ).addWithInfo(
   'Checkbox',
   `
@@ -19,5 +19,5 @@ storiesOf('Checkbox', module).addWithInfo(
   `,
   () => (
     <Checkbox>{text('text', 'Прямые рейсы')}</Checkbox>
-  )
+  ),
 )

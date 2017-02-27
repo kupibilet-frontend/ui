@@ -11,7 +11,7 @@ storiesOf('Buttons', module).addWithInfo(
   `,
   () => (
     <Button>{text('text', 'Авиабилеты')}</Button>
-  )
+  ),
 ).addWithInfo(
   'Button 2222',
   `
@@ -19,5 +19,5 @@ storiesOf('Buttons', module).addWithInfo(
   `,
   () => (
     <Button>{text('text', '12345')}</Button>
-  )
+  ),
 )

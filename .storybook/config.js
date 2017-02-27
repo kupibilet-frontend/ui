@@ -8,8 +8,7 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import mockInfoAddon from '../addons/mock-info'
-import injectGlobalStyles from '../global-styles'
-import theme from '../theme'
+import * as theme from '../theme'
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -24,8 +23,7 @@ addDecorator(withKnobs)
 
 addDecorator((story) => {
   initIcons()
-  // TODO: вставляется дважды
-  injectGlobalStyles()
+  
   return (
     <ThemeProvider theme={theme}>
       {story()}
