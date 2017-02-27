@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
 const GlobalStylesScope = styled.div`
-  ${({theme}) => theme.font}
+  ${({ theme }) => theme.font}
 
   *,
   *:before,
@@ -11,10 +11,10 @@ const GlobalStylesScope = styled.div`
   }
 `
 
-const ThemeAndScopedStylesProvider = (props) => (
-  <ThemeProvider {...props}>
+const ThemeAndScopedStylesProvider = ({ theme, children }) => (
+  <ThemeProvider theme={theme}>
     <GlobalStylesScope>
-      { props.children }
+      { children }
     </GlobalStylesScope>
   </ThemeProvider>
 )
@@ -24,15 +24,15 @@ ThemeAndScopedStylesProvider.propTypes = {
   theme: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({
-      font: PropTypes.string
-    })
-  ])
+      font: PropTypes.string,
+    }),
+  ]),
 }
 
 ThemeAndScopedStylesProvider.defaultProps = {
   theme: {
-    font: 'initial'
-  }
+    font: 'initial',
+  },
 }
 
 export default ThemeAndScopedStylesProvider
