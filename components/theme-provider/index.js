@@ -21,7 +21,7 @@ const ThemeAndScopedStylesProvider = (props) => (
 
 ThemeAndScopedStylesProvider.propTypes = {
   children: PropTypes.node.isRequired,
-  theme: PropTypes.oneOf([
+  theme: PropTypes.oneOfType([
     PropTypes.func,
     PropTypes.shape({
       font: PropTypes.string
