@@ -27,11 +27,12 @@
     "@kadira/storybook-addon-options": "^1.0.1",
     "babel-jest": "^18.0.0",
     "babel-polyfill": "^6.22.0",
-    "eslint": "^3.16.1",
     "babel-preset-stage-2": "^6.22.0",
+    "eslint": "^3.16.1",
     "eslint-config-kupibilet": "^8.1.1",
     "jest": "^18.1.0",
     "move-binaries-to-bin": "^1.0.1",
+    "raw-loader": "^0.5.1",
     "stylelint": "^7.9.0",
     "stylelint-config-kupibilet": "^3.0.0",
     "stylelint-processor-styled-components": "0.0.4"
@@ -42,6 +43,7 @@
     "react-addons-shallow-compare": "^15.4.2",
     "react-dates": "^7.0.1",
     "react-dom": "^15.4.2",
+    "reset-css": "^2.2.0",
     "storyshots": "^3.2.1",
     "styled-components": "^1.4.2"
   }
