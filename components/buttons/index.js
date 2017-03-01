@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react'
-
 import styled from 'styled-components'
+import { button } from '../../utils/reset'
 
 const ButtonText = styled.button`
-  -webkit-font-smoothing: antialiased;
+  ${button}
   align-items: center;
-  background: ${(props) => props.theme.main};
+  background: ${({ theme }) => theme.color.primary};
   border-radius: 2rem;
   border: none;
   color: white;
@@ -16,14 +16,14 @@ const ButtonText = styled.button`
   padding: 0 15px;
 `
 
-function Button(props) {
-  return (
-    <ButtonText>{props.children}</ButtonText>
-  )
-}
+const Button = ({ children }) => (
+  <ButtonText>
+    { children }
+  </ButtonText>
+)
 
 Button.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 }
 
 

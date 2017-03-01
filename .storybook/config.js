@@ -2,11 +2,14 @@ import { configure, setAddon, addDecorator } from '@kadira/storybook'
 import centered from '@kadira/react-storybook-decorator-centered'
 import { withKnobs } from '@kadira/storybook-addon-knobs'
 import infoAddon from '@kadira/react-storybook-addon-info'
+import initIcons from '@kupibilet/icons'
 
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import ThemeProvider from '../components/theme-provider'
 
 import mockInfoAddon from '../addons/mock-info'
+import * as theme from '../theme'
+
 
 if (process.env.NODE_ENV === 'production') {
   setAddon(mockInfoAddon)
@@ -17,14 +20,27 @@ if (process.env.NODE_ENV === 'production') {
 
 addDecorator(withKnobs)
 
-const theme = {
-  main: 'mediumseagreen',
-}
+
+addDecorator((story) => {
+  initIcons()
+
+  return (
+    <ThemeProvider theme={theme}>
+      {story()}
+    </ThemeProvider>
+  )
+})
 
 addDecorator((story) => (
-  <ThemeProvider theme={theme}>
+  <div>
     {story()}
-  </ThemeProvider>
+    <div
+      dangerouslySetInnerHTML={{ __html: initIcons() }}
+      style={{
+        display: 'none',
+      }}
+    />
+  </div>
 ))
 
 const req = require.context('../components', true, /stories.js$/)
