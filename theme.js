@@ -3,8 +3,6 @@ export const color = {
   fail: '#e64926',
   success: '#23c256',
 
-  transparent: 'transparent',
-
   primary: '#38afff',
   primaryDark: '#0f99f5',
   primaryDarker: '#008ae6',

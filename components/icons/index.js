@@ -16,11 +16,11 @@ const sizes = {
 
 const IconSvg = styled.svg`
   ${transition};
-  transition-property: stroke;
+  transition-property: stroke, fill;
   height: ${(props) => sizes[props.size]};
   width: ${(props) => sizes[props.size]};
-  fill: ${(props) => props.theme.color[props.fill] || props.theme.color.transparent};
-  stroke: ${(props) => props.theme.color[props.stroke] || props.theme.color.transparent};
+  fill: ${(props) => props.theme.color[props.fill] || 'transparent'};
+  stroke: ${(props) => props.theme.color[props.stroke] || 'transparent'};
 `
 
 function Icon(props) {
@@ -38,8 +38,8 @@ function Icon(props) {
 Icon.defaultProps = {
   prefix: 'kb',
   size: 'default',
-  fill: '',
-  stroke: '',
+  fill: 'transparent',
+  stroke: 'transparent',
 }
 
 Icon.propTypes = {
