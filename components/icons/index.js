@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import styled from 'styled-components'
 
-import { transition } from '../../utils/transition'
+import { baseTransition } from '../../utils/transition'
 
 const sizes = {
   default: '18px',
@@ -15,7 +15,7 @@ const sizes = {
 }
 
 const IconSvg = styled.svg`
-  ${transition};
+  ${baseTransition};
   transition-property: stroke, fill;
   height: ${(props) => sizes[props.size]};
   width: ${(props) => sizes[props.size]};
