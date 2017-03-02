@@ -44,7 +44,6 @@
     "react-addons-shallow-compare": "^15.4.2",
     "react-dates": "^7.0.1",
     "react-dom": "^15.4.2",
-    "reset-css": "^2.2.0",
     "storyshots": "^3.2.1",
     "styled-components": "^1.4.2"
   }
