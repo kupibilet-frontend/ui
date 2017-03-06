@@ -41,6 +41,7 @@ export default css`
     font-size: 16px;
     letter-spacing: -.21px;
     text-align: center;
+    text-transform: capitalize;
 
     margin: 0;
     padding: 22px 0 54px;

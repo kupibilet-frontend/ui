@@ -1,33 +1,48 @@
 import { css } from 'styled-components'
+import { switchTransition } from '../../../utils/transitions'
 
 export default css`
   .DayPickerNavigation__prev,
   .DayPickerNavigation__next {
     cursor: pointer;
-    line-height: 0.78;
     user-select: none;
-  }
+    text-align: center;
 
-  .DayPickerNavigation__prev--default,
-  .DayPickerNavigation__next--default {
     background: ${({ theme }) => theme.color.primary};
     border-radius: 50%;
     width: 30px;
     height: 30px;
+    line-height: 30px;
+
+    ${switchTransition}
+    transition-property: opacity;
 
     &:focus,
     &:hover,
     &:active {
       background-color: ${({ theme }) => theme.color.primary};
     }
+
+    svg {
+      display: inline-block;
+      height: 30px;
+    }
   }
+
+  .DayPickerNavigation__prev--disabled,
+  .DayPickerNavigation__next--disabled {
+    cursor: default;
+    opacity: .2;
+  }
+
+  .DayPickerNavigation__prev--default,
+  .DayPickerNavigation__next--default {}
 
   .DayPickerNavigation--horizontal {
     position: relative;
 
     .DayPickerNavigation__prev,
     .DayPickerNavigation__next {
-      padding: 6px 9px;
       top: 18px;
       z-index: 2;
       position: absolute;

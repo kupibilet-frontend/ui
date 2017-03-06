@@ -92,6 +92,10 @@ export default css`
     color: ${({ theme }) => theme.color.textDarker};
   }
 
+  .DateInput--startDate--placeholder #startDate ~ .DateInput__display-text,
+  .DateInput--endDate--placeholder #endDate ~ .DateInput__display-text {
+    color: ${({ theme }) => theme.color.miscDark};
+  }
 
   .DateInput__display-text--focused {
     border-color: ${({ theme }) => theme.color.secondary};

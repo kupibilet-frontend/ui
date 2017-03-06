@@ -16,44 +16,49 @@ export default css`
     box-sizing: border-box;
     width: 42px;
     height: 36px;
-
-    &:active {
-      background: ${({ theme }) => theme.color.background};
-    }
   }
 
   .DateInput--startDate--focused .CalendarDay:hover,
+  .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover,
   .CalendarDay--selected-start {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-
-  .DateInput--startDate--focused .CalendarDay:not(.CalendarDay--selected-end):hover {
-    position: relative;
-
-    ${({ theme }) => cssArrow({
-      width: 4,
-      heigth: 12,
-      color: theme.color.primary,
-      fromDirection: 'left',
-    })}
+    border-radius: 4px 0 0 4px;
   }
 
   .DateInput--endDate--focused .CalendarDay:hover,
   .CalendarDay--selected-end {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-radius: 0 4px 4px 0;
   }
 
-  .DateInput--endDate--focused .CalendarDay:not(.CalendarDay--selected-start):hover {
-    position: relative;
+  .DateInput--endDate--focused .CalendarDay.CalendarDay--selected-start:hover,
+  .CalendarDay.CalendarDay--selected-start.CalendarDay--selected-end {
+    border-radius: 4px;
+  }
 
-    ${({ theme }) => cssArrow({
-      width: 4,
-      heigth: 12,
-      color: theme.color.primary,
-      fromDirection: 'right',
-    })}
+  .DateInput--startDate--focused .CalendarDay,
+  .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover {
+    &:not(.CalendarDay--blocked):not(.CalendarDay--selected-end):hover {
+      position: relative;
+
+      ${({ theme }) => cssArrow({
+        width: 4,
+        heigth: 12,
+        color: theme.color.primary,
+        fromDirection: 'left',
+      })}
+    }
+  }
+
+  .DateInput--endDate--focused .CalendarDay {
+    &:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover {
+      position: relative;
+
+      ${({ theme }) => cssArrow({
+        width: 4,
+        heigth: 12,
+        color: theme.color.primary,
+        fromDirection: 'right',
+      })}
+    }
   }
 
   .CalendarDay--selected-start,
@@ -72,8 +77,7 @@ export default css`
     color: ${({ theme }) => theme.color.textDarkest};
   }
 
-  .CalendarDay:hover,
-  .CalendarDay--hovered {
+  .CalendarDay:not(.CalendarDay--blocked):hover {
     background: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.background};
   }
