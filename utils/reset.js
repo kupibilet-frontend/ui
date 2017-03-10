@@ -10,7 +10,6 @@ export const common = `
 export const button = `
   border: none;
   outline: none;
-  font: inherit;
 `
 
 // For `ol` and `ul`

@@ -1,29 +1,66 @@
 import React, { PropTypes } from 'react'
-import styled from 'styled-components'
-import { button } from '../../utils/reset'
 
-const ButtonText = styled.button`
-  ${button}
-  align-items: center;
-  background: ${({ theme }) => theme.color.primary};
-  border-radius: 2rem;
-  border: none;
-  color: white;
-  font-size: 18px;
-  height: 30px;
-  display: flex;
-  text-align: center;
-  padding: 0 15px;
-`
+import {StyledButton, StyledButtonText, IconWrap, SIZES} from './styled'
 
-const Button = ({ children }) => (
-  <ButtonText>
-    { children }
-  </ButtonText>
+const BUTTON_SIZE_TO_ICON_MAP = {
+  small: 'xxsmall',
+  normal: 'normal',
+  large: 'normal',
+}
+
+const cloneIconWithSize = (iconNode, size) => (
+  React.cloneElement(iconNode, {
+    size: iconNode.props.size || BUTTON_SIZE_TO_ICON_MAP[size]
+  })
 )
 
+const Button = ({ children, disabled, size, icon, leftIcon, rightIcon }) => (
+  <StyledButton size={size} isIconOnly={ Boolean(icon) } disabled={disabled}>
+    {
+      leftIcon ? (
+        <IconWrap size={size} left>
+          { cloneIconWithSize(leftIcon, size) }
+        </IconWrap>
+      ) : (
+        null
+      )
+    }
+
+    {
+      icon ? (
+        <IconWrap size={size}>
+          { cloneIconWithSize(icon, size) }
+        </IconWrap>
+      ) : (
+        <StyledButtonText>
+          { children }
+        </StyledButtonText>
+      )
+    }
+
+    {
+      rightIcon ? (
+        <IconWrap size={size} right>
+          { cloneIconWithSize(rightIcon, size) }
+        </IconWrap>
+      ) : (
+        null
+      )
+    }
+  </StyledButton>
+)
+
+Button.defaultProps = {
+  size: 'normal',
+}
+
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  size: PropTypes.oneOf(Object.keys(SIZES)),
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
+  icon: PropTypes.element,
+  leftIcon: PropTypes.element,
+  rightIcon: PropTypes.element,
 }
 
 
