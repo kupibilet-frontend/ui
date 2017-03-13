@@ -2,7 +2,8 @@
   "name": "kupibilet-uikit",
   "version": "1.0.0",
   "description": "UI kit for kupibilet web app",
-  "main": "index.js",
+  "module": "components/lib",
+  "main": "lib/index.js",
   "scripts": {
     "pretest": "npm run lint:js --silent && npm run lint:css --silent",
     "test": "npm run jest --silent",
@@ -11,7 +12,8 @@
     "lint:css": "stylelint ./components/**/*.js",
     "lint:js": "eslint ./components/**/*.js",
     "jest": "jest",
-    "postinstall": "move-bin"
+    "postinstall": "move-bin",
+    "prepublish": "babel components/ -d lib/ --ignore stories"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "@kadira/storybook": "^2.35.3",
     "@kadira/storybook-addon-knobs": "^1.7.1",
     "@kadira/storybook-addon-options": "^1.0.1",
+    "babel-cli": "^6.24.0",
     "babel-jest": "^18.0.0",
     "babel-polyfill": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
