@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { button } from '../../utils/reset'
+import { switchTransition } from '../../utils/transitions'
 
 export const SIZES = {
   small: 12,
@@ -39,6 +40,9 @@ export const StyledButton = styled.button`
 
   padding: ${ ({size, isIconOnly}) => calculateButtonPadding(size, isIconOnly) };
 
+  ${ switchTransition }
+  transition-property: opacity;
+
   ${ ({disabled}) => (disabled ?
     `opacity: .2;`
   : '')}
@@ -68,7 +72,7 @@ export const IconWrap = styled.span`
   vertical-align: top;
   justify-content: center;
   align-items: center;
-  
+
   width: ${ ({size}) => TYPOGRAPHY[size] }px;
   height: ${ ({size}) => TYPOGRAPHY[size] }px;
 `

@@ -1,5 +1,4 @@
 import { css } from 'styled-components'
-import { switchTransition } from '../../../utils/transitions'
 
 export default css`
   .DayPickerNavigation__prev,
@@ -7,32 +6,16 @@ export default css`
     cursor: pointer;
     user-select: none;
     text-align: center;
-
-    background: ${({ theme }) => theme.color.primary};
-    border-radius: 50%;
     width: 30px;
     height: 30px;
     line-height: 30px;
-
-    ${switchTransition}
-    transition-property: opacity;
-
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: ${({ theme }) => theme.color.primary};
-    }
-
-    svg {
-      display: inline-block;
-      height: 30px;
-    }
   }
 
   .DayPickerNavigation__prev--disabled,
   .DayPickerNavigation__next--disabled {
     cursor: default;
     opacity: .2;
+    pointer-events: none;
   }
 
   .DayPickerNavigation__prev--default,
@@ -55,15 +38,6 @@ export default css`
     .DayPickerNavigation__next {
       right: 22px;
     }
-
-    .DayPickerNavigation__prev--default,
-    .DayPickerNavigation__next--default {
-      svg {
-        height: 19px;
-        width: 19px;
-        fill: ${({ theme }) => theme.color.background};
-      }
-    }
   }
 
   .DayPickerNavigation--vertical {
@@ -84,19 +58,6 @@ export default css`
 
     .DayPickerNavigation__next--default {
       border-left: 0;
-    }
-
-    .DayPickerNavigation__prev--default,
-    .DayPickerNavigation__next--default {
-      text-align: center;
-      font-size: 2.5em;
-      padding: 5px;
-
-      svg {
-        height: 42px;
-        width: 42px;
-        fill: $react-dates-color-text
-      }
     }
   }
 

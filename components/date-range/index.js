@@ -5,10 +5,13 @@ import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePick
 import { START_DATE, END_DATE, ANCHOR_RIGHT } from '@kupibilet/react-dates/constants'
 import StyledDateRange from './styled'
 
+import Button from '../button'
 import Icon from '../icons'
 
 const CalendarNav = ({ direction }) => (
-  <Icon name={`arrow-${direction}`} stroke="background" size="xxsmall" />
+  <Button icon={
+    <Icon name={`arrow-${direction}`} stroke="background" />
+  } />
 )
 CalendarNav.defaultProps = {
   direction: 'left',
