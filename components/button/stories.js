@@ -5,14 +5,14 @@ import { text, select } from '@kadira/storybook-addon-knobs'
 import Button from './index'
 import Icon from '../icons'
 
-const sizesSelect = () => select(
+const sizesSelect = (defaultValue = 'large') => select(
   'size',
   {
     small: 'Small',
     normal: 'Normal',
     large: 'Large',
   },
-  'large'
+  defaultValue
 )
 
 storiesOf('Buttons', module)
@@ -30,6 +30,7 @@ storiesOf('Buttons', module)
   ))
   .addWithInfo('With icons', () => (
     <Button
+      size={sizesSelect('normal')}
       leftIcon={
         <Icon name="plane" stroke="background" fill="background" />
       }

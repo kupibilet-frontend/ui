@@ -16,16 +16,29 @@ const TYPOGRAPHY = {
   large: 20,
 }
 
-const calculateButtonPadding = (size, icon) => {
+const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon) => {
   const spacing = SIZES[size]
-  const typographyRelatedSpacing = (spacing * 2 - TYPOGRAPHY[size]) / 2
+  const typographyRelatedPadding = ((spacing * 2 - TYPOGRAPHY[size]) / 2).toFixed(1)
+  const iconVisualCenterShift = 5 / 4
+  const iconPadding = (SIZES[size] / 2 * iconVisualCenterShift).toFixed(1)
 
   // Symetric padding around icon-only button for circle effect
   if(icon) {
-    return `${ typographyRelatedSpacing.toFixed(1) }px`
+    return `padding: ${ typographyRelatedPadding }px`
   }
 
-  return `${ typographyRelatedSpacing.toFixed(1) }px ${ spacing }px`
+  return `
+    padding: ${ typographyRelatedPadding }px;
+    padding-right: ${ hasRightIcon ? iconPadding : spacing }px;
+    padding-left: ${ hasLeftIcon ? iconPadding : spacing }px;
+  `
+}
+
+const calculateTextPadding = (size, hasLeftIcon, hasRightIcon) => {
+  const iconVisualCenterShift = 3 / 4
+  const iconPadding = (SIZES[size] / 2 * iconVisualCenterShift).toFixed(1)
+
+  return `0 ${ hasRightIcon ? iconPadding : 0 }px 0 ${ hasLeftIcon ? iconPadding : 0 }px`
 }
 
 export const StyledButton = styled.button`
@@ -38,10 +51,12 @@ export const StyledButton = styled.button`
   font-size: ${ ({size}) => TYPOGRAPHY[size] }px;
   line-height: ${ ({size}) => TYPOGRAPHY[size] }px;
 
-  padding: ${ ({size, isIconOnly}) => calculateButtonPadding(size, isIconOnly) };
+  ${ ({size, isIconOnly, hasLeftIcon, hasRightIcon}) => (
+    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon)
+  ) };
 
   ${ switchTransition }
-  transition-property: opacity;
+  transition-property: opacity, box-shadow;
 
   ${ ({disabled}) => (disabled ?
     `opacity: .2;`
@@ -57,7 +72,7 @@ export const StyledButton = styled.button`
   &:active {
     ${ ({disabled, theme}) => (!disabled ? `
       background: ${theme.color.primaryDark};
-      box-shadow: 0 0 0 1px ${theme.color.primaryDark};
+      box-shadow: none;
     ` : '')}
   }
 `
@@ -65,6 +80,8 @@ export const StyledButton = styled.button`
 export const StyledButtonText = styled.span`
   display: inline-block;
   vertical-align: top;
+
+  padding: ${ ({size, hasLeftIcon, hasRightIcon}) => calculateTextPadding(size, hasLeftIcon, hasRightIcon) }
 `
 
 export const IconWrap = styled.span`

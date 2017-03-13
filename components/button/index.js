@@ -15,7 +15,13 @@ const cloneIconWithSize = (iconNode, size) => (
 )
 
 const Button = ({ children, disabled, size, icon, leftIcon, rightIcon }) => (
-  <StyledButton size={size} isIconOnly={ Boolean(icon) } disabled={disabled}>
+  <StyledButton
+    size={size}
+    isIconOnly={ Boolean(icon) }
+    hasLeftIcon={Boolean(leftIcon)}
+    hasRightIcon={Boolean(rightIcon)}
+    disabled={disabled}
+  >
     {
       leftIcon ? (
         <IconWrap size={size} left>
@@ -32,7 +38,7 @@ const Button = ({ children, disabled, size, icon, leftIcon, rightIcon }) => (
           { cloneIconWithSize(icon, size) }
         </IconWrap>
       ) : (
-        <StyledButtonText>
+        <StyledButtonText size={size} hasLeftIcon={Boolean(leftIcon)} hasRightIcon={Boolean(rightIcon)}>
           { children }
         </StyledButtonText>
       )
