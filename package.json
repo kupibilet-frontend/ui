@@ -1,5 +1,5 @@
 {
-  "name": "kupibilet-uikit",
+  "name": "@kupibilet/ui",
   "version": "1.0.0",
   "description": "UI kit for kupibilet web app",
   "module": "components/lib",
