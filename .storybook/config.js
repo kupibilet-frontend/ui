@@ -8,7 +8,6 @@ import React from 'react'
 import ThemeProvider from '../components/theme-provider'
 
 import mockInfoAddon from '../addons/mock-info'
-import * as theme from '../theme'
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -25,7 +24,7 @@ addDecorator((story) => {
   initIcons()
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       {story()}
     </ThemeProvider>
   )

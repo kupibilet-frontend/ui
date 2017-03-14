@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
+import * as defaultTheme from './theme'
+
 const GlobalStylesScope = styled.div`
   ${({ theme }) => theme.font}
 
@@ -12,7 +14,10 @@ const GlobalStylesScope = styled.div`
 `
 
 const ThemeAndScopedStylesProvider = ({ theme, children }) => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={{
+    ...defaultTheme,
+    theme
+  }}>
     <GlobalStylesScope>
       { children }
     </GlobalStylesScope>
@@ -30,9 +35,7 @@ ThemeAndScopedStylesProvider.propTypes = {
 }
 
 ThemeAndScopedStylesProvider.defaultProps = {
-  theme: {
-    font: 'initial',
-  },
+  theme: defaultTheme,
 }
 
 export default ThemeAndScopedStylesProvider
