@@ -9,9 +9,11 @@ import Button from '../button'
 import Icon from '../icons'
 
 const CalendarNav = ({ direction }) => (
-  <Button icon={
-    <Icon name={`arrow-${direction}`} stroke="background" />
-  } />
+  <Button
+    icon={
+      <Icon name={`arrow-${direction}`} stroke="background" />
+  }
+  />
 )
 CalendarNav.defaultProps = {
   direction: 'left',
@@ -129,11 +131,6 @@ class DateRangePickerWrapper extends React.PureComponent {
           minimumNights={0}
           onFocusChange={this.onFocusChange}
           onDayHover={this.onDayHover}
-          dimensions={{
-            calendarMonthWidth: 320,
-            dayPickerPadding: 9,
-            monthPadding: 23,
-          }}
           modifiers={this.modifiers}
           renderInputText={this.renderInputText}
           startDatePlaceholderText={startDatePlaceholder}
@@ -147,11 +144,18 @@ class DateRangePickerWrapper extends React.PureComponent {
   }
 }
 
-const DateRange = (props) => (
-  <StyledDateRange>
-    <DateRangePickerWrapper {...props} />
-  </StyledDateRange>
-)
+const DateRange = (props) => {
+  const dimensions = {
+    ...DateRange.defaultProps.dimensions,
+    ...props.dimensions,
+  }
+
+  return (
+    <StyledDateRange dimensions={dimensions}>
+      <DateRangePickerWrapper {...props} dimensions={dimensions} />
+    </StyledDateRange>
+  )
+}
 
 DateRange.defaultProps = {
   ...DateRangePicker.defaultProps,
@@ -160,6 +164,13 @@ DateRange.defaultProps = {
   displayFormat: () => 'DD MMM',
   monthFormat: 'MMMM YYYY',
   anchorDirection: ANCHOR_RIGHT,
+  dimensions: {
+    calendarMonthWidth: 320,
+    dayPickerPadding: 9,
+    monthPadding: 23,
+    dayPickerWidth: 340,
+    inputWidth: 109,
+  },
 }
 
 DateRange.propTypes = {

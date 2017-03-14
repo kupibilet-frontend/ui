@@ -1,7 +1,5 @@
 import { css } from 'styled-components'
 
-import { DAY_PICKER_WIDTH } from './dimensions'
-
 export default css`
   .CalendarMonthGrid {
     background: #fff;
@@ -17,16 +15,16 @@ export default css`
   .CalendarMonthGrid--horizontal {
     position: absolute;
     left: 9px;
-    width: ${() => 4 * DAY_PICKER_WIDTH}px;
+    width: ${({ dimensions }) => 4 * dimensions.dayPickerWidth}px;
   }
 
   .CalendarMonthGrid--vertical {
-    width: ${() => DAY_PICKER_WIDTH}px;
+    width: ${({ dimensions }) => dimensions.dayPickerWidth}px;
     margin: 0 auto;
   }
 
   .CalendarMonthGrid--vertical-scrollable {
-    width: ${() => DAY_PICKER_WIDTH}px;
+    width: ${({ dimensions }) => dimensions.dayPickerWidth}px;
     margin: 0 auto;
     overflow-y: scroll;
   }

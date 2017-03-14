@@ -1,7 +1,5 @@
 import { css } from 'styled-components'
 
-import { DAY_PICKER_WIDTH } from './dimensions'
-
 export default css`
   .DayPicker {
     background: ${({ theme }) => theme.color.background};
@@ -30,7 +28,7 @@ export default css`
   .DayPicker__week-header {
     color: ${({ theme }) => theme.color.textLight};
     position: absolute;
-    width: ${() => DAY_PICKER_WIDTH}px;
+    width: ${({ dimensions }) => dimensions.dayPickerWidth}px;
     top: 60px;
     z-index: 2;
     padding: 0 13px;
@@ -56,7 +54,7 @@ export default css`
   }
 
   .DayPicker--vertical .DayPicker__week-header {
-    margin-left: ${() => -1 * DAY_PICKER_WIDTH / 2}px;
+    margin-left: ${({ dimensions }) => -1 * dimensions.dayPickerWidth / 2}px;
     left: 50%;
   }
 

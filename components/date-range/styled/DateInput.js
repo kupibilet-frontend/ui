@@ -1,7 +1,6 @@
 import { css } from 'styled-components'
 
 // $caretTop: 62px
-import { INPUT_WIDTH } from './dimensions'
 
 export default css`
   .DateInput {
@@ -9,7 +8,7 @@ export default css`
 
     position: relative;
     display: inline-block;
-    width: ${() => INPUT_WIDTH}px;
+    width: ${({ dimensions }) => dimensions.inputWidth}px;
     vertical-align: middle;
 
     .screen-reader-only {
