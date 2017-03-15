@@ -21,6 +21,7 @@ const Button = ({ children, disabled, size, icon, leftIcon, rightIcon }) => (
     hasLeftIcon={Boolean(leftIcon)}
     hasRightIcon={Boolean(rightIcon)}
     disabled={disabled}
+    className="no-global"
   >
     {
       leftIcon ? (
