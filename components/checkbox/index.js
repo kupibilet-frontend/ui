@@ -5,38 +5,38 @@ import { CheckboxLabel, StyledCheckbox, IconWrap, CheckboxInput, LabelText } fro
 
 export default class Checkbox extends PureComponent {
   render() {
-    const props = this.props
+    const { checked, disabled, onChange, children } = this.props
 
     return (
       <CheckboxLabel
-        disabled={props.disabled}
-        onChange={props.onChange}
+        disabled={disabled}
+        onChange={onChange}
       >
         <StyledCheckbox
           className="checkbox"
-          disabled={props.disabled}
-          checked={props.checked}
+          disabled={disabled}
+          checked={checked}
         >
-          {props.checked &&
+          {checked &&
             <IconWrap
-              checked={props.checked}
+              checked={checked}
             >
               <Icon name="checkbox" fill="background" />
             </IconWrap>
           }
           <CheckboxInput
             type="checkbox"
-            checked={props.checked}
-            onChange={props.onChange}
-            disabled={props.disabled}
+            checked={checked}
+            onChange={onChange}
+            disabled={disabled}
           />
         </StyledCheckbox>
 
         <LabelText
           className="label-text"
-          disabled={props.disabled}
+          disabled={disabled}
         >
-          {props.children}
+          {children}
         </LabelText>
 
       </CheckboxLabel>

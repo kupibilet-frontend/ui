@@ -64,10 +64,10 @@ export const CheckboxLabel = styled.label`
   user-select: none;
 
   &:hover .checkbox {
-    border-color: ${(props) => (props.disabled ? props.theme.color.textLighter : props.theme.color.primary)};
+    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primary)};
   };
 
   &:hover .label-text {
-    color: ${(props) => (props.disabled ? props.theme.color.textLight : props.theme.color.primaryDarkest)};
+    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
   };
 `
