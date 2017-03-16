@@ -1,4 +1,6 @@
-export const floatFromTop = `
+import { keyframes } from 'styled-components'
+
+export const floatFromTop = keyframes`
   from {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);

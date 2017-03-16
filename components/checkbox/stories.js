@@ -11,10 +11,6 @@ class CheckboxParent extends React.PureComponent {
     checked: this.props.checked || false,
   }
   handleChange = (e) => {
-    const { props } = this
-    if (props.disabled) {
-      return
-    }
     this.setState({
       checked: e.target.checked,
     })
