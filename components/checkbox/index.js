@@ -1,9 +1,9 @@
-import React, { PropTypes, Component } from 'react'
-import PureRenderMixin from 'rc-util/lib/PureRenderMixin'
+import React, { PropTypes, PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import Icon from '../icons'
 import { switchTransition } from '../../utils/transitions'
+import { floatFromTop } from '../../utils/animations'
 
 const checkboxBackground = (props, theme) => {
   if (props.checked) {
@@ -26,29 +26,20 @@ const CheckboxInput = styled.input`
 `
 
 const fadeInDown = keyframes`
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+  ${floatFromTop};
 `
 
 const IconWrap = styled.span`
   animation: ${(props) => (props.checked ? `${fadeInDown} 0.15s` : 'none')};
   display: inline-block;
-  margin-top: -1px;
+  margin: -1px;
   height: 18px;
   width: 18px;
 `
 
 const StyledCheckbox = styled.span`
   ${switchTransition};
+  align-self: center;
   transition-property: background, border;
   background: ${(props) => checkboxBackground(props, props.theme)};
   border: ${(props) => `1px solid ${checkboxBorder(props, props.theme)}`};
@@ -59,18 +50,21 @@ const StyledCheckbox = styled.span`
 
 const LabelText = styled.span`
   ${switchTransition};
+  align-self: flex-start;
   transition-property: color;
   margin-left: 6px;
-  color: ${(props) => props.disabled && props.theme.color.textLight}
+  ${({ disabled, theme }) => (disabled &&
+    `color: ${theme.color.textLight};`
+  )}
 `
 
 const CheckboxLabel = styled.label`
-  cursor: pointer;
-  display: flex;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')}
+  display: inline-flex;
   align-items: center;
+  font-size: 16px;
+  line-height: 20px;
   position: relative;
-
-
   user-select: none;
 
   &:hover .checkbox {
@@ -82,54 +76,33 @@ const CheckboxLabel = styled.label`
   };
 `
 
-export default class Checkbox extends Component {
-  constructor(props) {
-    super(props)
-
-    const checked = props.checked
-
-    this.state = {
-      checked,
-    }
-  }
-
-  shouldComponentUpdate(...args) {
-    return PureRenderMixin.shouldComponentUpdate.apply(this, args)
-  }
-
-  handleChange = (e) => {
-    const { props } = this
-    if (props.disabled) {
-      return
-    }
-    this.setState({
-      checked: e.target.checked,
-    })
-  }
-
+export default class Checkbox extends PureComponent {
   render() {
     const props = this.props
-
-    const { checked } = this.state
 
     return (
       <CheckboxLabel
         disabled={props.disabled}
-        onChange={this.handleChange}
+        onChange={props.onChange}
       >
         <StyledCheckbox
           className="checkbox"
           disabled={props.disabled}
-          checked={checked}
+          checked={props.checked}
         >
-          {checked &&
+          {props.checked &&
             <IconWrap
-              checked={!!checked}
+              checked={props.checked}
             >
-              <Icon name="checkbox" stroke="background" />
+              <Icon name="checkbox" fill="background" />
             </IconWrap>
           }
-          <CheckboxInput type="checkbox" />
+          <CheckboxInput
+            type="checkbox"
+            checked={props.checked}
+            onChange={props.onChange}
+            disabled={props.disabled}
+          />
         </StyledCheckbox>
 
         <LabelText
@@ -146,10 +119,8 @@ export default class Checkbox extends Component {
 
 Checkbox.defaultProps = {
   checked: false,
-  onChange() {},
 }
 
 Checkbox.propTypes = {
-  checked: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
 }
