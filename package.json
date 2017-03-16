@@ -2,18 +2,18 @@
   "name": "@kupibilet/ui",
   "version": "1.0.0",
   "description": "UI kit for kupibilet web app",
-  "module": "components/lib",
   "main": "lib/index.js",
   "scripts": {
     "pretest": "npm run lint:js --silent && npm run lint:css --silent",
     "test": "npm run jest --silent",
     "start": "start-storybook -p 9001 -c .storybook",
-    "build": "build-storybook",
+    "build-storybook": "build-storybook",
     "lint:css": "stylelint ./components/**/*.js",
     "lint:js": "eslint ./components/**/*.js",
     "jest": "jest",
     "postinstall": "move-bin",
-    "prepublish": "babel components/ -d lib/ --ignore stories"
+    "build": "babel components/ -d lib/ --ignore stories",
+    "prepublish": "npm run build --silent"
   },
   "repository": {
     "type": "git",
