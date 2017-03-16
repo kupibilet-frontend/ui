@@ -117,10 +117,9 @@ export default class Checkbox extends PureComponent {
   }
 }
 
-Checkbox.defaultProps = {
-  checked: false,
-}
-
 Checkbox.propTypes = {
   onChange: PropTypes.func.isRequired,
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  children: PropTypes.node,
 }
