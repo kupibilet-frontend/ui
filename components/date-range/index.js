@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import cn from 'classnames'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
-import { START_DATE, END_DATE, ANCHOR_RIGHT } from '@kupibilet/react-dates/constants'
+import * as consts from '@kupibilet/react-dates/constants'
 import StyledDateRange from './styled'
 
 import Button from '../button'
@@ -51,7 +51,7 @@ class DateRangePickerWrapper extends React.PureComponent {
     return typeof displayFormat === 'string' ? displayFormat : displayFormat()
   }
 
-  focus = (focusedInput = START_DATE) => {
+  focus = (focusedInput = consts.START_DATE) => {
     this.setState({ focusedInput })
   }
 
@@ -65,12 +65,12 @@ class DateRangePickerWrapper extends React.PureComponent {
   renderInputText = (day, format, inputReference) => {
     const { startDate, endDate } = this.props
     const { focusedInput, hoveredDate } = this.state
-    const isStartDateInput = inputReference === START_DATE
+    const isStartDateInput = inputReference === consts.START_DATE
 
     if (hoveredDate && !day.isSame(hoveredDate)) {
       // When picking endDate but hovered date are before picked startDate
       // and click will pick startDate instead of focuesd endDate
-      if (focusedInput === END_DATE && hoveredDate.isBefore(startDate, 'day')) {
+      if (focusedInput === consts.END_DATE && hoveredDate.isBefore(startDate, 'day')) {
         if (isStartDateInput) {
           return hoveredDate.format(this.getDisplayFormat())
         }
@@ -78,8 +78,8 @@ class DateRangePickerWrapper extends React.PureComponent {
       }
 
       if (
-        (focusedInput === START_DATE && isStartDateInput) ||
-        (focusedInput === END_DATE && !isStartDateInput)
+        (focusedInput === consts.START_DATE && isStartDateInput) ||
+        (focusedInput === consts.END_DATE && !isStartDateInput)
       ) {
         return hoveredDate.format(this.getDisplayFormat())
       }
@@ -94,12 +94,12 @@ class DateRangePickerWrapper extends React.PureComponent {
   render() {
     const { startDate, endDate } = this.props
     const { focusedInput, hoveredDate } = this.state
-    const startDatePlaceholder = hoveredDate && focusedInput === START_DATE ? (
+    const startDatePlaceholder = hoveredDate && focusedInput === consts.START_DATE ? (
       hoveredDate.format(this.getDisplayFormat())
     ) : (
       this.props.startDatePlaceholderText
     )
-    const endDatePlaceholder = hoveredDate && focusedInput === END_DATE && (!startDate || hoveredDate.isAfter(startDate, 'day')) ? (
+    const endDatePlaceholder = hoveredDate && focusedInput === consts.END_DATE && (!startDate || hoveredDate.isAfter(startDate, 'day')) ? (
       hoveredDate.format(this.getDisplayFormat())
     ) : (
       this.props.endDatePlaceholderText
@@ -108,15 +108,15 @@ class DateRangePickerWrapper extends React.PureComponent {
     return (
       <div
         className={cn({
-          'DateInput--startDate--focused': focusedInput === START_DATE,
+          'DateInput--startDate--focused': focusedInput === consts.START_DATE,
           'DateInput--startDate--placeholder': !startDate || (hoveredDate && (
-            (focusedInput === START_DATE && !hoveredDate.isSame(startDate, 'day')) ||
-            (focusedInput === END_DATE && hoveredDate.isBefore(startDate, 'day'))
+            (focusedInput === consts.START_DATE && !hoveredDate.isSame(startDate, 'day')) ||
+            (focusedInput === consts.END_DATE && hoveredDate.isBefore(startDate, 'day'))
           )),
-          'DateInput--endDate--focused': focusedInput === END_DATE,
+          'DateInput--endDate--focused': focusedInput === consts.END_DATE,
           'DateInput--endDate--placeholder': !endDate || (
             hoveredDate &&
-            focusedInput === END_DATE &&
+            focusedInput === consts.END_DATE &&
             !hoveredDate.isSame(endDate, 'day') &&
             hoveredDate.isAfter(startDate, 'day')
           ),
@@ -163,7 +163,7 @@ DateRange.defaultProps = {
   endDatePlaceholderText: 'Обратно',
   displayFormat: () => 'DD MMM',
   monthFormat: 'MMMM YYYY',
-  anchorDirection: ANCHOR_RIGHT,
+  anchorDirection: consts.ANCHOR_RIGHT,
   dimensions: {
     calendarMonthWidth: 320,
     dayPickerPadding: 9,
@@ -180,5 +180,6 @@ DateRange.propTypes = {
   onFocusChange: PropTypes.func,
 }
 
-export * from '@kupibilet/react-dates/constants'
+Object.assign(DateRange, consts)
+
 export default DateRange
