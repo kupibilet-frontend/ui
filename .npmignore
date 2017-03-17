@@ -1,4 +1,4 @@
 *
 !lib/**/*.js
-!components/**/*.js
+!src/**/*.js
 **/*stories*
