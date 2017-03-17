@@ -8,11 +8,12 @@ import Checkbox from './index'
 
 class CheckboxParent extends React.PureComponent {
   state = {
-    checked: this.props.checked || false,
+    checked: this.props.defaultChecked || false,
   }
-  handleChange = (e) => {
+
+  handleChange = () => {
     this.setState({
-      checked: e.target.checked,
+      checked: !this.state.checked
     })
   }
 
@@ -32,30 +33,13 @@ class CheckboxParent extends React.PureComponent {
   }
 }
 
-storiesOf('Checkbox', module).addWithInfo(
-  'Checkbox',
-  `
-    description
-  `,
-  () => (
+storiesOf('Checkbox', module)
+  .addWithInfo('Checkbox', () => (
     <CheckboxParent />
-  ),
-).addWithInfo(
-  'Checked Checkbox',
-  `
-    description
-  `,
-  () => (
-    <CheckboxParent checked />
-  ),
-).addWithInfo(
-  'Disabled Checkbox',
-  `
-    description
-  `,
-  () => (
+  ))
+  .addWithInfo('Checkbox checked by default', () => (
+    <CheckboxParent defaultChecked />
+  ))
+  .addWithInfo('Disabled Checkbox', () => (
     <CheckboxParent disabled />
-  ),
-)
-
-export default CheckboxParent
+  ))
