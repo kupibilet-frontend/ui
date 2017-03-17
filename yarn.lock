@@ -129,15 +129,15 @@
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-3.2.4.tgz#2df09c238d073c826a174c6664878b04fbbe5e27"
 
-"@kupibilet/react-dates":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@kupibilet/react-dates/-/react-dates-7.0.1.tgz#19b300534a4654888ea533eb7f5a89edf1aff538"
+"@kupibilet/react-dates@^8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@kupibilet/react-dates/-/react-dates-8.2.0.tgz#e97c925967ae8531f3bf87f994fd3dfff482d6a8"
   dependencies:
-    airbnb-prop-types "^2.2.0"
+    airbnb-prop-types "^2.4.1"
     array-includes "^3.0.2"
     classnames "^2.2.5"
     consolidated-events "^1.0.1"
-    react-moment-proptypes "^1.2.1"
+    react-moment-proptypes "^1.3.0"
     react-portal "^3.0.0"
 
 abab@^1.0.3:
@@ -188,7 +188,7 @@ airbnb-js-shims@^1.0.1:
     string.prototype.padend "^3.0.0"
     string.prototype.padstart "^3.0.0"
 
-airbnb-prop-types@^2.2.0:
+airbnb-prop-types@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/airbnb-prop-types/-/airbnb-prop-types-2.4.1.tgz#1ca26a609dff4b2ccb2ba1aebf3adce342bfc116"
   dependencies:
@@ -5308,7 +5308,7 @@ react-modal@^1.2.0, react-modal@^1.2.1:
     exenv "1.2.0"
     lodash.assign "^4.2.0"
 
-react-moment-proptypes@^1.2.1:
+react-moment-proptypes@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/react-moment-proptypes/-/react-moment-proptypes-1.3.0.tgz#b6f564c64fc86e70c5a5f5ec0aa360ca7bf252e3"
   dependencies:

@@ -41,9 +41,9 @@
     "stylelint-processor-styled-components": "0.0.4"
   },
   "dependencies": {
-    "@kupibilet/react-dates": "^7.0.1",
-    "classnames": "^2.2.5",
     "@kupibilet/icons": "^3.2.4",
+    "@kupibilet/react-dates": "^8.2.0",
+    "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-addons-shallow-compare": "^15.4.2",
