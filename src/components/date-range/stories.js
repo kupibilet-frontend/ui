@@ -10,21 +10,28 @@ class DateRangeState extends React.PureComponent {
   state = {
     startDate: null,
     endDate: null,
+    focusedInput: null,
   }
 
   onDatesChange = ({ startDate, endDate }) => {
     this.setState({ startDate, endDate })
   }
 
+  onFocusChange = (focusedInput) => {
+    this.setState({ focusedInput })
+  }
+
   render() {
-    const { startDate, endDate } = this.state
+    const { startDate, endDate, focusedInput } = this.state
 
     return (
       <DateRange
         {...this.props}
         onDatesChange={this.onDatesChange}
+        onFocusChange={this.onFocusChange}
         startDate={startDate}
         endDate={endDate}
+        focusedInput={focusedInput}
       />
     )
   }

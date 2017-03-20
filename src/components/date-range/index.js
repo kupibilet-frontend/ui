@@ -28,15 +28,11 @@ class DateRangePickerWrapper extends React.PureComponent {
     hoveredDate: null,
   }
 
-  onFocusChange = (focusedInput) => {
-    this.setState({
-      focusedInput,
-      hoveredDate: null,
-    })
-
-    /* eslint-disable react/prop-types */
-    if (this.props.onFocusChange) {
-      this.props.onFocusChange(focusedInput)
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.focusedInput !== this.props.focusedInput) {
+      this.setState({
+        hoveredDate: null,
+      })
     }
   }
 
@@ -51,10 +47,6 @@ class DateRangePickerWrapper extends React.PureComponent {
     return typeof displayFormat === 'string' ? displayFormat : displayFormat()
   }
 
-  focus = (focusedInput = consts.START_DATE) => {
-    this.setState({ focusedInput })
-  }
-
   modifiers = {
     // Needed to invert arrow direction of the hovered day
     beforeStart: (day) => day.isBefore(this.state.startDate, 'day'),
@@ -63,8 +55,8 @@ class DateRangePickerWrapper extends React.PureComponent {
   // Render values as placeholder emulation when dates already picked
   // but DayPicker calendar opens again
   renderInputText = (day, format, inputReference) => {
-    const { startDate, endDate } = this.props
-    const { focusedInput, hoveredDate } = this.state
+    const { startDate, focusedInput, endDate } = this.props
+    const { hoveredDate } = this.state
     const isStartDateInput = inputReference === consts.START_DATE
 
     if (hoveredDate && !day.isSame(hoveredDate)) {
@@ -92,8 +84,8 @@ class DateRangePickerWrapper extends React.PureComponent {
   }
 
   render() {
-    const { startDate, endDate } = this.props
-    const { focusedInput, hoveredDate } = this.state
+    const { startDate, focusedInput, endDate } = this.props
+    const { hoveredDate } = this.state
     const startDatePlaceholder = hoveredDate && focusedInput === consts.START_DATE ? (
       hoveredDate.format(this.getDisplayFormat())
     ) : (
@@ -124,12 +116,8 @@ class DateRangePickerWrapper extends React.PureComponent {
       >
         <DateRangePicker
           {...this.props}
-          startDate={startDate}
-          endDate={endDate}
-          focusedInput={focusedInput}
           showCaret={false}
           minimumNights={0}
-          onFocusChange={this.onFocusChange}
           onDayHover={this.onDayHover}
           modifiers={this.modifiers}
           renderInputText={this.renderInputText}
@@ -177,7 +165,6 @@ DateRange.propTypes = {
   ...DateRangePicker.propTypes,
   children: PropTypes.node,
   onDatesChange: PropTypes.func.isRequired,
-  onFocusChange: PropTypes.func,
 }
 
 Object.assign(DateRange, consts)
