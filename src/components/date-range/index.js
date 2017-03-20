@@ -117,7 +117,6 @@ class DateRangePickerWrapper extends React.PureComponent {
       >
         <DateRangePicker
           {...this.props}
-          showCaret={false}
           minimumNights={0}
           onDayHover={this.onDayHover}
           modifiers={this.modifiers}
