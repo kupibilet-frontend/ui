@@ -1,382 +1,316 @@
-exports[`Storyshots Buttons Button 1`] = `
-<button
-  className="hpTakF">
-  Авиабилеты
-</button>
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Buttons Default 1`] = `
+<div
+  className="hMQnet"
+>
+  <button
+    className="no-global jOONnJ"
+    disabled={undefined}
+    size="normal"
+  >
+    <span
+      className="ieBWQc"
+      size="normal"
+    >
+      Авиабилеты
+    </span>
+  </button>
+</div>
 `;
 
-exports[`Storyshots Buttons Button 2222 1`] = `
-<button
-  className="hpTakF">
-  12345
-</button>
+exports[`Storyshots Buttons Disabled 1`] = `
+<div
+  className="hMQnet"
+>
+  <button
+    className="no-global cBbibc"
+    disabled={true}
+    size="normal"
+  >
+    <span
+      className="ieBWQc"
+      size="normal"
+    >
+      Cake is a lie
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Buttons Icon-only button 1`] = `
+<div
+  className="hMQnet"
+>
+  <button
+    className="no-global kKYUSd"
+    disabled={undefined}
+    size="large"
+  >
+    <span
+      className="dOFMSX"
+      size="large"
+    >
+      <svg
+        className="hJDrrb"
+        size="normal"
+      >
+        <use
+          xlinkHref="#kb_carrot_monochrome"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Buttons Sizes 1`] = `
+<div
+  className="hMQnet"
+>
+  <button
+    className="no-global czvUIu"
+    disabled={undefined}
+    size="large"
+  >
+    <span
+      className="ieBWQc"
+      size="large"
+    >
+      Бальшой
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Buttons With icons 1`] = `
+<div
+  className="hMQnet"
+>
+  <button
+    className="no-global dHnOvN"
+    disabled={undefined}
+    size="normal"
+  >
+    <span
+      className="YhApM"
+      size="normal"
+    >
+      <svg
+        className="cdianR"
+        size="normal"
+      >
+        <use
+          xlinkHref="#kb_plane"
+        />
+      </svg>
+    </span>
+    <span
+      className="ehcfDj"
+      size="normal"
+    >
+      Авиабилеты
+    </span>
+    <span
+      className="YhApM"
+      size="normal"
+    >
+      <svg
+        className="hJDrrb"
+        size="normal"
+      >
+        <use
+          xlinkHref="#kb_hand-baggage"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Checkbox Checkbox 1`] = `
+<div
+  className="hMQnet"
+>
+  <label
+    className="eiMGFu"
+    disabled={false}
+    onChange={[Function]}
+  >
+    <span
+      checked={false}
+      className="checkbox gJhUxw"
+      disabled={false}
+    >
+      <input
+        checked={false}
+        className="cjpCUo"
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </span>
+    <span
+      className="label-text cPjOWw"
+      disabled={false}
+    >
+      Авиабилеты
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Checkbox Checkbox checked by default 1`] = `
+<div
+  className="hMQnet"
+>
+  <label
+    className="eiMGFu"
+    disabled={false}
+    onChange={[Function]}
+  >
+    <span
+      checked={true}
+      className="checkbox GlnUj"
+      disabled={false}
+    >
+      <span
+        checked={true}
+        className="jqjLIk"
+      >
+        <svg
+          className="hJDrrb"
+          size="normal"
+        >
+          <use
+            xlinkHref="#kb_checkbox"
+          />
+        </svg>
+      </span>
+      <input
+        checked={true}
+        className="cjpCUo"
+        disabled={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </span>
+    <span
+      className="label-text cPjOWw"
+      disabled={false}
+    >
+      Авиабилеты
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Checkbox Disabled Checkbox 1`] = `
+<div
+  className="hMQnet"
+>
+  <label
+    className="dsvJUH"
+    disabled={true}
+    onChange={[Function]}
+  >
+    <span
+      checked={false}
+      className="checkbox fhciYu"
+      disabled={true}
+    >
+      <input
+        checked={false}
+        className="cjpCUo"
+        disabled={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </span>
+    <span
+      className="label-text faSGNd"
+      disabled={true}
+    >
+      Авиабилеты
+    </span>
+  </label>
+</div>
 `;
 
 exports[`Storyshots DateRange DateRange 1`] = `
-<div>
+<div
+  className="hMQnet"
+>
   <div
-    style={
-      Object {
-        "alignItems": "center",
-        "bottom": 0,
-        "display": "flex",
-        "height": "100vh",
-        "justifyContent": "center",
-        "left": 0,
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-      }
-    }>
-    <div>
+    className="jStPWm"
+  >
+    <div
+      className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
+    >
       <div
-        style={
-          Object {
-            "position": "relative",
-            "zIndex": 0,
-          }
-        }>
-        <div
-          className="bEpTMe">
-          <div>
+        className="DateRangePicker"
+      >
+        <div>
+          <div
+            className="DateRangePickerInput"
+          >
             <div
-              className="DateRangePicker">
-              <div>
-                <div
-                  className="DateRangePickerInput">
-                  <div
-                    className="DateInput">
-                    <input
-                      aria-describedby=""
-                      aria-label="Start Date"
-                      autoComplete="off"
-                      className="DateInput__input"
-                      disabled={false}
-                      id="startDate"
-                      name="startDate"
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Start Date"
-                      readOnly={false}
-                      required={false}
-                      type="text"
-                      value="" />
-                    
-                    <div
-                      className="DateInput__display-text">
-                      Start Date
-                    </div>
-                  </div>
-                  <div
-                    className="DateRangePickerInput__arrow">
-                    <svg
-                      viewBox="0 0 1000 1000">
-                      <path
-                        d="M694.4 242.4l249.1 249.1c11 11 11 21 0 32L694.4 772.7c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210.1-210.1H67.1c-13 0-23-10-23-23s10-23 23-23h805.4L662.4 274.5c-21-21.1 11-53.1 32-32.1z" />
-                    </svg>
-                  </div>
-                  <div
-                    className="DateInput">
-                    <input
-                      aria-describedby=""
-                      aria-label="End Date"
-                      autoComplete="off"
-                      className="DateInput__input"
-                      disabled={false}
-                      id="endDate"
-                      name="endDate"
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="End Date"
-                      readOnly={false}
-                      required={false}
-                      type="text"
-                      value="" />
-                    
-                    <div
-                      className="DateInput__display-text">
-                      End Date
-                    </div>
-                  </div>
-                </div>
+              className="DateInput"
+            >
+              <input
+                aria-describedby=""
+                aria-label="Туда"
+                autoComplete="off"
+                className="DateInput__input"
+                disabled={false}
+                id="startDate"
+                name="startDate"
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Туда"
+                readOnly={false}
+                required={false}
+                type="text"
+                value=""
+              />
+              
+              <div
+                className="DateInput__display-text"
+              >
+                Туда
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <a
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "#28c",
-            "borderRadius": "0 0 0 5px",
-            "color": "#fff",
-            "cursor": "pointer",
-            "display": "block",
-            "fontFamily": "sans-serif",
-            "fontSize": 12,
-            "padding": "5px 15px",
-            "position": "fixed",
-            "right": 0,
-            "textDecoration": "none",
-            "top": 0,
-          }
-        }>
-        ?
-      </a>
-      <div
-        style={
-          Object {
-            "background": "white",
-            "bottom": 0,
-            "display": "none",
-            "left": 0,
-            "overflow": "auto",
-            "padding": "0 40px",
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-          }
-        }>
-        <a
-          onClick={[Function]}
-          style={
-            Object {
-              "background": "#28c",
-              "borderRadius": "0 0 0 5px",
-              "color": "#fff",
-              "cursor": "pointer",
-              "display": "block",
-              "fontFamily": "sans-serif",
-              "fontSize": 12,
-              "padding": "5px 15px",
-              "position": "fixed",
-              "right": 0,
-              "textDecoration": "none",
-              "top": 0,
-            }
-          }>
-          ×
-        </a>
-        <div
-          style={undefined}>
-          <div
-            style={
-              Object {
-                "WebkitFontSmoothing": "antialiased",
-                "color": "#444",
-                "fontFamily": "
-                  -apple-system, \".SFNSText-Regular\", \"San Francisco\", \"Roboto\",
-                  \"Segoe UI\", \"Helvetica Neue\", \"Lucida Grande\", sans-serif
-                ",
-                "fontSize": 15,
-                "fontWeight": 300,
-                "lineHeight": 1.45,
-              }
-            }>
             <div
-              style={
-                Object {
-                  "borderBottom": "1px solid #eee",
-                  "marginBottom": 10,
-                }
-              }>
-              <h1
-                style={
-                  Object {
-                    "fontSize": 35,
-                    "margin": "20px 0 0 0",
-                    "padding": 0,
-                  }
-                }>
-                DateRange
-              </h1>
-              <h2
-                style={
-                  Object {
-                    "fontSize": 22,
-                    "fontWeight": 400,
-                    "margin": "0 0 10px 0",
-                    "padding": 0,
-                  }
-                }>
-                DateRange
-              </h2>
+              className="DateRangePickerInput__arrow"
+            >
+              <span />
             </div>
             <div
-              style={
-                Object {
-                  "marginBottom": 0,
-                }
-              }>
-              <p
-                style={
-                  Object {
-                    "WebkitFontSmoothing": "antialiased",
-                    "color": "#444",
-                    "fontFamily": "
-                      -apple-system, \".SFNSText-Regular\", \"San Francisco\", \"Roboto\",
-                      \"Segoe UI\", \"Helvetica Neue\", \"Lucida Grande\", sans-serif
-                    ",
-                    "fontSize": 15,
-                  }
-                }>
-                description
-              </p>
-            </div>
-            <div>
-              <h1
-                style={
-                  Object {
-                    "borderBottom": "1px solid #EEE",
-                    "fontSize": 25,
-                    "margin": "20px 0 0 0",
-                    "padding": "0 0 5px 0",
-                  }
-                }>
-                Story Source
-              </h1>
-              <pre
-                style={
-                  Object {
-                    "backgroundColor": "#fafafa",
-                    "fontFamily": "Menlo, Monaco, \"Courier New\", monospace",
-                    "fontSize": ".88em",
-                    "lineHeight": 1.5,
-                    "overflowX": "scroll",
-                    "padding": ".5rem",
-                  }
-                }>
-                <div>
-                  <div
-                    style={
-                      Object {
-                        "paddingLeft": 18,
-                        "paddingRight": 3,
-                      }
-                    }>
-                    <span
-                      style={
-                        Object {
-                          "color": "#777",
-                        }
-                      }>
-                      <
-                      DateRange
-                    </span>
-                    <span />
-                    <span
-                      style={
-                        Object {
-                          "color": "#777",
-                        }
-                      }>
-                      >
-                    </span>
-                  </div>
-                  <div
-                    style={
-                      Object {
-                        "paddingLeft": 33,
-                        "paddingRight": 3,
-                      }
-                    }>
-                    <span
-                      style={
-                        Object {
-                          "color": "#777",
-                        }
-                      }>
-                      Авиабилеты
-                    </span>
-                  </div>
-                  <div
-                    style={
-                      Object {
-                        "paddingLeft": 18,
-                        "paddingRight": 3,
-                      }
-                    }>
-                    <span
-                      style={
-                        Object {
-                          "color": "#777",
-                        }
-                      }>
-                      </
-                      DateRange
-                      >
-                    </span>
-                  </div>
-                </div>
-              </pre>
-            </div>
-            <div>
-              <h1
-                style={
-                  Object {
-                    "borderBottom": "1px solid #EEE",
-                    "fontSize": 25,
-                    "margin": "20px 0 0 0",
-                    "padding": "0 0 5px 0",
-                  }
-                }>
-                Prop Types
-              </h1>
-              <div>
-                <h2
-                  style={
-                    Object {
-                      "margin": "20px 0 0 0",
-                    }
-                  }>
-                  \"
-                  DateRange
-                  \" Component
-                </h2>
-                <table
-                  style={
-                    Object {
-                      "borderCollapse": "separate",
-                      "borderSpacing": "10px 5px",
-                      "marginLeft": -10,
-                    }
-                  }>
-                  <thead>
-                    <tr>
-                      <th>
-                        property
-                      </th>
-                      <th>
-                        propType
-                      </th>
-                      <th>
-                        required
-                      </th>
-                      <th>
-                        default
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        children
-                      </td>
-                      <td>
-                        node
-                      </td>
-                      <td>
-                        no
-                      </td>
-                      <td>
-                        -
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              className="DateInput"
+            >
+              <input
+                aria-describedby=""
+                aria-label="Обратно"
+                autoComplete="off"
+                className="DateInput__input"
+                disabled={false}
+                id="endDate"
+                name="endDate"
+                onChange={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Обратно"
+                readOnly={false}
+                required={false}
+                type="text"
+                value=""
+              />
+              
+              <div
+                className="DateInput__display-text"
+              >
+                Обратно
               </div>
             </div>
           </div>
@@ -384,16 +318,35 @@ exports[`Storyshots DateRange DateRange 1`] = `
       </div>
     </div>
   </div>
-  <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<?xml version=\"1.0\" encoding=\"utf-8\"?><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><symbol viewBox=\"0 0 18 18\" id=\"kb_airport-change\"><title>kb</title><path d=\"M13 7a3 3 0 0 0-1.25.28 6.73 6.73 0 0 1-.69 2.93c-.05.12-.12.23-.19.35l-.47.93a1.73 1.73 0 0 0 .11.18L13 16l2.49-4.32a1.73 1.73 0 0 0 .11-.18A3 3 0 0 0 13 7zM6 3a4 4 0 0 0-3.75 4.23 4.69 4.69 0 0 0 .5 2.11 2.51 2.51 0 0 0 .14.25C4.17 12.12 6 16 6 16s1.83-3.88 3.11-6.4a2.52 2.52 0 0 0 .14-.25 4.69 4.69 0 0 0 .5-2.11A4 4 0 0 0 6 3zm0 6.5A2.5 2.5 0 1 1 8.5 7 2.5 2.5 0 0 1 6 9.5z\" /></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_angle\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"1.3\" d=\"M13 7l-4 4-4-4\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_arrow-down\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 7l5 5 5-5\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_arrow-left\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11 4L6 9l5 5\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_arrow-right\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M7 4l5 5-5 5\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_arrow-up\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 11l5-5 5 5\"/></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_baggage\"><title>kb</title><path d=\"M42 39.81v-13.9c-2.9 2.08-7.55 3.67-15 3.67S14.91 28 12 25.9v13.91A6 6 0 1 0 20.19 48h13.62A6 6 0 1 0 42 39.81zM15 48a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm24 0a3 3 0 1 1 3-3 3 3 0 0 1-3 3z\" /><path d=\"M36 12V6h.5a1.5 1.5 0 0 0 0-3h-19a1.5 1.5 0 0 0 0 3h.5v6a6 6 0 0 0-6 6v3c2.26 3.23 7.52 5.07 15 5.07S39.74 24.24 42 21v-3a6 6 0 0 0-6-6zM21 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v5H21V7z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_bus\"><title>kb</title><path d=\"M7 25a2 2 0 0 1-2-2v-4a2 2 0 0 1 4 0v4a2 2 0 0 1-2 2zM47 25a2 2 0 0 1-2-2v-4a2 2 0 0 1 4 0v4a2 2 0 0 1-2 2zM39 12H15a3 3 0 0 0-3 3v31.5a1.5 1.5 0 0 0 1.5 1.5h4a1.5 1.5 0 0 0 1.5-1.5V45h16v1.5a1.5 1.5 0 0 0 1.5 1.5h4a1.5 1.5 0 0 0 1.5-1.5V15a3 3 0 0 0-3-3zM22 40a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2zm16 0a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2zm0-13c-.2 4-4 6.31-11 6.31S16.2 31 16 27V17a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v10z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_business\"><title>kb</title><path d=\"M12 36v8.57A3.24 3.24 0 0 0 15 48h24a3.24 3.24 0 0 0 3-3.43V36\" /><path d=\"M12 45v-8.57A3.24 3.24 0 0 1 15 33h24a3.24 3.24 0 0 1 3 3.43V45M12 22v4.57A3.24 3.24 0 0 0 15 30h24a3.24 3.24 0 0 0 3-3.43V22\" /><path d=\"M12 23v-.57c0-1.89 1.34-4.43 3-4.43h24c1.66 0 3 2.54 3 4.43V23M3 39v5.57A3.24 3.24 0 0 0 6 48a3.24 3.24 0 0 0 3-3.43V39M9 39V27.43A3.24 3.24 0 0 0 6 24a3.24 3.24 0 0 0-3 3.43V39M45 39v5.57A3.24 3.24 0 0 0 48 48a3.24 3.24 0 0 0 3-3.43V39M51 39V27.43A3.24 3.24 0 0 0 48 24a3.24 3.24 0 0 0-3 3.43V39\" /></symbol><symbol viewBox=\"0 0 60 60\" id=\"kb_carrot_monochrome\"><title>carrot</title><path d=\"M53.81 17.75c-1.52-1.64-4-2.22-6-2.6l.08-.09c1.27-1.43 3.64-4.09 3.46-5.83a1.48 1.48 0 0 0-.62-1.08c-1.78-1.31-4.37 1.56-5.91 3.28l-.26.28v-.07c-.52-1.19-1.32-3-2.4-3.18a1.37 1.37 0 0 0-1.32.3c-.48.54-.22 1.45 0 2.11l.06.21.1.72c.12.41.23.83.33 1.24.36 1.56.38 1.63-.57 2.71-.47.54-1 1.14-1.44 1.78-3.14-2.55-7-5.39-10.2-5.68-1.87-.16-3.29 2.1-4.32 3.76-.24.38-.46.74-.66 1-.85 1.21-1.77 2.43-2.66 3.61l-1.16 1.48a20.58 20.58 0 0 0-1.72 3c-.36.72-.73 1.47-1.13 2.13-2.82 4.71-5.09 8.91-6.95 12.84-.17.37-.4.81-.65 1.31-1.53 3-4.1 8.12-2.71 10.82a2.77 2.77 0 0 0 2.67 1.52A13.32 13.32 0 0 0 14.58 52l.63-.27A145.68 145.68 0 0 0 40.32 38c.43-.29.94-.59 1.48-.91 2.17-1.28 4.86-2.86 5.32-5.23.87-4.51-2.46-9-4.47-11.19a15 15 0 0 1 1.42-1.23c1.15-.85 2.4-.78 4-.67h.19a14 14 0 0 1 2.73.52l.93.24s1.94.4 2.4-.42a1.13 1.13 0 0 0-.51-1.36zm-9.34 12.37l.07.19c0 .08.05.16.07.24.05.25.15.71.15.77l-.16.08a4 4 0 0 0-.78.43c-.34.24-.95.61-1.59 1s-1.4.59-1.8.72c-.87.28-.86.28-1.23-.33-.13-.22-.29-.49-.52-.82-.11-.16-.22-.35-.33-.55a4.15 4.15 0 0 0-1-1.32l-.12-.08a1.67 1.67 0 0 0-1-.52 1.31 1.31 0 0 0-1.12.62 2.19 2.19 0 0 0 .1 2.44c.1.26.23.5.35.75a5.17 5.17 0 0 1 .44 1.17 2 2 0 0 0 .2.47 4.17 4.17 0 0 1 .19.4 10.79 10.79 0 0 1-1.75.89l-.52.24c-.39.22-1 .63-1.74 1.11l-.18.09c-.62.29-1.11.52-1.35.66s-.5.32-1 .63-1.61 1.09-2.5 1.65a2.59 2.59 0 0 1-1.66.43 3.93 3.93 0 0 1-.46-.5l-.07-.09c-1.11-1.46-2-2.48-2.75-2.24h-.09a1.4 1.4 0 0 0-.64 1.38v.4a3.08 3.08 0 0 0 .45 1.57 2.83 2.83 0 0 1 .4 1.06.94.94 0 0 0 .11.34c-.13.57-1.44 1.22-2.32 1.67l-.81.42-.18.1c-.88.53-1.76 1.09-2.65 1.66a50.36 50.36 0 0 1-6.13 3.54c.14-.42.24-.86.35-1.29a13.43 13.43 0 0 1 .49-1.66l.1-.24c.87-2.13 1.93-4.25 2.88-6.11C16.5 37.27 18.79 33.07 21 29l1.2-2.21.22.21c.75.74 1.67 1.65 2.51 1.62a1.39 1.39 0 0 0 1.3-.66 1.1 1.1 0 0 0 .1-.44 3.82 3.82 0 0 0-1-2.38l-.24-.33c-.08-.12-.21-.27-.35-.45l-.19-.24-.16-.21-.09-.14-.09-.14a.59.59 0 0 1-.06-.15.72.72 0 0 1 0-.21 10.37 10.37 0 0 1 1.12-2.08c.19-.3.36-.56.45-.74l.11-.45v-.07l.29-.55 1-1.84.52-1 1.06-2.12 2.11 1.41.48.33q.93.64 1.85 1.3l.4.29c.66.48 1.3 1 1.95 1.49.35.28.7.57 1.05.87l.7.59a38.54 38.54 0 0 1 4.33 4.38l.07.09.07.09a16.13 16.13 0 0 1 2.7 4.74z\"  fill-rule=\"evenodd\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_checkbox\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M3 9l4 4 7-9\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_cross\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"2\" d=\"M5 5l8 8M13 5l-8 8\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_cross-small\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"1.3\" d=\"M12 12L6 6M6 12l6-6\"/></symbol><symbol viewBox=\"0 0 70 70\" id=\"kb_error\"><title>kb</title><path fill=\"none\"  stroke-miterlimit=\"10\" stroke-width=\"3.5\" d=\"M30 65l1-59h6v58M38 17h19l6 12-5 11H39M30 12H14L6 23l8 13h16\"/></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_exchange\"><title>kb</title><path d=\"M14.74 18a15.37 15.37 0 0 1 12.16-6 15.08 15.08 0 0 1 14.18 10 3 3 0 0 0 5.65-2A21.09 21.09 0 0 0 26.9 6a21.46 21.46 0 0 0-16.35 7.63L5 5.87v18.06a.07.07 0 0 0 .07.07h18.06zM49 30.07a.07.07 0 0 0-.07-.07H30.87l8.39 6a15.37 15.37 0 0 1-12.16 6 15.08 15.08 0 0 1-14.18-10 3 3 0 1 0-5.65 2A21.09 21.09 0 0 0 27.1 48a21.46 21.46 0 0 0 16.35-7.63L49 48.13V30.07z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_hand-baggage\"><title>kb</title><path d=\"M42 24h-3v24h3a6 6 0 0 0 6-6V30a6 6 0 0 0-6-6zM33 12H21a3 3 0 0 0-3 3v33h18V15a3 3 0 0 0-3-3zM21 24v-8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8H21zM6 30v12a6 6 0 0 0 6 6h3V24h-3a6 6 0 0 0-6 6z\" /></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_minus\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"2\" d=\"M14 9H4\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_night-transfer\"><title>kb</title><path d=\"M15.5 14A7.49 7.49 0 0 1 9.36 2.2 7 7 0 1 0 15.92 14z\" /></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_no-baggage\"><title>kb</title><path  d=\"M6 14h1v1H6zM11 14h1v1h-1zM11 5V2H7v3a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zM8 5V3h2v2H8z\"/><path  d=\"M2.024 6.44l.451-.87 13.503 7.002-.451.87z\"/><path fill=\"none\"  stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"1.16\" d=\"M5.25 7.5l7.5 4\"/></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_plane\"><title>kb</title><path d=\"M30 30.31l18 6.27v-6.5L30 20.2V9a3 3 0 0 0-6 0v11.2L6 30.08v6.5l18-6.27v12L18 45v3h18v-3l-6-2.67v-12z\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_plus\"><title>kb</title><path fill=\"none\"  stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"2\" d=\"M9 4v10M14 9H4\"/></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_return\"><title>kb</title><path d=\"M26.9 6a21.46 21.46 0 0 0-16.35 7.63L5 5.87v18.06a.07.07 0 0 0 .07.07h18.06l-8.39-6a15.37 15.37 0 0 1 12.16-6 15 15 0 1 1 .1 30 14.85 14.85 0 0 1-10.33-4.15 3 3 0 0 0-4.15 4.33A20.92 20.92 0 0 0 47.94 27 21 21 0 0 0 26.9 6z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_seat\"><title>kb</title><path d=\"M42 33H23.34l-1.25-5H36a2 2 0 0 0 0-4H21.09l-3.18-12.73a3 3 0 0 0-5.82 1.46L18.66 39H20v6a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-6a3 3 0 0 0 0-6zm-3 11a1 1 0 0 1-1 1H24a1 1 0 0 1-1-1v-5h16v5z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_train\"><title>kb</title><path d=\"M37 24c2-3 3.21-7.15 3.46-12.2C38.24 9 33.71 7.43 27 7.43s-11.25 1.28-13.45 4.13C13.77 16.72 15 20.95 17 24h20z\" /><path d=\"M43.2 50.1l-4.36-5.82A6 6 0 0 0 42 39V20.21c-2.46 7.68-7.84 12.29-15.06 12.29S14.45 27.91 12 20.24V39a6 6 0 0 0 3.16 5.28L10.8 50.1a1.5 1.5 0 0 0 2.4 1.8l5.18-6.9h17.24l5.18 6.9a1.5 1.5 0 0 0 2.4-1.8zM20.5 41a2.5 2.5 0 1 1 2.5-2.5 2.5 2.5 0 0 1-2.5 2.5zm13 0a2.5 2.5 0 1 1 2.5-2.5 2.5 2.5 0 0 1-2.5 2.5z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_transfer-gap\"><title>kb</title><path d=\"M27 3a21 21 0 0 0-5.29 41.3L27 54l5.29-9.7A21 21 0 0 0 27 3zm12.36 25A13 13 0 0 1 17 32.34L13 38V26h12l-5.44 3.88A9.46 9.46 0 0 0 36 27a1.49 1.49 0 0 1 1.41-1h.52a1.51 1.51 0 0 1 1.43 2zM41 22H29l5.43-3.87A9.76 9.76 0 0 0 27 14.46 9.53 9.53 0 0 0 18 21a1.49 1.49 0 0 1-1.41 1h-.53a1.51 1.51 0 0 1-1.42-2 12.92 12.92 0 0 1 22.31-4.34L41 10v12z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_transfer-night\"><title>kb</title><path d=\"M47.5 31.89c-8.86 8.86-20 7.93-26.68 1.25s-7.55-17.77 1.3-26.63c.43-.43.87-.83 1.31-1.22a22 22 0 1 0 25.27 25.3c-.38.41-.78.87-1.2 1.3z\" /></symbol><symbol viewBox=\"0 0 54 54\" id=\"kb_transfer-transit\"><title>kb</title><path  d=\"M12 9h24V3L12 9zM36 12H12v36h24a6 6 0 0 0 6-6V18a6 6 0 0 0-6-6zm-12.48 5.59c-1.59 2-2.85 5.2-3 10.41h-5.18a11.46 11.46 0 0 1 8.18-10.41zM15.45 31h5.11c.27 4.64 1.48 7.57 3 9.41A11.39 11.39 0 0 1 15.45 31zm12-12.86c2.31 1.35 3.68 4.86 3.84 9.86h-7.76c.17-5 1.55-8.51 3.89-9.86zm0 21.72c-2.21-1.26-3.58-4.36-3.88-8.86h7.69c-.26 4.5-1.66 7.6-3.84 8.86zm3.68.41C32.54 38.41 33.7 35.52 34 31h4.87a12 12 0 0 1-7.77 9.27zM34 28c-.14-5.08-1.35-8.28-2.88-10.26A12 12 0 0 1 39 28h-5z\"/></symbol><symbol viewBox=\"0 0 18 18\" id=\"kb_transit-visa\"><title>kb</title><circle cx=\"9.05\" cy=\"5.05\" r=\"1.85\" /><path  d=\"M6 10h6v6H6z\"/><path d=\"M14.55 13.75l-4.46-3.81a.9.9 0 0 1 1.17-1.37l3.19 2.72 1.91-1.93a.9.9 0 0 1 1.28 1.27z\" /><circle cx=\"10\" cy=\"10\" r=\"2\" /><circle cx=\"8\" cy=\"10\" r=\"2\" /><path  d=\"M6.24 9.04L2 16h4l.24-6.96zM8 8h2v1.35H8z\"/><path fill=\"none\"  stroke-miterlimit=\"10\" stroke-width=\"1.2\" d=\"M11 8l-6 8\"/><rect x=\"16\" y=\"5\" width=\"2\" height=\"3\" rx=\".5\" ry=\".5\" /></symbol></svg>",
-      }
-    }
-    style={
-      Object {
-        "display": "none",
-      }
-    } />
+</div>
+`;
+
+exports[`Storyshots Icon Medium Icon with stroke & fill 1`] = `
+<div
+  className="hMQnet"
+>
+  <svg
+    className="bmlaaq"
+    size="medium"
+  >
+    <use
+      xlinkHref="#kb_airport-change"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Icon Small Icon with stroke 1`] = `
+<div
+  className="hMQnet"
+>
+  <svg
+    className="bXGNbG"
+    size="small"
+  >
+    <use
+      xlinkHref="#kb_checkbox"
+    />
+  </svg>
 </div>
 `;
