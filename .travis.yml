@@ -1,12 +1,22 @@
 language: node_js
 node_js:
 - stable
+
 deploy:
   provider: npm
   email: max@kupibilet.ru
+  skip_cleanup: true
   api_key:
     secure: bsR0rhuJ3m9UmLJyielhJWKhMr8w7VBmdpgd/2MHljr7SHRoVqjqKRb7SPVT9gU5zye0/akaRXRD+PBLQvCgrjSyGwcA+hl374v25nFIhH/IEs4Ubd1FzqE4POk591WHZ/QqBcQKnKuoqcyOk1aYAt2dycKqoD0KJWel0ebtg8NwTSr1G4r4dRgm19RpqmRPKHaMI4uPmMjUhxYHc0IXyyeW8USRktxrNlRKUro7zGTh4ufpTFxEbZkN8n66vNFcGRa5iho/lOdLP+tq1+29UPd9a/nVQuZWrAIXIGhSXLi3WggTRhx4qZbqvHqWmPpOXjhuy5yULKOBQ4TsMSZSnEJOyMK4x8qFK+WBFDmpD/gPv1pZyJMI3qoevyZ3GGtOQD6M7Jerg+axrGXLRHFd/1yUABXLvmnsVCjt+G0m1V1i7tpo6hfv2Ta3L3Jj0THQDF6eZHrxlE/upH27dWVF79pJUngziGzTFfQw1OtJgN+A+dlohO5P3FfqpyoNpeRh9W7EiU8hSg+mdi1gum1jEce/6Xb0pqsfz6Te5WcQ0dDogJkwJVLO96bOMPrClYr6Dzpv1dMlqfsPBSy8XVxkFLTyZOZ5HvInebFCnMt9lhLZJYrZab+pasyKIknIWrl1aCTHZfPJRquAQFDavWAV+Uqg9pwPwwzCDqYpIUchzzU=
   on:
     branch: master
     tags: true
     repo: kupibilet-frontend/ui
+
+deploy:
+  local_dir: storybook-static
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
