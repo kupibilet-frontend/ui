@@ -12,7 +12,7 @@
     "lint:js": "eslint ./components/**/*.js",
     "jest": "jest",
     "postinstall": "move-bin",
-    "build": "babel src/ -d lib/ --ignore stories",
+    "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
     "prepublish": "npm run build --silent"
   },
   "repository": {

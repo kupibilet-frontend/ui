@@ -5,7 +5,7 @@ import infoAddon from '@kadira/react-storybook-addon-info'
 import initIcons from '@kupibilet/icons'
 
 import React from 'react'
-import ThemeProvider from '../components/theme-provider'
+import ThemeProvider from '../src/components/theme-provider'
 
 import mockInfoAddon from '../addons/mock-info'
 
@@ -42,7 +42,7 @@ addDecorator((story) => (
   </div>
 ))
 
-const req = require.context('../components', true, /stories.js$/)
+const req = require.context('../src/components', true, /stories.js$/)
 const loadStories = () => req.keys().forEach((filename) => req(filename))
 
 configure(loadStories, module)
