@@ -8,11 +8,12 @@
     "test": "npm run jest --silent",
     "start": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook",
-    "lint:css": "stylelint ./components/**/*.js",
-    "lint:js": "eslint ./components/**/*.js",
+    "lint:css": "stylelint ./src/components/**/*.js",
+    "lint:js": "eslint ./src/components/**/*.js",
     "jest": "jest",
     "postinstall": "move-bin",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
+    "precommit": "npm test",
     "prepublish": "npm run build --silent"
   },
   "repository": {
@@ -33,6 +34,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "eslint": "^3.16.1",
     "eslint-config-kupibilet": "^8.1.1",
+    "husky": "^0.13.2",
     "jest": "^18.1.0",
     "move-binaries-to-bin": "^1.0.1",
     "raw-loader": "^0.5.1",
