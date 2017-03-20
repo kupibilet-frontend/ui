@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-import {StyledButton, StyledButtonText, IconWrap, SIZES} from './styled'
+import { StyledButton, StyledButtonText, IconWrap, SIZES } from './styled'
 
 const BUTTON_SIZE_TO_ICON_MAP = {
   small: 'xxsmall',
@@ -10,14 +10,14 @@ const BUTTON_SIZE_TO_ICON_MAP = {
 
 const cloneIconWithSize = (iconNode, size) => (
   React.cloneElement(iconNode, {
-    size: iconNode.props.size || BUTTON_SIZE_TO_ICON_MAP[size]
+    size: iconNode.props.size || BUTTON_SIZE_TO_ICON_MAP[size],
   })
 )
 
 const Button = ({ children, disabled, size, icon, leftIcon, rightIcon }) => (
   <StyledButton
     size={size}
-    isIconOnly={ Boolean(icon) }
+    isIconOnly={Boolean(icon)}
     hasLeftIcon={Boolean(leftIcon)}
     hasRightIcon={Boolean(rightIcon)}
     disabled={disabled}
@@ -39,7 +39,11 @@ const Button = ({ children, disabled, size, icon, leftIcon, rightIcon }) => (
           { cloneIconWithSize(icon, size) }
         </IconWrap>
       ) : (
-        <StyledButtonText size={size} hasLeftIcon={Boolean(leftIcon)} hasRightIcon={Boolean(rightIcon)}>
+        <StyledButtonText
+          size={size}
+          hasLeftIcon={Boolean(leftIcon)}
+          hasRightIcon={Boolean(rightIcon)}
+        >
           { children }
         </StyledButtonText>
       )
@@ -61,6 +65,7 @@ Button.defaultProps = {
   size: 'normal',
 }
 
+/* eslint-disable react/require-default-props */
 Button.propTypes = {
   size: PropTypes.oneOf(Object.keys(SIZES)),
   children: PropTypes.node,

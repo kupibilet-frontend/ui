@@ -13,7 +13,7 @@ class CheckboxParent extends React.PureComponent {
 
   handleChange = () => {
     this.setState({
-      checked: !this.state.checked
+      checked: !this.state.checked,
     })
   }
 
