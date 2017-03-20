@@ -1,12 +1,22 @@
 language: node_js
 node_js:
 - stable
+
 deploy:
   provider: npm
   email: max@kupibilet.ru
+  skip_cleanup: true
   api_key:
     secure: ***REMOVED***
   on:
     branch: master
     tags: true
     repo: kupibilet-frontend/ui
+
+deploy:
+  local_dir: storybook-static
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
