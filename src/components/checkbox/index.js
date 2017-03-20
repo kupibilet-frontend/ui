@@ -12,7 +12,7 @@ export default class Checkbox extends PureComponent {
   }
 
   static defaultProps = {
-    disabled: false
+    disabled: false,
   }
 
   render() {
@@ -20,7 +20,7 @@ export default class Checkbox extends PureComponent {
       checked,
       disabled,
       onChange,
-      children
+      children,
     } = this.props
 
     return (

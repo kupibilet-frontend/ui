@@ -22,6 +22,7 @@ CalendarNav.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
 }
 
+/* eslint-disable react/prop-types */
 class DateRangePickerWrapper extends React.PureComponent {
   state = {
     focusedInput: null,
@@ -29,7 +30,7 @@ class DateRangePickerWrapper extends React.PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.focusedInput !== this.props.focusedInput) {
+    if (nextProps.focusedInput !== this.props.focusedInput) {
       this.setState({
         hoveredDate: null,
       })

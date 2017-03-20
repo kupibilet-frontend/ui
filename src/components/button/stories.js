@@ -12,7 +12,7 @@ const sizesSelect = (defaultValue = 'large') => select(
     normal: 'Normal',
     large: 'Large',
   },
-  defaultValue
+  defaultValue,
 )
 
 storiesOf('Buttons', module)
