@@ -21,6 +21,7 @@ export default class Checkbox extends PureComponent {
       disabled,
       onChange,
       children,
+      ...props
     } = this.props
 
     return (
@@ -40,6 +41,7 @@ export default class Checkbox extends PureComponent {
             )
           }
           <CheckboxInput
+            {...props}
             type="checkbox"
             checked={checked}
             onChange={onChange}

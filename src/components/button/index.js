@@ -14,8 +14,9 @@ const cloneIconWithSize = (iconNode, size) => (
   })
 )
 
-const Button = ({ children, disabled, size, icon, leftIcon, rightIcon }) => (
+const Button = ({ children, disabled, size, icon, leftIcon, rightIcon, ...props }) => (
   <StyledButton
+    {...props}
     size={size}
     isIconOnly={Boolean(icon)}
     hasLeftIcon={Boolean(leftIcon)}
