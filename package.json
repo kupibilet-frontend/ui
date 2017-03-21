@@ -11,7 +11,7 @@
     "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" && exit 0; stylelint ./src/components/**/*.js",
     "lint:js": "eslint ./src/components/**/*.js",
     "jest": "jest",
-    "postinstall": "move-bin",
+    "postinstall": "move-bin || true",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
     "precommit": "npm test",
     "prepublish": "npm run build --silent"
