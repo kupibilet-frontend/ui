@@ -1,72 +1,51 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import styled from 'styled-components'
+import { select, date } from '@kadira/storybook-addon-knobs'
+import moment from 'moment'
+import updateKnob from '../../utils/updateKnob'
 
 import DateRange from './index'
+import DayCell from './stories-day-cell-sample'
 
-/* eslint-disable react/prop-types */
+const getFocusedInput = (defaultFocusedInput = 'none') => {
+  const focusedInput = select('focusedInput', {
+    none: 'None',
+    [DateRange.START_DATE]: 'Start date',
+    [DateRange.END_DATE]: 'End date',
+  }, defaultFocusedInput)
 
-class DateRangeState extends React.PureComponent {
-  state = {
-    startDate: null,
-    endDate: null,
-    focusedInput: null,
+  if (focusedInput === 'none') {
+    return null
   }
 
-  onDatesChange = ({ startDate, endDate }) => {
-    this.setState({ startDate, endDate })
-  }
+  return focusedInput
+}
 
-  onFocusChange = (focusedInput) => {
-    this.setState({ focusedInput })
-  }
+const onFocusChange = (focusedInput) => {
+  updateKnob('focusedInput', 'select', focusedInput || 'none')
+}
 
-  render() {
-    const { startDate, endDate, focusedInput } = this.state
+const onDatesChange = ({ startDate, endDate }) => {
+  updateKnob('startDate', 'date', startDate ? startDate.toDate() : null)
+  updateKnob('endDate', 'date', endDate ? endDate.toDate() : null)
+}
+
+storiesOf('DateRange', module)
+  .addWithInfo('DateRange', 'with custom calendar cells', () => {
+    const startDate = date('startDate', null)
+    const endDate = date('endDate', null)
 
     return (
       <DateRange
-        {...this.props}
-        onDatesChange={this.onDatesChange}
-        onFocusChange={this.onFocusChange}
-        startDate={startDate}
-        endDate={endDate}
-        focusedInput={focusedInput}
+        startDate={startDate ? moment(startDate) : null}
+        endDate={endDate ? moment(endDate) : null}
+        focusedInput={getFocusedInput()}
+        onFocusChange={onFocusChange}
+        onDatesChange={onDatesChange}
+        renderDay={(day) => (
+          <DayCell day={day} />
+        )}
       />
     )
-  }
-}
-
-const AvgCost = styled.div`
-  font-size: 11px;
-  color: ${({ isCheap, theme }) => (isCheap ? theme.color.success : theme.color.textLight)};
-  letter-spacing: .5px;
-  line-height: 1;
-  text-align: center;
-
-  .CalendarDay:not(.CalendarDay--blocked):hover &,
-  .CalendarDay--selected-start &,
-  .CalendarDay--selected-end & {
-    color: ${({ theme }) => theme.color.background}
-  }
-`
-
-const DayCell = ({ day }) => (
-  <span>
-    { day.format('D') }
-    <AvgCost isCheap={(+day.format('DDD') % 9 === 0)}>
-      { Math.floor(day.format('DDD') * 321 % 100) } 000
-    </AvgCost>
-  </span>
-)
-
-storiesOf('DateRange', module)
-  .addWithInfo('DateRange', 'with custom calendar cells', () => (
-    <DateRangeState
-      renderDay={(day) => (
-        <DayCell day={day} />
-      )}
-      numberOfMonths={2}
-    />
-  ),
+  },
 )
