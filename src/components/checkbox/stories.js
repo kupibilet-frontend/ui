@@ -1,45 +1,34 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import { text } from '@kadira/storybook-addon-knobs'
+import { text, boolean } from '@kadira/storybook-addon-knobs'
+import updateKnob from '../../utils/updateKnob'
 
 import Checkbox from './index'
 
-/* eslint-disable react/prop-types */
-
-class CheckboxParent extends React.PureComponent {
-  state = {
-    checked: this.props.defaultChecked || false,
-  }
-
-  handleChange = () => {
-    this.setState({
-      checked: !this.state.checked,
-    })
-  }
-
-  render() {
-    const { checked } = this.state
-    const props = this.props
+storiesOf('Checkbox', module)
+  .addWithInfo('default', () => {
+    const checked = boolean('checked', false)
 
     return (
       <Checkbox
-        onChange={this.handleChange}
         checked={checked}
-        disabled={props.disabled}
+        onChange={() => updateKnob('checked', 'boolean', !checked)}
       >
-        {text('text', 'Авиабилеты')}
+        { text('text', 'Авиабилеты') }
       </Checkbox>
     )
-  }
-}
+  })
+  .addWithInfo('disabled', () => {
+    const checked = boolean('checked', false)
+    const disabled = boolean('disabled', true)
 
-storiesOf('Checkbox', module)
-  .addWithInfo('Checkbox', () => (
-    <CheckboxParent />
-  ))
-  .addWithInfo('Checkbox checked by default', () => (
-    <CheckboxParent defaultChecked />
-  ))
-  .addWithInfo('Disabled Checkbox', () => (
-    <CheckboxParent disabled />
-  ))
+    return (
+      <Checkbox
+        checked={checked}
+        disabled={disabled}
+        onChange={() => updateKnob('checked', 'boolean', !checked)}
+      >
+        { text('text', 'Авиабилеты') }
+      </Checkbox>
+    )
+  })

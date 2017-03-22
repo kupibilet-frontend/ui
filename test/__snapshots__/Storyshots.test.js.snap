@@ -128,7 +128,7 @@ exports[`Storyshots Buttons With icons 1`] = `
 </div>
 `;
 
-exports[`Storyshots Checkbox Checkbox 1`] = `
+exports[`Storyshots Checkbox default 1`] = `
 <div
   className="hMQnet"
 >
@@ -160,52 +160,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
 </div>
 `;
 
-exports[`Storyshots Checkbox Checkbox checked by default 1`] = `
-<div
-  className="hMQnet"
->
-  <label
-    className="eiMGFu"
-    disabled={false}
-    onChange={[Function]}
-  >
-    <span
-      checked={true}
-      className="checkbox GlnUj"
-      disabled={false}
-    >
-      <span
-        checked={true}
-        className="jqjLIk"
-      >
-        <svg
-          className="hJDrrb"
-          size="normal"
-        >
-          <use
-            xlinkHref="#kb_checkbox"
-          />
-        </svg>
-      </span>
-      <input
-        checked={true}
-        className="cjpCUo"
-        disabled={false}
-        onChange={[Function]}
-        type="checkbox"
-      />
-    </span>
-    <span
-      className="label-text cPjOWw"
-      disabled={false}
-    >
-      Авиабилеты
-    </span>
-  </label>
-</div>
-`;
-
-exports[`Storyshots Checkbox Disabled Checkbox 1`] = `
+exports[`Storyshots Checkbox disabled 1`] = `
 <div
   className="hMQnet"
 >
