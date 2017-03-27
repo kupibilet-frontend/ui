@@ -1,46 +1,58 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import RcCollapse from 'rc-collapse'
-import classNames from 'classnames'
-// import animation from '../_util/openAnimation'
 
-// export interface CollapseProps {
-//   activeKey?: Array<string> | string
-//   defaultActiveKey?: Array<string>
-//   /** 手风琴效果 */
-//   accordion?: boolean
-//   onChange?: (key: string) => void
-//   style?: React.CSSProperties
-//   className?: string
-//   bordered?: boolean
-//   prefixCls?: string
-// }
-//
-// export interface CollapsePanelProps {
-//   key: string
-//   header: React.ReactNode
-//   style?: React.CSSProperties
-//   className?: string
-// }
+import Icon from '../icons'
+import { PanelHeader, IconWrap, PanelContent, RcCollapseWrapper } from './styled'
 
-// export class CollapsePanel extends React.Component {
-// }
+const RcPanel = RcCollapse.Panel
+
+const HeaderComp = (props) => (
+  <PanelHeader>
+    {props.children}
+    <IconWrap className="icon-wrap">
+      <Icon
+        name="arrow-down"
+        stroke="primaryDarkest"
+        fill="primaryDarkest"
+        size="xxsmall"
+      />
+    </IconWrap>
+  </PanelHeader>
+)
+
+const RcPanelWrapper = (props) => {
+  const { header, showArrow } = props
+
+  return (
+    <RcPanel
+      {...props}
+      showArrow={false}
+      header={
+        <HeaderComp showArrow={showArrow}>{header}</HeaderComp>
+      }
+    >
+      <PanelContent>{props.children}</PanelContent>
+    </RcPanel>
+  )
+}
 
 export default class Collapse extends React.Component {
-
-  // ЗДЕСЬ ПОМЕНЯЛИ static Panel: typeof CollapsePanel = RcCollapse.Panel; на
-  static Panel = RcCollapse.Panel
+  static Panel = RcPanelWrapper
 
   static defaultProps = {
-    prefixCls: 'ant-collapse',
+    prefixCls: 'kb-collapse',
     bordered: true,
-    // openAnimation: { ...animation, appear() {} },
+  }
+
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    header: PropTypes.node,
+    showArrow: PropTypes.bool,
   }
 
   render() {
-    const { prefixCls, className = '', bordered } = this.props
-    const collapseClassName = classNames({
-      [`${prefixCls}-borderless`]: !bordered,
-    }, className)
-    return <RcCollapse {...this.props} className={collapseClassName} />
+    return (
+      <RcCollapseWrapper {...this.props} />
+    )
   }
 }
