@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import { Collapse } from './index'
+import Collapse from './index'
+import CollapseWrapper from '../collapse-wrapper'
 
 const Panel = Collapse.Panel
 
@@ -12,15 +13,23 @@ const text = `
 
 storiesOf('Collapse', module)
   .addWithInfo('Collapse', () => (
-    <Collapse accordion>
-      <Panel header={'This is panel header 1'} key="1">
-        <p>{text}</p>
-      </Panel>
-      <Panel header={'This is panel header 2'} key="2">
-        <p>{text}</p>
-      </Panel>
-      <Panel header={'This is panel header 3'} key="3">
-        <p>{text}</p>
-      </Panel>
-    </Collapse>
+    <CollapseWrapper>
+      <Collapse
+        accordion
+      >
+        <Panel
+          header={'Вылет'}
+          key="1"
+          showArrow={false}
+        >
+          {text}
+        </Panel>
+        <Panel header={'Прилет'} key="2">
+          {text}
+        </Panel>
+        <Panel header={'Пересадки'} key="3">
+          {text}
+        </Panel>
+      </Collapse>
+    </CollapseWrapper>
   ))
