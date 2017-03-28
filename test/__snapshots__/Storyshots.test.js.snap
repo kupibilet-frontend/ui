@@ -192,6 +192,109 @@ exports[`Storyshots Checkbox disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Collapse Collapse 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    className="YoHaa"
+  >
+    <div
+      className="kb-collapse jeXkLy"
+      style={undefined}
+    >
+      <div
+        className="kb-collapse-item"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          <span
+            className="cmxowH"
+          >
+            Вылет
+            <span
+              className="icon-wrap fOQwAp"
+            >
+              <svg
+                className="crzUUw"
+                size="xxsmall"
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="kb-collapse-item"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          <span
+            className="cmxowH"
+          >
+            Прилет
+            <span
+              className="icon-wrap fOQwAp"
+            >
+              <svg
+                className="crzUUw"
+                size="xxsmall"
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="kb-collapse-item"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          <span
+            className="cmxowH"
+          >
+            Пересадки
+            <span
+              className="icon-wrap fOQwAp"
+            >
+              <svg
+                className="crzUUw"
+                size="xxsmall"
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DateRange DateRange 1`] = `
 <div
   className="hMQnet"
