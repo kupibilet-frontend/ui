@@ -24,7 +24,6 @@ export const RcCollapseWrapper = styled(RcCollapse)`
 
   .kb-collapse-item-active .icon-wrap {
     transform: rotate(-180deg);
-    margin-top: 3px;
   }
 `
 
@@ -41,6 +40,6 @@ export const PanelContent = styled.div`
 
 export const IconWrap = styled.span`
   ${switchTransition}
-  margin: 6px 0 0 3px;
+  margin: 3px 0 0 3px;
   display: flex;
 `
