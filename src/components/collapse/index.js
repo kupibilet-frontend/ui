@@ -6,6 +6,14 @@ import { PanelHeader, IconWrap, PanelContent, RcCollapseWrapper } from './styled
 
 const RcPanel = RcCollapse.Panel
 
+/* eslint-disable react/require-default-props, react/no-unused-prop-types */
+
+const CollapsePropTypes = {
+  children: PropTypes.node.isRequired,
+  header: PropTypes.node,
+  showArrow: PropTypes.bool,
+}
+
 const HeaderComp = (props) => (
   <PanelHeader>
     {props.children}
@@ -19,6 +27,10 @@ const HeaderComp = (props) => (
     </IconWrap>
   </PanelHeader>
 )
+
+HeaderComp.propTypes = {
+  children: PropTypes.node,
+}
 
 const RcPanelWrapper = (props) => {
   const { header, showArrow } = props
@@ -36,6 +48,8 @@ const RcPanelWrapper = (props) => {
   )
 }
 
+RcPanelWrapper.propTypes = CollapsePropTypes
+
 export default class Collapse extends React.Component {
   static Panel = RcPanelWrapper
 
@@ -44,11 +58,7 @@ export default class Collapse extends React.Component {
     bordered: true,
   }
 
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    header: PropTypes.node,
-    showArrow: PropTypes.bool,
-  }
+  static propTypes = CollapsePropTypes
 
   render() {
     return (
