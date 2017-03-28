@@ -37,10 +37,7 @@
     "eslint-config-kupibilet": "^8.1.1",
     "husky": "^0.13.2",
     "jest": "^19.0.0",
-<<<<<<< 24fa8fe0ea722dc273cb5458404f69717ef22c0e
     "moment": "^2.17.1",
-=======
->>>>>>> collapse component
     "move-binaries-to-bin": "^1.0.1",
     "raw-loader": "^0.5.1",
     "stylelint": "^7.9.0",
