@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import Collapse from './index'
-import CollapseWrapper from '../collapse-wrapper'
+import Box from '../box'
 
 const Panel = Collapse.Panel
 
@@ -13,7 +13,7 @@ const text = `
 
 storiesOf('Collapse', module)
   .addWithInfo('Collapse', () => (
-    <CollapseWrapper>
+    <Box>
       <Collapse
         accordion
       >
@@ -31,5 +31,5 @@ storiesOf('Collapse', module)
           {text}
         </Panel>
       </Collapse>
-    </CollapseWrapper>
+    </Box>
   ))
