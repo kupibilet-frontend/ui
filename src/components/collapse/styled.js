@@ -1,6 +1,7 @@
 import RcCollapse from 'rc-collapse'
 import styled from 'styled-components'
 import Link from '../../utils/link'
+import Icon from '../icons'
 
 import { switchTransition } from '../../utils/transitions'
 
@@ -32,4 +33,9 @@ export const PanelHeader = styled.span`
 
 export const PanelContent = styled.div`
   padding: 0 18px 24px;
+`
+
+export const IconWrap = styled(Icon)`
+  margin: 3px 0 0 3px;
+  transition-property: transform;
 `
