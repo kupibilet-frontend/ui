@@ -54,6 +54,7 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
       <svg
         className="hJDrrb"
         size="normal"
+        style={undefined}
       >
         <use
           xlinkHref="#kb_carrot_monochrome"
@@ -99,6 +100,7 @@ exports[`Storyshots Buttons With icons 1`] = `
       <svg
         className="cdianR"
         size="normal"
+        style={undefined}
       >
         <use
           xlinkHref="#kb_plane"
@@ -118,6 +120,7 @@ exports[`Storyshots Buttons With icons 1`] = `
       <svg
         className="hJDrrb"
         size="normal"
+        style={undefined}
       >
         <use
           xlinkHref="#kb_hand-baggage"
@@ -197,97 +200,105 @@ exports[`Storyshots Collapse Collapse 1`] = `
   className="hMQnet"
 >
   <div
-    className="YoHaa"
+    style={
+      Object {
+        "width": "252px",
+      }
+    }
   >
     <div
-      className="kb-collapse jeXkLy"
-      style={undefined}
+      className="ktQfja"
     >
       <div
-        className="kb-collapse-item"
-        style={undefined}
+        style={
+          Object {
+            "padding": "18px",
+          }
+        }
       >
-        <div
-          aria-expanded={false}
-          className="kb-collapse-header"
-          onClick={[Function]}
-          role="tab"
-        >
-          <span
-            className="cmxowH"
-          >
-            Вылет
-            <span
-              className="icon-wrap fOQwAp"
-            >
-              <svg
-                className="crzUUw"
-                size="xxsmall"
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </span>
-          </span>
-        </div>
+        Вылет и прилет
       </div>
       <div
-        className="kb-collapse-item"
+        className="kb-collapse bVOona"
         style={undefined}
       >
         <div
-          aria-expanded={false}
-          className="kb-collapse-header"
-          onClick={[Function]}
-          role="tab"
+          className="kb-collapse-item"
+          style={undefined}
         >
-          <span
-            className="cmxowH"
+          <div
+            aria-expanded={false}
+            className="kb-collapse-header"
+            onClick={[Function]}
+            role="tab"
           >
-            Прилет
             <span
-              className="icon-wrap fOQwAp"
+              className="cmxowH"
             >
+              Вылет
               <svg
-                className="crzUUw"
+                className="icon bIAtNQ crzUUw"
                 size="xxsmall"
+                style={undefined}
               >
                 <use
                   xlinkHref="#kb_arrow-down"
                 />
               </svg>
             </span>
-          </span>
+          </div>
         </div>
-      </div>
-      <div
-        className="kb-collapse-item"
-        style={undefined}
-      >
         <div
-          aria-expanded={false}
-          className="kb-collapse-header"
-          onClick={[Function]}
-          role="tab"
+          className="kb-collapse-item"
+          style={undefined}
         >
-          <span
-            className="cmxowH"
+          <div
+            aria-expanded={false}
+            className="kb-collapse-header"
+            onClick={[Function]}
+            role="tab"
           >
-            Пересадки
             <span
-              className="icon-wrap fOQwAp"
+              className="cmxowH"
             >
+              Прилет
               <svg
-                className="crzUUw"
+                className="icon bIAtNQ crzUUw"
                 size="xxsmall"
+                style={undefined}
               >
                 <use
                   xlinkHref="#kb_arrow-down"
                 />
               </svg>
             </span>
-          </span>
+          </div>
+        </div>
+        <div
+          className="kb-collapse-item"
+          style={undefined}
+        >
+          <div
+            aria-expanded={false}
+            className="kb-collapse-header"
+            onClick={[Function]}
+            role="tab"
+          >
+            <span
+              className="cmxowH"
+            >
+              Пересадки
+              <svg
+                className="icon bIAtNQ crzUUw"
+                size="xxsmall"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -386,6 +397,7 @@ exports[`Storyshots Icon Medium Icon with stroke & fill 1`] = `
   <svg
     className="bmlaaq"
     size="medium"
+    style={undefined}
   >
     <use
       xlinkHref="#kb_airport-change"
@@ -401,6 +413,7 @@ exports[`Storyshots Icon Small Icon with stroke 1`] = `
   <svg
     className="bXGNbG"
     size="small"
+    style={undefined}
   >
     <use
       xlinkHref="#kb_checkbox"
