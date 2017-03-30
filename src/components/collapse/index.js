@@ -3,8 +3,7 @@
 import React, { PropTypes } from 'react'
 import RcCollapse from 'rc-collapse'
 
-import Icon from '../icons'
-import { PanelHeader, PanelContent, RcCollapseWrapper } from './styled'
+import { PanelHeader, PanelContent, RcCollapseWrapper, IconWrap } from './styled'
 
 const RcPanel = RcCollapse.Panel
 
@@ -17,13 +16,12 @@ const CollapsePropTypes = {
 const HeaderComp = (props) => (
   <PanelHeader>
     {props.children}
-    <Icon
+    <IconWrap
       className="icon"
       name="arrow-down"
       stroke="primaryDarkest"
       fill="primaryDarkest"
       size="xxsmall"
-      style={{ margin: '3px 0 0 3px', transitionProperty: 'transform' }}
     />
   </PanelHeader>
 )
@@ -50,13 +48,14 @@ const RcPanelWrapper = (props) => {
 
 RcPanelWrapper.propTypes = CollapsePropTypes
 
+export const Panel = RcPanelWrapper
+
+
 function Collapse(props) {
   return (
     <RcCollapseWrapper {...props} />
   )
 }
-
-export const Panel = RcPanelWrapper
 
 Collapse.defaultProps = {
   prefixCls: 'kb-collapse',

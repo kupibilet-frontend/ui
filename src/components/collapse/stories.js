@@ -11,24 +11,26 @@ const text = `
 
 storiesOf('Collapse', module)
   .addWithInfo('Collapse', () => (
-    <Box>
-      <div style={{ padding: '18px' }}>Вылет и прилет</div>
-      <Collapse
-        accordion
-      >
-        <Panel
-          header={'Вылет'}
-          key="1"
-          showArrow={false}
+    <div style={{ width: '252px' }}>
+      <Box>
+        <div style={{ padding: '18px' }}>Вылет и прилет</div>
+        <Collapse
+          accordion
         >
-          {text}
-        </Panel>
-        <Panel header={'Прилет'} key="2">
-          {text}
-        </Panel>
-        <Panel header={'Пересадки'} key="3">
-          {text}
-        </Panel>
-      </Collapse>
-    </Box>
+          <Panel
+            header={'Вылет'}
+            key="1"
+            showArrow={false}
+          >
+            {text}
+          </Panel>
+          <Panel header={'Прилет'} key="2">
+            {text}
+          </Panel>
+          <Panel header={'Пересадки'} key="3">
+            {text}
+          </Panel>
+        </Collapse>
+      </Box>
+    </div>
   ))
