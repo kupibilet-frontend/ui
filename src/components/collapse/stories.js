@@ -1,9 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import Collapse from './index'
+import Collapse, { Panel } from './index'
 import Box from '../box'
-
-const Panel = Collapse.Panel
 
 const text = `
   A dog is a type of domesticated animal.
@@ -14,6 +12,7 @@ const text = `
 storiesOf('Collapse', module)
   .addWithInfo('Collapse', () => (
     <Box>
+      <div style={{ padding: '18px' }}>Вылет и прилет</div>
       <Collapse
         accordion
       >

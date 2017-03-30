@@ -25,13 +25,15 @@ const IconSvg = styled.svg`
 `
 
 // Scoped inside `colorKeys` because `fill` and `stroke` are valid HTML attrs
-const Icon = ({ size, fill, stroke, prefix, name }) => (
+const Icon = ({ size, fill, stroke, prefix, name, style, className }) => (
   <IconSvg
+    className={className}
     size={size}
     colorKeys={{
       fill,
       stroke,
     }}
+    style={style}
   >
     <use xlinkHref={`#${prefix}_${name}`} />
   </IconSvg>
@@ -45,11 +47,14 @@ Icon.defaultProps = {
 }
 
 Icon.propTypes = {
+  /* eslint-disable react/require-default-props */
   name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(Object.keys(sizes)),
   prefix: PropTypes.string,
   fill: ThemingPropTypes.themeColor,
   stroke: ThemingPropTypes.themeColor,
+  style: PropTypes.object,
+  className: PropTypes.string,
 }
 
 

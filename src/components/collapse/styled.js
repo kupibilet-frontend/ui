@@ -18,11 +18,7 @@ export const RcCollapseWrapper = styled(RcCollapse)`
     overflow: hidden;
   }
 
-  .kb-collapse-item:first-child {
-    border-top: none;
-  }
-
-  .kb-collapse-item-active .icon-wrap {
+  .kb-collapse-item-active .icon {
     transform: rotate(-180deg);
   }
 `
@@ -36,10 +32,4 @@ export const PanelHeader = styled.span`
 
 export const PanelContent = styled.div`
   padding: 0 18px 24px;
-`
-
-export const IconWrap = styled.span`
-  ${switchTransition}
-  margin: 3px 0 0 3px;
-  display: flex;
 `
