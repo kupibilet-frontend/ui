@@ -54,6 +54,7 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
       <svg
         className="hJDrrb"
         size="normal"
+        style={undefined}
       >
         <use
           xlinkHref="#kb_carrot_monochrome"
@@ -99,6 +100,7 @@ exports[`Storyshots Buttons With icons 1`] = `
       <svg
         className="cdianR"
         size="normal"
+        style={undefined}
       >
         <use
           xlinkHref="#kb_plane"
@@ -118,6 +120,7 @@ exports[`Storyshots Buttons With icons 1`] = `
       <svg
         className="hJDrrb"
         size="normal"
+        style={undefined}
       >
         <use
           xlinkHref="#kb_hand-baggage"
@@ -189,6 +192,117 @@ exports[`Storyshots Checkbox disabled 1`] = `
       Авиабилеты
     </span>
   </label>
+</div>
+`;
+
+exports[`Storyshots Collapse Collapse 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    style={
+      Object {
+        "width": "252px",
+      }
+    }
+  >
+    <div
+      className="ktQfja"
+    >
+      <div
+        style={
+          Object {
+            "padding": "18px",
+          }
+        }
+      >
+        Вылет и прилет
+      </div>
+      <div
+        className="kb-collapse bVOona"
+        style={undefined}
+      >
+        <div
+          className="kb-collapse-item"
+          style={undefined}
+        >
+          <div
+            aria-expanded={false}
+            className="kb-collapse-header"
+            onClick={[Function]}
+            role="tab"
+          >
+            <span
+              className="cmxowH"
+            >
+              Вылет
+              <svg
+                className="icon bIAtNQ crzUUw"
+                size="xxsmall"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="kb-collapse-item"
+          style={undefined}
+        >
+          <div
+            aria-expanded={false}
+            className="kb-collapse-header"
+            onClick={[Function]}
+            role="tab"
+          >
+            <span
+              className="cmxowH"
+            >
+              Прилет
+              <svg
+                className="icon bIAtNQ crzUUw"
+                size="xxsmall"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="kb-collapse-item"
+          style={undefined}
+        >
+          <div
+            aria-expanded={false}
+            className="kb-collapse-header"
+            onClick={[Function]}
+            role="tab"
+          >
+            <span
+              className="cmxowH"
+            >
+              Пересадки
+              <svg
+                className="icon bIAtNQ crzUUw"
+                size="xxsmall"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -283,6 +397,7 @@ exports[`Storyshots Icon Medium Icon with stroke & fill 1`] = `
   <svg
     className="bmlaaq"
     size="medium"
+    style={undefined}
   >
     <use
       xlinkHref="#kb_airport-change"
@@ -298,6 +413,7 @@ exports[`Storyshots Icon Small Icon with stroke 1`] = `
   <svg
     className="bXGNbG"
     size="small"
+    style={undefined}
   >
     <use
       xlinkHref="#kb_checkbox"

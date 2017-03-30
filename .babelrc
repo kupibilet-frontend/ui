@@ -1,6 +1,13 @@
 {
   "presets": ["env", "react", "stage-2"],
   "env": {
+    "development": {
+      "presets": ["env", "react", "stage-2"],
+      "plugins": ["transform-react-jsx-source"],
+    },
+    "test": {
+      "presets": ["env", "react", "stage-2"],
+    },
     "build": {
       "presets": [["env", {"modules": false}], "react", "stage-2"]
     }
