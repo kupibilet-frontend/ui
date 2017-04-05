@@ -4,15 +4,20 @@ import styled from 'styled-components'
 import { switchTransition } from '../../utils/transitions'
 
 const getHandleColor = (props) => {
-  if (props['data-handle-key'] === 0 && props['aria-valuenow'] !== props['aria-valuemin']) {
-    return props.theme.color.primary
-  } else if (props['data-handle-key'] === 1 && props['aria-valuenow'] !== props['aria-valuemax']) {
-    return props.theme.color.primary
-  } return props.theme.color.miscDark
+  const key = props['data-handle-key']
+  const valueNow = props['aria-valuenow']
+  const primary = props.theme.color.primary
+
+  if (key === 0 && valueNow !== props['aria-valuemin']) {
+    return primary
+  } else if (key === 1 && valueNow !== props['aria-valuemax']) {
+    return primary
+  }
+  return props.theme.color.miscDark
 }
 
-export const RheostatWrapper = styled(Rheostat)`
-  width: 252px;
+export const Slider = styled(Rheostat)`
+  width: 100%;
 
   .rheostat-background {
     background-color: ${({ theme }) => theme.color.miscLight};
@@ -43,6 +48,7 @@ export const StyledHandle = styled.span`
 export const StyledProgressBar = styled.span`
   background-color: ${({ theme }) => theme.color.primaryLighter};
   display: flex;
+  margin-left: 1px;
   position: absolute;
   height: 6px;
   top: 0;

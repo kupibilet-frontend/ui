@@ -14,12 +14,14 @@ while (i < endDate) {
 
 storiesOf('Slider', module)
   .addWithInfo('Slider', () => (
-    <Slider
-      min={startDate}
-      max={endDate}
-      snap
-      snapPoints={snapPoints}
-      pitPoints={pitPoints}
-      values={[startDate, endDate]}
-    />
+    <div style={{ width: '252px' }}>
+      <Slider
+        min={startDate}
+        max={endDate}
+        snap
+        snapPoints={snapPoints}
+        pitPoints={pitPoints}
+        values={[startDate, endDate]}
+      />
+    </div>
   ))

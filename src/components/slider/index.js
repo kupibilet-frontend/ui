@@ -1,21 +1,5 @@
-import React, { PropTypes } from 'react'
-import { RheostatWrapper, StyledHandle, StyledProgressBar, StyledPitComponent } from './styled'
-
-function Slider(props) {
-  return (
-    <RheostatWrapper
-      handle={StyledHandle}
-      progressBar={StyledProgressBar}
-      pitComponent={StyledPitComponent}
-      min={props.min}
-      max={props.max}
-      pitPoints={props.pitPoints}
-      snap={props.snap}
-      snapPoints={props.snapPoints}
-      values={props.values}
-    />
-  )
-}
+import { PropTypes } from 'react'
+import { Slider, StyledHandle, StyledProgressBar, StyledPitComponent } from './styled'
 
 Slider.defaultProps = {
   min: 0,
@@ -24,6 +8,9 @@ Slider.defaultProps = {
   snap: false,
   snapPoints: [],
   values: [0, 100],
+  handle: StyledHandle,
+  progressBar: StyledProgressBar,
+  pitComponent: StyledPitComponent,
 }
 
 Slider.propTypes = {
