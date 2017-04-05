@@ -1129,80 +1129,148 @@ exports[`Storyshots Icon Small Icon with stroke 1`] = `
 </div>
 `;
 
-exports[`Storyshots PassengerPicker Defalut 1`] = `
+exports[`Storyshots Slider Slider 1`] = `
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="hMQnet"
 >
   <div
-    className="sc-fBuWsC itQlJX"
+    className="rheostat rheostat-horizontal bKlBoX"
+    onClick={[Function]}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
   >
-    <div>
-      <div
-        className="sc-fMiknA ejNkiI"
-      >
-        Взрослые
-      </div>
-      <div
-        className="sc-dVhcbM evezqH"
-      >
-        До 2 лет, без места
-      </div>
-    </div>
     <div
-      className="sc-caSCKo hUBiLZ"
+      className="rheostat-background"
+    />
+    <span
+      aria-disabled={false}
+      aria-valuemax={1491080400000}
+      aria-valuemin={1490994000000}
+      aria-valuenow={1490994000000}
+      className="rheostat-handle jUctXQ"
+      data-handle-key={0}
+      onClick={undefined}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+      role="slider"
+      style={
+        Object {
+          "left": "0%",
+          "position": "absolute",
+        }
+      }
+      tabIndex={0}
+    />
+    <span
+      aria-disabled={false}
+      aria-valuemax={1491080400000}
+      aria-valuemin={1490994000000}
+      aria-valuenow={1491080400000}
+      className="rheostat-handle jUctXQ"
+      data-handle-key={1}
+      onClick={undefined}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+      role="slider"
+      style={
+        Object {
+          "left": "100%",
+          "position": "absolute",
+        }
+      }
+      tabIndex={0}
+    />
+    <span
+      className="rheostat-progress RHSbM"
+      style={
+        Object {
+          "left": "0%",
+          "width": "100%",
+        }
+      }
+    />
+    <span
+      className="kDRQPf"
+      style={
+        Object {
+          "left": "51.041666666666664%",
+          "position": "absolute",
+        }
+      }
     >
-      <span
-        className="sc-eqIVtm deGzAN"
-      >
-        1
-      </span>
-      <div
-        className="sc-gisBJw cHwRKq"
-      >
-        <button
-          className="no-global sc-fAjcbJ excQUy sc-gZMcBi dkdJqv"
-          disabled={true}
-          onClick={[Function]}
-          size="normal"
-        >
-          <span
-            className="sc-VigVT cerRmq"
-            size="normal"
-          >
-            <svg
-              className="sc-bxivhb hLuXwK"
-              size="normal"
-              style={undefined}
-            >
-              <use
-                xlinkHref="#kb_minus"
-              />
-            </svg>
-          </span>
-        </button>
-        <button
-          className="no-global sc-fAjcbJ excQUy sc-gZMcBi ezVieq"
-          disabled={false}
-          onClick={[Function]}
-          size="normal"
-        >
-          <span
-            className="sc-VigVT cerRmq"
-            size="normal"
-          >
-            <svg
-              className="sc-bxivhb hLuXwK"
-              size="normal"
-              style={undefined}
-            >
-              <use
-                xlinkHref="#kb_plus"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-    </div>
+      1491038100000
+    </span>
+    <span
+      className="kDRQPf"
+      style={
+        Object {
+          "left": "52.083333333333336%",
+          "position": "absolute",
+        }
+      }
+    >
+      1491039000000
+    </span>
+    <span
+      className="kDRQPf"
+      style={
+        Object {
+          "left": "53.125%",
+          "position": "absolute",
+        }
+      }
+    >
+      1491039900000
+    </span>
+    <span
+      className="kDRQPf"
+      style={
+        Object {
+          "left": "54.166666666666664%",
+          "position": "absolute",
+        }
+      }
+    >
+      1491040800000
+    </span>
+    <span
+      className="kDRQPf"
+      style={
+        Object {
+          "left": "55.208333333333336%",
+          "position": "absolute",
+        }
+      }
+    >
+      1491041700000
+    </span>
+    <span
+      className="kDRQPf"
+      style={
+        Object {
+          "left": "63.541666666666664%",
+          "position": "absolute",
+        }
+      }
+    >
+      1491048900000
+    </span>
+    <span
+      className="kDRQPf"
+      style={
+        Object {
+          "left": "64.58333333333334%",
+          "position": "absolute",
+        }
+      }
+    >
+      1491049800000
+    </span>
   </div>
 </div>
 `;
