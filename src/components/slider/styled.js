@@ -36,7 +36,7 @@ export const StyledHandle = styled.span`
   display: inline-block;
   height: 18px;
   top: -6px;
-  width: 18px;
+  width: 5px;
   z-index: 1;
 
   &:hover, &:active {
@@ -57,9 +57,12 @@ export const StyledProgressBar = styled.span`
 
 export const StyledPitComponent = styled.span`
   background: ${({ theme }) => theme.color.miscLighter};
-  width: 12px;
-  height: ${(props) => (props.children % 450000 === 0 ? 12 : 8)}px;
-  overflow: hidden;
-  text-indent: 100%;
-  top: -${(props) => (props.children % 10 === 0 ? 12 : 8)}px;
+  font-size: 0;
+  bottom: 6px;
+  width: 25%;
+  ${''/* width: 12px; */}
+  height: ${(props) => (props.children % 1800000 === 0 ? 12 : 8)}px;
+  ${''/* overflow: hidden; */}
+  ${''/* text-indent: 100%; */}
+  ${''/* top: -${(props) => (props.children % 10 === 0 ? 12 : 8)}px; */}
 `
