@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { button } from '../../utils/reset'
+import { control } from '../../utils/reset'
 import { switchTransition } from '../../utils/transitions'
 
 export const SIZES = {
@@ -41,7 +41,7 @@ const calculateTextPadding = (size, hasLeftIcon, hasRightIcon) => {
 }
 
 export const StyledButton = styled.button`
-  ${button}
+  ${control}
 
   color: ${({ theme }) => theme.color.background};
   background: ${({ theme }) => theme.color.primary};
