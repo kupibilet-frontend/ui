@@ -27,7 +27,7 @@ const width = 100 / objValues.length
 const onePercent = maxHeight / 12
 
 const pitHeight = Object.keys(ticketsCount).reduce((result, item, key) => {
-  const updatedResult = result
+  const updatedResult = { ...result }
   updatedResult[item] = objValues[key] / onePercent
   return updatedResult
 }, {})
