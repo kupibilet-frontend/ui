@@ -59,10 +59,7 @@ export const StyledPitComponent = styled.span`
   background: ${({ theme }) => theme.color.miscLighter};
   font-size: 0;
   bottom: 6px;
-  width: 25%;
-  ${''/* width: 12px; */}
-  height: ${(props) => (props.children % 1800000 === 0 ? 12 : 8)}px;
-  ${''/* overflow: hidden; */}
-  ${''/* text-indent: 100%; */}
-  ${''/* top: -${(props) => (props.children % 10 === 0 ? 12 : 8)}px; */}
+  width: ${(props) => props.pitWidth}%;
+  height: ${(props) => (props.pitHeight[props.children])}px;
+  max-height: 12px;
 `
