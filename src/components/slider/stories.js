@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { storiesOf } from '@kadira/storybook'
 import Slider from './index'
 import { StyledPitComponent } from './styled'
@@ -20,6 +20,17 @@ const ticketsCount = {
   1491085800000: 0,
   1491086700000: 2,
 }
+
+const objValues = Object.values(ticketsCount)
+const maxHeight = Math.max(...objValues)
+const width = 100 / objValues.length
+const onePercent = maxHeight / 12
+
+const pitHeight = Object.keys(ticketsCount).reduce((result, item, key) => {
+  const updatedResult = result
+  updatedResult[item] = objValues[key] / onePercent
+  return updatedResult
+}, {})
 
 
 class LabeledSlider extends React.Component {
@@ -51,11 +62,25 @@ class LabeledSlider extends React.Component {
           snapPoints={snapPoints}
           pitPoints={pitPoints}
           values={this.state.values}
-          pitComponent={() => <StyledPitComponent ticketsCount={ticketsCount} />}
+          pitComponent={(props) =>
+            <StyledPitComponent
+              {...props}
+              pitWidth={width}
+              pitHeight={pitHeight}
+            />
+          }
         />
       </div>
     )
   }
+}
+
+LabeledSlider.defaultProps = {
+  values: [],
+}
+
+LabeledSlider.propTypes = {
+  values: PropTypes.array,
 }
 
 
