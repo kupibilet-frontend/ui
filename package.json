@@ -42,7 +42,7 @@
     "raw-loader": "^0.5.1",
     "stylelint": "^7.9.0",
     "stylelint-config-kupibilet": "^3.0.0",
-    "stylelint-processor-styled-components": "0.0.4"
+    "stylelint-processor-styled-components": "0.1.0"
   },
   "dependencies": {
     "@kupibilet/icons": "^3.2.4",
