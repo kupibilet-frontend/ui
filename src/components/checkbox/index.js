@@ -25,7 +25,7 @@ export default class Checkbox extends PureComponent {
     } = this.props
 
     return (
-      <CheckboxLabel disabled={disabled} onChange={onChange}>
+      <CheckboxLabel disabled={disabled}>
         <StyledCheckbox
           className="checkbox"
           disabled={disabled}
