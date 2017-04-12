@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 import Autosuggest from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 
 import AutocompleteStyled from './styled'
 
+const getFirstSuggestion = ({ suggestions, multiSection }) => {
+  let [suggestion] = suggestions
+  if (multiSection && suggestion) {
+    suggestion = suggestion[0]
+  }
+
+  return suggestion || null
+}
+
+
 export default class Autocomplete extends React.PureComponent {
   static propTypes = {
     ...Autosuggest.propTypes,
+    forceSuggesedValue: PropTypes.bool,
   }
 
   static defaultProps = {
     ...Autosuggest.defaultProps,
     highlightFirstSuggestion: true,
-    getSuggestionValue: (suggestion) => suggestion.title,
+    getSuggestionValue: (suggestion) => suggestion.value,
     getSectionSuggestions: (section) => section.values,
+    forceSuggesedValue: true,
   }
 
   constructor(props) {
@@ -29,7 +41,7 @@ export default class Autocomplete extends React.PureComponent {
     const { suggestions, onSuggestionSelected, multiSection } = nextProps
 
     if (suggestions.length === 1 && onSuggestionSelected) {
-      this.selectSingleSuggest(nextProps)
+      this.selectFirstSuggest(nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
     } else {
       this.setState({ suggestions })
@@ -57,6 +69,12 @@ export default class Autocomplete extends React.PureComponent {
     })
   }
 
+  onBlur = () => {
+    if (this.props.forceSuggesedValue) {
+      this.selectFirstSuggest(this.props, 'blur')
+    }
+  }
+
   setSectionIterator({ multiSection, suggestions, getSectionSuggestions }) {
     this.sectionIterator = createSectionIterator({
       multiSection,
@@ -67,14 +85,9 @@ export default class Autocomplete extends React.PureComponent {
     })
   }
 
-  selectSingleSuggest(props) {
-    const {
-      suggestions, getSuggestionValue, alwaysRenderSuggestions, multiSection,
-    } = props
-    let [suggestion] = suggestions
-    if (multiSection && suggestion) {
-      suggestion = suggestion[0]
-    }
+  selectFirstSuggest(props, method) {
+    const { getSuggestionValue, alwaysRenderSuggestions, multiSection } = props
+    const suggestion = getFirstSuggestion(props)
 
     const { isFocused, isCollapsed } = this.autosuggestInstance.state
 
@@ -88,14 +101,14 @@ export default class Autocomplete extends React.PureComponent {
     if (suggestion) {
       const newValue = getSuggestionValue(suggestion)
 
-      this.autosuggestInstance.maybeCallOnChange(event, newValue, 'autoSuggest')
+      this.autosuggestInstance.maybeCallOnChange(event, newValue, method)
 
       this.autosuggestInstance.onSuggestionSelected(event, {
         suggestion,
         suggestionValue: newValue,
         suggestionIndex: 0,
         sectionIndex: multiSection ? 0 : null,
-        method: 'autoSuggest',
+        method,
       })
 
       this.autosuggestInstance.justSelectedSuggestion = true
@@ -103,6 +116,8 @@ export default class Autocomplete extends React.PureComponent {
       setTimeout(() => {
         this.autosuggestInstance.justSelectedSuggestion = false
       }, 0)
+    } else {
+      this.autosuggestInstance.maybeCallOnChange(event, '', method)
     }
   }
 
@@ -110,12 +125,19 @@ export default class Autocomplete extends React.PureComponent {
     const { suggestions } = this.state
     // Pass neighboringInGroup prop to input
     const { neighboringInGroup, inputProps, ...props } = this.props
+    const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
 
     return (
       <AutocompleteStyled>
         <Autosuggest
           {...props}
-          inputProps={{ neighboringInGroup, ...inputProps, onChange: this.onChange }}
+          inputProps={{
+            neighboringInGroup,
+            ...inputProps,
+            onChange: this.onChange,
+            onBlur: this.onBlur,
+            spell,
+          }}
           suggestions={suggestions}
           ref={(ref) => { this.autosuggestInstance = ref }}
         />

@@ -87,6 +87,10 @@ export const Input = styled.input`
     ${fontStyle}
     color: ${({ theme }) => theme.color.miscDark};
   `}
+
+  &:focus ~ div .airport-input__spell {
+    display: block;
+  }
 `
 
 export const Geo = styled.div`
@@ -103,10 +107,19 @@ export const Geo = styled.div`
   )};
 `
 
-export const Spell = styled.div`
+// Use same component as in input due specific text rendering in inputs
+export const Spell = styled.input`
+  ${control}
+
+  display: none;
+
   pointer-events: none;
   flex-grow: 1;
   flex-shrink: 0;
+
+  padding: 0;
+  margin: 0;
+  background: transparent;
 
   ${fontStyle}
   font-weight: 600;

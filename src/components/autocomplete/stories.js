@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { text, object } from '@kadira/storybook-addon-knobs'
 import 'whatwg-fetch'
+import _debounce from 'lodash/debounce'
 
 import Autocomplete from './index'
 import AirportInput from '../airport-input'
@@ -9,72 +10,107 @@ import AirportSuggest from '../airport-suggest'
 
 import updateKnob from '../../utils/updateKnob'
 
-const fetchSuggestions = ({ value }) => {
-  fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
-    .then((data) => data.json())
-    .then(({ data }) => data.map((suggest) => ({
-      title: suggest.name.ru,
-      IATACode: suggest.code,
-      city: (suggest.city_name || suggest.name).ru,
-      country: suggest.country_name && suggest.country_name.ru,
-      isCity: suggest.city_name || suggest.city_code,
-    })))
-    .then((suggestions) => {
-      updateKnob('suggestions', 'object', suggestions)
-      updateKnob('spell', 'text', suggestions[0] ? suggestions[0].title : '')
-    })
-}
+class AutocompleteStatefulWrapper extends React.PureComponent {
+  static propTypes = Autocomplete.propTypes
+  static defaultProps = Autocomplete.defaultProps
 
-const clearSuggestions = () => {
-  updateKnob('suggestions', 'object', [])
-  updateKnob('spell', 'text', '')
-}
-
-const onSuggestionSelected = (event, { suggestion, suggestionValue }) => {
-  updateKnob('suggest', 'object', suggestion)
-  updateKnob('value', 'text', suggestionValue)
-}
-
-const onChange = (event, { newValue, suggestion }) => {
-  updateKnob('value', 'text', newValue)
-  updateKnob('suggest', 'object', suggestion || {})
-
-  if (!newValue) {
-    updateKnob('suggest', 'object', {})
+  state = {
+    value: '',
+    suggest: null,
+    suggestions: [],
   }
-}
 
-storiesOf('Autocomplete', module)
-  .addWithInfo('Small Icon with stroke', () => {
-    const suggest = object('suggest', {})
+  componentWillUpdate() {
+    const { value, suggest, suggestions } = this.state
+
+    updateKnob('suggest', 'object', suggest || {})
+    updateKnob('suggestions', 'object', suggestions || [])
+    updateKnob('value', 'text', value || '')
+  }
+
+  onSuggestionSelected = (event, { suggestion, suggestionValue }) => {
+    this.setState({
+      suggest: suggestion,
+      value: suggestionValue,
+    })
+  }
+
+  onChange = (event, { newValue, suggestion }) => {
+    this.setState({
+      suggest: newValue && suggestion || null,
+      value: newValue || '',
+    })
+  }
+
+  fetchSuggestions = _debounce(({ value }) => {
+    fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
+      .then((data) => data.json())
+      .then(({ data }) => data.map((suggest) => {
+        const isCity = !suggest.city_code
+        const city = (suggest.city_name || suggest.name).ru
+        const country = suggest.country_name && suggest.country_name.ru
+
+        return {
+          value: suggest.name.ru,
+          isCity,
+          area: isCity ? country : city,
+          IATACode: suggest.code,
+          isGeoSuggest: false,
+        }
+      }))
+      .then((suggestions) => {
+        this.setState({ suggestions })
+      })
+  }, 1000)
+
+  clearSuggestions = () => {
+    this.setState({
+      suggestions: [],
+    })
+  }
+
+  render() {
+    const { value, suggest, suggestions } = this.state
 
     return (
       <Autocomplete
         inputProps={{
-          value: text('value', ''),
-          spell: text('spell', ''),
+          value,
           placeholder: 'Туда',
-          onChange,
+          onChange: this.onChange,
           type: 'text',
-          city: suggest.city,
-          country: suggest.country,
-          IATACode: suggest.IATACode,
+          autoFocus: true,
+          ...suggest,
         }}
         highlightFirstSuggestion
-        suggestions={object('suggestions', [])}
-        onSuggestionsFetchRequested={fetchSuggestions}
-        onSuggestionsClearRequested={clearSuggestions}
-        onSuggestionSelected={onSuggestionSelected}
+        suggestions={suggestions}
+        onSuggestionsFetchRequested={this.fetchSuggestions}
+        onSuggestionsClearRequested={this.clearSuggestions}
+        onSuggestionSelected={this.onSuggestionSelected}
         renderSuggestion={(suggestion) => (
-          <AirportSuggest
-            {...suggestion}
-            value={suggestion.title}
-            location={suggestion.isCity ? suggestion.country : suggestion.city}
-          />
+          <AirportSuggest {...suggestion} />
         )}
         renderInputComponent={(props) => (
           <AirportInput {...props} />
         )}
       />
     )
-  })
+  }
+}
+
+storiesOf('Autocomplete', module)
+  .addWithInfo(
+    'Airport',
+    `Uses <AirportInput /> and <AirportSuggest />.
+    Can be used inside <ControlsGroup />`,
+    () => {
+      // Trigger fake knobs
+      object('suggest', {})
+      object('suggestions', [])
+      text('value', '')
+
+      return (
+        <AutocompleteStatefulWrapper />
+      )
+    },
+  )

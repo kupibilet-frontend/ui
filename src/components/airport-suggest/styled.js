@@ -8,6 +8,7 @@ export const AirportSuggestContainer = styled.div`
   color: ${({ theme }) => theme.color.textDarker};
   font-size: 16px;
   line-height: 20px;
+  white-space: nowrap;
 
   box-sizing: content-box;
   height: 20px;
@@ -26,17 +27,18 @@ export const SuggestIcon = styled.div`
 
 export const Geo = styled.div`
   flex-grow: 1;
-  flex-shrink: 0;
-  display: flex;
+  flex-shrink: 1;
+  display: inline-block;
   justify-content: flex-start;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
 `
 
-export const Value = styled.div`
+export const Value = styled.b`
   font-weight: 600;
 `
-export const GeoLabel = styled.div`
-
-`
+export const GeoLabel = styled.span``
 
 export const Code = styled.div`
   flex-grow: 0;
@@ -49,5 +51,6 @@ export const Code = styled.div`
   text-align: left;
 
   padding: 1px 0;
+  margin-left: 15px;
   width: 46px;
 `

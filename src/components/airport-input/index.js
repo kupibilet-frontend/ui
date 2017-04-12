@@ -9,6 +9,7 @@ export default class AirportInput extends React.PureComponent {
     spell: PropTypes.string,
     IATACode: PropTypes.string,
     onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
     neighboringInGroup: PropTypes.oneOf(['left', 'right', 'both']),
   }
 
@@ -17,6 +18,7 @@ export default class AirportInput extends React.PureComponent {
     spell: '',
     IATACode: '',
     onFocus: null,
+    onBlur: null,
     neighboringInGroup: null,
   }
 
@@ -32,7 +34,10 @@ export default class AirportInput extends React.PureComponent {
     e.target.select()
   }
 
-  onBlur = () => {
+  onBlur = (e) => {
+    if (this.props.onBlur) {
+      this.props.onBlur(e)
+    }
     this.setState({ focused: false })
   }
 
@@ -53,10 +58,8 @@ export default class AirportInput extends React.PureComponent {
           <ValuePlaceholder>
             { value }
           </ValuePlaceholder>
-          { spell && (
-            <Spell>
-              { spell }
-            </Spell>
+          { value && spell && (
+            <Spell className="airport-input__spell" value={spell} readOnly />
           ) }
           { location && (
           <GeoLabel>

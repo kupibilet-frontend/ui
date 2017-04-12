@@ -5,18 +5,18 @@ import { AirportSuggestContainer, SuggestIcon, Geo, Value, GeoLabel, Code } from
 export default class AirportSuggest extends React.PureComponent {
   static propTypes = {
     value: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
+    area: PropTypes.string.isRequired,
     IATACode: PropTypes.string.isRequired,
     isCity: PropTypes.bool.isRequired,
     isGeoSuggest: PropTypes.bool.isRequired,
   }
 
   static defaultProps = {
-    location: '',
+    area: '',
   }
 
   render() {
-    const { value, location, isCity, IATACode, isGeoSuggest } = this.props
+    const { value, area, isCity, IATACode, isGeoSuggest } = this.props
 
     return (
       <AirportSuggestContainer>
@@ -37,9 +37,9 @@ export default class AirportSuggest extends React.PureComponent {
           <Value>
             { value }
           </Value>
-          { location && (
+          { area && (
           <GeoLabel>
-                , { location }
+                , { area }
           </GeoLabel>
           ) }
         </Geo>
