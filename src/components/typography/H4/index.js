@@ -8,7 +8,7 @@ const H4 = styled.h1`
   letter-spacing: ${(props) => (props.uppercase ? 0.4 : -0.2)}px;
   margin-bottom: 6px;
   padding-top: 12px;
-  text-transform: ${(props) => (props.uppercase && 'uppercase')};
+  ${(props) => (props.uppercase && 'text-transform: uppercase')}
 `
 
 H4.propTypes = {
