@@ -37,7 +37,6 @@ export default styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     min-width: 320px;
     max-width: 540px;
     ${shadowSmall}
