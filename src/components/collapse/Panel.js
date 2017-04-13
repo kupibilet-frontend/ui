@@ -22,7 +22,7 @@ const Panel = (props) => {
   const { header } = props
   let wrappedHeader = header
 
-  if (typeof header === 'function') {
+  if (React.isValidElement(header)) {
     wrappedHeader = React.cloneElement(header, {
       isActive: props.isActive,
     })
