@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { select, text, boolean } from '@kadira/storybook-addon-knobs'
-import { StyledLabel, StyledSpan, StyledInputSpan, StyledInputSpanError, IconQuestion, ButtonCircle, InputCircle } from './styled'
+import { StyledLabel, StyledSpan, StyledInputSpan, ButtonCircle, InputCircle } from './styled'
 import Input from './index'
 
 const sizesSelect = (defaultValue = 'large') => select(
@@ -14,22 +14,33 @@ const sizesSelect = (defaultValue = 'large') => select(
   defaultValue,
 )
 
+const inputDefault = {
+  name: 'input',
+  placeholder: 'Только прямые рейсы',
+  errorText: 'Только латинские буктвы',
+  iconText: '?',
+}
+
 storiesOf('Input', module)
   .addWithInfo('default', () => (
     <StyledLabel className="label">
-      <StyledInputSpan>
-        <Input size={sizesSelect()} />
-      </StyledInputSpan>
+      <Input
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+      />
     </StyledLabel>
   ))
   .addWithInfo('label text', () => (
     <StyledLabel className="label">
-      <StyledInputSpan>
-        <StyledSpan>
-          { text('text', 'Cake is a lie') }
-        </StyledSpan>
-        <Input size={sizesSelect()} />
-      </StyledInputSpan>
+      <StyledSpan>
+        { text('text', 'Cake is a lie') }
+      </StyledSpan>
+      <Input
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+      />
     </StyledLabel>
   ))
   .addWithInfo('disabled', () => {
@@ -37,45 +48,59 @@ storiesOf('Input', module)
 
     return (
       <StyledLabel className="label">
-        <StyledInputSpan>
-          <Input
-            disabled={disabled}
-            size={sizesSelect()}
-          />
-        </StyledInputSpan>
+        <Input
+          disabled={disabled}
+          size={sizesSelect()}
+          name={inputDefault.name}
+          placeholder={inputDefault.placeholder}
+        />
       </StyledLabel>
     )
   })
-  .addWithInfo('success', () => (
-    <StyledLabel className="label">
-      <StyledInputSpan success>
-        <Input size={sizesSelect()} />
-      </StyledInputSpan>
-    </StyledLabel>
-  ))
-  .addWithInfo('error', () => (
-    <StyledLabel className="label">
-      <StyledInputSpan error>
-        <StyledInputSpanError error size={sizesSelect()}>
-          { text('text', 'Cake is a lie') }
-        </StyledInputSpanError>
-        <Input size={sizesSelect()} />
-      </StyledInputSpan>
-    </StyledLabel>
-  ))
-  .addWithInfo('icon right', () => (
-    <StyledLabel className="label">
-      <StyledInputSpan>
-        <Input icon size={sizesSelect()} />
-        <IconQuestion
-          className="icon"
-          name="question"
-        >
-          { text('text', '?') }
-        </IconQuestion>
-      </StyledInputSpan>
-    </StyledLabel>
-  ))
+  .addWithInfo('success', () => {
+    const success = boolean('success', true)
+
+    return (
+      <StyledLabel className="label">
+        <Input
+          success={success}
+          name={inputDefault.name}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+        />
+      </StyledLabel>
+    )
+  })
+  .addWithInfo('error', () => {
+    const error = boolean('error', true)
+
+    return (
+      <StyledLabel className="label">
+        <Input
+          error={error}
+          name={inputDefault.name}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+          errorText={inputDefault.errorText}
+        />
+      </StyledLabel>
+    )
+  })
+  .addWithInfo('icon right', () => {
+    const iconName = text('iconName', 'question')
+
+    return (
+      <StyledLabel className="label">
+        <Input
+          name={inputDefault.name}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+          iconName={iconName}
+          iconText={inputDefault.iconText}
+        />
+      </StyledLabel>
+    )
+  })
   .addWithInfo('phone input', () => (
     <StyledLabel phone className="label">
       <StyledInputSpan>
