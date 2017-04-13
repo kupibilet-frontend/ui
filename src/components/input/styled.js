@@ -19,16 +19,10 @@ const TYPOGRAPHY = {
   small: 16,
 }
 
-// const MARGIN_RIGHT = {
-//   large: 10,
-//   normal: 7,
-//   small: 7,
-// }
-
 export const StyledLabel = styled.label`
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => (props.phone ? 'row' : 'column')};
   align-items: flex-start;
   user-select: none;
 `
@@ -43,6 +37,9 @@ export const StyledSpan = styled.span`
 
 export const StyledInputSpan = styled.span`
   position: relative;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
 
   &:before {
     content: '';
@@ -77,7 +74,7 @@ export const StyledInputSpanError = styled.span`
 
 export const StyledInput = styled.input`
   padding-left: ${({ size }) => PADDING[size]}px;
-  padding-right: ${({ size }) => PADDING[size]}px;
+  padding-right: ${(props) => (props.icon ? 35 : ({ size }) => PADDING[size])}px;
   height: ${({ size }) => HEIGHT[size]}px;
   width: 280px;
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
@@ -122,7 +119,59 @@ export const IconQuestion = styled.span`
   right: 10px;
   width: 18px;
   height: 18px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #96A0B3;
   border-radius: 50%;
   border: 1px solid #B1BDCC;
   background-color: #FFFFFF;
+  text-align: center;
+`
+export const ButtonCircle = styled.span`
+  display: inline-flex;
+  align-items: center;
+  padding-left: 15px;
+  height: ${({ size }) => HEIGHT[size]}px;
+  width: 116px;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 22px;
+  border-radius: 0 100px 100px 0;
+  background-color: #38AFFF;
+  white-space: nowrap;
+  overflow-x: hidden;
+  cursor: pointer;
+
+  &:hover {
+      box-shadow: 0 0 0 1px #38AFFF;
+  }
+`
+export const InputCircle = styled.input`
+  padding-left: ${({ size }) => PADDING[size]}px;
+  padding-right: ${({ size }) => PADDING[size]}px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: ${({ size }) => HEIGHT[size]}px;
+  width: 347px;
+  font-size: ${({ size }) => TYPOGRAPHY[size]}px;
+  color: #333333;
+  line-height: 22px;
+  border: 1px solid #B1BDCC;
+  border-radius: 100px 0 0 100px;
+  background-color: #FFFFFF;
+  outline-style: none;
+
+  &::placeholder {
+    color: #96A0B3;
+  }
+
+  &:hover {
+    border-color: #38AFFF;
+  }
+
+  &:active {
+    margin: -1px 0;
+    height: ${({ size }) => HEIGHT[size] + 2}px;
+    border: 2px solid #38AFFF;
+  }
 `

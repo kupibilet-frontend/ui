@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { select, text, boolean } from '@kadira/storybook-addon-knobs'
-import { StyledLabel, StyledInputSpan, StyledInputSpanError, IconQuestion } from './styled'
+import { StyledLabel, StyledSpan, StyledInputSpan, StyledInputSpanError, IconQuestion, ButtonCircle, InputCircle } from './styled'
 import Input from './index'
 
 const sizesSelect = (defaultValue = 'large') => select(
@@ -25,6 +25,9 @@ storiesOf('Input', module)
   .addWithInfo('label text', () => (
     <StyledLabel className="label">
       <StyledInputSpan>
+        <StyledSpan>
+          { text('text', 'Cake is a lie') }
+        </StyledSpan>
         <Input size={sizesSelect()} />
       </StyledInputSpan>
     </StyledLabel>
@@ -67,7 +70,29 @@ storiesOf('Input', module)
         <IconQuestion
           className="icon"
           name="question"
+        >
+          { text('text', '?') }
+        </IconQuestion>
+      </StyledInputSpan>
+    </StyledLabel>
+  ))
+  .addWithInfo('phone input', () => (
+    <StyledLabel phone className="label">
+      <StyledInputSpan>
+        <InputCircle
+          size={sizesSelect()}
+          className="circle"
+          type="tel"
+          name="phone"
+          maxlength="20"
+          placeholder="Номер телефона"
         />
       </StyledInputSpan>
+      <ButtonCircle
+        size={sizesSelect()}
+        className="circle_button"
+      >
+        { text('text', 'Получить') }
+      </ButtonCircle>
     </StyledLabel>
   ))
