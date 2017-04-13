@@ -1,22 +1,55 @@
 import React, { PropTypes } from 'react'
-import { StyledInput } from './styled'
+import { text } from '@kadira/storybook-addon-knobs'
+import { StyledInputSpan, StyledInput, StyledInputSpanError, IconQuestion } from './styled'
 
-const Input = ({ size, disabled, ...props }) => (
-  <StyledInput
+const Input = ({ size, disabled, placeholder, name, success, error, iconName, ...props }) => (
+  <StyledInputSpan
     {...props}
-    className="input"
-    type="text"
-    name="input"
-    placeholder="Только прямые рейсы"
-    size={size}
-    disabled={disabled}
-  />
+    success={success}
+    error={error}
+  >
+    {
+      error ? (
+        <StyledInputSpanError error size={size}>
+          { text('errorText', props.errorText) }
+        </StyledInputSpanError>
+      ) : (
+        null
+      )
+    }
+    <StyledInput
+      className="input"
+      type="text"
+      name={name}
+      placeholder={placeholder}
+      size={size}
+      disabled={disabled}
+    />
+    {
+      iconName ? (
+        <IconQuestion
+          className="icon"
+          name={iconName}
+        >
+          { text('text', props.iconText) }
+        </IconQuestion>
+      ) : (
+        null
+      )
+    }
+  </StyledInputSpan>
 )
 
-/* eslint-disable react/require-default-props */
 Input.propTypes = {
-  size: PropTypes.string,
-  disabled: PropTypes.bool,
+  iconText: PropTypes.string.isRequired,
+  errorText: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
+  error: PropTypes.bool.isRequired,
+  success: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  placeholder: PropTypes.string.isRequired,
 }
 
 export default Input
