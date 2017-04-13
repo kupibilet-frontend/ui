@@ -1,8 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import Collapse, { Panel } from './index'
-import Box from '../box'
 
+import Collapse from './index'
+
+const { Panel } = Collapse
 const text = `
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,
@@ -10,27 +11,30 @@ const text = `
 `
 
 storiesOf('Collapse', module)
-  .addWithInfo('Collapse', () => (
+  .addWithInfo('Default', () => (
     <div style={{ width: '252px' }}>
-      <Box>
-        <div style={{ padding: '18px' }}>Вылет и прилет</div>
-        <Collapse
-          accordion
-        >
-          <Panel
-            header={'Вылет'}
-            key="1"
-            showArrow={false}
-          >
-            {text}
-          </Panel>
-          <Panel header={'Прилет'} key="2">
-            {text}
-          </Panel>
-          <Panel header={'Пересадки'} key="3">
-            {text}
-          </Panel>
-        </Collapse>
-      </Box>
+      <Collapse>
+        <Panel header="Foo">{text}</Panel>
+        <Panel header="Bar">{text}</Panel>
+        <Panel header="Mdaaaaa">{text}</Panel>
+      </Collapse>
+    </div>
+  ))
+  .addWithInfo('Accordion', () => (
+    <div style={{ width: '252px' }}>
+      <Collapse accordion>
+        <Panel header="Foo">{text}</Panel>
+        <Panel header="Bar">{text}</Panel>
+        <Panel header="Mdaaaaa">{text}</Panel>
+      </Collapse>
+    </div>
+  ))
+  .addWithInfo('Default active panel', () => (
+    <div style={{ width: '252px' }}>
+      <Collapse defaultActiveKey="foo">
+        <Panel header="Foo" key="foo">{text}</Panel>
+        <Panel header="Bar">{text}</Panel>
+        <Panel header="Mdaaaaa">{text}</Panel>
+      </Collapse>
     </div>
   ))
