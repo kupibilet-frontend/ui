@@ -1,15 +1,46 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
+import styled from 'styled-components'
 import FilterBox from './index'
-import Checkbox from '../checkbox'
+import Checkbox from '../../components/checkbox'
+
+const CheckboxWithBorder = styled(Checkbox)`
+  position: relative;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -19px;
+    content: '';
+    width: 2px;
+    background: red;
+  }
+`
+
+const WithBorder = styled.div`
+  position: relative;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -18px;
+    content: '';
+    width: 2px;
+    background: ${(props) => props.isActive ? 'transparent' : 'red'};
+  }
+`
 
 const collapseItems = [
   {
-    title: 'Пересадки',
+    title: (<WithBorder>Пересадки</WithBorder>),
     key: 'transfers',
     content: (
       <div>
-        <div><Checkbox>Без ночных пересадок</Checkbox></div>
+        <div><CheckboxWithBorder checked>Без ночных пересадок</CheckboxWithBorder></div>
         <div><Checkbox>Без смены аэропорта</Checkbox></div>
         <div><Checkbox>Без транзитной визы</Checkbox></div>
       </div>

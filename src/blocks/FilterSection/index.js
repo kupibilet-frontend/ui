@@ -2,9 +2,9 @@
 
 import React, { PropTypes } from 'react'
 import styled, { css } from 'styled-components'
-import Box from '../box'
-import Collapse from '../collapse'
-import Icon from '../icons'
+import Box from '../../components/box'
+import Collapse from '../../components/collapse'
+import Icon from '../../components/icons'
 import Link from '../../utils/link'
 
 
@@ -23,6 +23,10 @@ const Header = styled.header`
 const Content = styled.div`
   ${horizontalPadding}
   padding-bottom: 24px;
+`
+
+const PanelContent = styled(Content)`
+  padding-left: 19px;
 `
 
 const PanelHeader = styled.div`
@@ -48,12 +52,13 @@ const IconWrap = styled(Icon)`
 `
 
 const PanelWrapper = styled(Collapse.Panel)`
+  margin-left: -1px;
   border-top: 1px solid ${({ theme }) => (theme.color.miscLighter)};
 `
 
 const PanelHeaderWrapper = (props) => (
   <PanelHeader>
-    {props.children}
+    {React.cloneElement(props.children, { isActive: props.isActive })}
     <IconWrap
       className="icon"
       name="arrow-down"
@@ -92,9 +97,9 @@ const FilterBox = (props) => (
             header={<PanelHeaderWrapper>{item.title}</PanelHeaderWrapper>}
             key={item.key}
           >
-            <Content>
+            <PanelContent>
               {item.content}
-            </Content>
+            </PanelContent>
           </PanelWrapper>
         ))}
       </Collapse>
