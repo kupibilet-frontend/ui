@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { text } from '@kadira/storybook-addon-knobs'
 import styled from 'styled-components'
-import { PADDING, HEIGHT, TYPOGRAPHY } from './utils'
+import { PADDING, TYPOGRAPHY, calculate } from './utils'
 import { color } from '../theme-provider/theme'
 
 const Icon = styled.span`
@@ -40,7 +40,7 @@ const Error = styled.span`
 const Input = styled.input`
   padding-left: ${({ size }) => PADDING[size]}px;
   padding-right: ${(props) => (props.icon ? 35 : ({ size }) => PADDING[size])}px;
-  height: ${({ size }) => HEIGHT[size]}px;
+  height: ${({ size }) => calculate(size)}px;
   width: ${(props) => (props.circle ? '347px' : '280px')};
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: normal;
@@ -65,7 +65,7 @@ const Input = styled.input`
 
   &:active {
     margin: -1px 0;
-    height: ${({ size }) => HEIGHT[size] + 2}px;
+    height: ${({ size }) => calculate(size) + 2}px;
     border: 2px solid ${color.primary};
   }
 
@@ -159,10 +159,6 @@ InputComponent.propTypes = {
   size: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
   placeholder: PropTypes.string.isRequired,
-}
-
-InputComponent.defaultProps = {
-  inputDefault: {},
 }
 
 export default InputComponent
