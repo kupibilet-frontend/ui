@@ -38,7 +38,7 @@ const PanelHeader = styled.div`
   padding-bottom: 12px;
 `
 
-const IconWrap = styled(Icon)`
+const IconWrapper = styled(Icon)`
   margin: 3px 0 0 3px;
   transition-property: transform;
 
@@ -59,7 +59,7 @@ const PanelWrapper = styled(Collapse.Panel)`
 const PanelHeaderWrapper = (props) => (
   <PanelHeader>
     {React.cloneElement(props.children, { isActive: props.isActive })}
-    <IconWrap
+    <IconWrapper
       className="icon"
       name="arrow-down"
       stroke="primaryDarkest"
