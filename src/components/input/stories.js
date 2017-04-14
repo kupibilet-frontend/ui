@@ -54,16 +54,12 @@ storiesOf('Input', module)
       />
     )
   })
-  .addWithInfo('icon right', () => {
-    const iconName = text('iconName', 'question')
-
-    return (
-      <Input
-        size={sizesSelect()}
-        iconName={iconName}
-      />
-    )
-  })
+  .addWithInfo('icon right', () => (
+    <Input
+      size={sizesSelect()}
+      className="icon"
+    />
+  ))
   .addWithInfo('phone input', () => {
     const circle = boolean('circle', true)
 

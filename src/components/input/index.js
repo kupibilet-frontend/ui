@@ -4,21 +4,6 @@ import styled from 'styled-components'
 import { PADDING, TYPOGRAPHY, calculate } from './utils'
 import { color } from '../theme-provider/theme'
 
-const Icon = styled.span`
-  position: absolute;
-  top: calc(50% - 9px);
-  right: 10px;
-  width: 18px;
-  height: 18px;
-  font-size: 14px;
-  line-height: 16px;
-  color: ${color.miscDark};
-  border-radius: 50%;
-  border: 1px solid ${color.misc};
-  background-color: #FFFFFF;
-  text-align: center;
-`
-
 const Error = styled.span`
     position: absolute;
     top: calc(100% + 2px);
@@ -39,7 +24,7 @@ const Error = styled.span`
 
 const Input = styled.input`
   padding-left: ${({ size }) => PADDING[size]}px;
-  padding-right: ${(props) => (props.icon ? 35 : ({ size }) => PADDING[size])}px;
+  padding-right: ${({ size }) => PADDING[size]}px;
   height: ${({ size }) => calculate(size)}px;
   width: ${(props) => (props.circle ? '347px' : '280px')};
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
@@ -50,6 +35,10 @@ const Input = styled.input`
   background-color: #FFFFFF;
   box-sizing: border-box;
   cursor: text;
+
+  &.icon {
+    padding-right: 35px;
+  }
 
   &::placeholder {
     color: ${color.miscDark};
@@ -108,7 +97,6 @@ const inputDefault = {
   name: 'input',
   placeholder: 'Только прямые рейсы',
   errorText: 'Только латинские буктвы',
-  iconText: '?',
 }
 
 const InputComponent = ({ size, disabled, placeholder, success, error, ...props }) => (
@@ -133,25 +121,13 @@ const InputComponent = ({ size, disabled, placeholder, success, error, ...props 
       size={size}
       disabled={disabled}
     />
-    {
-      props.iconName && (
-        <Icon
-          className="icon"
-          name={props.iconName}
-        >
-          { text('text', inputDefault.iconText) }
-        </Icon>
-      )
-    }
   </InputWrap>
 )
 
 InputComponent.propTypes = {
   className: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  iconText: PropTypes.string.isRequired,
   errorText: PropTypes.string.isRequired,
-  iconName: PropTypes.string.isRequired,
   circle: PropTypes.bool.isRequired,
   error: PropTypes.bool.isRequired,
   success: PropTypes.bool.isRequired,
