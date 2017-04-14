@@ -52,7 +52,7 @@ const IconWrapper = styled(Icon)`
 `
 
 const PanelWrapper = styled(Collapse.Panel)`
-  margin-left: -1px;
+  margin: 0 -1px;
   border-top: 1px solid ${({ theme }) => (theme.color.miscLighter)};
 `
 
