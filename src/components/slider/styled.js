@@ -16,7 +16,7 @@ const getHandleColor = (props) => {
   return props.theme.color.miscDark
 }
 
-export const Slider = styled(Rheostat)`
+export const StyledSlider = styled(Rheostat)`
   width: 100%;
 
   .rheostat-background {
@@ -36,7 +36,7 @@ export const StyledHandle = styled.span`
   display: inline-block;
   height: 18px;
   top: -6px;
-  width: 5px;
+  width: 18px;
   z-index: 1;
 
   &:hover, &:active {
