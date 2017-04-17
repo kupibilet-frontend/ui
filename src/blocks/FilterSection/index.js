@@ -2,11 +2,15 @@
 
 import React, { PropTypes } from 'react'
 import styled, { css } from 'styled-components'
-import Box from '../../components/box'
+import { styles as boxStyles } from '../../components/box'
 import Collapse from '../../components/collapse'
 import Icon from '../../components/icons'
 import Link from '../../utils/link'
 
+
+const Section = styled.section`
+  ${boxStyles}
+`
 
 const horizontalPadding = css`
   padding-left: 18px;
@@ -81,7 +85,7 @@ PanelHeaderWrapper.defaultProps = {
 
 
 const FilterBox = (props) => (
-  <Box>
+  <Section>
     <Header>
       {props.headerLeft}
       {props.headerRight}
@@ -104,7 +108,7 @@ const FilterBox = (props) => (
         ))}
       </Collapse>
     }
-  </Box>
+  </Section>
 )
 
 FilterBox.propTypes = {
