@@ -14,6 +14,8 @@ export default class Checkbox extends PureComponent {
 
   static defaultProps = {
     disabled: false,
+    checked: false,
+    onChange() {},
   }
 
   render() {
