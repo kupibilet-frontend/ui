@@ -1,4 +1,5 @@
-import React, { PropTypes, PureComponent } from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import Icon from '../icons'
 import { CheckboxLabel, StyledCheckbox, IconWrap, CheckboxInput, LabelText } from './styled'
 
