@@ -13,7 +13,6 @@
     "jest": "jest",
     "postinstall": "move-bin || true",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
-    "precommit": "npm run pretest",
     "prepublish": "npm run build --silent"
   },
   "repository": {
