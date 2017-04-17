@@ -12,8 +12,13 @@ const H3 = styled.h3`
   )}
 `
 
+H3.defaultProps = {
+  verticalRythm: false,
+}
+
 H3.propTypes = {
   children: PropTypes.node.isRequired,
+  verticalRythm: PropTypes.bool,
 }
 
 export default H3
