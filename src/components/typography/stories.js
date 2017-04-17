@@ -13,8 +13,18 @@ storiesOf('Typography', module)
       Пересадка 22ч 20 мин
     </H1>
   ))
+  .addWithInfo('H1 with vertical rythm', () => (
+    <H1 verticalRythm>
+      Пересадка 22ч 20 мин
+    </H1>
+  ))
   .addWithInfo('H2', () => (
     <H2>
+      Пересадка 22ч 20 мин
+    </H2>
+  ))
+  .addWithInfo('H2 with vertical rythm', () => (
+    <H2 verticalRythm>
       Пересадка 22ч 20 мин
     </H2>
   ))
@@ -23,8 +33,18 @@ storiesOf('Typography', module)
       Пересадка 22ч 20 мин
     </H3>
   ))
+  .addWithInfo('H3 with vertical rythm', () => (
+    <H3 verticalRythm>
+      Пересадка 22ч 20 мин
+    </H3>
+  ))
   .addWithInfo('H4', () => (
     <H4>
+      Пересадка 22ч 20 мин
+    </H4>
+  ))
+  .addWithInfo('H4 with vertical rythm', () => (
+    <H4 verticalRythm>
       Пересадка 22ч 20 мин
     </H4>
   ))
@@ -38,8 +58,18 @@ storiesOf('Typography', module)
       Пересадка 22ч 20 мин
     </H5>
   ))
+  .addWithInfo('H5 with vertical rythm', () => (
+    <H5 verticalRythm>
+      Пересадка 22ч 20 мин
+    </H5>
+  ))
   .addWithInfo('Text', () => (
     <Text>
+      Пересадка 22ч 20 мин
+    </Text>
+  ))
+  .addWithInfo('Text with vertical rythm', () => (
+    <Text verticalRythm>
       Пересадка 22ч 20 мин
     </Text>
   ))
