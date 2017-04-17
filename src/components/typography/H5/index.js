@@ -12,8 +12,13 @@ const H5 = styled.h5`
   )}
 `
 
+H5.defaultProps = {
+  verticalRythm: false,
+}
+
 H5.propTypes = {
   children: PropTypes.node.isRequired,
+  verticalRythm: PropTypes.bool,
 }
 
 export default H5

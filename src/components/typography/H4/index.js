@@ -13,8 +13,15 @@ const H4 = styled.h4`
   )}
 `
 
+H4.defaultProps = {
+  verticalRythm: false,
+  uppercase: false,
+}
+
 H4.propTypes = {
   children: PropTypes.node.isRequired,
+  verticalRythm: PropTypes.bool,
+  uppercase: PropTypes.bool,
 }
 
 export default H4

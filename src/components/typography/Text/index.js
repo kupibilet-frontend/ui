@@ -2,8 +2,8 @@ import { PropTypes } from 'react'
 import styled from 'styled-components'
 
 const Text = styled.span`
-  font-size: ${(props) => (props.uppercase ? 11 : 14)}px;
   font-weight: 400;
+  font-size: ${(props) => (props.uppercase ? 11 : 14)}px;
   line-height: ${(props) => (props.uppercase ? 16 : 18)}px;
   ${(props) => (props.uppercase &&
     `letter-spacing: 0.6px;
@@ -16,8 +16,15 @@ const Text = styled.span`
   )}
 `
 
+Text.defaultProps = {
+  verticalRythm: false,
+  uppercase: false,
+}
+
 Text.propTypes = {
   children: PropTypes.node.isRequired,
+  verticalRythm: PropTypes.bool,
+  uppercase: PropTypes.bool,
 }
 
 export default Text
