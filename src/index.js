@@ -25,6 +25,7 @@ export { default as AirportSuggest } from './components/airport-suggest'
 export { default as Autocomplete } from './components/autocomplete'
 
 export { default as PassengerPicker } from './components/passenger'
+export { default as BlockChecked } from './components/block-checked'
 
 // Util components
 export { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly } from './components/responsive-only'
