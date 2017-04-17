@@ -6,8 +6,10 @@ const H1 = styled.h1`
   font-weight: 600;
   line-height: 38px;
   letter-spacing: -1px;
-  margin-bottom: 24px;
-  padding-top: 30px;
+  ${(props) => (props.verticalRythm &&
+    `margin-bottom: 24px;
+     padding-top: 30px;`
+  )}
 `
 
 H1.propTypes = {
