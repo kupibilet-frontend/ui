@@ -1,7 +1,9 @@
+/* eslint-disable no-confusing-arrow */
+
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import styled from 'styled-components'
-import FilterBox from './index'
+import FilterSection from './index'
 import Checkbox from '../../components/checkbox'
 
 const CheckboxWithBorder = styled(Checkbox)`
@@ -34,24 +36,10 @@ const WithBorder = styled.div`
   }
 `
 
-const collapseItems = [
-  {
-    title: (<WithBorder>Пересадки</WithBorder>),
-    key: 'transfers',
-    content: (
-      <div>
-        <div><CheckboxWithBorder checked>Без ночных пересадок</CheckboxWithBorder></div>
-        <div><Checkbox>Без смены аэропорта</Checkbox></div>
-        <div><Checkbox>Без транзитной визы</Checkbox></div>
-      </div>
-    ),
-  },
-]
-
 storiesOf('FilterSection', module)
   .addWithInfo('Default', () => (
     <div style={{ width: 252 }}>
-      <FilterBox
+      <FilterSection
         headerLeft={<div>Пересадки</div>}
         headerRight={<div>Сбросить</div>}
         content={
@@ -61,7 +49,15 @@ storiesOf('FilterSection', module)
             <div><Checkbox>2 и более</Checkbox></div>
           </div>
         }
-        collapseItems={collapseItems}
+        collapse={
+          <FilterSection.Collapse accordion>
+            <FilterSection.Panel title={<WithBorder>Пересадки</WithBorder>} key="transfers">
+              <div><CheckboxWithBorder checked>Без ночных пересадок</CheckboxWithBorder></div>
+              <div><Checkbox>Без смены аэропорта</Checkbox></div>
+              <div><Checkbox>Без транзитной визы</Checkbox></div>
+            </FilterSection.Panel>
+          </FilterSection.Collapse>
+        }
       />
     </div>
   ))

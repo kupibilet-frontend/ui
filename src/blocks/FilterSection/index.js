@@ -1,4 +1,4 @@
-/* eslint-disable consistent-return */
+/* eslint-disable consistent-return, arrow-body-style */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -61,6 +61,25 @@ const PanelWrapper = styled(Collapse.Panel)`
   border-top: 1px solid ${({ theme }) => (theme.color.miscLighter)};
 `
 
+const Panel = (props) => {
+  return (
+    <PanelWrapper
+      {...props}
+      header={<PanelHeaderWrapper>{props.title}</PanelHeaderWrapper>}
+    >
+      <PanelContent>
+        {props.children}
+      </PanelContent>
+    </PanelWrapper>
+  )
+}
+
+Panel.propTypes = {
+  ...Collapse.Panel.PropTypes,
+  title: PropTypes.node.isRequired,
+}
+
+
 const PanelHeaderWrapper = (props) => (
   <PanelHeader>
     {React.cloneElement(props.children, { isActive: props.isActive })}
@@ -94,21 +113,7 @@ const FilterBox = (props) => (
     <Content>
       {props.content}
     </Content>
-
-    {props.collapseItems.length > 0 &&
-      <Collapse accordion {...props.collapseOptions}>
-        {props.collapseItems.map((item) => (
-          <PanelWrapper
-            header={<PanelHeaderWrapper>{item.title}</PanelHeaderWrapper>}
-            key={item.key}
-          >
-            <PanelContent>
-              {item.content}
-            </PanelContent>
-          </PanelWrapper>
-        ))}
-      </Collapse>
-    }
+    {props.collapse}
   </Section>
 )
 
@@ -116,19 +121,14 @@ FilterBox.propTypes = {
   headerLeft: PropTypes.node.isRequired,
   headerRight: PropTypes.node.isRequired,
   content: PropTypes.node.isRequired,
-  collapseItems: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.node.isRequired,
-    key: PropTypes.string,
-    content: PropTypes.node.isRequired,
-  })),
-  collapseOptions: PropTypes.shape({
-    ...Collapse.propTypes,
-  }),
+  collapse: PropTypes.node,
 }
 
 FilterBox.defaultProps = {
-  collapseItems: [],
-  collapseOptions: {},
+  collapse: null,
 }
+
+FilterBox.Collapse = Collapse
+FilterBox.Panel = Panel
 
 export default FilterBox
