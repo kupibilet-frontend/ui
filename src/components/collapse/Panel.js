@@ -9,11 +9,11 @@ import { switchTransition } from '../../utils/transitions'
 const PanelStyled = styled(RcCollapse.Panel)`
   overflow: hidden;
 
-  .kb-collapse-content {
+  .rc-collapse-content {
     ${switchTransition}
   }
 
-  .kb-collapse-content.kb-collapse-content-inactive {
+  .rc-collapse-content.rc-collapse-content-inactive {
     display: none;
   }
 `
