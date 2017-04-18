@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import Autosuggest from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
@@ -33,6 +34,7 @@ export default class Autocomplete extends React.PureComponent {
     const { suggestions = [] } = props
     super()
     this.state = { suggestions }
+    this.userAreTyping = true
 
     this.setSectionIterator(props)
   }
@@ -40,8 +42,8 @@ export default class Autocomplete extends React.PureComponent {
   componentWillReceiveProps(nextProps) {
     const { suggestions, onSuggestionSelected, multiSection } = nextProps
 
-    if (suggestions.length === 1 && onSuggestionSelected) {
-      this.selectFirstSuggest(nextProps, 'autoSuggest')
+    if (suggestions.length === 1 && onSuggestionSelected && this.userAreTyping) {
+      this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
     } else {
       this.setState({ suggestions })
@@ -67,11 +69,13 @@ export default class Autocomplete extends React.PureComponent {
       ...payload,
       suggestion,
     })
+
+    this.userAreTyping = payload.newValue.length >= this.props.inputProps.value.length
   }
 
-  onBlur = () => {
+  onBlur = (event) => {
     if (this.props.forceSuggesedValue) {
-      this.selectFirstSuggest(this.props, 'blur')
+      this.selectFirstSuggest(event, this.props, 'blur')
     }
   }
 
@@ -85,7 +89,7 @@ export default class Autocomplete extends React.PureComponent {
     })
   }
 
-  selectFirstSuggest(props, method) {
+  selectFirstSuggest(event, props, method) {
     const { getSuggestionValue, alwaysRenderSuggestions, multiSection } = props
     const suggestion = getFirstSuggestion(props)
 
@@ -98,7 +102,7 @@ export default class Autocomplete extends React.PureComponent {
       this.autosuggestInstance.closeSuggestions()
     }
 
-    if (suggestion) {
+    if (suggestion && (this.userAreTyping || method === 'blur')) {
       const newValue = getSuggestionValue(suggestion)
 
       this.autosuggestInstance.maybeCallOnChange(event, newValue, method)
@@ -114,9 +118,11 @@ export default class Autocomplete extends React.PureComponent {
       this.autosuggestInstance.justSelectedSuggestion = true
 
       setTimeout(() => {
-        this.autosuggestInstance.justSelectedSuggestion = false
+        if (this.autosuggestInstance) {
+          this.autosuggestInstance.justSelectedSuggestion = false
+        }
       }, 0)
-    } else {
+    } else if (!suggestion) {
       this.autosuggestInstance.maybeCallOnChange(event, '', method)
     }
   }
