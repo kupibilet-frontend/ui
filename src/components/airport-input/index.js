@@ -1,4 +1,6 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactDOM from 'react-dom'
 
 import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from './styled'
 
@@ -22,8 +24,13 @@ export default class AirportInput extends React.PureComponent {
     neighboringInGroup: null,
   }
 
-  state = {
-    focused: false,
+  constructor() {
+    super()
+
+    this.input = null
+    this.state = {
+      focused: false,
+    }
   }
 
   onFocus = (e) => {
@@ -41,6 +48,12 @@ export default class AirportInput extends React.PureComponent {
     this.setState({ focused: false })
   }
 
+  focus = () => {
+    if (this.input) {
+      this.input.focus()
+    }
+  }
+
   render() {
     const { neighboringInGroup, value, location, IATACode, ...props } = this.props
     const { focused } = this.state
@@ -53,7 +66,16 @@ export default class AirportInput extends React.PureComponent {
 
     return (
       <Container neighboringInGroup={neighboringInGroup} focused={focused}>
-        <Input {...props} value={value} onFocus={this.onFocus} onBlur={this.onBlur} />
+        <Input
+          {...props}
+          ref={(ref) => {
+            /* eslint-disable react/no-find-dom-node */
+            this.input = ref && ReactDOM.findDOMNode(ref)
+          }}
+          value={value}
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
+        />
         <Geo>
           <ValuePlaceholder>
             { value }

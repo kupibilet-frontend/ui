@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { text, object } from '@kadira/storybook-addon-knobs'
 import 'whatwg-fetch'
-import _debounce from 'lodash/debounce'
+import _throttle from 'lodash/throttle'
 
 import Autocomplete from './index'
 import AirportInput from '../airport-input'
@@ -20,8 +20,8 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     suggestions: [],
   }
 
-  componentWillUpdate() {
-    const { value, suggest, suggestions } = this.state
+  componentWillUpdate(nextProps, nextState) {
+    const { value, suggest, suggestions } = nextState
 
     updateKnob('suggest', 'object', suggest || {})
     updateKnob('suggestions', 'object', suggestions || [])
@@ -35,14 +35,18 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     })
   }
 
-  onChange = (event, { newValue, suggestion }) => {
-    this.setState({
-      suggest: newValue && suggestion || null,
-      value: newValue || '',
-    })
+  onChange = (event, { newValue, suggestion, method }) => {
+    const { suggest } = this.state
+
+    if (method !== 'blur' || !suggest) {
+      this.setState({
+        suggest: newValue && suggestion || null,
+        value: newValue || '',
+      })
+    }
   }
 
-  fetchSuggestions = _debounce(({ value }) => {
+  fetchSuggestions = _throttle((value) => {
     fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
       .then((data) => data.json())
       .then(({ data }) => data.map((suggest) => {
@@ -59,9 +63,17 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
         }
       }))
       .then((suggestions) => {
-        this.setState({ suggestions })
+        if (value === this.state.value) {
+          this.setState({ suggestions })
+        }
       })
-  }, 1000)
+  }, 300)
+
+  requestSuggestions = ({ value }) => {
+    if (value && value.length > 1) {
+      this.fetchSuggestions(value)
+    }
+  }
 
   clearSuggestions = () => {
     this.setState({
@@ -84,7 +96,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
         }}
         highlightFirstSuggestion
         suggestions={suggestions}
-        onSuggestionsFetchRequested={this.fetchSuggestions}
+        onSuggestionsFetchRequested={this.requestSuggestions}
         onSuggestionsClearRequested={this.clearSuggestions}
         onSuggestionSelected={this.onSuggestionSelected}
         renderSuggestion={(suggestion) => (
@@ -96,6 +108,25 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
       />
     )
   }
+}
+
+// Dummy props for storybook doc
+const STORY_DOC_PROPS = {
+  inputProps: {
+    value: '',
+    onChange: () => {},
+  },
+  highlightFirstSuggestion: true,
+  suggestions: [],
+  onSuggestionsFetchRequested: () => {},
+  onSuggestionsClearRequested: () => {},
+  onSuggestionSelected: () => {},
+  renderSuggestion: (suggestion) => (
+    <AirportSuggest {...suggestion} />
+  ),
+  renderInputComponent: (props) => (
+    <AirportInput {...props} />
+  ),
 }
 
 storiesOf('Autocomplete', module)
@@ -110,7 +141,7 @@ storiesOf('Autocomplete', module)
       text('value', '')
 
       return (
-        <AutocompleteStatefulWrapper />
+        <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
       )
     },
   )
