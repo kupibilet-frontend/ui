@@ -13,19 +13,13 @@ class Slider extends React.Component {
       pitHeight: this.getPitHeight(props.sliderData),
       pitWidth: this.getPitWidth(props.sliderData),
     }
-
-    this.updateValue = this.updateValue.bind(this)
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.sliderData !== nextProps.sliderData) {
       this.setState({
         pitPoints: this.getPitPoints(nextProps.sliderData),
-      })
-      this.setState({
         pitHeight: this.getPitHeight(nextProps.sliderData),
-      })
-      this.setState({
         pitWidth: this.getPitWidth(nextProps.sliderData),
       })
     }
@@ -37,9 +31,7 @@ class Slider extends React.Component {
     }
   }
 
-  getPitPoints = (sliderData) => (
-    Object.keys(sliderData)
-  )
+  getPitPoints = (sliderData) => Object.keys(sliderData)
 
   getSnapPoints = (props) => {
     const snapPointsArray = [props.values[0]] // чтобы ползунок возвращался на первую позицию
@@ -67,7 +59,7 @@ class Slider extends React.Component {
     return width
   }
 
-  updateValue(sliderState) {
+  updateValue = (sliderState) => {
     this.setState({
       values: sliderState.values,
     })
