@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react'
-import { text } from '@kadira/storybook-addon-knobs'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { color } from '../theme-provider/theme'
 
@@ -18,31 +18,28 @@ const LabelText = styled.span`
   color: ${color.textDarker};
   user-select: none;
 `
-const inputDefault = {
-  className: 'label',
-}
 
-const LabelComponent = ({ horizonal, className }) => (
+const LabelComponent = ({ horizonal, className, title }) => (
   <Label
     horizonal={horizonal}
-    className={className || inputDefault.className}
+    className={className}
   >
     <LabelText>
-      { text('text', 'Cake is a lie') }
+      {title}
     </LabelText>
-    {
-      horizonal && (
-        <LabelText>
-          { text('text', 'Cake is a lie') }
-        </LabelText>
-      )
-    }
   </Label>
 )
 
+LabelComponent.defaultProps = {
+  horizonal: false,
+  title: '',
+  className: 'label',
+}
+
 LabelComponent.propTypes = {
-  horizonal: PropTypes.bool.isRequired,
-  className: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  horizonal: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 export default LabelComponent

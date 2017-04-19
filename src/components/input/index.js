@@ -1,20 +1,20 @@
-import React, { PropTypes } from 'react'
-import { text } from '@kadira/storybook-addon-knobs'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { PADDING, TYPOGRAPHY, calculate } from './utils'
+import { TYPOGRAPHY, sizeInput } from '../../utils/input'
 import { color } from '../theme-provider/theme'
+import { switchTransition } from '../../utils/transitions'
 
 const Error = styled.span`
     position: absolute;
     top: calc(100% + 2px);
     left: 0;
-    display: ${(props) => (props.error ? 'block' : 'none')}
-    padding-top: 3px;
-    padding-bottom: 5px;
-    padding-left: ${PADDING.normal}px;
-    width: ${({ size }) => ((size === 'small') ? '100%' : '181px')};
+    display: ${(props) => (props.error && 'flex')}
+    align-items: center;
+    padding: 3px ${sizeInput('normal', 'padding')}px 3px;
+    ${({ size }) => ((size === 'small') && ' width: 100%')};
     font-size: 14px;
-    line-height: 16px;
+    line-height: 18px;
     color: #FFFFFF;
     border-radius: 3px;
     background-color: ${color.fail};
@@ -23,18 +23,18 @@ const Error = styled.span`
 `
 
 const Input = styled.input`
-  padding-left: ${({ size }) => PADDING[size]}px;
-  padding-right: ${({ size }) => PADDING[size]}px;
-  height: ${({ size }) => calculate(size)}px;
-  width: ${(props) => (props.circle ? '347px' : '280px')};
+  ${({ size }) => sizeInput(size)}
+  width: 280px;
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: normal;
   color: ${color.textDarker};
   border: 1px solid ${color.misc};
-  border-radius: ${(props) => (props.circle ? '100px 0 0 100px' : '3px')};
+  border-radius: 3px;
   background-color: #FFFFFF;
-  box-sizing: border-box;
   cursor: text;
+  ${switchTransition}
+  transition-property: border-color, box-shadow;
+
 
   &.icon {
     padding-right: 35px;
@@ -49,13 +49,9 @@ const Input = styled.input`
   }
 
   &:focus {
-    outline-style: ${(props) => (props.circle ? 'none' : 'auto')};
-  }
-
-  &:active {
-    margin: -1px 0;
-    height: ${({ size }) => calculate(size) + 2}px;
-    border: 2px solid ${color.primary};
+    height: ${({ size }) => Number(sizeInput(size, 'height')) + 2}px;
+    box-shadow: 0 0 0 2px ${color.primary};
+    outline-style: none;
   }
 
   &:disabled {
@@ -87,17 +83,9 @@ const InputWrap = styled.span`
     height: 100%;
     width: 2px;
     border-radius: 3px 0 0 3px;
-    background-color: ${(props) => (props.error ? color.fail : color.success)}
+    background-color: ${(props) => (props.error ? color.fail : color.success)} 
   }
 `
-
-const inputDefault = {
-  className: 'input',
-  type: 'text',
-  name: 'input',
-  placeholder: 'Только прямые рейсы',
-  errorText: 'Только латинские буктвы',
-}
 
 const InputComponent = ({ size, disabled, placeholder, success, error, ...props }) => (
   <InputWrap
@@ -106,35 +94,41 @@ const InputComponent = ({ size, disabled, placeholder, success, error, ...props 
     error={error}
   >
     {
-      error && (
-        <Error error size={size}>
-          { text('errorText', inputDefault.placeholder || props.errorText) }
+      error && <Error error size={size}>
+          { props.errorText }
         </Error>
-      )
     }
     <Input
-      circle={props.circle}
-      className={props.className || inputDefault.className}
-      type={props.type || inputDefault.type}
-      name={props.name || inputDefault.name}
-      placeholder={placeholder || inputDefault.placeholder}
+      className={props.className}
+      type={props.type}
+      name={props.name}
+      placeholder={placeholder}
       size={size}
       disabled={disabled}
     />
   </InputWrap>
 )
 
+InputComponent.defaultProps = {
+  errorText: '',
+  error: false,
+  success: false,
+  size: '',
+  disabled: false,
+  placeholder: '',
+  className: 'input',
+}
+
 InputComponent.propTypes = {
-  className: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  errorText: PropTypes.string.isRequired,
-  circle: PropTypes.bool.isRequired,
-  error: PropTypes.bool.isRequired,
-  success: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
-  disabled: PropTypes.bool.isRequired,
-  placeholder: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  errorText: PropTypes.string,
+  error: PropTypes.bool,
+  success: PropTypes.bool,
+  size: PropTypes.string,
+  disabled: PropTypes.bool,
+  placeholder: PropTypes.string,
 }
 
 export default InputComponent

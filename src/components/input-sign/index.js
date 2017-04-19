@@ -1,12 +1,14 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
+import { RIGHT } from '../../utils/input-sign'
 
 const Icon = styled.span`
   position: absolute;
   top: calc(50% - 9px);
-  right: 10px;
+  right: ${({ size }) => RIGHT[size]}px;
   width: 18px;
   height: 18px;
   font-size: 14px;
@@ -21,31 +23,30 @@ const Icon = styled.span`
   transition-property: color, border-color;
 
   &:hover {
-    color: ${color.primary};
-    border-color: ${color.primary};
-  }
-
-  &.attention {
-    &:hover {
-      color: ${color.secondaryDarker};
-      border-color: ${color.secondaryDarker};
-    }
+    color: ${(props) => ((props.name === 'attention') ? color.fail : color.primaryDarkest)};
+    border-color: ${(props) => ((props.name === 'attention') ? color.secondaryDarker : color.primary)};
   }
 `
 
-const Sign = ({ name, text }) => (
+const InputSign = ({ name, text, size }) => (
   <Icon
     className={`sign ${name}`}
     name={name}
     text={text}
+    size={size}
   >
     {text}
   </Icon>
 )
 
-Sign.propTypes = {
-  name: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+InputSign.defaultProps = {
+  size: '',
 }
 
-export default Sign
+InputSign.propTypes = {
+  name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  size: PropTypes.string,
+}
+
+export default InputSign
