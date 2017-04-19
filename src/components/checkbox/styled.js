@@ -42,6 +42,7 @@ export const StyledCheckbox = styled.span`
   border-radius: 3px;
   height: 18px;
   width: 18px;
+  line-height: 16px;
 `
 
 export const LabelText = styled.span`
@@ -59,7 +60,7 @@ export const CheckboxLabel = styled.label`
   display: inline-flex;
   align-items: center;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 18px;
   position: relative;
   user-select: none;
 
