@@ -11,10 +11,10 @@ const Error = styled.span`
     left: 0;
     display: ${(props) => (props.error && 'flex')}
     align-items: center;
-    padding: 3px ${sizeInput('normal', 'padding')}px 3px;
+    padding: 3px ${sizeInput('normal', 'padding')}px 5px;
     ${({ size }) => ((size === 'small') && ' width: 100%')};
     font-size: 14px;
-    line-height: 18px;
+    line-height: 16px;
     color: #FFFFFF;
     border-radius: 3px;
     background-color: ${color.fail};
@@ -31,7 +31,7 @@ const Input = styled.input`
   border: 1px solid ${color.misc};
   border-radius: 3px;
   background-color: #FFFFFF;
-  cursor: text;
+  cursor: ${(props) => (props.disabled ? 'auto' : 'text')};
   ${switchTransition}
   transition-property: border-color, box-shadow;
 
@@ -49,8 +49,13 @@ const Input = styled.input`
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px ${color.primary};
+    box-shadow: 0 0 0 1px ${color.primary};
+    border-color: ${color.primary};
     outline-style: none;
+
+    & + .input_line {
+      display: none;
+    }
   }
 
   &:disabled {
@@ -72,31 +77,20 @@ const InputWrap = styled.span`
   display: inline-flex;
   justify-content: center;
   flex-direction: column;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: ${(props) => ((props.success || props.error) ? 'block' : 'none')}
-    height: 100%;
-    width: 2px;
-    border-radius: 3px 0 0 3px;
-    background-color: ${(props) => (props.error ? color.fail : color.success)} 
-  }
+`
+const InputLine = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: ${(props) => ((props.success || props.error) ? 'block' : 'none')}
+  height: 100%;
+  width: 2px;
+  border-radius: 3px 0 0 3px;
+  background-color: ${(props) => (props.error ? color.fail : color.success)} 
 `
 
 const InputComponent = ({ size, disabled, placeholder, success, error, ...props }) => (
-  <InputWrap
-    {...props}
-    success={success}
-    error={error}
-  >
-    {
-      error && <Error error size={size}>
-          { props.errorText }
-        </Error>
-    }
+  <InputWrap {...props}>
     <Input
       className={props.className}
       type={props.type}
@@ -105,6 +99,12 @@ const InputComponent = ({ size, disabled, placeholder, success, error, ...props 
       size={size}
       disabled={disabled}
     />
+    { (error || success) && <InputLine success={success} error={error} className="input_line" />}
+    {
+      error && <Error error size={size}>
+          { props.errorText }
+        </Error>
+    }
   </InputWrap>
 )
 
