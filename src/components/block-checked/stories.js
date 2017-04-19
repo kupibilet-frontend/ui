@@ -18,20 +18,28 @@ storiesOf('BlockChecked', module)
     return (
       <div>
         <BlockChecked
-          forName={'name1'}
-          nameInput={'radio1'}
-          title={'Банковской картой он-лайн'}
+          htmlFor="name1"
+          name="radio1"
+          title="Банковской картой он-лайн"
           price={price}
-          topIcon={defaultChecked.topIcon}
-          bottomIcon={defaultChecked.bottomIcon}
+          positionIcon="top"
+          icons={defaultChecked.topIcon}
         />
         <BlockChecked
-          forName={'name2'}
-          nameInput={'radio1'}
+          htmlFor="name2"
+          name="radio1"
           title={title}
           price={price}
-          topIcon={defaultChecked.topIcon}
-          bottomIcon={defaultChecked.bottomIcon}
+          positionIcon="bottom"
+          icons={defaultChecked.bottomIcon}
+        />
+        <BlockChecked
+          htmlFor="name3"
+          name="radio1"
+          title="Эконом"
+          price={price}
+          positionIcon="bottom"
+          icons={defaultChecked.bottomIcon}
         />
       </div>
     )
