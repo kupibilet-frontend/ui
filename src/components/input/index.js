@@ -49,7 +49,6 @@ const Input = styled.input`
   }
 
   &:focus {
-    height: ${({ size }) => Number(sizeInput(size, 'height')) + 2}px;
     box-shadow: 0 0 0 2px ${color.primary};
     outline-style: none;
   }
