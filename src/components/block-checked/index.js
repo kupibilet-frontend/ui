@@ -1,47 +1,50 @@
 import React, { PropTypes } from 'react'
 import styled from 'styled-components'
 import Icon from '../icons'
+import { color } from '../theme-provider/theme'
+import { switchTransition } from '../../utils/transitions'
 
 const Label = styled.label`
   display: inline-flex;
-  &:not(:last-of-type) {
-    margin-right: 11px;
+
+  & + & {
+    margin-left: 11px;
   }
 }
 `
-const Column = styled.div`
+const WrapBlock = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 13px;
   min-height: 66px;
   width: 180px;
-  border: 1px solid #B1BDCC;
+  border: 1px solid ${color.misc};
   border-radius: 3px;
   background-color: #FFFFFF;
   cursor: pointer;
+  ${switchTransition}
+  transition-property: border-color, box-shadow;
 `
 
-const Input = styled.input`
+const HiddenInput = styled.input`
   display: none;
 
-  &:checked + div {
-    margin: -1px;
-    width: 182px;
-    min-height: 68px;
-    border: 2px solid #38AFFF;
+  &:checked + .input-check {
+    border-color: ${color.primary};
+    box-shadow: 0 0 0 1px ${color.primary};
   }
 `
 
-const Flex = styled.div`
+const Block = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: ${(props) => (props.block_inline ? 'center' : 'flex-start')};
   margin-top: ${(props) => (props.block_inline && 6)}px;
 
-  &>svg {
-    &:not(:last-of-type) {
-      margin-right: 6px;
+  & .input-check-icon {
+    & + .block-icon {
+      margin-left: 6px;
     }
   }
 `
@@ -50,32 +53,33 @@ const Title = styled.span`
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
-  color: #333333;
+  color: ${color.textDarker};
 `
 
 const Price = styled.span`
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  color: #FC6100;
+  color: ${color.secondaryDarker};
 `
 
-const BlockChecked = ({ forName, nameInput, title, price, topIcon, bottomIcon, ...props }) => (
+const BlockChecked = ({ htmlFor, name, title, price, positionIcon, icons, ...props }) => (
   <Label
-    htmlFor={forName}
+    htmlFor={htmlFor}
     {...props}
   >
-    <Input
+    <HiddenInput
       type="radio"
-      id={forName}
-      name={nameInput}
+      id={htmlFor}
+      name={name}
     />
-    <Column>
-      <Flex>
+    <WrapBlock className="input-check">
+      <Block>
         <Title>{title}</Title>
-        <Flex>
-          { topIcon && topIcon.map((item, index) => (
+        { (icons.length > 0 && positionIcon === 'top') && <Block>
+          { icons.map((item, index) => (
             <Icon
+              className="input-check-icon"
               key={item.concat(index)}
               name={item}
               stroke="background"
@@ -83,13 +87,15 @@ const BlockChecked = ({ forName, nameInput, title, price, topIcon, bottomIcon, .
             />
             ))
           }
-        </Flex>
-      </Flex>
-      <Flex block_inline>
+        </Block>
+        }
+      </Block>
+      <Block block_inline>
         <Price>{price}</Price>
-        <Flex>
-          { bottomIcon && bottomIcon.map((item, index) => (
+        { (icons.length > 0 && positionIcon === 'bottom') && <Block>
+          { icons.map((item, index) => (
             <Icon
+              className="block-icon"
               key={item.concat(index)}
               name={item}
               stroke="background"
@@ -97,19 +103,27 @@ const BlockChecked = ({ forName, nameInput, title, price, topIcon, bottomIcon, .
             />
             ))
           }
-        </Flex>
-      </Flex>
-    </Column>
+        </Block>
+        }
+      </Block>
+    </WrapBlock>
   </Label>
 )
 
+BlockChecked.defaultProps = {
+  title: '',
+  price: '',
+  icons: [],
+  positionIcon: 'bottom',
+}
+
 BlockChecked.propTypes = {
-  forName: PropTypes.string.isRequired,
-  nameInput: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  bottomIcon: PropTypes.array.isRequired,
-  topIcon: PropTypes.array.isRequired,
+  htmlFor: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  price: PropTypes.string,
+  icons: PropTypes.array,
+  positionIcon: PropTypes.string,
 }
 
 export default BlockChecked
