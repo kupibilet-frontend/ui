@@ -11,6 +11,7 @@
     "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" && exit 0; stylelint ./src/components/**/*.js",
     "lint:js": "eslint ./src/components/**/*.js",
     "jest": "jest",
+    "flow": "flow",
     "postinstall": "move-bin || true",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
     "prepublish": "npm run build --silent"
@@ -36,6 +37,7 @@
     "babel-preset-stage-2": "~6.24.1",
     "classnames": "~2.2.5",
     "eslint-config-kupibilet": "^8.2.3",
+    "flow-bin": "^0.44.2",
     "husky": "~0.13.2",
     "jest": "~19.0.0",
     "moment": "~2.18.1",
