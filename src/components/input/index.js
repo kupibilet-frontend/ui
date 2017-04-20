@@ -35,7 +35,6 @@ const Input = styled.input`
   ${switchTransition}
   transition-property: border-color, box-shadow;
 
-
   &.icon {
     padding-right: 35px;
   }

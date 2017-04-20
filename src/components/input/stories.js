@@ -28,7 +28,6 @@ storiesOf('Input', module)
       <Input
         type={inputDefault.type}
         name={inputDefault.name}
-        disabled={inputDefault.disabled}
         size={sizesSelect()}
         placeholder={placeholder}
       />
@@ -54,7 +53,6 @@ storiesOf('Input', module)
       <Input
         type={inputDefault.type}
         name={inputDefault.name}
-        disabled={inputDefault.disabled}
         success={success}
         size={sizesSelect()}
         placeholder={inputDefault.placeholder}
@@ -69,7 +67,6 @@ storiesOf('Input', module)
       <Input
         type={inputDefault.type}
         name={inputDefault.name}
-        disabled={inputDefault.disabled}
         error={error}
         size={sizesSelect()}
         errorText={errorText}
@@ -82,7 +79,6 @@ storiesOf('Input', module)
       className="icon"
       type={inputDefault.type}
       name={inputDefault.name}
-      disabled={inputDefault.disabled}
       size={sizesSelect()}
       placeholder={inputDefault.placeholder}
     />
