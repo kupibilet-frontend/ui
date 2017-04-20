@@ -13,6 +13,7 @@
     "jest": "jest",
     "flow": "flow",
     "postinstall": "move-bin || true",
+    "prebuild": "rm -rf lib/*",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
     "prepublish": "npm run build --silent"
   },
@@ -31,6 +32,7 @@
     "@kupibilet/icons": "~3.3.0",
     "babel-cli": "~6.24.0",
     "babel-jest": "~19.0.0",
+    "babel-plugin-flow-react-proptypes": "^2.0.0",
     "babel-plugin-transform-react-jsx-source": "~6.22.0",
     "babel-polyfill": "~6.23.0",
     "babel-preset-env": "~1.4.0",
@@ -56,6 +58,7 @@
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
     "antd": "~2.9.1",
+    "lodash": "^4.17.4",
     "polished": "^1.0.4",
     "rc-collapse": "~1.7.0",
     "react-autosuggest": "^9.0.0",

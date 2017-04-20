@@ -1,3 +1,8 @@
+// @flow
+// https://github.com/brigand/babel-plugin-flow-react-proptypes/issues/71#issuecomment-295771268
+
+'no babel-plugin-flow-react-proptypes'
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -6,7 +11,52 @@ import createSectionIterator from 'section-iterator'
 
 import AutocompleteStyled from './styled'
 
-const getFirstSuggestion = ({ suggestions, multiSection }) => {
+import type { controlsGroupProps } from '../controls-group'
+
+type Section = {}
+type Suggestion = {}
+type onChange = (Event, { newValue: string, method: string }) => void
+
+type Props = controlsGroupProps & {
+  forceSuggesedValue: boolean,
+  suggestions: Suggestion[] | Section[],
+
+  onSuggestionsFetchRequested: ({ value: string }) => any,
+  onSuggestionsClearRequested: () => void,
+  onSuggestionSelected: (Event, {
+    suggestion: Object,
+    suggestionValue: string,
+    suggestionIndex: number,
+    sectionIndex: ?number,
+    method: 'click' | 'enter' | 'blur' | 'autoSuggest'
+  }) => void,
+  renderInputComponent: ?({}) => React.Element<*>,
+  getSuggestionValue: (Suggestion) => string,
+  renderSuggestion: ?(Suggestion, {query: string}) => React.Element<*>,
+  inputProps: {
+    value: string,
+    onChange: onChange,
+    // can be proxied from redux-form
+    meta?: {
+      error: string,
+    }
+  },
+  shouldRenderSuggestions: ?string => boolean,
+  alwaysRenderSuggestions: ?boolean,
+  multiSection: ?boolean,
+  renderSectionTitle: ?(Object) => React.Element<*>,
+  getSectionSuggestions: Object => Suggestion[],
+  focusInputOnSuggestionClick: ?boolean,
+  highlightFirstSuggestion: boolean,
+  theme: ?Object,
+  id: ?string,
+}
+
+type State = {
+  suggestions: Suggestion[],
+}
+
+const getFirstSuggestion = ({ suggestions, multiSection }: Props) => {
   let [suggestion] = suggestions
   if (multiSection && suggestion) {
     suggestion = suggestion[0]
@@ -15,8 +65,27 @@ const getFirstSuggestion = ({ suggestions, multiSection }) => {
   return suggestion || null
 }
 
+const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }: Props) => (
+  createSectionIterator({
+    multiSection,
+    data: multiSection ?
+      suggestions.map((section) => getSectionSuggestions(section).length)
+    :
+      suggestions.length,
+  })
+)
 
-export default class Autocomplete extends React.PureComponent {
+export default class Autocomplete extends React.PureComponent<{}, Props, State> {
+  /* eslint-disable react/sort-comp */
+  state = {
+    suggestions: this.props.suggestions || [],
+  }
+
+  sectionIterator: createSectionIterator = getSectionIterator(this.props)
+  autosuggestInstance: Autosuggest = null
+  userAreTyping: ?boolean = true
+  autofilled: ?boolean = false
+
   static propTypes = {
     ...Autosuggest.propTypes,
     forceSuggesedValue: PropTypes.bool,
@@ -30,19 +99,11 @@ export default class Autocomplete extends React.PureComponent {
     forceSuggesedValue: true,
   }
 
-  constructor(props) {
-    const { suggestions = [] } = props
-    super()
-    this.state = { suggestions }
-    this.userAreTyping = true
-
-    this.setSectionIterator(props)
-  }
-
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     const { suggestions, onSuggestionSelected, multiSection } = nextProps
 
     if (suggestions.length === 1 && onSuggestionSelected && this.userAreTyping) {
+      this.autofilled = true
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
     } else {
@@ -50,12 +111,17 @@ export default class Autocomplete extends React.PureComponent {
     }
 
     if (suggestions !== this.props.suggestions || multiSection !== this.props.multiSection) {
-      this.setSectionIterator(nextProps)
+      this.sectionIterator = getSectionIterator(nextProps)
     }
   }
 
-  onChange = (event, payload) => {
+  onChange: onChange = (event, payload) => {
     const { highlightedSectionIndex, highlightedSuggestionIndex } = this.autosuggestInstance.state
+    const userAreTyping = payload.newValue.length >= this.props.inputProps.value.length
+
+    if (this.autofilled && userAreTyping) {
+      return
+    }
 
     let suggestion = null
     if (['down', 'up'].includes(payload.method)) {
@@ -70,26 +136,17 @@ export default class Autocomplete extends React.PureComponent {
       suggestion,
     })
 
-    this.userAreTyping = payload.newValue.length >= this.props.inputProps.value.length
+    this.userAreTyping = userAreTyping
+    this.autofilled = false
   }
 
-  onBlur = (event) => {
+  onBlur = (event: Event) => {
     if (this.props.forceSuggesedValue) {
       this.selectFirstSuggest(event, this.props, 'blur')
     }
   }
 
-  setSectionIterator({ multiSection, suggestions, getSectionSuggestions }) {
-    this.sectionIterator = createSectionIterator({
-      multiSection,
-      data: multiSection ?
-        suggestions.map((section) => getSectionSuggestions(section).length)
-      :
-        suggestions.length,
-    })
-  }
-
-  selectFirstSuggest(event, props, method) {
+  selectFirstSuggest(event: ?Event, props: Props, method: string) {
     const { getSuggestionValue, alwaysRenderSuggestions, multiSection } = props
     const suggestion = getFirstSuggestion(props)
 
