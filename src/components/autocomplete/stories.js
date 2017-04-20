@@ -46,7 +46,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     }
   }
 
-  fetchSuggestions = _throttle((value) => {
+  fetchSuggestions = _throttle(({ value }) => {
     fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
       .then((data) => data.json())
       .then(({ data }) => data.map((suggest) => {
@@ -69,16 +69,16 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
       })
   }, 300)
 
-  requestSuggestions = ({ value }) => {
-    if (value && value.length > 1) {
-      this.fetchSuggestions(value)
-    }
-  }
-
   clearSuggestions = () => {
     this.setState({
       suggestions: [],
     })
+  }
+
+  shouldRenderSuggestions = (value) => {
+    const { suggest } = this.state
+
+    return !suggest && value.trim().length > 1
   }
 
   render() {
@@ -96,7 +96,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
         }}
         highlightFirstSuggestion
         suggestions={suggestions}
-        onSuggestionsFetchRequested={this.requestSuggestions}
+        onSuggestionsFetchRequested={this.fetchSuggestions}
         onSuggestionsClearRequested={this.clearSuggestions}
         onSuggestionSelected={this.onSuggestionSelected}
         renderSuggestion={(suggestion) => (
@@ -105,6 +105,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
         renderInputComponent={(props) => (
           <AirportInput {...props} />
         )}
+        shouldRenderSuggestions={this.shouldRenderSuggestions}
       />
     )
   }
@@ -141,7 +142,9 @@ storiesOf('Autocomplete', module)
       text('value', '')
 
       return (
-        <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
+        <div style={{ width: 244 }}>
+          <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
+        </div>
       )
     },
   )

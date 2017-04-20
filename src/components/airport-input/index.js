@@ -1,20 +1,26 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 
 import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from './styled'
 
-export default class AirportInput extends React.PureComponent {
-  static propTypes = {
-    value: PropTypes.string.isRequired,
-    location: PropTypes.string,
-    spell: PropTypes.string,
-    IATACode: PropTypes.string,
-    onFocus: PropTypes.func,
-    onBlur: PropTypes.func,
-    neighboringInGroup: PropTypes.oneOf(['left', 'right', 'both']),
-  }
+/* eslint-disable react/prop-types */
+type Props = {
+  value: string,
+  location: string,
+  spell: string,
+  IATACode: string,
+  onFocus: (Event) => void,
+  onBlur: (Event) => void,
+  neighboringInGroup: null | 'left' | 'right' | 'both',
+  ref?: (?AirportInput) => void, // eslint-disable-line no-use-before-define
+}
+type State = {
+  focused: boolean,
+}
 
+export default class AirportInput extends React.PureComponent<{}, Props, State> {
+  /* eslint-disable react/sort-comp */
   static defaultProps = {
     location: '',
     spell: '',
@@ -24,16 +30,12 @@ export default class AirportInput extends React.PureComponent {
     neighboringInGroup: null,
   }
 
-  constructor() {
-    super()
-
-    this.input = null
-    this.state = {
-      focused: false,
-    }
+  input: Input = null
+  state = {
+    focused: false,
   }
 
-  onFocus = (e) => {
+  onFocus = (e: Event & {target: HTMLInputElement}) => {
     if (this.props.onFocus) {
       this.props.onFocus(e)
     }
@@ -41,7 +43,7 @@ export default class AirportInput extends React.PureComponent {
     e.target.select()
   }
 
-  onBlur = (e) => {
+  onBlur = (e: Event) => {
     if (this.props.onBlur) {
       this.props.onBlur(e)
     }
@@ -51,6 +53,15 @@ export default class AirportInput extends React.PureComponent {
   focus = () => {
     if (this.input) {
       this.input.focus()
+    }
+  }
+
+  onRef = (ref: ?AirportInput) => {
+    /* eslint-disable react/no-find-dom-node */
+    this.input = ref && ReactDOM.findDOMNode(ref)
+
+    if (this.props.ref) {
+      this.props.ref(ref)
     }
   }
 
@@ -68,10 +79,7 @@ export default class AirportInput extends React.PureComponent {
       <Container neighboringInGroup={neighboringInGroup} focused={focused}>
         <Input
           {...props}
-          ref={(ref) => {
-            /* eslint-disable react/no-find-dom-node */
-            this.input = ref && ReactDOM.findDOMNode(ref)
-          }}
+          ref={this.onRef}
           value={value}
           onFocus={this.onFocus}
           onBlur={this.onBlur}

@@ -2,6 +2,10 @@ import React, { PropTypes } from 'react'
 import { SwapContainer, SwapIcon, FlexContainer } from './styled'
 import Icon from '../icons'
 
+export type controlsGroupProps = {
+  neighboringInGroup: null | 'right' | 'both' | 'left'
+}
+
 class Swap extends React.PureComponent {
   static propTypes = {
     onSwap: PropTypes.func,
