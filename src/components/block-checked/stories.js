@@ -22,7 +22,7 @@ storiesOf('BlockChecked', module)
           name="radio1"
           title="Банковской картой он-лайн"
           price={price}
-          positionIcon="top"
+          iconsPosition="top"
           icons={defaultChecked.topIcon}
         />
         <BlockChecked
@@ -30,7 +30,7 @@ storiesOf('BlockChecked', module)
           name="radio1"
           title={title}
           price={price}
-          positionIcon="bottom"
+          iconsPosition="bottom"
           icons={defaultChecked.bottomIcon}
         />
         <BlockChecked
@@ -38,7 +38,7 @@ storiesOf('BlockChecked', module)
           name="radio1"
           title="Эконом"
           price={price}
-          positionIcon="bottom"
+          iconsPosition="bottom"
           icons={defaultChecked.bottomIcon}
         />
       </div>
