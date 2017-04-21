@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { sizeInput } from '../../utils/input'
+import sizeInput from '../../utils/input'
 import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
 
@@ -22,7 +22,7 @@ Object.keys(SIZE).forEach((element) => {
   arr.push(SIZE[element])
 })
 
-const customNumber = arr.reduce((x, y) => Math.abs(x - y));
+const customNumber = arr.reduce((x, y) => Math.abs(x - y))
 
 const Error = styled.span`
     position: absolute;

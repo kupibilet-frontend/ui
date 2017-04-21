@@ -1,4 +1,4 @@
-export function sizeInput(size, SIZE, customNumber, attr) {
+export default function sizeInput(size, SIZE, customNumber, attr) {
   if (attr === 'height') {
     return `${(SIZE[size] * 2 + customNumber * 2)}`
   }
