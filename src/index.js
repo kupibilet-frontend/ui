@@ -7,7 +7,7 @@ export { default as Checkbox } from './components/checkbox'
 export { default as Icon } from './components/icons'
 export { default as Input } from './components/input'
 export { default as Label } from './components/label'
-export { default as InputSign } from './components/input-sign'
+export { default as InputSign } from './components/badge'
 
 // Base layout particles
 export { default as Box } from './components/box'

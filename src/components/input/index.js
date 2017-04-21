@@ -1,9 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { TYPOGRAPHY, sizeInput } from '../../utils/input'
+import { sizeInput } from '../../utils/input'
 import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
+
+const SIZE = {
+  large: 15,
+  normal: 12,
+  small: 9,
+}
+
+const TYPOGRAPHY = {
+  large: 18,
+  normal: 16,
+  small: 16,
+}
+
+const arr = []
+Object.keys(SIZE).forEach((element) => {
+  arr.push(SIZE[element])
+})
+
+const customNumber = arr.reduce((x, y) => Math.abs(x - y));
 
 const Error = styled.span`
     position: absolute;
@@ -11,7 +30,7 @@ const Error = styled.span`
     left: 0;
     display: ${(props) => (props.error && 'flex')}
     align-items: center;
-    padding: 3px ${sizeInput('normal', 'padding')}px 5px;
+    padding: 3px ${sizeInput('normal', SIZE, customNumber, 'padding')}px 5px;
     ${({ size }) => ((size === 'small') && ' width: 100%')};
     font-size: 14px;
     line-height: 16px;
@@ -23,7 +42,7 @@ const Error = styled.span`
 `
 
 const Input = styled.input`
-  ${({ size }) => sizeInput(size)}
+  ${({ size }) => sizeInput(size, SIZE, customNumber)}
   width: 280px;
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: normal;
@@ -31,11 +50,11 @@ const Input = styled.input`
   border: 1px solid ${color.misc};
   border-radius: 3px;
   background-color: #FFFFFF;
-  cursor: ${(props) => (props.disabled ? 'auto' : 'text')};
+  cursor: text;
   ${switchTransition}
   transition-property: border-color, box-shadow;
 
-  &.icon {
+  &.has-badge {
     padding-right: 35px;
   }
 
@@ -52,7 +71,7 @@ const Input = styled.input`
     border-color: ${color.primary};
     outline-style: none;
 
-    & + .input_line {
+    & + .input-line {
       display: none;
     }
   }
@@ -60,6 +79,7 @@ const Input = styled.input`
   &:disabled {
     background-color: ${color.miscLightest};
     border: 1px solid ${color.miscLightest};
+    cursor: auto;
 
     &:hover {
       border-color: ${color.miscLightest};
@@ -81,7 +101,6 @@ const InputLine = styled.span`
   position: absolute;
   top: 0;
   left: 0;
-  display: ${(props) => ((props.success || props.error) ? 'block' : 'none')}
   height: 100%;
   width: 2px;
   border-radius: 3px 0 0 3px;
@@ -98,7 +117,13 @@ const InputComponent = ({ size, disabled, placeholder, success, error, ...props 
       size={size}
       disabled={disabled}
     />
-    { (error || success) && <InputLine success={success} error={error} className="input_line" />}
+    {
+      (error || success) && <InputLine
+        success={success}
+        error={error}
+        className="input-line"
+      />
+    }
     {
       error && <Error error size={size}>
           { props.errorText }

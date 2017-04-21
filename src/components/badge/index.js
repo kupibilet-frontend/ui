@@ -3,12 +3,15 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
-import { RIGHT } from '../../utils/input-sign'
 
-const Icon = styled.span`
-  position: absolute;
-  top: calc(50% - 9px);
-  right: ${({ size }) => RIGHT[size]}px;
+const RIGHT = {
+  large: 10,
+  normal: 7,
+  small: 7,
+}
+
+const Badge = styled.span`
+  display: inline-block;
   width: 18px;
   height: 18px;
   font-size: 14px;
@@ -26,27 +29,33 @@ const Icon = styled.span`
     color: ${(props) => ((props.name === 'attention') ? color.fail : color.primaryDarkest)};
     border-color: ${(props) => ((props.name === 'attention') ? color.secondaryDarker : color.primary)};
   }
+
+  &.badge_input {
+    position: absolute;
+    top: calc(50% - 9px);
+    right: ${({ size }) => RIGHT[size]}px;
+  }
 `
 
-const InputSign = ({ name, text, size }) => (
-  <Icon
-    className={`sign ${name}`}
+const BadgeComponent = ({ name, text, size }) => (
+  <Badge
+    className={name}
     name={name}
     text={text}
     size={size}
   >
     {text}
-  </Icon>
+  </Badge>
 )
 
-InputSign.defaultProps = {
+BadgeComponent.defaultProps = {
   size: '',
 }
 
-InputSign.propTypes = {
+BadgeComponent.propTypes = {
   name: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   size: PropTypes.string,
 }
 
-export default InputSign
+export default BadgeComponent

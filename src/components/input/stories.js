@@ -76,7 +76,7 @@ storiesOf('Input', module)
   })
   .addWithInfo('icon right', () => (
     <Input
-      className="icon"
+      className="has-badge"
       type={inputDefault.type}
       name={inputDefault.name}
       size={sizesSelect()}
