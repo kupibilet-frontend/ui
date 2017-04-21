@@ -12,7 +12,7 @@ const Label = styled.label`
   }
 }
 `
-const WrapBlock = styled.div`
+const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,11 +36,11 @@ const HiddenInput = styled.input`
   }
 `
 
-const Block = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: ${(props) => (props.block_inline ? 'center' : 'flex-start')};
-  margin-top: ${(props) => (props.block_inline && 6)}px;
+  align-items: ${(props) => (props.bottomLine ? 'center' : 'flex-start')};
+  margin-top: ${(props) => (props.bottomLine && 6)}px;
 
   & .input-check-icon {
     & + .block-icon {
@@ -63,7 +63,7 @@ const Price = styled.span`
   color: ${color.secondaryDarker};
 `
 
-const BlockChecked = ({ htmlFor, name, title, price, positionIcon, icons, ...props }) => (
+const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...props }) => (
   <Label
     htmlFor={htmlFor}
     {...props}
@@ -73,10 +73,10 @@ const BlockChecked = ({ htmlFor, name, title, price, positionIcon, icons, ...pro
       id={htmlFor}
       name={name}
     />
-    <WrapBlock className="input-check">
-      <Block>
+    <InputWrapper className="input-check">
+      <ContentWrapper>
         <Title>{title}</Title>
-        { (icons.length > 0 && positionIcon === 'top') && <Block>
+        { (icons.length > 0 && iconsPosition === 'top') && <ContentWrapper>
           { icons.map((item, index) => (
             <Icon
               className="input-check-icon"
@@ -87,26 +87,26 @@ const BlockChecked = ({ htmlFor, name, title, price, positionIcon, icons, ...pro
             />
             ))
           }
-        </Block>
+        </ContentWrapper>
         }
-      </Block>
-      <Block block_inline>
+      </ContentWrapper>
+      <ContentWrapper bottomLine>
         <Price>{price}</Price>
-        { (icons.length > 0 && positionIcon === 'bottom') && <Block>
-          { icons.map((item, index) => (
+        { (icons.length > 0 && iconsPosition === 'bottom') && <ContentWrapper>
+          { icons.map((item) => (
             <Icon
               className="block-icon"
-              key={item.concat(index)}
+              key={item}
               name={item}
               stroke="background"
               fill="miscDark"
             />
             ))
           }
-        </Block>
+        </ContentWrapper>
         }
-      </Block>
-    </WrapBlock>
+      </ContentWrapper>
+    </InputWrapper>
   </Label>
 )
 
@@ -114,7 +114,7 @@ BlockChecked.defaultProps = {
   title: '',
   price: '',
   icons: [],
-  positionIcon: 'bottom',
+  iconsPosition: 'bottom',
 }
 
 BlockChecked.propTypes = {
@@ -123,7 +123,7 @@ BlockChecked.propTypes = {
   title: PropTypes.string,
   price: PropTypes.string,
   icons: PropTypes.array,
-  positionIcon: PropTypes.string,
+  iconsPosition: PropTypes.string,
 }
 
 export default BlockChecked
