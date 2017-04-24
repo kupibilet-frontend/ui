@@ -28,7 +28,7 @@ const Error = styled.span`
     position: absolute;
     top: calc(100% + 2px);
     left: 0;
-    display: ${(props) => (props.error && 'flex')}
+    display: flex;
     align-items: center;
     padding: 3px ${sizeInput('normal', SIZE, customNumber, 'padding')}px 5px;
     ${({ size }) => ((size === 'small') && ' width: 100%')};
