@@ -5000,6 +5000,10 @@ podda@^1.2.1:
     babel-runtime "^6.11.6"
     immutable "^3.8.1"
 
+polished@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-1.0.4.tgz#eded0fef7d2476465eb1d8e2cd9dd9b00796fbae"
+
 postcss-calc@^5.2.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-5.3.1.tgz#77bae7ca928ad85716e2fda42f261bf7c1d65b5e"
