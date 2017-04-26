@@ -24,6 +24,7 @@ const Header = styled.header`
   padding-bottom: 18px;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `
 const Content = styled.div`
   ${horizontalPadding}
@@ -82,14 +83,12 @@ Panel.propTypes = {
 
 const PanelHeaderWrapper = (props) => (
   <PanelHeader>
-    {React.cloneElement(props.children, { isActive: props.isActive })}
+    {props.children}
     <IconWrapper
-      className="icon"
       name="arrow-down"
-      stroke="primaryDarkest"
-      fill="primaryDarkest"
       size="xxsmall"
       isActive={props.isActive}
+      inheritColor
     />
   </PanelHeader>
 )
@@ -110,9 +109,11 @@ const FilterBox = (props) => (
       {props.headerLeft}
       {props.headerRight}
     </Header>
-    <Content>
-      {props.content}
-    </Content>
+    {!!props.content &&
+      <Content>
+        {props.content}
+      </Content>
+    }
     {props.collapse}
   </Section>
 )
