@@ -109,9 +109,11 @@ const FilterBox = (props) => (
       {props.headerLeft}
       {props.headerRight}
     </Header>
-    <Content>
-      {props.content}
-    </Content>
+    {!!props.content &&
+      <Content>
+        {props.content}
+      </Content>
+    }
     {props.collapse}
   </Section>
 )
