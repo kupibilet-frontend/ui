@@ -55,6 +55,7 @@
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
     "antd": "~2.9.1",
+    "polished": "^1.0.4",
     "rc-collapse": "~1.7.0"
   },
   "peerDependencies": {
