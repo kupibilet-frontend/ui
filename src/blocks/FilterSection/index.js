@@ -24,6 +24,7 @@ const Header = styled.header`
   padding-bottom: 18px;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `
 const Content = styled.div`
   ${horizontalPadding}
