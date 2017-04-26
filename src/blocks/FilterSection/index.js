@@ -82,14 +82,12 @@ Panel.propTypes = {
 
 const PanelHeaderWrapper = (props) => (
   <PanelHeader>
-    {React.cloneElement(props.children, { isActive: props.isActive })}
+    {props.children}
     <IconWrapper
-      className="icon"
       name="arrow-down"
-      stroke="primaryDarkest"
-      fill="primaryDarkest"
       size="xxsmall"
       isActive={props.isActive}
+      inheritColor
     />
   </PanelHeader>
 )
