@@ -50,6 +50,7 @@ export const LabelText = styled.span`
   align-self: flex-start;
   transition-property: color;
   margin-left: 6px;
+  width: 100%;
   ${({ disabled, theme }) => (disabled &&
     `color: ${theme.color.textLight};`
   )}
@@ -63,6 +64,8 @@ export const CheckboxLabel = styled.label`
   line-height: 18px;
   position: relative;
   user-select: none;
+  width: 100%;
+
 
   &:hover .checkbox {
     border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primary)};
