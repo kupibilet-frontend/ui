@@ -37,7 +37,7 @@
     "babel-preset-stage-2": "~6.24.1",
     "classnames": "~2.2.5",
     "eslint-config-kupibilet": "^8.2.3",
-    "flow-bin": "^0.44.2",
+    "flow-bin": "^0.45.0",
     "husky": "~0.13.2",
     "jest": "~19.0.0",
     "moment": "~2.18.1",
