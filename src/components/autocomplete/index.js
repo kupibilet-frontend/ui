@@ -98,6 +98,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     getSectionSuggestions: (section) => section.values,
     forceSuggesedValue: true,
   }
+  /* eslint-enable react/sort-comp */
 
   componentWillReceiveProps(nextProps: Props) {
     const { suggestions, onSuggestionSelected, multiSection } = nextProps
@@ -141,6 +142,10 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
   }
 
   onBlur = (event: Event) => {
+    if (this.props.inputProps.onBlur) {
+      this.props.inputProps.onBlur(event)
+    }
+
     if (this.props.forceSuggesedValue) {
       this.selectFirstSuggest(event, this.props, 'blur')
     }
@@ -174,6 +179,9 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
 
       this.autosuggestInstance.justSelectedSuggestion = true
 
+      // Autosuggest differentiates props updates
+      // caused by arrow-keys navigation from other updates
+      // https://github.com/moroshko/react-autosuggest/blob/master/src/Autosuggest.js#L366
       setTimeout(() => {
         if (this.autosuggestInstance) {
           this.autosuggestInstance.justSelectedSuggestion = false

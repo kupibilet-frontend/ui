@@ -13,7 +13,10 @@ type Props = {
   onFocus: (Event) => void,
   onBlur: (Event) => void,
   neighboringInGroup: null | 'left' | 'right' | 'both',
-  ref?: (?AirportInput) => void, // eslint-disable-line no-use-before-define
+  meta?: {
+    error?: string,
+    touched: boolean,
+  }
 }
 type State = {
   focused: boolean,
@@ -34,6 +37,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
   state = {
     focused: false,
   }
+  /* eslint-enable react/sort-comp */
 
   onFocus = (e: Event & {target: HTMLInputElement}) => {
     if (this.props.onFocus) {
@@ -59,14 +63,12 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
   onRef = (ref: ?AirportInput) => {
     /* eslint-disable react/no-find-dom-node */
     this.input = ref && ReactDOM.findDOMNode(ref)
-
-    if (this.props.ref) {
-      this.props.ref(ref)
-    }
   }
 
   render() {
-    const { neighboringInGroup, value, location, IATACode, ...props } = this.props
+    const { neighboringInGroup, value, location, IATACode, meta = {}, ...props } = this.props
+    const hasError = meta && meta.error
+    const { touched } = meta
     const { focused } = this.state
     let { spell } = this.props
     if (spell.toLowerCase().indexOf(value.toLowerCase()) === 0) {
@@ -76,7 +78,11 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
     }
 
     return (
-      <Container neighboringInGroup={neighboringInGroup} focused={focused}>
+      <Container
+        neighboringInGroup={neighboringInGroup}
+        focused={focused}
+        hasError={touched && hasError}
+      >
         <Input
           {...props}
           ref={this.onRef}
@@ -84,13 +90,13 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           onFocus={this.onFocus}
           onBlur={this.onBlur}
         />
-        <Geo>
+        <Geo className="airport-input__geo">
           <ValuePlaceholder>
             { value }
           </ValuePlaceholder>
-          { value && spell && (
+          { value && spell &&
             <Spell className="airport-input__spell" value={spell} readOnly />
-          ) }
+          }
           { location && (
           <GeoLabel>
                 , { location }

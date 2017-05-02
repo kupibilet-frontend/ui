@@ -13,7 +13,6 @@
     "jest": "jest",
     "flow": "flow",
     "postinstall": "move-bin || true",
-    "prebuild": "rm -rf lib/*",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
     "prepublish": "npm run build --silent"
   },
