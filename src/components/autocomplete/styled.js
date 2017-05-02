@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { shadowSmall } from '../../utils/shadows'
+import { borderSmall } from '../../utils/borders'
 
 export default styled.div`
   .react-autosuggest__container {
@@ -40,7 +41,7 @@ export default styled.div`
     min-width: 320px;
     max-width: 540px;
     ${shadowSmall}
-    border-radius: 3px;
+    ${borderSmall}
     z-index: 2;
   }
   .react-autosuggest__suggestion {

@@ -1,12 +1,22 @@
 import React, { PropTypes } from 'react'
 import { SwapContainer, SwapIcon, FlexContainer } from './styled'
-import Icon from '../icons'
 
 export type controlsGroupProps = {
   neighboringInGroup: null | 'right' | 'both' | 'left'
 }
 
-class Swap extends React.PureComponent {
+const getNeighboringInGroup = (index, length) => {
+  if (index === 0) {
+    return 'right'
+  }
+  if (index === length - 1) {
+    return 'left'
+  }
+
+  return 'both'
+}
+
+class Swap extends React.Component {
   static propTypes = {
     onSwap: PropTypes.func,
   }
@@ -41,9 +51,12 @@ class Swap extends React.PureComponent {
         onMouseOver={this.onHover}
         onMouseLeave={this.onMouseLeave}
       >
-        <SwapIcon className="controls-group__swap">
-          <Icon name="left-right" size="xxsmall" fill={hovered ? 'primary' : 'miscDark'} />
-        </SwapIcon>
+        <SwapIcon
+          className="controls-group__swap"
+          name="left-right"
+          size="xxsmall"
+          fill={hovered ? 'primary' : 'miscDark'}
+        />
       </SwapContainer>
     )
   }
@@ -68,13 +81,7 @@ const ControlsGroup = ({ children, onSwap, ...props }) => {
       {
         React.Children.toArray(controls.map((child, index, { length }) => (
           React.cloneElement(child, {
-            neighboringInGroup: index === 0 && (
-                'right'
-              ) || (index === length - 1) && (
-                'left'
-              ) || (
-                'both'
-              ),
+            neighboringInGroup: getNeighboringInGroup(index, length),
           })
         )))
       }

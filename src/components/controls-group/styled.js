@@ -1,4 +1,17 @@
 import styled from 'styled-components'
+import { transparentize } from 'polished'
+import Icon from '../icons'
+
+const fadeGradient = ({ theme }) => (
+  /* eslint-disable prefer-template */
+  'linear-gradient(' +
+    '180deg, ' +
+    transparentize(1, theme.color.background) + ' 0%, ' +
+    theme.color.background + ' 15%, ' +
+    theme.color.background + ' 85%, ' +
+    transparentize(1, theme.color.background) + ' 100%' +
+  ')'
+)
 
 export const FlexContainer = styled.div`
   display: flex;
@@ -17,11 +30,7 @@ export const SwapContainer = styled.div`
   cursor: pointer;
 `
 
-export const SwapIcon = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+export const SwapIcon = styled(Icon)`
   box-sizing: content-box;
   width: 15px;
   padding: 5px;
@@ -33,7 +42,7 @@ export const SwapIcon = styled.div`
   z-index: 3;
   transfrom: translateZ(0);
 
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 15%, #FFFFFF 85%, rgba(255,255,255,0) 100%);
+  background: ${(props) => fadeGradient(props)};
 
   opacity: 0;
 `

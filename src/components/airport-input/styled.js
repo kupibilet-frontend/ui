@@ -11,8 +11,16 @@ const fontStyle = css`
   color: inherit;
 `
 
+const fadeGradient = ({ theme }) => (
+  /* eslint-disable prefer-template */
+  'linear-gradient(' +
+    '90deg, ' +
+    transparentize(1, theme.color.background) + ' 0%, ' +
+    theme.color.background + ' 100%' +
+  ')'
+)
+
 export const Container = styled.div`
-  ${({ theme }) => theme.font}
   color: ${({ theme }) => theme.color.textDarker};
 
   height: 42px;
@@ -48,12 +56,20 @@ export const Container = styled.div`
     )
   )}
 
-  ${({ focused, theme }) => (
-    focused ? `
-      z-index: 2;
-      border-color: ${theme.color.secondary};
-    ` : ''
-  )}
+  ${({ hasError, focused, theme }) => {
+    if (focused) {
+      return `
+        z-index: 2;
+        border-color: ${theme.color.secondary};
+      `
+    } else if (hasError) {
+      return `
+        border-color: ${theme.color.fail};
+      `
+    }
+
+    return ''
+  }}
 `
 
 export const Input = styled.input`
@@ -88,7 +104,7 @@ export const Input = styled.input`
     color: ${({ theme }) => theme.color.miscDark};
   `}
 
-  &:focus ~ div .airport-input__spell {
+  &:focus ~ .airport-input__geo .airport-input__spell {
     display: block;
   }
 `
@@ -162,6 +178,6 @@ export const Code = styled.div`
     width: 12px;
     height: 100%;
 
-    background: linear-gradient(90deg, ${({ theme }) => transparentize(1, theme.color.background)} 0%, ${({ theme }) => theme.color.background} 100%);
+    background: ${(props) => fadeGradient(props)};
   }
 `

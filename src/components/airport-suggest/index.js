@@ -18,31 +18,25 @@ export default class AirportSuggest extends React.PureComponent {
 
   render() {
     const { value, area, isCity, IATACode, isGeoSuggest } = this.props
+    const isGeoCity = isCity && isGeoSuggest
+    const isAirport = !isCity
 
     return (
       <AirportSuggestContainer>
-        {
-          isCity && isGeoSuggest && (
-            <SuggestIcon>
-              <Icon size="xxsmall" name="location" fill="miscDarker" />
-            </SuggestIcon>
-          ) || (!isCity) && (
-            <SuggestIcon>
-              <Icon size="xxsmall" name="plane" fill="miscDarker" />
-            </SuggestIcon>
-          ) || (
-            null
-          )
+        { isGeoCity && isAirport &&
+          <SuggestIcon>
+            <Icon size="xxsmall" name={isGeoCity ? 'location' : 'plane'} fill="miscDarker" />
+          </SuggestIcon>
         }
         <Geo>
           <Value>
             { value }
           </Value>
-          { area && (
-          <GeoLabel>
-                , { area }
-          </GeoLabel>
-          ) }
+          { area &&
+            <GeoLabel>
+                  , { area }
+            </GeoLabel>
+          }
         </Geo>
         <Code>
           { IATACode }
