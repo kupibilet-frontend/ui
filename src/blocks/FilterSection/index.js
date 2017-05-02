@@ -104,7 +104,7 @@ PanelHeaderWrapper.defaultProps = {
 
 
 const FilterBox = (props) => (
-  <Section>
+  <Section className={props.className}>
     <Header>
       {props.headerLeft}
       {props.headerRight}
@@ -123,10 +123,12 @@ FilterBox.propTypes = {
   headerRight: PropTypes.node.isRequired,
   content: PropTypes.node.isRequired,
   collapse: PropTypes.node,
+  className: PropTypes.string,
 }
 
 FilterBox.defaultProps = {
   collapse: null,
+  className: '',
 }
 
 FilterBox.Collapse = Collapse
