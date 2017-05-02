@@ -35,19 +35,18 @@ export const IconWrap = styled.span`
 
 export const StyledCheckbox = styled.span`
   ${switchTransition};
-  align-self: center;
   transition-property: background, border;
   background: ${(props) => getCheckboxBackground(props, props.theme)};
   border: ${(props) => `1px solid ${getCheckboxBorder(props, props.theme)}`};
   border-radius: 3px;
   height: 18px;
+  min-width: 18px;
   width: 18px;
   line-height: 16px;
 `
 
 export const LabelText = styled.span`
   ${switchTransition};
-  align-self: flex-start;
   transition-property: color;
   margin-left: 6px;
   width: 100%;
@@ -59,7 +58,7 @@ export const LabelText = styled.span`
 export const CheckboxLabel = styled.label`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')}
   display: inline-flex;
-  align-items: center;
+  align-items: start;
   font-size: 16px;
   line-height: 18px;
   position: relative;

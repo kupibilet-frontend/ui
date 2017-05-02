@@ -10,12 +10,16 @@ export default class Checkbox extends PureComponent {
     checked: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
     children: PropTypes.node.isRequired,
+    name: PropTypes.string,
+    className: PropTypes.string,
   }
 
   static defaultProps = {
     disabled: false,
     checked: false,
     onChange() {},
+    name: '',
+    className: '',
   }
 
   render() {
@@ -24,11 +28,12 @@ export default class Checkbox extends PureComponent {
       disabled,
       onChange,
       children,
-      ...props
+      name,
+      className,
     } = this.props
 
     return (
-      <CheckboxLabel disabled={disabled} className={props.className}>
+      <CheckboxLabel disabled={disabled} className={className}>
         <StyledCheckbox
           className="checkbox"
           disabled={disabled}
@@ -44,11 +49,11 @@ export default class Checkbox extends PureComponent {
             )
           }
           <CheckboxInput
-            {...props}
             type="checkbox"
             checked={checked}
             onChange={onChange}
             disabled={disabled}
+            name={name}
           />
         </StyledCheckbox>
 
