@@ -5,7 +5,7 @@ import moment from 'moment'
 import updateKnob from '../../utils/updateKnob'
 
 import DateRange from './index'
-import DayCell from './stories-day-cell-sample'
+import CalendarDay from '../calendar-day'
 
 const getFocusedInput = (defaultFocusedInput = 'none') => {
   const focusedInput = select('focusedInput', {
@@ -43,7 +43,11 @@ storiesOf('DateRange', module)
         onFocusChange={onFocusChange}
         onDatesChange={onDatesChange}
         renderDay={(day) => (
-          <DayCell day={day} />
+          <CalendarDay
+            day={day}
+            isCheap={(+day.format('DDD') % 9 === 0)}
+            cost={Math.floor(day.format('DDD') * 321 % 100) * 100}
+          />
         )}
       />
     )
