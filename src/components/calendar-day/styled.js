@@ -1,7 +1,8 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const AvgCost = styled.div`
+export const Day = styled.span``
+
+export const AvgCost = styled.div`
   font-size: 11px;
   color: ${({ isCheap, theme }) => (isCheap ? theme.color.success : theme.color.textLight)};
   letter-spacing: .5px;
@@ -14,15 +15,3 @@ const AvgCost = styled.div`
     color: ${({ theme }) => theme.color.background}
   }
 `
-
-/* eslint-disable react/prop-types */
-const DayCell = ({ day }) => (
-  <span>
-    { day.format('D') }
-    <AvgCost isCheap={(+day.format('DDD') % 9 === 0)}>
-      { Math.floor(day.format('DDD') * 321 % 100) } 000
-    </AvgCost>
-  </span>
-)
-
-export default DayCell
