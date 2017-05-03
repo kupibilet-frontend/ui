@@ -33,9 +33,9 @@ const Journey = ({ title, price, CityTo, CityFrom, dateTo, dateFrom }) => (
     <Title price={price}>{title}</Title>
     <Description>
       <DescriptionCity>
-        {`${CityTo} → ${CityFrom}`}
+        {`${CityFrom} → ${CityTo}`}
       </DescriptionCity>
-      { dateFrom ? ` • ${dateTo}, ${dateFrom}` : ` • ${dateTo}`}
+      { dateTo ? ` • ${dateFrom}, ${dateTo}` : ` • ${dateFrom}`}
     </Description>
   </JourneyHtml>
 )

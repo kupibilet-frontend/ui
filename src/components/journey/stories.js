@@ -4,10 +4,10 @@ import { text, boolean } from '@kadira/storybook-addon-knobs'
 import Journey from './index'
 
 const defaultDescription = {
-  CityTo: 'Санкт-Петербург',
-  CityFrom: 'Барселона',
-  dateTo: '09 июля туда',
-  dateFrom: '10 июля обратно',
+  CityTo: 'Барселона',
+  CityFrom: 'Санкт-Петербург',
+  dateTo: '10 июля обратно',
+  dateFrom: '09 июля туда',
 }
 
 storiesOf('Journey', module)
@@ -23,10 +23,10 @@ storiesOf('Journey', module)
       <Journey
         price={price}
         title={title}
-        CityTo={CityTo}
         CityFrom={CityFrom}
-        dateTo={dateTo}
         dateFrom={dateFrom}
+        CityTo={CityTo}
+        dateTo={dateTo}
       />
     )
   })
