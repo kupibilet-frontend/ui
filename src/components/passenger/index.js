@@ -81,7 +81,7 @@ const PassengerSpinner = styled.div`
   align-items: center;
 `
 
-const PassengerComponent = ({ title, description, current, disabled }) => (
+const PassengerComponent = ({ title, description, current, disabled, decrement, increment }) => (
   <Passenger>
     <div>
       <Title>{title}</Title>
@@ -90,8 +90,8 @@ const PassengerComponent = ({ title, description, current, disabled }) => (
     <PassengerCurrent>
       <Current>{current}</Current>
       <PassengerSpinner>
-        <Spinner disabled={disabled} />
-        <Spinner className="plus" disabled={disabled} />
+        <Spinner disabled={(disabled === 'disabled-min' || disabled === 'disabled') && true} onClick={decrement} />
+        <Spinner className="plus" disabled={(disabled === 'disabled-max' || disabled === 'disabled') && true} onClick={increment} />
       </PassengerSpinner>
     </PassengerCurrent>
   </Passenger>
@@ -101,14 +101,18 @@ PassengerComponent.defaultProps = {
   title: '',
   description: '',
   current: 0,
-  disabled: false,
+  disabled: '',
+  decrement: null,
+  increment: null,
 }
 
 PassengerComponent.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   current: PropTypes.number,
-  disabled: PropTypes.bool,
+  disabled: PropTypes.string,
+  decrement: PropTypes.func,
+  increment: PropTypes.func,
 }
 
 export default PassengerComponent

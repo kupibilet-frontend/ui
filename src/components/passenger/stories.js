@@ -7,15 +7,21 @@ const defaultDescription = {
   title: 'Взрослые',
   description: 'До 2 лет, без места',
   current: 1,
-  disabled: false,
+  disabled: 'disabled-min',
 }
 
 storiesOf('Passenger', module)
   .addWithInfo('Defalut', () => {
     const title = text('title', defaultDescription.title)
     const description = text('description', defaultDescription.description)
-    const current = number('current', defaultDescription.current)
-    const disabled = boolean('disabled', defaultDescription.disabled)
+    let current = number('current', defaultDescription.current)
+    const disabled = text('disabled', defaultDescription.disabled)
+    const decrement = () => {
+      current -= 1
+    }
+    const increment = () => {
+      current += 1
+    }
 
     return (
       <Passenger
@@ -23,6 +29,8 @@ storiesOf('Passenger', module)
         description={description}
         current={current}
         disabled={disabled}
+        decrement={decrement}
+        increment={increment}
       />
     )
   })
