@@ -107,16 +107,26 @@ const InputLine = styled.span`
   background-color: ${(props) => (props.error ? color.fail : color.success)} 
 `
 
-const InputComponent = ({ size, disabled, placeholder, success, error, ...props }) => (
+const InputComponent = ({ size, disabled, placeholder, success, error, value, ...props }) => (
   <InputWrap {...props}>
-    <Input
-      className={props.className}
-      type={props.type}
-      name={props.name}
-      placeholder={placeholder}
-      size={size}
-      disabled={disabled}
-    />
+    {
+      value ? <Input
+        className={props.className}
+        type={props.type}
+        name={props.name}
+        placeholder={placeholder}
+        size={size}
+        disabled={disabled}
+        value={value}
+      /> : <Input
+        className={props.className}
+        type={props.type}
+        name={props.name}
+        placeholder={placeholder}
+        size={size}
+        disabled={disabled}
+      />
+    }
     {
       (error || success) && <InputLine
         success={success}
@@ -140,6 +150,7 @@ InputComponent.defaultProps = {
   disabled: false,
   placeholder: '',
   className: 'input',
+  value: '',
 }
 
 InputComponent.propTypes = {
@@ -152,6 +163,7 @@ InputComponent.propTypes = {
   size: PropTypes.string,
   disabled: PropTypes.bool,
   placeholder: PropTypes.string,
+  value: PropTypes.string,
 }
 
 export default InputComponent

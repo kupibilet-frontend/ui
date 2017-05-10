@@ -30,6 +30,7 @@ storiesOf('Input', module)
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={placeholder}
+        value=""
       />
     )
   })
@@ -83,3 +84,16 @@ storiesOf('Input', module)
       placeholder={inputDefault.placeholder}
     />
   ))
+  .addWithInfo('value', () => {
+    const value = text('value', 'Только прямые рейсы')
+
+    return (
+      <Input
+        type={inputDefault.type}
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+        value={value}
+      />
+    )
+  })
