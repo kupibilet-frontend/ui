@@ -10,6 +10,11 @@ const Label = styled.label`
   & + & {
     margin-left: 11px;
   }
+
+  &:hover .input-check {
+    border-color: ${color.primary};
+    box-shadow: 0 0 0 1px ${color.primary};
+  }
 }
 `
 const InputWrapper = styled.div`
@@ -23,6 +28,7 @@ const InputWrapper = styled.div`
   border-radius: 3px;
   background-color: #FFFFFF;
   cursor: pointer;
+
   ${switchTransition}
   transition-property: border-color, box-shadow;
 `
