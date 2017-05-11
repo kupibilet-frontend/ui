@@ -72,6 +72,7 @@ const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...pr
       type="radio"
       id={htmlFor}
       name={name}
+      value={props.value}
     />
     <InputWrapper className="input-check">
       <ContentWrapper>
@@ -115,6 +116,7 @@ BlockChecked.defaultProps = {
   price: '',
   icons: [],
   iconsPosition: 'bottom',
+  value: '',
 }
 
 BlockChecked.propTypes = {
@@ -124,6 +126,7 @@ BlockChecked.propTypes = {
   price: PropTypes.string,
   icons: PropTypes.array,
   iconsPosition: PropTypes.string,
+  value: PropTypes.string,
 }
 
 export default BlockChecked

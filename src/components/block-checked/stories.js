@@ -24,6 +24,7 @@ storiesOf('BlockChecked', module)
           price={price}
           iconsPosition="top"
           icons={defaultChecked.topIcon}
+          value="name1"
         />
         <BlockChecked
           htmlFor="name2"
@@ -32,6 +33,7 @@ storiesOf('BlockChecked', module)
           price={price}
           iconsPosition="bottom"
           icons={defaultChecked.bottomIcon}
+          value="name2"
         />
         <BlockChecked
           htmlFor="name3"
@@ -40,6 +42,7 @@ storiesOf('BlockChecked', module)
           price={price}
           iconsPosition="bottom"
           icons={defaultChecked.bottomIcon}
+          value="name3"
         />
       </div>
     )
