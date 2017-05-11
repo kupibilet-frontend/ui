@@ -4,19 +4,6 @@ import Icon from '../icons'
 import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
 
-const Label = styled.label`
-  display: inline-flex;
-
-  & + & {
-    margin-left: 11px;
-  }
-
-  &:hover .input-check {
-    border-color: ${color.primary};
-    box-shadow: 0 0 0 1px ${color.primary};
-  }
-}
-`
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,9 +15,21 @@ const InputWrapper = styled.div`
   border-radius: 3px;
   background-color: #FFFFFF;
   cursor: pointer;
-
-  ${switchTransition}
+  ${switchTransition};
   transition-property: border-color, box-shadow;
+`
+
+const Label = styled.label`
+  display: inline-flex;
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &:hover .input-check {
+    border-color: ${color.primary};
+    box-shadow: 0 0 0 1px ${color.primary};
+  }
 `
 
 const HiddenInput = styled.input`
