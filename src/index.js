@@ -7,7 +7,7 @@ export { default as CalendarDay } from './components/calendar-day'
 export { default as Icon } from './components/icons'
 export { default as Collapse } from './components/collapse'
 export { default as Box } from './components/box'
-export { default as Passenger } from './components/passenger'
+export { default as PassangerPicker } from './components/passenger'
 
 export { default as FilterSection } from './blocks/FilterSection'
 
