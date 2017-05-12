@@ -19,11 +19,8 @@ storiesOf('PassangerPicker', module)
     let value = number('value', defaultDescription.current)
     const isMax = boolean('isMax', defaultDescription.isMax)
     const isMin = boolean('isMin', defaultDescription.isMin)
-    const decrement = () => {
-      updateKnob('value', 'number', value -= 1)
-    }
-    const increment = () => {
-      updateKnob('value', 'number', value += 1)
+    const onChange = (value) => {
+      updateKnob('value', 'number', value)
     }
 
     return (
@@ -33,8 +30,7 @@ storiesOf('PassangerPicker', module)
         value={value}
         isMax={isMax}
         isMin={isMin}
-        decrement={decrement}
-        increment={increment}
+        onChange={onChange}
       />
     )
   })
