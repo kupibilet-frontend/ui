@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 import { StyledButton, StyledButtonText, IconWrap, SIZES } from './styled'
 
@@ -15,7 +16,7 @@ const cloneIconWithSize = (iconNode, size) => (
   })
 )
 
-const Button = ({ children, disabled, size, icon, leftIcon, rightIcon, ...props }) => (
+const Button = ({ children, disabled, size, icon, leftIcon, rightIcon, className, ...props }) => (
   <StyledButton
     {...props}
     size={size}
@@ -23,7 +24,7 @@ const Button = ({ children, disabled, size, icon, leftIcon, rightIcon, ...props 
     hasLeftIcon={Boolean(leftIcon)}
     hasRightIcon={Boolean(rightIcon)}
     disabled={disabled}
-    className="no-global"
+    className={cn('no-global', className)}
   >
     {
       leftIcon ? (
@@ -70,6 +71,7 @@ Button.defaultProps = {
 /* eslint-disable react/require-default-props */
 Button.propTypes = {
   size: PropTypes.oneOf(Object.keys(SIZES)),
+  className: PropTypes.string,
   children: PropTypes.node,
   disabled: PropTypes.bool,
   icon: PropTypes.element,
