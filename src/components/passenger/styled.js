@@ -31,13 +31,9 @@ export const Current = styled.span`
   color: ${({ theme }) => theme.color.textDarker};
 `
 
-export const CountControl = styled.button`
-  ${ button };
+export const CountControl = styled.div`
   position: relative;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
   margin-left: 6px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.primary};
@@ -45,11 +41,19 @@ export const CountControl = styled.button`
   &.control-max {
     opacity: ${(props) => (props.isMax === true ? 0.2 : 1)};
     cursor: ${(props) => (props.isMax === true ? 'default' : 'pointer')};
+
+    &:hover button {
+      box-shadow: ${(props) => (props.isMax === true) && 'none'}
+    }
   }
 
   &.control-min {
     opacity: ${(props) => (props.isMin === true ? 0.2 : 1)};
     cursor: ${(props) => (props.isMin === true ? 'default' : 'pointer')};
+
+    &:hover button {
+      box-shadow: ${(props) => (props.isMin === true) && 'none'}
+    }
   }
 `
 
