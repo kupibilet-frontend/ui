@@ -34,6 +34,7 @@ type Props = {
   values: number[],
   sliderData: SliderData,
   step: number,
+  onChange: Function,
 }
 
 type State = {
@@ -114,12 +115,14 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
       max,
       snap,
       step,
+      onChange,
     } = this.props
 
     return (
       <StyledSlider
         {...this.props}
         onValuesUpdated={this.updateValue}
+        onChange={onChange}
         min={min}
         max={max}
         snap={snap}
