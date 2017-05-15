@@ -1,9 +1,51 @@
-import React, { PropTypes } from 'react'
-import { StyledSlider, StyledHandle, StyledProgressBar, StyledPitComponent } from './styled'
+// @flow
 
+import React, { PureComponent } from 'react'
 
-class Slider extends React.Component {
-  constructor(props) {
+import {
+  StyledSlider,
+  StyledHandle,
+  StyledProgressBar,
+  StyledPitComponent,
+} from './styled'
+
+type SliderData = {
+  [timeStamp: number]: number,
+}
+
+type DefaultProps = {
+  min: number,
+  max: number,
+  pitPoints: string[],
+  snap: boolean,
+  snapPoints: string[],
+  values: [number, number],
+  handle: StyledHandle,
+  progressBar: StyledProgressBar,
+  pitComponent: StyledPitComponent,
+  sliderData: SliderData,
+  step: number,
+}
+
+type Props = {
+  min: number,
+  max: number,
+  snap: bool,
+  values: number[],
+  sliderData: SliderData,
+  step: number,
+}
+
+type State = {
+  values: number[],
+  pitPoints: string[],
+  snapPoints: number[],
+  pitHeight: any,
+  pitWidth: any,
+}
+
+export default class Slider extends PureComponent<DefaultProps, Props, State> {
+  constructor(props: Props) {
     super(props)
 
     this.state = {
@@ -15,7 +57,7 @@ class Slider extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     if (this.props.sliderData !== nextProps.sliderData) {
       this.setState({
         pitPoints: this.getPitPoints(nextProps.sliderData),
@@ -31,9 +73,9 @@ class Slider extends React.Component {
     }
   }
 
-  getPitPoints = (sliderData) => Object.keys(sliderData)
+  getPitPoints = (sliderData: SliderData) => Object.keys(sliderData)
 
-  getSnapPoints = (props) => {
+  getSnapPoints = (props: Props) => {
     const snapPointsArray = [props.values[0]] // чтобы ползунок возвращался на первую позицию
     let i = props.min
     while (i < props.max) {
@@ -42,7 +84,7 @@ class Slider extends React.Component {
     return snapPointsArray
   }
 
-  getPitHeight = (sliderData) => {
+  getPitHeight = (sliderData: SliderData) => {
     const maxHeight = Math.max(...Object.values(sliderData))
     const onePercent = maxHeight / 12
 
@@ -54,7 +96,7 @@ class Slider extends React.Component {
     return pitHeight
   }
 
-  getPitWidth = (sliderData) => {
+  getPitWidth = (sliderData: SliderData) => {
     const width = 100 / Object.keys(sliderData).length
     return width
   }
@@ -109,14 +151,3 @@ Slider.defaultProps = {
   sliderData: {},
   step: 0,
 }
-
-Slider.propTypes = {
-  min: PropTypes.number,
-  max: PropTypes.number,
-  snap: PropTypes.bool,
-  values: PropTypes.arrayOf(PropTypes.number),
-  sliderData: PropTypes.object,
-  step: PropTypes.number,
-}
-
-export default Slider
