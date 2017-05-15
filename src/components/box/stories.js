@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import Box from '../box'
+import Box from './index'
 
 storiesOf('Box', module)
-  .addWithInfo('Box', () => (
+  .addWithInfo('Defalut', () => (
     <Box>
       <p>box content</p>
     </Box>

@@ -1,3 +1,5 @@
+export const time = 0.15
+
 export const switchTransition = `
-  transition: 0.15s ease-out;
+  transition: ${time}s ease-out;
 `

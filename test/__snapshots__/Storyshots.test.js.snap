@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Box Defalut 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    className="hNYgbG"
+  >
+    <p>
+      box content
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Buttons Default 1`] = `
 <div
   className="hMQnet"
@@ -138,7 +152,6 @@ exports[`Storyshots Checkbox default 1`] = `
   <label
     className="eiMGFu"
     disabled={false}
-    onChange={[Function]}
   >
     <span
       checked={false}
@@ -170,7 +183,6 @@ exports[`Storyshots Checkbox disabled 1`] = `
   <label
     className="dsvJUH"
     disabled={true}
-    onChange={[Function]}
   >
     <span
       checked={false}
@@ -195,7 +207,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Collapse Collapse 1`] = `
+exports[`Storyshots Collapse Accordion 1`] = `
 <div
   className="hMQnet"
 >
@@ -207,98 +219,178 @@ exports[`Storyshots Collapse Collapse 1`] = `
     }
   >
     <div
-      className="ktQfja"
+      className="kb-collapse"
+      style={undefined}
     >
       <div
-        style={
-          Object {
-            "padding": "18px",
-          }
-        }
-      >
-        Вылет и прилет
-      </div>
-      <div
-        className="kb-collapse bVOona"
+        className="kb-collapse-item fatUsE"
         style={undefined}
       >
         <div
-          className="kb-collapse-item"
-          style={undefined}
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
         >
-          <div
-            aria-expanded={false}
-            className="kb-collapse-header"
-            onClick={[Function]}
-            role="tab"
-          >
-            <span
-              className="cmxowH"
-            >
-              Вылет
-              <svg
-                className="icon bIAtNQ crzUUw"
-                size="xxsmall"
-                style={undefined}
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </span>
-          </div>
+          Foo
+        </div>
+      </div>
+      <div
+        className="kb-collapse-item fatUsE"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Bar
+        </div>
+      </div>
+      <div
+        className="kb-collapse-item fatUsE"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Mdaaaaa
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Collapse Default 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    style={
+      Object {
+        "width": "252px",
+      }
+    }
+  >
+    <div
+      className="kb-collapse"
+      style={undefined}
+    >
+      <div
+        className="kb-collapse-item fatUsE"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Foo
+        </div>
+      </div>
+      <div
+        className="kb-collapse-item fatUsE"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Bar
+        </div>
+      </div>
+      <div
+        className="kb-collapse-item fatUsE"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Mdaaaaa
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Collapse Default active panel 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    style={
+      Object {
+        "width": "252px",
+      }
+    }
+  >
+    <div
+      className="kb-collapse"
+      style={undefined}
+    >
+      <div
+        className="kb-collapse-item kb-collapse-item-active fatUsE"
+        style={undefined}
+      >
+        <div
+          aria-expanded={true}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Foo
         </div>
         <div
-          className="kb-collapse-item"
-          style={undefined}
+          className="kb-collapse-content kb-collapse-content-active"
+          role="tabpanel"
         >
           <div
-            aria-expanded={false}
-            className="kb-collapse-header"
-            onClick={[Function]}
-            role="tab"
+            className="kb-collapse-content-box"
           >
-            <span
-              className="cmxowH"
-            >
-              Прилет
-              <svg
-                className="icon bIAtNQ crzUUw"
-                size="xxsmall"
-                style={undefined}
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </span>
+            
+              A dog is a type of domesticated animal.
+              Known for its loyalty and faithfulness,
+              it can be found as a welcome guest in many households across the world.
+            
           </div>
         </div>
+      </div>
+      <div
+        className="kb-collapse-item fatUsE"
+        style={undefined}
+      >
         <div
-          className="kb-collapse-item"
-          style={undefined}
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
         >
-          <div
-            aria-expanded={false}
-            className="kb-collapse-header"
-            onClick={[Function]}
-            role="tab"
-          >
-            <span
-              className="cmxowH"
-            >
-              Пересадки
-              <svg
-                className="icon bIAtNQ crzUUw"
-                size="xxsmall"
-                style={undefined}
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </span>
-          </div>
+          Bar
+        </div>
+      </div>
+      <div
+        className="kb-collapse-item fatUsE"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="kb-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Mdaaaaa
         </div>
       </div>
     </div>
@@ -386,6 +478,154 @@ exports[`Storyshots DateRange DateRange 1`] = `
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FilterSection Default 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    style={
+      Object {
+        "width": 252,
+      }
+    }
+  >
+    <section
+      className="hNYgbG"
+    >
+      <header
+        className="jNGgbk"
+      >
+        <div>
+          Пересадки
+        </div>
+        <div>
+          Сбросить
+        </div>
+      </header>
+      <div
+        className="fKdGeq"
+      >
+        <div>
+          <div>
+            <label
+              className="eiMGFu"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox gJhUxw"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text cPjOWw"
+                disabled={false}
+              >
+                Без пересадок
+              </span>
+            </label>
+          </div>
+          <div>
+            <label
+              className="eiMGFu"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox gJhUxw"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text cPjOWw"
+                disabled={false}
+              >
+                1 пересадка
+              </span>
+            </label>
+          </div>
+          <div>
+            <label
+              className="eiMGFu"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox gJhUxw"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text cPjOWw"
+                disabled={false}
+              >
+                2 и более
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        className="kb-collapse"
+        style={undefined}
+      >
+        <div
+          className="kb-collapse-item jczfhm fatUsE"
+          style={undefined}
+        >
+          <div
+            aria-expanded={false}
+            className="kb-collapse-header"
+            onClick={[Function]}
+            role="tab"
+          >
+            <div
+              className="ifoCPw"
+            >
+              <div
+                className="bQdmdY"
+              >
+                Пересадки
+              </div>
+              <svg
+                className="icon kszFRA crzUUw"
+                size="xxsmall"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 `;

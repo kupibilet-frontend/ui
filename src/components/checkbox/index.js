@@ -1,4 +1,5 @@
-import React, { PropTypes, PureComponent } from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import Icon from '../icons'
 import { CheckboxLabel, StyledCheckbox, IconWrap, CheckboxInput, LabelText } from './styled'
 
@@ -9,10 +10,16 @@ export default class Checkbox extends PureComponent {
     checked: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
     children: PropTypes.node.isRequired,
+    name: PropTypes.string,
+    className: PropTypes.string,
   }
 
   static defaultProps = {
     disabled: false,
+    checked: false,
+    onChange() {},
+    name: '',
+    className: '',
   }
 
   render() {
@@ -21,11 +28,12 @@ export default class Checkbox extends PureComponent {
       disabled,
       onChange,
       children,
-      ...props
+      name,
+      className,
     } = this.props
 
     return (
-      <CheckboxLabel disabled={disabled} onChange={onChange}>
+      <CheckboxLabel disabled={disabled} className={className}>
         <StyledCheckbox
           className="checkbox"
           disabled={disabled}
@@ -41,11 +49,11 @@ export default class Checkbox extends PureComponent {
             )
           }
           <CheckboxInput
-            {...props}
             type="checkbox"
             checked={checked}
             onChange={onChange}
             disabled={disabled}
+            name={name}
           />
         </StyledCheckbox>
 

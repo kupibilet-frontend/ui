@@ -2,3 +2,4 @@
 !lib/**/*.js
 !src/**/*.js
 **/*stories*
+flow-typed
