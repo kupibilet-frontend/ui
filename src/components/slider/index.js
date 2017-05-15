@@ -122,7 +122,6 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
       <StyledSlider
         {...this.props}
         onValuesUpdated={this.updateValue}
-        onChange={onChange}
         min={min}
         max={max}
         snap={snap}
