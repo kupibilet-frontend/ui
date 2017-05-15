@@ -16,11 +16,11 @@ storiesOf('PassangerPicker', module)
   .addWithInfo('Defalut', () => {
     const title = text('title', defaultDescription.title)
     const description = text('description', defaultDescription.description)
-    let value = number('value', defaultDescription.current)
+    const value = number('value', defaultDescription.current)
     const isMax = boolean('isMax', defaultDescription.isMax)
     const isMin = boolean('isMin', defaultDescription.isMin)
-    const onChange = (value) => {
-      updateKnob('value', 'number', value)
+    const onChange = (count) => {
+      updateKnob('value', 'number', count)
     }
 
     return (
