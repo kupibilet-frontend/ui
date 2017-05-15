@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Icon from '../icons'
 import styled from 'styled-components'
-import { button } from '../../utils/reset'
+import Icon from '../icons'
 import Button from '../button/index'
 
 const Passenger = styled.div`
@@ -50,20 +49,20 @@ const CountControls = styled.div`
 
 class PassangerPicker extends React.PureComponent {
   decrement = () => {
-    if(!this.props.isMin) {
+    if (!this.props.isMin) {
       this.props.onChange(this.props.value - 1)
     }
   }
 
   increment = () => {
-    if(!this.props.isMax) {
+    if (!this.props.isMax) {
       this.props.onChange(this.props.value + 1)
     }
   }
 
   render() {
-    const { title, description, value, onChange, isMin, isMax } = this.props
-  
+    const { title, description, value, isMin, isMax } = this.props
+
     return (
       <Passenger>
         <div>
@@ -73,26 +72,28 @@ class PassangerPicker extends React.PureComponent {
         <PassangerCount>
           <Current>{value}</Current>
           <CountControls>
-            <ButtonControl 
+            <ButtonControl
               size="normal"
               disabled={isMin}
               onClick={this.decrement}
               icon={
-                <Icon 
+                <Icon
                   name="minus"
                   stroke="background"
                 />
-            } />
+            }
+            />
             <ButtonControl
               size="normal"
               disabled={isMax}
               onClick={this.increment}
               icon={
-                <Icon 
+                <Icon
                   name="plus"
                   stroke="background"
                 />
-            } />
+            }
+            />
           </CountControls>
         </PassangerCount>
       </Passenger>
@@ -103,10 +104,8 @@ class PassangerPicker extends React.PureComponent {
 PassangerPicker.defaultProps = {
   title: '',
   description: '',
-  current: 0,
-  disabled: '',
-  decrement: null,
-  increment: null,
+  value: 0,
+  onChange: null,
   isMax: false,
   isMin: true,
 }
@@ -114,10 +113,8 @@ PassangerPicker.defaultProps = {
 PassangerPicker.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  current: PropTypes.number,
-  disabled: PropTypes.string,
-  decrement: PropTypes.func,
-  increment: PropTypes.func,
+  value: PropTypes.number,
+  onChange: PropTypes.func,
   isMin: PropTypes.bool,
   isMax: PropTypes.bool,
 }
