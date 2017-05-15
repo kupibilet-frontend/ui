@@ -38,7 +38,7 @@ type Props = {
 
 type State = {
   values: number[],
-  pitPoints: string[],
+  pitPoints: number[],
   snapPoints: number[],
   pitHeight: any,
   pitWidth: any,
@@ -55,6 +55,7 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
       pitHeight: this.getPitHeight(props.sliderData),
       pitWidth: this.getPitWidth(props.sliderData),
     }
+    console.log('constrooo')
   }
 
   componentWillReceiveProps(nextProps: Props) {
