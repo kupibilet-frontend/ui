@@ -28,6 +28,14 @@ export const SwapContainer = styled.div`
   width: 0;
 
   cursor: pointer;
+
+  .icon-inherit-color {
+    fill: ${ ({theme}) => theme.color.miscDark }
+  }
+
+  &:hover .icon-inherit-color {
+    fill: ${ ({theme}) => theme.color.primary }
+  }
 `
 
 export const SwapIcon = styled(Icon)`
