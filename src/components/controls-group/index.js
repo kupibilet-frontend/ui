@@ -25,37 +25,18 @@ class Swap extends React.Component {
     onSwap: null,
   }
 
-  state = {
-    hovered: false,
-  }
-
-  onHover = () => {
-    this.setState({
-      hovered: true,
-    })
-  }
-
-  onMouseLeave = () => {
-    this.setState({
-      hovered: false,
-    })
-  }
-
   render() {
     const { onSwap } = this.props
-    const { hovered } = this.state
 
     return (
       <SwapContainer
         onClick={onSwap}
-        onMouseOver={this.onHover}
-        onMouseLeave={this.onMouseLeave}
       >
         <SwapIcon
           className="controls-group__swap"
           name="left-right"
           size="xxsmall"
-          fill={hovered ? 'primary' : 'miscDark'}
+          inheritColor
         />
       </SwapContainer>
     )
