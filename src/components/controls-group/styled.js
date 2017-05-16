@@ -30,11 +30,11 @@ export const SwapContainer = styled.div`
   cursor: pointer;
 
   .icon-inherit-color {
-    fill: ${ ({theme}) => theme.color.miscDark }
+    fill: ${({ theme }) => theme.color.miscDark}
   }
 
   &:hover .icon-inherit-color {
-    fill: ${ ({theme}) => theme.color.primary }
+    fill: ${({ theme }) => theme.color.primary}
   }
 `
 
