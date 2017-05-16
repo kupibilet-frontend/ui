@@ -38,6 +38,7 @@ export const StyledHandle = styled.span`
   top: -6px;
   width: 18px;
   z-index: 1;
+  transform: translate(-50%);
 
   &:hover, &:active {
     background-color: ${({ theme }) => theme.color.primary};
