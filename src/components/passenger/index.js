@@ -61,10 +61,10 @@ class PassangerPicker extends React.PureComponent {
   }
 
   render() {
-    const { title, description, value, isMin, isMax } = this.props
+    const { title, description, value, isMin, isMax, ...props } = this.props
 
     return (
-      <Passenger>
+      <Passenger {...props}>
         <div>
           <Title>{title}</Title>
           <Description>{description}</Description>
