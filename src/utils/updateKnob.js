@@ -20,10 +20,6 @@ addons.register('kupibilet.ru/storybook-addon-update-knob', api => {
   const channel = addons.getChannel()
 
   channel.on('addon:updateKnob:changed', ({ name, type, value }) => {
-    api.setQueryParams({
-      [`knob-${name}`]: Types[type].serialize(value)
-    })
-
     channel.emit('addon:knobs:knobChange', { name, type, value })
   })
 });

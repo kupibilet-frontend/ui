@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import { switchTransition } from '../../utils/transitions'
 import { floatFromTop } from '../../utils/animations'
+import { borderSmall } from '../../utils/borders'
 
 const getCheckboxBackground = (props, theme) => {
   if (props.checked) {
@@ -38,7 +39,7 @@ export const StyledCheckbox = styled.span`
   transition-property: background, border;
   background: ${(props) => getCheckboxBackground(props, props.theme)};
   border: ${(props) => `1px solid ${getCheckboxBorder(props, props.theme)}`};
-  border-radius: 3px;
+  ${borderSmall}
   height: 18px;
   min-width: 18px;
   width: 18px;
