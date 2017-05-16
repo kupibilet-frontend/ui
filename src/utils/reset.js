@@ -7,9 +7,10 @@ export const common = `
   vertical-align: baseline;
 `
 
-export const button = `
+export const control = `
   border: none;
   outline: none;
+  padding: 0;
 `
 
 // For `ol` and `ul`

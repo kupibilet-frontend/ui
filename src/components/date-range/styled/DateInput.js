@@ -96,6 +96,10 @@ export default css`
     color: ${({ theme }) => theme.color.miscDark};
   }
 
+  .DateInput--startDate--error #startDate ~ .DateInput__display-text {
+    border-color: ${({ theme }) => theme.color.fail}
+  }
+
   .DateInput__display-text--focused {
     border-color: ${({ theme }) => theme.color.secondary};
     z-index: 2;
