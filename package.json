@@ -31,6 +31,7 @@
     "@kupibilet/icons": "~3.3.0",
     "babel-cli": "~6.24.0",
     "babel-jest": "~19.0.0",
+    "babel-plugin-flow-react-proptypes": "^2.0.0",
     "babel-plugin-transform-react-jsx-source": "~6.22.0",
     "babel-polyfill": "~6.23.0",
     "babel-preset-env": "~1.4.0",
@@ -50,13 +51,17 @@
     "storyshots": "~3.2.2",
     "styled-components": "~1.4.5",
     "stylelint-config-kupibilet": "^3.1.2",
-    "stylelint-processor-styled-components": "~0.1.0"
+    "stylelint-processor-styled-components": "~0.1.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
     "antd": "~2.9.1",
+    "lodash": "^4.17.4",
     "polished": "^1.0.4",
-    "rc-collapse": "~1.7.0"
+    "rc-collapse": "~1.7.0",
+    "react-autosuggest": "^9.0.0",
+    "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
     "@kupibilet/icons": "^3.3.0",
