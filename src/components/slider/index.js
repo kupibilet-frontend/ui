@@ -78,7 +78,7 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
   getPitPoints = (sliderData: SliderData) => Object.keys(sliderData)
 
   getSnapPoints = (props: Props) => {
-    const snapPointsArray = [props.values[0]] // чтобы ползунок возвращался на первую позицию
+    const snapPointsArray = [props.min] // чтобы ползунок возвращался на первую позицию
     let i = props.min
     while (i < props.max) {
       snapPointsArray.push(i += props.step)
