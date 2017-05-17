@@ -24,7 +24,6 @@ type DefaultProps = {
   progressBar: StyledProgressBar,
   pitComponent: StyledPitComponent,
   sliderData: SliderData,
-  step: number,
 }
 
 type Props = {
@@ -33,7 +32,6 @@ type Props = {
   snap: bool,
   values: number[],
   sliderData: SliderData,
-  step: number,
   onChange: Function,
 }
 
@@ -67,24 +65,11 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
         pitWidth: this.getPitWidth(nextProps.sliderData),
       })
     }
-
-    if (this.props.step !== nextProps.step) {
-      this.setState({
-        snapPoints: this.getSnapPoints(nextProps),
-      })
-    }
   }
 
-  getPitPoints = (sliderData: SliderData) => Object.keys(sliderData)
+  getPitPoints = (sliderData: SliderData) => Object.keys(sliderData).map(Number)
 
-  getSnapPoints = (props: Props) => {
-    const snapPointsArray = [props.min] // чтобы ползунок возвращался на первую позицию
-    let i = props.min
-    while (i < props.max) {
-      snapPointsArray.push(i += props.step)
-    }
-    return snapPointsArray
-  }
+  getSnapPoints = (props: Props) => Object.keys(props.sliderData).map(Number)
 
   getPitHeight = (sliderData: SliderData) => {
     const maxHeight = Math.max(...Object.values(sliderData))
@@ -114,7 +99,6 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
       min,
       max,
       snap,
-      step,
       onChange,
     } = this.props
 
@@ -128,7 +112,6 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
         snapPoints={this.state.snapPoints}
         pitPoints={this.state.pitPoints}
         values={this.state.values}
-        step={step}
         pitComponent={(props) =>
           <StyledPitComponent
             {...props}
@@ -152,5 +135,4 @@ Slider.defaultProps = {
   progressBar: StyledProgressBar,
   pitComponent: StyledPitComponent,
   sliderData: {},
-  step: 0,
 }
