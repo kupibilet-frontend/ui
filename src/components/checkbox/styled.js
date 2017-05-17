@@ -29,21 +29,23 @@ export const fadeInDown = floatFromTop
 export const IconWrap = styled.span`
   animation: ${(props) => (props.checked ? `${fadeInDown} 0.15s` : 'none')};
   display: inline-block;
-  margin: -1px;
   height: 18px;
   width: 18px;
 `
 
 export const StyledCheckbox = styled.span`
+  display: inline-block;
+  flex-shrink: 0;
+
+  height: 18px;
+  width: 18px;
+  line-height: 16px;
+  box-shadow: ${(props) => `inset 0 0 0 1px ${getCheckboxBorder(props, props.theme)}`};
+
   ${switchTransition};
   transition-property: background, border;
   background: ${(props) => getCheckboxBackground(props, props.theme)};
-  border: ${(props) => `1px solid ${getCheckboxBorder(props, props.theme)}`};
   ${borderSmall}
-  height: 18px;
-  min-width: 18px;
-  width: 18px;
-  line-height: 16px;
 `
 
 export const LabelText = styled.span`
