@@ -195,11 +195,11 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
   render() {
     const { suggestions } = this.state
     // Pass neighboringInGroup prop to input
-    const { neighboringInGroup, inputProps, ...props } = this.props
+    const { neighboringInGroup, inputProps, className, ...props } = this.props
     const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
 
     return (
-      <AutocompleteStyled>
+      <AutocompleteStyled className={className}>
         <Autosuggest
           {...props}
           inputProps={{
