@@ -1,11 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import RcDropdown from './index'
+import Dropdown from './index'
 
 storiesOf('Dropdown', module)
   .addWithInfo('Defalut', () => (
-    <RcDropdown
+    <Dropdown
       template={<div><h2>Tethered</h2></div>}
-      button={<button>Toggle Content</button>}
+      button={<div><span>Tethered</span><button>click</button></div>}
     />
   ))
