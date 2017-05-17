@@ -30,7 +30,7 @@
     "@kadira/storybook-addon-options": "~1.0.1",
     "@kupibilet/icons": "~3.3.0",
     "babel-cli": "~6.24.0",
-    "babel-jest": "~19.0.0",
+    "babel-jest": "~20.0.3",
     "babel-plugin-flow-react-proptypes": "^3.2.0",
     "babel-plugin-transform-react-jsx-source": "~6.22.0",
     "babel-polyfill": "~6.23.0",
