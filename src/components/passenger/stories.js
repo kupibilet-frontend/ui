@@ -1,10 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { text, number, boolean } from '@kadira/storybook-addon-knobs'
-import PassangerPicker from './index'
+import PassengerPicker from './index'
 import updateKnob from '../../utils/updateKnob'
 
-const defaultDescription = {
+const defaults = {
   title: 'Взрослые',
   description: 'До 2 лет, без места',
   current: 1,
@@ -12,25 +12,42 @@ const defaultDescription = {
   isMin: true,
 }
 
-storiesOf('PassangerPicker', module)
-  .addWithInfo('Defalut', () => {
-    const title = text('title', defaultDescription.title)
-    const description = text('description', defaultDescription.description)
-    const value = number('value', defaultDescription.current)
-    const isMax = boolean('isMax', defaultDescription.isMax)
-    const isMin = boolean('isMin', defaultDescription.isMin)
-    const onChange = (count) => {
-      updateKnob('value', 'number', count)
-    }
+storiesOf('PassengerPicker', module)
+  .addWithInfo(
+    'Defalut',
+    `
+      redux-form совместимый компонент.\n
+      value в redux-form должно быть объектом вида
 
-    return (
-      <PassangerPicker
-        title={title}
-        description={description}
-        value={value}
-        isMax={isMax}
-        isMin={isMin}
-        onChange={onChange}
-      />
-    )
-  })
+      \tvalue: {
+        \tcounter: number,
+        \tisMin: bool,
+        \tisMax: bool,
+      \t}
+    `,
+    () => {
+      const title = text('title', defaults.title)
+      const description = text('description', defaults.description)
+      const value = number('value', defaults.current)
+      const isMax = boolean('isMax', defaults.isMax)
+      const isMin = boolean('isMin', defaults.isMin)
+      const onChange = ({ counter }) => {
+        updateKnob('value', 'number', counter)
+      }
+
+      return (
+        <PassengerPicker
+          title={title}
+          description={description}
+          input={{
+            value: {
+              counter: value,
+              isMax,
+              isMin,
+            },
+            onChange,
+          }}
+        />
+      )
+    },
+  )
