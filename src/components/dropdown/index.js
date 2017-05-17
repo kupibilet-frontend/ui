@@ -26,14 +26,14 @@ class Dropdown extends React.PureComponent {
   }
 
   componentDidMount() {
-    document.body.addEventListener('click', this.handleClickOutside)
+    document.body.addEventListener('click', this.onClickOutside)
   }
 
   componentWillUnmount() {
-    document.body.removeEventListener('click', this.handleClickOutside)
+    document.body.removeEventListener('click', this.onClickOutside)
   }
 
-  handleClickOutside = (evt) => {
+  onClickOutside = (evt) => {
     const area = findDOMNode(this.area)
 
     if (!area || (area && !area.contains(evt.target))) {
@@ -43,28 +43,25 @@ class Dropdown extends React.PureComponent {
     }
   }
 
+  onClick = () => {
+    this.setState({ isOpen: !this.state.isOpen })
+  }
+
   render() {
     const { children, overlay } = this.props
     const { isOpen } = this.state
-    const dropdownButtonActive = React.cloneElement(children,
-      {
-        active: true,
-        onClick: () => { this.setState({ isOpen: !isOpen }) },
-      },
-    )
-    const dropdownButton = React.cloneElement(children,
-      {
-        active: false,
-        onClick: () => { this.setState({ isOpen: !isOpen }) },
-      },
-    )
+
+    const dropdownButton = React.cloneElement(children, {
+      active: isOpen,
+      onClick: this.onClick,
+    })
 
     return (
       <DropdownWrapper
         {...this.props}
         ref={(name) => { this.area = name }}
       >
-        { isOpen ? dropdownButtonActive : dropdownButton }
+        {dropdownButton}
         {
           isOpen &&
           <DropdownOverlay>
