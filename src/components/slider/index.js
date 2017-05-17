@@ -48,15 +48,15 @@ type State = {
 export default class Slider extends PureComponent<DefaultProps, Props, State> {
   constructor(props: Props) {
     super(props)
+    const { min, max } = props
 
     this.state = {
-      values: props.values || [0],
+      values: props.values || [min, max],
       pitPoints: this.getPitPoints(props.sliderData),
       snapPoints: this.getSnapPoints(props),
       pitHeight: this.getPitHeight(props.sliderData),
       pitWidth: this.getPitWidth(props.sliderData),
     }
-    console.log('constrooo')
   }
 
   componentWillReceiveProps(nextProps: Props) {
