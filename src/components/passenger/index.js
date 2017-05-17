@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// @flow
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Icon from '../icons'
 import Button from '../button/index'
@@ -46,31 +46,82 @@ const CountControls = styled.div`
   display: inline-flex;
   align-items: center;
 `
+type Value = {
+  counter: number,
+  isMax: bool,
+  isMin: bool,
+}
 
-class PassangerPicker extends React.PureComponent {
+type Props = {
+  input: {
+    value: Value,
+    onChange: Value => void,
+  },
+  title: string,
+  description: string,
+}
+type State = {}
+
+/* eslint-disable react/prop-types */
+class PassengerPicker extends Component<{}, Props, State> {
+  /* eslint-disable react/sort-comp */
+  state = {}
+
+  static defaultProps = {
+    title: '',
+    description: '',
+    input: {
+      value: {
+        counter: 0,
+        isMax: false,
+        isMin: true,
+      },
+      onChange: null,
+    },
+  }
+  /* eslint-enable react/sort-comp */
+
+  onChange = (counter: number) => {
+    this.props.input.onChange({
+      ...this.props.input.value,
+      counter,
+    })
+  }
+
   decrement = () => {
-    if (!this.props.isMin) {
-      this.props.onChange(this.props.value - 1)
+    const { isMin, counter } = this.props.input.value
+
+    if (!isMin) {
+      this.onChange(counter - 1)
     }
   }
 
   increment = () => {
-    if (!this.props.isMax) {
-      this.props.onChange(this.props.value + 1)
+    const { isMax, counter } = this.props.input.value
+
+    if (!isMax) {
+      this.onChange(counter + 1)
     }
   }
 
   render() {
-    const { title, description, value, isMin, isMax, ...props } = this.props
+    const { title, description, input: { value }, ...props } = this.props
+    const { counter, isMax, isMin } = value
 
     return (
       <Passenger {...props}>
         <div>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
+          <Title>
+            {title}
+          </Title>
+          <Description>
+            {description}
+          </Description>
         </div>
         <PassangerCount>
-          <Current>{value}</Current>
+          <Current>
+            {counter}
+          </Current>
           <CountControls>
             <ButtonControl
               size="normal"
@@ -81,8 +132,9 @@ class PassangerPicker extends React.PureComponent {
                   name="minus"
                   stroke="background"
                 />
-            }
+              }
             />
+
             <ButtonControl
               size="normal"
               disabled={isMax}
@@ -92,7 +144,7 @@ class PassangerPicker extends React.PureComponent {
                   name="plus"
                   stroke="background"
                 />
-            }
+              }
             />
           </CountControls>
         </PassangerCount>
@@ -101,22 +153,4 @@ class PassangerPicker extends React.PureComponent {
   }
 }
 
-PassangerPicker.defaultProps = {
-  title: '',
-  description: '',
-  value: 0,
-  onChange: null,
-  isMax: false,
-  isMin: true,
-}
-
-PassangerPicker.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  value: PropTypes.number,
-  onChange: PropTypes.func,
-  isMin: PropTypes.bool,
-  isMax: PropTypes.bool,
-}
-
-export default PassangerPicker
+export default PassengerPicker
