@@ -44,30 +44,31 @@ class Dropdown extends React.PureComponent {
   }
 
   render() {
-    const { button, template } = this.props
+    const { children, overlay } = this.props
     const { isOpen } = this.state
-    const dropdownButtonActive = React.cloneElement(button,
+    const dropdownButtonActive = React.cloneElement(children,
       {
-        isClick: true,
+        active: true,
         onClick: () => { this.setState({ isOpen: !isOpen }) },
       },
     )
-    const dropdownButton = React.cloneElement(button,
+    const dropdownButton = React.cloneElement(children,
       {
-        isClick: false,
+        active: false,
         onClick: () => { this.setState({ isOpen: !isOpen }) },
       },
     )
 
     return (
       <DropdownWrapper
+        {...this.props}
         ref={(name) => { this.area = name }}
       >
         { isOpen ? dropdownButtonActive : dropdownButton }
         {
           isOpen &&
           <DropdownOverlay>
-            {template}
+            {overlay}
           </DropdownOverlay>
         }
       </DropdownWrapper>
@@ -76,13 +77,13 @@ class Dropdown extends React.PureComponent {
 }
 
 Dropdown.defaultProps = {
-  button: <button>Toggle</button>,
-  template: <div>Hello World</div>,
+  children: <button>Toggle</button>,
+  overlay: <div>Hello World</div>,
 }
 
 Dropdown.propTypes = {
-  button: PropTypes.object.isRequired,
-  template: PropTypes.object.isRequired,
+  children: PropTypes.object.isRequired,
+  overlay: PropTypes.object.isRequired,
 }
 
 export default Dropdown
