@@ -7,10 +7,9 @@ script:
 
 deploy:
   - provider: npm
-    email: max@kupibilet.ru
+    email: v7rulnik@gmail.com
     skip_cleanup: true
-    api_key:
-      secure: ***REMOVED***
+    api_key: $NPM_TOKEN
     on:
       branch: master
       tags: true
