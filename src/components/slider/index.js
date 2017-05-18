@@ -48,18 +48,20 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     const {
       min = Math.min(...sliderKeys),
       max = Math.max(...sliderKeys),
-      values = [-Infinity, Infinity],
+      values,
     } = props
 
-    const adjustedValues = [
-      Math.max(values[0], min),
-      Math.min(values[1], max),
+    const vals = values || [min, max]
+
+    const safeValues = [
+      Math.max(vals[0], min),
+      Math.min(vals[1], max),
     ]
 
     this.state = {
       min,
       max,
-      values: adjustedValues,
+      values: safeValues,
       pitPoints: this.getPitPoints(props.sliderData),
       snapPoints: this.getSnapPoints(props),
       pitHeight: this.getPitHeight(props.sliderData),
