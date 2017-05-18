@@ -97,11 +97,9 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           { value && spell &&
             <Spell className="airport-input__spell" value={spell} readOnly />
           }
-          { area && (
-          <GeoLabel>
-                , { area }
-          </GeoLabel>
-          ) }
+          { area &&
+            <GeoLabel value={`, ${area}`} readOnly />
+          }
         </Geo>
         <Code>
           { IATACode }

@@ -151,7 +151,8 @@ export const ValuePlaceholder = styled.div`
   font-weight: 600;
 `
 
-export const GeoLabel = styled.div`
+export const GeoLabel = styled.input`
+  ${control}
   ${fontStyle}
 `
 
