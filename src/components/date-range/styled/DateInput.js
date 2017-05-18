@@ -67,11 +67,12 @@ export default css`
   .DateInput__display-text {
     color: ${({ theme }) => theme.color.miscDark};
     font-size: 18px;
-    line-height: 22px;
+    font-weight: 600;
+    line-height: 18px;
     letter-spacing: -.11px;
     white-space: nowrap;
 
-    padding: 10px 18px 11px 10px;
+    padding: 10px 18px 10px 10px;
     border: 2px solid ${({ theme }) => theme.color.primaryLight};
     border-radius:100px 0 0 100px;
     overflow: hidden;
