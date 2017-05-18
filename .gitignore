@@ -4,4 +4,3 @@ lib/*
 
 node_modules/
 storybook-static/
-flow-typed/

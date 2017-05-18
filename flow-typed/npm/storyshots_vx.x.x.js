@@ -1,4 +1,4 @@
-// flow-typed signature: dbd9ebc5a5f2fa92c75b2cea76cac8cc
+// flow-typed signature: 3d67e3d63f2099dec9160b58a80f5748
 // flow-typed version: <<STUB>>/storyshots_v~3.2.2/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

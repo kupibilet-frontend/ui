@@ -1,7 +1,3 @@
-export const shadowSmaller = `
-  box-shadow: 0 2px 4px 0 rgba(98, 112, 139, .6);
-`
-
 export const shadowSmall = `
   box-shadow: 0 3px 9px 0 rgba(98, 112, 139, .7);
 `

@@ -1,4 +1,4 @@
-// flow-typed signature: c882fdb2796e6b7681da376ba6d697a5
+// flow-typed signature: 0f3b75d88fba46049cdf91f3d9a059eb
 // flow-typed version: <<STUB>>/eslint-config-kupibilet_v^8.2.3/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

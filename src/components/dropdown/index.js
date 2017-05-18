@@ -1,10 +1,9 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
-import ClickOutside from 'react-click-outside'
-import { findDOMNode } from 'react-dom'
+import onClickOutside from 'react-onclickoutside'
 import { borderSmall } from '../../utils/borders'
-import { shadowSmaller } from '../../utils/shadows'
+import { shadowLarge } from '../../utils/shadows'
 
 const DropdownWrapper = styled.div`
   position: relative;
@@ -16,9 +15,8 @@ const DropdownOverlay = styled.div`
   top: calc(100% + 3px);
   left: 0;
   padding: 18px 12px;
-  background: ${({theme}) => theme.color.background}
-
-  ${shadowSmaller}
+  background: ${({ theme }) => theme.color.background}
+  ${shadowLarge}
   ${borderSmall}
 `
 
@@ -41,39 +39,35 @@ class Dropdown extends React.PureComponent<void, Props, State> {
     this.setState({ isOpen: !this.state.isOpen })
   }
 
-  onClose = (event: Object) => {
-    const area = findDOMNode(this.area)
-
-    if (!area || (area && !area.contains(event.target))) {
-      this.setState({
-        isOpen: false,
-      })
-    }
-  }
-
-  area: HTMLButtonElement
-
   render() {
     const { children, overlay } = this.props
     const { isOpen } = this.state
 
     const dropdownButton = React.cloneElement(children, {
       active: isOpen,
-      onClick: this.onClick,
+      onClick: isOpen ? () => {} : this.onClick,
+    })
+
+    const ComponentOverlay = () => (
+      <DropdownOverlay>
+        {this.props.overlay}
+      </DropdownOverlay>
+    )
+
+    const Outside = onClickOutside(ComponentOverlay, {
+      handleClickOutside: () => this.onClick,
     })
 
     return (
       <DropdownWrapper
         {...this.props}
-        ref={(name) => { this.area = name }}
       >
         {dropdownButton}
         { isOpen &&
-          <ClickOutside onClickOutside={this.onClose}>
-            <DropdownOverlay>
-              {overlay}
-            </DropdownOverlay>
-          </ClickOutside>
+          <Outside
+            eventTypes="click"
+            overlay={overlay}
+          />
         }
       </DropdownWrapper>
     )

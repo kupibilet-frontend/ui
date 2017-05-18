@@ -1,5 +1,5 @@
-// flow-typed signature: e0384a3ab38cf7ce71e0f20a49980386
-// flow-typed version: e8362066ed/styled-components_v1.4.x/flow_>=v0.25.x
+// flow-typed signature: 8e43d27dae79968dc11e73b131ec77da
+// flow-typed version: d36e170dab/styled-components_v1.4.x/flow_>=v0.25.x
 
 // @flow
 
@@ -17,6 +17,9 @@ declare module 'styled-components' {
   declare type ThemeProviderProps = {
     theme: ((outerTheme: Theme) => void) | Theme
   };
+  declare type Component =
+    | React$Component<*, *, *>
+    | (props: *) => React$Element<*>;
 
   declare class ThemeProvider extends React$Component {
     props: ThemeProviderProps;
@@ -25,10 +28,10 @@ declare module 'styled-components' {
   declare module.exports: {
     injectGlobal: (strings: Array<string>, ...interpolations: Array<Interpolation>) => void,
     css: (strings: Array<string>, ...interpolations: Array<Interpolation>) => Array<Interpolation>,
-    keyframes: (nameGenerator: NameGenerator) => (strings: Array<string>, ...interpolations: Array<Interpolation>) => string,
-    withTheme: () => React$Component<*, ThemeProviderProps, *>,
+    keyframes: (strings: Array<string>, ...interpolations: Array<Interpolation>) => string,
+    withTheme: (component: Component) => React$Component<*, ThemeProviderProps, *>,
     ThemeProvider: typeof ThemeProvider,
-    (baseComponent: React$Component<*, * , *>): StyledComponent,
+    (baseComponent: Component): StyledComponent,
     a: StyledComponent,
     abbr: StyledComponent,
     address: StyledComponent,
