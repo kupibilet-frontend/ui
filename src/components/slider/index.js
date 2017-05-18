@@ -122,6 +122,7 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
             {...props}
             pitWidth={state.pitWidth}
             pitHeight={state.pitHeight}
+            values={state.values}
           />
         }
       />
