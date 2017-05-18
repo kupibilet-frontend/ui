@@ -1,4 +1,4 @@
-// flow-typed signature: 3dfa00c308253e7f0b6b692b8f2cca2c
+// flow-typed signature: bfc5acdb3773f0a63ce44aa5c0d5d32e
 // flow-typed version: <<STUB>>/@kupibilet/icons_v~3.3.0/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,4 @@
-// flow-typed signature: 40051f807c7f5e3f4e2fd0493b0d293a
+// flow-typed signature: 836a7f487cb58eb40a6a76368e32fdbe
 // flow-typed version: <<STUB>>/@kadira/storybook-addon-knobs_v~1.7.1/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

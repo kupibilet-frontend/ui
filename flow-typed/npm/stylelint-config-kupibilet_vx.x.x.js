@@ -1,4 +1,4 @@
-// flow-typed signature: 6ab20d336ddae824c0c9f8232ea19af7
+// flow-typed signature: bd500ee0cfb0d702c2089c47003cbb39
 // flow-typed version: <<STUB>>/stylelint-config-kupibilet_v^3.1.2/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 
