@@ -64,6 +64,11 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
         pitHeight: this.getPitHeight(nextProps.sliderData),
         pitWidth: this.getPitWidth(nextProps.sliderData),
       })
+    } else if (this.props.values !== nextProps.values) {
+      this.setState({
+        // fallback is used when filter is reset
+        values: nextProps.values || [nextProps.min, nextProps.max],
+      })
     }
   }
 
@@ -89,34 +94,26 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
   }
 
   updateValue = (sliderState) => {
+    const { values, min, max } = sliderState
     this.setState({
-      values: sliderState.values,
+      values: values || [min, max], // fallback is used when filter is reset
     })
   }
 
   render() {
-    const {
-      min,
-      max,
-      snap,
-      onChange,
-    } = this.props
-
+    const { props, state } = this
     return (
       <StyledSlider
-        {...this.props}
+        {...props}
         onValuesUpdated={this.updateValue}
-        min={min}
-        max={max}
-        snap={snap}
-        snapPoints={this.state.snapPoints}
-        pitPoints={this.state.pitPoints}
-        values={this.state.values}
+        snapPoints={state.snapPoints}
+        pitPoints={state.pitPoints}
+        values={state.values}
         pitComponent={(props) =>
           <StyledPitComponent
             {...props}
-            pitWidth={this.state.pitWidth}
-            pitHeight={this.state.pitHeight}
+            pitWidth={state.pitWidth}
+            pitHeight={state.pitHeight}
           />
         }
       />
