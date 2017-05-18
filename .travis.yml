@@ -2,6 +2,9 @@ language: node_js
 node_js:
 - stable
 
+before_script:
+  - yarn global add makeshift && makeshift -r registry.npmjs.org
+
 script:
   - npm run build-storybook
 
