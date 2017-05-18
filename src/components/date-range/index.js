@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import cn from 'classnames'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
@@ -85,7 +86,8 @@ class DateRangePickerWrapper extends React.PureComponent {
   }
 
   render() {
-    const { startDate, focusedInput, endDate } = this.props
+    const { startDate, focusedInput, endDate, meta } = this.props
+    const { touched, error } = meta
     const { hoveredDate } = this.state
     const startDatePlaceholder = hoveredDate && focusedInput === consts.START_DATE ? (
       hoveredDate.format(this.getDisplayFormat())
@@ -106,6 +108,7 @@ class DateRangePickerWrapper extends React.PureComponent {
             (focusedInput === consts.START_DATE && !hoveredDate.isSame(startDate, 'day')) ||
             (focusedInput === consts.END_DATE && hoveredDate.isBefore(startDate, 'day'))
           )),
+          'DateInput--startDate--error': touched && error,
           'DateInput--endDate--focused': focusedInput === consts.END_DATE,
           'DateInput--endDate--placeholder': !endDate || (
             hoveredDate &&
@@ -165,6 +168,9 @@ DateRange.propTypes = {
   ...DateRangePicker.propTypes,
   children: PropTypes.node,
   onDatesChange: PropTypes.func.isRequired,
+  meta: PropTypes.shape({
+    error: PropTypes.string,
+  }),
 }
 
 Object.assign(DateRange, consts)

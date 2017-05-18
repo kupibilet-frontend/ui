@@ -1,9 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { borderLarge } from '../../utils/borders'
 
-const Box = styled.div`
+export const styles = css`
   background: ${({ theme }) => (theme.color.background)};
   border: 1px solid ${({ theme }) => (theme.color.miscLighter)};
-  border-radius: 6px;
+  ${borderLarge}
+`
+
+const Box = styled.div`
+  ${styles}
 `
 
 export default Box

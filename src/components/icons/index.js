@@ -1,5 +1,7 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled, { withTheme } from 'styled-components'
+import cn from 'classnames'
 
 import { switchTransition } from '../../utils/transitions'
 import { getThemeColor, ThemingPropTypes } from '../../utils/theme'
@@ -25,9 +27,9 @@ const IconSvg = styled.svg`
 `
 
 // Scoped inside `colorKeys` because `fill` and `stroke` are valid HTML attrs
-const Icon = ({ size, fill, stroke, prefix, name, style, className }) => (
+const Icon = ({ size, fill, stroke, prefix, name, style, className, inheritColor }) => (
   <IconSvg
-    className={className}
+    className={cn(className, { 'icon-inherit-color': inheritColor })}
     size={size}
     colorKeys={{
       fill,
@@ -44,6 +46,7 @@ Icon.defaultProps = {
   size: 'normal',
   fill: null,
   stroke: null,
+  inheritColor: false,
 }
 
 Icon.propTypes = {
@@ -55,6 +58,7 @@ Icon.propTypes = {
   stroke: ThemingPropTypes.themeColor,
   style: PropTypes.object,
   className: PropTypes.string,
+  inheritColor: PropTypes.bool,
 }
 
 

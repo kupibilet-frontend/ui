@@ -1,11 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Autocomplete Small Icon with stroke 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    className="PNRhD"
+  >
+    <div
+      className="react-autosuggest__container"
+    >
+      <div
+        className="eBWnjb"
+      >
+        <input
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-expanded={false}
+          aria-haspopup={false}
+          aria-owns="react-autowhatever-1"
+          autoComplete="off"
+          className="react-autosuggest__input fVzyCO"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Туда"
+          role="combobox"
+          type="text"
+          value=""
+        />
+        <div
+          className="ijgMBS"
+        >
+          <div
+            className="kwubfY"
+          >
+            
+          </div>
+          
+          
+        </div>
+        <div
+          className="kuoAbM"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="react-autosuggest__suggestions-container"
+        id="react-autowhatever-1"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Box Defalut 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    className="hNYgbG"
+  >
+    <p>
+      box content
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Buttons Default 1`] = `
 <div
   className="hMQnet"
 >
   <button
-    className="no-global jOONnJ"
+    className="no-global edhPud"
     disabled={undefined}
     size="normal"
   >
@@ -24,7 +94,7 @@ exports[`Storyshots Buttons Disabled 1`] = `
   className="hMQnet"
 >
   <button
-    className="no-global cBbibc"
+    className="no-global dvibMd"
     disabled={true}
     size="normal"
   >
@@ -43,7 +113,7 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
   className="hMQnet"
 >
   <button
-    className="no-global kKYUSd"
+    className="no-global dIccBA"
     disabled={undefined}
     size="large"
   >
@@ -70,7 +140,7 @@ exports[`Storyshots Buttons Sizes 1`] = `
   className="hMQnet"
 >
   <button
-    className="no-global czvUIu"
+    className="no-global jqzSnG"
     disabled={undefined}
     size="large"
   >
@@ -89,7 +159,7 @@ exports[`Storyshots Buttons With icons 1`] = `
   className="hMQnet"
 >
   <button
-    className="no-global dHnOvN"
+    className="no-global kMFeZO"
     disabled={undefined}
     size="normal"
   >
@@ -138,7 +208,6 @@ exports[`Storyshots Checkbox default 1`] = `
   <label
     className="eiMGFu"
     disabled={false}
-    onChange={[Function]}
   >
     <span
       checked={false}
@@ -170,7 +239,6 @@ exports[`Storyshots Checkbox disabled 1`] = `
   <label
     className="dsvJUH"
     disabled={true}
-    onChange={[Function]}
   >
     <span
       checked={false}
@@ -195,7 +263,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Collapse Collapse 1`] = `
+exports[`Storyshots Collapse Accordion 1`] = `
 <div
   className="hMQnet"
 >
@@ -207,99 +275,264 @@ exports[`Storyshots Collapse Collapse 1`] = `
     }
   >
     <div
-      className="ktQfja"
+      className="rc-collapse"
+      style={undefined}
     >
       <div
-        style={
-          Object {
-            "padding": "18px",
-          }
-        }
-      >
-        Вылет и прилет
-      </div>
-      <div
-        className="kb-collapse bVOona"
+        className="rc-collapse-item CmSa"
         style={undefined}
       >
         <div
-          className="kb-collapse-item"
-          style={undefined}
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
         >
-          <div
-            aria-expanded={false}
-            className="kb-collapse-header"
-            onClick={[Function]}
-            role="tab"
-          >
-            <span
-              className="cmxowH"
-            >
-              Вылет
-              <svg
-                className="icon bIAtNQ crzUUw"
-                size="xxsmall"
-                style={undefined}
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </span>
-          </div>
+          Foo
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item CmSa"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Bar
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item CmSa"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Mdaaaaa
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Collapse Default 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    style={
+      Object {
+        "width": "252px",
+      }
+    }
+  >
+    <div
+      className="rc-collapse"
+      style={undefined}
+    >
+      <div
+        className="rc-collapse-item CmSa"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Foo
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item CmSa"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Bar
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item CmSa"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Mdaaaaa
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Collapse Default active panel 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    style={
+      Object {
+        "width": "252px",
+      }
+    }
+  >
+    <div
+      className="rc-collapse"
+      style={undefined}
+    >
+      <div
+        className="rc-collapse-item rc-collapse-item-active CmSa"
+        style={undefined}
+      >
+        <div
+          aria-expanded={true}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Foo
         </div>
         <div
-          className="kb-collapse-item"
-          style={undefined}
+          className="rc-collapse-content rc-collapse-content-active"
+          role="tabpanel"
         >
           <div
-            aria-expanded={false}
-            className="kb-collapse-header"
-            onClick={[Function]}
-            role="tab"
+            className="rc-collapse-content-box"
           >
-            <span
-              className="cmxowH"
-            >
-              Прилет
-              <svg
-                className="icon bIAtNQ crzUUw"
-                size="xxsmall"
-                style={undefined}
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </span>
+            
+              A dog is a type of domesticated animal.
+              Known for its loyalty and faithfulness,
+              it can be found as a welcome guest in many households across the world.
+            
           </div>
         </div>
+      </div>
+      <div
+        className="rc-collapse-item CmSa"
+        style={undefined}
+      >
         <div
-          className="kb-collapse-item"
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Bar
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item CmSa"
+        style={undefined}
+      >
+        <div
+          aria-expanded={false}
+          className="rc-collapse-header"
+          onClick={[Function]}
+          role="tab"
+        >
+          Mdaaaaa
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ControlsGroup Small Icon with stroke 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    className="igACGM"
+  >
+    <div
+      className="cohwKP"
+    >
+      <input
+        className="fVzyCO"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        readOnly={true}
+        value="Шереметьево"
+      />
+      <div
+        className="ijgMBS"
+      >
+        <div
+          className="kwubfY"
+        >
+          Шереметьево
+        </div>
+        
+        
+      </div>
+      <div
+        className="kuoAbM"
+      >
+        SVO
+      </div>
+    </div>
+    <div
+      className="cUXQRV"
+      onClick={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      <div
+        className="controls-group__swap fPnGim"
+      >
+        <svg
+          className="ixLoe"
+          size="xxsmall"
           style={undefined}
         >
-          <div
-            aria-expanded={false}
-            className="kb-collapse-header"
-            onClick={[Function]}
-            role="tab"
-          >
-            <span
-              className="cmxowH"
-            >
-              Пересадки
-              <svg
-                className="icon bIAtNQ crzUUw"
-                size="xxsmall"
-                style={undefined}
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </span>
-          </div>
+          <use
+            xlinkHref="#kb_left-right"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="chgpbN"
+    >
+      <input
+        className="fVzyCO"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        value="Несуществующий город"
+      />
+      <div
+        className="ijgMBS"
+      >
+        <div
+          className="kwubfY"
+        >
+          Несуществующий город
         </div>
+        
+        
+      </div>
+      <div
+        className="kuoAbM"
+      >
+        
       </div>
     </div>
   </div>
@@ -386,6 +619,154 @@ exports[`Storyshots DateRange DateRange 1`] = `
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FilterSection Default 1`] = `
+<div
+  className="hMQnet"
+>
+  <div
+    style={
+      Object {
+        "width": 252,
+      }
+    }
+  >
+    <section
+      className="hNYgbG"
+    >
+      <header
+        className="jNGgbk"
+      >
+        <div>
+          Пересадки
+        </div>
+        <div>
+          Сбросить
+        </div>
+      </header>
+      <div
+        className="fKdGeq"
+      >
+        <div>
+          <div>
+            <label
+              className="eiMGFu"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox gJhUxw"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text cPjOWw"
+                disabled={false}
+              >
+                Без пересадок
+              </span>
+            </label>
+          </div>
+          <div>
+            <label
+              className="eiMGFu"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox gJhUxw"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text cPjOWw"
+                disabled={false}
+              >
+                1 пересадка
+              </span>
+            </label>
+          </div>
+          <div>
+            <label
+              className="eiMGFu"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox gJhUxw"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text cPjOWw"
+                disabled={false}
+              >
+                2 и более
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        className="rc-collapse"
+        style={undefined}
+      >
+        <div
+          className="rc-collapse-item jczfhm CmSa"
+          style={undefined}
+        >
+          <div
+            aria-expanded={false}
+            className="rc-collapse-header"
+            onClick={[Function]}
+            role="tab"
+          >
+            <div
+              className="ifoCPw"
+            >
+              <div
+                className="bQdmdY"
+              >
+                Пересадки
+              </div>
+              <svg
+                className="icon kszFRA crzUUw"
+                size="xxsmall"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 `;

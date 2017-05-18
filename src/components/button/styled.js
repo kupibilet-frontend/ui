@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-import { button } from '../../utils/reset'
+import { control } from '../../utils/reset'
 import { switchTransition } from '../../utils/transitions'
 
 export const SIZES = {
   small: 12,
   normal: 15,
-  large: 18,
+  large: 21,
 }
 
 const TYPOGRAPHY = {
@@ -15,7 +15,7 @@ const TYPOGRAPHY = {
   large: 20,
 }
 
-const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon) => {
+const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon, neighboringInGroup) => {
   const spacing = SIZES[size]
   const typographyRelatedPadding = ((spacing * 2 - TYPOGRAPHY[size]) / 2).toFixed(1)
   const iconVisualCenterShift = 5 / 4
@@ -24,6 +24,15 @@ const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon) => {
   // Symetric padding around icon-only button for circle effect
   if (icon) {
     return `padding: ${typographyRelatedPadding}px`
+  }
+
+  /* eslint-disable no-param-reassign, no-multi-assign */
+  if (neighboringInGroup === 'both') {
+    hasLeftIcon = hasRightIcon = true
+  } else if (neighboringInGroup === 'left') {
+    hasLeftIcon = true
+  } else if (neighboringInGroup === 'right') {
+    hasRightIcon = true
   }
 
   return `
@@ -40,18 +49,33 @@ const calculateTextPadding = (size, hasLeftIcon, hasRightIcon) => {
   return `0 ${hasRightIcon ? iconPadding : 0}px 0 ${hasLeftIcon ? iconPadding : 0}px`
 }
 
+const calculateBorderRadius = (size, neighboringInGroup) => {
+  if (neighboringInGroup === 'both') {
+    return ''
+  } else if (neighboringInGroup === 'left') {
+    return `border-radius: 0 ${SIZES[size]}px ${SIZES[size]}px 0`
+  } else if (neighboringInGroup === 'right') {
+    return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px`
+  }
+
+  return `border-radius: ${SIZES[size]}px`
+}
+
 export const StyledButton = styled.button`
-  ${button}
+  ${control}
 
   color: ${({ theme }) => theme.color.background};
   background: ${({ theme }) => theme.color.primary};
-  border-radius: ${({ size }) => SIZES[size]}px;
 
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: ${({ size }) => TYPOGRAPHY[size]}px;
 
-  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon }) => (
-    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon)
+  ${({ size, neighboringInGroup }) => (
+    calculateBorderRadius(size, neighboringInGroup)
+  )};
+
+  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup }) => (
+    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup)
   )};
 
   ${switchTransition}
