@@ -1,7 +1,10 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
-import { findDOMNode } from 'react-dom'
 import styled from 'styled-components'
+import ClickOutside from 'react-click-outside'
+import { findDOMNode } from 'react-dom'
+import { borderSmall } from '../../utils/borders'
+import { shadowSmaller } from '../../utils/shadows'
 
 const DropdownWrapper = styled.div`
   position: relative;
@@ -13,39 +16,42 @@ const DropdownOverlay = styled.div`
   top: calc(100% + 3px);
   left: 0;
   padding: 18px 12px;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px 0 rgba(98,112,139,0.6);
+  background: ${({theme}) => theme.color.background}
+
+  ${shadowSmaller}
+  ${borderSmall}
 `
 
-class Dropdown extends React.PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isOpen: false,
-    }
+type Props = {
+  children: React.Element<*>,
+  overlay: React.Element<*>,
+}
+
+type State = {
+  isOpen: bool,
+}
+
+/* eslint-disable react/prop-types */
+class Dropdown extends React.PureComponent<void, Props, State> {
+  state = {
+    isOpen: false,
   }
 
-  componentDidMount() {
-    document.body.addEventListener('click', this.onClickOutside)
+  onClick = () => {
+    this.setState({ isOpen: !this.state.isOpen })
   }
 
-  componentWillUnmount() {
-    document.body.removeEventListener('click', this.onClickOutside)
-  }
-
-  onClickOutside = (evt) => {
+  onClose = (event: Object) => {
     const area = findDOMNode(this.area)
 
-    if (!area || (area && !area.contains(evt.target))) {
+    if (!area || (area && !area.contains(event.target))) {
       this.setState({
         isOpen: false,
       })
     }
   }
 
-  onClick = () => {
-    this.setState({ isOpen: !this.state.isOpen })
-  }
+  area: HTMLButtonElement
 
   render() {
     const { children, overlay } = this.props
@@ -62,25 +68,16 @@ class Dropdown extends React.PureComponent {
         ref={(name) => { this.area = name }}
       >
         {dropdownButton}
-        {
-          isOpen &&
-          <DropdownOverlay>
-            {overlay}
-          </DropdownOverlay>
+        { isOpen &&
+          <ClickOutside onClickOutside={this.onClose}>
+            <DropdownOverlay>
+              {overlay}
+            </DropdownOverlay>
+          </ClickOutside>
         }
       </DropdownWrapper>
     )
   }
-}
-
-Dropdown.defaultProps = {
-  children: <button>Toggle</button>,
-  overlay: <div>Hello World</div>,
-}
-
-Dropdown.propTypes = {
-  children: PropTypes.object.isRequired,
-  overlay: PropTypes.object.isRequired,
 }
 
 export default Dropdown

@@ -60,6 +60,7 @@
     "polished": "^1.0.4",
     "rc-collapse": "~1.7.0",
     "react-autosuggest": "^9.0.0",
+    "react-click-outside": "tj/react-click-outside",
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
