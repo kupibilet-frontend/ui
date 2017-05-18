@@ -57,8 +57,8 @@ export const StyledProgressBar = styled.span`
 `
 
 // eslint-disable-next-line no-confusing-arrow
-const getBarBackgroundColor = ({ children, values, theme }) =>
-  children >= values[0] && children < values[1] ? theme.color.secondaryLight : ''
+const getBarBackgroundColor = ({ theme, children, values, valuesAreDefault }) =>
+  !valuesAreDefault && children >= values[0] && children < values[1] ? theme.color.secondaryLight : ''
 
 export const StyledPitComponent = styled.span`
   background: ${({ theme }) => theme.color.miscLighter};
