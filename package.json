@@ -57,6 +57,8 @@
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
     "lodash": "^4.17.4",
+    "rheostat": "^2.1.0",
+    "storyshots": "^3.2.2",
     "polished": "^1.0.4",
     "rc-collapse": "~1.7.0",
     "react-autosuggest": "^9.0.0",
