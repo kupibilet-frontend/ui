@@ -48,13 +48,18 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     const {
       min = Math.min(...sliderKeys),
       max = Math.max(...sliderKeys),
-      values,
+      values = [-Infinity, Infinity],
     } = props
+
+    const adjustedValues = [
+      Math.max(values[0], min),
+      Math.min(values[1], max),
+    ]
 
     this.state = {
       min,
       max,
-      values: values || [min, max],
+      values: adjustedValues,
       pitPoints: this.getPitPoints(props.sliderData),
       snapPoints: this.getSnapPoints(props),
       pitHeight: this.getPitHeight(props.sliderData),
@@ -108,21 +113,24 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
 
   render() {
     const { state } = this
+    const { min, max, values } = state
+    const valuesAreDefault = values[0] === min && values[1] === max
     return (
       <StyledSlider
         {...this.props}
-        min={state.min}
-        max={state.max}
+        min={min}
+        max={max}
         onValuesUpdated={this.updateValue}
         snapPoints={state.snapPoints}
         pitPoints={state.pitPoints}
-        values={state.values}
+        values={values}
         pitComponent={(props) =>
           <StyledPitComponent
             {...props}
             pitWidth={state.pitWidth}
             pitHeight={state.pitHeight}
-            values={state.values}
+            values={values}
+            valuesAreDefault={valuesAreDefault}
           />
         }
       />
