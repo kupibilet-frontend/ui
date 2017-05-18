@@ -56,11 +56,16 @@ export const StyledProgressBar = styled.span`
   z-index: 0;
 `
 
+// eslint-disable-next-line no-confusing-arrow
+const getBarBackgroundColor = ({ children, values, theme }) =>
+  children >= values[0] && children < values[1] ? theme.color.secondaryLight : ''
+
 export const StyledPitComponent = styled.span`
   background: ${({ theme }) => theme.color.miscLighter};
   font-size: 0;
   bottom: 6px;
   width: ${(props) => props.pitWidth}%;
   height: ${(props) => (props.pitHeight[props.children])}px;
+  background-color: ${getBarBackgroundColor};
   max-height: 12px;
 `
