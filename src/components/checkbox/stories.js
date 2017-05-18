@@ -10,12 +10,14 @@ storiesOf('Checkbox', module)
     const checked = boolean('checked', false)
 
     return (
-      <Checkbox
-        checked={checked}
-        onChange={() => updateKnob('checked', 'boolean', !checked)}
-      >
-        { text('text', 'Авиабилеты') }
-      </Checkbox>
+      <div>
+        <Checkbox
+          checked={checked}
+          onChange={() => updateKnob('checked', 'boolean', !checked)}
+        >
+          { text('text', 'Авиабилеты') }
+        </Checkbox>
+      </div>
     )
   })
   .addWithInfo('disabled', () => {
