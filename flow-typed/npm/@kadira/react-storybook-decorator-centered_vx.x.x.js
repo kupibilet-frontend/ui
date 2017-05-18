@@ -1,4 +1,4 @@
-// flow-typed signature: 95d7f63b10a53f65fcf6f5542301ef6c
+// flow-typed signature: 5a5e5c4bf534990df7625ce45345bd17
 // flow-typed version: <<STUB>>/@kadira/react-storybook-decorator-centered_v~1.1.2/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

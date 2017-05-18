@@ -14,6 +14,7 @@ export { FluidContainer, FluidSection, Aside, SingleFluidSection } from './compo
 
 // Specific behaviour non-visual components
 export { default as Collapse } from './components/collapse'
+export { default as Dropdown } from './components/dropdown'
 
 // Specific controls
 export { default as DateRange } from './components/date-range'

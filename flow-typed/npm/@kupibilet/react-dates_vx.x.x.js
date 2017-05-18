@@ -1,4 +1,4 @@
-// flow-typed signature: 04dc075dcdd426cf0bcf99a1f4030a06
+// flow-typed signature: 81918639bc566609e42c12c97d1cdc75
 // flow-typed version: <<STUB>>/@kupibilet/react-dates_v~8.2.0/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

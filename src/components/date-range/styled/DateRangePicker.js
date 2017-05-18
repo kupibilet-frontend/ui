@@ -10,7 +10,7 @@ export default css`
     z-index: 1;
     background: ${({ theme }) => theme.color.background};
     position: absolute;
-    top: 49px;
+    top: 45px;
   }
 
   .DateRangePicker__picker--direction-left {

@@ -1,4 +1,4 @@
-// flow-typed signature: fb8f3fb0afdfebeb5639e99e8b81dae8
+// flow-typed signature: af2f304fb309617f499ca74b483071c6
 // flow-typed version: <<STUB>>/react-addons-shallow-compare_v~15.5.2/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

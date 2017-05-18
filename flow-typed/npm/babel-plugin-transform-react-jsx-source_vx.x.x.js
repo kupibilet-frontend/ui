@@ -1,4 +1,4 @@
-// flow-typed signature: e1fd380a1871411f30103620fff27eb0
+// flow-typed signature: 1cc3a5b557271517744906966f5bd3ef
 // flow-typed version: <<STUB>>/babel-plugin-transform-react-jsx-source_v~6.22.0/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

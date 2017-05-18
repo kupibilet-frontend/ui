@@ -1,4 +1,4 @@
-// flow-typed signature: 6e7c87af475b9056bed436febf1188a8
+// flow-typed signature: a85972d8d8fb913a796d93129c61e083
 // flow-typed version: <<STUB>>/babel-plugin-flow-react-proptypes_v^2.0.0/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

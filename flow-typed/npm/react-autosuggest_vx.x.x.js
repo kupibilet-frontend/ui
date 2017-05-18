@@ -1,4 +1,4 @@
-// flow-typed signature: 4287aaea5f3b4cfb92804421a08abac4
+// flow-typed signature: 339954524e6557394f1ad5fd9e0eed47
 // flow-typed version: <<STUB>>/react-autosuggest_v^9.0.0/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

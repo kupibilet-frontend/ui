@@ -1,4 +1,4 @@
-// flow-typed signature: b9147ba2847d111aacf226d31764c0da
+// flow-typed signature: 3c7487afc3ce74ab6fccc0c4c290916c
 // flow-typed version: <<STUB>>/babel-preset-stage-2_v~6.24.1/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 
