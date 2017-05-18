@@ -7,7 +7,7 @@ import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from '
 /* eslint-disable react/prop-types */
 type Props = {
   value: string,
-  location: string,
+  area: string,
   spell: string,
   IATACode: string,
   onFocus: (Event) => void,
@@ -25,7 +25,7 @@ type State = {
 export default class AirportInput extends React.PureComponent<{}, Props, State> {
   /* eslint-disable react/sort-comp */
   static defaultProps = {
-    location: '',
+    area: '',
     spell: '',
     IATACode: '',
     onFocus: null,
@@ -66,7 +66,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
   }
 
   render() {
-    const { neighboringInGroup, value, location, IATACode, meta = {}, ...props } = this.props
+    const { neighboringInGroup, value, area, IATACode, meta = {}, ...props } = this.props
     const hasError = meta && meta.error
     const { touched } = meta
     const { focused } = this.state
@@ -97,9 +97,9 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           { value && spell &&
             <Spell className="airport-input__spell" value={spell} readOnly />
           }
-          { location && (
+          { area && (
           <GeoLabel>
-                , { location }
+                , { area }
           </GeoLabel>
           ) }
         </Geo>

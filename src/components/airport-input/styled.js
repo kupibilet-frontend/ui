@@ -112,7 +112,8 @@ export const Input = styled.input`
 export const Geo = styled.div`
   pointer-events: none;
   flex-grow: 1;
-  flex-shrink: 0;
+  overflow: hidden;
+  white-space: nowrap;
 
   display: flex;
   justify-content: flex-start;
@@ -144,6 +145,7 @@ export const Spell = styled.input`
 
 export const ValuePlaceholder = styled.div`
   visibility: hidden;
+  flex-shrink: 0;
 
   ${fontStyle}
   font-weight: 600;
