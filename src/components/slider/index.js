@@ -14,12 +14,9 @@ type SliderData = {
 }
 
 type DefaultProps = {
-  min: number,
-  max: number,
   pitPoints: string[],
   snap: boolean,
   snapPoints: string[],
-  values: [number, number],
   handle: StyledHandle,
   progressBar: StyledProgressBar,
   pitComponent: StyledPitComponent,
@@ -29,7 +26,7 @@ type DefaultProps = {
 type Props = {
   min: number,
   max: number,
-  snap: bool,
+  snap: boolean,
   values: number[],
   sliderData: SliderData,
   onChange: Function,
@@ -46,10 +43,18 @@ type State = {
 export default class Slider extends PureComponent<DefaultProps, Props, State> {
   constructor(props: Props) {
     super(props)
-    const { min, max } = props
+
+    const sliderKeys = Object.keys(props.sliderData).map(Number)
+    const {
+      min = Math.min(...sliderKeys),
+      max = Math.max(...sliderKeys),
+      values,
+    } = props
 
     this.state = {
-      values: props.values || [min, max],
+      min,
+      max,
+      values: values || [min, max],
       pitPoints: this.getPitPoints(props.sliderData),
       snapPoints: this.getSnapPoints(props),
       pitHeight: this.getPitHeight(props.sliderData),
@@ -72,7 +77,10 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     }
   }
 
-  getPitPoints = (sliderData: SliderData) => Object.keys(sliderData).map(Number)
+  getPitPoints = (sliderData: SliderData) => {
+    const arr = Object.keys(sliderData)
+    return arr.slice(0, arr.length - 1).map(Number)
+  }
 
   getSnapPoints = (props: Props) => Object.keys(props.sliderData).map(Number)
 
@@ -88,10 +96,8 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     return pitHeight
   }
 
-  getPitWidth = (sliderData: SliderData) => {
-    const width = 100 / Object.keys(sliderData).length
-    return width
-  }
+  getPitWidth = (sliderData: SliderData) =>
+    100 / (Object.keys(sliderData).length - 1)
 
   updateValue = (sliderState) => {
     const { values, min, max } = sliderState
@@ -101,10 +107,12 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
   }
 
   render() {
-    const { props, state } = this
+    const { state } = this
     return (
       <StyledSlider
-        {...props}
+        {...this.props}
+        min={state.min}
+        max={state.max}
         onValuesUpdated={this.updateValue}
         snapPoints={state.snapPoints}
         pitPoints={state.pitPoints}
@@ -122,12 +130,9 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
 }
 
 Slider.defaultProps = {
-  min: 0,
-  max: 100,
   pitPoints: [],
   snap: true,
   snapPoints: [],
-  values: [0, 100],
   handle: StyledHandle,
   progressBar: StyledProgressBar,
   pitComponent: StyledPitComponent,
