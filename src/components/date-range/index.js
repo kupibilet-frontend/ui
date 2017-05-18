@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import cn from 'classnames'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
