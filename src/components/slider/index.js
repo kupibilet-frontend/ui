@@ -53,8 +53,10 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
       values,
     } = props
 
+    // values can be an empty string
     const vals = values || [min, max]
 
+    // clamp values
     const safeValues = [
       Math.max(vals[0], min),
       Math.min(vals[1], max),
@@ -79,9 +81,10 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
         pitWidth: this.getPitWidth(nextProps.sliderData),
       })
     } else if (this.props.values !== nextProps.values) {
+      const { min, max } = this.state
       this.setState({
         // fallback is used when filter is reset
-        values: nextProps.values || [nextProps.min, nextProps.max],
+        values: nextProps.values || [min, max],
       })
     }
   }
