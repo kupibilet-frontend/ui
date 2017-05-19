@@ -2,11 +2,12 @@
 
 import React, { PureComponent } from 'react'
 
+import RangeBar from './RangeBar'
+
 import {
   StyledSlider,
   StyledHandle,
   StyledProgressBar,
-  StyledPitComponent,
 } from './styled'
 
 type SliderData = {
@@ -19,7 +20,7 @@ type DefaultProps = {
   snapPoints: string[],
   handle: StyledHandle,
   progressBar: StyledProgressBar,
-  pitComponent: StyledPitComponent,
+  pitComponent: RangeBar,
   sliderData: SliderData,
 }
 
@@ -127,7 +128,7 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
         pitPoints={state.pitPoints}
         values={values}
         pitComponent={(props) =>
-          <StyledPitComponent
+          <RangeBar
             {...props}
             pitWidth={state.pitWidth}
             pitHeight={state.pitHeight}
@@ -146,6 +147,6 @@ Slider.defaultProps = {
   snapPoints: [],
   handle: StyledHandle,
   progressBar: StyledProgressBar,
-  pitComponent: StyledPitComponent,
+  pitComponent: RangeBar,
   sliderData: {},
 }
