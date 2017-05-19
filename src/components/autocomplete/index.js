@@ -101,9 +101,13 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
   /* eslint-enable react/sort-comp */
 
   componentWillReceiveProps(nextProps: Props) {
-    const { suggestions, onSuggestionSelected, multiSection } = nextProps
+    const { suggestions, onSuggestionSelected, multiSection, inputProps } = nextProps
+    const { active } = inputProps.meta
 
-    if (suggestions.length === 1 && onSuggestionSelected && this.userAreTyping) {
+    if (
+      (suggestions.length === 1 && onSuggestionSelected && this.userAreTyping) ||
+      (suggestions.length && !active)
+    ) {
       this.autofilled = true
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
@@ -164,7 +168,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
       this.autosuggestInstance.closeSuggestions()
     }
 
-    if (suggestion && (this.userAreTyping || method === 'blur')) {
+    if (suggestion && (this.userAreTyping || ['blur', 'autoSuggest'].includes(method))) {
       const newValue = getSuggestionValue(suggestion)
 
       this.autosuggestInstance.maybeCallOnChange(event, newValue, method)

@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import onClickOutside from 'react-onclickoutside'
 import { borderSmall } from '../../utils/borders'
-import { shadowLarge } from '../../utils/shadows'
+import { shadowSmall } from '../../utils/shadows'
 
 const DropdownWrapper = styled.div`
   position: relative;
@@ -16,36 +16,36 @@ const DropdownOverlay = styled.div`
   left: 0;
   padding: 18px 12px;
   background: ${({ theme }) => theme.color.background}
-  ${shadowLarge}
+  ${shadowSmall}
   ${borderSmall}
 `
 
 type Props = {
+  isOpen: bool,
+  onToggle: (Event, bool) => void,
   children: React.Element<*>,
   overlay: React.Element<*>,
 }
 
-type State = {
-  isOpen: bool,
-}
-
 /* eslint-disable react/prop-types */
-class Dropdown extends React.PureComponent<void, Props, State> {
-  state = {
+class Dropdown extends React.PureComponent<{}, Props, void> {
+  static defaultProps = {
     isOpen: false,
   }
 
-  onClick = () => {
-    this.setState({ isOpen: !this.state.isOpen })
+  onShow = (event: Event) => {
+    this.props.onToggle(event, true)
+  }
+
+  onHide = (event: Event) => {
+    this.props.onToggle(event, false)
   }
 
   render() {
-    const { children, overlay } = this.props
-    const { isOpen } = this.state
+    const { children, overlay, isOpen } = this.props
 
     const dropdownButton = React.cloneElement(children, {
-      active: isOpen,
-      onClick: isOpen ? () => {} : this.onClick,
+      onClick: this.onShow,
     })
 
     const ComponentOverlay = () => (
@@ -55,7 +55,7 @@ class Dropdown extends React.PureComponent<void, Props, State> {
     )
 
     const Outside = onClickOutside(ComponentOverlay, {
-      handleClickOutside: () => this.onClick,
+      handleClickOutside: () => this.onHide,
     })
 
     return (

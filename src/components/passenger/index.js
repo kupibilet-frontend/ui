@@ -88,16 +88,18 @@ class PassengerPicker extends Component<{}, Props, State> {
     })
   }
 
-  decrement = () => {
+  decrement = (event: Event) => {
     const { isMin, counter } = this.props.input.value
+    event.preventDefault()
 
     if (!isMin) {
       this.onChange(counter - 1)
     }
   }
 
-  increment = () => {
+  increment = (event: Event) => {
     const { isMax, counter } = this.props.input.value
+    event.preventDefault()
 
     if (!isMax) {
       this.onChange(counter + 1)
