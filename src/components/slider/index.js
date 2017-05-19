@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
+import { initial } from 'lodash'
 
 import RangeBar from './RangeBar'
 
@@ -85,15 +86,15 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     }
   }
 
-  getPitPoints = (sliderData: SliderData) => {
-    const arr = Object.keys(sliderData)
-    return arr.slice(0, arr.length - 1).map(Number)
-  }
+  getPitPoints = (sliderData: SliderData) =>
+    initial(Object.keys(sliderData)).map(Number)
 
-  getSnapPoints = (props: Props) => Object.keys(props.sliderData).map(Number)
+  getSnapPoints = (props: Props) =>
+    Object.keys(props.sliderData).map(Number)
 
   getPitHeight = (sliderData: SliderData) => {
-    const maxHeight = Math.max(...Object.values(sliderData))
+    const initialVals = initial(Object.values(sliderData))
+    const maxHeight = Math.max(...initialVals)
     const onePercent = maxHeight / 12
 
     const pitHeight = Object.keys(sliderData).reduce((result, item) => {
