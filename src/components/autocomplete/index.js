@@ -150,8 +150,10 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
       this.props.inputProps.onBlur(event)
     }
 
-    if (this.props.forceSuggesedValue) {
-      this.selectFirstSuggest(event, this.props, 'blur')
+    if (!this.autosuggestInstance || !this.autosuggestInstance.justSelectedSuggestion) {
+      if (this.props.forceSuggesedValue) {
+        this.selectFirstSuggest(event, this.props, 'blur')
+      }
     }
   }
 
