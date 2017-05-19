@@ -67,7 +67,6 @@ export default css`
   .DateInput__display-text {
     color: ${({ theme }) => theme.color.miscDark};
     font-size: 18px;
-    font-weight: 600;
     line-height: 18px;
     letter-spacing: -.11px;
     white-space: nowrap;
@@ -99,6 +98,11 @@ export default css`
 
   .DateInput--startDate--error #startDate ~ .DateInput__display-text {
     border-color: ${({ theme }) => theme.color.fail}
+  }
+
+  // Not a placeholder state
+  .DateInput__display-text--has-input {
+    font-weight: 600;
   }
 
   .DateInput__display-text--focused {
