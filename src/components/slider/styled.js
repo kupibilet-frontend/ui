@@ -1,5 +1,6 @@
 import Rheostat from 'rheostat'
 import styled from 'styled-components'
+import { inRange } from 'lodash'
 
 import { switchTransition } from '../../utils/transitions'
 
@@ -38,7 +39,7 @@ export const StyledHandle = styled.span`
   top: -6px;
   width: 18px;
   z-index: 1;
-  transform: translate(-50%);
+  transform: translateX(-50%);
 
   &:hover, &:active {
     background-color: ${({ theme }) => theme.color.primary};
@@ -56,16 +57,19 @@ export const StyledProgressBar = styled.span`
   z-index: 0;
 `
 
+export const BAR_OFFSET = 6
+
 // eslint-disable-next-line no-confusing-arrow
 const getBarBackgroundColor = ({ theme, children, values, valuesAreDefault }) =>
-  !valuesAreDefault && children >= values[0] && children < values[1] ? theme.color.secondaryLight : ''
+  !valuesAreDefault && inRange(children, ...values) ? theme.color.secondaryLight : ''
 
 export const StyledPitComponent = styled.span`
   background: ${({ theme }) => theme.color.miscLighter};
   font-size: 0;
+  z-index: -1;
   bottom: 6px;
-  width: ${(props) => props.pitWidth}%;
-  height: ${(props) => (props.pitHeight[props.children])}px;
+  transform: translateY(${BAR_OFFSET}px);
+  width: ${({ pitWidth }) => pitWidth}%;
+  height: ${({ pitHeight, children }) => (pitHeight[children] + BAR_OFFSET)}px;
   background-color: ${getBarBackgroundColor};
-  max-height: 12px;
 `
