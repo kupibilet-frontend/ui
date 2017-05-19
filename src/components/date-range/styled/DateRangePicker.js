@@ -7,7 +7,7 @@ export default css`
   }
 
   .DateRangePicker__picker {
-    z-index: 1;
+    z-index: 10;
     background: ${({ theme }) => theme.color.background};
     position: absolute;
     top: 45px;
