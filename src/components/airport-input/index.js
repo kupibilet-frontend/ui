@@ -95,10 +95,10 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
             { value }
           </ValuePlaceholder>
           { value && spell &&
-            <Spell className="airport-input__spell" value={spell} readOnly />
+            <Spell className="airport-input__spell" value={spell} tabIndex="-1" readOnly />
           }
           { area &&
-            <GeoLabel value={`, ${area}`} readOnly />
+            <GeoLabel value={`, ${area}`} tabIndex="-1" readOnly />
           }
         </Geo>
         <Code>
