@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react'
-import { initial } from 'lodash'
+import initial from 'lodash/initial'
 
 import RangeBar from './RangeBar'
 

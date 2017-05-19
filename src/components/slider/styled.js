@@ -1,6 +1,6 @@
 import Rheostat from 'rheostat'
 import styled from 'styled-components'
-import { inRange } from 'lodash'
+import inRange from 'lodash/inRange'
 
 import { switchTransition } from '../../utils/transitions'
 
@@ -19,6 +19,7 @@ const getHandleColor = (props) => {
 
 export const StyledSlider = styled(Rheostat)`
   width: 100%;
+  z-index: 1;
 
   .rheostat-background {
     background-color: ${({ theme }) => theme.color.miscLight};
@@ -38,7 +39,7 @@ export const StyledHandle = styled.span`
   height: 18px;
   top: -6px;
   width: 18px;
-  z-index: 1;
+  z-index: 2;
   transform: translateX(-50%);
 
   &:hover, &:active {
@@ -54,7 +55,7 @@ export const StyledProgressBar = styled.span`
   position: absolute;
   height: 6px;
   top: 0;
-  z-index: 0;
+  z-index: 1;
 `
 
 export const BAR_OFFSET = 6
@@ -66,7 +67,6 @@ const getBarBackgroundColor = ({ theme, children, values, valuesAreDefault }) =>
 export const StyledPitComponent = styled.span`
   background: ${({ theme }) => theme.color.miscLighter};
   font-size: 0;
-  z-index: -1;
   bottom: 6px;
   transform: translateY(${BAR_OFFSET}px);
   width: ${({ pitWidth }) => pitWidth}%;
