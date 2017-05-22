@@ -87,10 +87,11 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           {...props}
           ref={this.onRef}
           value={value}
+          neighboringInGroup={neighboringInGroup}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
         />
-        <Geo className="airport-input__geo">
+        <Geo className="airport-input__geo" neighboringInGroup={neighboringInGroup}>
           <ValuePlaceholder>
             { value }
           </ValuePlaceholder>
@@ -101,7 +102,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
             <GeoLabel value={`, ${area}`} tabIndex="-1" readOnly />
           }
         </Geo>
-        <Code>
+        <Code neighboringInGroup={neighboringInGroup}>
           { IATACode }
         </Code>
       </Container>
