@@ -4,10 +4,33 @@ import cn from 'classnames'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
 import * as consts from '@kupibilet/react-dates/constants'
-import StyledDateRange from './styled'
+import StyledDateRange, { DateInput, DateInputValue, DateInputDayOfWeek } from './styled'
 
 import Button from '../button'
 import Icon from '../icons'
+
+const renderInputText = (day) => (
+  <DateInput>
+    <DateInputValue>
+      { day.format('DD') }
+      &nbsp;
+      { day.format('MMM').substr(0, 3) }
+    </DateInputValue>
+    <DateInputDayOfWeek>
+      { day.format('dd') }
+    </DateInputDayOfWeek>
+  </DateInput>
+)
+
+const renderHoverPlaceholder = (day) => (
+  <DateInput>
+    <DateInputValue>
+      { day.format('DD') }
+      &nbsp;
+      { day.format('MMM').substr(0, 3) }
+    </DateInputValue>
+  </DateInput>
+)
 
 const CalendarNav = ({ direction }) => (
   <Button
@@ -86,16 +109,16 @@ class DateRangePickerWrapper extends React.PureComponent {
   }
 
   render() {
-    const { startDate, focusedInput, endDate, meta } = this.props
+    const { startDate, focusedInput, endDate, meta = {} } = this.props
     const { touched, error } = meta
     const { hoveredDate } = this.state
     const startDatePlaceholder = hoveredDate && focusedInput === consts.START_DATE ? (
-      hoveredDate.format(this.getDisplayFormat())
+      renderHoverPlaceholder(hoveredDate, this.getDisplayFormat())
     ) : (
       this.props.startDatePlaceholderText
     )
     const endDatePlaceholder = hoveredDate && focusedInput === consts.END_DATE && (!startDate || hoveredDate.isAfter(startDate, 'day')) ? (
-      hoveredDate.format(this.getDisplayFormat())
+      renderHoverPlaceholder(hoveredDate, this.getDisplayFormat())
     ) : (
       this.props.endDatePlaceholderText
     )
@@ -162,6 +185,7 @@ DateRange.defaultProps = {
     dayPickerWidth: 340,
     inputWidth: 109,
   },
+  renderInputText,
 }
 
 DateRange.propTypes = {
@@ -170,6 +194,7 @@ DateRange.propTypes = {
   onDatesChange: PropTypes.func.isRequired,
   meta: PropTypes.shape({
     error: PropTypes.string,
+    touched: PropTypes.bool,
   }),
 }
 

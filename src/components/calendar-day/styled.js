@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
-export const Day = styled.span``
+export const Day = styled.span`
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 20px;
+`
 
 export const AvgCost = styled.div`
   font-size: 11px;

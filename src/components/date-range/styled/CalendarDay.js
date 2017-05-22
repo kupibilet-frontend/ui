@@ -7,15 +7,17 @@ export default css`
 
     color: ${({ theme }) => theme.color.textDarkest};
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1;
     letter-spacing: -.21px;
     text-align: center;
     cursor: pointer;
 
-    padding: 2px 0 0;
+    padding: 0 0 2px 0;
     box-sizing: border-box;
     width: 42px;
     height: 36px;
+
+    vertical-align: middle;
   }
 
   .DateInput--startDate--focused .CalendarDay:hover,

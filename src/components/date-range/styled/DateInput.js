@@ -71,9 +71,9 @@ export default css`
     letter-spacing: -.11px;
     white-space: nowrap;
 
-    padding: 10px 18px 10px 10px;
+    padding: 10px 10px 10px 16px;
     border: 2px solid ${({ theme }) => theme.color.primaryLight};
-    border-radius:100px 0 0 100px;
+    border-radius: 100px 0 0 100px;
     overflow: hidden;
 
     // Input borders overlaying
@@ -83,8 +83,9 @@ export default css`
   }
 
   .DateInput ~ .DateInput .DateInput__display-text {
-    border-radius:0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
     margin-right: 0;
+    padding: 10px 16px 10px 10px;
   }
 
   .DateInput__display-text--has-input {
