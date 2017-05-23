@@ -28,7 +28,7 @@ export const Container = styled.div`
   min-width: 180px;
 
   display: flex;
-  align-items: stretch;
+  align-items: baseline;
 
   position: relative;
 
@@ -81,7 +81,7 @@ export const Input = styled.textarea`
     outline: none;
     resize: none;
   }
-  white-space: none;
+  white-space: nowrap;
   overflow: hidden;
 
   position: absolute;
@@ -110,7 +110,7 @@ export const Input = styled.textarea`
 
   ${placeholder`
     ${fontStyle}
-    color: ${({ theme }) => theme.color.miscDark};
+    color: ${({ theme }) => theme.color.textLight};
     opacity: 1;
   `}
 
@@ -121,6 +121,8 @@ export const Input = styled.textarea`
 
 export const Geo = styled.div`
   pointer-events: none;
+  user-select: none;
+
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -141,6 +143,8 @@ export const Spell = styled.span`
   display: none;
 
   pointer-events: none;
+  user-select: none;
+
   flex-grow: 1;
   flex-shrink: 0;
 
@@ -159,15 +163,18 @@ export const ValuePlaceholder = styled.div`
 
   ${fontStyle}
   font-weight: 600;
+  user-select: none;
 `
 
 export const GeoLabel = styled.span`
   ${control}
   ${fontStyle}
+  user-select: none;
 `
 
 export const Code = styled.div`
   pointer-events: none;
+  user-select: none;
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
