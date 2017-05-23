@@ -8,6 +8,7 @@ export const common = `
 `
 
 export const control = `
+  font-family: inherit;
   border: none;
   outline: none;
   padding: 0;

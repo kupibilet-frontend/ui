@@ -23,9 +23,9 @@ export default class AirportSuggest extends React.PureComponent {
 
     return (
       <AirportSuggestContainer>
-        { isGeoCity && isAirport &&
+        { isGeoCity || isAirport &&
           <SuggestIcon>
-            <Icon size="xxsmall" name={isGeoCity ? 'location' : 'plane'} fill="miscDarker" />
+            <Icon size="normal" name={isGeoCity ? 'location' : 'plane'} fill="miscDarker" />
           </SuggestIcon>
         }
         <Geo>

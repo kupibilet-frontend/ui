@@ -57,6 +57,18 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
     this.setState({ focused: false })
   }
 
+  onKeyDown = (e: KeyboardEvent) => {
+    const { onKeyDown } = this.props
+
+    if (e.key === 'Enter') {
+      e.preventDefault()
+    }
+
+    if (onKeyDown) {
+      onKeyDown(e)
+    }
+  }
+
   focus = () => {
     if (this.input) {
       this.input.focus()
@@ -93,6 +105,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           neighboringInGroup={neighboringInGroup}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
+          onKeyDown={this.onKeyDown}
           autoCapitalize="sentences"
           autoComplete="off"
           rows="1"
