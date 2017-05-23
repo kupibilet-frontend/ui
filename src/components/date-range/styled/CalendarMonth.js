@@ -52,6 +52,7 @@ export default css`
     strong {
       font-size: 15px;
       font-weight: 600;
+      font-family: inherit;
     }
   }
 
