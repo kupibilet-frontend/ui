@@ -44,7 +44,10 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
       this.props.onFocus(e)
     }
     this.setState({ focused: true })
-    e.target.select()
+    e.persist()
+    setTimeout(() => {
+      e.target.select()
+    })
   }
 
   onBlur = (e: Event) => {
@@ -90,16 +93,25 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           neighboringInGroup={neighboringInGroup}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
+          autoCapitalize="sentences"
+          autoComplete="off"
+          rows="1"
+          wrap="off"
+          spellcheck="false"
         />
         <Geo className="airport-input__geo" neighboringInGroup={neighboringInGroup}>
           <ValuePlaceholder>
             { value }
           </ValuePlaceholder>
           { value && spell &&
-            <Spell className="airport-input__spell" value={spell} tabIndex="-1" readOnly />
+            <Spell className="airport-input__spell">
+              { spell }
+            </Spell>
           }
           { area &&
-            <GeoLabel value={`, ${area}`} tabIndex="-1" readOnly />
+            <GeoLabel>
+              {`, ${area}`}
+            </GeoLabel>
           }
         </Geo>
         <Code neighboringInGroup={neighboringInGroup}>

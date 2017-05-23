@@ -12,11 +12,11 @@ export default function placeholder(...args) {
       ${ styles }
     }
 
-    ::-moz-placeholder {
+    &::-moz-placeholder {
       ${ styles }
     }
 
-    :-ms-input-placeholder {
+    &:-ms-input-placeholder {
       ${ styles }
     }
   `
