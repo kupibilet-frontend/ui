@@ -73,8 +73,16 @@ export const Container = styled.div`
   }}
 `
 
-export const Input = styled.input`
+export const Input = styled.textarea`
   ${control}
+
+  &, &:focus {
+    border: none;
+    outline: none;
+    resize: none;
+  }
+  white-space: none;
+  overflow: hidden;
 
   position: absolute;
   left: 0;
@@ -83,14 +91,14 @@ export const Input = styled.input`
   bottom: 0;
   width: 100%;
   height: 100%;
-  padding: 9px 16px 11px;
+  padding: 10px 16px;
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
       return 'padding-right: 10px;'
     } else if (neighboringInGroup === 'left') {
       return 'padding-left: 10px;'
     } else if (neighboringInGroup === 'both') {
-      return 'padding: 9px 10px 11px;'
+      return 'padding: 10px;'
     }
 
     return ''
@@ -103,6 +111,7 @@ export const Input = styled.input`
   ${placeholder`
     ${fontStyle}
     color: ${({ theme }) => theme.color.miscDark};
+    opacity: 1;
   `}
 
   &:focus ~ .airport-input__geo .airport-input__spell {
@@ -119,14 +128,14 @@ export const Geo = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  padding: 9px 0 11px;
+  padding: 10px 0 10px;
   padding-left: ${({ neighboringInGroup }) => (
     ['left', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
   )};
 `
 
 // Use same component as in input due specific text rendering in inputs
-export const Spell = styled.input`
+export const Spell = styled.span`
   ${control}
 
   display: none;
@@ -152,7 +161,7 @@ export const ValuePlaceholder = styled.div`
   font-weight: 600;
 `
 
-export const GeoLabel = styled.input`
+export const GeoLabel = styled.span`
   ${control}
   ${fontStyle}
 `
@@ -168,7 +177,7 @@ export const Code = styled.div`
   color: ${({ theme }) => theme.color.text};
   background: ${({ theme }) => theme.color.background};
 
-  padding: 11px 10px 9px 9px;
+  padding: 10px 10px 10px 9px;
   padding-right: ${({ neighboringInGroup }) => (
     ['right', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
   )};

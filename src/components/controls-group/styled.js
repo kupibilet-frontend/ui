@@ -41,10 +41,10 @@ export const SwapContainer = styled.div`
 export const SwapIcon = styled(Icon)`
   box-sizing: content-box;
   width: 15px;
-  padding: 5px;
+  padding: 5px 0;
 
   position: absolute;
-  left: -12.5px;
+  left: -7.5px;
   top: 50%;
   margin-top: -12.5px;
   z-index: 3;
