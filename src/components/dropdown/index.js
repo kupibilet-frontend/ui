@@ -34,11 +34,19 @@ class Dropdown extends React.PureComponent<{}, Props, void> {
   }
 
   onShow = (event: Event) => {
-    this.props.onToggle(event, true)
+    if (!this.props.isOpen) {
+      this.props.onToggle(event, true)
+    }
   }
 
   onHide = (event: Event) => {
-    this.props.onToggle(event, false)
+    if (this.props.isOpen) {
+      this.props.onToggle(event, false)
+    }
+  }
+
+  handleClickOutside = (event: Event) => {
+    this.onHide(event)
   }
 
   render() {
@@ -48,30 +56,19 @@ class Dropdown extends React.PureComponent<{}, Props, void> {
       onClick: this.onShow,
     })
 
-    const ComponentOverlay = () => (
-      <DropdownOverlay>
-        {this.props.overlay}
-      </DropdownOverlay>
-    )
-
-    const Outside = onClickOutside(ComponentOverlay, {
-      handleClickOutside: () => this.onHide,
-    })
-
     return (
       <DropdownWrapper
         {...this.props}
       >
         {dropdownButton}
         { isOpen &&
-          <Outside
-            eventTypes="click"
-            overlay={overlay}
-          />
+          <DropdownOverlay>
+            {overlay}
+          </DropdownOverlay>
         }
       </DropdownWrapper>
     )
   }
 }
 
-export default Dropdown
+export default onClickOutside(Dropdown)
