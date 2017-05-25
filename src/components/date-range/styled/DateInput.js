@@ -1,4 +1,5 @@
 import { css } from 'styled-components'
+import { switchTransition } from '../../../utils/transitions'
 
 // $caretTop: 62px
 
@@ -20,6 +21,10 @@ export default css`
       padding: 0;
       position: absolute;
       width: 1px;
+    }
+
+    &:hover .DateInput__display-text {
+      border-color: ${({theme}) => theme.color.secondary};
     }
   }
 
@@ -72,6 +77,7 @@ export default css`
     white-space: nowrap;
 
     padding: 10px 10px 10px 16px;
+    ${switchTransition}
     border: 2px solid ${({ theme }) => theme.color.primaryLight};
     border-radius: 100px 0 0 100px;
     overflow: hidden;

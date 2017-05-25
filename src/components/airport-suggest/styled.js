@@ -17,12 +17,21 @@ export const AirportSuggestContainer = styled.div`
 
   .react-autosuggest__suggestion--highlighted &,
   &:hover {
-    background: ${({ theme }) => theme.color.secondaryLightest}
+    background: ${({ theme }) => theme.color.secondaryLightest};
+
+    .icon-inherit-color {
+      fill: ${({ theme }) => theme.color.textDarker};
+    }
   }
 `
 
 export const SuggestIcon = styled.div`
   padding: 2.5px 8px 2.5px 0;
+
+  .icon-inherit-color {
+    fill: ${({ theme }) => theme.color.miscDark};
+    transition: none;
+  }
 `
 
 export const Geo = styled.div`

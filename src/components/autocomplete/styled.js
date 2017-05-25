@@ -42,6 +42,7 @@ export default styled.div`
     max-width: 540px;
     ${shadowSmall}
     ${borderSmall}
+    overflow: hidden;
     z-index: 2;
   }
   .react-autosuggest__suggestion {
