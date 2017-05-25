@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
 import { control } from '../../utils/reset'
 import placeholder from '../../utils/placeholder'
+import { switchTransition } from '../../utils/transitions'
 
 const fontStyle = css`
   font-family: inherit;
@@ -33,6 +34,7 @@ export const Container = styled.div`
   position: relative;
 
   box-sizing: border-box;
+  ${switchTransition}
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
   ${({ neighboringInGroup }) => {
@@ -71,6 +73,10 @@ export const Container = styled.div`
 
     return ''
   }}
+
+  &:hover {
+    border-color: ${({ theme }) => theme.color.secondary};
+  }
 `
 
 export const Input = styled.textarea`
@@ -144,6 +150,7 @@ export const Spell = styled.span`
 
   pointer-events: none;
   user-select: none;
+  white-space: pre;
 
   flex-grow: 1;
   flex-shrink: 0;
