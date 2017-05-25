@@ -2,7 +2,11 @@
   "env": {
     "development": {
       "presets": ["env", "react", "stage-2"],
-      "plugins": ["transform-react-jsx-source", "flow-react-proptypes"],
+      "plugins": ["flow-react-proptypes"]
+    },
+    "production": {
+      "presets": ["env", "react", "stage-2"],
+      "plugins": ["flow-react-proptypes"]
     },
     "test": {
       "presets": ["env", "react", "stage-2"],
@@ -11,6 +15,6 @@
     "build": {
       "presets": [["env", {"modules": false}], "react", "stage-2"],
       "plugins": ["flow-react-proptypes"],
-    }
+    },
   }
 }
