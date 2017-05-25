@@ -124,7 +124,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     const valueEqualsWithSuggest = isValuesEqual(value, _get(suggestions, '0.value')) ||
       isValuesEqual(value, _get(suggestions, '0.IATACode'))
 
-    if (valueEqualsWithSuggest && !isSuggestAlreadySelected) {
+    if (valueEqualsWithSuggest && !isSuggestAlreadySelected && suggestions.length === 1) {
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
     } else if (suggestions.length && !active) {
@@ -168,6 +168,18 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
       if (this.props.forceSuggesedValue) {
         this.selectFirstSuggest(event, this.props, 'blur')
       }
+    }
+  }
+
+  onKeyDown = (event: KeyboardEvent) => {
+    const { suggestions, inputProps } = this.props
+
+    if (inputProps.onKeyDown) {
+      inputProps.onKeyDown(event)
+    }
+
+    if (event.key === 'ArrowRight' && suggestions.length) {
+      this.selectFirstSuggest(null, this.props, 'autoSuggest')
     }
   }
 
@@ -227,9 +239,10 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
             ...inputProps,
             onChange: this.onChange,
             onBlur: this.onBlur,
+            onKeyDown: this.onKeyDown,
             spell,
           }}
-          suggestions={suggestions.length > 1 ? suggestions : emptyArray}
+          suggestions={suggestions}
           ref={(ref) => { this.autosuggestInstance = ref }}
         />
       </AutocompleteStyled>

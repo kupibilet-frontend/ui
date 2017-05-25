@@ -144,6 +144,7 @@ export const Spell = styled.span`
 
   pointer-events: none;
   user-select: none;
+  white-space: pre;
 
   flex-grow: 1;
   flex-shrink: 0;
