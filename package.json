@@ -71,6 +71,6 @@
     "react": "^15.5.0",
     "react-addons-shallow-compare": "^15.5.2",
     "react-dom": "^15.5.4",
-    "styled-components": "^1.4.2"
+    "styled-components": "^2.0.0"
   }
 }
