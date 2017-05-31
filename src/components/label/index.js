@@ -5,7 +5,7 @@ import { color } from '../theme-provider/theme'
 
 const Label = styled.label`
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-direction: ${(props) => (props.horizonal ? 'row' : 'column')};
   align-items: flex-start;
   user-select: none;
@@ -19,14 +19,17 @@ const LabelText = styled.span`
   user-select: none;
 `
 
-const LabelComponent = ({ horizonal, className, title }) => (
+const LabelComponent = ({ children, horizonal, className, title, ...props }) => (
   <Label
+    {...props}
     horizonal={horizonal}
     className={className}
   >
     <LabelText>
       {title}
     </LabelText>
+
+    {children}
   </Label>
 )
 
@@ -34,12 +37,14 @@ LabelComponent.defaultProps = {
   horizonal: false,
   title: '',
   className: 'label',
+  children: undefined,
 }
 
 LabelComponent.propTypes = {
   title: PropTypes.string,
   horizonal: PropTypes.bool,
   className: PropTypes.string,
+  children: PropTypes.element,
 }
 
 export default LabelComponent

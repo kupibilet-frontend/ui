@@ -82,8 +82,11 @@ const Input = styled.input`
     color: ${color.miscDark};
   }
 
-  &:focus,
   &:hover {
+    border-color: ${color.primary};
+  }
+
+  &:focus {
     box-shadow: 0 0 0 1px ${color.primary};
     border-color: ${color.primary};
     outline-style: none;
