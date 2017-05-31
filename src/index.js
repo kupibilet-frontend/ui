@@ -6,6 +6,7 @@ export { default as Button } from './components/button'
 export { default as Checkbox } from './components/checkbox'
 export { default as Icon } from './components/icons'
 export { default as Slider } from './components/slider'
+export { default as Tooltip } from './components/tooltip'
 
 // Base layout particles
 export { default as FilterSection } from './blocks/FilterSection'
