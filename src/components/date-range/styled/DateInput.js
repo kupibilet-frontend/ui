@@ -22,10 +22,6 @@ export default css`
       position: absolute;
       width: 1px;
     }
-
-    &:hover .DateInput__display-text {
-      border-color: ${({theme}) => theme.color.secondary};
-    }
   }
 
   .DateInput--with-caret::before,
@@ -106,12 +102,16 @@ export default css`
     font-weight: normal;
   }
 
-  .DateInput--startDate--error #startDate ~ .DateInput__display-text {
-    border-color: ${({ theme }) => theme.color.fail}
+  .DateInput--startDate--error [id=startDate] ~ .DateInput__display-text {
+    border-color: ${({ theme }) => theme.color.fail};
+    z-index: 2;
   }
 
-  .DateInput__display-text--focused {
-    border-color: ${({ theme }) => theme.color.secondary};
-    z-index: 2;
+  .DateInput {
+    & .DateInput__display-text.DateInput__display-text--focused,
+    &:hover .DateInput__display-text {
+      border-color: ${({ theme }) => theme.color.secondary};
+      z-index: 2;
+    }
   }
 `
