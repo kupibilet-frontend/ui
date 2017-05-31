@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react'
 import initial from 'lodash/initial'
 
 import RangeBar from './RangeBar'
+import HandleWithToolTip from './HandleWithTooltip'
 
 import {
   StyledSlider,
@@ -32,6 +33,7 @@ type Props = {
   values: number[],
   sliderData: SliderData,
   onChange: Function,
+  displayValue: string | ((val: number) => string)
 }
 
 type State = {
@@ -122,15 +124,20 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     const { state } = this
     const { min, max, values } = state
     const valuesAreDefault = values[0] === min && values[1] === max
+    const { displayValue, ...sliderProps } = this.props
+    const handle = !displayValue
+      ? StyledHandle
+      : (props) => HandleWithToolTip({ ...props, displayValue })
     return (
       <StyledSlider
-        {...this.props}
+        {...sliderProps}
         min={min}
         max={max}
         onValuesUpdated={this.updateValue}
         snapPoints={state.snapPoints}
         pitPoints={state.pitPoints}
         values={values}
+        handle={handle}
         pitComponent={(props) =>
           <RangeBar
             {...props}
