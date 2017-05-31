@@ -5,6 +5,25 @@ import sizeInput from '../../utils/input'
 import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
 
+const calculateBorderAndRadius = (neighboringInGroup) => {
+  if (neighboringInGroup === 'both') {
+    return `
+      border-right-color: transparent;
+    `
+  } else if (neighboringInGroup === 'left') {
+    return `
+      border-radius: 0 3px 3px 0;
+    `
+  } else if (neighboringInGroup === 'right') {
+    return `
+      border-radius: 3px 0 0 3px
+      border-right-color: transparent;
+    `
+  }
+
+  return 'border-radius: 3px'
+}
+
 const SIZE = {
   large: 15,
   normal: 12,
@@ -42,15 +61,16 @@ const Error = styled.span`
 `
 
 const Input = styled.input`
+  position: relative;
   ${({ size }) => sizeInput(size, SIZE, customNumber)}
   width: 280px;
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: normal;
   color: ${color.textDarker};
   border: 1px solid ${color.misc};
-  border-radius: 3px;
   background-color: #FFFFFF;
   cursor: text;
+  ${({ neighboringInGroup }) => calculateBorderAndRadius(neighboringInGroup)}
   ${switchTransition}
   transition-property: border-color, box-shadow;
 
@@ -62,14 +82,12 @@ const Input = styled.input`
     color: ${color.miscDark};
   }
 
+  &:focus,
   &:hover {
-    border-color: ${color.primary};
-  }
-
-  &:focus {
     box-shadow: 0 0 0 1px ${color.primary};
     border-color: ${color.primary};
     outline-style: none;
+    z-index: 2;
 
     & + .input-line {
       display: none;
@@ -91,11 +109,9 @@ const Input = styled.input`
   }
 `
 
-const InputWrap = styled.span`
+const InputWrap = styled.div`
   position: relative;
-  display: inline-flex;
-  justify-content: center;
-  flex-direction: column;
+  display: inline-block;
 `
 const InputLine = styled.span`
   position: absolute;
@@ -108,9 +124,10 @@ const InputLine = styled.span`
 `
 
 const InputComponent = ({ size, disabled, placeholder, success, error, value, ...props }) => (
-  <InputWrap {...props}>
+  <InputWrap>
     {
       value ? <Input
+        {...props}
         className={props.className}
         type={props.type}
         name={props.name}
@@ -119,6 +136,7 @@ const InputComponent = ({ size, disabled, placeholder, success, error, value, ..
         disabled={disabled}
         value={value}
       /> : <Input
+        {...props}
         className={props.className}
         type={props.type}
         name={props.name}
@@ -143,6 +161,8 @@ const InputComponent = ({ size, disabled, placeholder, success, error, value, ..
 )
 
 InputComponent.defaultProps = {
+  type: 'text',
+  name: 'input',
   errorText: '',
   error: false,
   success: false,

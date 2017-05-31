@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { select, text, boolean } from '@kadira/storybook-addon-knobs'
 import Input from './index'
+import ControlsGroup from '../controls-group'
 
 const inputDefault = {
   type: 'text',
@@ -97,3 +98,28 @@ storiesOf('Input', module)
       />
     )
   })
+  .addWithInfo('group', () => (
+    <ControlsGroup>
+      <Input
+        type={inputDefault.type}
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+        value=""
+      />
+      <Input
+        type={inputDefault.type}
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+        value=""
+      />
+      <Input
+        type={inputDefault.type}
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+        value=""
+      />
+    </ControlsGroup>
+  ))
