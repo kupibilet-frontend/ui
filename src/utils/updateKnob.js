@@ -1,5 +1,4 @@
-import addons from '@kadira/storybook-addons';
-import Types from '@kadira/storybook-addon-knobs/dist/components/types'
+import addons from '@kadira/storybook-addons'
 
 /**
  * You must provide in:
@@ -10,16 +9,16 @@ import Types from '@kadira/storybook-addon-knobs/dist/components/types'
 export default function updateKnob(name, type, value) {
   const channel = addons.getChannel()
 
-  channel.emit('addon:updateKnob:changed', { name, type, value });
+  channel.emit('addon:updateKnob:changed', { name, type, value })
 }
 
 /**
  * storybook-addons hook
  */
-addons.register('kupibilet.ru/storybook-addon-update-knob', api => {
+addons.register('kupibilet.ru/storybook-addon-update-knob', () => {
   const channel = addons.getChannel()
 
   channel.on('addon:updateKnob:changed', ({ name, type, value }) => {
     channel.emit('addon:knobs:knobChange', { name, type, value })
   })
-});
+})
