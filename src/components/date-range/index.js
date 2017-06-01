@@ -107,7 +107,7 @@ class DateRangePickerWrapper extends React.PureComponent {
 
   render() {
     const { hoveredDate } = this.state
-    const { startDate, focusedInput, endDate, meta } = this.props
+    const { startDate, focusedInput, endDate, meta = {} } = this.props
     const { touched, error } = meta
 
     const hoveredStartDate = hoveredDate && (
