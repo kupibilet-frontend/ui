@@ -10,8 +10,9 @@ type Props = {
   area: string,
   spell: string,
   IATACode: string,
-  onFocus: (Event) => void,
-  onBlur: (Event) => void,
+  onFocus?: (SyntheticInputEvent) => void,
+  onBlur?: (SyntheticInputEvent) => void,
+  onKeyDown?: (SyntheticKeyboardEvent) => void,
   neighboringInGroup: null | 'left' | 'right' | 'both',
   meta?: {
     error?: string,
@@ -39,7 +40,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
   }
   /* eslint-enable react/sort-comp */
 
-  onFocus = (e: Event & {target: HTMLInputElement}) => {
+  onFocus = (e: SyntheticInputEvent) => {
     if (this.props.onFocus) {
       this.props.onFocus(e)
     }
@@ -50,14 +51,14 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
     })
   }
 
-  onBlur = (e: Event) => {
+  onBlur = (e: SyntheticInputEvent) => {
     if (this.props.onBlur) {
       this.props.onBlur(e)
     }
     this.setState({ focused: false })
   }
 
-  onKeyDown = (e: KeyboardEvent) => {
+  onKeyDown = (e: SyntheticKeyboardEvent) => {
     const { onKeyDown } = this.props
 
     if (e.key === 'Enter') {
