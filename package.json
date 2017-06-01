@@ -29,6 +29,7 @@
     "@kadira/storybook": "~2.35.3",
     "@kadira/storybook-addon-knobs": "~1.7.1",
     "@kadira/storybook-addon-options": "~1.0.1",
+    "@kadira/storybook-addons": "^1.6.1",
     "@kupibilet/icons": "~3.3.0",
     "babel-cli": "~6.24.0",
     "babel-jest": "~20.0.3",
