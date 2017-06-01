@@ -14,7 +14,7 @@
     "flow": "flow",
     "postinstall": "move-bin || true",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
-    "prepublish": "npm run build --silent",
+    "prepublish": "in-publish && npm run build --silent || not-in-publish",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -42,6 +42,7 @@
     "eslint-config-kupibilet": "^8.2.3",
     "flow-bin": "^0.47.0",
     "husky": "~0.13.2",
+    "in-publish": "^2.0.0",
     "jest": "~20.0.0",
     "lint-staged": "^3.5.1",
     "moment": "~2.18.1",
