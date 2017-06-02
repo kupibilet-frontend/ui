@@ -26,6 +26,7 @@ export const DateInput = styled.div`
 `
 export const DateInputValue = styled.div`
   flex-grow: 1;
+  font-weight: 600;
 `
 export const DateInputDayOfWeek = styled.div`
   color: ${({ theme }) => theme.color.text}

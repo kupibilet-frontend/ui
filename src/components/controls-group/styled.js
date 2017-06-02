@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { transparentize } from 'polished'
 import Icon from '../icons'
+import { switchTransition } from '../../utils/transitions'
 
 const fadeGradient = ({ theme }) => (
   /* eslint-disable prefer-template */
@@ -16,9 +17,13 @@ const fadeGradient = ({ theme }) => (
 export const FlexContainer = styled.div`
   display: flex;
 
+  & .controls-group__swap {
+    ${switchTransition}
+  }
+  
   &:hover .controls-group__swap {
     opacity: 1;
-    transition: .001s linear .1s;
+    transition-delay: .15s;
   }
 `
 
