@@ -33,7 +33,6 @@ export default css`
     border: 10px solid transparent;
     border-top: 0;
     left: 22px;
-    z-index: 2;
   }
 
   // We dont use caret
@@ -54,7 +53,7 @@ export default css`
     width: 100%;
 
     // Anymore overlays inputs text blocks
-    z-index: 10;
+    z-index: 3;
 
     &[readonly] {
       -moz-user-select: none;
