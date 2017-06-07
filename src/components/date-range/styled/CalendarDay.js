@@ -20,6 +20,17 @@ export default css`
     vertical-align: middle;
   }
 
+  .CalendarDay--blocked,
+  .CalendarDay--blocked-calendar,
+  .CalendarDay--blocked-out-of-range {
+    background: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.textLight};
+    cursor: default;
+
+    // Do not react on hovers!
+    pointer-events: none;
+  }
+
   .DateInput--startDate--focused .CalendarDay:hover,
   .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover,
   .CalendarDay--selected-start {
@@ -38,7 +49,7 @@ export default css`
 
   .DateInput--startDate--focused .CalendarDay,
   .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover {
-    &:not(.CalendarDay--blocked):not(.CalendarDay--selected-end):hover {
+    &:not(.CalendarDay--blocked):hover {
       position: relative;
 
       ${({ theme }) => cssArrow({
@@ -82,14 +93,6 @@ export default css`
   .CalendarDay:not(.CalendarDay--blocked):hover {
     background: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.background};
-  }
-
-  .CalendarDay--blocked,
-  .CalendarDay--blocked-calendar,
-  .CalendarDay--blocked-out-of-range {
-    background: ${({ theme }) => theme.color.background};
-    color: ${({ theme }) => theme.color.textLight};
-    cursor: default;
   }
 
   // TODO check style guide
