@@ -1,6 +1,6 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
-import { select, date } from '@kadira/storybook-addon-knobs'
+import { storiesOf } from '@storybook/react'
+import { select, date } from '@storybook/addon-knobs'
 import moment from 'moment'
 import updateKnob from '../../utils/updateKnob'
 

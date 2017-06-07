@@ -1,6 +1,6 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
-import { text, number, boolean } from '@kadira/storybook-addon-knobs'
+import { storiesOf } from '@storybook/react'
+import { text, number, boolean } from '@storybook/addon-knobs'
 import PassengerPicker from './index'
 import updateKnob from '../../utils/updateKnob'
 
@@ -14,8 +14,7 @@ const defaults = {
 
 storiesOf('PassengerPicker', module)
   .addWithInfo(
-    'Defalut',
-    `
+    'Defalut', `
       redux-form совместимый компонент.\n
       value в redux-form должно быть объектом вида
 
