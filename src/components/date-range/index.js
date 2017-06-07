@@ -143,7 +143,6 @@ class DateRangePickerWrapper extends React.PureComponent {
       >
         <DateRangePicker
           {...this.props}
-          minimumNights={0}
           onDayHover={this.onDayHover}
           modifiers={this.modifiers}
           renderInputText={this.renderInputText}
@@ -173,6 +172,7 @@ const DateRange = (props) => {
 
 DateRange.defaultProps = {
   ...DateRangePicker.defaultProps,
+  minimumNights: 0,
   startDatePlaceholderText: 'Туда',
   endDatePlaceholderText: 'Обратно',
   displayFormat: () => 'DD MMM',
