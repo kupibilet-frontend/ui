@@ -1,14 +1,17 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { select, text, boolean } from '@kadira/storybook-addon-knobs'
+import updateKnob from '../../utils/updateKnob'
 import Input from './index'
 import ControlsGroup from '../controls-group'
+import Icon from '../icons'
+import Dropdown from '../dropdown'
 
 const inputDefault = {
   type: 'text',
   name: 'input',
   placeholder: 'Только прямые рейсы',
-  errorText: 'Только латинские буквы',
+  error: 'Только латинские буквы',
 }
 
 const sizesSelect = (defaultValue = 'large') => select(
@@ -31,7 +34,6 @@ storiesOf('Input', module)
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={placeholder}
-        value=""
       />
     )
   })
@@ -62,8 +64,7 @@ storiesOf('Input', module)
     )
   })
   .addWithInfo('error', () => {
-    const error = boolean('error', true)
-    const errorText = text('errorText', inputDefault.errorText)
+    const error = text('error', inputDefault.error)
 
     return (
       <Input
@@ -71,20 +72,66 @@ storiesOf('Input', module)
         name={inputDefault.name}
         error={error}
         size={sizesSelect()}
-        errorText={errorText}
         placeholder={inputDefault.placeholder}
       />
     )
   })
-  .addWithInfo('icon right', () => (
-    <Input
-      className="has-badge"
-      type={inputDefault.type}
-      name={inputDefault.name}
-      size={sizesSelect()}
-      placeholder={inputDefault.placeholder}
-    />
-  ))
+  .addWithInfo('padding for one icon', () => {
+    const positionLeft = boolean('left', false)
+
+    return (
+      positionLeft ?
+        <Input
+          className="has-badge"
+          type={inputDefault.type}
+          name={inputDefault.name}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+          leftIcon={
+            <Icon name="checkbox" stroke="small" fill="text" />
+          }
+        /> :
+        <Input
+          className="has-badge"
+          type={inputDefault.type}
+          name={inputDefault.name}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+          rightIcon={
+            <Icon name="checkbox" stroke="small" fill="text" />
+          }
+        />
+    )
+  })
+  .addWithInfo('dropdown', () => {
+    const isOpen = boolean('isOpen', false)
+    const onToggle = (event, value) => {
+      event.preventDefault()
+      updateKnob('isOpen', 'boolean', value)
+    }
+
+    return (
+      <div>
+        <Input
+          className="has-badge"
+          type={inputDefault.type}
+          name={inputDefault.name}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+          positioDropdown="right"
+          isDropdown={isOpen}
+          onToggleDropdown={onToggle}
+        />
+        <Dropdown
+          overlay={<div>1234</div>}
+          onToggle={onToggle}
+          isOpen={isOpen}
+        >
+          { <span /> }
+        </Dropdown>
+      </div>
+    )
+  })
   .addWithInfo('value', () => {
     const value = text('value', 'Только прямые рейсы')
 
@@ -105,21 +152,18 @@ storiesOf('Input', module)
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={inputDefault.placeholder}
-        value=""
       />
       <Input
         type={inputDefault.type}
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={inputDefault.placeholder}
-        value=""
       />
       <Input
         type={inputDefault.type}
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={inputDefault.placeholder}
-        value=""
       />
     </ControlsGroup>
   ))

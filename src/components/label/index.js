@@ -6,7 +6,7 @@ import { color } from '../theme-provider/theme'
 const Label = styled.label`
   position: relative;
   display: inline-flex;
-  flex-direction: ${(props) => (props.horizonal ? 'row' : 'column')};
+  flex-direction: ${({ horizonal }) => (horizonal ? 'row' : 'column')};
   align-items: flex-start;
   user-select: none;
 `
@@ -19,12 +19,8 @@ const LabelText = styled.span`
   user-select: none;
 `
 
-const LabelComponent = ({ children, horizonal, className, title, ...props }) => (
-  <Label
-    {...props}
-    horizonal={horizonal}
-    className={className}
-  >
+const LabelComponent = ({ children, title, ...props }) => (
+  <Label {...props} >
     <LabelText>
       {title}
     </LabelText>
@@ -36,14 +32,12 @@ const LabelComponent = ({ children, horizonal, className, title, ...props }) => 
 LabelComponent.defaultProps = {
   horizonal: false,
   title: '',
-  className: 'label',
   children: undefined,
 }
 
 LabelComponent.propTypes = {
   title: PropTypes.string,
   horizonal: PropTypes.bool,
-  className: PropTypes.string,
   children: PropTypes.element,
 }
 

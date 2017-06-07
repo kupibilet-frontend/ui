@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import { boolean, text } from '@kadira/storybook-addon-knobs'
 import Label from './index'
+import Input from '../input'
 
 storiesOf('Label', module)
   .addWithInfo('default', () => {
@@ -11,8 +12,9 @@ storiesOf('Label', module)
     return (
       <Label
         horizonal={horizonal}
-        className={`label ${horizonal ? 'horizonal' : ''}`}
         title={title}
-      />
+      >
+        <Input />
+      </Label>
     )
   })
