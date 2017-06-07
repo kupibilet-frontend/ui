@@ -1,4 +1,4 @@
-import addons from '@kadira/storybook-addons'
+import addons from '@storybook/addons'
 
 /**
  * You must provide in:

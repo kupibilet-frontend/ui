@@ -1,5 +1,4 @@
-import initStoryshots from 'storyshots'
-import ReactDOM from 'react-dom'
+import initStoryshots from '@storybook/addon-storyshots'
 
 initStoryshots()
 

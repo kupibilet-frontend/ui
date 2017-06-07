@@ -1,7 +1,7 @@
-import { configure, setAddon, addDecorator } from '@kadira/storybook'
-import centered from '@kadira/react-storybook-decorator-centered'
-import { withKnobs } from '@kadira/storybook-addon-knobs'
-import infoAddon from '@kadira/react-storybook-addon-info'
+import { configure, setAddon, addDecorator } from '@storybook/react'
+import centered from '@storybook/addon-centered'
+import { withKnobs } from '@storybook/addon-knobs'
+import infoAddon from '@storybook/addon-info'
 
 import { mockInfoAddon } from '../storybook/addons'
 import { ThemeDecorator, IconsDecorator } from '../storybook/decorators'
