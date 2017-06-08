@@ -2,7 +2,7 @@
 *.log
 
 # Ignore builded modules
-index.js
+/index.js
 lib/*
 blocks/*
 components/*

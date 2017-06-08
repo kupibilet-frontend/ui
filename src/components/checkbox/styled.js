@@ -59,7 +59,7 @@ export const LabelText = styled.span`
 `
 
 export const CheckboxLabel = styled.label`
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')}
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
   display: inline-flex;
   align-items: start;
   font-size: 16px;

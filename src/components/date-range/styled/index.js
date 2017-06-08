@@ -32,8 +32,8 @@ export const DateInputDayOfWeek = styled.div`
   color: ${({ theme }) => theme.color.text}
   flex-shrink: 0;
 
-	font-size: 14px;
-	line-height: 1px;
+  font-size: 14px;
+  line-height: 1px;
   font-weight: normal;
   text-transform: uppercase;
 `
