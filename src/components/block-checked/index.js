@@ -4,6 +4,14 @@ import Icon from '../icons'
 import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
 
+const InputDescription = styled.p`
+  margin: 6px 0;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #7f7f7f;
+`
+
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,6 +29,7 @@ const InputWrapper = styled.div`
 
 const Label = styled.label`
   display: inline-flex;
+  flex-direction: column;
 
   & + & {
     margin-left: 10px;
@@ -70,7 +79,6 @@ const Price = styled.span`
 
 const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...props }) => (
   <Label
-    htmlFor={htmlFor}
     {...props}
   >
     <HiddenInput
@@ -113,6 +121,7 @@ const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...pr
         }
       </ContentWrapper>
     </InputWrapper>
+    <InputDescription>{props.description}</InputDescription>
   </Label>
 )
 
@@ -122,6 +131,7 @@ BlockChecked.defaultProps = {
   icons: [],
   iconsPosition: 'bottom',
   value: '',
+  description: '',
 }
 
 BlockChecked.propTypes = {
@@ -132,6 +142,7 @@ BlockChecked.propTypes = {
   icons: PropTypes.array,
   iconsPosition: PropTypes.string,
   value: PropTypes.string,
+  description: PropTypes.string,
 }
 
 export default BlockChecked
