@@ -15,7 +15,7 @@ const DropdownOverlay = styled.div`
   top: calc(100% + 3px);
   left: 0;
   padding: 18px 12px;
-  background: ${({ theme }) => theme.color.background}
+  background: ${({ theme }) => theme.color.background};
   ${shadowSmall}
   ${borderSmall}
 `
