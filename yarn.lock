@@ -17,37 +17,39 @@
     react-moment-proptypes "^1.3.0"
     react-portal "^3.0.0"
 
-"@storybook/addon-actions@^3.0.1":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.1.0.tgz#9f807618222fbe5b4f44da434d8ffded4381c02c"
+"@storybook/addon-actions@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.1.2.tgz#0f28ae69277964d098fcd5e3f4a74b09a233a48c"
   dependencies:
-    "@storybook/addons" "^3.1.0"
+    "@storybook/addons" "^3.1.2"
     deep-equal "^1.0.1"
     json-stringify-safe "^5.0.1"
     prop-types "^15.5.8"
     react-inspector "^2.0.0"
 
-"@storybook/addon-centered@^3.0.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-3.1.0.tgz#19a343ade0bf933670e1f067b7ffb7d01b98fdc3"
+"@storybook/addon-centered@^3.0.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-3.1.2.tgz#0ccb10e18b3d568d2ea58a5387eeffd8a3499872"
 
-"@storybook/addon-info@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.0.1.tgz#992d525a2cf3e5211c5d094819e13bb00e403d91"
+"@storybook/addon-info@^3.0.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.1.2.tgz#9255bf66cf4f40ec5108efb4d9ae6ccb7b4391f3"
   dependencies:
-    "@storybook/addons" "^3.0.0"
+    "@storybook/addons" "^3.1.2"
     babel-runtime "^6.23.0"
-    marksy "^1.0.1"
+    global "^4.3.2"
+    marksy "^2.0.0"
     prop-types "^15.5.8"
     react-addons-create-fragment "^15.5.3"
 
-"@storybook/addon-knobs@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.0.1.tgz#fed58275b33bcc0a0d9f6d3dd9427319b71ad84c"
+"@storybook/addon-knobs@^3.0.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.1.2.tgz#4378791460cfabf16c31e4bbcef9b9a6613b4109"
   dependencies:
-    "@storybook/addons" "*"
+    "@storybook/addons" "^3.1.2"
     babel-runtime "^6.23.0"
     deep-equal "^1.0.1"
+    global "^4.3.2"
     insert-css "^1.0.0"
     lodash.debounce "^4.0.8"
     moment "^2.18.1"
@@ -56,35 +58,36 @@
     react-datetime "^2.8.10"
     react-textarea-autosize "^4.3.0"
 
-"@storybook/addon-links@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.0.0.tgz#497ae071b9f36f150a47a5c61d0688d615faec0c"
+"@storybook/addon-links@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.1.2.tgz#43d34eb7ee8c056d13f854ec1fe9d1cd90889706"
   dependencies:
-    "@storybook/addons" "^3.0.0"
+    "@storybook/addons" "^3.1.2"
 
-"@storybook/addon-storyshots@^3.0.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-3.1.0.tgz#043a81d3c3061dca11f365fd9fe6be2537b66186"
+"@storybook/addon-storyshots@^3.0.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots/-/addon-storyshots-3.1.2.tgz#f063293e576c136bf22ef25f31f3bb5e59ccaa5c"
   dependencies:
     babel-runtime "^6.23.0"
     global "^4.3.2"
     prop-types "^15.5.8"
     read-pkg-up "^2.0.0"
 
-"@storybook/addons@*", "@storybook/addons@^3.0.0", "@storybook/addons@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.1.0.tgz#8b5cbe2dcf47a9f1a989f88b25827d4d7bcb75e3"
+"@storybook/addons@^3.0.2", "@storybook/addons@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.1.2.tgz#6ea3f1e14e303ff5ad481dd424211f8230df878b"
 
-"@storybook/channel-postmessage@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-3.0.0.tgz#b70bd706bb384e40b407603f829e299e1dc23ece"
+"@storybook/channel-postmessage@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-3.1.2.tgz#a8a6eec904c6d37b938db9f8251ee760b1c3556c"
   dependencies:
-    "@storybook/channels" "^3.0.0"
+    "@storybook/channels" "^3.1.2"
+    global "^4.3.2"
     json-stringify-safe "^5.0.1"
 
-"@storybook/channels@^3.0.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.1.0.tgz#93806820b37fd9b40eca640651d4b356b41933b7"
+"@storybook/channels@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.1.2.tgz#56f9bb6acf0c2ff58123f1fccadc8498d5372b70"
 
 "@storybook/react-fuzzy@^0.4.0":
   version "0.4.0"
@@ -95,20 +98,20 @@
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-"@storybook/react@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-3.0.1.tgz#9d6c3ddfdca22d9e7c4baedd82fa9d9a230e8770"
+"@storybook/react@^3.0.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-3.1.2.tgz#44222ceffa9b56e9042a13f6a41d7623004054cc"
   dependencies:
-    "@storybook/addon-actions" "^3.0.1"
-    "@storybook/addon-links" "^3.0.0"
-    "@storybook/addons" "^3.0.0"
-    "@storybook/channel-postmessage" "^3.0.0"
-    "@storybook/ui" "^3.0.1"
+    "@storybook/addon-actions" "^3.1.2"
+    "@storybook/addon-links" "^3.1.2"
+    "@storybook/addons" "^3.1.2"
+    "@storybook/channel-postmessage" "^3.1.2"
+    "@storybook/ui" "^3.1.2"
     airbnb-js-shims "^1.1.1"
     autoprefixer "^7.1.1"
     babel-core "^6.24.1"
     babel-loader "^7.0.0"
-    babel-plugin-react-docgen "^1.4.2"
+    babel-plugin-react-docgen "^1.5.0"
     babel-preset-es2015 "^6.24.1"
     babel-preset-es2016 "^6.24.1"
     babel-preset-react "^6.24.1"
@@ -124,6 +127,7 @@
     express "^4.15.3"
     file-loader "^0.11.1"
     find-cache-dir "^1.0.0"
+    global "^4.3.2"
     json-loader "^0.5.4"
     json-stringify-safe "^5.0.1"
     json5 "^0.5.1"
@@ -145,9 +149,9 @@
     webpack-dev-middleware "^1.10.2"
     webpack-hot-middleware "^2.18.0"
 
-"@storybook/ui@^3.0.1":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-3.1.0.tgz#0dc76aadc1d6d85c05a4fa7b9adca320be6a66d4"
+"@storybook/ui@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-3.1.2.tgz#2b9c79c526e07e6915f9ba6c0396c1caea3b0409"
   dependencies:
     "@storybook/react-fuzzy" "^0.4.0"
     babel-runtime "^6.23.0"
@@ -747,13 +751,13 @@ babel-plugin-jest-hoist@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-20.0.3.tgz#afedc853bd3f8dc3548ea671fbe69d03cc2c1767"
 
-babel-plugin-react-docgen@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-docgen/-/babel-plugin-react-docgen-1.4.2.tgz#04c02133b84b6cc182d35de2162f15764da03e7c"
+babel-plugin-react-docgen@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-docgen/-/babel-plugin-react-docgen-1.5.0.tgz#0339717ad51f4a5ce4349330b8266ea5a56f53b4"
   dependencies:
-    babel-types "^6.16.0"
+    babel-types "^6.24.1"
     lodash "4.x.x"
-    react-docgen "^2.12.1"
+    react-docgen "^2.15.0"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -1352,7 +1356,7 @@ babel-traverse@^6.16.0, babel-traverse@^6.18.0, babel-traverse@^6.23.1, babel-tr
     invariant "^2.2.0"
     lodash "^4.2.0"
 
-babel-types@^6.16.0, babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.23.0, babel-types@^6.24.1:
+babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.23.0, babel-types@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.24.1.tgz#a136879dc15b3606bda0d90c1fc74304c2ff0975"
   dependencies:
@@ -2162,13 +2166,13 @@ debug@2.2.0:
   dependencies:
     ms "0.7.1"
 
-debug@2.6.7, debug@^2.2.0, debug@^2.6.3:
+debug@2.6.7:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.7.tgz#92bad1f6d05bbb6bba22cca88bcd0ec894c2861e"
   dependencies:
     ms "2.0.0"
 
-debug@^2.1.1:
+debug@^2.1.1, debug@^2.2.0, debug@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.3.tgz#0f7eb8c30965ec08c72accfa0130c8b79984141d"
   dependencies:
@@ -4345,9 +4349,9 @@ marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
-marksy@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/marksy/-/marksy-1.1.0.tgz#d377ee55a13641f5b0421e1d9f6995256c5af21b"
+marksy@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/marksy/-/marksy-2.0.1.tgz#019eb9c13ff37120ce4dddeb7774aba152b5d7e0"
   dependencies:
     babel-standalone "^6.24.0"
     he "^1.1.1"
@@ -5396,18 +5400,18 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@15.x, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.9, prop-types@~15.5.7:
+prop-types@15.x, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@~15.5.7:
+  version "15.5.8"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
+  dependencies:
+    fbjs "^0.8.9"
+
+prop-types@^15.5.10, prop-types@^15.5.9:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
-
-prop-types@^15.5.6, prop-types@^15.5.8:
-  version "15.5.8"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
-  dependencies:
-    fbjs "^0.8.9"
 
 proxy-addr@~1.1.4:
   version "1.1.4"
@@ -5590,9 +5594,9 @@ react-datetime@^2.8.10:
     prop-types "^15.5.7"
     react-onclickoutside "^5.9.0"
 
-react-docgen@^2.12.1:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-2.14.0.tgz#3c822f539edc93d4683fb2cde93804062b7deb05"
+react-docgen@^2.15.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-2.15.0.tgz#11aced462256e4862b14e6af6e46bdcefacb28bb"
   dependencies:
     async "^2.1.4"
     babel-runtime "^6.9.2"
