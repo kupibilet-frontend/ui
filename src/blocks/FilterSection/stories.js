@@ -1,7 +1,7 @@
 /* eslint-disable no-confusing-arrow */
 
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import FilterSection from './index'
 import Checkbox from '../../components/checkbox'

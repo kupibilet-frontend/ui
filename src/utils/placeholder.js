@@ -1,23 +1,23 @@
 import { css } from 'styled-components'
 
 export default function placeholder(...args) {
-  const styles = css.apply(null, args)
+  const styles = css(...args)
 
   return css`
     &::placeholder {
-      ${ styles }
+      ${styles}
     }
 
     &::-webkit-input-placeholder {
-      ${ styles }
+      ${styles}
     }
 
     &::-moz-placeholder {
-      ${ styles }
+      ${styles}
     }
 
     &:-ms-input-placeholder {
-      ${ styles }
+      ${styles}
     }
   `
 }

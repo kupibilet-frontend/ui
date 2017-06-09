@@ -1,12 +1,15 @@
 language: node_js
 node_js:
 - stable
-
-before_script:
-  - yarn global add makeshift && makeshift -r registry.npmjs.org
+git:
+  depth: 2
 
 script:
-  - npm run build-storybook
+  - yarn test
+
+before_deploy:
+  - yarn build-storybook
+  - yarn global add makeshift && makeshift -r registry.npmjs.org
 
 deploy:
   - provider: npm
@@ -17,8 +20,8 @@ deploy:
       branch: master
       tags: true
       repo: kupibilet-frontend/ui
-  -
-    provider: pages
+
+  - provider: pages
     local_dir: storybook-static
     skip_cleanup: true
     github_token: $GITHUB_TOKEN

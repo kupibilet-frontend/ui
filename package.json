@@ -8,13 +8,14 @@
     "test": "npm run jest --silent",
     "start": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook",
-    "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" && exit 0; stylelint ./src/components/**/*.js",
-    "lint:js": "eslint ./src/components/**/*.js",
+    "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" >&2 && exit 0; stylelint ./src/components/**/*.js",
+    "lint:js": "eslint ./src/**/*.js",
     "jest": "jest",
     "flow": "flow",
     "postinstall": "move-bin || true",
     "build": "NODE_ENV=build babel src/ -d lib/ --ignore stories",
-    "prepublish": "npm run build --silent"
+    "prepublish": "in-publish && npm run build --silent || not-in-publish",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,13 @@
   "author": "Kupibilet.ru Frontend Team",
   "license": "MIT",
   "devDependencies": {
-    "@kadira/react-storybook-addon-info": "~3.4.0",
-    "@kadira/react-storybook-decorator-centered": "~1.1.2",
-    "@kadira/storybook": "~2.35.3",
-    "@kadira/storybook-addon-knobs": "~1.7.1",
-    "@kadira/storybook-addon-options": "~1.0.1",
     "@kupibilet/icons": "~3.3.0",
+    "@storybook/addon-centered": "^3.0.0",
+    "@storybook/addon-info": "^3.0.1",
+    "@storybook/addon-knobs": "^3.0.1",
+    "@storybook/addon-storyshots": "^3.0.0",
+    "@storybook/addons": "^3.0.0",
+    "@storybook/react": "^3.0.1",
     "babel-cli": "~6.24.0",
     "babel-jest": "~20.0.3",
     "babel-plugin-flow-react-proptypes": "^3.2.0",
@@ -40,7 +42,9 @@
     "eslint-config-kupibilet": "^8.2.3",
     "flow-bin": "^0.47.0",
     "husky": "~0.13.2",
+    "in-publish": "^2.0.0",
     "jest": "~20.0.0",
+    "lint-staged": "^3.5.1",
     "moment": "~2.18.1",
     "move-binaries-to-bin": "~1.0.1",
     "prop-types": "^15.5.8",
@@ -48,8 +52,8 @@
     "react": "~15.5.4",
     "react-addons-shallow-compare": "~15.5.2",
     "react-dom": "~15.5.4",
-    "storyshots": "~3.2.2",
-    "styled-components": "~1.4.5",
+    "react-test-renderer": "^15.5.4",
+    "styled-components": "^1.4.5",
     "stylelint-config-kupibilet": "^3.1.2",
     "stylelint-processor-styled-components": "~0.1.0",
     "whatwg-fetch": "^2.0.3"
@@ -71,6 +75,6 @@
     "react": "^15.5.0",
     "react-addons-shallow-compare": "^15.5.2",
     "react-dom": "^15.5.4",
-    "styled-components": "^1.4.2"
+    "styled-components": "^1.4.5"
   }
 }
