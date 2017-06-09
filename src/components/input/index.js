@@ -194,9 +194,21 @@ class InputComponent extends Component {
     }
   }
 
-  onToggleActive = () => {
+  onActionBlur = () => {
+    if (this.props.onBlur) {
+      this.props.onBlur()
+    }
     this.setState({
-      isActive: !this.state.isActive,
+      isActive: false,
+    })
+  }
+
+  onActionFocus = () => {
+    if (this.props.onFocus) {
+      this.props.onFocus()
+    }
+    this.setState({
+      isActive: true,
     })
   }
 
@@ -226,8 +238,8 @@ class InputComponent extends Component {
         <Input
           innerRef={(input) => { this.textInput = input }}
           {...this.props}
-          onFocus={this.onToggleActive}
-          onBlur={this.onToggleActive}
+          onFocus={this.onActionFocus}
+          onBlur={this.onActionBlur}
         />
 
         { (error || success) &&
