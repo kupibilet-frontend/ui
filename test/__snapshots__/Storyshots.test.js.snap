@@ -68,6 +68,225 @@ exports[`Storyshots Autocomplete Airport 1`] = `
 </div>
 `;
 
+exports[`Storyshots Blocks FilterSection 1`] = `
+<div
+  className="gkAUgx"
+>
+  <div
+    style={
+      Object {
+        "width": 252,
+      }
+    }
+  >
+    <section
+      className="kjZrJP"
+    >
+      <header
+        className="gUUHSd"
+      >
+        <div>
+          Пересадки
+        </div>
+        <div>
+          Сбросить
+        </div>
+      </header>
+      <div
+        className="fKdGeq"
+      >
+        <div>
+          <div>
+            <label
+              className="kJhvAq"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox cZIpJj"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  name=""
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text fsTWZL"
+                disabled={false}
+              >
+                Без пересадок
+              </span>
+            </label>
+          </div>
+          <div>
+            <label
+              className="kJhvAq"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox cZIpJj"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  name=""
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text fsTWZL"
+                disabled={false}
+              >
+                1 пересадка
+              </span>
+            </label>
+          </div>
+          <div>
+            <label
+              className="kJhvAq"
+              disabled={false}
+            >
+              <span
+                checked={false}
+                className="checkbox cZIpJj"
+                disabled={false}
+              >
+                <input
+                  checked={false}
+                  className="cjpCUo"
+                  disabled={false}
+                  name=""
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </span>
+              <span
+                className="label-text fsTWZL"
+                disabled={false}
+              >
+                2 и более
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        className="rc-collapse"
+        style={undefined}
+      >
+        <div
+          className="rc-collapse-item jczfhm CmSa"
+          style={undefined}
+        >
+          <div
+            aria-expanded={false}
+            className="rc-collapse-header"
+            onClick={[Function]}
+            role="tab"
+          >
+            <div
+              className="cUEikM"
+            >
+              <div
+                className="bQdmdY"
+              >
+                Пересадки
+              </div>
+              <svg
+                className="kszFRA icon-inherit-color hKVDhl"
+                size="xxsmall"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_arrow-down"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Blocks Styled Tabs 1`] = `
+<div
+  className="gkAUgx"
+>
+  <div
+    className="rc-tabs rc-tabs-top"
+    style={Object {}}
+  >
+    <div
+      className={undefined}
+    >
+      <span
+        aria-disabled={undefined}
+        className="fcYlur"
+        onFocus={[Function]}
+        role="tab"
+        tabIndex="0"
+      >
+        1. Бронирование
+      </span>
+      <span
+        aria-disabled={undefined}
+        className="ckfnKB"
+        onFocus={[Function]}
+        role="tab"
+        tabIndex="0"
+      >
+        2. Оплата
+      </span>
+      <span
+        aria-disabled={undefined}
+        className="fcYlur"
+        onFocus={[Function]}
+        role="tab"
+        tabIndex="0"
+      >
+        3. Получение билета
+      </span>
+    </div>
+    <div
+      className="rc-tabs-content rc-tabs-content-no-animated"
+      style={undefined}
+    >
+      <div
+        aria-hidden="true"
+        className="rc-tabs-tabpane rc-tabs-tabpane-inactive"
+        role="tabpanel"
+        style={undefined}
+      />
+      <div
+        aria-hidden="false"
+        className="rc-tabs-tabpane rc-tabs-tabpane-active"
+        role="tabpanel"
+        style={undefined}
+      >
+        Second tab
+      </div>
+      <div
+        aria-hidden="true"
+        className="rc-tabs-tabpane rc-tabs-tabpane-inactive"
+        role="tabpanel"
+        style={undefined}
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Box Defalut 1`] = `
 <div
   className="gkAUgx"
@@ -737,157 +956,6 @@ exports[`Storyshots Dropdown Defalut 1`] = `
       </div>
     </div>
   </onClickOutside-Mock-Decorator>
-</div>
-`;
-
-exports[`Storyshots FilterSection Default 1`] = `
-<div
-  className="gkAUgx"
->
-  <div
-    style={
-      Object {
-        "width": 252,
-      }
-    }
-  >
-    <section
-      className="kjZrJP"
-    >
-      <header
-        className="gUUHSd"
-      >
-        <div>
-          Пересадки
-        </div>
-        <div>
-          Сбросить
-        </div>
-      </header>
-      <div
-        className="fKdGeq"
-      >
-        <div>
-          <div>
-            <label
-              className="kJhvAq"
-              disabled={false}
-            >
-              <span
-                checked={false}
-                className="checkbox cZIpJj"
-                disabled={false}
-              >
-                <input
-                  checked={false}
-                  className="cjpCUo"
-                  disabled={false}
-                  name=""
-                  onChange={[Function]}
-                  type="checkbox"
-                />
-              </span>
-              <span
-                className="label-text fsTWZL"
-                disabled={false}
-              >
-                Без пересадок
-              </span>
-            </label>
-          </div>
-          <div>
-            <label
-              className="kJhvAq"
-              disabled={false}
-            >
-              <span
-                checked={false}
-                className="checkbox cZIpJj"
-                disabled={false}
-              >
-                <input
-                  checked={false}
-                  className="cjpCUo"
-                  disabled={false}
-                  name=""
-                  onChange={[Function]}
-                  type="checkbox"
-                />
-              </span>
-              <span
-                className="label-text fsTWZL"
-                disabled={false}
-              >
-                1 пересадка
-              </span>
-            </label>
-          </div>
-          <div>
-            <label
-              className="kJhvAq"
-              disabled={false}
-            >
-              <span
-                checked={false}
-                className="checkbox cZIpJj"
-                disabled={false}
-              >
-                <input
-                  checked={false}
-                  className="cjpCUo"
-                  disabled={false}
-                  name=""
-                  onChange={[Function]}
-                  type="checkbox"
-                />
-              </span>
-              <span
-                className="label-text fsTWZL"
-                disabled={false}
-              >
-                2 и более
-              </span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse"
-        style={undefined}
-      >
-        <div
-          className="rc-collapse-item jczfhm CmSa"
-          style={undefined}
-        >
-          <div
-            aria-expanded={false}
-            className="rc-collapse-header"
-            onClick={[Function]}
-            role="tab"
-          >
-            <div
-              className="cUEikM"
-            >
-              <div
-                className="bQdmdY"
-              >
-                Пересадки
-              </div>
-              <svg
-                className="kszFRA icon-inherit-color hKVDhl"
-                size="xxsmall"
-                style={undefined}
-              >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
 </div>
 `;
 
