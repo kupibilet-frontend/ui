@@ -7,7 +7,6 @@ export { default as Checkbox } from './components/checkbox'
 export { default as Icon } from './components/icons'
 
 // Base layout particles
-export { default as FilterSection } from './blocks/FilterSection'
 export { default as Box } from './components/box'
 export { default as ControlsGroup } from './components/controls-group'
 export { FluidContainer, FluidSection, Aside, SingleFluidSection } from './components/fluid-layout'
@@ -15,6 +14,7 @@ export { FluidContainer, FluidSection, Aside, SingleFluidSection } from './compo
 // Specific behaviour non-visual components
 export { default as Collapse } from './components/collapse'
 export { default as Dropdown } from './components/dropdown'
+export { Tabs, TabPane, TabBar, Tab } from './components/tabs'
 
 // Specific controls
 export { default as DateRange } from './components/date-range'
