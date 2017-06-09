@@ -1,6 +1,6 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
-import { text, object } from '@kadira/storybook-addon-knobs'
+import { storiesOf } from '@storybook/react'
+import { text, object } from '@storybook/addon-knobs'
 import 'whatwg-fetch'
 import _throttle from 'lodash/throttle'
 

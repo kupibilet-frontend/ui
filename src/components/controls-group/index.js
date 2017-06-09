@@ -1,11 +1,13 @@
-import React, { PropTypes } from 'react'
+// @flow
+import React from 'react'
 import { SwapContainer, SwapIcon, FlexContainer } from './styled'
 
+type neighboringInGroup = null | 'right' | 'both' | 'left'
 export type controlsGroupProps = {
-  neighboringInGroup: null | 'right' | 'both' | 'left'
+  neighboringInGroup: neighboringInGroup
 }
 
-const getNeighboringInGroup = (index, length) => {
+const getNeighboringInGroup = (index, length): neighboringInGroup => {
   if (index === 0) {
     return 'right'
   }
@@ -16,16 +18,20 @@ const getNeighboringInGroup = (index, length) => {
   return 'both'
 }
 
-class Swap extends React.Component {
-  static propTypes = {
-    onSwap: PropTypes.func,
-  }
+type onSwap = (Event) => void
 
+type SwapProps = {
+  onSwap?: onSwap,
+}
+
+/* eslint-disable react/prop-types */
+class Swap extends React.Component<{}, SwapProps, void> {
   static defaultProps = {
     onSwap: null,
   }
 
   render() {
+    // eslint-disable-next-line no-shadow
     const { onSwap } = this.props
 
     return (
@@ -43,7 +49,13 @@ class Swap extends React.Component {
   }
 }
 
-const ControlsGroup = ({ children, onSwap, ...props }) => {
+type ControlsGroupProps = {
+  onSwap?: onSwap,
+  children: Array<React.Element<*>>,
+}
+
+// eslint-disable-next-line no-shadow
+const ControlsGroup = ({ children, onSwap, ...props }: ControlsGroupProps) => {
   if (!children.length || children.length === 1) {
     return children
   }
@@ -68,11 +80,6 @@ const ControlsGroup = ({ children, onSwap, ...props }) => {
       }
     </FlexContainer>
   )
-}
-
-ControlsGroup.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  onSwap: PropTypes.func,
 }
 
 ControlsGroup.defaultProps = {

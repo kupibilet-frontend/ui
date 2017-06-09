@@ -4,16 +4,16 @@ export default function cssArrow({
   color = '#FFF',
   width = 4,
   height = 8,
-  fromDirection = 'left'
+  fromDirection = 'left',
 }) {
   return css`
     &:after {
       ${fromDirection}: 100%;
-    	top: 50%;
+      top: 50%;
       height: 0;
       width: 0;
       position: absolute;
-      border: solid ${ height / 2 }px transparent;
+      border: solid ${height / 2}px transparent;
       content: " ";
       pointer-events: none;
       border-${fromDirection}-color: ${color};

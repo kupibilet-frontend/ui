@@ -1,56 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Autocomplete Small Icon with stroke 1`] = `
+exports[`Storyshots Autocomplete Airport 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
-    className="PNRhD"
+    style={
+      Object {
+        "width": 244,
+      }
+    }
   >
     <div
-      className="react-autosuggest__container"
+      className="eekoGJ"
     >
       <div
-        className="eBWnjb"
+        className="react-autosuggest__container"
       >
-        <input
-          aria-activedescendant={null}
-          aria-autocomplete="list"
-          aria-expanded={false}
-          aria-haspopup={false}
-          aria-owns="react-autowhatever-1"
-          autoComplete="off"
-          className="react-autosuggest__input fVzyCO"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Туда"
-          role="combobox"
-          type="text"
-          value=""
-        />
         <div
-          className="ijgMBS"
+          className="bSFwua"
         >
+          <textarea
+            aria-activedescendant={null}
+            aria-autocomplete="list"
+            aria-expanded={false}
+            aria-haspopup={false}
+            aria-owns="react-autowhatever-1"
+            autoCapitalize="sentences"
+            autoComplete="off"
+            autoFocus={true}
+            className="react-autosuggest__input hRSdhE"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Туда"
+            role="combobox"
+            rows="1"
+            type="text"
+            value=""
+            wrap="off"
+          />
           <div
-            className="kwubfY"
+            className="airport-input__geo jaRuHE"
+          >
+            <div
+              className="bTVxuH"
+            >
+              
+            </div>
+            
+            
+          </div>
+          <div
+            className="hZqNep"
           >
             
           </div>
-          
-          
         </div>
         <div
-          className="kuoAbM"
-        >
-          
-        </div>
+          className="react-autosuggest__suggestions-container"
+          id="react-autowhatever-1"
+        />
       </div>
-      <div
-        className="react-autosuggest__suggestions-container"
-        id="react-autowhatever-1"
-      />
     </div>
   </div>
 </div>
@@ -58,10 +70,10 @@ exports[`Storyshots Autocomplete Small Icon with stroke 1`] = `
 
 exports[`Storyshots Box Defalut 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
-    className="hNYgbG"
+    className="kjZrJP"
   >
     <p>
       box content
@@ -72,10 +84,10 @@ exports[`Storyshots Box Defalut 1`] = `
 
 exports[`Storyshots Buttons Default 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <button
-    className="no-global edhPud"
+    className="no-global hQyXOc"
     disabled={undefined}
     size="normal"
   >
@@ -91,10 +103,10 @@ exports[`Storyshots Buttons Default 1`] = `
 
 exports[`Storyshots Buttons Disabled 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <button
-    className="no-global dvibMd"
+    className="no-global iRCAqb"
     disabled={true}
     size="normal"
   >
@@ -110,10 +122,10 @@ exports[`Storyshots Buttons Disabled 1`] = `
 
 exports[`Storyshots Buttons Icon-only button 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <button
-    className="no-global dIccBA"
+    className="no-global lnaIAb"
     disabled={undefined}
     size="large"
   >
@@ -137,10 +149,10 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
 
 exports[`Storyshots Buttons Sizes 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <button
-    className="no-global jqzSnG"
+    className="no-global gafipK"
     disabled={undefined}
     size="large"
   >
@@ -156,10 +168,10 @@ exports[`Storyshots Buttons Sizes 1`] = `
 
 exports[`Storyshots Buttons With icons 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <button
-    className="no-global kMFeZO"
+    className="no-global jCAGTR"
     disabled={undefined}
     size="normal"
   >
@@ -203,58 +215,62 @@ exports[`Storyshots Buttons With icons 1`] = `
 
 exports[`Storyshots Checkbox default 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
-  <label
-    className="eiMGFu"
-    disabled={false}
-  >
-    <span
-      checked={false}
-      className="checkbox gJhUxw"
+  <div>
+    <label
+      className="kJhvAq"
       disabled={false}
     >
-      <input
+      <span
         checked={false}
-        className="cjpCUo"
+        className="checkbox cZIpJj"
         disabled={false}
-        onChange={[Function]}
-        type="checkbox"
-      />
-    </span>
-    <span
-      className="label-text cPjOWw"
-      disabled={false}
-    >
-      Авиабилеты
-    </span>
-  </label>
+      >
+        <input
+          checked={false}
+          className="cjpCUo"
+          disabled={false}
+          name=""
+          onChange={[Function]}
+          type="checkbox"
+        />
+      </span>
+      <span
+        className="label-text fsTWZL"
+        disabled={false}
+      >
+        Авиабилеты
+      </span>
+    </label>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Checkbox disabled 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <label
-    className="dsvJUH"
+    className="jgsyDm"
     disabled={true}
   >
     <span
       checked={false}
-      className="checkbox fhciYu"
+      className="checkbox eMVJVt"
       disabled={true}
     >
       <input
         checked={false}
         className="cjpCUo"
         disabled={true}
+        name=""
         onChange={[Function]}
         type="checkbox"
       />
     </span>
     <span
-      className="label-text faSGNd"
+      className="label-text bqccLE"
       disabled={true}
     >
       Авиабилеты
@@ -265,7 +281,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
 
 exports[`Storyshots Collapse Accordion 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
     style={
@@ -324,7 +340,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
 
 exports[`Storyshots Collapse Default 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
     style={
@@ -383,7 +399,7 @@ exports[`Storyshots Collapse Default 1`] = `
 
 exports[`Storyshots Collapse Default active panel 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
     style={
@@ -454,28 +470,45 @@ exports[`Storyshots Collapse Default active panel 1`] = `
 </div>
 `;
 
-exports[`Storyshots ControlsGroup Small Icon with stroke 1`] = `
+exports[`Storyshots ControlsGroup Different controls group 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
-    className="igACGM"
+    className="jNIfTc"
   >
-    <div
-      className="cohwKP"
+    <button
+      className="no-global clavYb"
+      disabled={undefined}
+      size="large"
     >
-      <input
-        className="fVzyCO"
+      <span
+        className="ieBWQc"
+        size="large"
+      >
+        Пойти
+      </span>
+    </button>
+    <div
+      className="kxgwJA"
+    >
+      <textarea
+        autoCapitalize="sentences"
+        autoComplete="off"
+        className="dgkqyf"
         onBlur={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
         readOnly={true}
+        rows="1"
         value="Шереметьево"
+        wrap="off"
       />
       <div
-        className="ijgMBS"
+        className="airport-input__geo jagyzS"
       >
         <div
-          className="kwubfY"
+          className="bTVxuH"
         >
           Шереметьево
         </div>
@@ -483,46 +516,100 @@ exports[`Storyshots ControlsGroup Small Icon with stroke 1`] = `
         
       </div>
       <div
-        className="kuoAbM"
+        className="WJZuz"
+      >
+        SVO
+      </div>
+    </div>
+    <button
+      className="no-global cUsjbC"
+      disabled={undefined}
+      size="large"
+    >
+      <span
+        className="ieBWQc"
+        size="large"
+      >
+        Найти
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ControlsGroup Inputs group 1`] = `
+<div
+  className="gkAUgx"
+>
+  <div
+    className="jNIfTc"
+  >
+    <div
+      className="jIhVCZ"
+    >
+      <textarea
+        autoCapitalize="sentences"
+        autoComplete="off"
+        className="etbSgC"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        readOnly={true}
+        rows="1"
+        value="Шереметьево"
+        wrap="off"
+      />
+      <div
+        className="airport-input__geo jaRuHE"
+      >
+        <div
+          className="bTVxuH"
+        >
+          Шереметьево
+        </div>
+        
+        
+      </div>
+      <div
+        className="WJZuz"
       >
         SVO
       </div>
     </div>
     <div
-      className="cUXQRV"
+      className="bgXCBx"
       onClick={[Function]}
-      onMouseLeave={[Function]}
-      onMouseOver={[Function]}
     >
-      <div
-        className="controls-group__swap fPnGim"
+      <svg
+        className="controls-group__swap jyPBLm icon-inherit-color hKVDhl"
+        size="xxsmall"
+        style={undefined}
       >
-        <svg
-          className="ixLoe"
-          size="xxsmall"
-          style={undefined}
-        >
-          <use
-            xlinkHref="#kb_left-right"
-          />
-        </svg>
-      </div>
+        <use
+          xlinkHref="#kb_left-right"
+        />
+      </svg>
     </div>
     <div
-      className="chgpbN"
+      className="eByEHQ"
     >
-      <input
-        className="fVzyCO"
+      <textarea
+        autoCapitalize="sentences"
+        autoComplete="off"
+        className="hjCJqY"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        rows="1"
         value="Несуществующий город"
+        wrap="off"
       />
       <div
-        className="ijgMBS"
+        className="airport-input__geo jagyzS"
       >
         <div
-          className="kwubfY"
+          className="bTVxuH"
         >
           Несуществующий город
         </div>
@@ -530,7 +617,7 @@ exports[`Storyshots ControlsGroup Small Icon with stroke 1`] = `
         
       </div>
       <div
-        className="kuoAbM"
+        className="hZqNep"
       >
         
       </div>
@@ -541,10 +628,10 @@ exports[`Storyshots ControlsGroup Small Icon with stroke 1`] = `
 
 exports[`Storyshots DateRange DateRange 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
-    className="jStPWm"
+    className="FxZwt"
   >
     <div
       className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
@@ -623,9 +710,39 @@ exports[`Storyshots DateRange DateRange 1`] = `
 </div>
 `;
 
+exports[`Storyshots Dropdown Defalut 1`] = `
+<div
+  className="gkAUgx"
+>
+  <onClickOutside-Mock-Decorator>
+    <div
+      className="lYJvF"
+    >
+      <div
+        onClick={[Function]}
+      >
+        click to open  
+        <button
+          className="no-global hQyXOc"
+          disabled={undefined}
+          size="normal"
+        >
+          <span
+            className="ieBWQc"
+            size="normal"
+          >
+            click
+          </span>
+        </button>
+      </div>
+    </div>
+  </onClickOutside-Mock-Decorator>
+</div>
+`;
+
 exports[`Storyshots FilterSection Default 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <div
     style={
@@ -635,10 +752,10 @@ exports[`Storyshots FilterSection Default 1`] = `
     }
   >
     <section
-      className="hNYgbG"
+      className="kjZrJP"
     >
       <header
-        className="jNGgbk"
+        className="gUUHSd"
       >
         <div>
           Пересадки
@@ -653,24 +770,25 @@ exports[`Storyshots FilterSection Default 1`] = `
         <div>
           <div>
             <label
-              className="eiMGFu"
+              className="kJhvAq"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox gJhUxw"
+                className="checkbox cZIpJj"
                 disabled={false}
               >
                 <input
                   checked={false}
                   className="cjpCUo"
                   disabled={false}
+                  name=""
                   onChange={[Function]}
                   type="checkbox"
                 />
               </span>
               <span
-                className="label-text cPjOWw"
+                className="label-text fsTWZL"
                 disabled={false}
               >
                 Без пересадок
@@ -679,24 +797,25 @@ exports[`Storyshots FilterSection Default 1`] = `
           </div>
           <div>
             <label
-              className="eiMGFu"
+              className="kJhvAq"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox gJhUxw"
+                className="checkbox cZIpJj"
                 disabled={false}
               >
                 <input
                   checked={false}
                   className="cjpCUo"
                   disabled={false}
+                  name=""
                   onChange={[Function]}
                   type="checkbox"
                 />
               </span>
               <span
-                className="label-text cPjOWw"
+                className="label-text fsTWZL"
                 disabled={false}
               >
                 1 пересадка
@@ -705,24 +824,25 @@ exports[`Storyshots FilterSection Default 1`] = `
           </div>
           <div>
             <label
-              className="eiMGFu"
+              className="kJhvAq"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox gJhUxw"
+                className="checkbox cZIpJj"
                 disabled={false}
               >
                 <input
                   checked={false}
                   className="cjpCUo"
                   disabled={false}
+                  name=""
                   onChange={[Function]}
                   type="checkbox"
                 />
               </span>
               <span
-                className="label-text cPjOWw"
+                className="label-text fsTWZL"
                 disabled={false}
               >
                 2 и более
@@ -746,7 +866,7 @@ exports[`Storyshots FilterSection Default 1`] = `
             role="tab"
           >
             <div
-              className="ifoCPw"
+              className="cUEikM"
             >
               <div
                 className="bQdmdY"
@@ -754,7 +874,7 @@ exports[`Storyshots FilterSection Default 1`] = `
                 Пересадки
               </div>
               <svg
-                className="icon kszFRA crzUUw"
+                className="kszFRA icon-inherit-color hKVDhl"
                 size="xxsmall"
                 style={undefined}
               >
@@ -771,9 +891,94 @@ exports[`Storyshots FilterSection Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Fluid layout Single column 1`] = `
+<div
+  className="gkAUgx"
+>
+  <div
+    style={
+      Object {
+        "width": "100vw",
+      }
+    }
+  >
+    <div
+      className="eBTYHE"
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "background": "rgba(35, 194, 86, .4)",
+            "display": "flex",
+            "height": 140,
+            "justifyContent": "center",
+          }
+        }
+      >
+        Main content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Fluid layout Two columns 1`] = `
+<div
+  className="gkAUgx"
+>
+  <div
+    style={
+      Object {
+        "width": "100vw",
+      }
+    }
+  >
+    <div
+      className="kVZtLS"
+    >
+      <div
+        className="hRqBrY"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "background": "rgba(230, 73, 38, .4)",
+              "display": "flex",
+              "height": 140,
+              "justifyContent": "center",
+            }
+          }
+        >
+          Sidebar
+        </div>
+      </div>
+      <div
+        className="bnRtsO"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "background": "rgba(35, 194, 86, .4)",
+              "display": "flex",
+              "height": 140,
+              "justifyContent": "center",
+            }
+          }
+        >
+          Main content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Icon Medium Icon with stroke & fill 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <svg
     className="bmlaaq"
@@ -789,7 +994,7 @@ exports[`Storyshots Icon Medium Icon with stroke & fill 1`] = `
 
 exports[`Storyshots Icon Small Icon with stroke 1`] = `
 <div
-  className="hMQnet"
+  className="gkAUgx"
 >
   <svg
     className="bXGNbG"
@@ -800,5 +1005,83 @@ exports[`Storyshots Icon Small Icon with stroke 1`] = `
       xlinkHref="#kb_checkbox"
     />
   </svg>
+</div>
+`;
+
+exports[`Storyshots PassengerPicker Defalut 1`] = `
+<div
+  className="gkAUgx"
+>
+  <div
+    className="dIOBAC"
+  >
+    <div>
+      <div
+        className="kdTGBA"
+      >
+        Взрослые
+      </div>
+      <div
+        className="cqvtdv"
+      >
+        До 2 лет, без места
+      </div>
+    </div>
+    <div
+      className="eMVHAg"
+    >
+      <span
+        className="eSUyJK"
+      >
+        1
+      </span>
+      <div
+        className="gONDlG"
+      >
+        <button
+          className="no-global cIRAqJ ekaeqP"
+          disabled={true}
+          onClick={[Function]}
+          size="normal"
+        >
+          <span
+            className="YhApM"
+            size="normal"
+          >
+            <svg
+              className="jOglth"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_minus"
+              />
+            </svg>
+          </span>
+        </button>
+        <button
+          className="no-global cIRAqJ gcYWkW"
+          disabled={false}
+          onClick={[Function]}
+          size="normal"
+        >
+          <span
+            className="YhApM"
+            size="normal"
+          >
+            <svg
+              className="jOglth"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_plus"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;

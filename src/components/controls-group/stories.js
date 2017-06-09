@@ -1,7 +1,7 @@
 import React from 'react'
-import { storiesOf, action } from '@kadira/storybook'
+import { storiesOf, action } from '@storybook/react'
 
-import { text } from '@kadira/storybook-addon-knobs'
+import { text } from '@storybook/addon-knobs'
 import updateKnob from '../../utils/updateKnob'
 
 import AirportInput from '../airport-input'

@@ -1,6 +1,6 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
-import { text, boolean } from '@kadira/storybook-addon-knobs'
+import { storiesOf } from '@storybook/react'
+import { text, boolean } from '@storybook/addon-knobs'
 import updateKnob from '../../utils/updateKnob'
 
 import Checkbox from './index'
