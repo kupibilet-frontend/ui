@@ -1,5 +1,8 @@
 *
 !lib/**/*.js
 !src/**/*.js
+!blocks/**/*.js
+!components/**/*.js
+!utils/**/*.js
 **/*stories*
 flow-typed
