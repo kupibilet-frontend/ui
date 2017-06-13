@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`media-queries 1`] = `
+Array [
+  "
+    .class {
+      ",
+  "
+    @media screen and (max-width: 599px) {
+      ",
+  "
+        background: black;
+
+        &:hover {
+          background: white;
+        }
+      ",
+  "
+    }
+  ",
+  "
+
+      ",
+  "
+    @media screen and (min-width: 600px) and (max-width: 999px) {
+      ",
+  "
+        background: black;
+
+        &:hover {
+          background: white;
+        }
+      ",
+  "
+    }
+  ",
+  "
+
+      ",
+  "
+    @media screen and (min-width: 1000px) {
+      ",
+  "
+        background: black;
+
+        &:hover {
+          background: white;
+        }
+      ",
+  "
+    }
+  ",
+  "
+    }
+  ",
+]
+`;
