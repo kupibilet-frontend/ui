@@ -6,7 +6,7 @@ Array [
     .class {
       ",
   "
-    @media (max-width: 639px) {
+    @media screen and (max-width: 599px) {
       ",
   "
         background: black;
@@ -22,7 +22,7 @@ Array [
 
       ",
   "
-    @media (max-width: 768px) {
+    @media screen and (min-width: 600px) and (max-width: 999px) {
       ",
   "
         background: black;
@@ -38,7 +38,7 @@ Array [
 
       ",
   "
-    @media (min-width: 769px) {
+    @media screen and (min-width: 1000px) {
       ",
   "
         background: black;
