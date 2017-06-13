@@ -25,3 +25,6 @@ export { default as AirportSuggest } from './components/airport-suggest'
 export { default as Autocomplete } from './components/autocomplete'
 
 export { default as PassengerPicker } from './components/passenger'
+
+// Utils
+export { default as media } from './utils/media-queries'
