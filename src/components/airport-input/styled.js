@@ -161,7 +161,7 @@ export const Spell = styled.span`
 
   ${fontStyle}
   font-weight: 600;
-  color: ${({ theme }) => theme.color.textLight}
+  color: ${({ theme }) => theme.color.textLight};
 `
 
 export const ValuePlaceholder = styled.div`

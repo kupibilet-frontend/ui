@@ -23,7 +23,7 @@ const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon, neighbori
 
   // Symetric padding around icon-only button for circle effect
   if (icon) {
-    return `padding: ${typographyRelatedPadding}px`
+    return `padding: ${typographyRelatedPadding}px;`
   }
 
   /* eslint-disable no-param-reassign, no-multi-assign */
@@ -53,12 +53,12 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
   if (neighboringInGroup === 'both') {
     return ''
   } else if (neighboringInGroup === 'left') {
-    return `border-radius: 0 ${SIZES[size]}px ${SIZES[size]}px 0`
+    return `border-radius: 0 ${SIZES[size]}px ${SIZES[size]}px 0;`
   } else if (neighboringInGroup === 'right') {
-    return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px`
+    return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px;`
   }
 
-  return `border-radius: ${SIZES[size]}px`
+  return `border-radius: ${SIZES[size]}px;`
 }
 
 export const StyledButton = styled.button`
@@ -107,7 +107,7 @@ export const StyledButtonText = styled.span`
   display: inline-block;
   vertical-align: top;
 
-  padding: ${({ size, hasLeftIcon, hasRightIcon }) => calculateTextPadding(size, hasLeftIcon, hasRightIcon)}
+  padding: ${({ size, hasLeftIcon, hasRightIcon }) => calculateTextPadding(size, hasLeftIcon, hasRightIcon)};
 `
 
 export const IconWrap = styled.span`
