@@ -1,6 +1,6 @@
 {
   "name": "@kupibilet/ui",
-  "version": "1.4.16",
+  "version": "2.0.0",
   "description": "UI kit for kupibilet web app",
   "main": "index.js",
   "scripts": {
