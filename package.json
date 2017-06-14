@@ -51,7 +51,7 @@
     "raw-loader": "~0.5.1",
     "react": "~15.5.4",
     "react-addons-shallow-compare": "~15.5.2",
-    "react-dom": "~15.5.4",
+    "react-dom": "~15.6.0",
     "react-test-renderer": "^15.5.4",
     "styled-components": "^2.0.1",
     "stylelint-config-kupibilet": "^3.1.2",
