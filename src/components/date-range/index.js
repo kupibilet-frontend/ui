@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
+import moment from 'moment'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
 import * as consts from '@kupibilet/react-dates/constants'
@@ -50,6 +51,7 @@ class DateRangePickerWrapper extends React.PureComponent {
   state = {
     focusedInput: null,
     hoveredDate: null,
+    calendarMonthCursor: moment(),
   }
 
   componentWillReceiveProps(nextProps) {
@@ -66,9 +68,40 @@ class DateRangePickerWrapper extends React.PureComponent {
     })
   }
 
+  onPrevMonthClick = () => {
+    const calendarMonthCursor = moment(this.state.calendarMonthCursor)
+    calendarMonthCursor.subtract(1, 'months')
+
+    this.setState({
+      calendarMonthCursor: moment.max(calendarMonthCursor, moment()),
+    })
+
+    if (this.props.onPrevMonthClick) {
+      this.props.onPrevMonthClick()
+    }
+  }
+
+  onNextMonthClick = () => {
+    const calendarMonthCursor = moment(this.state.calendarMonthCursor)
+    calendarMonthCursor.add(1, 'months')
+
+    this.setState({
+      calendarMonthCursor: moment.min(calendarMonthCursor, moment().add(1, 'years')),
+    })
+
+    if (this.props.onNextMonthClick) {
+      this.props.onNextMonthClick()
+    }
+  }
+
   getDisplayFormat() {
     const { displayFormat } = this.props
     return typeof displayFormat === 'string' ? displayFormat : displayFormat()
+  }
+
+  initialVisibleMonth = () => {
+    const { initialVisibleMonth } = this.props
+    return initialVisibleMonth ? initialVisibleMonth() : this.state.calendarMonthCursor
   }
 
   modifiers = {
@@ -144,6 +177,9 @@ class DateRangePickerWrapper extends React.PureComponent {
         <DateRangePicker
           {...this.props}
           onDayHover={this.onDayHover}
+          onPrevMonthClick={this.onPrevMonthClick}
+          onNextMonthClick={this.onNextMonthClick}
+          initialVisibleMonth={this.initialVisibleMonth}
           modifiers={this.modifiers}
           renderInputText={this.renderInputText}
           customArrowIcon={<span />}
