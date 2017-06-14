@@ -15,7 +15,7 @@
     "postinstall": "move-bin || true",
     "build": "NODE_ENV=build babel src/ -d ./ --ignore stories",
     "prepublish": "in-publish && npm run build --silent || not-in-publish",
-    "precommit": "lint-staged"
+    "prepush": "lint-staged"
   },
   "repository": {
     "type": "git",
