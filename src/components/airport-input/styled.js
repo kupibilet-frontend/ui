@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
 import { control } from '../../utils/reset'
 import placeholder from '../../utils/placeholder'
+import { switchTransition } from '../../utils/transitions'
 
 const fontStyle = css`
   font-family: inherit;
@@ -28,11 +29,12 @@ export const Container = styled.div`
   min-width: 180px;
 
   display: flex;
-  align-items: stretch;
+  align-items: baseline;
 
   position: relative;
 
   box-sizing: border-box;
+  ${switchTransition}
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
   ${({ neighboringInGroup }) => {
@@ -46,6 +48,7 @@ export const Container = styled.div`
 
     return ''
   }}
+  overflow: hidden;
 
   z-index: 1;
   ${({ neighboringInGroup }) => (
@@ -70,10 +73,22 @@ export const Container = styled.div`
 
     return ''
   }}
+
+  &:hover {
+    border-color: ${({ theme }) => theme.color.secondary};
+  }
 `
 
-export const Input = styled.input`
+export const Input = styled.textarea`
   ${control}
+
+  &, &:focus {
+    border: none;
+    outline: none;
+    resize: none;
+  }
+  white-space: nowrap;
+  overflow: hidden;
 
   position: absolute;
   left: 0;
@@ -82,14 +97,14 @@ export const Input = styled.input`
   bottom: 0;
   width: 100%;
   height: 100%;
-  padding: 10px 10px;
+  padding: 10px 16px;
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
-      return 'padding-right: 16px;'
+      return 'padding-right: 10px;'
     } else if (neighboringInGroup === 'left') {
-      return 'padding-left: 16px;'
-    } else if (neighboringInGroup !== 'both') {
-      return 'padding: 10px 16px;'
+      return 'padding-left: 10px;'
+    } else if (neighboringInGroup === 'both') {
+      return 'padding: 10px;'
     }
 
     return ''
@@ -101,7 +116,8 @@ export const Input = styled.input`
 
   ${placeholder`
     ${fontStyle}
-    color: ${({ theme }) => theme.color.miscDark};
+    color: ${({ theme }) => theme.color.textLight};
+    opacity: 1;
   `}
 
   &:focus ~ .airport-input__geo .airport-input__spell {
@@ -111,6 +127,8 @@ export const Input = styled.input`
 
 export const Geo = styled.div`
   pointer-events: none;
+  user-select: none;
+
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -118,19 +136,22 @@ export const Geo = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  padding: 10px 0;
+  padding: 10px 0 10px;
   padding-left: ${({ neighboringInGroup }) => (
-    neighboringInGroup === 'left' || !neighboringInGroup ? '16px' : '10px'
+    ['left', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
   )};
 `
 
 // Use same component as in input due specific text rendering in inputs
-export const Spell = styled.input`
+export const Spell = styled.span`
   ${control}
 
   display: none;
 
   pointer-events: none;
+  user-select: none;
+  white-space: pre;
+
   flex-grow: 1;
   flex-shrink: 0;
 
@@ -140,7 +161,7 @@ export const Spell = styled.input`
 
   ${fontStyle}
   font-weight: 600;
-  color: ${({ theme }) => theme.color.textLight}
+  color: ${({ theme }) => theme.color.textLight};
 `
 
 export const ValuePlaceholder = styled.div`
@@ -149,15 +170,18 @@ export const ValuePlaceholder = styled.div`
 
   ${fontStyle}
   font-weight: 600;
+  user-select: none;
 `
 
-export const GeoLabel = styled.input`
+export const GeoLabel = styled.span`
   ${control}
   ${fontStyle}
+  user-select: none;
 `
 
 export const Code = styled.div`
   pointer-events: none;
+  user-select: none;
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
@@ -165,10 +189,11 @@ export const Code = styled.div`
   ${fontStyle}
   font-size: 14px;
   color: ${({ theme }) => theme.color.text};
+  background: ${({ theme }) => theme.color.background};
 
-  padding: 11px 10px 9px 9px;
+  padding: 10px 10px 10px 9px;
   padding-right: ${({ neighboringInGroup }) => (
-    neighboringInGroup === 'right' || !neighboringInGroup ? '16px' : '10px'
+    ['right', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
   )};
 
   &:not(:empty)::before {

@@ -1,4 +1,4 @@
-// flow-typed signature: 31e661465543c787dfbb62475e874e5b
+// flow-typed signature: 3a85efa80e4b59ede9fcaa98dac02895
 // flow-typed version: <<STUB>>/@kadira/react-storybook-addon-info_v~3.4.0/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

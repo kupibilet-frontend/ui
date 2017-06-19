@@ -10,8 +10,9 @@ type Props = {
   area: string,
   spell: string,
   IATACode: string,
-  onFocus: (Event) => void,
-  onBlur: (Event) => void,
+  onFocus?: (SyntheticInputEvent) => void,
+  onBlur?: (SyntheticInputEvent) => void,
+  onKeyDown?: (SyntheticKeyboardEvent) => void,
   neighboringInGroup: null | 'left' | 'right' | 'both',
   meta?: {
     error?: string,
@@ -39,19 +40,34 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
   }
   /* eslint-enable react/sort-comp */
 
-  onFocus = (e: Event & {target: HTMLInputElement}) => {
+  onFocus = (e: SyntheticInputEvent) => {
     if (this.props.onFocus) {
       this.props.onFocus(e)
     }
     this.setState({ focused: true })
-    e.target.select()
+    e.persist()
+    setTimeout(() => {
+      e.target.select()
+    })
   }
 
-  onBlur = (e: Event) => {
+  onBlur = (e: SyntheticInputEvent) => {
     if (this.props.onBlur) {
       this.props.onBlur(e)
     }
     this.setState({ focused: false })
+  }
+
+  onKeyDown = (e: SyntheticKeyboardEvent) => {
+    const { onKeyDown } = this.props
+
+    if (e.key === 'Enter') {
+      e.preventDefault()
+    }
+
+    if (onKeyDown) {
+      onKeyDown(e)
+    }
   }
 
   focus = () => {
@@ -87,21 +103,32 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           {...props}
           ref={this.onRef}
           value={value}
+          neighboringInGroup={neighboringInGroup}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
+          onKeyDown={this.onKeyDown}
+          autoCapitalize="sentences"
+          autoComplete="off"
+          rows="1"
+          wrap="off"
+          spellcheck="false"
         />
-        <Geo className="airport-input__geo">
+        <Geo className="airport-input__geo" neighboringInGroup={neighboringInGroup}>
           <ValuePlaceholder>
             { value }
           </ValuePlaceholder>
           { value && spell &&
-            <Spell className="airport-input__spell" value={spell} readOnly />
+            <Spell className="airport-input__spell">
+              { spell }
+            </Spell>
           }
           { area &&
-            <GeoLabel value={`, ${area}`} readOnly />
+            <GeoLabel>
+              {`, ${area}`}
+            </GeoLabel>
           }
         </Geo>
-        <Code>
+        <Code neighboringInGroup={neighboringInGroup}>
           { IATACode }
         </Code>
       </Container>

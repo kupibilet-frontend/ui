@@ -29,7 +29,7 @@ export default styled.div`
   .react-autosuggest__suggestions-container--open {
     display: block;
     position: relative;
-    top: -1px;
+    top: 3px;
   }
   .react-autosuggest__suggestions-list {
     margin: 0;
@@ -42,6 +42,7 @@ export default styled.div`
     max-width: 540px;
     ${shadowSmall}
     ${borderSmall}
+    overflow: hidden;
     z-index: 2;
   }
   .react-autosuggest__suggestion {

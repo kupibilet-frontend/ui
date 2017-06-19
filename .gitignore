@@ -1,6 +1,12 @@
 .DS_store
 *.log
+
+# Ignore builded modules
+/index.js
 lib/*
+blocks/*
+components/*
+utils/*
 
 node_modules/
 storybook-static/

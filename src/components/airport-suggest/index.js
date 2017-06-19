@@ -10,6 +10,7 @@ export default class AirportSuggest extends React.PureComponent {
     IATACode: PropTypes.string.isRequired,
     isCity: PropTypes.bool.isRequired,
     isGeoSuggest: PropTypes.bool.isRequired,
+    isNested: PropTypes.bool.isRequired,
   }
 
   static defaultProps = {
@@ -17,15 +18,14 @@ export default class AirportSuggest extends React.PureComponent {
   }
 
   render() {
-    const { value, area, isCity, IATACode, isGeoSuggest } = this.props
+    const { value, area, isCity, IATACode, isGeoSuggest, isNested } = this.props
     const isGeoCity = isCity && isGeoSuggest
-    const isAirport = !isCity
 
     return (
       <AirportSuggestContainer>
-        { isGeoCity && isAirport &&
+        { isGeoCity || isNested &&
           <SuggestIcon>
-            <Icon size="xxsmall" name={isGeoCity ? 'location' : 'plane'} fill="miscDarker" />
+            <Icon size="normal" name={isGeoCity ? 'location' : 'dot'} inheritColor />
           </SuggestIcon>
         }
         <Geo>

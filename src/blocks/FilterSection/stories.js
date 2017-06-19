@@ -1,10 +1,10 @@
 /* eslint-disable no-confusing-arrow */
 
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import FilterSection from './index'
-import Checkbox from '../../components/checkbox'
+import { FilterSection } from '../'
+import { Checkbox } from '../../'
 
 const CheckboxWithBorder = styled(Checkbox)`
   position: relative;
@@ -36,8 +36,8 @@ const WithBorder = styled.div`
   }
 `
 
-storiesOf('FilterSection', module)
-  .addWithInfo('Default', () => (
+storiesOf('Blocks', module)
+  .addWithInfo('FilterSection', () => (
     <div style={{ width: 252 }}>
       <FilterSection
         headerLeft={<div>Пересадки</div>}

@@ -1,4 +1,4 @@
-// flow-typed signature: fd6bf30fad0ae6a4462250b75042d992
+// flow-typed signature: 13f2546e99a493d32bac7d28a240affb
 // flow-typed version: <<STUB>>/babel-polyfill_v~6.23.0/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

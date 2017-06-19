@@ -1,13 +1,74 @@
-import React, { PropTypes } from 'react'
-import { StyledSlider, StyledHandle, StyledProgressBar, StyledPitComponent } from './styled'
+// @flow
 
+import React, { PureComponent } from 'react'
+import initial from 'lodash/initial'
+import inRange from 'lodash/inRange'
 
-class Slider extends React.Component {
-  constructor(props) {
+import RangeBar from './RangeBar'
+import HandleWithToolTip from './HandleWithTooltip'
+
+import {
+  StyledSlider,
+  StyledHandle,
+  StyledProgressBar,
+} from './styled'
+
+type SliderData = {
+  [timeStamp: number]: number,
+}
+
+type DefaultProps = {
+  pitPoints: string[],
+  snap: boolean,
+  snapPoints: string[],
+  handle: StyledHandle,
+  progressBar: StyledProgressBar,
+  pitComponent: RangeBar,
+  sliderData: SliderData,
+}
+
+type Props = {
+  min: number,
+  max: number,
+  snap: boolean,
+  values: number[],
+  sliderData: SliderData,
+  onChange: Function,
+  displayValue: string | ((val: number) => string)
+}
+
+type State = {
+  values: number[],
+  pitPoints: number[],
+  snapPoints: number[],
+  pitHeight: any,
+  pitWidth: any,
+}
+
+export default class Slider extends PureComponent<DefaultProps, Props, State> {
+  constructor(props: Props) {
     super(props)
 
+    const sliderKeys = Object.keys(props.sliderData).map(Number)
+    const {
+      min = Math.min(...sliderKeys),
+      max = Math.max(...sliderKeys),
+      values,
+    } = props
+
+    // values can be an empty string
+    const vals = values || [min, max]
+
+    // clamp values
+    const safeValues = [
+      Math.max(vals[0], min),
+      Math.min(vals[1], max),
+    ]
+
     this.state = {
-      values: props.values || [0],
+      min,
+      max,
+      values: safeValues,
       pitPoints: this.getPitPoints(props.sliderData),
       snapPoints: this.getSnapPoints(props),
       pitHeight: this.getPitHeight(props.sliderData),
@@ -15,35 +76,31 @@ class Slider extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     if (this.props.sliderData !== nextProps.sliderData) {
       this.setState({
         pitPoints: this.getPitPoints(nextProps.sliderData),
         pitHeight: this.getPitHeight(nextProps.sliderData),
         pitWidth: this.getPitWidth(nextProps.sliderData),
       })
-    }
-
-    if (this.props.step !== nextProps.step) {
+    } else if (this.props.values !== nextProps.values) {
+      const { min, max } = this.state
       this.setState({
-        snapPoints: this.getSnapPoints(nextProps),
+        // fallback is used when filter is reset
+        values: nextProps.values || [min, max],
       })
     }
   }
 
-  getPitPoints = (sliderData) => Object.keys(sliderData)
+  getPitPoints = (sliderData: SliderData) =>
+    initial(Object.keys(sliderData)).map(Number)
 
-  getSnapPoints = (props) => {
-    const snapPointsArray = [props.values[0]] // чтобы ползунок возвращался на первую позицию
-    let i = props.min
-    while (i < props.max) {
-      snapPointsArray.push(i += props.step)
-    }
-    return snapPointsArray
-  }
+  getSnapPoints = (props: Props) =>
+    Object.keys(props.sliderData).map(Number)
 
-  getPitHeight = (sliderData) => {
-    const maxHeight = Math.max(...Object.values(sliderData))
+  getPitHeight = (sliderData: SliderData) => {
+    const initialVals = initial(Object.values(sliderData))
+    const maxHeight = Math.max(...initialVals)
     const onePercent = maxHeight / 12
 
     const pitHeight = Object.keys(sliderData).reduce((result, item) => {
@@ -54,69 +111,73 @@ class Slider extends React.Component {
     return pitHeight
   }
 
-  getPitWidth = (sliderData) => {
-    const width = 100 / Object.keys(sliderData).length
-    return width
+  getPitWidth = (sliderData: SliderData) =>
+    100 / (Object.keys(sliderData).length - 1)
+
+  getHandleWithToolTip = (props) => (
+    <HandleWithToolTip
+      {...props}
+      displayValue={this.props.displayValue}
+    />
+  )
+
+  getRangeBar = (props) => {
+    // console.log('roo', props)
+    const { state, styleCache } = this
+    const { children } = props
+    const { min, max, values } = state
+
+    const style = styleCache[children] || (styleCache[children] = props.style)
+    const valuesAreNotDefault = values[0] !== min || values[1] !== max
+    const isHighlighted = valuesAreNotDefault && inRange(children, values[0], values[1])
+
+    return (
+      <RangeBar
+        {...props}
+        style={style}
+        pitWidth={state.pitWidth}
+        pitHeight={state.pitHeight}
+        isHighlighted={isHighlighted}
+      />
+    )
   }
 
+  styleCache = {}
+
   updateValue = (sliderState) => {
+    const { values, min, max } = sliderState
     this.setState({
-      values: sliderState.values,
+      values: values || [min, max], // fallback is used when filter is reset
     })
   }
 
   render() {
-    const {
-      min,
-      max,
-      snap,
-      step,
-    } = this.props
-
+    const { props, state } = this
+    const { min, max, values, snapPoints, pitPoints } = state
+    const { displayValue, ...sliderProps } = props
+    const handle = displayValue ? this.getHandleWithToolTip : StyledHandle
     return (
       <StyledSlider
-        {...this.props}
-        onValuesUpdated={this.updateValue}
+        {...sliderProps}
         min={min}
         max={max}
-        snap={snap}
-        snapPoints={this.state.snapPoints}
-        pitPoints={this.state.pitPoints}
-        values={this.state.values}
-        step={step}
-        pitComponent={(props) =>
-          <StyledPitComponent
-            {...props}
-            pitWidth={this.state.pitWidth}
-            pitHeight={this.state.pitHeight}
-          />
-        }
+        onValuesUpdated={this.updateValue}
+        snapPoints={snapPoints}
+        pitPoints={pitPoints}
+        values={values}
+        handle={handle}
+        pitComponent={this.getRangeBar}
       />
     )
   }
 }
 
 Slider.defaultProps = {
-  min: 0,
-  max: 100,
   pitPoints: [],
   snap: true,
   snapPoints: [],
-  values: [0, 100],
   handle: StyledHandle,
   progressBar: StyledProgressBar,
-  pitComponent: StyledPitComponent,
+  pitComponent: RangeBar,
   sliderData: {},
-  step: 0,
 }
-
-Slider.propTypes = {
-  min: PropTypes.number,
-  max: PropTypes.number,
-  snap: PropTypes.bool,
-  values: PropTypes.arrayOf(PropTypes.number),
-  sliderData: PropTypes.object,
-  step: PropTypes.number,
-}
-
-export default Slider

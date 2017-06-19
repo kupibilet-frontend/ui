@@ -7,15 +7,28 @@ export default css`
 
     color: ${({ theme }) => theme.color.textDarkest};
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1;
     letter-spacing: -.21px;
     text-align: center;
     cursor: pointer;
 
-    padding: 2px 0 0;
+    padding: 0 0 2px 0;
     box-sizing: border-box;
     width: 42px;
     height: 36px;
+
+    vertical-align: middle;
+  }
+
+  .CalendarDay--blocked,
+  .CalendarDay--blocked-calendar,
+  .CalendarDay--blocked-out-of-range {
+    background: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.textLight};
+    cursor: default;
+
+    // Do not react on hovers!
+    pointer-events: none;
   }
 
   .DateInput--startDate--focused .CalendarDay:hover,
@@ -36,7 +49,7 @@ export default css`
 
   .DateInput--startDate--focused .CalendarDay,
   .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover {
-    &:not(.CalendarDay--blocked):not(.CalendarDay--selected-end):hover {
+    &:not(.CalendarDay--blocked):hover {
       position: relative;
 
       ${({ theme }) => cssArrow({
@@ -80,14 +93,6 @@ export default css`
   .CalendarDay:not(.CalendarDay--blocked):hover {
     background: ${({ theme }) => theme.color.primary};
     color: ${({ theme }) => theme.color.background};
-  }
-
-  .CalendarDay--blocked,
-  .CalendarDay--blocked-calendar,
-  .CalendarDay--blocked-out-of-range {
-    background: ${({ theme }) => theme.color.background};
-    color: ${({ theme }) => theme.color.textLight};
-    cursor: default;
   }
 
   // TODO check style guide

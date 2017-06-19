@@ -38,7 +38,6 @@ export default css`
 
   .CalendarMonth__caption {
     color: ${({ theme }) => theme.color.textDarkest};
-    font-size: 16px;
     letter-spacing: -.21px;
     text-align: center;
     text-transform: capitalize;
@@ -50,6 +49,11 @@ export default css`
     // margin-bottom: 2px;
     caption-side: initial;
 
+    strong {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: inherit;
+    }
   }
 
   .CalendarMonth--vertical-scrollable .CalendarMonth__caption {

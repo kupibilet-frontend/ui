@@ -5,22 +5,27 @@ import Slider from './index'
 const startDate = new Date(2017, 3, 2, 1).valueOf()
 const endDate = new Date(2017, 3, 2, 2).valueOf()
 
+const obj = {}
+
+for (let i = 0; i < 150; ++i) {
+  obj[i] = ~~(Math.random() * 10)
+}
+
 const ticketsCount = {
-  1491084000000: 3,
-  1491084900000: 10,
-  1491085800000: 0,
-  1491086700000: 2,
+  0: 2,
+  1: 1,
+  2: 3,
+  3: 5,
+  4: 10,
+  5: 8,
 }
 
 storiesOf('Slider', module)
   .addWithInfo('Slider', () => (
     <div style={{ width: '252px' }}>
       <Slider
-        sliderData={ticketsCount}
-        min={startDate}
-        max={endDate}
-        values={[startDate, endDate]}
-        step={900000}
+        sliderData={obj}
+        displayValue={(val) => val * 2}
       />
     </div>
   ))

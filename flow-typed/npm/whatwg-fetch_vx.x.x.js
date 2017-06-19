@@ -1,4 +1,4 @@
-// flow-typed signature: 857584b7c8e171b1e0e2c10766f05909
+// flow-typed signature: ee32a82a3d573198be660491e0303c33
 // flow-typed version: <<STUB>>/whatwg-fetch_v^2.0.3/flow_v0.44.2
 
 /**
@@ -8,8 +8,8 @@
  *
  * Fill this stub out by replacing all the `any` types.
  *
- * Once filled out, we encourage you to share your work with the 
- * community by sending a pull request to: 
+ * Once filled out, we encourage you to share your work with the
+ * community by sending a pull request to:
  * https://github.com/flowtype/flow-typed
  */
 

@@ -1,4 +1,5 @@
 import { css } from 'styled-components'
+import { switchTransition } from '../../../utils/transitions'
 
 // $caretTop: 62px
 
@@ -32,7 +33,6 @@ export default css`
     border: 10px solid transparent;
     border-top: 0;
     left: 22px;
-    z-index: 2;
   }
 
   // We dont use caret
@@ -53,7 +53,7 @@ export default css`
     width: 100%;
 
     // Anymore overlays inputs text blocks
-    z-index: 10;
+    z-index: 3;
 
     &[readonly] {
       -moz-user-select: none;
@@ -67,14 +67,14 @@ export default css`
   .DateInput__display-text {
     color: ${({ theme }) => theme.color.miscDark};
     font-size: 18px;
-    font-weight: 600;
     line-height: 18px;
     letter-spacing: -.11px;
     white-space: nowrap;
 
-    padding: 10px 18px 10px 10px;
+    padding: 10px 10px 10px 16px;
+    ${switchTransition}
     border: 2px solid ${({ theme }) => theme.color.primaryLight};
-    border-radius:100px 0 0 100px;
+    border-radius: 100px 0 0 100px;
     overflow: hidden;
 
     // Input borders overlaying
@@ -84,25 +84,33 @@ export default css`
   }
 
   .DateInput ~ .DateInput .DateInput__display-text {
-    border-radius:0 100px 100px 0;
+    border-radius: 0 100px 100px 0;
     margin-right: 0;
+    padding: 10px 16px 10px 10px;
   }
 
+  // Not a placeholder state
   .DateInput__display-text--has-input {
     color: ${({ theme }) => theme.color.textDarker};
+    font-weight: 600;
   }
 
   .DateInput--startDate--placeholder #startDate ~ .DateInput__display-text,
   .DateInput--endDate--placeholder #endDate ~ .DateInput__display-text {
     color: ${({ theme }) => theme.color.miscDark};
+    font-weight: normal;
   }
 
-  .DateInput--startDate--error #startDate ~ .DateInput__display-text {
-    border-color: ${({ theme }) => theme.color.fail}
-  }
-
-  .DateInput__display-text--focused {
-    border-color: ${({ theme }) => theme.color.secondary};
+  .DateInput--startDate--error [id=startDate] ~ .DateInput__display-text {
+    border-color: ${({ theme }) => theme.color.fail};
     z-index: 2;
+  }
+
+  .DateInput {
+    & .DateInput__display-text.DateInput__display-text--focused,
+    &:hover .DateInput__display-text {
+      border-color: ${({ theme }) => theme.color.secondary};
+      z-index: 2;
+    }
   }
 `

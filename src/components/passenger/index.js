@@ -13,17 +13,20 @@ const Passenger = styled.div`
   flex-wrap: nowrap;
 `
 
-const Title = styled.p`
+const Title = styled.div`
   margin: 0;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
+  padding-bottom: 2px;
   color: ${({ theme }) => theme.color.textDarker};
 `
 
-const Description = styled.p`
+const Description = styled.div`
   margin: 0;
   font-size: 11px;
   line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
   color: ${({ theme }) => theme.color.text};
 `
 
@@ -88,16 +91,18 @@ class PassengerPicker extends Component<{}, Props, State> {
     })
   }
 
-  decrement = () => {
+  decrement = (event: Event) => {
     const { isMin, counter } = this.props.input.value
+    event.preventDefault()
 
     if (!isMin) {
       this.onChange(counter - 1)
     }
   }
 
-  increment = () => {
+  increment = (event: Event) => {
     const { isMax, counter } = this.props.input.value
+    event.preventDefault()
 
     if (!isMax) {
       this.onChange(counter + 1)

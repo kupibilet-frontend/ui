@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { transparentize } from 'polished'
 import Icon from '../icons'
+import { switchTransition } from '../../utils/transitions'
 
 const fadeGradient = ({ theme }) => (
   /* eslint-disable prefer-template */
@@ -16,9 +17,13 @@ const fadeGradient = ({ theme }) => (
 export const FlexContainer = styled.div`
   display: flex;
 
+  & .controls-group__swap {
+    ${switchTransition}
+  }
+
   &:hover .controls-group__swap {
     opacity: 1;
-    transition: .001s linear .1s;
+    transition-delay: .15s;
   }
 `
 
@@ -30,21 +35,21 @@ export const SwapContainer = styled.div`
   cursor: pointer;
 
   .icon-inherit-color {
-    fill: ${({ theme }) => theme.color.miscDark}
+    fill: ${({ theme }) => theme.color.miscDark};
   }
 
   &:hover .icon-inherit-color {
-    fill: ${({ theme }) => theme.color.primary}
+    fill: ${({ theme }) => theme.color.primary};
   }
 `
 
 export const SwapIcon = styled(Icon)`
   box-sizing: content-box;
   width: 15px;
-  padding: 5px;
+  padding: 5px 0;
 
   position: absolute;
-  left: -12.5px;
+  left: -7.5px;
   top: 50%;
   margin-top: -12.5px;
   z-index: 3;
