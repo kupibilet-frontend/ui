@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 import Slider from './index'
 
 const startDate = new Date(2017, 3, 2, 1).valueOf()
