@@ -6,9 +6,9 @@ Array [
     .class {
       ",
   "
-    @media screen and (max-width: ",
-  "599",
-  "px) {
+    @media ",
+  "screen and (max-width: 599px)",
+  " {
       ",
   "
         background: black;
@@ -24,14 +24,9 @@ Array [
 
       ",
   "
-    @media screen and
-      (min-width: ",
-  "600",
-  "px) and
-      (max-width: ",
-  "999",
-  "px)
-    {
+    @media ",
+  "screen and (min-width: 600px) and (max-width: 999px)",
+  " {
       ",
   "
         background: black;
@@ -47,9 +42,9 @@ Array [
 
       ",
   "
-    @media screen and (min-width: ",
-  "1000",
-  "px) {
+    @media ",
+  "screen and (min-width: 1000px)",
+  " {
       ",
   "
         background: black;
