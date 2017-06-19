@@ -1,20 +1,16 @@
 import Rheostat from 'rheostat'
 import styled from 'styled-components'
-import inRange from 'lodash/inRange'
 
 import { switchTransition } from '../../utils/transitions'
 
 const getHandleColor = (props) => {
   const key = props['data-handle-key']
   const valueNow = props['aria-valuenow']
-  const primary = props.theme.color.primary
+  const { primary } = props.theme.color
 
-  if (key === 0 && valueNow !== props['aria-valuemin']) {
-    return primary
-  } else if (key === 1 && valueNow !== props['aria-valuemax']) {
-    return primary
-  }
-  return props.theme.color.miscDark
+  return key === 0 && valueNow !== props['aria-valuemin'] || key === 1 && valueNow !== props['aria-valuemax']
+    ? primary
+    : props.theme.color.miscDark
 }
 
 export const StyledSlider = styled(Rheostat)`
@@ -32,12 +28,12 @@ export const StyledSlider = styled(Rheostat)`
 export const StyledHandle = styled.span`
   ${switchTransition}
   transition-property: background-color, box-shadow;
-  background-color: ${(props) => getHandleColor(props)}
+  background-color: ${getHandleColor};
   border-radius: 2rem;
   cursor: pointer;
   display: inline-block;
   height: 18px;
-  top: -6px;
+  top: ${({ hasTooltip }) => `${hasTooltip ? 0 : -6}px`};
   width: 18px;
   z-index: 2;
   transform: translateX(-50%);
@@ -60,16 +56,14 @@ export const StyledProgressBar = styled.span`
 
 export const BAR_OFFSET = 6
 
-// eslint-disable-next-line no-confusing-arrow
-const getBarBackgroundColor = ({ theme, children, values, valuesAreDefault }) =>
-  !valuesAreDefault && inRange(children, ...values) ? theme.color.secondaryLight : ''
+const getBarColor = ({ isHighlighted, theme }) =>
+  isHighlighted ? theme.color.secondaryLight : theme.color.miscLighter
 
 export const StyledPitComponent = styled.span`
-  background: ${({ theme }) => theme.color.miscLighter};
+  background-color: ${getBarColor};
   font-size: 0;
   bottom: 6px;
   transform: translateY(${BAR_OFFSET}px);
   width: ${({ pitWidth }) => pitWidth}%;
   height: ${({ pitHeight, children }) => (pitHeight[children] + BAR_OFFSET)}px;
-  background-color: ${getBarBackgroundColor};
 `
