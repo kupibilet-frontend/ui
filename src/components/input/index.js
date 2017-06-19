@@ -203,9 +203,12 @@ class InputComponent extends Component {
     })
   }
 
-  onActionFocus = () => {
+  onActionFocus = (event) => {
     if (this.props.onFocus) {
       this.props.onFocus()
+    }
+    if (this.props.onToggleDropdown) {
+      this.props.onToggleDropdown(event, !this.props.isDropdown)
     }
     this.setState({
       isActive: true,
@@ -214,11 +217,6 @@ class InputComponent extends Component {
 
   onFocusInput = () => {
     this.textInput.focus()
-  }
-
-  onClickIconDropdown = (event) => {
-    this.props.onToggleDropdown(event, !this.props.isDropdown)
-    this.onFocusInput()
   }
 
   render() {
@@ -257,7 +255,7 @@ class InputComponent extends Component {
         <div onClick={this.onFocusInput}>{rightIcon}</div>
 
         {
-          (this.props.isDropdown !== undefined) && <BlockClick onClick={this.onClickIconDropdown}>
+          (this.props.isDropdown !== undefined) && <BlockClick onClick={this.onFocusInput}>
             <IconWrapper
               positioDropdown={this.props.positioDropdown}
               isActive={this.props.isDropdown}

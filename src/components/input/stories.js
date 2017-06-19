@@ -103,6 +103,26 @@ storiesOf('Input', module)
         />
     )
   })
+  .addWithInfo('select', () => {
+    const isOpen = boolean('isOpen', false)
+    const onToggle = (event, value) => {
+      event.preventDefault()
+      updateKnob('isOpen', 'boolean', value)
+    }
+
+    return (
+      <Input
+        className="has-badge"
+        type={inputDefault.type}
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+        positioDropdown="right"
+        isDropdown={isOpen}
+        onToggleDropdown={onToggle}
+      />
+    )
+  })
   .addWithInfo('dropdown', () => {
     const isOpen = boolean('isOpen', false)
     const onToggle = (event, value) => {
@@ -130,19 +150,6 @@ storiesOf('Input', module)
           { <span /> }
         </Dropdown>
       </div>
-    )
-  })
-  .addWithInfo('value', () => {
-    const value = text('value', 'Только прямые рейсы')
-
-    return (
-      <Input
-        type={inputDefault.type}
-        name={inputDefault.name}
-        size={sizesSelect()}
-        placeholder={inputDefault.placeholder}
-        value={value}
-      />
     )
   })
   .addWithInfo('group', () => (
