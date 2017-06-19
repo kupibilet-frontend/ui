@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
+    "@kupibilet/react-media": "^1.5.1",
     "lodash": "^4.17.4",
     "polished": "^1.0.4",
     "rc-collapse": "~1.7.0",
