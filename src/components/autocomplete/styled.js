@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 import { shadowSmall } from '../../utils/shadows'
 import { borderSmall } from '../../utils/borders'
+import mq from '../../utils/media-queries'
 
 export default styled.div`
-  .react-autosuggest__container {
-    position: relative;
-  }
+  .react-autosuggest__container {}
   .react-autosuggest__container--open {}
   .react-autosuggest__input {
     appearance: none;
@@ -29,10 +28,13 @@ export default styled.div`
   .react-autosuggest__suggestions-container--open {
     display: block;
     position: relative;
-    top: 3px;
+
+    ${mq.mobile`
+      position: static;
+    `}
   }
   .react-autosuggest__suggestions-list {
-    margin: 0;
+    margin: 3px 0 0;
     padding: 0;
     list-style-type: none;
     position: absolute;
@@ -43,7 +45,13 @@ export default styled.div`
     ${shadowSmall}
     ${borderSmall}
     overflow: hidden;
-    z-index: 2;
+    z-index: 10;
+
+    ${mq.mobile`
+      top: initial;
+      left: 0;
+      right: 0;
+    `}
   }
   .react-autosuggest__suggestion {
     cursor: pointer;

@@ -9,7 +9,7 @@ export default css`
 
     position: relative;
     display: inline-block;
-    width: ${({ dimensions }) => dimensions.inputWidth}px;
+    width: 50%;
     vertical-align: middle;
 
     .screen-reader-only {
@@ -79,13 +79,13 @@ export default css`
 
     // Input borders overlaying
     position: relative;
-    margin-right: -2px;
+    margin-right: 0;
     z-index: 1;
   }
 
   .DateInput ~ .DateInput .DateInput__display-text {
     border-radius: 0 100px 100px 0;
-    margin-right: 0;
+    margin-left: -2px;
     padding: 10px 16px 10px 10px;
   }
 

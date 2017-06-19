@@ -12,13 +12,13 @@ exports[`Storyshots Autocomplete Airport 1`] = `
     }
   >
     <div
-      className="sc-jhAzac jWxhGI"
+      className="sc-jhAzac iXQuyJ"
     >
       <div
         className="react-autosuggest__container"
       >
         <div
-          className="sc-jWBwVP cWgJos"
+          className="sc-jWBwVP fvSmgP"
         >
           <textarea
             aria-activedescendant={null}
@@ -53,7 +53,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             
           </div>
           <div
-            className="sc-iRbamj gaPdQg"
+            className="sc-iRbamj fJefAy"
           >
             
           </div>
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD yKALr"
+        className="sc-kjoXOD ODnzO"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD cwzVks"
+        className="sc-kjoXOD eqmeva"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD yKALr"
+        className="sc-kjoXOD ODnzO"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -709,7 +709,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
       </span>
     </button>
     <div
-      className="sc-jWBwVP Zabrz"
+      className="sc-jWBwVP exjCKk"
     >
       <textarea
         autoCapitalize="sentences"
@@ -735,7 +735,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj euucqi"
+        className="sc-iRbamj llOgDF"
       >
         SVO
       </div>
@@ -764,7 +764,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
     className="sc-chPdSV jlvujm"
   >
     <div
-      className="sc-jWBwVP hbhadg"
+      className="sc-jWBwVP hyAZDv"
     >
       <textarea
         autoCapitalize="sentences"
@@ -790,7 +790,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj euucqi"
+        className="sc-iRbamj llOgDF"
       >
         SVO
       </div>
@@ -810,7 +810,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       </svg>
     </div>
     <div
-      className="sc-jWBwVP iCGffF"
+      className="sc-jWBwVP bSkTbm"
     >
       <textarea
         autoCapitalize="sentences"
@@ -836,7 +836,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj gaPdQg"
+        className="sc-iRbamj fJefAy"
       >
         
       </div>
@@ -850,7 +850,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kEYyzF hpQkTk"
+    className="sc-kEYyzF dOrIrl"
   >
     <div
       className="DateInput--startDate--placeholder DateInput--endDate--placeholder"

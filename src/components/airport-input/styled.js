@@ -26,7 +26,7 @@ export const Container = styled.div`
 
   height: 42px;
   width: 100%;
-  min-width: 180px;
+  min-width: 142px;
 
   display: flex;
   align-items: baseline;
@@ -185,6 +185,7 @@ export const Code = styled.div`
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
+  align-self: stretch;
 
   ${fontStyle}
   font-size: 14px;
@@ -196,7 +197,11 @@ export const Code = styled.div`
     ['right', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
   )};
 
-  &:not(:empty)::before {
+  &:empty {
+    display: none;
+  }
+
+  &::before {
     content: '';
     display: block;
     position: absolute;
