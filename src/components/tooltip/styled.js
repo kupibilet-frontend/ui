@@ -2,7 +2,7 @@
 
 import styled from 'styled-components'
 
-const TRANSITION_BASE = 'transition: 0.15s ease-out'
+const TRANSITION_BASE = 'transition: 0.15s ease-out; transition-property: opacity;'
 
 function hexToRgba(hex, opacity) {
   const arr = hex.match(/[0-9a-f]{2}/ig).map((s) => parseInt(s, 16))
@@ -22,9 +22,9 @@ const paddings = {
 
 export const ToolTipWrap = styled.div`
   display: inline-block;
-  ${TRANSITION_BASE};
   position: relative;
   z-index: 1;
+  ${({ hasHandle }) => hasHandle ? 'transform: translateY(-12px)' : ''}
 `
 
 export const Icon = styled.span`
@@ -55,7 +55,6 @@ export const Root = styled.span`
   display: flex;
   align-items: center;
   height: 24px;
-  opacity: 0;
   padding-left: 12px;
   padding-right: 12px;
   position: absolute;

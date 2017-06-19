@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 import initial from 'lodash/initial'
+import inRange from 'lodash/inRange'
 
 import RangeBar from './RangeBar'
 import HandleWithToolTip from './HandleWithTooltip'
@@ -113,6 +114,36 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
   getPitWidth = (sliderData: SliderData) =>
     100 / (Object.keys(sliderData).length - 1)
 
+  getHandleWithToolTip = (props) => (
+    <HandleWithToolTip
+      {...props}
+      displayValue={this.props.displayValue}
+    />
+  )
+
+  getRangeBar = (props) => {
+    // console.log('roo', props)
+    const { state, styleCache } = this
+    const { children } = props
+    const { min, max, values } = state
+
+    const style = styleCache[children] || (styleCache[children] = props.style)
+    const valuesAreNotDefault = values[0] !== min || values[1] !== max
+    const isHighlighted = valuesAreNotDefault && inRange(children, values[0], values[1])
+
+    return (
+      <RangeBar
+        {...props}
+        style={style}
+        pitWidth={state.pitWidth}
+        pitHeight={state.pitHeight}
+        isHighlighted={isHighlighted}
+      />
+    )
+  }
+
+  styleCache = {}
+
   updateValue = (sliderState) => {
     const { values, min, max } = sliderState
     this.setState({
@@ -121,32 +152,21 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
   }
 
   render() {
-    const { state } = this
-    const { min, max, values } = state
-    const valuesAreDefault = values[0] === min && values[1] === max
-    const { displayValue, ...sliderProps } = this.props
-    const handle = !displayValue
-      ? StyledHandle
-      : (props) => HandleWithToolTip({ ...props, displayValue })
+    const { props, state } = this
+    const { min, max, values, snapPoints, pitPoints } = state
+    const { displayValue, ...sliderProps } = props
+    const handle = displayValue ? this.getHandleWithToolTip : StyledHandle
     return (
       <StyledSlider
         {...sliderProps}
         min={min}
         max={max}
         onValuesUpdated={this.updateValue}
-        snapPoints={state.snapPoints}
-        pitPoints={state.pitPoints}
+        snapPoints={snapPoints}
+        pitPoints={pitPoints}
         values={values}
         handle={handle}
-        pitComponent={(props) =>
-          <RangeBar
-            {...props}
-            pitWidth={state.pitWidth}
-            pitHeight={state.pitHeight}
-            values={values}
-            valuesAreDefault={valuesAreDefault}
-          />
-        }
+        pitComponent={this.getRangeBar}
       />
     )
   }
