@@ -1,0 +1,110 @@
+.root
+  background: rgba(var(--gray-darkest), 0.97)
+  border-radius: calc(var(--shift) * 4)
+  color: var(--white)
+  composes: base from "../typography/Text/styles.sss"
+  composes: transition-base from "../../../styles/common.sss"
+  cursor: pointer
+  display: flex
+  align-items: center
+  height: calc(var(--shift) * 8)
+  opacity: 0
+  padding-left: calc(var(--shift) * 4)
+  padding-right: calc(var(--shift) * 4)
+  position: absolute
+  text-align: center
+  visibility: hidden
+  white-space: nowrap
+
+  &.is-showing
+    visibility: visible
+    opacity: 1
+
+  &:hover .icon
+    border: 1px solid var(--gray-lighter)
+
+  &::before
+    background: rgba(var(--gray-darkest), 0.9)
+    border-radius: 50%
+    content: ''
+    height: 7px
+    position: absolute
+    width: 7px
+
+  &.is-top,
+  &.is-bottom
+    left: 50%
+    transform: translate(-50%, 0%)
+
+  &.is-top
+    top: -calc(var(--shift) * 12)
+
+  &.is-bottom
+    bottom: -28px
+
+  &.is-left
+    right: calc(100% + 6px)
+
+  &.is-right
+    left: calc(100% + 12px)
+
+  &.is-top::before,
+  &.is-bottom::before
+    bottom: -9px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+
+  &.is-bottom::before
+    top: -9px
+    bottom: auto
+
+  &.is-left::before
+    top: 9px
+    right: -9px
+
+  &.is-right::before
+    top: 9px
+    left: -9px
+
+  &.is-red
+    background: rgba(var(--red), 0.9)
+
+    &::before
+      background: rgba(var(--red), 0.9)
+
+  &.is-green
+    background: rgba(var(--green), 0.9)
+
+    &::before
+      background: rgba(var(--green), 0.9)
+
+.tooltip-wrap
+  display: inline-block
+  composes: transition-base from "../../../styles/common.sss"
+  position: relative
+  z-index: 1
+
+.icon
+  border-radius: 50%
+  border: 1px solid var(--gray)
+  composes: transition-base from "../../../styles/common.sss"
+  display: inline-block
+  height: calc(var(--shift) * 6)
+  line-height: var(--uppercase-line-height)
+  text-align: center
+  width: calc(var(--shift) * 6)
+  vertical-align: top
+
+.left-margin
+  margin-left: 5px
+
+.right-margin
+  margin-right: 7px
+
+.left-padding
+  padding-left: 4px
+
+.right-padding
+  padding-right: 4px
