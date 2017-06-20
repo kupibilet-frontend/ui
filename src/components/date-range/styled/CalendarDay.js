@@ -74,6 +74,11 @@ export default css`
     }
   }
 
+  .CalendarDay--selected-span {
+    background: ${({ theme }) => theme.color.miscLightest};
+    color: ${({ theme }) => theme.color.textDarkest};
+  }
+
   .CalendarDay--selected-start,
   .CalendarDay--selected-end,
   .CalendarDay--selected {
@@ -83,11 +88,6 @@ export default css`
     &:active {
       background: ${({ theme }) => theme.color.misc};
     }
-  }
-
-  .CalendarDay--selected-span {
-    background: ${({ theme }) => theme.color.miscLightest};
-    color: ${({ theme }) => theme.color.textDarkest};
   }
 
   .CalendarDay:not(.CalendarDay--blocked):hover {
