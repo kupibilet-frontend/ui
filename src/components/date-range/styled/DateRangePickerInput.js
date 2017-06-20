@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 export default css`
   .DateRangePickerInput {
     background-color: ${({ theme }) => theme.color.background};
-    display: inline-block;
+    display: block;
   }
 
   // We don't use disabled state

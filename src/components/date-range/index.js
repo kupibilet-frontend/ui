@@ -219,7 +219,6 @@ DateRange.defaultProps = {
     dayPickerPadding: 9,
     monthPadding: 23,
     dayPickerWidth: 340,
-    inputWidth: 109,
   },
   renderInputText,
 }

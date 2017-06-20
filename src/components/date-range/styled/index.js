@@ -29,7 +29,7 @@ export const DateInputValue = styled.div`
   font-weight: 600;
 `
 export const DateInputDayOfWeek = styled.div`
-  color: ${({ theme }) => theme.color.text}
+  color: ${({ theme }) => theme.color.text};
   flex-shrink: 0;
 
   font-size: 14px;

@@ -8,7 +8,6 @@ export default styled(Tab)`
 
   display: inline-block;
   padding: 0 10px;
-  margin-bottom: 42px;
   border-radius: 100px;
   line-height: 24px;
   user-select: none;
