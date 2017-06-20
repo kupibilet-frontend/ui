@@ -13,17 +13,23 @@ const queries = {
 /**
  * @usage
  * const Component = ({ isMobile, isTablet, isHandheld, isDesktop }) => {}
- * export default connectMedia(Component)
+ * export default withMedia(Component)
  */
-export const connectMedia = (Component) => (
-  function connectedMedia(props) {
-    return (
-      <Media queries={queries}>
-        { (medias) => (
-          <Component {...props} {...medias} />
-        ) }
-      </Media>
+export const withMedia = (Component) => (
+  class extends React.Component {
+    static displayName = 'withMedia'
+
+    renderMedias = (medias) => (
+      <Component {...this.props} {...medias} />
     )
+
+    render() {
+      return (
+        <Media queries={queries}>
+          { this.renderMedias }
+        </Media>
+      )
+    }
   }
 )
 
