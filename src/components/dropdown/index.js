@@ -12,12 +12,17 @@ const DropdownWrapper = styled.div`
 
 const DropdownOverlay = styled.div`
   position: absolute;
-  top: calc(100% + 3px);
+  top: 100%;
+  margin-top: 3px;
   left: 0;
+  right: 0;
   padding: 18px 12px;
   background: ${({ theme }) => theme.color.background};
   ${shadowSmall}
   ${borderSmall}
+  z-index: 1;
+
+  margin-bottom: 18px;
 `
 
 type Props = {
@@ -33,10 +38,8 @@ class Dropdown extends React.PureComponent<{}, Props, void> {
     isOpen: false,
   }
 
-  onShow = (event: Event) => {
-    if (!this.props.isOpen) {
-      this.props.onToggle(event, true)
-    }
+  onToggle = (event: Event) => {
+    this.props.onToggle(event, !this.props.isOpen)
   }
 
   onHide = (event: Event) => {
@@ -53,7 +56,7 @@ class Dropdown extends React.PureComponent<{}, Props, void> {
     const { children, overlay, isOpen } = this.props
 
     const dropdownButton = React.cloneElement(children, {
-      onClick: this.onShow,
+      onClick: this.onToggle,
     })
 
     return (
