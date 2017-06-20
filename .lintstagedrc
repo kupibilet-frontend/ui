@@ -2,7 +2,6 @@ concurrent: true
 linters:
   src/**/*.js:
     - eslint
-    - jest --bail --testPathPattern storyshots --findRelatedTests
   # TODO: Fix stylelint. kupibilet-frontend/ui#1
   # src/components/**/*.js:
   #   - stylelint
