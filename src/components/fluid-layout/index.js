@@ -37,7 +37,7 @@ const Aside = styled.div`
     margin-left: 0;
   }
 
-  ${({ top }) => top && 'order: 0;'}
+  ${({ beforeSection }) => beforeSection && 'order: 0;'}
 `
 Aside.displayName = 'Aside'
 
