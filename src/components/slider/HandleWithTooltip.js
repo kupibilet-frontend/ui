@@ -6,12 +6,13 @@ import { StyledHandle } from './styled'
 
 
 type Props = {
+  showTooltip: boolean,
   displayValue: string | ((val: number) => string),
 }
 
 export default class HandleWithToolTip extends PureComponent<Props> {
   render() {
-    const { displayValue, ...props } = this.props
+    const { showTooltip, displayValue, ...props } = this.props
     const label = typeof displayValue === 'string'
       ? displayValue
       : typeof displayValue === 'function'
@@ -26,6 +27,7 @@ export default class HandleWithToolTip extends PureComponent<Props> {
           color="black"
           title={label}
           zIndex={2}
+          show={showTooltip}
           hasHandle
           {...props}
         >

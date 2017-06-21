@@ -20,6 +20,8 @@ type Props = {
   position: 'top' | 'bottom' | 'left' | 'right',
   iconPosition: 'left' | 'right',
   color: 'green' | 'red',
+  show: boolean,
+  onMouseDown: (e: any) => void,
 }
 
 type State = {
@@ -28,45 +30,15 @@ type State = {
 }
 
 export default class Tooltip extends PureComponent<Props, Props, State> {
-
-  id = uniqueId('tooltip_')
-
-  constructor(props) {
-    super(props)
-    document.addEventListener('mousedown', this.onMouseDown)
-    document.addEventListener('mouseup', this.onMouseUp)
-  }
-
   state = {
     isHovering: false,
-    isMouseDown: false,
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.onMouseDown)
-    document.removeEventListener('mouseup', this.onMouseUp)
-  }
-
-  onMouseDown = (e) => {
-    if (!document.getElementById(this.id).contains(e.target)) {
-      return
-    }
-    this.setState({
-      isMouseDown: true,
-    })
-  }
-
-  onMouseUp = (e) => {
-    this.setState({
-      isMouseDown: false,
-    })
-    if (document.getElementById(this.id).contains(e.target)) {
-      return
-    }
-    this.handleMouseOut(e)
+    isActive: false,
   }
 
   handleMouseOver = () => {
+    if (this.props.show) {
+      return
+    }
     const { startDelay } = this.props
     if (!startDelay) {
       this.ensureHover(true)
@@ -78,7 +50,7 @@ export default class Tooltip extends PureComponent<Props, Props, State> {
   }
 
   handleMouseOut = () => {
-    if (this.state.isMouseDown) {
+    if (this.props.show) {
       return
     }
     clearTimeout(this.hoverTimeout)
@@ -103,6 +75,8 @@ export default class Tooltip extends PureComponent<Props, Props, State> {
       children,
       title,
       hasHandle,
+      show,
+      onMouseDown,
     } = this.props
 
     const WrappedIcon = <Icon isHovering={this.state.isHovering}>?</Icon>
@@ -111,13 +85,13 @@ export default class Tooltip extends PureComponent<Props, Props, State> {
       <ToolTipWrap
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
+        onMouseDown={onMouseDown}
         style={{ ...style, zIndex }}
         hasHandle={hasHandle}
-        id={this.id}
       >
         <Root
           onClick={handleClick}
-          isShowing={this.state.isHovering}
+          isShowing={show || this.state.isHovering}
           iconPosition={iconPosition}
           position={position}
           color={color}

@@ -73,6 +73,8 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
       snapPoints: this.getSnapPoints(props),
       pitHeight: this.getPitHeight(props.sliderData),
       pitWidth: this.getPitWidth(props.sliderData),
+      showTooltip: false,
+      activeHandles: [],
     }
   }
 
@@ -114,12 +116,26 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
   getPitWidth = (sliderData: SliderData) =>
     100 / (Object.keys(sliderData).length - 1)
 
-  getHandleWithToolTip = (props) => (
-    <HandleWithToolTip
-      {...props}
-      displayValue={this.props.displayValue}
-    />
-  )
+  setActiveTooltip = (index) => {
+    this.setState({
+      activeHandles: [index],
+    })
+  }
+
+  getHandleWithToolTip = (props) => {
+    const key = props['data-handle-key']
+    return (
+      <HandleWithToolTip
+        {...props}
+        onMouseDown={(e) => {
+          props.onMouseDown(e)
+          this.setActiveTooltip(key)
+        }}
+        showTooltip={this.state.activeHandles.includes(key)}
+        displayValue={this.props.displayValue}
+      />
+    )
+  }
 
   getRangeBar = (props) => {
     // console.log('roo', props)
@@ -151,6 +167,12 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     })
   }
 
+  handleDragEnd = () => {
+    this.setState({
+      activeHandles: [],
+    })
+  }
+
   render() {
     const { props, state } = this
     const { min, max, values, snapPoints, pitPoints } = state
@@ -164,6 +186,7 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
         onValuesUpdated={this.updateValue}
         snapPoints={snapPoints}
         pitPoints={pitPoints}
+        onSliderDragEnd={this.handleDragEnd}
         values={values}
         handle={handle}
         pitComponent={this.getRangeBar}
