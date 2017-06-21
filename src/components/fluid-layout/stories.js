@@ -39,15 +39,28 @@ storiesOf('Fluid layout', module)
   ))
   .addWithInfo(
     'Two columns',
-    '<Aside> всегда должен быть первым дочерним блоком <FluidContainer>',
     () => (
       <FluidContainer>
-        <Aside>
-          <AsideContent />
-        </Aside>
         <FluidSection>
           <MainContent />
         </FluidSection>
+        <Aside>
+          <AsideContent />
+        </Aside>
+      </FluidContainer>
+    ),
+  )
+  .addWithInfo(
+    'Two columns',
+    'Aside on top with beforeSection prop',
+    () => (
+      <FluidContainer>
+        <FluidSection>
+          <MainContent />
+        </FluidSection>
+        <Aside beforeSection>
+          <AsideContent />
+        </Aside>
       </FluidContainer>
     ),
   )
