@@ -1003,10 +1003,10 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX dBRKwj"
+      className="sc-kpOJdX exgQcK"
     >
       <div
-        className="sc-ckVGcZ grYFsz"
+        className="sc-ckVGcZ dlJzzS"
       >
         <div
           style={
@@ -1023,7 +1023,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
         </div>
       </div>
       <div
-        className="sc-dxgOiQ jZppib"
+        className="sc-dxgOiQ kqIddl"
       >
         <div
           style={
