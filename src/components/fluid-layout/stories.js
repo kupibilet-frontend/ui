@@ -51,7 +51,6 @@ storiesOf('Fluid layout', module)
     ),
   )
   .addWithInfo(
-    'Two columns',
     'Aside on top with beforeSection prop',
     () => (
       <FluidContainer>
