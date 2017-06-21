@@ -63,7 +63,7 @@
     "@kupibilet/react-dates": "~8.2.0",
     "@kupibilet/react-media": "^1.5.1",
     "lodash": "^4.17.4",
-    "polished": "^1.0.4",
+    "polished": "^1.2.0",
     "rc-collapse": "~1.7.0",
     "rc-tabs": "^7.5.0",
     "react-autosuggest": "^9.0.0",
