@@ -959,6 +959,59 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 </div>
 `;
 
+exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "width": "100vw",
+      }
+    }
+  >
+    <div
+      className="sc-kpOJdX exgQcK"
+    >
+      <div
+        className="sc-dxgOiQ kqIddl"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "background": "rgba(35, 194, 86, .4)",
+              "display": "flex",
+              "height": 140,
+              "justifyContent": "center",
+            }
+          }
+        >
+          Main content
+        </div>
+      </div>
+      <div
+        className="sc-ckVGcZ KNbIy"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "background": "rgba(230, 73, 38, .4)",
+              "display": "flex",
+              "height": 140,
+              "justifyContent": "center",
+            }
+          }
+        >
+          Sidebar
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Fluid layout Single column 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
@@ -1006,23 +1059,6 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
       className="sc-kpOJdX exgQcK"
     >
       <div
-        className="sc-ckVGcZ dlJzzS"
-      >
-        <div
-          style={
-            Object {
-              "alignItems": "center",
-              "background": "rgba(230, 73, 38, .4)",
-              "display": "flex",
-              "height": 140,
-              "justifyContent": "center",
-            }
-          }
-        >
-          Sidebar
-        </div>
-      </div>
-      <div
         className="sc-dxgOiQ kqIddl"
       >
         <div
@@ -1037,6 +1073,23 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
           }
         >
           Main content
+        </div>
+      </div>
+      <div
+        className="sc-ckVGcZ dlJzzS"
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "background": "rgba(230, 73, 38, .4)",
+              "display": "flex",
+              "height": 140,
+              "justifyContent": "center",
+            }
+          }
+        >
+          Sidebar
         </div>
       </div>
     </div>
