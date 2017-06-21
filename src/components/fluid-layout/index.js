@@ -1,52 +1,43 @@
 import styled from 'styled-components'
 
 const FluidContainer = styled.div`
-  margin: 0 18px;
+  width: 1176px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: flex-start;
 
-  @media(min-width: 1000px) {
+  @media(max-width: 999px) {
     margin: 0;
-    padding: 0 18px;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  @media(min-width: 1200px) {
-    width: 1164px;
-    margin: 0 auto;
+    width: auto;
+    flex-direction: column;
   }
 `
 FluidContainer.displayName = 'FluidContainer'
 
 const FluidSection = styled.div`
   flex-grow: 1;
+  max-width: 870px;
 
-  @media(min-width: 1000px) {
-    order: 1;
-  }
-
-  @media(min-width: 1200px) {
-    max-width: 870px;
+  @media(max-width: 999px) {
+    max-width: none;
+    width: 100%;
   }
 `
 FluidSection.displayName = 'FluidSection'
 
 const Aside = styled.div`
-  width: 100%;
+  width: 252px;
   flex-grow: 0;
   flex-shrink: 0;
+  margin-left: 42px;
 
-  @media(min-width: 1000px) {
-    order: 2;
-    width: 252px;
-    margin-left: 18px;
+  @media(max-width: 999px) {
+    width: auto;
+    margin-left: 0;
   }
 
-  @media(min-width: 1200px) {
-    margin-left: 42px;
-  }
+  ${({ top }) => top && 'order: 0;' }
 `
 Aside.displayName = 'Aside'
 
