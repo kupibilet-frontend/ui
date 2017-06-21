@@ -7,7 +7,8 @@ const FluidContainer = styled.div`
   align-items: stretch;
 
   @media(min-width: 1000px) {
-    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0 18px;
     justify-content: center;
     align-items: flex-start;
   }
@@ -22,6 +23,10 @@ FluidContainer.displayName = 'FluidContainer'
 const FluidSection = styled.div`
   flex-grow: 1;
 
+  @media(min-width: 1000px) {
+    order: 1;
+  }
+
   @media(min-width: 1200px) {
     max-width: 870px;
   }
@@ -34,6 +39,7 @@ const Aside = styled.div`
   flex-shrink: 0;
 
   @media(min-width: 1000px) {
+    order: 2;
     width: 252px;
     margin-left: 18px;
   }
