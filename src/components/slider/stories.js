@@ -11,13 +11,10 @@ import Slider from './index'
 //   obj[i] = i
 // }
 
-const ticketsCount = {
-  0: 2,
-  1: 1,
-  2: 3,
-  3: 5,
-  4: 10,
-  5: 8,
+const ticketsCount = {}
+
+for (let i = 0; i < 150; ++i) {
+  ticketsCount[i] = i % 4
 }
 
 storiesOf('Slider', module)
