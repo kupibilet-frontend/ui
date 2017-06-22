@@ -30,11 +30,12 @@ type DefaultProps = {
 type Props = {
   min: number,
   max: number,
-  snap: boolean,
+  // snap: boolean,
   values: number[],
   sliderData: SliderData,
-  onChange: Function,
-  displayValue: string | ((val: number) => string)
+  // onChange: Function,
+  displayValue: string | ((val: number) => string),
+  children: any,
 }
 
 type State = {
@@ -80,6 +81,7 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
 
   componentWillReceiveProps(nextProps: Props) {
     if (this.props.sliderData !== nextProps.sliderData) {
+      this.styleCache = {} // invalidate cache on sliderData update
       this.setState({
         pitPoints: this.getPitPoints(nextProps.sliderData),
         pitHeight: this.getPitHeight(nextProps.sliderData),
