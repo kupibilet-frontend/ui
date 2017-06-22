@@ -26,6 +26,10 @@ export { default as Autocomplete } from './components/autocomplete'
 
 export { default as PassengerPicker } from './components/passenger'
 
+// Util components
+export { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly } from './components/responsive-only'
+
 // Utils
+// https://github.com/kupibilet-frontend/ui/issues/76
 export { default as media } from './utils/media-queries'
 export { default as retinaImage } from './utils/retina-image'
