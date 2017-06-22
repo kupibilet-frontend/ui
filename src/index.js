@@ -28,3 +28,4 @@ export { default as PassengerPicker } from './components/passenger'
 
 // Utils
 export { default as media } from './utils/media-queries'
+export { default as retinaImage } from './utils/retina-image'
