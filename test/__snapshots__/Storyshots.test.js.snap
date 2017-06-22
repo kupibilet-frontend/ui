@@ -1350,7 +1350,7 @@ exports[`Storyshots Slider Slider 1`] = `
         }
       />
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "0%",
@@ -1361,7 +1361,7 @@ exports[`Storyshots Slider Slider 1`] = `
         0
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "0.6711409395973155%",
@@ -1372,7 +1372,7 @@ exports[`Storyshots Slider Slider 1`] = `
         1
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "1.342281879194631%",
@@ -1383,7 +1383,7 @@ exports[`Storyshots Slider Slider 1`] = `
         2
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "2.013422818791946%",
@@ -1394,7 +1394,7 @@ exports[`Storyshots Slider Slider 1`] = `
         3
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "2.684563758389262%",
@@ -1405,7 +1405,7 @@ exports[`Storyshots Slider Slider 1`] = `
         4
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX dKubCR"
         style={
           Object {
             "left": "3.3557046979865772%",
@@ -1416,7 +1416,7 @@ exports[`Storyshots Slider Slider 1`] = `
         5
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "4.026845637583892%",
@@ -1427,7 +1427,7 @@ exports[`Storyshots Slider Slider 1`] = `
         6
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "4.697986577181208%",
@@ -1438,7 +1438,7 @@ exports[`Storyshots Slider Slider 1`] = `
         7
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "5.369127516778524%",
@@ -1449,7 +1449,7 @@ exports[`Storyshots Slider Slider 1`] = `
         8
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "6.0402684563758395%",
@@ -1460,7 +1460,7 @@ exports[`Storyshots Slider Slider 1`] = `
         9
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "6.7114093959731544%",
@@ -1471,7 +1471,7 @@ exports[`Storyshots Slider Slider 1`] = `
         10
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "7.38255033557047%",
@@ -1482,7 +1482,7 @@ exports[`Storyshots Slider Slider 1`] = `
         11
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "8.053691275167784%",
@@ -1493,7 +1493,7 @@ exports[`Storyshots Slider Slider 1`] = `
         12
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "8.724832214765101%",
@@ -1504,7 +1504,7 @@ exports[`Storyshots Slider Slider 1`] = `
         13
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "9.395973154362416%",
@@ -1515,7 +1515,7 @@ exports[`Storyshots Slider Slider 1`] = `
         14
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX dKubCR"
         style={
           Object {
             "left": "10.06711409395973%",
@@ -1526,7 +1526,7 @@ exports[`Storyshots Slider Slider 1`] = `
         15
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "10.738255033557047%",
@@ -1537,7 +1537,7 @@ exports[`Storyshots Slider Slider 1`] = `
         16
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "11.409395973154362%",
@@ -1570,7 +1570,7 @@ exports[`Storyshots Slider Slider 1`] = `
         19
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "13.422818791946309%",
@@ -1581,7 +1581,7 @@ exports[`Storyshots Slider Slider 1`] = `
         20
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "14.093959731543624%",
@@ -1603,7 +1603,7 @@ exports[`Storyshots Slider Slider 1`] = `
         22
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "15.436241610738255%",
@@ -1614,7 +1614,7 @@ exports[`Storyshots Slider Slider 1`] = `
         23
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "16.10738255033557%",
@@ -1625,7 +1625,7 @@ exports[`Storyshots Slider Slider 1`] = `
         24
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "16.778523489932887%",
@@ -1636,7 +1636,7 @@ exports[`Storyshots Slider Slider 1`] = `
         25
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "17.449664429530202%",
@@ -1647,7 +1647,7 @@ exports[`Storyshots Slider Slider 1`] = `
         26
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "18.120805369127517%",
@@ -1658,7 +1658,7 @@ exports[`Storyshots Slider Slider 1`] = `
         27
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "18.79194630872483%",
@@ -1669,7 +1669,7 @@ exports[`Storyshots Slider Slider 1`] = `
         28
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "19.463087248322147%",
@@ -1680,7 +1680,7 @@ exports[`Storyshots Slider Slider 1`] = `
         29
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "20.13422818791946%",
@@ -1702,7 +1702,7 @@ exports[`Storyshots Slider Slider 1`] = `
         31
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "21.476510067114095%",
@@ -1713,7 +1713,7 @@ exports[`Storyshots Slider Slider 1`] = `
         32
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "22.14765100671141%",
@@ -1724,7 +1724,7 @@ exports[`Storyshots Slider Slider 1`] = `
         33
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "22.818791946308725%",
@@ -1735,7 +1735,7 @@ exports[`Storyshots Slider Slider 1`] = `
         34
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "23.48993288590604%",
@@ -1746,7 +1746,7 @@ exports[`Storyshots Slider Slider 1`] = `
         35
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "24.161073825503358%",
@@ -1757,7 +1757,7 @@ exports[`Storyshots Slider Slider 1`] = `
         36
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "24.832214765100673%",
@@ -1768,7 +1768,7 @@ exports[`Storyshots Slider Slider 1`] = `
         37
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "25.503355704697988%",
@@ -1779,7 +1779,7 @@ exports[`Storyshots Slider Slider 1`] = `
         38
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "26.174496644295303%",
@@ -1790,7 +1790,7 @@ exports[`Storyshots Slider Slider 1`] = `
         39
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "26.845637583892618%",
@@ -1812,7 +1812,7 @@ exports[`Storyshots Slider Slider 1`] = `
         41
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "28.187919463087248%",
@@ -1823,7 +1823,7 @@ exports[`Storyshots Slider Slider 1`] = `
         42
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "28.859060402684566%",
@@ -1834,7 +1834,7 @@ exports[`Storyshots Slider Slider 1`] = `
         43
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "29.53020134228188%",
@@ -1845,7 +1845,7 @@ exports[`Storyshots Slider Slider 1`] = `
         44
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "30.201342281879196%",
@@ -1856,7 +1856,7 @@ exports[`Storyshots Slider Slider 1`] = `
         45
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "30.87248322147651%",
@@ -1867,7 +1867,7 @@ exports[`Storyshots Slider Slider 1`] = `
         46
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "31.543624161073826%",
@@ -1878,7 +1878,7 @@ exports[`Storyshots Slider Slider 1`] = `
         47
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "32.21476510067114%",
@@ -1889,7 +1889,7 @@ exports[`Storyshots Slider Slider 1`] = `
         48
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "32.88590604026846%",
@@ -1900,7 +1900,7 @@ exports[`Storyshots Slider Slider 1`] = `
         49
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "33.557046979865774%",
@@ -1911,7 +1911,7 @@ exports[`Storyshots Slider Slider 1`] = `
         50
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "34.22818791946309%",
@@ -1922,7 +1922,7 @@ exports[`Storyshots Slider Slider 1`] = `
         51
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "34.899328859060404%",
@@ -1933,7 +1933,7 @@ exports[`Storyshots Slider Slider 1`] = `
         52
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "35.57046979865772%",
@@ -1944,7 +1944,7 @@ exports[`Storyshots Slider Slider 1`] = `
         53
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "36.241610738255034%",
@@ -1955,7 +1955,7 @@ exports[`Storyshots Slider Slider 1`] = `
         54
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "36.91275167785235%",
@@ -1966,7 +1966,7 @@ exports[`Storyshots Slider Slider 1`] = `
         55
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "37.58389261744966%",
@@ -1977,7 +1977,7 @@ exports[`Storyshots Slider Slider 1`] = `
         56
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "38.25503355704698%",
@@ -1988,7 +1988,7 @@ exports[`Storyshots Slider Slider 1`] = `
         57
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "38.92617449664429%",
@@ -1999,7 +1999,7 @@ exports[`Storyshots Slider Slider 1`] = `
         58
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "39.59731543624161%",
@@ -2010,7 +2010,7 @@ exports[`Storyshots Slider Slider 1`] = `
         59
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "40.26845637583892%",
@@ -2021,7 +2021,7 @@ exports[`Storyshots Slider Slider 1`] = `
         60
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "40.939597315436245%",
@@ -2032,7 +2032,7 @@ exports[`Storyshots Slider Slider 1`] = `
         61
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "41.61073825503356%",
@@ -2043,7 +2043,7 @@ exports[`Storyshots Slider Slider 1`] = `
         62
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "42.281879194630875%",
@@ -2054,7 +2054,7 @@ exports[`Storyshots Slider Slider 1`] = `
         63
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "42.95302013422819%",
@@ -2065,7 +2065,7 @@ exports[`Storyshots Slider Slider 1`] = `
         64
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "43.624161073825505%",
@@ -2076,7 +2076,7 @@ exports[`Storyshots Slider Slider 1`] = `
         65
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "44.29530201342282%",
@@ -2087,7 +2087,7 @@ exports[`Storyshots Slider Slider 1`] = `
         66
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "44.966442953020135%",
@@ -2098,7 +2098,7 @@ exports[`Storyshots Slider Slider 1`] = `
         67
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "45.63758389261745%",
@@ -2109,7 +2109,7 @@ exports[`Storyshots Slider Slider 1`] = `
         68
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "46.308724832214764%",
@@ -2120,7 +2120,7 @@ exports[`Storyshots Slider Slider 1`] = `
         69
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "46.97986577181208%",
@@ -2131,7 +2131,7 @@ exports[`Storyshots Slider Slider 1`] = `
         70
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "47.651006711409394%",
@@ -2142,7 +2142,7 @@ exports[`Storyshots Slider Slider 1`] = `
         71
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "48.322147651006716%",
@@ -2153,7 +2153,7 @@ exports[`Storyshots Slider Slider 1`] = `
         72
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "48.99328859060403%",
@@ -2164,7 +2164,7 @@ exports[`Storyshots Slider Slider 1`] = `
         73
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "49.664429530201346%",
@@ -2175,7 +2175,7 @@ exports[`Storyshots Slider Slider 1`] = `
         74
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "50.33557046979866%",
@@ -2186,7 +2186,7 @@ exports[`Storyshots Slider Slider 1`] = `
         75
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "51.006711409395976%",
@@ -2197,7 +2197,7 @@ exports[`Storyshots Slider Slider 1`] = `
         76
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "51.67785234899329%",
@@ -2219,7 +2219,7 @@ exports[`Storyshots Slider Slider 1`] = `
         78
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "53.02013422818792%",
@@ -2230,7 +2230,7 @@ exports[`Storyshots Slider Slider 1`] = `
         79
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "53.691275167785236%",
@@ -2241,7 +2241,7 @@ exports[`Storyshots Slider Slider 1`] = `
         80
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "54.36241610738255%",
@@ -2252,7 +2252,7 @@ exports[`Storyshots Slider Slider 1`] = `
         81
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "55.033557046979865%",
@@ -2263,7 +2263,7 @@ exports[`Storyshots Slider Slider 1`] = `
         82
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "55.70469798657718%",
@@ -2274,7 +2274,7 @@ exports[`Storyshots Slider Slider 1`] = `
         83
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "56.375838926174495%",
@@ -2285,7 +2285,7 @@ exports[`Storyshots Slider Slider 1`] = `
         84
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "57.04697986577181%",
@@ -2296,7 +2296,7 @@ exports[`Storyshots Slider Slider 1`] = `
         85
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "57.71812080536913%",
@@ -2307,7 +2307,7 @@ exports[`Storyshots Slider Slider 1`] = `
         86
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "58.38926174496645%",
@@ -2318,7 +2318,7 @@ exports[`Storyshots Slider Slider 1`] = `
         87
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "59.06040268456376%",
@@ -2329,7 +2329,7 @@ exports[`Storyshots Slider Slider 1`] = `
         88
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "59.73154362416108%",
@@ -2340,7 +2340,7 @@ exports[`Storyshots Slider Slider 1`] = `
         89
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "60.40268456375839%",
@@ -2351,7 +2351,7 @@ exports[`Storyshots Slider Slider 1`] = `
         90
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "61.07382550335571%",
@@ -2362,7 +2362,7 @@ exports[`Storyshots Slider Slider 1`] = `
         91
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "61.74496644295302%",
@@ -2373,7 +2373,7 @@ exports[`Storyshots Slider Slider 1`] = `
         92
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "62.41610738255034%",
@@ -2384,7 +2384,7 @@ exports[`Storyshots Slider Slider 1`] = `
         93
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "63.08724832214765%",
@@ -2395,7 +2395,7 @@ exports[`Storyshots Slider Slider 1`] = `
         94
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "63.758389261744966%",
@@ -2406,7 +2406,7 @@ exports[`Storyshots Slider Slider 1`] = `
         95
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX dKubCR"
         style={
           Object {
             "left": "64.42953020134227%",
@@ -2417,7 +2417,7 @@ exports[`Storyshots Slider Slider 1`] = `
         96
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "65.1006711409396%",
@@ -2439,7 +2439,7 @@ exports[`Storyshots Slider Slider 1`] = `
         98
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "66.44295302013423%",
@@ -2450,7 +2450,7 @@ exports[`Storyshots Slider Slider 1`] = `
         99
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "67.11409395973155%",
@@ -2461,7 +2461,7 @@ exports[`Storyshots Slider Slider 1`] = `
         100
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "67.78523489932886%",
@@ -2472,7 +2472,7 @@ exports[`Storyshots Slider Slider 1`] = `
         101
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "68.45637583892618%",
@@ -2483,7 +2483,7 @@ exports[`Storyshots Slider Slider 1`] = `
         102
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "69.12751677852349%",
@@ -2494,7 +2494,7 @@ exports[`Storyshots Slider Slider 1`] = `
         103
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "69.79865771812081%",
@@ -2505,7 +2505,7 @@ exports[`Storyshots Slider Slider 1`] = `
         104
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX dKubCR"
         style={
           Object {
             "left": "70.46979865771812%",
@@ -2516,7 +2516,7 @@ exports[`Storyshots Slider Slider 1`] = `
         105
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "71.14093959731544%",
@@ -2527,7 +2527,7 @@ exports[`Storyshots Slider Slider 1`] = `
         106
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "71.81208053691275%",
@@ -2538,7 +2538,7 @@ exports[`Storyshots Slider Slider 1`] = `
         107
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "72.48322147651007%",
@@ -2549,7 +2549,7 @@ exports[`Storyshots Slider Slider 1`] = `
         108
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "73.15436241610739%",
@@ -2560,7 +2560,7 @@ exports[`Storyshots Slider Slider 1`] = `
         109
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "73.8255033557047%",
@@ -2571,7 +2571,7 @@ exports[`Storyshots Slider Slider 1`] = `
         110
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "74.49664429530202%",
@@ -2582,7 +2582,7 @@ exports[`Storyshots Slider Slider 1`] = `
         111
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "75.16778523489933%",
@@ -2604,7 +2604,7 @@ exports[`Storyshots Slider Slider 1`] = `
         113
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "76.51006711409396%",
@@ -2615,7 +2615,7 @@ exports[`Storyshots Slider Slider 1`] = `
         114
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "77.18120805369128%",
@@ -2637,7 +2637,7 @@ exports[`Storyshots Slider Slider 1`] = `
         116
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "78.52348993288591%",
@@ -2648,7 +2648,7 @@ exports[`Storyshots Slider Slider 1`] = `
         117
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "79.19463087248322%",
@@ -2659,7 +2659,7 @@ exports[`Storyshots Slider Slider 1`] = `
         118
       </span>
       <span
-        className="sc-kpOJdX dMslrd"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "79.86577181208054%",
@@ -2670,7 +2670,7 @@ exports[`Storyshots Slider Slider 1`] = `
         119
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "80.53691275167785%",
@@ -2681,7 +2681,7 @@ exports[`Storyshots Slider Slider 1`] = `
         120
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "81.20805369127517%",
@@ -2692,7 +2692,7 @@ exports[`Storyshots Slider Slider 1`] = `
         121
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX jCdJlt"
         style={
           Object {
             "left": "81.87919463087249%",
@@ -2703,7 +2703,7 @@ exports[`Storyshots Slider Slider 1`] = `
         122
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "82.5503355704698%",
@@ -2714,7 +2714,7 @@ exports[`Storyshots Slider Slider 1`] = `
         123
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX bhoRTc"
         style={
           Object {
             "left": "83.22147651006712%",
@@ -2725,7 +2725,7 @@ exports[`Storyshots Slider Slider 1`] = `
         124
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "83.89261744966443%",
@@ -2736,7 +2736,7 @@ exports[`Storyshots Slider Slider 1`] = `
         125
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "84.56375838926175%",
@@ -2747,7 +2747,7 @@ exports[`Storyshots Slider Slider 1`] = `
         126
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "85.23489932885906%",
@@ -2758,7 +2758,7 @@ exports[`Storyshots Slider Slider 1`] = `
         127
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "85.90604026845638%",
@@ -2780,7 +2780,7 @@ exports[`Storyshots Slider Slider 1`] = `
         129
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "87.24832214765101%",
@@ -2791,7 +2791,7 @@ exports[`Storyshots Slider Slider 1`] = `
         130
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "87.91946308724832%",
@@ -2802,7 +2802,7 @@ exports[`Storyshots Slider Slider 1`] = `
         131
       </span>
       <span
-        className="sc-kpOJdX iAAhdL"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "88.59060402684564%",
@@ -2813,7 +2813,7 @@ exports[`Storyshots Slider Slider 1`] = `
         132
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "89.26174496644296%",
@@ -2824,7 +2824,7 @@ exports[`Storyshots Slider Slider 1`] = `
         133
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX WjFPJ"
         style={
           Object {
             "left": "89.93288590604027%",
@@ -2835,7 +2835,7 @@ exports[`Storyshots Slider Slider 1`] = `
         134
       </span>
       <span
-        className="sc-kpOJdX jCdJlt"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "90.60402684563759%",
@@ -2846,7 +2846,7 @@ exports[`Storyshots Slider Slider 1`] = `
         135
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "91.2751677852349%",
@@ -2857,7 +2857,7 @@ exports[`Storyshots Slider Slider 1`] = `
         136
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX fcbFIW"
         style={
           Object {
             "left": "91.94630872483222%",
@@ -2868,7 +2868,7 @@ exports[`Storyshots Slider Slider 1`] = `
         137
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "92.61744966442953%",
@@ -2879,7 +2879,7 @@ exports[`Storyshots Slider Slider 1`] = `
         138
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "93.28859060402685%",
@@ -2890,7 +2890,7 @@ exports[`Storyshots Slider Slider 1`] = `
         139
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX dKubCR"
         style={
           Object {
             "left": "93.95973154362416%",
@@ -2901,7 +2901,7 @@ exports[`Storyshots Slider Slider 1`] = `
         140
       </span>
       <span
-        className="sc-kpOJdX deFbCU"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "94.63087248322147%",
@@ -2912,7 +2912,7 @@ exports[`Storyshots Slider Slider 1`] = `
         141
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "95.30201342281879%",
@@ -2923,7 +2923,7 @@ exports[`Storyshots Slider Slider 1`] = `
         142
       </span>
       <span
-        className="sc-kpOJdX jJPKiI"
+        className="sc-kpOJdX dMslrd"
         style={
           Object {
             "left": "95.9731543624161%",
@@ -2934,7 +2934,7 @@ exports[`Storyshots Slider Slider 1`] = `
         143
       </span>
       <span
-        className="sc-kpOJdX dNvJeO"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "96.64429530201343%",
@@ -2945,7 +2945,7 @@ exports[`Storyshots Slider Slider 1`] = `
         144
       </span>
       <span
-        className="sc-kpOJdX fcbFIW"
+        className="sc-kpOJdX iAAhdL"
         style={
           Object {
             "left": "97.31543624161074%",
@@ -2956,7 +2956,7 @@ exports[`Storyshots Slider Slider 1`] = `
         145
       </span>
       <span
-        className="sc-kpOJdX bhoRTc"
+        className="sc-kpOJdX deFbCU"
         style={
           Object {
             "left": "97.98657718120806%",
@@ -2967,7 +2967,7 @@ exports[`Storyshots Slider Slider 1`] = `
         146
       </span>
       <span
-        className="sc-kpOJdX dKubCR"
+        className="sc-kpOJdX jJPKiI"
         style={
           Object {
             "left": "98.65771812080537%",
@@ -2978,7 +2978,7 @@ exports[`Storyshots Slider Slider 1`] = `
         147
       </span>
       <span
-        className="sc-kpOJdX WjFPJ"
+        className="sc-kpOJdX dNvJeO"
         style={
           Object {
             "left": "99.32885906040269%",
