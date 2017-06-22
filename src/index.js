@@ -27,7 +27,7 @@ export { default as Autocomplete } from './components/autocomplete'
 export { default as PassengerPicker } from './components/passenger'
 
 // Util components
-export { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly } from './components/responsive-only'
+export { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly } from './components/responsive-only'
 
 // Utils
 // https://github.com/kupibilet-frontend/ui/issues/76
