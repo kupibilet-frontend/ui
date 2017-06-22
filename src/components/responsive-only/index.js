@@ -17,7 +17,6 @@ const MobileOnly = styled.div`
     display: initial;
   `}
 `
-MobileOnly.displayName = 'MobileOnly'
 
 const TabletOnly = styled.div`
   display: none;
@@ -37,4 +36,11 @@ const HandheldOnly = styled.div`
 `
 HandheldOnly.displayName = 'HandheldOnly'
 
-export { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly }
+const NotMobileOnly = styled.div`
+  ${mq.mobile`
+    display: none;
+  `}
+`
+NotMobileOnly.displayName = 'NotMobileOnly'
+
+export { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly }

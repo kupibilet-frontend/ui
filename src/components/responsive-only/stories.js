@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 
-import { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly } from '../../index'
+import { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly } from '../../index'
 
 const StoryTip = styled.div`
   width: 100vw;
@@ -21,6 +21,9 @@ const TabletStoryTip = StoryTip.extend`
 `
 const MobileStoryTip = StoryTip.extend`
   background: dodgerblue;
+`
+const NotMobileStoryTip = StoryTip.extend`
+  background: black;
 `
 
 storiesOf('Utils', module)
@@ -41,5 +44,9 @@ storiesOf('Utils', module)
       <MobileOnly>
         <MobileStoryTip>Mobile</MobileStoryTip>
       </MobileOnly>
+
+      <NotMobileOnly>
+        <NotMobileStoryTip>Not mobile</NotMobileStoryTip>
+      </NotMobileOnly>
     </div>
   ))

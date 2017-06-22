@@ -197,7 +197,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
               className="sc-htoDjs fYyxaZ"
             >
               <div
-                className="sc-hmzhuo hhTFKW"
+                className="sc-frDJqD hsebVT"
               >
                 Пересадки
               </div>
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-cJSrbW zmllD"
+        className="sc-ksYbfQ hXWUTj"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-cJSrbW rPHZN"
+        className="sc-ksYbfQ ifxgdc"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-cJSrbW zmllD"
+        className="sc-ksYbfQ hXWUTj"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -1216,7 +1216,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-kjoXOD MnqbO"
     >
       <div
-        className="sc-frDJqD kbLYhU"
+        className="sc-kvZOFW bZuFiE"
       >
         Desktop
       </div>
@@ -1225,7 +1225,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-kgAjT iAakoY"
     >
       <div
-        className="sc-kvZOFW bMWrUL"
+        className="sc-hqyNC joxXwE"
       >
         Handheld
       </div>
@@ -1234,7 +1234,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-TOsTZ gMMqZQ"
     >
       <div
-        className="sc-hqyNC jJLvKI"
+        className="sc-jbKcbu dDWRc"
       >
         Tablet
       </div>
@@ -1243,9 +1243,18 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-cHGsZl ewOqZG"
     >
       <div
-        className="sc-jbKcbu gOLcCi"
+        className="sc-dNLxif fYBrCH"
       >
         Mobile
+      </div>
+    </div>
+    <div
+      className="sc-cJSrbW gfFhPK"
+    >
+      <div
+        className="sc-jqCOkK cIWiTo"
+      >
+        Not mobile
       </div>
     </div>
   </div>
