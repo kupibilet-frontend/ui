@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import RCTabs from 'rc-tabs'
-import TabContent from 'rc-tabs/lib/TabContent'
+import RCTabs, { TabContent } from 'rc-tabs'
 
 type Props = {
   children: React.Element<*>,
