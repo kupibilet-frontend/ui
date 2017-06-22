@@ -1,3 +1,4 @@
+// @flow
 /* eslint-disable no-nested-ternary */
 
 import React, { PureComponent } from 'react'
