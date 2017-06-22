@@ -12,13 +12,13 @@ exports[`Storyshots Autocomplete Airport 1`] = `
     }
   >
     <div
-      className="sc-jhAzac iXQuyJ"
+      className="sc-kjoXOD lUKdb"
     >
       <div
         className="react-autosuggest__container"
       >
         <div
-          className="sc-jWBwVP fvSmgP"
+          className="sc-gipzik dNzsRJ"
         >
           <textarea
             aria-activedescendant={null}
@@ -29,7 +29,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             autoCapitalize="sentences"
             autoComplete="off"
             autoFocus={true}
-            className="react-autosuggest__input sc-brqgnP hVNoAl"
+            className="react-autosuggest__input sc-csuQGl XHQvw"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -42,10 +42,10 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             wrap="off"
           />
           <div
-            className="airport-input__geo sc-cMljjf hhAekQ"
+            className="airport-input__geo sc-Rmtcm fZdPuk"
           >
             <div
-              className="sc-jDwBTQ bOuoYF"
+              className="sc-hzDkRC cFCdAE"
             >
               
             </div>
@@ -53,7 +53,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             
           </div>
           <div
-            className="sc-iRbamj fJefAy"
+            className="sc-fBuWsC gHcHIc"
           >
             
           </div>
@@ -185,6 +185,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       >
         <div
           className="rc-collapse-item sc-iwsKbI hIrClY sc-htpNat jpYvPn"
+          id={undefined}
           style={undefined}
         >
           <div
@@ -197,7 +198,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
               className="sc-htoDjs fYyxaZ"
             >
               <div
-                className="sc-TOsTZ lfvEpo"
+                className="sc-jbKcbu epyocb"
               >
                 Пересадки
               </div>
@@ -232,7 +233,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD ODnzO"
+        className="sc-kvZOFW bkZmTX"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +242,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD eqmeva"
+        className="sc-kvZOFW fJyFPC"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +251,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD ODnzO"
+        className="sc-kvZOFW bkZmTX"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -515,6 +516,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
     >
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -528,6 +530,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -541,6 +544,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -574,6 +578,7 @@ exports[`Storyshots Collapse Default 1`] = `
     >
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -587,6 +592,7 @@ exports[`Storyshots Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -600,6 +606,7 @@ exports[`Storyshots Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -633,6 +640,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
     >
       <div
         className="rc-collapse-item rc-collapse-item-active sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -660,6 +668,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -673,6 +682,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -694,7 +704,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-chPdSV jlvujm"
+    className="sc-hMqMXs kiEKjH"
   >
     <button
       className="no-global sc-gZMcBi egQBpH"
@@ -709,12 +719,12 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
       </span>
     </button>
     <div
-      className="sc-jWBwVP exjCKk"
+      className="sc-gipzik bXTdGA"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP hhICnf"
+        className="sc-csuQGl dOjQVy"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -724,10 +734,10 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf gIemQX"
+        className="airport-input__geo sc-Rmtcm gEVxKR"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-hzDkRC cFCdAE"
         >
           Шереметьево
         </div>
@@ -735,7 +745,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj llOgDF"
+        className="sc-fBuWsC iAVNCH"
       >
         SVO
       </div>
@@ -761,15 +771,15 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-chPdSV jlvujm"
+    className="sc-hMqMXs kiEKjH"
   >
     <div
-      className="sc-jWBwVP hyAZDv"
+      className="sc-gipzik fbbbnv"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP gBrlZN"
+        className="sc-csuQGl fVBLcb"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -779,10 +789,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf hhAekQ"
+        className="airport-input__geo sc-Rmtcm fZdPuk"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-hzDkRC cFCdAE"
         >
           Шереметьево
         </div>
@@ -790,17 +800,17 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj llOgDF"
+        className="sc-fBuWsC iAVNCH"
       >
         SVO
       </div>
     </div>
     <div
-      className="sc-kgoBCf PGghj"
+      className="sc-kEYyzF juTNNb"
       onClick={[Function]}
     >
       <svg
-        className="controls-group__swap sc-kGXeez dzfMpI icon-inherit-color sc-bxivhb ljgSYE"
+        className="controls-group__swap sc-kkGfuU fpmnQg icon-inherit-color sc-bxivhb ljgSYE"
         size="xxsmall"
         style={undefined}
       >
@@ -810,12 +820,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       </svg>
     </div>
     <div
-      className="sc-jWBwVP bSkTbm"
+      className="sc-gipzik fYwGTS"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP kUuIhI"
+        className="sc-csuQGl dtrAAI"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -825,10 +835,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf gIemQX"
+        className="airport-input__geo sc-Rmtcm gEVxKR"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-hzDkRC cFCdAE"
         >
           Несуществующий город
         </div>
@@ -836,7 +846,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj fJefAy"
+        className="sc-fBuWsC gHcHIc"
       >
         
       </div>
@@ -850,7 +860,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kEYyzF cQpahU"
+    className="sc-cMljjf jIRDym"
   >
     <div
       className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
@@ -935,7 +945,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="sc-eNQAEJ gdLOdp"
+      className="sc-jWBwVP kxFoQB"
     >
       <div
         onClick={[Function]}
@@ -971,10 +981,10 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX exgQcK"
+      className="sc-iAyFgw jvxXAV"
     >
       <div
-        className="sc-dxgOiQ kqIddl"
+        className="sc-hSdWYo EiRZm"
       >
         <div
           style={
@@ -991,7 +1001,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ KNbIy"
+        className="sc-eHgmQL gBomhi"
       >
         <div
           style={
@@ -1024,7 +1034,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
     }
   >
     <div
-      className="sc-jKJlTe fVGLno"
+      className="sc-cvbbAY cAqpXD"
     >
       <div
         style={
@@ -1056,10 +1066,10 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX exgQcK"
+      className="sc-iAyFgw jvxXAV"
     >
       <div
-        className="sc-dxgOiQ kqIddl"
+        className="sc-hSdWYo EiRZm"
       >
         <div
           style={
@@ -1076,7 +1086,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ dlJzzS"
+        className="sc-eHgmQL bvCXpb"
       >
         <div
           style={
@@ -1129,148 +1139,2219 @@ exports[`Storyshots Icon Small Icon with stroke 1`] = `
 </div>
 `;
 
-exports[`Storyshots Slider Slider 1`] = `
+exports[`Storyshots PassengerPicker Defalut 1`] = `
 <div
-  className="hMQnet"
+  className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="rheostat rheostat-horizontal bKlBoX"
-    onClick={[Function]}
+    className="sc-cHGsZl ipxiiD"
+  >
+    <div>
+      <div
+        className="sc-TOsTZ gNxWLU"
+      >
+        Взрослые
+      </div>
+      <div
+        className="sc-kgAjT kuboaN"
+      >
+        До 2 лет, без места
+      </div>
+    </div>
+    <div
+      className="sc-hmzhuo jTPNxq"
+    >
+      <span
+        className="sc-cJSrbW bVkicF"
+      >
+        1
+      </span>
+      <div
+        className="sc-frDJqD iDQvIn"
+      >
+        <button
+          className="no-global sc-ksYbfQ hUUMUs sc-gZMcBi dkdJqv"
+          disabled={true}
+          onClick={[Function]}
+          size="normal"
+        >
+          <span
+            className="sc-VigVT cerRmq"
+            size="normal"
+          >
+            <svg
+              className="sc-bxivhb hLuXwK"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_minus"
+              />
+            </svg>
+          </span>
+        </button>
+        <button
+          className="no-global sc-ksYbfQ hUUMUs sc-gZMcBi ezVieq"
+          disabled={false}
+          onClick={[Function]}
+          size="normal"
+        >
+          <span
+            className="sc-VigVT cerRmq"
+            size="normal"
+          >
+            <svg
+              className="sc-bxivhb hLuXwK"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_plus"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Slider Slider 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
     style={
       Object {
-        "position": "relative",
+        "width": "252px",
       }
     }
   >
     <div
-      className="rheostat-background"
-    />
-    <span
-      aria-disabled={false}
-      aria-valuemax={1491080400000}
-      aria-valuemin={1490994000000}
-      aria-valuenow={1490994000000}
-      className="rheostat-handle jUctXQ"
-      data-handle-key={0}
-      onClick={undefined}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-      role="slider"
+      className="rheostat rheostat-horizontal sc-chPdSV ijufRu"
+      onClick={[Function]}
       style={
         Object {
-          "left": "0%",
-          "position": "absolute",
-        }
-      }
-      tabIndex={0}
-    />
-    <span
-      aria-disabled={false}
-      aria-valuemax={1491080400000}
-      aria-valuemin={1490994000000}
-      aria-valuenow={1491080400000}
-      className="rheostat-handle jUctXQ"
-      data-handle-key={1}
-      onClick={undefined}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
-      role="slider"
-      style={
-        Object {
-          "left": "100%",
-          "position": "absolute",
-        }
-      }
-      tabIndex={0}
-    />
-    <span
-      className="rheostat-progress RHSbM"
-      style={
-        Object {
-          "left": "0%",
-          "width": "100%",
-        }
-      }
-    />
-    <span
-      className="kDRQPf"
-      style={
-        Object {
-          "left": "51.041666666666664%",
-          "position": "absolute",
+          "position": "relative",
         }
       }
     >
-      1491038100000
-    </span>
-    <span
-      className="kDRQPf"
+      <div
+        className="rheostat-background"
+      />
+      <div>
+        <div
+          className="sc-dxgOiQ inwCPG"
+          onMouseDown={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "left": "0%",
+              "position": "absolute",
+              "zIndex": 2,
+            }
+          }
+        >
+          <span
+            className="sc-eNQAEJ dUIGOF"
+            color="black"
+            onClick={undefined}
+          >
+            <span
+              className="sc-jKJlTe kxCGof"
+            >
+              0
+            </span>
+          </span>
+          <span>
+            <span
+              aria-disabled={false}
+              aria-valuemax={149}
+              aria-valuemin={0}
+              aria-valuenow={0}
+              className="rheostat-handle sc-kgoBCf hNahHA"
+              data-handle-key={0}
+              onClick={undefined}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+              role="slider"
+              style={
+                Object {
+                  "left": "0%",
+                  "position": "absolute",
+                }
+              }
+              tabIndex={0}
+            />
+          </span>
+        </div>
+      </div>
+      <div>
+        <div
+          className="sc-dxgOiQ inwCPG"
+          onMouseDown={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "left": "100%",
+              "position": "absolute",
+              "zIndex": 2,
+            }
+          }
+        >
+          <span
+            className="sc-eNQAEJ dUIGOF"
+            color="black"
+            onClick={undefined}
+          >
+            <span
+              className="sc-jKJlTe kxCGof"
+            >
+              298
+            </span>
+          </span>
+          <span>
+            <span
+              aria-disabled={false}
+              aria-valuemax={149}
+              aria-valuemin={0}
+              aria-valuenow={149}
+              className="rheostat-handle sc-kgoBCf hNahHA"
+              data-handle-key={1}
+              onClick={undefined}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+              role="slider"
+              style={
+                Object {
+                  "left": "100%",
+                  "position": "absolute",
+                }
+              }
+              tabIndex={0}
+            />
+          </span>
+        </div>
+      </div>
+      <span
+        className="rheostat-progress sc-kGXeez jfddOm"
+        style={
+          Object {
+            "left": "0%",
+            "width": "100%",
+          }
+        }
+      />
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "0%",
+            "position": "absolute",
+          }
+        }
+      >
+        0
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "0.6711409395973155%",
+            "position": "absolute",
+          }
+        }
+      >
+        1
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "1.342281879194631%",
+            "position": "absolute",
+          }
+        }
+      >
+        2
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "2.013422818791946%",
+            "position": "absolute",
+          }
+        }
+      >
+        3
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "2.684563758389262%",
+            "position": "absolute",
+          }
+        }
+      >
+        4
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "3.3557046979865772%",
+            "position": "absolute",
+          }
+        }
+      >
+        5
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "4.026845637583892%",
+            "position": "absolute",
+          }
+        }
+      >
+        6
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "4.697986577181208%",
+            "position": "absolute",
+          }
+        }
+      >
+        7
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "5.369127516778524%",
+            "position": "absolute",
+          }
+        }
+      >
+        8
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "6.0402684563758395%",
+            "position": "absolute",
+          }
+        }
+      >
+        9
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "6.7114093959731544%",
+            "position": "absolute",
+          }
+        }
+      >
+        10
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "7.38255033557047%",
+            "position": "absolute",
+          }
+        }
+      >
+        11
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "8.053691275167784%",
+            "position": "absolute",
+          }
+        }
+      >
+        12
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "8.724832214765101%",
+            "position": "absolute",
+          }
+        }
+      >
+        13
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "9.395973154362416%",
+            "position": "absolute",
+          }
+        }
+      >
+        14
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "10.06711409395973%",
+            "position": "absolute",
+          }
+        }
+      >
+        15
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "10.738255033557047%",
+            "position": "absolute",
+          }
+        }
+      >
+        16
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "11.409395973154362%",
+            "position": "absolute",
+          }
+        }
+      >
+        17
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "12.080536912751679%",
+            "position": "absolute",
+          }
+        }
+      >
+        18
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "12.751677852348994%",
+            "position": "absolute",
+          }
+        }
+      >
+        19
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "13.422818791946309%",
+            "position": "absolute",
+          }
+        }
+      >
+        20
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "14.093959731543624%",
+            "position": "absolute",
+          }
+        }
+      >
+        21
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "14.76510067114094%",
+            "position": "absolute",
+          }
+        }
+      >
+        22
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "15.436241610738255%",
+            "position": "absolute",
+          }
+        }
+      >
+        23
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "16.10738255033557%",
+            "position": "absolute",
+          }
+        }
+      >
+        24
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "16.778523489932887%",
+            "position": "absolute",
+          }
+        }
+      >
+        25
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "17.449664429530202%",
+            "position": "absolute",
+          }
+        }
+      >
+        26
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "18.120805369127517%",
+            "position": "absolute",
+          }
+        }
+      >
+        27
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "18.79194630872483%",
+            "position": "absolute",
+          }
+        }
+      >
+        28
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "19.463087248322147%",
+            "position": "absolute",
+          }
+        }
+      >
+        29
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "20.13422818791946%",
+            "position": "absolute",
+          }
+        }
+      >
+        30
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "20.80536912751678%",
+            "position": "absolute",
+          }
+        }
+      >
+        31
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "21.476510067114095%",
+            "position": "absolute",
+          }
+        }
+      >
+        32
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "22.14765100671141%",
+            "position": "absolute",
+          }
+        }
+      >
+        33
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "22.818791946308725%",
+            "position": "absolute",
+          }
+        }
+      >
+        34
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "23.48993288590604%",
+            "position": "absolute",
+          }
+        }
+      >
+        35
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "24.161073825503358%",
+            "position": "absolute",
+          }
+        }
+      >
+        36
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "24.832214765100673%",
+            "position": "absolute",
+          }
+        }
+      >
+        37
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "25.503355704697988%",
+            "position": "absolute",
+          }
+        }
+      >
+        38
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "26.174496644295303%",
+            "position": "absolute",
+          }
+        }
+      >
+        39
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "26.845637583892618%",
+            "position": "absolute",
+          }
+        }
+      >
+        40
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "27.516778523489933%",
+            "position": "absolute",
+          }
+        }
+      >
+        41
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "28.187919463087248%",
+            "position": "absolute",
+          }
+        }
+      >
+        42
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "28.859060402684566%",
+            "position": "absolute",
+          }
+        }
+      >
+        43
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "29.53020134228188%",
+            "position": "absolute",
+          }
+        }
+      >
+        44
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "30.201342281879196%",
+            "position": "absolute",
+          }
+        }
+      >
+        45
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "30.87248322147651%",
+            "position": "absolute",
+          }
+        }
+      >
+        46
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "31.543624161073826%",
+            "position": "absolute",
+          }
+        }
+      >
+        47
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "32.21476510067114%",
+            "position": "absolute",
+          }
+        }
+      >
+        48
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "32.88590604026846%",
+            "position": "absolute",
+          }
+        }
+      >
+        49
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "33.557046979865774%",
+            "position": "absolute",
+          }
+        }
+      >
+        50
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "34.22818791946309%",
+            "position": "absolute",
+          }
+        }
+      >
+        51
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "34.899328859060404%",
+            "position": "absolute",
+          }
+        }
+      >
+        52
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "35.57046979865772%",
+            "position": "absolute",
+          }
+        }
+      >
+        53
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "36.241610738255034%",
+            "position": "absolute",
+          }
+        }
+      >
+        54
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "36.91275167785235%",
+            "position": "absolute",
+          }
+        }
+      >
+        55
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "37.58389261744966%",
+            "position": "absolute",
+          }
+        }
+      >
+        56
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "38.25503355704698%",
+            "position": "absolute",
+          }
+        }
+      >
+        57
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "38.92617449664429%",
+            "position": "absolute",
+          }
+        }
+      >
+        58
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "39.59731543624161%",
+            "position": "absolute",
+          }
+        }
+      >
+        59
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "40.26845637583892%",
+            "position": "absolute",
+          }
+        }
+      >
+        60
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "40.939597315436245%",
+            "position": "absolute",
+          }
+        }
+      >
+        61
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "41.61073825503356%",
+            "position": "absolute",
+          }
+        }
+      >
+        62
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "42.281879194630875%",
+            "position": "absolute",
+          }
+        }
+      >
+        63
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "42.95302013422819%",
+            "position": "absolute",
+          }
+        }
+      >
+        64
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "43.624161073825505%",
+            "position": "absolute",
+          }
+        }
+      >
+        65
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "44.29530201342282%",
+            "position": "absolute",
+          }
+        }
+      >
+        66
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "44.966442953020135%",
+            "position": "absolute",
+          }
+        }
+      >
+        67
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "45.63758389261745%",
+            "position": "absolute",
+          }
+        }
+      >
+        68
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "46.308724832214764%",
+            "position": "absolute",
+          }
+        }
+      >
+        69
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "46.97986577181208%",
+            "position": "absolute",
+          }
+        }
+      >
+        70
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "47.651006711409394%",
+            "position": "absolute",
+          }
+        }
+      >
+        71
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "48.322147651006716%",
+            "position": "absolute",
+          }
+        }
+      >
+        72
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "48.99328859060403%",
+            "position": "absolute",
+          }
+        }
+      >
+        73
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "49.664429530201346%",
+            "position": "absolute",
+          }
+        }
+      >
+        74
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "50.33557046979866%",
+            "position": "absolute",
+          }
+        }
+      >
+        75
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "51.006711409395976%",
+            "position": "absolute",
+          }
+        }
+      >
+        76
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "51.67785234899329%",
+            "position": "absolute",
+          }
+        }
+      >
+        77
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "52.348993288590606%",
+            "position": "absolute",
+          }
+        }
+      >
+        78
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "53.02013422818792%",
+            "position": "absolute",
+          }
+        }
+      >
+        79
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "53.691275167785236%",
+            "position": "absolute",
+          }
+        }
+      >
+        80
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "54.36241610738255%",
+            "position": "absolute",
+          }
+        }
+      >
+        81
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "55.033557046979865%",
+            "position": "absolute",
+          }
+        }
+      >
+        82
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "55.70469798657718%",
+            "position": "absolute",
+          }
+        }
+      >
+        83
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "56.375838926174495%",
+            "position": "absolute",
+          }
+        }
+      >
+        84
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "57.04697986577181%",
+            "position": "absolute",
+          }
+        }
+      >
+        85
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "57.71812080536913%",
+            "position": "absolute",
+          }
+        }
+      >
+        86
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "58.38926174496645%",
+            "position": "absolute",
+          }
+        }
+      >
+        87
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "59.06040268456376%",
+            "position": "absolute",
+          }
+        }
+      >
+        88
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "59.73154362416108%",
+            "position": "absolute",
+          }
+        }
+      >
+        89
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "60.40268456375839%",
+            "position": "absolute",
+          }
+        }
+      >
+        90
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "61.07382550335571%",
+            "position": "absolute",
+          }
+        }
+      >
+        91
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "61.74496644295302%",
+            "position": "absolute",
+          }
+        }
+      >
+        92
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "62.41610738255034%",
+            "position": "absolute",
+          }
+        }
+      >
+        93
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "63.08724832214765%",
+            "position": "absolute",
+          }
+        }
+      >
+        94
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "63.758389261744966%",
+            "position": "absolute",
+          }
+        }
+      >
+        95
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "64.42953020134227%",
+            "position": "absolute",
+          }
+        }
+      >
+        96
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "65.1006711409396%",
+            "position": "absolute",
+          }
+        }
+      >
+        97
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "65.77181208053692%",
+            "position": "absolute",
+          }
+        }
+      >
+        98
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "66.44295302013423%",
+            "position": "absolute",
+          }
+        }
+      >
+        99
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "67.11409395973155%",
+            "position": "absolute",
+          }
+        }
+      >
+        100
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "67.78523489932886%",
+            "position": "absolute",
+          }
+        }
+      >
+        101
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "68.45637583892618%",
+            "position": "absolute",
+          }
+        }
+      >
+        102
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "69.12751677852349%",
+            "position": "absolute",
+          }
+        }
+      >
+        103
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "69.79865771812081%",
+            "position": "absolute",
+          }
+        }
+      >
+        104
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "70.46979865771812%",
+            "position": "absolute",
+          }
+        }
+      >
+        105
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "71.14093959731544%",
+            "position": "absolute",
+          }
+        }
+      >
+        106
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "71.81208053691275%",
+            "position": "absolute",
+          }
+        }
+      >
+        107
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "72.48322147651007%",
+            "position": "absolute",
+          }
+        }
+      >
+        108
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "73.15436241610739%",
+            "position": "absolute",
+          }
+        }
+      >
+        109
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "73.8255033557047%",
+            "position": "absolute",
+          }
+        }
+      >
+        110
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "74.49664429530202%",
+            "position": "absolute",
+          }
+        }
+      >
+        111
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "75.16778523489933%",
+            "position": "absolute",
+          }
+        }
+      >
+        112
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "75.83892617449665%",
+            "position": "absolute",
+          }
+        }
+      >
+        113
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "76.51006711409396%",
+            "position": "absolute",
+          }
+        }
+      >
+        114
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "77.18120805369128%",
+            "position": "absolute",
+          }
+        }
+      >
+        115
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "77.85234899328859%",
+            "position": "absolute",
+          }
+        }
+      >
+        116
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "78.52348993288591%",
+            "position": "absolute",
+          }
+        }
+      >
+        117
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "79.19463087248322%",
+            "position": "absolute",
+          }
+        }
+      >
+        118
+      </span>
+      <span
+        className="sc-kpOJdX dMslrd"
+        style={
+          Object {
+            "left": "79.86577181208054%",
+            "position": "absolute",
+          }
+        }
+      >
+        119
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "80.53691275167785%",
+            "position": "absolute",
+          }
+        }
+      >
+        120
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "81.20805369127517%",
+            "position": "absolute",
+          }
+        }
+      >
+        121
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "81.87919463087249%",
+            "position": "absolute",
+          }
+        }
+      >
+        122
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "82.5503355704698%",
+            "position": "absolute",
+          }
+        }
+      >
+        123
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "83.22147651006712%",
+            "position": "absolute",
+          }
+        }
+      >
+        124
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "83.89261744966443%",
+            "position": "absolute",
+          }
+        }
+      >
+        125
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "84.56375838926175%",
+            "position": "absolute",
+          }
+        }
+      >
+        126
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "85.23489932885906%",
+            "position": "absolute",
+          }
+        }
+      >
+        127
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "85.90604026845638%",
+            "position": "absolute",
+          }
+        }
+      >
+        128
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "86.57718120805369%",
+            "position": "absolute",
+          }
+        }
+      >
+        129
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "87.24832214765101%",
+            "position": "absolute",
+          }
+        }
+      >
+        130
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "87.91946308724832%",
+            "position": "absolute",
+          }
+        }
+      >
+        131
+      </span>
+      <span
+        className="sc-kpOJdX iAAhdL"
+        style={
+          Object {
+            "left": "88.59060402684564%",
+            "position": "absolute",
+          }
+        }
+      >
+        132
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "89.26174496644296%",
+            "position": "absolute",
+          }
+        }
+      >
+        133
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "89.93288590604027%",
+            "position": "absolute",
+          }
+        }
+      >
+        134
+      </span>
+      <span
+        className="sc-kpOJdX jCdJlt"
+        style={
+          Object {
+            "left": "90.60402684563759%",
+            "position": "absolute",
+          }
+        }
+      >
+        135
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "91.2751677852349%",
+            "position": "absolute",
+          }
+        }
+      >
+        136
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "91.94630872483222%",
+            "position": "absolute",
+          }
+        }
+      >
+        137
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "92.61744966442953%",
+            "position": "absolute",
+          }
+        }
+      >
+        138
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "93.28859060402685%",
+            "position": "absolute",
+          }
+        }
+      >
+        139
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "93.95973154362416%",
+            "position": "absolute",
+          }
+        }
+      >
+        140
+      </span>
+      <span
+        className="sc-kpOJdX deFbCU"
+        style={
+          Object {
+            "left": "94.63087248322147%",
+            "position": "absolute",
+          }
+        }
+      >
+        141
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "95.30201342281879%",
+            "position": "absolute",
+          }
+        }
+      >
+        142
+      </span>
+      <span
+        className="sc-kpOJdX jJPKiI"
+        style={
+          Object {
+            "left": "95.9731543624161%",
+            "position": "absolute",
+          }
+        }
+      >
+        143
+      </span>
+      <span
+        className="sc-kpOJdX dNvJeO"
+        style={
+          Object {
+            "left": "96.64429530201343%",
+            "position": "absolute",
+          }
+        }
+      >
+        144
+      </span>
+      <span
+        className="sc-kpOJdX fcbFIW"
+        style={
+          Object {
+            "left": "97.31543624161074%",
+            "position": "absolute",
+          }
+        }
+      >
+        145
+      </span>
+      <span
+        className="sc-kpOJdX bhoRTc"
+        style={
+          Object {
+            "left": "97.98657718120806%",
+            "position": "absolute",
+          }
+        }
+      >
+        146
+      </span>
+      <span
+        className="sc-kpOJdX dKubCR"
+        style={
+          Object {
+            "left": "98.65771812080537%",
+            "position": "absolute",
+          }
+        }
+      >
+        147
+      </span>
+      <span
+        className="sc-kpOJdX WjFPJ"
+        style={
+          Object {
+            "left": "99.32885906040269%",
+            "position": "absolute",
+          }
+        }
+      >
+        148
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip bottom tooltip 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
       style={
         Object {
-          "left": "52.083333333333336%",
-          "position": "absolute",
+          "zIndex": undefined,
         }
       }
     >
-      1491039000000
-    </span>
-    <span
-      className="kDRQPf"
+      <span
+        className="sc-eNQAEJ bYcXLD"
+        color="red"
+        onClick={undefined}
+      >
+        <span
+          className="sc-jKJlTe kCplyc"
+        >
+          foobar
+        </span>
+        <span
+          className="sc-ckVGcZ clgMAH"
+        >
+          ?
+        </span>
+      </span>
+      <span>
+        Tooltip bottom text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip green tooltip 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
       style={
         Object {
-          "left": "53.125%",
-          "position": "absolute",
+          "zIndex": undefined,
         }
       }
     >
-      1491039900000
-    </span>
-    <span
-      className="kDRQPf"
+      <span
+        className="sc-eNQAEJ gpBpl"
+        color="green"
+        onClick={undefined}
+      >
+        <span
+          className="sc-jKJlTe kxCGof"
+        />
+      </span>
+      <span>
+        Tooltip text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip left tooltip 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
       style={
         Object {
-          "left": "54.166666666666664%",
-          "position": "absolute",
+          "zIndex": undefined,
         }
       }
     >
-      1491040800000
-    </span>
-    <span
-      className="kDRQPf"
+      <span
+        className="sc-eNQAEJ cNPDIk"
+        color={undefined}
+        onClick={undefined}
+      >
+        <span
+          className="sc-jKJlTe kxCGof"
+        />
+      </span>
+      <span>
+        Tooltip text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip red tooltip 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
       style={
         Object {
-          "left": "55.208333333333336%",
-          "position": "absolute",
+          "zIndex": undefined,
         }
       }
     >
-      1491041700000
-    </span>
-    <span
-      className="kDRQPf"
+      <span
+        className="sc-eNQAEJ jJMARe"
+        color="red"
+        onClick={undefined}
+      >
+        <span
+          className="sc-jKJlTe kxCGof"
+        />
+      </span>
+      <span>
+        Tooltip text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip right tooltip 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
       style={
         Object {
-          "left": "63.541666666666664%",
-          "position": "absolute",
+          "zIndex": undefined,
         }
       }
     >
-      1491048900000
-    </span>
-    <span
-      className="kDRQPf"
+      <span
+        className="sc-eNQAEJ AYzVp"
+        color={undefined}
+        onClick={undefined}
+      >
+        <span
+          className="sc-jKJlTe kxCGof"
+        />
+      </span>
+      <span>
+        Tooltip text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip tooltip with left icon 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
       style={
         Object {
-          "left": "64.58333333333334%",
-          "position": "absolute",
+          "zIndex": undefined,
         }
       }
     >
-      1491049800000
-    </span>
+      <span
+        className="sc-eNQAEJ iosfMy"
+        color={undefined}
+        onClick={undefined}
+      >
+        <span
+          className="sc-ckVGcZ clgMAH"
+        >
+          ?
+        </span>
+        <span
+          className="sc-jKJlTe kJAArO"
+        />
+      </span>
+      <span>
+        Tooltip text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip tooltip with right icon 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
+      style={
+        Object {
+          "zIndex": undefined,
+        }
+      }
+    >
+      <span
+        className="sc-eNQAEJ jBnWry"
+        color={undefined}
+        onClick={undefined}
+      >
+        <span
+          className="sc-jKJlTe kCplyc"
+        />
+        <span
+          className="sc-ckVGcZ clgMAH"
+        >
+          ?
+        </span>
+      </span>
+      <span>
+        Tooltip text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip top tooltip 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "minHeight": "100vh",
+      }
+    }
+  >
+    <div
+      className="sc-dxgOiQ fLAzQI"
+      onMouseDown={undefined}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
+      style={
+        Object {
+          "zIndex": undefined,
+        }
+      }
+    >
+      <span
+        className="sc-eNQAEJ dUIGOF"
+        color="black"
+        onClick={undefined}
+      >
+        <span
+          className="sc-jKJlTe kxCGof"
+        >
+          foobar
+        </span>
+      </span>
+      <span>
+        Tooltip top text
+      </span>
+    </div>
   </div>
 </div>
 `;
