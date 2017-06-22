@@ -50,9 +50,9 @@ export default class Tooltip extends PureComponent<Props, Props, State> {
   }
 
   handleMouseOut = () => {
-    if (this.props.show) {
-      return
-    }
+    // if (this.props.show) {
+    //   return
+    // }
     clearTimeout(this.hoverTimeout)
     this.ensureHover(false)
   }
@@ -62,6 +62,14 @@ export default class Tooltip extends PureComponent<Props, Props, State> {
       return
     }
     this.setState({ isHovering })
+  }
+
+  handleMouseUp = (e) => {
+    const propName = 'data-handle-key'
+    const targetKey = +e.target.getAttribute(propName)
+    if (this.props[propName] === targetKey) {
+      this.ensureHover(true)
+    }
   }
 
   render() {
@@ -86,6 +94,7 @@ export default class Tooltip extends PureComponent<Props, Props, State> {
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
         onMouseDown={onMouseDown}
+        onMouseUp={this.handleMouseUp}
         style={{ ...style, zIndex }}
         hasHandle={hasHandle}
       >
