@@ -21,3 +21,6 @@ jest.mock('react-dom', () => {
   ReactDOM.findDOMNode = () => null
   return ReactDOM
 })
+
+// matchMedia polyfill
+window.matchMedia = window.matchMedia || (() => { return { matches: false, addListener: () => {}, removeListener: () => {}, }; });

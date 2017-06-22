@@ -197,7 +197,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
               className="sc-htoDjs fYyxaZ"
             >
               <div
-                className="sc-TOsTZ lfvEpo"
+                className="sc-hmzhuo hhTFKW"
               >
                 Пересадки
               </div>
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD ODnzO"
+        className="sc-cJSrbW zmllD"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD eqmeva"
+        className="sc-cJSrbW rPHZN"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-kjoXOD ODnzO"
+        className="sc-cJSrbW zmllD"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -1201,6 +1201,51 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
             </svg>
           </span>
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Utils Responsive only 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div>
+    <div
+      className="sc-kjoXOD MnqbO"
+    >
+      <div
+        className="sc-frDJqD kbLYhU"
+      >
+        Desktop
+      </div>
+    </div>
+    <div
+      className="sc-kgAjT iAakoY"
+    >
+      <div
+        className="sc-kvZOFW bMWrUL"
+      >
+        Handheld
+      </div>
+    </div>
+    <div
+      className="sc-TOsTZ gMMqZQ"
+    >
+      <div
+        className="sc-hqyNC jJLvKI"
+      >
+        Tablet
+      </div>
+    </div>
+    <div
+      className="sc-cHGsZl ewOqZG"
+    >
+      <div
+        className="sc-jbKcbu gOLcCi"
+      >
+        Mobile
       </div>
     </div>
   </div>
