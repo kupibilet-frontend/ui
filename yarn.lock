@@ -5005,9 +5005,9 @@ podda@^1.2.2:
     babel-runtime "^6.11.6"
     immutable "^3.8.1"
 
-polished@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-1.0.4.tgz#eded0fef7d2476465eb1d8e2cd9dd9b00796fbae"
+polished@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-1.2.0.tgz#241cbbbd848d62ca8776eee618383d72e95830c5"
 
 postcss-calc@^5.2.0:
   version "5.3.1"
