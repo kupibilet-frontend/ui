@@ -20,23 +20,21 @@ export default class HandleWithToolTip extends PureComponent<Props> {
       : ''
 
     return (
-      <div>
-        <Tooltip
-          startDelay={0}
-          position="top"
-          color="black"
-          title={label}
-          zIndex={2}
-          show={showTooltip}
-          hasHandle
+      <Tooltip
+        startDelay={0}
+        position="top"
+        color="black"
+        title={label}
+        zIndex={2}
+        show={showTooltip}
+        hasHandle
+        {...props}
+      >
+        <StyledHandle
           {...props}
-        >
-          <StyledHandle
-            {...props}
-            hasTooltip
-          />
-        </Tooltip>
-      </div>
+          hasTooltip
+        />
+      </Tooltip>
     )
   }
 }
