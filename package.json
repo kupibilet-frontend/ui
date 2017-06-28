@@ -54,7 +54,6 @@
     "react-addons-shallow-compare": "~15.5.2",
     "react-dom": "~15.5.4",
     "rheostat": "^2.1.0",
-    "storyshots": "~3.2.2",
     "styled-components": "^2.0.1",
     "stylelint-config-kupibilet": "^3.1.2",
     "stylelint-processor-styled-components": "~0.1.0",

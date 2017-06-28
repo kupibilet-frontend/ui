@@ -1,5 +1,4 @@
 // @flow
-/* eslint-disable no-nested-ternary */
 
 import React, { PureComponent } from 'react'
 import Tooltip from '../tooltip'
@@ -14,11 +13,9 @@ type Props = {
 export default class HandleWithToolTip extends PureComponent<Props> {
   render() {
     const { showTooltip, displayValue, ...props } = this.props
-    const label = typeof displayValue === 'string'
-      ? displayValue
-      : typeof displayValue === 'function'
+    const label = typeof displayValue === 'function'
       ? displayValue(props['aria-valuenow'])
-      : ''
+      : displayValue
 
     return (
       <Tooltip

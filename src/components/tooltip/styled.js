@@ -1,13 +1,9 @@
 /* eslint-disable no-confusing-arrow, no-nested-ternary */
 
 import styled from 'styled-components'
+import { rgba } from 'polished'
+import { switchTransition } from '../../utils/transitions'
 
-const TRANSITION_BASE = 'transition: 0.15s ease-out; transition-property: opacity;'
-
-function hexToRgba(hex, opacity) {
-  const arr = hex.match(/[0-9a-f]{2}/ig).map((s) => parseInt(s, 16))
-  return `rgba(${arr.join(', ')}, ${opacity})`
-}
 
 const margins = {
   left: 5,
@@ -30,7 +26,8 @@ export const ToolTipWrap = styled.div`
 export const Icon = styled.span`
   border-radius: 50%;
   border: 1px solid ${({ theme }) => theme.color.text};
-  ${TRANSITION_BASE};
+  ${switchTransition};
+  transition-property: opacity;
   display: inline-block;
   height: 18px;
   line-height: 16px;
@@ -45,42 +42,45 @@ export const SpanWithMargin = styled.span`
 `
 
 export const Root = styled.span`
-  background: ${({ theme }) => hexToRgba(theme.color.textDarkest, 0.97)};
-  border-radius: 12px;
-  color: ${({ theme }) => theme.color.background};
-  font-size: 14px;
-  line-height: 18px;
-  ${TRANSITION_BASE};
-  cursor: pointer;
   display: flex;
   align-items: center;
+  position: absolute;
+
+  ${switchTransition};
+  transition-property: opacity;
+
+  border-radius: 12px;
+  color: ${({ theme }) => theme.color.background};
+  opacity: ${({ isShowing }) => +isShowing};
+  font-size: 14px;
+  line-height: 18px;
+
   height: 24px;
   padding-left: 12px;
   padding-right: 12px;
-  position: absolute;
   text-align: center;
   visibility: ${({ isShowing }) => isShowing ? 'visible' : 'hidden'};
-  opacity: ${({ isShowing }) => +isShowing};
   white-space: nowrap;
 
-  left: ${({ position: pos }) => pos === 'top' || pos === 'bottom' ? '50%' : ''};
   transform: ${({ position: pos }) => pos === 'top' || pos === 'bottom' ? 'translate(-50%, 0%)' : ''};
+
   top: ${({ position }) => position === 'top' ? '-36px' : ''};
   bottom: ${({ position }) => position === 'bottom' ? '-28px' : ''};
   left: ${({ position }) => position === 'right' ? 'calc(100% + 12px)' : ''};
   right: ${({ position }) => position === 'left' ? 'calc(100% + 6px)' : ''};
 
+  cursor: pointer;
   background: ${({ color, theme }) => theme.color[color] || color || ''};
 
   ${({ iconPosition }) => iconPosition && `padding-${iconPosition}: ${paddings[iconPosition]}px;`}
 
   &::before {
-    background: ${({ theme }) => hexToRgba(theme.color.textDarkest, 0.9)};
+    background: ${({ theme }) => rgba(theme.color.textDarkest, 0.9)};
     border-radius: 50%;
     content: '';
+    width: 7px;
     height: 7px;
     position: absolute;
-    width: 7px;
 
     top: ${({ position: pos }) => pos === 'bottom' ? '-9px' : pos === 'left' || pos === 'right' ? '9px' : ''};
     bottom: ${({ position: pos }) => pos === 'top' ? '-9px' : pos === 'bottom' ? 'auto' : ''};

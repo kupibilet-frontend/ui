@@ -8,9 +8,9 @@ const getHandleColor = (props) => {
   const valueNow = props['aria-valuenow']
   const { primary } = props.theme.color
 
-  return key === 0 && valueNow !== props['aria-valuemin'] || key === 1 && valueNow !== props['aria-valuemax']
-    ? primary
-    : props.theme.color.miscDark
+  const hasChanged = key === 0 && valueNow !== props['aria-valuemin']
+    || key === 1 && valueNow !== props['aria-valuemax']
+  return hasChanged ? primary : props.theme.color.miscDark
 }
 
 export const StyledSlider = styled(Rheostat)`

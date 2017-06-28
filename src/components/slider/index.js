@@ -5,7 +5,7 @@ import initial from 'lodash/initial'
 import inRange from 'lodash/inRange'
 
 import RangeBar from './RangeBar'
-import HandleWithToolTip from './HandleWithTooltip'
+import HandleWithTooltipForSlider from './HandleWithTooltipForSlider'
 
 import {
   StyledSlider,
@@ -124,23 +124,16 @@ export default class Slider extends PureComponent<DefaultProps, Props, State> {
     })
   }
 
-  getHandleWithToolTip = (props) => {
-    const key = props['data-handle-key']
-    return (
-      <HandleWithToolTip
-        {...props}
-        onMouseDown={(e) => {
-          props.onMouseDown(e)
-          this.setActiveTooltip(key)
-        }}
-        showTooltip={this.state.activeHandles.includes(key)}
-        displayValue={this.props.displayValue}
-      />
-    )
-  }
+  getHandleWithToolTip = (props) => (
+    <HandleWithTooltipForSlider
+      {...props}
+      isActiveHandle={this.state.activeHandles.includes(props['data-handle-key'])}
+      displayValue={this.props.displayValue}
+      setActiveTooltip={this.setActiveTooltip}
+    />
+  )
 
   getRangeBar = (props) => {
-    // console.log('roo', props)
     const { state, styleCache } = this
     const { children } = props
     const { min, max, values } = state
