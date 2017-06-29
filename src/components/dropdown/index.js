@@ -20,7 +20,7 @@ const DropdownOverlay = styled.div`
   background: ${({ theme }) => theme.color.background};
   ${shadowSmall}
   ${borderSmall}
-  z-index: 1;
+  z-index: 10;
 
   margin-bottom: 18px;
 `
