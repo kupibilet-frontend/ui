@@ -194,7 +194,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             role="tab"
           >
             <div
-              className="sc-htoDjs fYyxaZ"
+              className="sc-htoDjs lekexi"
             >
               <div
                 className="sc-frDJqD hsebVT"
@@ -202,7 +202,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
                 Пересадки
               </div>
               <svg
-                className="sc-dnqmqq htZMOn icon-inherit-color sc-bxivhb ljgSYE"
+                className="sc-dnqmqq htZMOn icon-inherit-color sc-bxivhb doUjBV"
                 size="xxsmall"
                 style={undefined}
               >
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ hXWUTj"
+        className="sc-ksYbfQ oRaPL"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ ifxgdc"
+        className="sc-ksYbfQ hSRSLF"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ hXWUTj"
+        className="sc-ksYbfQ oRaPL"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -353,7 +353,7 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
       size="large"
     >
       <svg
-        className="sc-bxivhb deayMY"
+        className="sc-bxivhb tbkNI"
         size="normal"
         style={undefined}
       >
@@ -399,7 +399,7 @@ exports[`Storyshots Buttons With icons 1`] = `
       size="normal"
     >
       <svg
-        className="sc-bxivhb kLyRqs"
+        className="sc-bxivhb tbkNI"
         size="normal"
         style={undefined}
       >
@@ -419,7 +419,7 @@ exports[`Storyshots Buttons With icons 1`] = `
       size="normal"
     >
       <svg
-        className="sc-bxivhb deayMY"
+        className="sc-bxivhb tbkNI"
         size="normal"
         style={undefined}
       >
@@ -800,7 +800,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       onClick={[Function]}
     >
       <svg
-        className="controls-group__swap sc-kGXeez dzfMpI icon-inherit-color sc-bxivhb ljgSYE"
+        className="controls-group__swap sc-kGXeez dzfMpI icon-inherit-color sc-bxivhb doUjBV"
         size="xxsmall"
         style={undefined}
       >
@@ -1097,29 +1097,13 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 </div>
 `;
 
-exports[`Storyshots Icon Medium Icon with stroke & fill 1`] = `
+exports[`Storyshots Icon Icon with fill 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
 >
   <svg
-    className="sc-bxivhb fIrOio"
-    size="medium"
-    style={undefined}
-  >
-    <use
-      xlinkHref="#kb_airport-change"
-    />
-  </svg>
-</div>
-`;
-
-exports[`Storyshots Icon Small Icon with stroke 1`] = `
-<div
-  className="sc-bdVaJa jBbfIF"
->
-  <svg
-    className="sc-bxivhb kdfCdt"
-    size="small"
+    className="sc-bxivhb fzMgiT"
+    size="large"
     style={undefined}
   >
     <use
@@ -1170,7 +1154,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
             size="normal"
           >
             <svg
-              className="sc-bxivhb hLuXwK"
+              className="sc-bxivhb tbkNI"
               size="normal"
               style={undefined}
             >
@@ -1191,7 +1175,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
             size="normal"
           >
             <svg
-              className="sc-bxivhb hLuXwK"
+              className="sc-bxivhb tbkNI"
               size="normal"
               style={undefined}
             >

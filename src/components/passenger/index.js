@@ -135,7 +135,7 @@ class PassengerPicker extends Component<{}, Props, State> {
               icon={
                 <Icon
                   name="minus"
-                  stroke="background"
+                  fill="background"
                 />
               }
             />
@@ -147,7 +147,7 @@ class PassengerPicker extends Component<{}, Props, State> {
               icon={
                 <Icon
                   name="plus"
-                  stroke="background"
+                  fill="background"
                 />
               }
             />
