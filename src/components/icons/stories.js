@@ -1,22 +1,25 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { select } from '@storybook/addon-knobs'
 
 import Icon from './index'
 
+const sizesSelect = (defaultValue = 'large') => select(
+  'size',
+  {
+    small: 'Small',
+    normal: 'Normal',
+    large: 'Large',
+  },
+  defaultValue,
+)
+
 storiesOf('Icon', module).addWithInfo(
-  'Small Icon with stroke',
+  'Icon with fill',
   `
     description
   `,
   () => (
-    <Icon name="checkbox" size="small" stroke="text" />
-  ),
-).addWithInfo(
-  'Medium Icon with stroke & fill',
-  `
-    description
-  `,
-  () => (
-    <Icon name="airport-change" size="medium" stroke="secondary" fill="primary" />
+    <Icon name="checkbox" size={sizesSelect()} fill="primary" />
   ),
 )
