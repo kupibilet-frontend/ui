@@ -19,21 +19,19 @@ const sizes = {
 
 const IconSvg = styled.svg`
   ${switchTransition};
-  transition-property: stroke, fill;
+  transition-property: fill;
   height: ${({ size }) => sizes[size]}px;
   width: ${({ size }) => sizes[size]}px;
   fill: ${({ theme, colorKeys }) => getThemeColor(theme, colorKeys.fill)};
-  stroke: ${({ theme, colorKeys }) => getThemeColor(theme, colorKeys.stroke)};
 `
 
-// Scoped inside `colorKeys` because `fill` and `stroke` are valid HTML attrs
-const Icon = ({ size, fill, stroke, prefix, name, style, className, inheritColor }) => (
+// Scoped inside `colorKeys` because `fill` are valid HTML attrs
+const Icon = ({ size, fill, prefix, name, style, className, inheritColor }) => (
   <IconSvg
     className={cn(className, { 'icon-inherit-color': inheritColor })}
     size={size}
     colorKeys={{
       fill,
-      stroke,
     }}
     style={style}
   >
@@ -45,7 +43,6 @@ Icon.defaultProps = {
   prefix: 'kb',
   size: 'normal',
   fill: null,
-  stroke: null,
   inheritColor: false,
 }
 
@@ -55,7 +52,6 @@ Icon.propTypes = {
   size: PropTypes.oneOf(Object.keys(sizes)),
   prefix: PropTypes.string,
   fill: ThemingPropTypes.themeColor,
-  stroke: ThemingPropTypes.themeColor,
   style: PropTypes.object,
   className: PropTypes.string,
   inheritColor: PropTypes.bool,

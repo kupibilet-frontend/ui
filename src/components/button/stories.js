@@ -32,7 +32,7 @@ storiesOf('Buttons', module)
     <Button
       size={sizesSelect('normal')}
       leftIcon={
-        <Icon name="plane" stroke="background" fill="background" />
+        <Icon name="plane" fill="background" />
       }
       rightIcon={
         <Icon name="hand-baggage" fill="background" />
