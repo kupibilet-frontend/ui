@@ -25,7 +25,7 @@
   "author": "Kupibilet.ru Frontend Team",
   "license": "MIT",
   "devDependencies": {
-    "@kupibilet/icons": "~3.3.0",
+    "@kupibilet/icons": "~4.0.0",
     "@storybook/addon-centered": "^3.0.2",
     "@storybook/addon-info": "^3.0.2",
     "@storybook/addon-knobs": "^3.0.2",
