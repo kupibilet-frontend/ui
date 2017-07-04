@@ -22,7 +22,6 @@ const Link = css`
 
     .icon-inherit-color {
       fill: ${getColor};
-      stroke: ${getColor};
     }
 
     &:hover {
@@ -30,7 +29,6 @@ const Link = css`
 
       .icon-inherit-color {
         fill: ${getHoverColor};
-        stroke: ${getHoverColor};
       }
     }
 `
