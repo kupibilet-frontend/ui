@@ -935,7 +935,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="sc-kvZOFW dpCOkf sc-eNQAEJ gdLOdp"
+      className="sc-eNQAEJ gdLOdp"
     >
       <div
         onClick={[Function]}
@@ -1200,7 +1200,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-kjoXOD MnqbO"
     >
       <div
-        className="sc-hqyNC hZjAVB"
+        className="sc-kvZOFW bZuFiE"
       >
         Desktop
       </div>
@@ -1209,7 +1209,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-kgAjT iAakoY"
     >
       <div
-        className="sc-jbKcbu lfTGxU"
+        className="sc-hqyNC joxXwE"
       >
         Handheld
       </div>
@@ -1218,7 +1218,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-TOsTZ gMMqZQ"
     >
       <div
-        className="sc-dNLxif dWcvlV"
+        className="sc-jbKcbu dDWRc"
       >
         Tablet
       </div>
@@ -1227,7 +1227,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-cHGsZl ewOqZG"
     >
       <div
-        className="sc-jqCOkK fMkVcX"
+        className="sc-dNLxif fYBrCH"
       >
         Mobile
       </div>
@@ -1236,7 +1236,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-cJSrbW gfFhPK"
     >
       <div
-        className="sc-uJMKN hNZfiG"
+        className="sc-jqCOkK cIWiTo"
       >
         Not mobile
       </div>
