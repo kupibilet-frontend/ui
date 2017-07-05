@@ -62,6 +62,7 @@
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
     "@kupibilet/react-media": "^1.5.1",
+    "banks-db": "^0.11.0",
     "lodash": "^4.17.4",
     "polished": "^1.2.0",
     "rc-collapse": "~1.7.0",
