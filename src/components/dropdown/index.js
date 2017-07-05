@@ -10,7 +10,7 @@ const DropdownWrapper = styled.div`
   display: inline-flex;
 `
 
-export const DropdownOverlay = styled.div`
+const DropdownOverlay = styled.div`
   position: absolute;
   top: 100%;
   margin-top: 3px;
