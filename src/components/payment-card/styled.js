@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { borderExtraLarge } from '../../utils/borders'
+
 import {
   getTextColor,
 } from './utils'
@@ -25,17 +27,12 @@ function getPaymentSystemLogo(system: string) {
 
 const CARD_HEIGHT = 264 // 5398
 const CARD_WIDTH = 420 // 8560
-const BORDER_RADIUS = CARD_HEIGHT / 25
 const STRIPE_HEIGHT = CARD_HEIGHT / 5
 const X_MARGIN = CARD_WIDTH / 10
 const Y_MARGIN = CARD_HEIGHT / 11
 
 export const Root = styled.div`
   display: flex;
-  & > * {
-    background-color: ${({ color }) => color};
-    border: 1px solid rgba(0, 0, 0, 0.12);
-  }
   color: ${({ color }) => getTextColor(color)};
   ${({ noBack }) => !noBack && `
     width: ${CARD_WIDTH * 1.5}px;
@@ -44,17 +41,31 @@ export const Root = styled.div`
 `
 
 export const Card = styled.div`
+  background-color: ${({ color }) => color};
+  border: 1px solid rgba(0, 0, 0, 0.12);
   min-width: ${CARD_WIDTH}px;
   height: ${CARD_HEIGHT}px;
-  border-radius: ${BORDER_RADIUS}px;
+  ${borderExtraLarge};
 `
 
 export const Front = styled(Card)`
+  position: relative;
   z-index: 1;
 `
 
 export const Back = styled(Card)`
-  transform: translate3d(${-CARD_WIDTH / 2}px, ${CARD_HEIGHT / 22}px, 0px);
+  position: relative;
+  z-index: 0;
+  margin-left: ${-CARD_WIDTH / 2}px;
+  margin-top: ${CARD_HEIGHT / 22}px;
+  &::before {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.12);
+    content: '';
+    margin-top: ${Y_MARGIN}px;
+    width: 100%;
+    height: ${STRIPE_HEIGHT}px;
+  }
 `
 
 export const Header = styled.div`
@@ -73,7 +84,6 @@ export const Content = styled.div`
 export const BackContent = styled.div`
   display: flex;
   margin-right: auto;
-  margin: ${Y_MARGIN}px;
   margin-left: ${X_MARGIN}px;
   margin-right: ${X_MARGIN}px;
   margin-top: ${Y_MARGIN}px;
@@ -110,10 +120,6 @@ export const PaymentSystemLogo = styled.div`
 export const BankName = styled.div`
   font-size: 20px;
   font-weight: 600;
-`
-
-export const Stripe = styled(Header)`
-  background-color: rgba(0, 0, 0, 0.12);
 `
 
 export const SafePayment = styled.div`

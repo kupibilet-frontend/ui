@@ -11,7 +11,6 @@ import {
   Label,
   Header,
   FrontFooter,
-  Stripe,
   PaymentSystemLogo,
   BankName,
   SafePayment,
@@ -49,11 +48,8 @@ class PaymentCard extends PureComponent<Props> {
 
     const color = bank.color ? convertCardColor(bank.color) : '#f0f5fa'
     return (
-      <Root
-        color={color}
-        noBack={props.noBack}
-      >
-        <Front>
+      <Root noBack={props.noBack}>
+        <Front color={color}>
           <Content>
             <Header>
               <PaymentSystemLogo paymentSystem={bank.type} />
@@ -78,8 +74,7 @@ class PaymentCard extends PureComponent<Props> {
           </Content>
         </Front>
         {!props.noBack &&
-          <Back>
-            <Stripe />
+          <Back color={color}>
             <BackContent>
               <SafePayment>
                 <Lock />
