@@ -25,6 +25,7 @@ type Props = {
   value: number | undefined,
   owner: string,
   expiryDate: Date,
+  noBack: boolean,
 }
 
 class PaymentCard extends PureComponent<Props> {
@@ -45,7 +46,10 @@ class PaymentCard extends PureComponent<Props> {
 
     const color = bank.color ? convertCardColor(bank.color) : '#f0f5fa'
     return (
-      <Root color={color}>
+      <Root
+        color={color}
+        noBack={props.noBack}
+      >
         <Front>
           <Content>
             <Header>
@@ -70,18 +74,20 @@ class PaymentCard extends PureComponent<Props> {
             </FrontFooter>
           </Content>
         </Front>
-        <Back>
-          <Stripe />
-          <BackContent>
-            <div>
-              Безопасная оплата
-            </div>
-            <Label>
-              CVC/CVV-код
-              <input type="number" value={123} />
-            </Label>
-          </BackContent>
-        </Back>
+        {!props.noBack &&
+          <Back>
+            <Stripe />
+            <BackContent>
+              <div>
+                Безопасная оплата
+              </div>
+              <Label>
+                CVC/CVV-код
+                <input type="number" value={123} />
+              </Label>
+            </BackContent>
+          </Back>
+        }
       </Root>
     )
   }

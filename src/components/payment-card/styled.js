@@ -35,8 +35,12 @@ export const Root = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.12);
   }
   color: ${({ color }) => getTextColor(color)};
-  width: ${CARD_WIDTH * 1.5}px;
-  height: ${CARD_HEIGHT * (23 / 22)}px;
+  ${({ noBack }) => !noBack && (
+    `
+      width: ${CARD_WIDTH * 1.5}px;
+      height: ${CARD_HEIGHT * (23 / 22)}px;
+    `
+  )};
 `
 
 export const Card = styled.div`
