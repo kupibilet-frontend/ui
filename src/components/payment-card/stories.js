@@ -4,7 +4,7 @@ import { text, boolean, select } from '@storybook/addon-knobs'
 
 import PaymentCard from './index'
 
-const valueSelect = (defaultValue = 'foo') => select(
+const valueSelect = (defaultValue = 4083971122223333) => select(
   'value',
   {
     4083971122223333: 'alfabank',
