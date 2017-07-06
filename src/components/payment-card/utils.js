@@ -1,26 +1,26 @@
 import { memoize } from 'lodash'
+import moment from 'moment'
 import {
-  desaturate,
-  lighten,
   parseToRgb,
   mix,
 } from 'polished'
 
-const BLACK_COLOR = '#000'
-
-export function getPaymentSystem(value: number) {
-  const s = value.toString()
-  return s.startsWith('5') ? 'mastercard' : 'visa'
-}
+const WHITE_COLOR = '#fff'
+const MIN_BRIGHTNESS_FOR_BLACK_TEXT = 0.75
+const WHITE_RATIO = 0.24
 
 export const getBrightness = memoize((color: string) => {
   if (!color) {
     return 0
   }
   const { red, green, blue } = parseToRgb(color)
-  return (red / 255) * 0.2126 + (green / 255) * 0.7152 + (blue / 255) * 0.0722
+  return (red / 255) * 0.299 + (green / 255) * 0.587 + (blue / 255) * 0.114
 })
 
-export const convertColor = memoize((color) => desaturate(0.05, lighten(0.05, color)))
+export const convertCardColor = memoize((color: string) => mix(WHITE_RATIO, WHITE_COLOR, color))
 
-export const darken = memoize((color: string) => color && mix(0.8, color, BLACK_COLOR))
+export const getTextColor = (color: string) =>
+  getBrightness(color) > MIN_BRIGHTNESS_FOR_BLACK_TEXT ? 'black' : 'white'
+
+export const dateToString = (date: Date) =>
+  moment(date).format('YYYY-MM-DD')

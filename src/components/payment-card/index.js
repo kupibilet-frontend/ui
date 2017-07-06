@@ -17,12 +17,14 @@ import {
 } from './styled'
 
 import {
-  getPaymentSystem,
-  convertColor,
+  convertCardColor,
+  dateToString,
 } from './utils'
 
 type Props = {
   value: number | undefined,
+  owner: string,
+  expiryDate: Date,
 }
 
 class PaymentCard extends PureComponent<Props> {
@@ -30,58 +32,53 @@ class PaymentCard extends PureComponent<Props> {
 
   render() {
     const { props, state } = this
+    const owner = (props.owner || state.owner).toUpperCase()
+    const expiryDate = dateToString(props.expiryDate || state.expiryDate)
     const value = props.value || state.value
+
     const bank = banksDb(value)
     const bankName = !bank.code
-      ? ''
+      ? 'Банковская карта'
       : bank.country === 'ru'
       ? bank.localTitle
       : bank.engTitle
 
-    const color = convertColor(bank.color)
+    const color = bank.color ? convertCardColor(bank.color) : '#f0f5fa'
     return (
       <Root color={color}>
         <Front>
           <Content>
             <Header>
-              <PaymentSystemLogo paymentSystem={getPaymentSystem(value)} />
+              <PaymentSystemLogo paymentSystem={bank.type} />
               <BankName>
                 {bankName}
               </BankName>
             </Header>
             <Label>
               Номер карты
-              <div>
-                {value}
-              </div>
+              <input type="number" value={value} />
             </Label>
             <FrontFooter>
               <Label>
                 Владелец (как на карте)
-                <div>
-                  FOO BAR
-                </div>
+                <input type="text" value={owner} />
               </Label>
               <Label>
                 Срок действия
-                <div>
-                  18/11
-                </div>
+                <input type="date" value={expiryDate} />
               </Label>
             </FrontFooter>
           </Content>
         </Front>
         <Back>
-          <Stripe color={color} />
+          <Stripe />
           <BackContent>
             <div>
               Безопасная оплата
             </div>
             <Label>
               CVC/CVV-код
-              <div>
-                123
-              </div>
+              <input type="number" value={123} />
             </Label>
           </BackContent>
         </Back>
