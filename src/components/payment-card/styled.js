@@ -45,6 +45,10 @@ export const Card = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.12);
   min-width: ${CARD_WIDTH}px;
   height: ${CARD_HEIGHT}px;
+  padding-left: ${X_MARGIN}px;
+  padding-right: ${X_MARGIN}px;
+  padding-top: ${Y_MARGIN}px;
+  padding-bottom: ${Y_MARGIN};
   ${borderExtraLarge};
 `
 
@@ -62,9 +66,9 @@ export const Back = styled(Card)`
     display: block;
     background-color: rgba(0, 0, 0, 0.12);
     content: '';
-    margin-top: ${Y_MARGIN}px;
     width: 100%;
     height: ${STRIPE_HEIGHT}px;
+    margin-left: ${X_MARGIN}px;
   }
 `
 
@@ -72,22 +76,15 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5%;
   height: ${STRIPE_HEIGHT}px;
 `
 
 export const Content = styled.div`
-  margin-left: 10%;
-  margin-right: 10%;
+
 `
 
 export const BackContent = styled.div`
   display: flex;
-  margin-right: auto;
-  margin-left: ${X_MARGIN}px;
-  margin-right: ${X_MARGIN}px;
-  margin-top: ${Y_MARGIN}px;
-  margin-bottom: ${Y_MARGIN};
   flex-direction: column;
   align-items: flex-end;
 `
