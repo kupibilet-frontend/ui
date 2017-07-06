@@ -9,6 +9,8 @@ import mastercard from './assets/mastercard.svg'
 import maestro from './assets/maestro.svg'
 import electron from './assets/electron.svg'
 
+import kbLock from './assets/kb_lock.svg'
+
 const PAYMENT_SYSTEM_LOGOS = {
   visa,
   mastercard,
@@ -35,12 +37,10 @@ export const Root = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.12);
   }
   color: ${({ color }) => getTextColor(color)};
-  ${({ noBack }) => !noBack && (
-    `
-      width: ${CARD_WIDTH * 1.5}px;
-      height: ${CARD_HEIGHT * (23 / 22)}px;
-    `
-  )};
+  ${({ noBack }) => !noBack && `
+    width: ${CARD_WIDTH * 1.5}px;
+    height: ${CARD_HEIGHT * (23 / 22)}px;
+  `};
 `
 
 export const Card = styled.div`
@@ -114,4 +114,22 @@ export const BankName = styled.div`
 
 export const Stripe = styled(Header)`
   background-color: rgba(0, 0, 0, 0.12);
+`
+
+export const SafePayment = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+`
+
+export const SafePaymentText = styled.div`
+  width: 60px;
+`
+
+export const Lock = styled.div`
+  background-repeat: no-repeat;
+  widtH: 50px;
+  height: 50px;
+  opacity: 0.8;
+  background-image: url('${kbLock}')
 `

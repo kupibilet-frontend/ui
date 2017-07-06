@@ -14,6 +14,9 @@ import {
   Stripe,
   PaymentSystemLogo,
   BankName,
+  SafePayment,
+  SafePaymentText,
+  Lock,
 } from './styled'
 
 import {
@@ -78,9 +81,12 @@ class PaymentCard extends PureComponent<Props> {
           <Back>
             <Stripe />
             <BackContent>
-              <div>
-                Безопасная оплата
-              </div>
+              <SafePayment>
+                <Lock />
+                <SafePaymentText>
+                  БЕЗОПАСНАЯ ОПЛАТА
+                </SafePaymentText>
+              </SafePayment>
               <Label>
                 CVC/CVV-код
                 <input type="number" value={123} />
