@@ -127,9 +127,11 @@ export const SafePaymentText = styled.div`
 `
 
 export const Lock = styled.div`
-  background-repeat: no-repeat;
-  widtH: 50px;
+  width: 50px;
   height: 50px;
+  background-repeat: no-repeat;
+  background-image: url('${kbLock}');
+  transform: scale(0.75);
+  filter: brightness(2);
   opacity: 0.8;
-  background-image: url('${kbLock}')
 `
