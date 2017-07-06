@@ -124,6 +124,7 @@ export const SafePayment = styled.div`
 
 export const SafePaymentText = styled.div`
   width: 60px;
+  line-height: 1.5;
 `
 
 export const Lock = styled.div`
