@@ -1,6 +1,6 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
-import { text, select } from '@kadira/storybook-addon-knobs'
+import { storiesOf } from '@storybook/react'
+import { text, select } from '@storybook/addon-knobs'
 import Badge from './index'
 
 const Default = {
