@@ -56,6 +56,7 @@ export const Back = styled(Card)`
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 5%;
   height: ${STRIPE_HEIGHT}px;
 `
@@ -63,7 +64,6 @@ export const Header = styled.div`
 export const Content = styled.div`
   margin-left: 10%;
   margin-right: 10%;
-  margin: ${X_MARGIN}px;
 `
 
 export const BackContent = styled.div`
