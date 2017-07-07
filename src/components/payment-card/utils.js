@@ -20,7 +20,7 @@ export const getBrightness = memoize((color: string) => {
 export const convertCardColor = memoize((color: string) => mix(WHITE_RATIO, WHITE_COLOR, color))
 
 export const getTextColor = (color: string) =>
-  getBrightness(color) > MIN_BRIGHTNESS_FOR_BLACK_TEXT ? 'black' : 'white'
+  (getBrightness(color) > MIN_BRIGHTNESS_FOR_BLACK_TEXT ? 'black' : 'white')
 
 export const dateToString = (date: Date) =>
   moment(date).format('YYYY-MM-DD')

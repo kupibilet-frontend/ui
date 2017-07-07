@@ -40,6 +40,7 @@ class PaymentCard extends PureComponent<Props> {
     const value = props.value || state.value
 
     const bank = banksDb(value)
+    // eslint-disable-next-line no-nested-ternary
     const bankName = !bank.code
       ? 'Банковская карта'
       : bank.country === 'ru'
@@ -48,7 +49,10 @@ class PaymentCard extends PureComponent<Props> {
 
     const color = bank.color ? convertCardColor(bank.color) : '#f0f5fa'
     return (
-      <Root noBack={props.noBack}>
+      <Root
+        color={color}
+        noBack={props.noBack}
+      >
         <Front color={color}>
           <Content>
             <Header>

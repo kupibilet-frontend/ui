@@ -1,6 +1,8 @@
+import React from 'react'
 import styled from 'styled-components'
 
 import { borderExtraLarge } from '../../utils/borders'
+import Icon from '../../components/icons'
 
 import {
   getTextColor,
@@ -10,8 +12,6 @@ import visa from './assets/visa.svg'
 import mastercard from './assets/mastercard.svg'
 import maestro from './assets/maestro.svg'
 import electron from './assets/electron.svg'
-
-import kbLock from './assets/kb_lock.svg'
 
 const PAYMENT_SYSTEM_LOGOS = {
   visa,
@@ -28,27 +28,23 @@ function getPaymentSystemLogo(system: string) {
 const CARD_HEIGHT = 264 // 5398
 const CARD_WIDTH = 420 // 8560
 const STRIPE_HEIGHT = CARD_HEIGHT / 5
-const X_MARGIN = CARD_WIDTH / 10
-const Y_MARGIN = CARD_HEIGHT / 11
+const X_PADDING = CARD_WIDTH / 10
+const Y_PADDING = CARD_HEIGHT / 11
 
 export const Root = styled.div`
   display: flex;
   color: ${({ color }) => getTextColor(color)};
-  ${({ noBack }) => !noBack && `
-    width: ${CARD_WIDTH * 1.5}px;
-    height: ${CARD_HEIGHT * (23 / 22)}px;
-  `};
 `
 
 export const Card = styled.div`
   background-color: ${({ color }) => color};
   border: 1px solid rgba(0, 0, 0, 0.12);
-  min-width: ${CARD_WIDTH}px;
+  width: ${CARD_WIDTH}px;
   height: ${CARD_HEIGHT}px;
-  padding-left: ${X_MARGIN}px;
-  padding-right: ${X_MARGIN}px;
-  padding-top: ${Y_MARGIN}px;
-  padding-bottom: ${Y_MARGIN};
+  padding-left: ${X_PADDING}px;
+  padding-right: ${X_PADDING}px;
+  padding-top: ${Y_PADDING}px;
+  padding-bottom: ${Y_PADDING};
   ${borderExtraLarge};
 `
 
@@ -68,7 +64,7 @@ export const Back = styled(Card)`
     content: '';
     width: 100%;
     height: ${STRIPE_HEIGHT}px;
-    margin-left: ${X_MARGIN}px;
+    margin-left: ${X_PADDING}px;
   }
 `
 
@@ -76,7 +72,6 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: ${STRIPE_HEIGHT}px;
 `
 
 export const Content = styled.div`
@@ -123,6 +118,7 @@ export const SafePayment = styled.div`
   display: flex;
   align-items: center;
   font-size: 11px;
+  margin-top: 16px;
 `
 
 export const SafePaymentText = styled.div`
@@ -130,12 +126,15 @@ export const SafePaymentText = styled.div`
   line-height: 1.5;
 `
 
-export const Lock = styled.div`
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-  background-image: url('${kbLock}');
-  transform: scale(0.75);
-  filter: brightness(2);
+export const LockRoot = styled(Icon)`
+  fill: #fff;
   opacity: 0.8;
 `
+
+export const Lock = (props) => (
+  <LockRoot
+    {...props}
+    name="lock"
+    size="large"
+  />
+)
