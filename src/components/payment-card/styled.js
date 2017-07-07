@@ -15,24 +15,21 @@ export const Root = styled.div`
 `
 
 export const Card = styled.div`
+  position: relative;
   background-color: ${({ color }) => color};
   border: 1px solid rgba(0, 0, 0, 0.12);
   width: 420px;
   height: 264px;
-  padding-left: 42px;
-  padding-right: 42px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 42px 24px 42px;
   ${borderExtraLarge};
+  user-select: none;
 `
 
 export const Front = styled(Card)`
-  position: relative;
   z-index: 1;
 `
 
 export const Back = styled(Card)`
-  position: relative;
   z-index: 0;
   margin-left: -210px;
   margin-top: 12px;
