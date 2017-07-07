@@ -5,9 +5,21 @@ import {
   mix,
 } from 'polished'
 
+import visa from './assets/visa.svg'
+import mastercard from './assets/mastercard.svg'
+import maestro from './assets/maestro.svg'
+import electron from './assets/electron.svg'
+
 const WHITE_COLOR = '#fff'
 const MIN_BRIGHTNESS_FOR_BLACK_TEXT = 0.75
 const WHITE_RATIO = 0.24
+
+const PAYMENT_SYSTEM_LOGOS = {
+  visa,
+  mastercard,
+  maestro,
+  electron,
+}
 
 export const getBrightness = memoize((color: string) => {
   if (!color) {
@@ -24,3 +36,8 @@ export const getTextColor = (color: string) =>
 
 export const dateToString = (date: Date) =>
   moment(date).format('YYYY-MM-DD')
+
+export function getPaymentSystemLogo(system: string) {
+  const url = PAYMENT_SYSTEM_LOGOS[system]
+  return url ? `url('${url}')` : null
+}

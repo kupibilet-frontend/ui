@@ -6,24 +6,8 @@ import Icon from '../../components/icons'
 
 import {
   getTextColor,
+  getPaymentSystemLogo,
 } from './utils'
-
-import visa from './assets/visa.svg'
-import mastercard from './assets/mastercard.svg'
-import maestro from './assets/maestro.svg'
-import electron from './assets/electron.svg'
-
-const PAYMENT_SYSTEM_LOGOS = {
-  visa,
-  mastercard,
-  maestro,
-  electron,
-}
-
-function getPaymentSystemLogo(system: string) {
-  const url = PAYMENT_SYSTEM_LOGOS[system]
-  return url ? `url('${url}')` : null
-}
 
 const CARD_HEIGHT = 264 // 5398
 const CARD_WIDTH = 420 // 8560
