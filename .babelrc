@@ -2,7 +2,7 @@
   "env": {
     "development": {
       "presets": ["env", "react", "stage-2"],
-      "plugins": ["flow-react-proptypes"]
+      "plugins": ["flow-react-proptypes", "styled-components"]
     },
     "production": {
       "presets": ["env", "react", "stage-2"],
@@ -14,7 +14,7 @@
     },
     "build": {
       "presets": [["env", {"modules": false}], "react", "stage-2"],
-      "plugins": ["flow-react-proptypes"],
-    },
+      "plugins": ["flow-react-proptypes"]
+    }
   }
 }
