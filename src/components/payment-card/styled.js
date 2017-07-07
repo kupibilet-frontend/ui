@@ -9,12 +9,6 @@ import {
   getPaymentSystemLogo,
 } from './utils'
 
-const CARD_HEIGHT = 264 // 5398
-const CARD_WIDTH = 420 // 8560
-const STRIPE_HEIGHT = CARD_HEIGHT / 5
-const X_PADDING = CARD_WIDTH / 10
-const Y_PADDING = CARD_HEIGHT / 11
-
 export const Root = styled.div`
   display: flex;
   color: ${({ color }) => getTextColor(color)};
@@ -23,12 +17,12 @@ export const Root = styled.div`
 export const Card = styled.div`
   background-color: ${({ color }) => color};
   border: 1px solid rgba(0, 0, 0, 0.12);
-  width: ${CARD_WIDTH}px;
-  height: ${CARD_HEIGHT}px;
-  padding-left: ${X_PADDING}px;
-  padding-right: ${X_PADDING}px;
-  padding-top: ${Y_PADDING}px;
-  padding-bottom: ${Y_PADDING};
+  width: 420px;
+  height: 264px;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   ${borderExtraLarge};
 `
 
@@ -40,15 +34,15 @@ export const Front = styled(Card)`
 export const Back = styled(Card)`
   position: relative;
   z-index: 0;
-  margin-left: ${-CARD_WIDTH / 2}px;
-  margin-top: ${CARD_HEIGHT / 22}px;
+  margin-left: -210px;
+  margin-top: 12px;
   &::before {
     display: block;
     background-color: rgba(0, 0, 0, 0.12);
     content: '';
     width: 100%;
-    height: ${STRIPE_HEIGHT}px;
-    margin-left: ${X_PADDING}px;
+    height: 54px;
+    margin-left: 42px;
   }
 `
 
