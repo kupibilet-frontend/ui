@@ -69,28 +69,26 @@ class DateRangePickerWrapper extends React.PureComponent {
   }
 
   onPrevMonthClick = () => {
-    const calendarMonthCursor = moment(this.state.calendarMonthCursor)
-    calendarMonthCursor.subtract(1, 'months')
+    const currentMonthCursor = moment(this.state.calendarMonthCursor)
+    currentMonthCursor.subtract(1, 'months')
+    const calendarMonthCursor = moment.max(currentMonthCursor, moment())
 
-    this.setState({
-      calendarMonthCursor: moment.max(calendarMonthCursor, moment()),
-    })
+    this.setState({ calendarMonthCursor })
 
     if (this.props.onPrevMonthClick) {
-      this.props.onPrevMonthClick()
+      this.props.onPrevMonthClick(calendarMonthCursor)
     }
   }
 
   onNextMonthClick = () => {
-    const calendarMonthCursor = moment(this.state.calendarMonthCursor)
-    calendarMonthCursor.add(1, 'months')
+    const currentMonthCursor = moment(this.state.calendarMonthCursor)
+    currentMonthCursor.add(1, 'months')
+    const calendarMonthCursor = moment.min(currentMonthCursor, moment().add(1, 'years'))
 
-    this.setState({
-      calendarMonthCursor: moment.min(calendarMonthCursor, moment().add(1, 'years')),
-    })
+    this.setState({ calendarMonthCursor })
 
     if (this.props.onNextMonthClick) {
-      this.props.onNextMonthClick()
+      this.props.onNextMonthClick(calendarMonthCursor)
     }
   }
 
