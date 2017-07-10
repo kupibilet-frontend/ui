@@ -10,6 +10,7 @@ export { default as Icon } from './components/icons'
 export { default as Box } from './components/box'
 export { default as ControlsGroup } from './components/controls-group'
 export { FluidContainer, FluidSection, Aside, SingleFluidSection } from './components/fluid-layout'
+export { default as BlockForm } from './components/block-form'
 
 // Specific behaviour non-visual components
 export { default as Collapse } from './components/collapse'
