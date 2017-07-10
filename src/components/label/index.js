@@ -12,16 +12,20 @@ const Label = styled.label`
 `
 
 const LabelText = styled.span`
-  margin-bottom: 6px;
+  margin-bottom: ${({ horizonal }) => (horizonal ? '0' : '6px')};
+  margin-right: ${({ horizonal }) => (horizonal ? '6px' : '0')};
   font-size: 14px;
   line-height: 18px;
   color: ${color.textDarker};
   user-select: none;
 `
 
-const LabelComponent = ({ children, title, ...props }) => (
-  <Label {...props} >
-    <LabelText>
+const LabelComponent = ({ children, title, horizonal, ...props }) => (
+  <Label
+    {...props}
+    horizonal={horizonal}
+  >
+    <LabelText horizonal={horizonal} >
       {title}
     </LabelText>
 
