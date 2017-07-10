@@ -2,7 +2,6 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { boolean, text } from '@storybook/addon-knobs'
 import Label from './index'
-import Input from '../input'
 
 storiesOf('Label', module)
   .addWithInfo('default', () => {
@@ -14,7 +13,7 @@ storiesOf('Label', module)
         horizonal={horizonal}
         title={title}
       >
-        <Input />
+        <input type="text" />
       </Label>
     )
   })
