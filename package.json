@@ -67,7 +67,7 @@
     "rc-collapse": "~1.7.0",
     "rc-tabs": "^7.5.0",
     "react-autosuggest": "^9.0.0",
-    "react-onclickoutside": "^5.11.1",
+    "react-onclickoutside": "^6.2.0",
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
