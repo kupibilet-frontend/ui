@@ -5,3 +5,7 @@ export const borderSmall = `
 export const borderLarge = `
   border-radius: 6px;
 `
+
+export const borderExtraLarge = `
+  border-radius: 12px;
+`

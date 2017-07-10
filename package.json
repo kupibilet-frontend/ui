@@ -35,6 +35,7 @@
     "babel-cli": "~6.24.0",
     "babel-jest": "~20.0.3",
     "babel-plugin-flow-react-proptypes": "^3.2.0",
+    "babel-plugin-styled-components": "^1.1.7",
     "babel-plugin-transform-react-jsx-source": "~6.22.0",
     "babel-polyfill": "~6.23.0",
     "babel-preset-env": "~1.5.0",
@@ -62,6 +63,7 @@
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
     "@kupibilet/react-media": "^1.5.1",
+    "banks-db": "^0.11.0",
     "lodash": "^4.17.4",
     "polished": "^1.2.0",
     "rc-collapse": "~1.7.0",
