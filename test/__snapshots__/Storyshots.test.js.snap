@@ -1,5 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AdditionalServices default 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div>
+    <div
+      className="sc-jqCOkK gwBpTk"
+      onClick={0}
+    >
+      <div>
+        Доступ к заказу через личный кабинет
+         
+        0
+      </div>
+      <div>
+        <div
+          className="sc-kvZOFW fxESsA"
+        >
+          Бесплатно ✓
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jqCOkK gwBpTk"
+      onClick={0}
+    >
+      <div>
+        Справка о стоимости билета
+         
+        0
+      </div>
+      <div>
+        <div
+          className="sc-kvZOFW fxESsA"
+        >
+          Бесплатно ✓
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jqCOkK gwBpTk"
+      onClick={undefined}
+    >
+      <div>
+        Трэвел-страхование
+         
+      </div>
+      <div>
+        <div
+          className="sc-dNLxif iQzBAK"
+        >
+          Включено ✓
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jqCOkK dtNtpx"
+      onClick={[Function]}
+    >
+      <div>
+        Возврат 90% при отказе от поездки
+         
+        <span
+          className="sc-uJMKN emtQVX"
+        >
+          716
+          ₽
+        </span>
+      </div>
+      <div>
+        <div
+          className="sc-hqyNC kYbFRN"
+          onClick={undefined}
+        >
+          Добавить ＋
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Autocomplete Airport 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
