@@ -1,6 +1,5 @@
 // @flow
 import React, { PureComponent } from 'react'
-import styled from 'styled-components'
 import Service from './service'
 
 type ServiceItem = {
@@ -11,16 +10,18 @@ type ServiceItem = {
 
 type Props = {
   services: ServiceItem[],
+  onServiceClick: (service: ServiceItem) => void,
 }
 
 class AdditionalServices extends PureComponent<Props> {
   render() {
-    const { services } = this.props
+    const { services, onServiceClick } = this.props
     return (
       <div>
         {services.map((service) => (
           <Service
             {...service}
+            onClick={() => onServiceClick(service)}
           />
         ))}
       </div>

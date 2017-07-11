@@ -47,6 +47,7 @@ class Service extends PureComponent<Props, State> {
     this.setState({
       added: true,
     })
+    this.props.onClick()
   }
 
   render() {
