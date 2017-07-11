@@ -65,7 +65,7 @@
     "lodash": "^4.17.4",
     "polished": "^1.2.0",
     "rc-collapse": "~1.7.0",
-    "rc-tabs": "^7.5.0",
+    "rc-tabs": "^8.0.2",
     "react-autosuggest": "^9.0.0",
     "react-onclickoutside": "^5.11.1",
     "section-iterator": "^2.0.0"
