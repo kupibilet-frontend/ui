@@ -935,7 +935,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="sc-kvZOFW dpCOkf sc-eNQAEJ gdLOdp"
+      className="sc-kvZOFW islOJp sc-eNQAEJ gdLOdp"
     >
       <div
         onClick={[Function]}
