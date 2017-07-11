@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import Free from './free'
 import Add from './add'
-import Added from './added'
 import Included from './included'
 
 const Root = styled.div`
@@ -34,7 +33,11 @@ type Props = {
   price: number | undefined,
 }
 
-class Service extends PureComponent<Props> {
+type State = {
+  added: boolean,
+}
+
+class Service extends PureComponent<Props, State> {
 
   state = {
     added: false,
@@ -49,18 +52,16 @@ class Service extends PureComponent<Props> {
   render() {
     const { name, price } = this.props
     const { added } = this.state
-    const onClick = !added && price && this.onAddClick
     return (
-      <Root selectable={added || !price} onClick={onClick}>
+      <Root
+        selectable={added || !price}
+        onClick={!added && price && this.onAddClick}
+      >
         <div>
-          {name} {price && <Price>{price}₽</Price>}
+          {name} {!added && !!price && <Price>{price}₽</Price>}
         </div>
         <div>
-          {
-            added ? <Added /> :
-            price ? <Add /> :
-            price === 0 ? <Free /> : <Included />
-          }
+          {added ? <Included /> : price ? <Add /> : <Free />}
         </div>
       </Root>
     )
