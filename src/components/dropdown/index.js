@@ -10,7 +10,7 @@ const DropdownWrapper = styled.div`
   display: inline-flex;
 `
 
-export const DropdownOverlay = styled.div`
+export const DropdownContent = styled.div`
   position: absolute;
   top: 100%;
   margin-top: 3px;
@@ -65,9 +65,9 @@ class Dropdown extends React.PureComponent<{}, Props, void> {
       >
         {dropdownButton}
         { isOpen &&
-          <DropdownOverlay>
+          <DropdownContent>
             {overlay}
-          </DropdownOverlay>
+          </DropdownContent>
         }
       </DropdownWrapper>
     )

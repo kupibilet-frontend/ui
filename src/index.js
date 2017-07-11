@@ -13,7 +13,7 @@ export { FluidContainer, FluidSection, Aside, SingleFluidSection } from './compo
 
 // Specific behaviour non-visual components
 export { default as Collapse } from './components/collapse'
-export { default as Dropdown, DropdownOverlay } from './components/dropdown'
+export { default as Dropdown, DropdownContent } from './components/dropdown'
 export { Tabs, TabPane, TabBar, Tab } from './components/tabs'
 
 // Specific controls
