@@ -18,7 +18,7 @@ class AdditionalServices extends PureComponent<Props> {
     const { services, onServiceClick } = this.props
     return (
       <div>
-        {services.map((service) => (
+        {services && services.map((service) => (
           <Service
             {...service}
             onClick={() => onServiceClick(service)}
