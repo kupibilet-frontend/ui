@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
 import updateKnob from '../../utils/updateKnob'
-import { Dropdown, Button, DropdownOverlay } from '../../index'
+import { Dropdown, Button, DropdownContent } from '../../index'
 
 const StyledDropdown = styled(Dropdown)`
-  ${DropdownOverlay} {
+  ${DropdownContent} {
     left: auto;
     width: 300px;
   }
