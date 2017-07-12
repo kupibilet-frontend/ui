@@ -12,7 +12,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
     }
   >
     <div
-      className="sc-jhAzac iXQuyJ"
+      className="sc-jhAzac jTEUNs"
     >
       <div
         className="react-autosuggest__container"
@@ -850,7 +850,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kEYyzF cQpahU"
+    className="sc-kEYyzF bpPhVL"
   >
     <div
       className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
@@ -971,10 +971,10 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX exgQcK"
+      className="sc-kpOJdX eHdMOA"
     >
       <div
-        className="sc-dxgOiQ kqIddl"
+        className="sc-dxgOiQ kmRsCh"
       >
         <div
           style={
@@ -991,7 +991,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ KNbIy"
+        className="sc-ckVGcZ hZqbXy"
       >
         <div
           style={
@@ -1024,7 +1024,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
     }
   >
     <div
-      className="sc-jKJlTe fVGLno"
+      className="sc-jKJlTe bPdyRl"
     >
       <div
         style={
@@ -1056,10 +1056,10 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX exgQcK"
+      className="sc-kpOJdX eHdMOA"
     >
       <div
-        className="sc-dxgOiQ kqIddl"
+        className="sc-dxgOiQ kmRsCh"
       >
         <div
           style={
@@ -1076,7 +1076,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ dlJzzS"
+        className="sc-ckVGcZ bDOWsD"
       >
         <div
           style={
@@ -1197,7 +1197,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
 >
   <div>
     <div
-      className="sc-kjoXOD MnqbO"
+      className="sc-kjoXOD jDbNjg"
     >
       <div
         className="sc-hqyNC hZjAVB"
@@ -1206,7 +1206,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-kgAjT iAakoY"
+      className="sc-kgAjT dCAwRm"
     >
       <div
         className="sc-jbKcbu lfTGxU"
@@ -1215,7 +1215,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-TOsTZ gMMqZQ"
+      className="sc-TOsTZ kgtXmT"
     >
       <div
         className="sc-dNLxif dWcvlV"
@@ -1224,7 +1224,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-cHGsZl ewOqZG"
+      className="sc-cHGsZl iUaaqe"
     >
       <div
         className="sc-jqCOkK fMkVcX"
@@ -1233,7 +1233,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-cJSrbW gfFhPK"
+      className="sc-cJSrbW hMaOei"
     >
       <div
         className="sc-uJMKN hNZfiG"
