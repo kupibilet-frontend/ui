@@ -18,7 +18,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
         className="react-autosuggest__container"
       >
         <div
-          className="sc-jWBwVP fvSmgP"
+          className="sc-cMljjf gfCBQM"
         >
           <textarea
             aria-activedescendant={null}
@@ -29,7 +29,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             autoCapitalize="sentences"
             autoComplete="off"
             autoFocus={true}
-            className="react-autosuggest__input sc-brqgnP hVNoAl"
+            className="react-autosuggest__input sc-jAaTju cADqdQ"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -42,10 +42,10 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             wrap="off"
           />
           <div
-            className="airport-input__geo sc-cMljjf hhAekQ"
+            className="airport-input__geo sc-jDwBTQ wSKxm"
           >
             <div
-              className="sc-jDwBTQ bOuoYF"
+              className="sc-iRbamj edcqyV"
             >
               
             </div>
@@ -53,7 +53,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             
           </div>
           <div
-            className="sc-iRbamj fJefAy"
+            className="sc-gipzik jIcRKf"
           >
             
           </div>
@@ -197,7 +197,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
               className="sc-htoDjs lekexi"
             >
               <div
-                className="sc-frDJqD hsebVT"
+                className="sc-hqyNC cufWak"
               >
                 Пересадки
               </div>
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ oRaPL"
+        className="sc-frDJqD hMOycD"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ hSRSLF"
+        className="sc-frDJqD eAeePM"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ oRaPL"
+        className="sc-frDJqD hMOycD"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -694,7 +694,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-chPdSV jlvujm"
+    className="sc-kGXeez ixQMIm"
   >
     <button
       className="no-global sc-gZMcBi egQBpH"
@@ -709,12 +709,12 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
       </span>
     </button>
     <div
-      className="sc-jWBwVP exjCKk"
+      className="sc-cMljjf kYSHWT"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP hhICnf"
+        className="sc-jAaTju dsRnJT"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -724,10 +724,10 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf gIemQX"
+        className="airport-input__geo sc-jDwBTQ lhnwlQ"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-iRbamj edcqyV"
         >
           Шереметьево
         </div>
@@ -735,7 +735,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj llOgDF"
+        className="sc-gipzik dQYQg"
       >
         SVO
       </div>
@@ -761,15 +761,15 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-chPdSV jlvujm"
+    className="sc-kGXeez ixQMIm"
   >
     <div
-      className="sc-jWBwVP hyAZDv"
+      className="sc-cMljjf fFgfnL"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP gBrlZN"
+        className="sc-jAaTju hDbyVS"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -779,10 +779,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf hhAekQ"
+        className="airport-input__geo sc-jDwBTQ wSKxm"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-iRbamj edcqyV"
         >
           Шереметьево
         </div>
@@ -790,17 +790,17 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj llOgDF"
+        className="sc-gipzik dQYQg"
       >
         SVO
       </div>
     </div>
     <div
-      className="sc-kgoBCf PGghj"
+      className="sc-kpOJdX gBfrlQ"
       onClick={[Function]}
     >
       <svg
-        className="controls-group__swap sc-kGXeez dzfMpI icon-inherit-color sc-bxivhb doUjBV"
+        className="controls-group__swap sc-dxgOiQ qNhKT icon-inherit-color sc-bxivhb doUjBV"
         size="xxsmall"
         style={undefined}
       >
@@ -810,12 +810,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       </svg>
     </div>
     <div
-      className="sc-jWBwVP bSkTbm"
+      className="sc-cMljjf cjmqHA"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP kUuIhI"
+        className="sc-jAaTju ekNbVp"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -825,10 +825,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf gIemQX"
+        className="airport-input__geo sc-jDwBTQ lhnwlQ"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-iRbamj edcqyV"
         >
           Несуществующий город
         </div>
@@ -836,7 +836,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj fJefAy"
+        className="sc-gipzik jIcRKf"
       >
         
       </div>
@@ -935,7 +935,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="sc-kvZOFW dpCOkf sc-eNQAEJ gdLOdp"
+      className="sc-jbKcbu frmqFR sc-kEYyzF eaoHZL"
     >
       <div
         onClick={[Function]}
@@ -1097,6 +1097,27 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 </div>
 `;
 
+exports[`Storyshots FormItem default 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-chPdSV cmfjpk"
+  >
+    <label
+      className="sc-kgoBCf kJWSIb"
+      htmlFor="input"
+    >
+      Cake is a lie
+    </label>
+    <input
+      id="input"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Icon Icon with fill 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
@@ -1118,33 +1139,33 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-fBuWsC itQlJX"
+    className="sc-dVhcbM eQfhDU"
   >
     <div>
       <div
-        className="sc-fMiknA ejNkiI"
+        className="sc-eqIVtm dpIpAS"
       >
         Взрослые
       </div>
       <div
-        className="sc-dVhcbM evezqH"
+        className="sc-fAjcbJ eKTAEF"
       >
         До 2 лет, без места
       </div>
     </div>
     <div
-      className="sc-caSCKo hUBiLZ"
+      className="sc-kjoXOD dWcmn"
     >
       <span
-        className="sc-eqIVtm deGzAN"
+        className="sc-caSCKo hgboro"
       >
         1
       </span>
       <div
-        className="sc-gisBJw cHwRKq"
+        className="sc-cHGsZl jyKzOF"
       >
         <button
-          className="no-global sc-fAjcbJ excQUy sc-gZMcBi dkdJqv"
+          className="no-global sc-gisBJw QVoVA sc-gZMcBi dkdJqv"
           disabled={true}
           onClick={[Function]}
           size="normal"
@@ -1165,7 +1186,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
           </span>
         </button>
         <button
-          className="no-global sc-fAjcbJ excQUy sc-gZMcBi ezVieq"
+          className="no-global sc-gisBJw QVoVA sc-gZMcBi ezVieq"
           disabled={false}
           onClick={[Function]}
           size="normal"
@@ -1200,7 +1221,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-kjoXOD jDbNjg"
     >
       <div
-        className="sc-hqyNC hZjAVB"
+        className="sc-dNLxif isUIdb"
       >
         Desktop
       </div>
@@ -1209,7 +1230,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-kgAjT dCAwRm"
     >
       <div
-        className="sc-jbKcbu lfTGxU"
+        className="sc-jqCOkK dRpMQi"
       >
         Handheld
       </div>
@@ -1218,7 +1239,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-TOsTZ kgtXmT"
     >
       <div
-        className="sc-dNLxif dWcvlV"
+        className="sc-uJMKN aDlti"
       >
         Tablet
       </div>
@@ -1227,7 +1248,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-cHGsZl iUaaqe"
     >
       <div
-        className="sc-jqCOkK fMkVcX"
+        className="sc-bbmXgH jYZdTc"
       >
         Mobile
       </div>
@@ -1236,7 +1257,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="sc-cJSrbW hMaOei"
     >
       <div
-        className="sc-uJMKN hNZfiG"
+        className="sc-gGBfsJ fehCfd"
       >
         Not mobile
       </div>
