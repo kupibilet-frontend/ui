@@ -1134,6 +1134,117 @@ exports[`Storyshots Icon Icon with fill 1`] = `
 </div>
 `;
 
+exports[`Storyshots Input default 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-kGXeez geJVdH"
+    disabled={false}
+    size="large"
+  >
+    <input
+      className="input sc-kgoBCf kMWUEx"
+      disabled={false}
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+      type="text"
+      value={undefined}
+    />
+    
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input disabled 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-kGXeez cJDkb"
+    disabled={true}
+    size="large"
+  >
+    <input
+      className="input sc-kgoBCf dydzNi"
+      disabled={true}
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+      type="text"
+      value={undefined}
+    />
+    
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input error 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-kGXeez geJVdH"
+    disabled={false}
+    size="large"
+  >
+    <input
+      className="input sc-kgoBCf kMWUEx"
+      disabled={false}
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+      type="text"
+      value={undefined}
+    />
+    <span
+      className="border-segment sc-kpOJdX fvlmoz"
+    />
+    <span
+      className="sc-chPdSV gDXzuQ"
+      size="large"
+    >
+      Только латинские буквы
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input success 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-kGXeez geJVdH"
+    disabled={false}
+    size="large"
+  >
+    <input
+      className="input sc-kgoBCf kMWUEx"
+      disabled={false}
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+      type="text"
+      value={undefined}
+    />
+    <span
+      className="border-segment sc-kpOJdX iOYeFT"
+    />
+    
+  </div>
+</div>
+`;
+
 exports[`Storyshots PassengerPicker Defalut 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
