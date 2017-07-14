@@ -185,6 +185,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       >
         <div
           className="rc-collapse-item sc-iwsKbI hIrClY sc-htpNat jpYvPn"
+          id={undefined}
           style={undefined}
         >
           <div
@@ -515,6 +516,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
     >
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -528,6 +530,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -541,6 +544,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -574,6 +578,7 @@ exports[`Storyshots Collapse Default 1`] = `
     >
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -587,6 +592,7 @@ exports[`Storyshots Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -600,6 +606,7 @@ exports[`Storyshots Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -633,6 +640,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
     >
       <div
         className="rc-collapse-item rc-collapse-item-active sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -660,6 +668,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -673,6 +682,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
+        id={undefined}
         style={undefined}
       >
         <div
@@ -1139,12 +1149,16 @@ exports[`Storyshots Input default 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kGXeez geJVdH"
+    className="sc-kpOJdX gUukiS"
     disabled={false}
+    name="input"
+    placeholder="Только прямые рейсы"
     size="large"
+    type="text"
+    value={undefined}
   >
     <input
-      className="input sc-kgoBCf kMWUEx"
+      className="sc-kGXeez eteQli"
       disabled={false}
       name="input"
       onBlur={[Function]}
@@ -1164,12 +1178,16 @@ exports[`Storyshots Input disabled 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kGXeez cJDkb"
+    className="sc-kpOJdX iwaMbU"
     disabled={true}
+    name="input"
+    placeholder="Только прямые рейсы"
     size="large"
+    type="text"
+    value={undefined}
   >
     <input
-      className="input sc-kgoBCf dydzNi"
+      className="sc-kGXeez uNCLf"
       disabled={true}
       name="input"
       onBlur={[Function]}
@@ -1189,12 +1207,16 @@ exports[`Storyshots Input error 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kGXeez geJVdH"
+    className="sc-kpOJdX gUukiS"
     disabled={false}
+    name="input"
+    placeholder="Только прямые рейсы"
     size="large"
+    type="text"
+    value={undefined}
   >
     <input
-      className="input sc-kgoBCf kMWUEx"
+      className="sc-kGXeez eteQli"
       disabled={false}
       name="input"
       onBlur={[Function]}
@@ -1205,11 +1227,10 @@ exports[`Storyshots Input error 1`] = `
       value={undefined}
     />
     <span
-      className="border-segment sc-kpOJdX fvlmoz"
+      className="sc-kgoBCf bYqIqO"
     />
     <span
-      className="sc-chPdSV gDXzuQ"
-      size="large"
+      className="sc-chPdSV cfYonX"
     >
       Только латинские буквы
     </span>
@@ -1222,12 +1243,16 @@ exports[`Storyshots Input success 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kGXeez geJVdH"
+    className="sc-kpOJdX gUukiS"
     disabled={false}
+    name="input"
+    placeholder="Только прямые рейсы"
     size="large"
+    type="text"
+    value={undefined}
   >
     <input
-      className="input sc-kgoBCf kMWUEx"
+      className="sc-kGXeez eteQli"
       disabled={false}
       name="input"
       onBlur={[Function]}
@@ -1238,7 +1263,7 @@ exports[`Storyshots Input success 1`] = `
       value={undefined}
     />
     <span
-      className="border-segment sc-kpOJdX iOYeFT"
+      className="sc-kgoBCf fLgdFK"
     />
     
   </div>

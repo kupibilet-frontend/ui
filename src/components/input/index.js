@@ -26,10 +26,10 @@ const TYPOGRAPHY = {
   small: 16,
 }
 
-const heightInput = (size) => {
+const getInputHeight = (size) => {
   if (size === 'large') {
     return '42px'
-  } else if (size === 'large') {
+  } else if (size === 'normal') {
     return '36px'
   }
   return '30px'
@@ -48,8 +48,17 @@ const Error = styled.span`
   opacity: 0.97;
   z-index: 2;
   padding: 3px 12px 5px;
-  ${({ size }) => ((size === 'small') && ' width: 100%')};
   background-color: ${({ theme }) => theme.color.fail};
+`
+
+const InputStatus = styled.span`
+  position: absolute;
+  top: 0;
+  left: -1px;
+  height: 100%;
+  width: 2px;
+  border-radius: 3px 0 0 3px;
+  background-color: ${({ theme, success }) => (success ? theme.color.success : theme.color.fail)} 
 `
 
 const StyledInput = styled.input`
@@ -59,7 +68,6 @@ const StyledInput = styled.input`
   height: 100%;
   line-height: normal;
   border: none;
-  user-select: none;
   box-sizing: border-box;
   ${borderSmall};
   padding-left: ${({ size }) => `${SIZE[size]}px`};
@@ -67,7 +75,6 @@ const StyledInput = styled.input`
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   color: ${({ theme }) => theme.color.textDarker};
   background-color: ${({ disabled, theme }) => (disabled ? theme.color.miscLightest : '#fff')};
-  cursor: auto;
 
   &::placeholder {
     color: ${({ theme }) => theme.color.miscDark};
@@ -76,7 +83,7 @@ const StyledInput = styled.input`
   &:focus {
     outline-style: none;
 
-    & + .border-segment {
+    & + ${InputStatus} {
       display: none;
     }
   }
@@ -99,7 +106,7 @@ const InputWrapper = styled.div`
   ${switchTransition}
   ${borderInput}
   ${borderSmall}
-  height: ${({ size }) => heightInput(size)};
+  height: ${({ size }) => getInputHeight(size)};
   box-shadow: ${({ active, theme }) => active && `0 0 0 1px ${theme.color.primary}`};
   z-index: ${({ active }) => (active ? '3' : '1')};
 
@@ -107,16 +114,6 @@ const InputWrapper = styled.div`
     border-color: ${({ theme, disabled }) => !disabled && theme.color.primary};
     z-index: 2;
   }
-
-`
-const BorderSegment = styled.span`
-  position: absolute;
-  top: 0;
-  left: -1px;
-  height: 100%;
-  width: 2px;
-  border-radius: 3px 0 0 3px;
-  background-color: ${({ theme, success }) => (success ? theme.color.success : theme.color.fail)} 
 `
 
 class Input extends Component {
@@ -127,13 +124,13 @@ class Input extends Component {
     }
   }
 
-  onActionBlur = () => {
+  onHandleBlur = () => {
     this.setState({
       isActive: false,
     })
   }
 
-  onActionFocus = () => {
+  onHandleFocus = () => {
     this.setState({
       isActive: true,
     })
@@ -149,33 +146,31 @@ class Input extends Component {
       size,
       success,
       error,
-      neighboringInGroup,
       disabled,
     } = this.props
 
     return (
       <InputWrapper
+        {...this.props}
         active={active || this.state.isActive}
         size={size}
-        neighboringInGroup={neighboringInGroup}
         disabled={disabled}
       >
         <StyledInput
           innerRef={(input) => { this.textInput = input }}
           {...this.props}
-          onFocus={this.onActionFocus}
-          onBlur={this.onActionBlur}
+          onFocus={this.onHandleFocus}
+          onBlur={this.onHandleBlur}
         />
 
         { (error || success) &&
-          <BorderSegment
+          <InputStatus
             success={success}
             error={error}
-            className="border-segment"
           />
         }
         {
-          error && <Error error size={size}>
+          error && <Error>
               { error }
             </Error>
         }
@@ -192,16 +187,13 @@ Input.defaultProps = {
   size: '',
   disabled: false,
   placeholder: '',
-  className: 'input',
   value: undefined,
-  neighboringInGroup: '',
 }
 
 /* eslint-disable react/no-unused-prop-types */
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string,
-  className: PropTypes.string,
   active: PropTypes.bool,
   error: PropTypes.string,
   success: PropTypes.bool,
@@ -209,7 +201,6 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  neighboringInGroup: PropTypes.string,
 }
 
 export default Input
