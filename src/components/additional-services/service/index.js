@@ -2,6 +2,8 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 
+import media, { withMedia } from '../../../utils/media-queries'
+
 import Free from './free'
 import Add from './add'
 import Included from './included'
@@ -19,6 +21,15 @@ const Root = styled.div`
   &:hover {
     background-color: #f0f5fa;
   }
+
+  ${media.mobile`
+    align-items: start;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding-bottom: 16px;
+    justify-content: start;
+  `}
 `
 
 const Price = styled.span`
@@ -28,9 +39,15 @@ const Price = styled.span`
   margin-left: 2px;
 `
 
+const LastDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
 type Props = {
   name: string,
   price: number | undefined,
+  isMobile: boolean,
 }
 
 type State = {
@@ -50,23 +67,37 @@ class Service extends PureComponent<Props, State> {
     this.props.onClick()
   }
 
-  render() {
-    const { name, price } = this.props
+  getAdditionalEl = (props) => {
+    const { price, isMobile } = this.props
     const { added } = this.state
+    const Component = added ? Included : price ? Add : Free
+    return (
+      <Component
+        {...props}
+        symbolIsOnTheLeft={isMobile}
+      />
+    )
+  }
+
+  render() {
+    const { name, price, isMobile } = this.props
+    const { added } = this.state
+    const priceEl = <Price>{price}₽</Price>
     return (
       <Root
         selectable={added || !price}
         onClick={!added && price && this.onAddClick}
       >
         <div>
-          {name} {!added && !!price && <Price>{price}₽</Price>}
+          {name} {!isMobile && !added && !!price && priceEl}
         </div>
-        <div>
-          {added ? <Included /> : price ? <Add /> : <Free />}
-        </div>
+        <LastDiv>
+          {this.getAdditionalEl()}
+          {isMobile && !added && !!price && priceEl}
+        </LastDiv>
       </Root>
     )
   }
 }
 
-export default Service
+export default withMedia(Service)
