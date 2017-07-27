@@ -41,7 +41,7 @@
     "babel-preset-env": "~1.5.0",
     "babel-preset-stage-2": "~6.24.1",
     "classnames": "~2.2.5",
-    "eslint-config-kupibilet": "^8.2.3",
+    "eslint-config-kupibilet": "^9.1.1",
     "flow-bin": "^0.47.0",
     "husky": "~0.13.2",
     "in-publish": "^2.0.0",
