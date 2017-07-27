@@ -1,5 +1,5 @@
+// @flow
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { switchTransition } from '../../utils/transitions'
 import { borderSmall } from '../../utils/borders'
@@ -26,13 +26,20 @@ const TYPOGRAPHY = {
   small: 16,
 }
 
-const getInputHeight = (size) => {
-  if (size === 'large') {
-    return '42px'
-  } else if (size === 'normal') {
-    return '36px'
+const InputHeight = {
+  large: '42px',
+  normal: '36px',
+  small: '30px',
+}
+
+const inputStatus = ({ active, success, error }) => {
+  if (active) {
+    return 'none'
   }
-  return '30px'
+  if (success || error) {
+    return 'block'
+  }
+  return 'none'
 }
 
 const Error = styled.span`
@@ -41,24 +48,14 @@ const Error = styled.span`
   left: 0;
   display: flex;
   align-items: center;
+  padding: 3px 12px 5px;
   font-size: 14px;
   line-height: 16px;
   color: #fff;
-  ${borderSmall};
   opacity: 0.97;
   z-index: 2;
-  padding: 3px 12px 5px;
+  ${borderSmall}
   background-color: ${({ theme }) => theme.color.fail};
-`
-
-const InputStatus = styled.span`
-  position: absolute;
-  top: 0;
-  left: -1px;
-  height: 100%;
-  width: 2px;
-  border-radius: 3px 0 0 3px;
-  background-color: ${({ theme, success }) => (success ? theme.color.success : theme.color.fail)} 
 `
 
 const StyledInput = styled.input`
@@ -82,10 +79,6 @@ const StyledInput = styled.input`
 
   &:focus {
     outline-style: none;
-
-    & + ${InputStatus} {
-      display: none;
-    }
   }
 
   &:disabled {
@@ -100,13 +93,14 @@ const InputWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   transition-property: border-color, box-shadow;
   border-width: 1px;
   border-style: solid;
   ${switchTransition}
   ${borderInput}
   ${borderSmall}
-  height: ${({ size }) => getInputHeight(size)};
+  height: ${({ size }) => InputHeight[size]};
   box-shadow: ${({ active, theme }) => active && `0 0 0 1px ${theme.color.primary}`};
   z-index: ${({ active }) => (active ? '3' : '1')};
 
@@ -114,30 +108,67 @@ const InputWrapper = styled.div`
     border-color: ${({ theme, disabled }) => !disabled && theme.color.primary};
     z-index: 2;
   }
-`
 
-class Input extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isActive: false,
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1px;
+    display: ${(props) => inputStatus(props)};
+    height: 100%;
+    width: 2px;
+    border-radius: 3px 0 0 3px;
+    background-color: ${({ theme, success }) => (success ? theme.color.success : theme.color.fail)};
+    z-index: 2;
+  }
+`
+/* eslint-disable react/prop-types */
+type Props = {
+  name: string,
+  type?: string,
+  active?: boolean,
+  error?: string,
+  success?: boolean,
+  size?: string,
+  disabled?: boolean,
+  placeholder?: string,
+  value?: string,
+  onBlur?: Function,
+  onFocus?: Function
+}
+
+class Input extends Component<void, Props, void> {
+  /* eslint-disable react/sort-comp */
+  state = {
+    isActive: false,
   }
 
-  onHandleBlur = () => {
+  static defaultProps = {
+    type: 'text',
+    active: false,
+    error: undefined,
+    success: false,
+    size: 'normal',
+    disabled: false,
+    placeholder: '',
+    value: undefined,
+  }
+  /* eslint-enable react/sort-comp */
+
+  handleBlur = () => {
+    const { props } = this.props
+    if (props.onBlur) props.onBlur()
     this.setState({
       isActive: false,
     })
   }
 
-  onHandleFocus = () => {
+  handleFocus = () => {
+    const { props } = this.props
+    if (props.onFocus) props.onFocus()
     this.setState({
       isActive: true,
     })
-  }
-
-  onFocusInput = () => {
-    this.textInput.focus()
   }
 
   render() {
@@ -151,56 +182,25 @@ class Input extends Component {
 
     return (
       <InputWrapper
-        {...this.props}
         active={active || this.state.isActive}
         size={size}
         disabled={disabled}
+        success={success}
+        error={error}
       >
         <StyledInput
-          innerRef={(input) => { this.textInput = input }}
           {...this.props}
-          onFocus={this.onHandleFocus}
-          onBlur={this.onHandleBlur}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
         />
 
-        { (error || success) &&
-          <InputStatus
-            success={success}
-            error={error}
-          />
-        }
-        {
-          error && <Error>
-              { error }
-            </Error>
+        { error && <Error>
+            { error }
+          </Error>
         }
       </InputWrapper>
     )
   }
-}
-
-Input.defaultProps = {
-  type: 'text',
-  active: false,
-  error: '',
-  success: false,
-  size: '',
-  disabled: false,
-  placeholder: '',
-  value: undefined,
-}
-
-/* eslint-disable react/no-unused-prop-types */
-Input.propTypes = {
-  name: PropTypes.string.isRequired,
-  type: PropTypes.string,
-  active: PropTypes.bool,
-  error: PropTypes.string,
-  success: PropTypes.bool,
-  size: PropTypes.string,
-  disabled: PropTypes.bool,
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
 }
 
 export default Input
