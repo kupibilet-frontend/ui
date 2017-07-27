@@ -1,21 +1,24 @@
 // @flow
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+
+import Base from './base'
 
 const Root = styled.div`
   color: #007acc;
-  font-size: 16px;
 `
 
 type Props = {
   onClick: () => void,
 }
 
-const Add = ({
-  onClick,
-}: Props) => (
-  <Root onClick={onClick}>
-    Добавить ＋
+const Add = (props: Props) => (
+  <Root>
+    <Base
+      {...props}
+      text="Добавить"
+      symbol="+"
+    />
   </Root>
 )
 

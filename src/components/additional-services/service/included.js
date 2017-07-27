@@ -1,16 +1,21 @@
 // @flow
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
+import Base from './base'
+
 const Root = styled.div`
-  font-size: 16px;
   font-weight: 600;
   color: #23c256;
 `
 
 const Included = (props) => (
   <Root>
-    Включено ✓
+    <Base
+      {...props}
+      text="Включено"
+      symbol="✓"
+    />
   </Root>
 )
 
