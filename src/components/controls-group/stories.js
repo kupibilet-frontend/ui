@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf, action } from '@storybook/react'
+import { storiesOf } from '@storybook/react'
 
 import { text } from '@storybook/addon-knobs'
 import updateKnob from '../../utils/updateKnob'
@@ -8,9 +8,10 @@ import AirportInput from '../airport-input'
 import Button from '../button'
 import ControlsGroup from './index'
 
+/* eslint-disable no-console */
 storiesOf('ControlsGroup', module)
   .addWithInfo('Inputs group', () => (
-    <ControlsGroup onSwap={action('Swap it!')}>
+    <ControlsGroup onSwap={() => console.log('Swap it!')}>
       <AirportInput readOnly value="Шереметьево" city="Москва" IATACode="SVO" />
       <AirportInput
         value={text('value', 'Несуществующий город')}
