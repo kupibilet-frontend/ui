@@ -14,11 +14,15 @@ const GlobalStylesScope = styled.div`
   }
 `
 
-const ThemeAndScopedStylesProvider = ({ theme, children }) => (
+const ThemeAndScopedStylesProvider = ({ theme = {}, children }) => (
   <ThemeProvider
     theme={{
       ...defaultTheme,
-      theme,
+      ...theme,
+      color: {
+        ...defaultTheme.color,
+        ...theme.color,
+      },
     }}
   >
     <GlobalStylesScope>
