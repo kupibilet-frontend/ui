@@ -16,9 +16,9 @@ const Label = styled.label`
 `
 
 type Props = {
-  label: String,
-  children: Element,
-  htmlFor: String,
+  label: string,
+  children: React.Element<*>,
+  htmlFor: string,
 }
 
 const FormItem = ({ children, label, htmlFor, ...props }: Props) => (
