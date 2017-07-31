@@ -47,13 +47,17 @@
     "in-publish": "^2.0.0",
     "jest": "~20.0.0",
     "lint-staged": "^3.5.1",
+    "lodash": "^4.17.4",
+    "mkp": "^1.0.1",
     "moment": "~2.18.1",
     "move-binaries-to-bin": "~1.0.1",
+    "polished": "^1.3.0",
     "prop-types": "^15.5.8",
     "raw-loader": "~0.5.1",
     "react": "~15.5.4",
     "react-addons-shallow-compare": "~15.5.2",
     "react-dom": "~15.5.4",
+    "react-onclickoutside": "^6.4.0",
     "react-test-renderer": "^15.5.4",
     "styled-components": "^2.0.1",
     "stylelint-config-kupibilet": "^3.1.2",
@@ -63,22 +67,22 @@
   "dependencies": {
     "@kupibilet/react-dates": "~8.2.0",
     "@kupibilet/react-media": "^1.5.1",
-    "lodash": "^4.17.4",
-    "polished": "^1.2.0",
     "rc-collapse": "~1.7.0",
     "rc-tabs": "^8.1.1",
     "react-autosuggest": "^9.0.0",
-    "react-onclickoutside": "^6.4.0",
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
     "@kupibilet/icons": "^4.0.0",
     "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
     "moment": "^2.18.0",
+    "polished": "^1.3.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.0",
     "react-addons-shallow-compare": "^15.5.2",
     "react-dom": "^15.5.4",
+    "react-onclickoutside": "^6.4.0",
     "styled-components": "^2.0.1"
   }
 }
