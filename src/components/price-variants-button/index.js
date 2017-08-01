@@ -62,7 +62,7 @@ const Title = styled.span`
   font-weight: normal;
   line-height: 20px;
   color: ${({ theme }) => theme.color.textDarker};
-  text-shadow: 0 1px 0 ${({ active, theme }) => (active ? theme.color.textDarker : 'transparent')};
+  font-weight: ${({ active }) => (active ? 600 : 400)};
 `
 
 const Price = styled.span`
