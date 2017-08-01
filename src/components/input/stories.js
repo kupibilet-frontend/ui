@@ -26,7 +26,6 @@ storiesOf('Input', module)
 
     return (
       <Input
-        type={inputDefault.type}
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={placeholder}

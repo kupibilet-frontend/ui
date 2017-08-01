@@ -1140,19 +1140,16 @@ exports[`Storyshots Input default 1`] = `
 >
   <div
     className="sc-dxgOiQ Vjnyy"
-    disabled={false}
+    disabled={undefined}
     size="large"
   >
     <input
       className="sc-kpOJdX gEINQW"
-      disabled={false}
       name="input"
       onBlur={[Function]}
       onFocus={[Function]}
       placeholder="Только прямые рейсы"
       size="large"
-      type="text"
-      value={undefined}
     />
   </div>
 </div>
@@ -1176,7 +1173,6 @@ exports[`Storyshots Input disabled 1`] = `
       placeholder="Только прямые рейсы"
       size="large"
       type="text"
-      value={undefined}
     />
   </div>
 </div>
@@ -1188,19 +1184,17 @@ exports[`Storyshots Input error 1`] = `
 >
   <div
     className="sc-dxgOiQ gJEAMD"
-    disabled={false}
+    disabled={undefined}
     size="large"
   >
     <input
       className="sc-kpOJdX gEINQW"
-      disabled={false}
       name="input"
       onBlur={[Function]}
       onFocus={[Function]}
       placeholder="Только прямые рейсы"
       size="large"
       type="text"
-      value={undefined}
     />
     <span
       className="sc-kGXeez bUKNtk"
@@ -1217,19 +1211,17 @@ exports[`Storyshots Input success 1`] = `
 >
   <div
     className="sc-dxgOiQ cdnOrF"
-    disabled={false}
+    disabled={undefined}
     size="large"
   >
     <input
       className="sc-kpOJdX gEINQW"
-      disabled={false}
       name="input"
       onBlur={[Function]}
       onFocus={[Function]}
       placeholder="Только прямые рейсы"
       size="large"
       type="text"
-      value={undefined}
     />
   </div>
 </div>
