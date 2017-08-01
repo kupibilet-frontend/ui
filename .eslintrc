@@ -1,3 +1,8 @@
 {
-  "extends": "kupibilet"
+  "extends": "kupibilet",
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
 }
