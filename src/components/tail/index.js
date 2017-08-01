@@ -5,24 +5,12 @@ import Icon from '../icons'
 import { switchTransition } from '../../utils/transitions'
 import { borderSmall } from '../../utils/borders'
 
-const Description = styled.span`
-  display: block;
-  padding: 6px 0;
-  font-size: 11px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.color.textLightest};
-`
+const Root = styled.div`
+  display: inline-flex;
+  flex-direction: column;
 
-const StyledIcon = styled(Icon)``
-
-const Content = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-
-  & ${StyledIcon} {
-    margin-left: 6px;
+  & + & {
+    margin-left: 10px;
   }
 `
 
@@ -48,12 +36,24 @@ const Button = styled.div`
   }
 `
 
-const Root = styled.div`
-  display: inline-flex;
-  flex-direction: column;
+const Description = styled.span`
+  display: block;
+  padding: 6px 0;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.color.textLightest};
+`
 
-  & + & {
-    margin-left: 10px;
+const StyledIcon = styled(Icon)``
+
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+
+  & ${StyledIcon} {
+    margin-left: 6px;
   }
 `
 
