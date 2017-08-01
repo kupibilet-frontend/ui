@@ -31,18 +31,4 @@ export default css`
   .DateRangePicker__picker--direction-right {
       right: 0;
   }
-
-  // TODO drop portal picker
-  // .DateRangePicker__picker--portal {}
-  //
-  // .DateRangePicker__picker--full-screen-portal {
-  //   background-color: ${({ theme }) => theme.color.background};
-  // }
-  //
-  // .DateRangePicker__close {
-  //   svg {}
-  //
-  //   &:hover,
-  //   &:focus {}
-  // }
 `
