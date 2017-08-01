@@ -82,16 +82,15 @@ type Props = {
   description?: string,
 }
 
-const TailIcons = (icons) => (
+const getIcons = (icons) => (
   icons.map((item) => (
     <StyledIcon
       className="block-icon"
       key={item}
       name={item}
-      stroke="background"
       fill="miscDark"
     />
-    ))
+  ))
 )
 
 
