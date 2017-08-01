@@ -1,40 +1,37 @@
+// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { color } from '../theme-provider/theme'
 
 const LabelWrapper = styled.div`
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
   user-select: none;
 `
 
 const Label = styled.label`
+  display: block;
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 18px;
-  color: ${color.textDarker};
+  color: ${({ theme }) => theme.color.textDarker};
   user-select: none;
 `
 
-const FormItem = ({ children, title, htmlFor, ...props }) => (
+type Props = {
+  label: String,
+  children: Element,
+  htmlFor: String,
+}
+
+/* eslint-disable react/prop-types */
+const FormItem = ({ children, label, htmlFor, ...props }: Props) => (
   <LabelWrapper
     {...props}
   >
     <Label htmlFor={htmlFor}>
-      {title}
+      {label}
     </Label>
 
     {children}
   </LabelWrapper>
 )
-
-FormItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired,
-  htmlFor: PropTypes.string.isRequired,
-}
 
 export default FormItem

@@ -12,7 +12,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
     }
   >
     <div
-      className="sc-jhAzac jTEUNs"
+      className="sc-fMiknA bBJTaM"
     >
       <div
         className="react-autosuggest__container"
@@ -850,7 +850,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kEYyzF bpPhVL"
+    className="sc-iAyFgw cPGXdZ"
   >
     <div
       className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
@@ -971,10 +971,10 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX eHdMOA"
+      className="sc-ckVGcZ bxaaQL"
     >
       <div
-        className="sc-dxgOiQ kmRsCh"
+        className="sc-jKJlTe iaxGpP"
       >
         <div
           style={
@@ -991,7 +991,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ hZqbXy"
+        className="sc-eNQAEJ cHqezU"
       >
         <div
           style={
@@ -1024,7 +1024,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
     }
   >
     <div
-      className="sc-jKJlTe bPdyRl"
+      className="sc-hMqMXs cXakXu"
     >
       <div
         style={
@@ -1056,10 +1056,10 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX eHdMOA"
+      className="sc-ckVGcZ bxaaQL"
     >
       <div
-        className="sc-dxgOiQ kmRsCh"
+        className="sc-jKJlTe iaxGpP"
       >
         <div
           style={
@@ -1076,7 +1076,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ bDOWsD"
+        className="sc-eNQAEJ jOunbj"
       >
         <div
           style={
@@ -1102,10 +1102,10 @@ exports[`Storyshots FormItem default 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-chPdSV cmfjpk"
+    className="sc-chPdSV kgupvL"
   >
     <label
-      className="sc-kgoBCf kJWSIb"
+      className="sc-kgoBCf cJBTPS"
       htmlFor="input"
     >
       Cake is a lie
@@ -1218,7 +1218,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
 >
   <div>
     <div
-      className="sc-kjoXOD jDbNjg"
+      className="sc-TOsTZ ioVrXa"
     >
       <div
         className="sc-dNLxif isUIdb"
@@ -1227,7 +1227,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-kgAjT dCAwRm"
+      className="sc-ksYbfQ PchbH"
     >
       <div
         className="sc-jqCOkK dRpMQi"
@@ -1236,7 +1236,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-TOsTZ kgtXmT"
+      className="sc-cJSrbW demXGS"
     >
       <div
         className="sc-uJMKN aDlti"
@@ -1245,7 +1245,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-cHGsZl iUaaqe"
+      className="sc-kgAjT OmQkl"
     >
       <div
         className="sc-bbmXgH jYZdTc"
@@ -1254,7 +1254,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="sc-cJSrbW hMaOei"
+      className="sc-hmzhuo fIJPXC"
     >
       <div
         className="sc-gGBfsJ fehCfd"
