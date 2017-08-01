@@ -17,7 +17,7 @@ export default class Tab extends React.PureComponent<void, Props, void> {
     const { isActive, tabKey, onTabChange, children, ...props } = this.props
 
     return (
-      <span tabIndex="0" {...props} onFocus={this.onFocus}>
+      <span tabIndex="0" role="tab" {...props} onFocus={this.onFocus}>
         { children }
       </span>
     )

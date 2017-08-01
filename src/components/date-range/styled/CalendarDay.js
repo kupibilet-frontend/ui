@@ -52,12 +52,14 @@ export default css`
     &:not(.CalendarDay--blocked):hover {
       position: relative;
 
-      ${({ theme }) => cssArrow({
-        width: 4,
-        heigth: 12,
-        color: theme.color.primary,
-        fromDirection: 'left',
-      })}
+      ${({ theme }) => (
+    cssArrow({
+      width: 4,
+      heigth: 12,
+      color: theme.color.primary,
+      fromDirection: 'left',
+    })
+  )}
     }
   }
 
@@ -66,11 +68,11 @@ export default css`
       position: relative;
 
       ${({ theme }) => cssArrow({
-        width: 4,
-        heigth: 12,
-        color: theme.color.primary,
-        fromDirection: 'right',
-      })}
+    width: 4,
+    heigth: 12,
+    color: theme.color.primary,
+    fromDirection: 'right',
+  })}
     }
   }
 

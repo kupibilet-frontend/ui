@@ -18,7 +18,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
         className="react-autosuggest__container"
       >
         <div
-          className="sc-gPEVay bHJZOm"
+          className="sc-gPEVay blrsen"
         >
           <textarea
             aria-activedescendant={null}
@@ -29,7 +29,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             autoCapitalize="sentences"
             autoComplete="off"
             autoFocus={true}
-            className="react-autosuggest__input sc-iRbamj lmaxUD"
+            className="react-autosuggest__input sc-iRbamj ibdwrD"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -42,10 +42,10 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             wrap="off"
           />
           <div
-            className="airport-input__geo sc-jlyJG giBihK"
+            className="airport-input__geo sc-jlyJG aCiwM"
           >
             <div
-              className="sc-csuQGl fZITyK"
+              className="sc-csuQGl iKPFzo"
             >
               
             </div>
@@ -53,7 +53,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             
           </div>
           <div
-            className="sc-bRBYWo gpToxv"
+            className="sc-bRBYWo lbFHZb"
           >
             
           </div>
@@ -709,12 +709,12 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
       </span>
     </button>
     <div
-      className="sc-gPEVay dVRcuQ"
+      className="sc-gPEVay kFaNzt"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-iRbamj Nayoz"
+        className="sc-iRbamj nDaUP"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -724,10 +724,10 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-jlyJG bmDLSd"
+        className="airport-input__geo sc-jlyJG bWccao"
       >
         <div
-          className="sc-csuQGl fZITyK"
+          className="sc-csuQGl iKPFzo"
         >
           Шереметьево
         </div>
@@ -735,7 +735,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         
       </div>
       <div
-        className="sc-bRBYWo bcOilx"
+        className="sc-bRBYWo dafKNi"
       >
         SVO
       </div>
@@ -764,12 +764,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
     className="sc-ckVGcZ berOiR"
   >
     <div
-      className="sc-gPEVay btWnfK"
+      className="sc-gPEVay bhPgJz"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-iRbamj ddcRKe"
+        className="sc-iRbamj kayYZc"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -779,10 +779,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-jlyJG giBihK"
+        className="airport-input__geo sc-jlyJG aCiwM"
       >
         <div
-          className="sc-csuQGl fZITyK"
+          className="sc-csuQGl iKPFzo"
         >
           Шереметьево
         </div>
@@ -790,7 +790,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-bRBYWo bcOilx"
+        className="sc-bRBYWo dafKNi"
       >
         SVO
       </div>
@@ -810,12 +810,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       </svg>
     </div>
     <div
-      className="sc-gPEVay cWiCNU"
+      className="sc-gPEVay bYYQr"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-iRbamj kVHSmU"
+        className="sc-iRbamj dEKcQr"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -825,10 +825,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-jlyJG bmDLSd"
+        className="airport-input__geo sc-jlyJG bWccao"
       >
         <div
-          className="sc-csuQGl fZITyK"
+          className="sc-csuQGl iKPFzo"
         >
           Несуществующий город
         </div>
@@ -836,7 +836,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-bRBYWo gpToxv"
+        className="sc-bRBYWo lbFHZb"
       >
         
       </div>
