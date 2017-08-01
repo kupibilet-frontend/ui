@@ -51,5 +51,4 @@ storiesOf('DateRange', module)
         )}
       />
     )
-  },
-)
+  })

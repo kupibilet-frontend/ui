@@ -11,7 +11,6 @@ type Props = {
 }
 
 class TabBar extends React.PureComponent<void, Props, void> {
-
   onTabChange = (key: string) => {
     const { activeKey, onTabChange } = this.props
 

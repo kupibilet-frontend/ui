@@ -77,7 +77,7 @@ export const Container = styled.div`
   &:hover {
     border-color: ${({ theme }) => theme.color.secondary};
   }
-`
+  `
 
 export const Input = styled.textarea`
   ${control}
@@ -123,7 +123,7 @@ export const Input = styled.textarea`
   &:focus ~ .airport-input__geo .airport-input__spell {
     display: block;
   }
-`
+  `
 
 export const Geo = styled.div`
   pointer-events: none;
@@ -140,7 +140,7 @@ export const Geo = styled.div`
   padding-left: ${({ neighboringInGroup }) => (
     ['left', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
   )};
-`
+  `
 
 // Use same component as in input due specific text rendering in inputs
 export const Spell = styled.span`
@@ -162,7 +162,7 @@ export const Spell = styled.span`
   ${fontStyle}
   font-weight: 600;
   color: ${({ theme }) => theme.color.textLight};
-`
+  `
 
 export const ValuePlaceholder = styled.div`
   visibility: hidden;
@@ -171,13 +171,13 @@ export const ValuePlaceholder = styled.div`
   ${fontStyle}
   font-weight: 600;
   user-select: none;
-`
+  `
 
 export const GeoLabel = styled.span`
   ${control}
   ${fontStyle}
   user-select: none;
-`
+  `
 
 export const Code = styled.div`
   pointer-events: none;
@@ -213,4 +213,4 @@ export const Code = styled.div`
 
     background: ${(props) => fadeGradient(props)};
   }
-`
+  `

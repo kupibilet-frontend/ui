@@ -86,7 +86,7 @@ const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }
     multiSection,
     data: multiSection ?
       suggestions.map((section) => getSectionSuggestions(section).length)
-    :
+      :
       suggestions.length,
   })
 )

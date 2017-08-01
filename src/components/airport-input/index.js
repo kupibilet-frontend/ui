@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom'
 import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from './styled'
 
 /* eslint-disable react/prop-types */
+/* global SyntheticInputEvent, SyntheticKeyboardEvent */
 type Props = {
   value: string,
   area: string,
