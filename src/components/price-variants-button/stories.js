@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, boolean } from '@storybook/addon-knobs'
-import Tail from './index'
+import PriceVariantsButton from './index'
 import updateKnob from '../../utils/updateKnob'
 
 const defaultChecked = {
@@ -13,7 +13,7 @@ const defaultChecked = {
   active: false,
 }
 
-storiesOf('Tail', module)
+storiesOf('PriceVariantsButton', module)
   .addWithInfo('default', () => {
     const title = text('title', defaultChecked.title)
     const description = text('description', defaultChecked.description)
@@ -25,7 +25,7 @@ storiesOf('Tail', module)
 
     return (
       <div>
-        <Tail
+        <PriceVariantsButton
           active={!active}
           title="Банковской картой он-лайн"
           price={price}
@@ -34,7 +34,7 @@ storiesOf('Tail', module)
           description={description}
           onClick={onClick}
         />
-        <Tail
+        <PriceVariantsButton
           active={active}
           title={title}
           price={price}
@@ -43,7 +43,7 @@ storiesOf('Tail', module)
           description={description}
           onClick={onClick}
         />
-        <Tail
+        <PriceVariantsButton
           active={active}
           title="Эконом"
           price={price}
