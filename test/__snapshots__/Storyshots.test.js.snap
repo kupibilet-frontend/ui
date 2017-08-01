@@ -185,7 +185,6 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       >
         <div
           className="rc-collapse-item sc-iwsKbI hIrClY sc-htpNat jpYvPn"
-          id={undefined}
           style={undefined}
         >
           <div
@@ -516,7 +515,6 @@ exports[`Storyshots Collapse Accordion 1`] = `
     >
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -530,7 +528,6 @@ exports[`Storyshots Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -544,7 +541,6 @@ exports[`Storyshots Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -578,7 +574,6 @@ exports[`Storyshots Collapse Default 1`] = `
     >
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -592,7 +587,6 @@ exports[`Storyshots Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -606,7 +600,6 @@ exports[`Storyshots Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -640,7 +633,6 @@ exports[`Storyshots Collapse Default active panel 1`] = `
     >
       <div
         className="rc-collapse-item rc-collapse-item-active sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -668,7 +660,6 @@ exports[`Storyshots Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -682,7 +673,6 @@ exports[`Storyshots Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item sc-htpNat jpYvPn"
-        id={undefined}
         style={undefined}
       >
         <div
