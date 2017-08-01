@@ -36,7 +36,7 @@ const CalendarNav = ({ direction }) => (
   <Button
     icon={
       <Icon name={`arrow-${direction}`} fill="background" />
-  }
+    }
   />
 )
 CalendarNav.defaultProps = {

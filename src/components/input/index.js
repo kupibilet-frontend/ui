@@ -190,10 +190,9 @@ class Input extends Component<{}, Props, State> {
           onBlur={this.handleBlur}
         />
 
-        {error &&
-          <Error>
-            {error}
-          </Error>
+        { error && <Error>
+          { error }
+        </Error>
         }
       </InputWrapper>
     )

@@ -86,7 +86,7 @@ export const StyledButton = styled.button`
 
   ${({ disabled }) => (disabled ?
     'opacity: .2;'
-  : '')}
+    : '')}
 
   &:hover {
     ${({ disabled, theme }) => (!disabled ? `

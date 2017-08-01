@@ -9,7 +9,7 @@
     "start": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook",
     "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" >&2 && exit 0; stylelint ./src/components/**/*.js",
-    "lint:js": "eslint ./src/**/*.js",
+    "lint:js": "eslint \"./src/**/*.js\"",
     "jest": "jest --bail",
     "flow": "flow",
     "postinstall": "move-bin || true",
