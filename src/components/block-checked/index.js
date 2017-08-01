@@ -1,11 +1,13 @@
-import React, { PropTypes } from 'react'
+// @flow
+import React from 'react'
 import styled from 'styled-components'
 import Icon from '../icons'
-import { color } from '../theme-provider/theme'
 import { switchTransition } from '../../utils/transitions'
+import { borderSmall } from '../../utils/borders'
 
-const InputDescription = styled.p`
-  margin: 6px 0;
+const InputDescription = styled.span`
+  display: block;
+  padding: 6px 0;
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
@@ -19,8 +21,8 @@ const InputWrapper = styled.div`
   padding: 10px 13px;
   min-height: 66px;
   width: 180px;
-  border: 1px solid ${color.misc};
-  border-radius: 3px;
+  border: 1px solid ${({ theme }) => theme.color.misc};
+  ${borderSmall}
   background-color: #FFFFFF;
   cursor: pointer;
   ${switchTransition};
@@ -36,8 +38,8 @@ const Label = styled.label`
   }
 
   &:hover .input-check {
-    border-color: ${color.primary};
-    box-shadow: 0 0 0 1px ${color.primary};
+    border-color: ${({ theme }) => theme.color.primary};
+    box-shadow: 0 0 0 1px ${({ theme }) => theme.color.primary};
   }
 `
 
@@ -45,8 +47,8 @@ const HiddenInput = styled.input`
   display: none;
 
   &:checked + .input-check {
-    border-color: ${color.primary};
-    box-shadow: 0 0 0 1px ${color.primary};
+    border-color: ${({ theme }) => theme.color.primary};
+    box-shadow: 0 0 0 1px ${({ theme }) => theme.color.primary};
   }
 `
 
@@ -67,17 +69,29 @@ const Title = styled.span`
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
-  color: ${color.textDarker};
+  color: ${({ theme }) => theme.color.textDarker};
 `
 
 const Price = styled.span`
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  color: ${color.secondaryDarker};
+  color: ${({ theme }) => theme.color.secondaryDarker};
 `
 
-const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...props }) => (
+type Props = {
+  htmlFor: String,
+  name: String,
+  title?: String,
+  price?: String,
+  icons?: Array<string>,
+  iconsPosition?: String,
+  value?: String,
+  description?: String,
+}
+
+/* eslint-disable react/prop-types */
+const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...props }: Props) => (
   <Label
     {...props}
   >
@@ -90,7 +104,7 @@ const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...pr
     <InputWrapper className="input-check">
       <ContentWrapper>
         <Title>{title}</Title>
-        { (icons.length > 0 && iconsPosition === 'top') && <ContentWrapper>
+        { (icons.length > 0 && iconsPosition === 'top') && <div>
           { icons.map((item, index) => (
             <Icon
               className="input-check-icon"
@@ -101,12 +115,12 @@ const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...pr
             />
             ))
           }
-        </ContentWrapper>
+        </div>
         }
       </ContentWrapper>
       <ContentWrapper bottomLine>
         <Price>{price}</Price>
-        { (icons.length > 0 && iconsPosition === 'bottom') && <ContentWrapper>
+        { (icons.length > 0 && iconsPosition === 'bottom') && <div>
           { icons.map((item) => (
             <Icon
               className="block-icon"
@@ -117,7 +131,7 @@ const BlockChecked = ({ htmlFor, name, title, price, iconsPosition, icons, ...pr
             />
             ))
           }
-        </ContentWrapper>
+        </div>
         }
       </ContentWrapper>
     </InputWrapper>
@@ -132,17 +146,6 @@ BlockChecked.defaultProps = {
   iconsPosition: 'bottom',
   value: '',
   description: '',
-}
-
-BlockChecked.propTypes = {
-  htmlFor: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  price: PropTypes.string,
-  icons: PropTypes.array,
-  iconsPosition: PropTypes.string,
-  value: PropTypes.string,
-  description: PropTypes.string,
 }
 
 export default BlockChecked
