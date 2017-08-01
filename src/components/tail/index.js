@@ -100,6 +100,8 @@ const TailIcons = (icons) => (
     props.onClick(active)
   }
 
+  const hasIcons = icons.length > 0
+
   return (
     <BlockWrapper>
       <StyledBlockCheked
