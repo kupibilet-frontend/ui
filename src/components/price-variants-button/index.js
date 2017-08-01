@@ -93,7 +93,7 @@ const getIcons = (icons) => (
   ))
 )
 
-const Tail = (props: Props) => {
+const PriceVariantsButton = (props: Props) => {
   const {
     active,
     title,
@@ -139,7 +139,7 @@ const Tail = (props: Props) => {
   )
 }
 
-Tail.defaultProps = {
+PriceVariantsButton.defaultProps = {
   title: '',
   price: '',
   icons: [],
@@ -147,4 +147,4 @@ Tail.defaultProps = {
   description: '',
 }
 
-export default Tail
+export default PriceVariantsButton
