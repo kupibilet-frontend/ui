@@ -21,7 +21,6 @@ type Props = {
   htmlFor: String,
 }
 
-/* eslint-disable react/prop-types */
 const FormItem = ({ children, label, htmlFor, ...props }: Props) => (
   <LabelWrapper
     {...props}
