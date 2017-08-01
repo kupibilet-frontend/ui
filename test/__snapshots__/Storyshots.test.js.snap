@@ -197,7 +197,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
               className="sc-htoDjs lekexi"
             >
               <div
-                className="sc-frDJqD hsebVT"
+                className="sc-bbmXgH iDeBwa"
               >
                 Пересадки
               </div>
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ oRaPL"
+        className="sc-jqCOkK jYGvBB"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ hSRSLF"
+        className="sc-jqCOkK iAlbvp"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ oRaPL"
+        className="sc-jqCOkK jYGvBB"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -935,7 +935,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="sc-kvZOFW dpCOkf sc-eNQAEJ gdLOdp"
+      className="sc-gGBfsJ kPHAjE sc-eNQAEJ gdLOdp"
     >
       <div
         onClick={[Function]}
@@ -1191,52 +1191,226 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
 </div>
 `;
 
+exports[`Storyshots Tail default 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div>
+    <div
+      className="sc-cJSrbW ekaJme"
+    >
+      <div
+        className="sc-kgAjT bZAMpS"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-TOsTZ kgxMKz"
+        >
+          <span
+            className="sc-ksYbfQ cWlsvZ"
+          >
+            Банковской картой он-лайн
+          </span>
+          <div>
+            <svg
+              className="block-icon sc-cHGsZl bHiaRe sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_plane"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="sc-TOsTZ kgxMKz"
+        >
+          <span
+            className="sc-hmzhuo laRZTR"
+          >
+            12 234 ₽
+          </span>
+        </div>
+      </div>
+      <span
+        className="sc-kjoXOD sHedd"
+      >
+        Описание
+      </span>
+    </div>
+    <div
+      className="sc-cJSrbW ekaJme"
+    >
+      <div
+        className="sc-kgAjT hcKYev"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-TOsTZ kgxMKz"
+        >
+          <span
+            className="sc-ksYbfQ dYBHok"
+          >
+            Эконом Базовый
+          </span>
+        </div>
+        <div
+          className="sc-TOsTZ kgxMKz"
+        >
+          <span
+            className="sc-hmzhuo laRZTR"
+          >
+            12 234 ₽
+          </span>
+          <div>
+            <svg
+              className="block-icon sc-cHGsZl bHiaRe sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_hand-baggage"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-cHGsZl bHiaRe sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_exchange"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-cHGsZl bHiaRe sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_return"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span
+        className="sc-kjoXOD sHedd"
+      >
+        Описание
+      </span>
+    </div>
+    <div
+      className="sc-cJSrbW ekaJme"
+    >
+      <div
+        className="sc-kgAjT hcKYev"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-TOsTZ kgxMKz"
+        >
+          <span
+            className="sc-ksYbfQ dYBHok"
+          >
+            Эконом
+          </span>
+        </div>
+        <div
+          className="sc-TOsTZ kgxMKz"
+        >
+          <span
+            className="sc-hmzhuo laRZTR"
+          >
+            12 234 ₽
+          </span>
+          <div>
+            <svg
+              className="block-icon sc-cHGsZl bHiaRe sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_hand-baggage"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-cHGsZl bHiaRe sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_exchange"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-cHGsZl bHiaRe sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_return"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span
+        className="sc-kjoXOD sHedd"
+      >
+        Описание
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Utils Responsive only 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
 >
   <div>
     <div
-      className="sc-kjoXOD jDbNjg"
+      className="sc-frDJqD daLwXV"
     >
       <div
-        className="sc-hqyNC hZjAVB"
+        className="sc-jnlKLf jKUZhV"
       >
         Desktop
       </div>
     </div>
     <div
-      className="sc-kgAjT dCAwRm"
+      className="sc-jbKcbu hvPaVh"
     >
       <div
-        className="sc-jbKcbu lfTGxU"
+        className="sc-fYxtnH flJuJu"
       >
         Handheld
       </div>
     </div>
     <div
-      className="sc-TOsTZ kgtXmT"
+      className="sc-hqyNC ghfNmn"
     >
       <div
-        className="sc-dNLxif dWcvlV"
+        className="sc-tilXH fyaOhW"
       >
         Tablet
       </div>
     </div>
     <div
-      className="sc-cHGsZl iUaaqe"
+      className="sc-kvZOFW kJAILN"
     >
       <div
-        className="sc-jqCOkK fMkVcX"
+        className="sc-hEsumM cUsHkU"
       >
         Mobile
       </div>
     </div>
     <div
-      className="sc-cJSrbW hMaOei"
+      className="sc-dNLxif bmUlcN"
     >
       <div
-        className="sc-uJMKN hNZfiG"
+        className="sc-ktHwxA dsCJsO"
       >
         Not mobile
       </div>
