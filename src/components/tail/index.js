@@ -11,7 +11,7 @@ const BlockDescription = styled.span`
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #7f7f7f;
+  color: ${({ theme }) => theme.color.textLightest};
 `
 
 const StyledIcon = styled(Icon)``
