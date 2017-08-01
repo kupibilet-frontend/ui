@@ -4,7 +4,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import FilterSection from 'blocks/FilterSection'
-import Checkbox from 'components/checkbox'
+import Checkbox from 'components/Checkbox'
 
 const CheckboxWithBorder = styled(Checkbox)`
   position: relative;
