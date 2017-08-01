@@ -1,6 +1,6 @@
 import React from 'react'
 import initIcons from '@kupibilet/icons'
-import ThemeProvider from '../src/components/theme-provider'
+import ThemeProvider from '../src/components/ThemeProvider'
 
 export const ThemeDecorator = (story) => {
   initIcons()

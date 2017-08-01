@@ -3,9 +3,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { styles as boxStyles } from 'components/box'
-import Collapse from 'components/collapse'
-import Icon from 'components/icons'
+import { styles as boxStyles } from 'components/Box'
+import Collapse from 'components/Collapse'
+import Icon from 'components/Icon'
 import Link from 'utils/link'
 
 
