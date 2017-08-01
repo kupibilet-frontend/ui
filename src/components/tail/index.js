@@ -94,31 +94,7 @@ const TailIcons = (icons) => (
     ))
 )
 
-function TailHeader({ active, title, icons, iconsPosition }: Props) {
-  return (
-    <ContentWrapper>
-      <Title active={active}>{title}</Title>
-      { (icons && icons.length > 0 && iconsPosition === 'top') && <div>
-        { TailIcons(icons) }
-      </div>
-      }
-    </ContentWrapper>
-  )
-}
 
-function TailFooter({ price, icons, iconsPosition }: Props) {
-  return (
-    <ContentWrapper>
-      <Price>{price}</Price>
-      { (icons && icons.length > 0 && iconsPosition === 'bottom') && <div>
-        { TailIcons(icons) }
-      </div>
-      }
-    </ContentWrapper>
-  )
-}
-/* eslint-disable react/prop-types */
-const Tail = ({ active, title, price, iconsPosition, icons, ...props }: Props) => {
   const onChange = (event: Event) => {
     event.preventDefault()
     props.onClick(active)
@@ -131,17 +107,22 @@ const Tail = ({ active, title, price, iconsPosition, icons, ...props }: Props) =
         active={active}
         onClick={onChange}
       >
-        <TailHeader
-          active={active}
-          title={title}
-          iconsPosition={iconsPosition}
-          icons={icons}
-        />
-        <TailFooter
-          price={price}
-          icons={icons}
-          iconsPosition={iconsPosition}
-        />
+        <ContentWrapper>
+          <Title active={active}>{title}</Title>
+          {hasIcons && iconsPosition === 'top' &&
+            <div>
+              {getIcons(icons)}
+            </div>
+          }
+        </ContentWrapper>
+        <ContentWrapper>
+          <Price>{price}</Price>
+          {(hasIcons && iconsPosition === 'bottom') &&
+            <div>
+              {getIcons(icons)}
+            </div>
+          }
+        </ContentWrapper>
       </StyledBlockCheked>
       <BlockDescription>{props.description}</BlockDescription>
     </BlockWrapper>
