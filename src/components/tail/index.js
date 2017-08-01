@@ -72,14 +72,12 @@ const Price = styled.span`
   color: ${({ theme }) => theme.color.secondaryDarker};
 `
 
-/* eslint-disable react/require-default-props */
-/* eslint-disable react/no-unused-prop-types */
 type Props = {
   active: boolean,
-  onClick: bool => void,
-  title?: string,
-  price?: string,
-  icons?: Array<string>,
+  onClick: () => void,
+  title: string,
+  price: string,
+  icons: string[],
   iconsPosition?: string,
   description?: string,
 }
