@@ -26,13 +26,13 @@ const TYPOGRAPHY = {
   small: 16,
 }
 
-const InputHeight = {
+const INPUTHEIGHT = {
   large: '42px',
   normal: '36px',
   small: '30px',
 }
 
-const inputStatus = ({ active, success, error }) => {
+const setDisplayInputStatus = ({ active, success, error }) => {
   if (active) {
     return 'none'
   }
@@ -100,7 +100,7 @@ const InputWrapper = styled.div`
   ${switchTransition}
   ${borderInput}
   ${borderSmall}
-  height: ${({ size }) => InputHeight[size]};
+  height: ${({ size }) => INPUTHEIGHT[size]};
   box-shadow: ${({ active, theme }) => active && `0 0 0 1px ${theme.color.primary}`};
   z-index: ${({ active }) => (active ? '3' : '1')};
 
@@ -114,7 +114,7 @@ const InputWrapper = styled.div`
     position: absolute;
     top: 0;
     left: -1px;
-    display: ${(props) => inputStatus(props)};
+    display: ${(props) => setDisplayInputStatus(props)};
     height: 100%;
     width: 2px;
     border-radius: 3px 0 0 3px;
@@ -137,35 +137,33 @@ type Props = {
   onFocus?: Function
 }
 
-class Input extends Component<void, Props, void> {
+type State = {
+  isActive: boolean,
+}
+
+class Input extends Component<{}, Props, State> {
   /* eslint-disable react/sort-comp */
   state = {
     isActive: false,
   }
 
   static defaultProps = {
-    type: 'text',
-    active: false,
-    error: undefined,
-    success: false,
+    name: 'input',
     size: 'normal',
-    disabled: false,
-    placeholder: '',
-    value: undefined,
   }
   /* eslint-enable react/sort-comp */
 
   handleBlur = () => {
-    const { props } = this.props
-    if (props.onBlur) props.onBlur()
+    const { onBlur } = this.props
+    if (onBlur) onBlur()
     this.setState({
       isActive: false,
     })
   }
 
   handleFocus = () => {
-    const { props } = this.props
-    if (props.onFocus) props.onFocus()
+    const { onFocus } = this.props
+    if (onFocus) onFocus()
     this.setState({
       isActive: true,
     })
