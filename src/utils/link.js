@@ -1,7 +1,7 @@
 import { css } from 'styled-components'
 import { opacify } from 'polished'
 
-import { switchTransition } from '../utils/transitions'
+import { switchTransition } from 'utils/transitions'
 
 function getColor(props) {
   return props.theme.color.primaryDarkest

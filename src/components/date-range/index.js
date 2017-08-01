@@ -5,10 +5,10 @@ import moment from 'moment'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
 import * as consts from '@kupibilet/react-dates/constants'
-import StyledDateRange, { DateInput, DateInputValue, DateInputDayOfWeek } from './styled'
+import Button from 'components/button'
+import Icon from 'components/icons'
 
-import Button from '../button'
-import Icon from '../icons'
+import StyledDateRange, { DateInput, DateInputValue, DateInputDayOfWeek } from './styled'
 
 const shortMonths = [null, 'янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 const formatShortMonths = (date) => shortMonths[date.format('M')]

@@ -9,10 +9,10 @@ import PropTypes from 'prop-types'
 import Autosuggest from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
+import type { controlsGroupProps } from 'components/controls-group'
 
 import AutocompleteStyled from './styled'
 
-import type { controlsGroupProps } from '../controls-group'
 
 // Includes cyrylic unicode range
 // http://jrgraphix.net/r/Unicode/0400-04FF

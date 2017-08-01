@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { shadowSmall } from '../../utils/shadows'
-import { borderSmall } from '../../utils/borders'
-import mq from '../../utils/media-queries'
+import { shadowSmall } from 'utils/shadows'
+import { borderSmall } from 'utils/borders'
+import mq from 'utils/media-queries'
 
 export default styled.div`
   .react-autosuggest__container {}

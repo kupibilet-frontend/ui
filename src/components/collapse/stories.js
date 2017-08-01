@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Collapse from './index'
+import Collapse from 'components/collapse'
 
 const { Panel } = Collapse
 const text = `

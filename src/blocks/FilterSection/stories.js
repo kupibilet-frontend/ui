@@ -3,8 +3,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { FilterSection } from '../'
-import { Checkbox } from '../../'
+import FilterSection from 'blocks/FilterSection'
+import Checkbox from 'components/checkbox'
 
 const CheckboxWithBorder = styled(Checkbox)`
   position: relative;

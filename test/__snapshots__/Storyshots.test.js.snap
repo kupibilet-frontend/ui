@@ -12,13 +12,13 @@ exports[`Storyshots Autocomplete Airport 1`] = `
     }
   >
     <div
-      className="styled-s1n37hgk-0 gSKjdB"
+      className="styled-l0xg5-0 bHNODb"
     >
       <div
         className="react-autosuggest__container"
       >
         <div
-          className="styled__Container-eqqqf3-0 gYukeJ"
+          className="styled__Container-b62739-0 bGzhhM"
         >
           <textarea
             aria-activedescendant={null}
@@ -29,7 +29,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             autoCapitalize="sentences"
             autoComplete="off"
             autoFocus={true}
-            className="react-autosuggest__input styled__Input-eqqqf3-1 jsOCzh"
+            className="react-autosuggest__input styled__Input-b62739-1 gxKfbn"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -42,10 +42,10 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             wrap="off"
           />
           <div
-            className="airport-input__geo styled__Geo-eqqqf3-2 kZPvqi"
+            className="airport-input__geo styled__Geo-b62739-2 iCsdMJ"
           >
             <div
-              className="styled__ValuePlaceholder-eqqqf3-4 gClaql"
+              className="styled__ValuePlaceholder-b62739-4 gmWBAn"
             >
               
             </div>
@@ -53,7 +53,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             
           </div>
           <div
-            className="styled__Code-eqqqf3-6 fifZHE"
+            className="styled__Code-b62739-6 hIaaya"
           >
             
           </div>
@@ -80,10 +80,10 @@ exports[`Storyshots Blocks FilterSection 1`] = `
     }
   >
     <section
-      className="FilterSection__Section-s1svdbdw-0 espTWE"
+      className="FilterSection__Section-jqj5fm-0 jZsUiy"
     >
       <header
-        className="FilterSection__Header-s1svdbdw-1 hvMzsb"
+        className="FilterSection__Header-jqj5fm-1 iCySnU"
       >
         <div>
           Пересадки
@@ -93,22 +93,22 @@ exports[`Storyshots Blocks FilterSection 1`] = `
         </div>
       </header>
       <div
-        className="FilterSection__Content-s1svdbdw-2 hqUYBI"
+        className="FilterSection__Content-jqj5fm-2 cYnZeA"
       >
         <div>
           <div>
             <label
-              className="styled__CheckboxLabel-s6g701b-4 jnzRAw"
+              className="styled__CheckboxLabel-s18rktfd-4 hQGnZs"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox styled__StyledCheckbox-s6g701b-2 jSTGCT"
+                className="checkbox styled__StyledCheckbox-s18rktfd-2 gHdxdd"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="styled__CheckboxInput-s6g701b-0 iZQhsP"
+                  className="styled__CheckboxInput-s18rktfd-0 DfTPu"
                   disabled={false}
                   name=""
                   onChange={[Function]}
@@ -116,7 +116,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
                 />
               </span>
               <span
-                className="label-text styled__LabelText-s6g701b-3 fgrNXz"
+                className="label-text styled__LabelText-s18rktfd-3 lhDSgp"
                 disabled={false}
               >
                 Без пересадок
@@ -125,17 +125,17 @@ exports[`Storyshots Blocks FilterSection 1`] = `
           </div>
           <div>
             <label
-              className="styled__CheckboxLabel-s6g701b-4 jnzRAw"
+              className="styled__CheckboxLabel-s18rktfd-4 hQGnZs"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox styled__StyledCheckbox-s6g701b-2 jSTGCT"
+                className="checkbox styled__StyledCheckbox-s18rktfd-2 gHdxdd"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="styled__CheckboxInput-s6g701b-0 iZQhsP"
+                  className="styled__CheckboxInput-s18rktfd-0 DfTPu"
                   disabled={false}
                   name=""
                   onChange={[Function]}
@@ -143,7 +143,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
                 />
               </span>
               <span
-                className="label-text styled__LabelText-s6g701b-3 fgrNXz"
+                className="label-text styled__LabelText-s18rktfd-3 lhDSgp"
                 disabled={false}
               >
                 1 пересадка
@@ -152,17 +152,17 @@ exports[`Storyshots Blocks FilterSection 1`] = `
           </div>
           <div>
             <label
-              className="styled__CheckboxLabel-s6g701b-4 jnzRAw"
+              className="styled__CheckboxLabel-s18rktfd-4 hQGnZs"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox styled__StyledCheckbox-s6g701b-2 jSTGCT"
+                className="checkbox styled__StyledCheckbox-s18rktfd-2 gHdxdd"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="styled__CheckboxInput-s6g701b-0 iZQhsP"
+                  className="styled__CheckboxInput-s18rktfd-0 DfTPu"
                   disabled={false}
                   name=""
                   onChange={[Function]}
@@ -170,7 +170,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
                 />
               </span>
               <span
-                className="label-text styled__LabelText-s6g701b-3 fgrNXz"
+                className="label-text styled__LabelText-s18rktfd-3 lhDSgp"
                 disabled={false}
               >
                 2 и более
@@ -184,7 +184,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
         style={undefined}
       >
         <div
-          className="rc-collapse-item FilterSection__PanelWrapper-s1svdbdw-6 fttjMG Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+          className="rc-collapse-item FilterSection__PanelWrapper-jqj5fm-6 gHLSoC Panel__PanelStyled-s1a3esbz-0 ggPUhp"
           style={undefined}
         >
           <div
@@ -194,15 +194,15 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             role="tab"
           >
             <div
-              className="FilterSection__PanelHeader-s1svdbdw-4 gDRFoG"
+              className="FilterSection__PanelHeader-jqj5fm-4 dqJvCp"
             >
               <div
-                className="stories__WithBorder-s1g4fk3j-1 jjeltj"
+                className="stories__WithBorder-g81prq-1 cRcnFk"
               >
                 Пересадки
               </div>
               <svg
-                className="FilterSection__IconWrapper-s1svdbdw-5 hGMCgG icon-inherit-color icons__IconSvg-s68ymul-0 fpZUmH"
+                className="FilterSection__IconWrapper-jqj5fm-5 eITzIf icon-inherit-color icons__IconSvg-s1jp6x8u-0 hfCDLm"
                 size="xxsmall"
                 style={undefined}
               >
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="Tab-oda61a-0 cCQXbq"
+        className="Tab-ig7nzo-0 ifoJXu"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="Tab-oda61a-0 faxxbt"
+        className="Tab-ig7nzo-0 iKsIYW"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="Tab-oda61a-0 cCQXbq"
+        className="Tab-ig7nzo-0 ifoJXu"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -292,7 +292,7 @@ exports[`Storyshots Box Defalut 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <div
-    className="box__Box-s1ybgiyy-0 WfYjs"
+    className="box__Box-s1wcnbka-0 beLQPt"
   >
     <p>
       box content
@@ -306,12 +306,12 @@ exports[`Storyshots Buttons Default 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <button
-    className="no-global styled__StyledButton-dra9sg-0 diFlSL"
+    className="no-global styled__StyledButton-ex03wx-0 dQQLDr"
     disabled={undefined}
     size="normal"
   >
     <span
-      className="styled__StyledButtonText-dra9sg-1 oYzWJ"
+      className="styled__StyledButtonText-ex03wx-1 dKGkpe"
       size="normal"
     >
       Авиабилеты
@@ -325,12 +325,12 @@ exports[`Storyshots Buttons Disabled 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <button
-    className="no-global styled__StyledButton-dra9sg-0 ikyHQU"
+    className="no-global styled__StyledButton-ex03wx-0 ftrpfD"
     disabled={true}
     size="normal"
   >
     <span
-      className="styled__StyledButtonText-dra9sg-1 oYzWJ"
+      className="styled__StyledButtonText-ex03wx-1 dKGkpe"
       size="normal"
     >
       Cake is a lie
@@ -344,16 +344,16 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <button
-    className="no-global styled__StyledButton-dra9sg-0 cyqbKz"
+    className="no-global styled__StyledButton-ex03wx-0 rDsAj"
     disabled={undefined}
     size="large"
   >
     <span
-      className="styled__IconWrap-dra9sg-2 gXArkg"
+      className="styled__IconWrap-ex03wx-2 kuFwcV"
       size="large"
     >
       <svg
-        className="icons__IconSvg-s68ymul-0 gSpcAn"
+        className="icons__IconSvg-s1jp6x8u-0 cjKTUb"
         size="normal"
         style={undefined}
       >
@@ -371,12 +371,12 @@ exports[`Storyshots Buttons Sizes 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <button
-    className="no-global styled__StyledButton-dra9sg-0 bfrdXI"
+    className="no-global styled__StyledButton-ex03wx-0 wIQBX"
     disabled={undefined}
     size="large"
   >
     <span
-      className="styled__StyledButtonText-dra9sg-1 oYzWJ"
+      className="styled__StyledButtonText-ex03wx-1 dKGkpe"
       size="large"
     >
       Бальшой
@@ -390,16 +390,16 @@ exports[`Storyshots Buttons With icons 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <button
-    className="no-global styled__StyledButton-dra9sg-0 cVzyoT"
+    className="no-global styled__StyledButton-ex03wx-0 epXSno"
     disabled={undefined}
     size="normal"
   >
     <span
-      className="styled__IconWrap-dra9sg-2 iiRtws"
+      className="styled__IconWrap-ex03wx-2 kXNdNJ"
       size="normal"
     >
       <svg
-        className="icons__IconSvg-s68ymul-0 gSpcAn"
+        className="icons__IconSvg-s1jp6x8u-0 cjKTUb"
         size="normal"
         style={undefined}
       >
@@ -409,17 +409,17 @@ exports[`Storyshots Buttons With icons 1`] = `
       </svg>
     </span>
     <span
-      className="styled__StyledButtonText-dra9sg-1 dBIiHT"
+      className="styled__StyledButtonText-ex03wx-1 cYmdcq"
       size="normal"
     >
       Авиабилеты
     </span>
     <span
-      className="styled__IconWrap-dra9sg-2 iiRtws"
+      className="styled__IconWrap-ex03wx-2 kXNdNJ"
       size="normal"
     >
       <svg
-        className="icons__IconSvg-s68ymul-0 gSpcAn"
+        className="icons__IconSvg-s1jp6x8u-0 cjKTUb"
         size="normal"
         style={undefined}
       >
@@ -438,17 +438,17 @@ exports[`Storyshots Checkbox default 1`] = `
 >
   <div>
     <label
-      className="styled__CheckboxLabel-s6g701b-4 jnzRAw"
+      className="styled__CheckboxLabel-s18rktfd-4 hQGnZs"
       disabled={false}
     >
       <span
         checked={false}
-        className="checkbox styled__StyledCheckbox-s6g701b-2 jSTGCT"
+        className="checkbox styled__StyledCheckbox-s18rktfd-2 gHdxdd"
         disabled={false}
       >
         <input
           checked={false}
-          className="styled__CheckboxInput-s6g701b-0 iZQhsP"
+          className="styled__CheckboxInput-s18rktfd-0 DfTPu"
           disabled={false}
           name=""
           onChange={[Function]}
@@ -456,7 +456,7 @@ exports[`Storyshots Checkbox default 1`] = `
         />
       </span>
       <span
-        className="label-text styled__LabelText-s6g701b-3 fgrNXz"
+        className="label-text styled__LabelText-s18rktfd-3 lhDSgp"
         disabled={false}
       >
         Авиабилеты
@@ -471,17 +471,17 @@ exports[`Storyshots Checkbox disabled 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <label
-    className="styled__CheckboxLabel-s6g701b-4 jPWcFy"
+    className="styled__CheckboxLabel-s18rktfd-4 klWYAd"
     disabled={true}
   >
     <span
       checked={false}
-      className="checkbox styled__StyledCheckbox-s6g701b-2 djLsUz"
+      className="checkbox styled__StyledCheckbox-s18rktfd-2 FoFLM"
       disabled={true}
     >
       <input
         checked={false}
-        className="styled__CheckboxInput-s6g701b-0 iZQhsP"
+        className="styled__CheckboxInput-s18rktfd-0 DfTPu"
         disabled={true}
         name=""
         onChange={[Function]}
@@ -489,7 +489,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
       />
     </span>
     <span
-      className="label-text styled__LabelText-s6g701b-3 fzXiOr"
+      className="label-text styled__LabelText-s18rktfd-3 gffORY"
       disabled={true}
     >
       Авиабилеты
@@ -514,7 +514,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
       style={undefined}
     >
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -527,7 +527,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -540,7 +540,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -573,7 +573,7 @@ exports[`Storyshots Collapse Default 1`] = `
       style={undefined}
     >
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -586,7 +586,7 @@ exports[`Storyshots Collapse Default 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -599,7 +599,7 @@ exports[`Storyshots Collapse Default 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -632,7 +632,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
       style={undefined}
     >
       <div
-        className="rc-collapse-item rc-collapse-item-active Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item rc-collapse-item-active Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -659,7 +659,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -672,7 +672,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item Panel__PanelStyled-s1vqf5vt-0 fgYGsO"
+        className="rc-collapse-item Panel__PanelStyled-s1a3esbz-0 ggPUhp"
         style={undefined}
       >
         <div
@@ -694,27 +694,27 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <div
-    className="styled__FlexContainer-hlywl-0 kJxacG"
+    className="styled__FlexContainer-kjsa5t-0 kiAucM"
   >
     <button
-      className="no-global styled__StyledButton-dra9sg-0 hLaqRJ"
+      className="no-global styled__StyledButton-ex03wx-0 hPtkp"
       disabled={undefined}
       size="large"
     >
       <span
-        className="styled__StyledButtonText-dra9sg-1 oYzWJ"
+        className="styled__StyledButtonText-ex03wx-1 dKGkpe"
         size="large"
       >
         Пойти
       </span>
     </button>
     <div
-      className="styled__Container-eqqqf3-0 fTUwWw"
+      className="styled__Container-b62739-0 kPRhrD"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="styled__Input-eqqqf3-1 kchWXv"
+        className="styled__Input-b62739-1 eCJLaI"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -724,10 +724,10 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo styled__Geo-eqqqf3-2 jGmpLQ"
+        className="airport-input__geo styled__Geo-b62739-2 djvYHN"
       >
         <div
-          className="styled__ValuePlaceholder-eqqqf3-4 gClaql"
+          className="styled__ValuePlaceholder-b62739-4 gmWBAn"
         >
           Шереметьево
         </div>
@@ -735,18 +735,18 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         
       </div>
       <div
-        className="styled__Code-eqqqf3-6 fsVGUu"
+        className="styled__Code-b62739-6 gbIeko"
       >
         SVO
       </div>
     </div>
     <button
-      className="no-global styled__StyledButton-dra9sg-0 juiUVc"
+      className="no-global styled__StyledButton-ex03wx-0 gBXAAQ"
       disabled={undefined}
       size="large"
     >
       <span
-        className="styled__StyledButtonText-dra9sg-1 oYzWJ"
+        className="styled__StyledButtonText-ex03wx-1 dKGkpe"
         size="large"
       >
         Найти
@@ -761,15 +761,15 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <div
-    className="styled__FlexContainer-hlywl-0 kJxacG"
+    className="styled__FlexContainer-kjsa5t-0 kiAucM"
   >
     <div
-      className="styled__Container-eqqqf3-0 jeVBlh"
+      className="styled__Container-b62739-0 iuJudj"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="styled__Input-eqqqf3-1 kieDpb"
+        className="styled__Input-b62739-1 kcyhpM"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -779,10 +779,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo styled__Geo-eqqqf3-2 kZPvqi"
+        className="airport-input__geo styled__Geo-b62739-2 iCsdMJ"
       >
         <div
-          className="styled__ValuePlaceholder-eqqqf3-4 gClaql"
+          className="styled__ValuePlaceholder-b62739-4 gmWBAn"
         >
           Шереметьево
         </div>
@@ -790,17 +790,17 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="styled__Code-eqqqf3-6 fsVGUu"
+        className="styled__Code-b62739-6 gbIeko"
       >
         SVO
       </div>
     </div>
     <div
-      className="styled__SwapContainer-hlywl-1 ezwTCb"
+      className="styled__SwapContainer-kjsa5t-1 kwvQNh"
       onClick={[Function]}
     >
       <svg
-        className="controls-group__swap styled__SwapIcon-hlywl-2 fUEDMY icon-inherit-color icons__IconSvg-s68ymul-0 fpZUmH"
+        className="controls-group__swap styled__SwapIcon-kjsa5t-2 iHGeqS icon-inherit-color icons__IconSvg-s1jp6x8u-0 hfCDLm"
         size="xxsmall"
         style={undefined}
       >
@@ -810,12 +810,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       </svg>
     </div>
     <div
-      className="styled__Container-eqqqf3-0 cQWYNU"
+      className="styled__Container-b62739-0 gTROiX"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="styled__Input-eqqqf3-1 fnUtVs"
+        className="styled__Input-b62739-1 fgUjhN"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -825,10 +825,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo styled__Geo-eqqqf3-2 jGmpLQ"
+        className="airport-input__geo styled__Geo-b62739-2 djvYHN"
       >
         <div
-          className="styled__ValuePlaceholder-eqqqf3-4 gClaql"
+          className="styled__ValuePlaceholder-b62739-4 gmWBAn"
         >
           Несуществующий город
         </div>
@@ -836,7 +836,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="styled__Code-eqqqf3-6 fifZHE"
+        className="styled__Code-b62739-6 hIaaya"
       >
         
       </div>
@@ -935,19 +935,19 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="stories__StyledDropdown-s5loooo-0 iVGrdS dropdown__DropdownWrapper-s8i1wi5-0 VloVm"
+      className="stories__StyledDropdown-s1csjvtb-0 AWNmw dropdown__DropdownWrapper-doekpk-0 jVydYt"
     >
       <div
         onClick={[Function]}
       >
         click to open  
         <button
-          className="no-global styled__StyledButton-dra9sg-0 diFlSL"
+          className="no-global styled__StyledButton-ex03wx-0 dQQLDr"
           disabled={undefined}
           size="normal"
         >
           <span
-            className="styled__StyledButtonText-dra9sg-1 oYzWJ"
+            className="styled__StyledButtonText-ex03wx-1 dKGkpe"
             size="normal"
           >
             click
@@ -971,10 +971,10 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
     }
   >
     <div
-      className="fluid-layout__FluidContainer-s1exz8j2-0 dinkwg"
+      className="fluid-layout__FluidContainer-s10in2pn-0 dhRuAY"
     >
       <div
-        className="fluid-layout__FluidSection-s1exz8j2-1 ejKiWb"
+        className="fluid-layout__FluidSection-s10in2pn-1 ePBsqC"
       >
         <div
           style={
@@ -991,7 +991,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
         </div>
       </div>
       <div
-        className="fluid-layout__Aside-s1exz8j2-2 cqRvfu"
+        className="fluid-layout__Aside-s10in2pn-2 ecKKmE"
       >
         <div
           style={
@@ -1024,7 +1024,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
     }
   >
     <div
-      className="fluid-layout__SingleFluidSection-s1exz8j2-3 yYRjW"
+      className="fluid-layout__SingleFluidSection-s10in2pn-3 dgRDFo"
     >
       <div
         style={
@@ -1056,10 +1056,10 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
     }
   >
     <div
-      className="fluid-layout__FluidContainer-s1exz8j2-0 dinkwg"
+      className="fluid-layout__FluidContainer-s10in2pn-0 dhRuAY"
     >
       <div
-        className="fluid-layout__FluidSection-s1exz8j2-1 ejKiWb"
+        className="fluid-layout__FluidSection-s10in2pn-1 ePBsqC"
       >
         <div
           style={
@@ -1076,7 +1076,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
         </div>
       </div>
       <div
-        className="fluid-layout__Aside-s1exz8j2-2 gmMVLl"
+        className="fluid-layout__Aside-s10in2pn-2 cyCQaM"
       >
         <div
           style={
@@ -1123,7 +1123,7 @@ exports[`Storyshots Icon Icon with fill 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <svg
-    className="icons__IconSvg-s68ymul-0 hDEnJK"
+    className="icons__IconSvg-s1jp6x8u-0 iOiQVa"
     size="large"
     style={undefined}
   >
@@ -1232,43 +1232,43 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   className="theme-provider__GlobalStylesScope-s17r9674-0 czImMK"
 >
   <div
-    className="passenger__Passenger-s9z0pht-0 faJBuC"
+    className="passenger__Passenger-s1pwcak4-0 laKlMe"
   >
     <div>
       <div
-        className="passenger__Title-s9z0pht-1 hltMSQ"
+        className="passenger__Title-s1pwcak4-1 iSEhdq"
       >
         Взрослые
       </div>
       <div
-        className="passenger__Description-s9z0pht-2 gheFzw"
+        className="passenger__Description-s1pwcak4-2 gHdiuo"
       >
         До 2 лет, без места
       </div>
     </div>
     <div
-      className="passenger__PassangerCount-s9z0pht-5 hnkNzB"
+      className="passenger__PassangerCount-s1pwcak4-5 eLVcSH"
     >
       <span
-        className="passenger__Current-s9z0pht-3 hFBEeh"
+        className="passenger__Current-s1pwcak4-3 blBDqm"
       >
         1
       </span>
       <div
-        className="passenger__CountControls-s9z0pht-6 diyjxX"
+        className="passenger__CountControls-s1pwcak4-6 hTcEQY"
       >
         <button
-          className="no-global passenger__ButtonControl-s9z0pht-4 miWke styled__StyledButton-dra9sg-0 kRySXX"
+          className="no-global passenger__ButtonControl-s1pwcak4-4 cnTAIT styled__StyledButton-ex03wx-0 kmmMDm"
           disabled={true}
           onClick={[Function]}
           size="normal"
         >
           <span
-            className="styled__IconWrap-dra9sg-2 iiRtws"
+            className="styled__IconWrap-ex03wx-2 kXNdNJ"
             size="normal"
           >
             <svg
-              className="icons__IconSvg-s68ymul-0 gSpcAn"
+              className="icons__IconSvg-s1jp6x8u-0 cjKTUb"
               size="normal"
               style={undefined}
             >
@@ -1279,17 +1279,17 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
           </span>
         </button>
         <button
-          className="no-global passenger__ButtonControl-s9z0pht-4 miWke styled__StyledButton-dra9sg-0 eGtbfm"
+          className="no-global passenger__ButtonControl-s1pwcak4-4 cnTAIT styled__StyledButton-ex03wx-0 eaLRgA"
           disabled={false}
           onClick={[Function]}
           size="normal"
         >
           <span
-            className="styled__IconWrap-dra9sg-2 iiRtws"
+            className="styled__IconWrap-ex03wx-2 kXNdNJ"
             size="normal"
           >
             <svg
-              className="icons__IconSvg-s68ymul-0 gSpcAn"
+              className="icons__IconSvg-s1jp6x8u-0 cjKTUb"
               size="normal"
               style={undefined}
             >
@@ -1328,7 +1328,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           </span>
           <div>
             <svg
-              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s68ymul-0 kwJiwH"
+              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s1jp6x8u-0 isrYoj"
               size="normal"
               style={undefined}
             >
@@ -1383,7 +1383,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           </span>
           <div>
             <svg
-              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s68ymul-0 kwJiwH"
+              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s1jp6x8u-0 isrYoj"
               size="normal"
               style={undefined}
             >
@@ -1392,7 +1392,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s68ymul-0 kwJiwH"
+              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s1jp6x8u-0 isrYoj"
               size="normal"
               style={undefined}
             >
@@ -1401,7 +1401,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s68ymul-0 kwJiwH"
+              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s1jp6x8u-0 isrYoj"
               size="normal"
               style={undefined}
             >
@@ -1446,7 +1446,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           </span>
           <div>
             <svg
-              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s68ymul-0 kwJiwH"
+              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s1jp6x8u-0 isrYoj"
               size="normal"
               style={undefined}
             >
@@ -1455,7 +1455,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s68ymul-0 kwJiwH"
+              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s1jp6x8u-0 isrYoj"
               size="normal"
               style={undefined}
             >
@@ -1464,7 +1464,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s68ymul-0 kwJiwH"
+              className="block-icon price-variants-button__StyledIcon-s1hbe2xj-3 fHRQBy icons__IconSvg-s1jp6x8u-0 isrYoj"
               size="normal"
               style={undefined}
             >
@@ -1491,16 +1491,16 @@ exports[`Storyshots Utils Responsive only 1`] = `
 >
   <div>
     <div
-      className="responsive-only__DesktopOnly-s10t3qc7-0 bntGez"
+      className="responsive-only__DesktopOnly-s11p3d4h-0 gnSESC"
     >
       <div
-        className="stories__StoryTip-s1hx5yby-0 QCFMO"
+        className="stories__StoryTip-s1grnup6-0 bLJLQD"
       >
         Desktop
       </div>
     </div>
     <div
-      className="responsive-only__HandheldOnly-s10t3qc7-3 gygXLO"
+      className="responsive-only__HandheldOnly-s11p3d4h-3 erZPdu"
     >
       <div
         className="sc-bdVaJa DRdhs"
@@ -1509,7 +1509,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="responsive-only__TabletOnly-s10t3qc7-2 jSrJXB"
+      className="responsive-only__TabletOnly-s11p3d4h-2 kauEFp"
     >
       <div
         className="sc-bwzfXH bCScSi"
@@ -1518,7 +1518,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="responsive-only__MobileOnly-s10t3qc7-1 hqZRdr"
+      className="responsive-only__MobileOnly-s11p3d4h-1 jRgQuy"
     >
       <div
         className="sc-htpNat iwGFdx"
@@ -1527,7 +1527,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       </div>
     </div>
     <div
-      className="responsive-only__NotMobileOnly-s10t3qc7-4 dcKivI"
+      className="responsive-only__NotMobileOnly-s11p3d4h-4 iaZQQb"
     >
       <div
         className="sc-bxivhb htfAcQ"

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import media from '../../utils/media-queries'
+import media from 'utils/media-queries'
 
 const FluidContainer = styled.div`
   width: 1176px;
