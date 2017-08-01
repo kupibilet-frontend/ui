@@ -1315,29 +1315,30 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tail default 1`] = `
+exports[`Storyshots PriceVariantsButton default 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
 >
   <div>
     <div
-      className="sc-hqyNC iaBkXs"
+      className="sc-ksYbfQ kpTUAv"
     >
       <div
-        className="sc-kvZOFW bGCNfc"
+        className="sc-hmzhuo hfyEUr"
         onClick={[Function]}
+        title="Банковской картой он-лайн"
       >
         <div
-          className="sc-frDJqD FdITs"
+          className="sc-hqyNC hAwqf"
         >
           <span
-            className="sc-jbKcbu jqetJ"
+            className="sc-jbKcbu cumgcH"
           >
             Банковской картой он-лайн
           </span>
           <div>
             <svg
-              className="block-icon sc-hmzhuo eRtqMp sc-bxivhb ereCjg"
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
               size="normal"
               style={undefined}
             >
@@ -1348,7 +1349,7 @@ exports[`Storyshots Tail default 1`] = `
           </div>
         </div>
         <div
-          className="sc-frDJqD FdITs"
+          className="sc-hqyNC hAwqf"
         >
           <span
             className="sc-dNLxif iHIYVU"
@@ -1358,29 +1359,30 @@ exports[`Storyshots Tail default 1`] = `
         </div>
       </div>
       <span
-        className="sc-ksYbfQ DsYhu"
+        className="sc-frDJqD gFhaxJ"
       >
         Описание
       </span>
     </div>
     <div
-      className="sc-hqyNC iaBkXs"
+      className="sc-ksYbfQ kpTUAv"
     >
       <div
-        className="sc-kvZOFW eTFieJ"
+        className="sc-hmzhuo hMAqIX"
         onClick={[Function]}
+        title="Эконом Базовый"
       >
         <div
-          className="sc-frDJqD FdITs"
+          className="sc-hqyNC hAwqf"
         >
           <span
-            className="sc-jbKcbu idqxjr"
+            className="sc-jbKcbu ljLxxv"
           >
             Эконом Базовый
           </span>
         </div>
         <div
-          className="sc-frDJqD FdITs"
+          className="sc-hqyNC hAwqf"
         >
           <span
             className="sc-dNLxif iHIYVU"
@@ -1389,7 +1391,7 @@ exports[`Storyshots Tail default 1`] = `
           </span>
           <div>
             <svg
-              className="block-icon sc-hmzhuo eRtqMp sc-bxivhb ereCjg"
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
               size="normal"
               style={undefined}
             >
@@ -1398,7 +1400,7 @@ exports[`Storyshots Tail default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-hmzhuo eRtqMp sc-bxivhb ereCjg"
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
               size="normal"
               style={undefined}
             >
@@ -1407,7 +1409,7 @@ exports[`Storyshots Tail default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-hmzhuo eRtqMp sc-bxivhb ereCjg"
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
               size="normal"
               style={undefined}
             >
@@ -1419,29 +1421,30 @@ exports[`Storyshots Tail default 1`] = `
         </div>
       </div>
       <span
-        className="sc-ksYbfQ DsYhu"
+        className="sc-frDJqD gFhaxJ"
       >
         Описание
       </span>
     </div>
     <div
-      className="sc-hqyNC iaBkXs"
+      className="sc-ksYbfQ kpTUAv"
     >
       <div
-        className="sc-kvZOFW eTFieJ"
+        className="sc-hmzhuo hMAqIX"
         onClick={[Function]}
+        title="Эконом"
       >
         <div
-          className="sc-frDJqD FdITs"
+          className="sc-hqyNC hAwqf"
         >
           <span
-            className="sc-jbKcbu idqxjr"
+            className="sc-jbKcbu ljLxxv"
           >
             Эконом
           </span>
         </div>
         <div
-          className="sc-frDJqD FdITs"
+          className="sc-hqyNC hAwqf"
         >
           <span
             className="sc-dNLxif iHIYVU"
@@ -1450,7 +1453,7 @@ exports[`Storyshots Tail default 1`] = `
           </span>
           <div>
             <svg
-              className="block-icon sc-hmzhuo eRtqMp sc-bxivhb ereCjg"
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
               size="normal"
               style={undefined}
             >
@@ -1459,7 +1462,7 @@ exports[`Storyshots Tail default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-hmzhuo eRtqMp sc-bxivhb ereCjg"
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
               size="normal"
               style={undefined}
             >
@@ -1468,7 +1471,7 @@ exports[`Storyshots Tail default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-hmzhuo eRtqMp sc-bxivhb ereCjg"
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
               size="normal"
               style={undefined}
             >
@@ -1480,7 +1483,7 @@ exports[`Storyshots Tail default 1`] = `
         </div>
       </div>
       <span
-        className="sc-ksYbfQ DsYhu"
+        className="sc-frDJqD gFhaxJ"
       >
         Описание
       </span>
