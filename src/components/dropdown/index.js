@@ -2,8 +2,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import onClickOutside from 'react-onclickoutside'
-import { borderSmall } from '../../utils/borders'
-import { shadowSmall } from '../../utils/shadows'
+import { borderSmall } from 'utils/borders'
+import { shadowSmall } from 'utils/shadows'
 
 const DropdownWrapper = styled.div`
   position: relative;

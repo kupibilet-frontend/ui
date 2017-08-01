@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Icon from '../icons'
+import Icon from 'components/icons'
 import { AirportSuggestContainer, SuggestIcon, Geo, Value, GeoLabel, Code } from './styled'
 
 export default class AirportSuggest extends React.PureComponent {

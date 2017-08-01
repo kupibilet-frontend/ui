@@ -1,8 +1,8 @@
 // @flow
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Icon from '../icons'
-import Button from '../button/index'
+import Icon from 'components/icons'
+import Button from 'components/button'
 
 const Passenger = styled.div`
   display: flex;

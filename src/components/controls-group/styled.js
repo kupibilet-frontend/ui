@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { transparentize } from 'polished'
-import Icon from '../icons'
-import { switchTransition } from '../../utils/transitions'
+import Icon from 'components/icons'
+import { switchTransition } from 'utils/transitions'
 
 const fadeGradient = ({ theme }) => (
   /* eslint-disable prefer-template */

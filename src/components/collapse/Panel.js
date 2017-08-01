@@ -4,7 +4,7 @@ import React from 'react'
 import RcCollapse from 'rc-collapse'
 import styled from 'styled-components'
 
-import { switchTransition } from '../../utils/transitions'
+import { switchTransition } from 'utils/transitions'
 
 const PanelStyled = styled(RcCollapse.Panel)`
   overflow: hidden;

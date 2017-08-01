@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select } from '@storybook/addon-knobs'
 
-import Icon from './index'
+import Icon from 'components/icons'
 
 const sizesSelect = (defaultValue = 'large') => select(
   'size',

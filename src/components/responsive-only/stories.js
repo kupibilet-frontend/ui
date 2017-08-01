@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 
-import { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly } from '../../index'
+import { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly } from 'components/responsive-only'
 
 const StoryTip = styled.div`
   width: 100vw;

@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { borderSmall } from '../../../utils/borders'
+import { borderSmall } from 'utils/borders'
 
 export default css`
   .DayPicker {

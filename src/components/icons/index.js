@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styled, { withTheme } from 'styled-components'
 import cn from 'classnames'
 
-import { switchTransition } from '../../utils/transitions'
-import { getThemeColor, ThemingPropTypes } from '../../utils/theme'
+import { switchTransition } from 'utils/transitions'
+import { getThemeColor, ThemingPropTypes } from 'utils/theme'
 
 const sizes = {
   normal: 18,

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import mq from '../../utils/media-queries'
+import mq from 'utils/media-queries'
 
 const DesktopOnly = styled.div`
   display: none;

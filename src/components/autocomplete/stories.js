@@ -4,11 +4,11 @@ import { text, object } from '@storybook/addon-knobs'
 import 'whatwg-fetch'
 import _throttle from 'lodash/throttle'
 
-import Autocomplete from './index'
-import AirportInput from '../airport-input'
-import AirportSuggest from '../airport-suggest'
+import Autocomplete from 'components/autocomplete'
+import AirportInput from 'components/airport-input'
+import AirportSuggest from 'components/airport-suggest'
 
-import updateKnob from '../../utils/updateKnob'
+import updateKnob from 'utils/updateKnob'
 
 class AutocompleteStatefulWrapper extends React.PureComponent {
   static propTypes = Autocomplete.propTypes

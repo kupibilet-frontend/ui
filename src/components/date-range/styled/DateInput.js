@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { switchTransition } from '../../../utils/transitions'
+import { switchTransition } from 'utils/transitions'
 
 // $caretTop: 62px
 

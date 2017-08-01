@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import mq from '../../../utils/media-queries'
+import mq from 'utils/media-queries'
 
 export default css`
   .DateRangePicker {

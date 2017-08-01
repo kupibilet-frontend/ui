@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
-import { control } from '../../utils/reset'
-import placeholder from '../../utils/placeholder'
-import { switchTransition } from '../../utils/transitions'
+import { control } from 'utils/reset'
+import placeholder from 'utils/placeholder'
+import { switchTransition } from 'utils/transitions'
 
 const fontStyle = css`
   font-family: inherit;

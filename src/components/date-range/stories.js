@@ -2,10 +2,10 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select, date } from '@storybook/addon-knobs'
 import moment from 'moment'
-import updateKnob from '../../utils/updateKnob'
+import updateKnob from 'utils/updateKnob'
 
-import DateRange from './index'
-import CalendarDay from '../calendar-day'
+import DateRange from 'components/date-range'
+import CalendarDay from 'components/calendar-day'
 
 const getFocusedInput = (defaultFocusedInput = 'none') => {
   const focusedInput = select('focusedInput', {
