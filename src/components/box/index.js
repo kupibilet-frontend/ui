@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { borderLarge } from '../../utils/borders'
+import { borderLarge } from 'utils/borders'
 
 export const styles = css`
   background: ${({ theme }) => (theme.color.background)};

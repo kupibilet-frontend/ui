@@ -2,11 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { text } from '@storybook/addon-knobs'
-import updateKnob from '../../utils/updateKnob'
+import updateKnob from 'utils/updateKnob'
 
-import AirportInput from '../airport-input'
-import Button from '../button'
-import ControlsGroup from './index'
+import AirportInput from 'components/airport-input'
+import Button from 'components/button'
+import ControlsGroup from 'components/controls-group'
 
 /* eslint-disable no-console */
 storiesOf('ControlsGroup', module)

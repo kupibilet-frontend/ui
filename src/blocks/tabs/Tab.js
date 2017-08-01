@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import Link from '../../utils/link'
-import { Tab } from '../../'
+import Link from 'utils/link'
+import { Tab } from 'components/tabs'
 
 
 export default styled(Tab)`

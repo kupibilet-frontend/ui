@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { FluidContainer, FluidSection, Aside, SingleFluidSection } from './index'
+import { FluidContainer, FluidSection, Aside, SingleFluidSection } from 'components/fluid-layout'
 
 const MainContent = () => (
   <div

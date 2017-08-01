@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
-import { Tabs, TabPane, TabBar, Tab as StyledTab } from '../'
-import updateKnob from '../../utils/updateKnob'
+import { Tabs, TabPane, TabBar, Tab as StyledTab } from 'blocks/tabs'
+import updateKnob from 'utils/updateKnob'
 
 /* eslint-disable react/prop-types */
 const renderTab = (props) => (

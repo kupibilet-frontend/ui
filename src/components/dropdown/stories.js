@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
-import updateKnob from '../../utils/updateKnob'
-import { Dropdown, Button, DropdownContent } from '../../index'
+import updateKnob from 'utils/updateKnob'
+import Dropdown, { DropdownContent } from 'components/dropdown'
+import Button from 'components/button'
 
 const StyledDropdown = styled(Dropdown)`
   ${DropdownContent} {

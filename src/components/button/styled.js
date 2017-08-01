@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import { control } from '../../utils/reset'
-import { switchTransition } from '../../utils/transitions'
+import { control } from 'utils/reset'
+import { switchTransition } from 'utils/transitions'
 
 export const SIZES = {
   small: 12,

@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import cssArrow from '../../../utils/css-arrow'
+import cssArrow from 'utils/css-arrow'
 
 export default css`
   .CalendarDay {

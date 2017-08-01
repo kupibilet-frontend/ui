@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, boolean } from '@storybook/addon-knobs'
-import updateKnob from '../../utils/updateKnob'
+import updateKnob from 'utils/updateKnob'
 
-import Checkbox from './index'
+import Checkbox from 'components/checkbox'
 
 storiesOf('Checkbox', module)
   .addWithInfo('default', () => {

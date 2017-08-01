@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { switchTransition } from '../../utils/transitions'
-import { floatFromTop } from '../../utils/animations'
-import { borderSmall } from '../../utils/borders'
+import { switchTransition } from 'utils/transitions'
+import { floatFromTop } from 'utils/animations'
+import { borderSmall } from 'utils/borders'
 
 const getCheckboxBackground = (props, theme) => {
   if (props.checked) {

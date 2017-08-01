@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, number, boolean } from '@storybook/addon-knobs'
-import PassengerPicker from './index'
-import updateKnob from '../../utils/updateKnob'
+import PassengerPicker from 'components/passenger'
+import updateKnob from 'utils/updateKnob'
 
 const defaults = {
   title: 'Взрослые',
