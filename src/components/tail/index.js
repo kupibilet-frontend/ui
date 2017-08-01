@@ -93,6 +93,15 @@ const getIcons = (icons) => (
   ))
 )
 
+const Tail = (props: Props) => {
+  const {
+    active,
+    title,
+    price,
+    iconsPosition,
+    icons,
+    description,
+  } = props
 
   const onChange = (event: Event) => {
     event.preventDefault()
