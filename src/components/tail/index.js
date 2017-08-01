@@ -5,7 +5,7 @@ import Icon from '../icons'
 import { switchTransition } from '../../utils/transitions'
 import { borderSmall } from '../../utils/borders'
 
-const BlockDescription = styled.span`
+const Description = styled.span`
   display: block;
   padding: 6px 0;
   font-size: 11px;
@@ -16,7 +16,7 @@ const BlockDescription = styled.span`
 
 const StyledIcon = styled(Icon)``
 
-const ContentWrapper = styled.div`
+const Content = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
@@ -26,7 +26,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-const StyledBlockCheked = styled.div`
+const Button = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,7 +48,7 @@ const StyledBlockCheked = styled.div`
   }
 `
 
-const BlockWrapper = styled.div`
+const Root = styled.div`
   display: inline-flex;
   flex-direction: column;
 
@@ -111,31 +111,31 @@ const Tail = (props: Props) => {
   const hasIcons = icons.length > 0
 
   return (
-    <BlockWrapper>
-      <StyledBlockCheked
+    <Root>
+      <Button
         {...props}
         active={active}
         onClick={onChange}
       >
-        <ContentWrapper>
+        <Content>
           <Title active={active}>{title}</Title>
           {hasIcons && iconsPosition === 'top' &&
             <div>
               {getIcons(icons)}
             </div>
           }
-        </ContentWrapper>
-        <ContentWrapper>
+        </Content>
+        <Content>
           <Price>{price}</Price>
           {(hasIcons && iconsPosition === 'bottom') &&
             <div>
               {getIcons(icons)}
             </div>
           }
-        </ContentWrapper>
-      </StyledBlockCheked>
-      <BlockDescription>{props.description}</BlockDescription>
-    </BlockWrapper>
+        </Content>
+      </Button>
+      <Description>{description}</Description>
+    </Root>
   )
 }
 
