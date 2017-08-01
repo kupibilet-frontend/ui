@@ -122,7 +122,7 @@ const InputWrapper = styled.div`
     z-index: 2;
   }
 `
-/* eslint-disable react/prop-types */
+
 type Props = {
   name: string,
   type?: string,
@@ -142,16 +142,14 @@ type State = {
 }
 
 class Input extends Component<{}, Props, State> {
-  /* eslint-disable react/sort-comp */
-  state = {
-    isActive: false,
-  }
-
   static defaultProps = {
     name: 'input',
     size: 'normal',
   }
-  /* eslint-enable react/sort-comp */
+
+  state = {
+    isActive: false,
+  }
 
   handleBlur = () => {
     const { onBlur } = this.props
@@ -192,8 +190,9 @@ class Input extends Component<{}, Props, State> {
           onBlur={this.handleBlur}
         />
 
-        { error && <Error>
-            { error }
+        {error &&
+          <Error>
+            {error}
           </Error>
         }
       </InputWrapper>
