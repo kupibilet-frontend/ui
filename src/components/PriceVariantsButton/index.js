@@ -74,7 +74,7 @@ const Price = styled.span`
 
 type Props = {
   active: boolean,
-  onChange: () => void,
+  onChange?: () => void,
   title: string,
   price: string,
   icons: string[],
@@ -145,6 +145,7 @@ PriceVariantsButton.defaultProps = {
   icons: [],
   iconsPosition: 'bottom',
   description: '',
+  onChange: null,
 }
 
 export default PriceVariantsButton

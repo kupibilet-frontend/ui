@@ -1311,24 +1311,25 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
 >
   <div>
     <div
-      className="PriceVariantsButton__Root-d7utsx-0 dGLgBw"
+      className="PriceVariantsButton__Root-s1h37y8o-0 buQEqI"
     >
       <div
-        className="PriceVariantsButton__Button-d7utsx-1 kVXvxS"
+        className="PriceVariantsButton__Button-s1h37y8o-1 imfHVt"
+        onChange={null}
         onClick={[Function]}
         title="Банковской картой он-лайн"
       >
         <div
-          className="PriceVariantsButton__Content-d7utsx-4 bCbuRP"
+          className="PriceVariantsButton__Content-s1h37y8o-4 jSzIx"
         >
           <span
-            className="PriceVariantsButton__Title-d7utsx-5 kFTlDV"
+            className="PriceVariantsButton__Title-s1h37y8o-5 koQyzq"
           >
             Банковской картой он-лайн
           </span>
           <div>
             <svg
-              className="block-icon PriceVariantsButton__StyledIcon-d7utsx-3 fkkXNf Icon__IconSvg-s1wghk0w-0 kczfhc"
+              className="block-icon PriceVariantsButton__StyledIcon-s1h37y8o-3 kAaKgs Icon__IconSvg-s1wghk0w-0 kczfhc"
               size="normal"
               style={undefined}
             >
@@ -1339,10 +1340,10 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           </div>
         </div>
         <div
-          className="PriceVariantsButton__Content-d7utsx-4 bCbuRP"
+          className="PriceVariantsButton__Content-s1h37y8o-4 jSzIx"
         >
           <span
-            className="PriceVariantsButton__Price-d7utsx-6 jPgpnV"
+            className="PriceVariantsButton__Price-s1h37y8o-6 gXHqCK"
           >
             12 234 ₽
              ₽
@@ -1350,40 +1351,41 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
         </div>
       </div>
       <span
-        className="PriceVariantsButton__Description-d7utsx-2 gJxOxj"
+        className="PriceVariantsButton__Description-s1h37y8o-2 hsAgxm"
       >
         Описание
       </span>
     </div>
     <div
-      className="PriceVariantsButton__Root-d7utsx-0 dGLgBw"
+      className="PriceVariantsButton__Root-s1h37y8o-0 buQEqI"
     >
       <div
-        className="PriceVariantsButton__Button-d7utsx-1 gtUxnl"
+        className="PriceVariantsButton__Button-s1h37y8o-1 hFxLgj"
+        onChange={null}
         onClick={[Function]}
         title="Эконом Базовый"
       >
         <div
-          className="PriceVariantsButton__Content-d7utsx-4 bCbuRP"
+          className="PriceVariantsButton__Content-s1h37y8o-4 jSzIx"
         >
           <span
-            className="PriceVariantsButton__Title-d7utsx-5 hNNigN"
+            className="PriceVariantsButton__Title-s1h37y8o-5 fwilBL"
           >
             Эконом Базовый
           </span>
         </div>
         <div
-          className="PriceVariantsButton__Content-d7utsx-4 bCbuRP"
+          className="PriceVariantsButton__Content-s1h37y8o-4 jSzIx"
         >
           <span
-            className="PriceVariantsButton__Price-d7utsx-6 jPgpnV"
+            className="PriceVariantsButton__Price-s1h37y8o-6 gXHqCK"
           >
             12 234 ₽
              ₽
           </span>
           <div>
             <svg
-              className="block-icon PriceVariantsButton__StyledIcon-d7utsx-3 fkkXNf Icon__IconSvg-s1wghk0w-0 kczfhc"
+              className="block-icon PriceVariantsButton__StyledIcon-s1h37y8o-3 kAaKgs Icon__IconSvg-s1wghk0w-0 kczfhc"
               size="normal"
               style={undefined}
             >
@@ -1392,7 +1394,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon PriceVariantsButton__StyledIcon-d7utsx-3 fkkXNf Icon__IconSvg-s1wghk0w-0 kczfhc"
+              className="block-icon PriceVariantsButton__StyledIcon-s1h37y8o-3 kAaKgs Icon__IconSvg-s1wghk0w-0 kczfhc"
               size="normal"
               style={undefined}
             >
@@ -1401,7 +1403,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon PriceVariantsButton__StyledIcon-d7utsx-3 fkkXNf Icon__IconSvg-s1wghk0w-0 kczfhc"
+              className="block-icon PriceVariantsButton__StyledIcon-s1h37y8o-3 kAaKgs Icon__IconSvg-s1wghk0w-0 kczfhc"
               size="normal"
               style={undefined}
             >
@@ -1413,40 +1415,41 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
         </div>
       </div>
       <span
-        className="PriceVariantsButton__Description-d7utsx-2 gJxOxj"
+        className="PriceVariantsButton__Description-s1h37y8o-2 hsAgxm"
       >
         Описание
       </span>
     </div>
     <div
-      className="PriceVariantsButton__Root-d7utsx-0 dGLgBw"
+      className="PriceVariantsButton__Root-s1h37y8o-0 buQEqI"
     >
       <div
-        className="PriceVariantsButton__Button-d7utsx-1 gtUxnl"
+        className="PriceVariantsButton__Button-s1h37y8o-1 hFxLgj"
+        onChange={null}
         onClick={[Function]}
         title="Эконом"
       >
         <div
-          className="PriceVariantsButton__Content-d7utsx-4 bCbuRP"
+          className="PriceVariantsButton__Content-s1h37y8o-4 jSzIx"
         >
           <span
-            className="PriceVariantsButton__Title-d7utsx-5 hNNigN"
+            className="PriceVariantsButton__Title-s1h37y8o-5 fwilBL"
           >
             Эконом
           </span>
         </div>
         <div
-          className="PriceVariantsButton__Content-d7utsx-4 bCbuRP"
+          className="PriceVariantsButton__Content-s1h37y8o-4 jSzIx"
         >
           <span
-            className="PriceVariantsButton__Price-d7utsx-6 jPgpnV"
+            className="PriceVariantsButton__Price-s1h37y8o-6 gXHqCK"
           >
             12 234 ₽
              ₽
           </span>
           <div>
             <svg
-              className="block-icon PriceVariantsButton__StyledIcon-d7utsx-3 fkkXNf Icon__IconSvg-s1wghk0w-0 kczfhc"
+              className="block-icon PriceVariantsButton__StyledIcon-s1h37y8o-3 kAaKgs Icon__IconSvg-s1wghk0w-0 kczfhc"
               size="normal"
               style={undefined}
             >
@@ -1455,7 +1458,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon PriceVariantsButton__StyledIcon-d7utsx-3 fkkXNf Icon__IconSvg-s1wghk0w-0 kczfhc"
+              className="block-icon PriceVariantsButton__StyledIcon-s1h37y8o-3 kAaKgs Icon__IconSvg-s1wghk0w-0 kczfhc"
               size="normal"
               style={undefined}
             >
@@ -1464,7 +1467,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon PriceVariantsButton__StyledIcon-d7utsx-3 fkkXNf Icon__IconSvg-s1wghk0w-0 kczfhc"
+              className="block-icon PriceVariantsButton__StyledIcon-s1h37y8o-3 kAaKgs Icon__IconSvg-s1wghk0w-0 kczfhc"
               size="normal"
               style={undefined}
             >
@@ -1476,7 +1479,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
         </div>
       </div>
       <span
-        className="PriceVariantsButton__Description-d7utsx-2 gJxOxj"
+        className="PriceVariantsButton__Description-s1h37y8o-2 hsAgxm"
       >
         Описание
       </span>
