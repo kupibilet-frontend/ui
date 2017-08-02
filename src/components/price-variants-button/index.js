@@ -74,7 +74,7 @@ const Price = styled.span`
 
 type Props = {
   active: boolean,
-  onClick: () => void,
+  onChange: () => void,
   title: string,
   price: string,
   icons: string[],
@@ -101,11 +101,11 @@ const PriceVariantsButton = (props: Props) => {
     iconsPosition,
     icons,
     description,
+    onChange,
   } = props
 
-  const onChange = (event: Event) => {
-    event.preventDefault()
-    props.onClick(active)
+  const onClick = (event: Event) => {
+    onChange(event)
   }
 
   const hasIcons = icons.length > 0
@@ -115,7 +115,7 @@ const PriceVariantsButton = (props: Props) => {
       <Button
         {...props}
         active={active}
-        onClick={onChange}
+        onClick={onClick}
       >
         <Content>
           <Title active={active}>{title}</Title>
