@@ -12,13 +12,13 @@ exports[`Storyshots Autocomplete Airport 1`] = `
     }
   >
     <div
-      className="sc-jhAzac jTEUNs"
+      className="sc-fAjcbJ gdnCxI"
     >
       <div
         className="react-autosuggest__container"
       >
         <div
-          className="sc-jWBwVP fvSmgP"
+          className="sc-gPEVay bHJZOm"
         >
           <textarea
             aria-activedescendant={null}
@@ -29,7 +29,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             autoCapitalize="sentences"
             autoComplete="off"
             autoFocus={true}
-            className="react-autosuggest__input sc-brqgnP hVNoAl"
+            className="react-autosuggest__input sc-iRbamj lmaxUD"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -42,10 +42,10 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             wrap="off"
           />
           <div
-            className="airport-input__geo sc-cMljjf hhAekQ"
+            className="airport-input__geo sc-jlyJG giBihK"
           >
             <div
-              className="sc-jDwBTQ bOuoYF"
+              className="sc-csuQGl fZITyK"
             >
               
             </div>
@@ -53,7 +53,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             
           </div>
           <div
-            className="sc-iRbamj fJefAy"
+            className="sc-bRBYWo gpToxv"
           >
             
           </div>
@@ -197,7 +197,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
               className="sc-htoDjs lekexi"
             >
               <div
-                className="sc-frDJqD hsebVT"
+                className="sc-hEsumM eOMQDB"
               >
                 Пересадки
               </div>
@@ -232,7 +232,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ oRaPL"
+        className="sc-fYxtnH gZLemH"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +241,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ hSRSLF"
+        className="sc-fYxtnH iLQVbl"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +250,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-ksYbfQ oRaPL"
+        className="sc-fYxtnH gZLemH"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -694,7 +694,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-chPdSV jlvujm"
+    className="sc-ckVGcZ berOiR"
   >
     <button
       className="no-global sc-gZMcBi egQBpH"
@@ -709,12 +709,12 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
       </span>
     </button>
     <div
-      className="sc-jWBwVP exjCKk"
+      className="sc-gPEVay dVRcuQ"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP hhICnf"
+        className="sc-iRbamj Nayoz"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -724,10 +724,10 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf gIemQX"
+        className="airport-input__geo sc-jlyJG bmDLSd"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-csuQGl fZITyK"
         >
           Шереметьево
         </div>
@@ -735,7 +735,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj llOgDF"
+        className="sc-bRBYWo bcOilx"
       >
         SVO
       </div>
@@ -761,15 +761,15 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-chPdSV jlvujm"
+    className="sc-ckVGcZ berOiR"
   >
     <div
-      className="sc-jWBwVP hyAZDv"
+      className="sc-gPEVay btWnfK"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP gBrlZN"
+        className="sc-iRbamj ddcRKe"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -779,10 +779,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf hhAekQ"
+        className="airport-input__geo sc-jlyJG giBihK"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-csuQGl fZITyK"
         >
           Шереметьево
         </div>
@@ -790,17 +790,17 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj llOgDF"
+        className="sc-bRBYWo bcOilx"
       >
         SVO
       </div>
     </div>
     <div
-      className="sc-kgoBCf PGghj"
+      className="sc-jKJlTe bNlokg"
       onClick={[Function]}
     >
       <svg
-        className="controls-group__swap sc-kGXeez dzfMpI icon-inherit-color sc-bxivhb doUjBV"
+        className="controls-group__swap sc-eNQAEJ jUAzDs icon-inherit-color sc-bxivhb doUjBV"
         size="xxsmall"
         style={undefined}
       >
@@ -810,12 +810,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       </svg>
     </div>
     <div
-      className="sc-jWBwVP bSkTbm"
+      className="sc-gPEVay cWiCNU"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-brqgnP kUuIhI"
+        className="sc-iRbamj kVHSmU"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -825,10 +825,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-cMljjf gIemQX"
+        className="airport-input__geo sc-jlyJG bmDLSd"
       >
         <div
-          className="sc-jDwBTQ bOuoYF"
+          className="sc-csuQGl fZITyK"
         >
           Несуществующий город
         </div>
@@ -836,7 +836,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-iRbamj fJefAy"
+        className="sc-bRBYWo gpToxv"
       >
         
       </div>
@@ -850,7 +850,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-kEYyzF bpPhVL"
+    className="sc-cvbbAY eVoYXr"
   >
     <div
       className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
@@ -935,7 +935,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="sc-kvZOFW dpCOkf sc-eNQAEJ gdLOdp"
+      className="sc-ktHwxA kDgSSf sc-hSdWYo bmqAoE"
     >
       <div
         onClick={[Function]}
@@ -971,10 +971,10 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX eHdMOA"
+      className="sc-hMqMXs jkJMEI"
     >
       <div
-        className="sc-dxgOiQ kmRsCh"
+        className="sc-kEYyzF fjOgpN"
       >
         <div
           style={
@@ -991,7 +991,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ hZqbXy"
+        className="sc-kkGfuU efatRR"
       >
         <div
           style={
@@ -1024,7 +1024,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
     }
   >
     <div
-      className="sc-jKJlTe bPdyRl"
+      className="sc-iAyFgw dNwxhT"
     >
       <div
         style={
@@ -1056,10 +1056,10 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
     }
   >
     <div
-      className="sc-kpOJdX eHdMOA"
+      className="sc-hMqMXs jkJMEI"
     >
       <div
-        className="sc-dxgOiQ kmRsCh"
+        className="sc-kEYyzF fjOgpN"
       >
         <div
           style={
@@ -1076,7 +1076,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
         </div>
       </div>
       <div
-        className="sc-ckVGcZ bDOWsD"
+        className="sc-kkGfuU bivuqP"
       >
         <div
           style={
@@ -1097,6 +1097,27 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 </div>
 `;
 
+exports[`Storyshots FormItem default 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-chPdSV kgupvL"
+  >
+    <label
+      className="sc-kgoBCf cJBTPS"
+      htmlFor="input"
+    >
+      Cake is a lie
+    </label>
+    <input
+      id="input"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Icon Icon with fill 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
@@ -1113,38 +1134,131 @@ exports[`Storyshots Icon Icon with fill 1`] = `
 </div>
 `;
 
+exports[`Storyshots Input default 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-dxgOiQ Vjnyy"
+    disabled={undefined}
+    size="large"
+  >
+    <input
+      className="sc-kpOJdX gEINQW"
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input disabled 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-dxgOiQ dMWFPs"
+    disabled={true}
+    size="large"
+  >
+    <input
+      className="sc-kpOJdX fBbEoC"
+      disabled={true}
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input error 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-dxgOiQ gJEAMD"
+    disabled={undefined}
+    size="large"
+  >
+    <input
+      className="sc-kpOJdX gEINQW"
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+      type="text"
+    />
+    <span
+      className="sc-kGXeez bUKNtk"
+    >
+      Только латинские буквы
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input success 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div
+    className="sc-dxgOiQ cdnOrF"
+    disabled={undefined}
+    size="large"
+  >
+    <input
+      className="sc-kpOJdX gEINQW"
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots PassengerPicker Defalut 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
 >
   <div
-    className="sc-fBuWsC itQlJX"
+    className="sc-caSCKo eMRrci"
   >
     <div>
       <div
-        className="sc-fMiknA ejNkiI"
+        className="sc-gisBJw eDYGFH"
       >
         Взрослые
       </div>
       <div
-        className="sc-dVhcbM evezqH"
+        className="sc-kjoXOD aeMvF"
       >
         До 2 лет, без места
       </div>
     </div>
     <div
-      className="sc-caSCKo hUBiLZ"
+      className="sc-kgAjT kmzIQb"
     >
       <span
-        className="sc-eqIVtm deGzAN"
+        className="sc-cHGsZl eNzLWg"
       >
         1
       </span>
       <div
-        className="sc-gisBJw cHwRKq"
+        className="sc-cJSrbW iaNJqQ"
       >
         <button
-          className="no-global sc-fAjcbJ excQUy sc-gZMcBi dkdJqv"
+          className="no-global sc-TOsTZ hupAjt sc-gZMcBi dkdJqv"
           disabled={true}
           onClick={[Function]}
           size="normal"
@@ -1165,7 +1279,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
           </span>
         </button>
         <button
-          className="no-global sc-fAjcbJ excQUy sc-gZMcBi ezVieq"
+          className="no-global sc-TOsTZ hupAjt sc-gZMcBi ezVieq"
           disabled={false}
           onClick={[Function]}
           size="normal"
@@ -1191,52 +1305,232 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
 </div>
 `;
 
+exports[`Storyshots PriceVariantsButton default 1`] = `
+<div
+  className="sc-bdVaJa jBbfIF"
+>
+  <div>
+    <div
+      className="sc-ksYbfQ kpTUAv"
+    >
+      <div
+        className="sc-hmzhuo hfyEUr"
+        onClick={[Function]}
+        title="Банковской картой он-лайн"
+      >
+        <div
+          className="sc-hqyNC hAwqf"
+        >
+          <span
+            className="sc-jbKcbu cumgcH"
+          >
+            Банковской картой он-лайн
+          </span>
+          <div>
+            <svg
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_plane"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="sc-hqyNC hAwqf"
+        >
+          <span
+            className="sc-dNLxif iHIYVU"
+          >
+            12 234 ₽
+             ₽
+          </span>
+        </div>
+      </div>
+      <span
+        className="sc-frDJqD gFhaxJ"
+      >
+        Описание
+      </span>
+    </div>
+    <div
+      className="sc-ksYbfQ kpTUAv"
+    >
+      <div
+        className="sc-hmzhuo hMAqIX"
+        onClick={[Function]}
+        title="Эконом Базовый"
+      >
+        <div
+          className="sc-hqyNC hAwqf"
+        >
+          <span
+            className="sc-jbKcbu ljLxxv"
+          >
+            Эконом Базовый
+          </span>
+        </div>
+        <div
+          className="sc-hqyNC hAwqf"
+        >
+          <span
+            className="sc-dNLxif iHIYVU"
+          >
+            12 234 ₽
+             ₽
+          </span>
+          <div>
+            <svg
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_hand-baggage"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_exchange"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_return"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span
+        className="sc-frDJqD gFhaxJ"
+      >
+        Описание
+      </span>
+    </div>
+    <div
+      className="sc-ksYbfQ kpTUAv"
+    >
+      <div
+        className="sc-hmzhuo hMAqIX"
+        onClick={[Function]}
+        title="Эконом"
+      >
+        <div
+          className="sc-hqyNC hAwqf"
+        >
+          <span
+            className="sc-jbKcbu ljLxxv"
+          >
+            Эконом
+          </span>
+        </div>
+        <div
+          className="sc-hqyNC hAwqf"
+        >
+          <span
+            className="sc-dNLxif iHIYVU"
+          >
+            12 234 ₽
+             ₽
+          </span>
+          <div>
+            <svg
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_hand-baggage"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_exchange"
+              />
+            </svg>
+            <svg
+              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              size="normal"
+              style={undefined}
+            >
+              <use
+                xlinkHref="#kb_return"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span
+        className="sc-frDJqD gFhaxJ"
+      >
+        Описание
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Utils Responsive only 1`] = `
 <div
   className="sc-bdVaJa jBbfIF"
 >
   <div>
     <div
-      className="sc-kjoXOD jDbNjg"
+      className="sc-jqCOkK gSsevU"
     >
       <div
-        className="sc-hqyNC hZjAVB"
+        className="sc-cIShpX izRGC"
       >
         Desktop
       </div>
     </div>
     <div
-      className="sc-kgAjT dCAwRm"
+      className="sc-gGBfsJ jpLzXn"
     >
       <div
-        className="sc-jbKcbu lfTGxU"
+        className="sc-kafWEX eSuiea"
       >
         Handheld
       </div>
     </div>
     <div
-      className="sc-TOsTZ kgtXmT"
+      className="sc-bbmXgH ihTSwa"
     >
       <div
-        className="sc-dNLxif dWcvlV"
+        className="sc-feJyhm cDSFMd"
       >
         Tablet
       </div>
     </div>
     <div
-      className="sc-cHGsZl iUaaqe"
+      className="sc-uJMKN cAjYRu"
     >
       <div
-        className="sc-jqCOkK fMkVcX"
+        className="sc-iELTvK gTOEWD"
       >
         Mobile
       </div>
     </div>
     <div
-      className="sc-cJSrbW hMaOei"
+      className="sc-jnlKLf iwvxtq"
     >
       <div
-        className="sc-uJMKN hNZfiG"
+        className="sc-cmTdod kwcUXP"
       >
         Not mobile
       </div>
