@@ -1,6 +1,6 @@
 {
   "name": "@kupibilet/ui",
-  "version": "2.3.9",
+  "version": "2.4.4",
   "description": "UI kit for kupibilet web app",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "build": "NODE_ENV=build babel src/ -d ./ --ignore stories,test",
     "prepublish": "in-publish && npm run build --silent || not-in-publish",
     "precommit": "lint-staged",
-    "prepush": "npm run test --silent"
+    "prepush": "npm run test --silent",
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -40,8 +41,8 @@
     "babel-preset-env": "~1.5.0",
     "babel-preset-stage-2": "~6.24.1",
     "classnames": "~2.2.5",
-    "eslint-config-kupibilet": "^8.2.3",
-    "flow-bin": "^0.47.0",
+    "eslint-config-kupibilet": "^9.1.1",
+    "flow-bin": "^0.51.1",
     "husky": "~0.13.2",
     "in-publish": "^2.0.0",
     "jest": "~20.0.0",
