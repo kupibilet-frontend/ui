@@ -1,5 +1,7 @@
 import initStoryshots from '@storybook/addon-storyshots'
 
+import 'jest-styled-components'
+
 initStoryshots()
 
 // react-test-renderrer does not support .findDOMNode
