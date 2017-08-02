@@ -104,7 +104,8 @@ const PriceVariantsButton = (props: Props) => {
   } = props
 
   const onChange = (event: Event) => {
-    props.onChange(event)
+    event.preventDefault()
+    props.onClick(active)
   }
 
   const hasIcons = icons.length > 0
@@ -125,7 +126,7 @@ const PriceVariantsButton = (props: Props) => {
           }
         </Content>
         <Content>
-          <Price>{price}</Price>
+          <Price>{price} ₽</Price>
           {(hasIcons && iconsPosition === 'bottom') &&
             <div>
               {getIcons(icons)}
