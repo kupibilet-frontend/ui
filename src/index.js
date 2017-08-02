@@ -36,3 +36,6 @@ export { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly } from
 // https://github.com/kupibilet-frontend/ui/issues/76
 export { default as media } from './utils/media-queries'
 export { default as retinaImage } from './utils/retina-image'
+export { default as hover } from './utils/hover'
+export { default as link } from './utils/link'
+export { default as transition } from './utils/transitions'
