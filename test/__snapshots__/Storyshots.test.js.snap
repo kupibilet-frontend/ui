@@ -1,8 +1,305 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Autocomplete Airport 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 .c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .c3::-ms-clear,
+.c1 .c3::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .c3--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .c3--focused {
+  outline: none;
+}
+
+.c1 .c9 {
+  display: none;
+}
+
+.c1 .c9--open {
+  display: block;
+  position: relative;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  margin: 3px 0 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98, 112, 139, .7);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.c1 .react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+.c2 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 21px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.c2:hover {
+  border-color: #ff9100;
+}
+
+.c4 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c4,
+.c4:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c4::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4:focus ~ .c5 .AirportInput__spell {
+  display: block;
+}
+
+.c6 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 10px 0 10px;
+  padding-left: 16px;
+}
+
+.c7 {
+  visibility: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c8 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-size: 14px;
+  color: #808080;
+  background: #ffffff;
+  padding: 10px 10px 10px 9px;
+  padding-right: 16px;
+}
+
+.c8:empty {
+  display: none;
+}
+
+.c8::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+}
+
+@media screen and (max-width: 599px) {
+  .responsive .c1 .c9--open,
+  .responsive-booking .c1 .c9--open {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .responsive .c1 .react-autosuggest__suggestions-list,
+  .responsive-booking .c1 .react-autosuggest__suggestions-list {
+    top: initial;
+    left: 0;
+    right: 0;
+  }
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -12,13 +309,13 @@ exports[`Storyshots Autocomplete Airport 1`] = `
     }
   >
     <div
-      className="sc-fAjcbJ gdnCxI"
+      className="c1"
     >
       <div
         className="react-autosuggest__container"
       >
         <div
-          className="sc-gPEVay bHJZOm"
+          className="c2"
         >
           <textarea
             aria-activedescendant={null}
@@ -29,7 +326,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             autoCapitalize="sentences"
             autoComplete="off"
             autoFocus={true}
-            className="react-autosuggest__input sc-iRbamj lmaxUD"
+            className="c3 c4"
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -42,10 +339,10 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             wrap="off"
           />
           <div
-            className="airport-input__geo sc-jlyJG giBihK"
+            className="c5 c6"
           >
             <div
-              className="sc-csuQGl fZITyK"
+              className="c7"
             >
               
             </div>
@@ -53,13 +350,13 @@ exports[`Storyshots Autocomplete Airport 1`] = `
             
           </div>
           <div
-            className="sc-bRBYWo gpToxv"
+            className="c8"
           >
             
           </div>
         </div>
         <div
-          className="react-autosuggest__suggestions-container"
+          className="c9"
           id="react-autowhatever-1"
         />
       </div>
@@ -69,8 +366,196 @@ exports[`Storyshots Autocomplete Airport 1`] = `
 `;
 
 exports[`Storyshots Blocks FilterSection 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c12 {
+  overflow: hidden;
+}
+
+.c12 .c10-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c12 .c10-content.c10-content-inactive {
+  display: none;
+}
+
+.c17 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 15px;
+  width: 15px;
+  fill: transparent;
+}
+
+.c1 {
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 6px;
+}
+
+.c2 {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c3 {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 24px;
+}
+
+.c13 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  padding-left: 18px;
+  padding-right: 18px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.c13 .c16 {
+  fill: #007acc;
+}
+
+.c13:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c13:hover .c16 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.c15 {
+  margin: 3px 0 0 3px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.c11 {
+  margin: 0 -1px;
+  border-top: 1px solid #dde3eb;
+}
+
+.c7 {
+  display: none;
+}
+
+.c6 {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 18px;
+  width: 18px;
+  line-height: 16px;
+  box-shadow: inset 0 0 0 1px #b1bdcc;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: background,border;
+  transition-property: background,border;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.c9 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: color;
+  transition-property: color;
+  margin-left: 6px;
+  width: 100%;
+}
+
+.c4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.c4:hover .c5 {
+  border-color: #38afff;
+}
+
+.c4 ;&:hover .c8 {
+  color: #007acc;
+}
+
+.c14 {
+  position: relative;
+}
+
+.c14:before {
+  display: block;
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -18px;
+  content: '';
+  width: 2px;
+  background: red;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -80,10 +565,10 @@ exports[`Storyshots Blocks FilterSection 1`] = `
     }
   >
     <section
-      className="sc-ifAKCX mmAti"
+      className="c1"
     >
       <header
-        className="sc-EHOje iwBHie"
+        className="c2"
       >
         <div>
           Пересадки
@@ -93,30 +578,30 @@ exports[`Storyshots Blocks FilterSection 1`] = `
         </div>
       </header>
       <div
-        className="sc-bZQynM bdCSpS"
+        className="c3"
       >
         <div>
           <div>
             <label
-              className="sc-kAzzGY fDOeck"
+              className="c4"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox sc-jzJRlG dREzXp"
+                className="c5 c6"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="sc-jTzLTM izYhGY"
+                  className="c7"
                   disabled={false}
                   name=""
                   onChange={[Function]}
-                  type="checkbox"
+                  type="c5"
                 />
               </span>
               <span
-                className="label-text sc-cSHVUG jkPykj"
+                className="c8 c9"
                 disabled={false}
               >
                 Без пересадок
@@ -125,25 +610,25 @@ exports[`Storyshots Blocks FilterSection 1`] = `
           </div>
           <div>
             <label
-              className="sc-kAzzGY fDOeck"
+              className="c4"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox sc-jzJRlG dREzXp"
+                className="c5 c6"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="sc-jTzLTM izYhGY"
+                  className="c7"
                   disabled={false}
                   name=""
                   onChange={[Function]}
-                  type="checkbox"
+                  type="c5"
                 />
               </span>
               <span
-                className="label-text sc-cSHVUG jkPykj"
+                className="c8 c9"
                 disabled={false}
               >
                 1 пересадка
@@ -152,25 +637,25 @@ exports[`Storyshots Blocks FilterSection 1`] = `
           </div>
           <div>
             <label
-              className="sc-kAzzGY fDOeck"
+              className="c4"
               disabled={false}
             >
               <span
                 checked={false}
-                className="checkbox sc-jzJRlG dREzXp"
+                className="c5 c6"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="sc-jTzLTM izYhGY"
+                  className="c7"
                   disabled={false}
                   name=""
                   onChange={[Function]}
-                  type="checkbox"
+                  type="c5"
                 />
               </span>
               <span
-                className="label-text sc-cSHVUG jkPykj"
+                className="c8 c9"
                 disabled={false}
               >
                 2 и более
@@ -180,29 +665,29 @@ exports[`Storyshots Blocks FilterSection 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse"
+        className="c10"
         style={undefined}
       >
         <div
-          className="rc-collapse-item sc-iwsKbI hIrClY sc-htpNat jpYvPn"
+          className="c10-item c11 c12"
           style={undefined}
         >
           <div
             aria-expanded={false}
-            className="rc-collapse-header"
+            className="c10-header"
             onClick={[Function]}
             role="tab"
           >
             <div
-              className="sc-htoDjs lekexi"
+              className="c13"
             >
               <div
-                className="sc-hEsumM eOMQDB"
+                className="c14"
               >
                 Пересадки
               </div>
               <svg
-                className="sc-dnqmqq htZMOn icon-inherit-color sc-bxivhb doUjBV"
+                className="c15 c16 c17"
                 size="xxsmall"
                 style={undefined}
               >
@@ -220,8 +705,101 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 `;
 
 exports[`Storyshots Blocks Styled Tabs 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 100px;
+  line-height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: transparent;
+}
+
+.c1 .icon-inherit-color {
+  fill: #007acc;
+}
+
+.c1:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c1:hover .icon-inherit-color {
+  fill: rgba(0,122,204,0.8);
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c2 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 100px;
+  line-height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #333333;
+  background: #fff0bf;
+}
+
+.c2 .icon-inherit-color {
+  fill: #007acc;
+}
+
+.c2:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c2:hover .icon-inherit-color {
+  fill: rgba(0,122,204,0.8);
+}
+
+.c2:hover {
+  color: #333333;
+}
+
+.c2:focus {
+  outline: none;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     className="rc-tabs rc-tabs-top"
@@ -232,7 +810,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     >
       <span
         aria-disabled={undefined}
-        className="sc-fYxtnH gZLemH"
+        className="c1"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -241,7 +819,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-fYxtnH iLQVbl"
+        className="c2"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,7 +828,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
       </span>
       <span
         aria-disabled={undefined}
-        className="sc-fYxtnH gZLemH"
+        className="c1"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -288,11 +866,29 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
 `;
 
 exports[`Storyshots Box Defalut 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 6px;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-bwzfXH gSYwXg"
+    className="c1"
   >
     <p>
       box content
@@ -302,16 +898,67 @@ exports[`Storyshots Box Defalut 1`] = `
 `;
 
 exports[`Storyshots Buttons Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c1:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <button
-    className="no-global sc-gZMcBi gBfaHm"
+    className="no-global c1"
     disabled={undefined}
     size="normal"
   >
     <span
-      className="sc-gqjmRU hdtzDm"
+      className="c2"
       size="normal"
     >
       Авиабилеты
@@ -321,16 +968,58 @@ exports[`Storyshots Buttons Default 1`] = `
 `;
 
 exports[`Storyshots Buttons Disabled 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+  opacity: .2;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <button
-    className="no-global sc-gZMcBi keJrks"
+    className="no-global c1"
     disabled={true}
     size="normal"
   >
     <span
-      className="sc-gqjmRU hdtzDm"
+      className="c2"
       size="normal"
     >
       Cake is a lie
@@ -340,20 +1029,90 @@ exports[`Storyshots Buttons Disabled 1`] = `
 `;
 
 exports[`Storyshots Buttons Icon-only button 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 18px;
+  width: 18px;
+  fill: #ffffff;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 21px;
+  padding: 11.0px;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c1:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <button
-    className="no-global sc-gZMcBi bqDqgc"
+    className="no-global c1"
     disabled={undefined}
     size="large"
   >
     <span
-      className="sc-VigVT botnlB"
+      className="c2"
       size="large"
     >
       <svg
-        className="sc-bxivhb tbkNI"
+        className="c3"
         size="normal"
         style={undefined}
       >
@@ -367,16 +1126,67 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
 `;
 
 exports[`Storyshots Buttons Sizes 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 21px;
+  padding: 11.0px;
+  padding-right: 21px;
+  padding-left: 21px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c1:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <button
-    className="no-global sc-gZMcBi eYyVYF"
+    className="no-global c1"
     disabled={undefined}
     size="large"
   >
     <span
-      className="sc-gqjmRU hdtzDm"
+      className="c2"
       size="large"
     >
       Бальшой
@@ -386,20 +1196,99 @@ exports[`Storyshots Buttons Sizes 1`] = `
 `;
 
 exports[`Storyshots Buttons With icons 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 18px;
+  width: 18px;
+  fill: #ffffff;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 9.4px;
+  padding-left: 9.4px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c1:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5.6px 0 5.6px;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <button
-    className="no-global sc-gZMcBi klZNue"
+    className="no-global c1"
     disabled={undefined}
     size="normal"
   >
     <span
-      className="sc-VigVT cerRmq"
+      className="c2"
       size="normal"
     >
       <svg
-        className="sc-bxivhb tbkNI"
+        className="c3"
         size="normal"
         style={undefined}
       >
@@ -409,17 +1298,17 @@ exports[`Storyshots Buttons With icons 1`] = `
       </svg>
     </span>
     <span
-      className="sc-gqjmRU kSqCP"
+      className="c4"
       size="normal"
     >
       Авиабилеты
     </span>
     <span
-      className="sc-VigVT cerRmq"
+      className="c2"
       size="normal"
     >
       <svg
-        className="sc-bxivhb tbkNI"
+        className="c3"
         size="normal"
         style={undefined}
       >
@@ -433,30 +1322,100 @@ exports[`Storyshots Buttons With icons 1`] = `
 `;
 
 exports[`Storyshots Checkbox default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c4 {
+  display: none;
+}
+
+.c3 {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 18px;
+  width: 18px;
+  line-height: 16px;
+  box-shadow: inset 0 0 0 1px #b1bdcc;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: background,border;
+  transition-property: background,border;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+.c6 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: color;
+  transition-property: color;
+  margin-left: 6px;
+  width: 100%;
+}
+
+.c1 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.c1:hover .c2 {
+  border-color: #38afff;
+}
+
+.c1 ;&:hover .c5 {
+  color: #007acc;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div>
     <label
-      className="sc-kAzzGY fDOeck"
+      className="c1"
       disabled={false}
     >
       <span
         checked={false}
-        className="checkbox sc-jzJRlG dREzXp"
+        className="c2 c3"
         disabled={false}
       >
         <input
           checked={false}
-          className="sc-jTzLTM izYhGY"
+          className="c4"
           disabled={false}
           name=""
           onChange={[Function]}
-          type="checkbox"
+          type="c2"
         />
       </span>
       <span
-        className="label-text sc-cSHVUG jkPykj"
+        className="c5 c6"
         disabled={false}
       >
         Авиабилеты
@@ -467,29 +1426,108 @@ exports[`Storyshots Checkbox default 1`] = `
 `;
 
 exports[`Storyshots Checkbox disabled 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c4 {
+  display: none;
+}
+
+.c3 {
+  display: inline-block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  height: 18px;
+  width: 18px;
+  line-height: 16px;
+  box-shadow: inset 0 0 0 1px #dedede;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: background,border;
+  transition-property: background,border;
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+
+.c6 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: color;
+  transition-property: color;
+  margin-left: 6px;
+  width: 100%;
+  color: #b3b3b3;
+}
+
+.gZGdQt:hover .c2 {
+  border-color: #38afff;
+}
+
+.gZGdQt ;&:hover .c5 {
+  color: #007acc;
+}
+
+.c1 {
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.c1:hover .c2 {
+  border-color: #dedede;
+}
+
+.c1 ;&:hover .c5 {
+  color: #b3b3b3;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <label
-    className="sc-kAzzGY fLUfjB"
+    className="c1"
     disabled={true}
   >
     <span
       checked={false}
-      className="checkbox sc-jzJRlG dvWCAm"
+      className="c2 c3"
       disabled={true}
     >
       <input
         checked={false}
-        className="sc-jTzLTM izYhGY"
+        className="c4"
         disabled={true}
         name=""
         onChange={[Function]}
-        type="checkbox"
+        type="c2"
       />
     </span>
     <span
-      className="label-text sc-cSHVUG hHvAiZ"
+      className="c5 c6"
       disabled={true}
     >
       Авиабилеты
@@ -499,8 +1537,33 @@ exports[`Storyshots Checkbox disabled 1`] = `
 `;
 
 exports[`Storyshots Collapse Accordion 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  overflow: hidden;
+}
+
+.c2 .c1-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c2 .c1-content.c1-content-inactive {
+  display: none;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -510,16 +1573,16 @@ exports[`Storyshots Collapse Accordion 1`] = `
     }
   >
     <div
-      className="rc-collapse"
+      className="c1"
       style={undefined}
     >
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -527,12 +1590,12 @@ exports[`Storyshots Collapse Accordion 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -540,12 +1603,12 @@ exports[`Storyshots Collapse Accordion 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -558,8 +1621,33 @@ exports[`Storyshots Collapse Accordion 1`] = `
 `;
 
 exports[`Storyshots Collapse Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  overflow: hidden;
+}
+
+.c2 .c1-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c2 .c1-content.c1-content-inactive {
+  display: none;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -569,16 +1657,16 @@ exports[`Storyshots Collapse Default 1`] = `
     }
   >
     <div
-      className="rc-collapse"
+      className="c1"
       style={undefined}
     >
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -586,12 +1674,12 @@ exports[`Storyshots Collapse Default 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -599,12 +1687,12 @@ exports[`Storyshots Collapse Default 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -617,8 +1705,33 @@ exports[`Storyshots Collapse Default 1`] = `
 `;
 
 exports[`Storyshots Collapse Default active panel 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  overflow: hidden;
+}
+
+.c2 .c1-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c2 .c1-content.c1-content-inactive {
+  display: none;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -628,27 +1741,27 @@ exports[`Storyshots Collapse Default active panel 1`] = `
     }
   >
     <div
-      className="rc-collapse"
+      className="c1"
       style={undefined}
     >
       <div
-        className="rc-collapse-item rc-collapse-item-active sc-htpNat jpYvPn"
+        className="c1-item c1-item-active c2"
         style={undefined}
       >
         <div
           aria-expanded={true}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
           Foo
         </div>
         <div
-          className="rc-collapse-content rc-collapse-content-active"
+          className="c1-content c1-content-active"
           role="tabpanel"
         >
           <div
-            className="rc-collapse-content-box"
+            className="c1-content-box"
           >
             
               A dog is a type of domesticated animal.
@@ -659,12 +1772,12 @@ exports[`Storyshots Collapse Default active panel 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -672,12 +1785,12 @@ exports[`Storyshots Collapse Default active panel 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item sc-htpNat jpYvPn"
+        className="c1-item c2"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="rc-collapse-header"
+          className="c1-header"
           onClick={[Function]}
           role="tab"
         >
@@ -690,31 +1803,367 @@ exports[`Storyshots Collapse Default active panel 1`] = `
 `;
 
 exports[`Storyshots ControlsGroup Different controls group 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c4 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: -2px;
+}
+
+.c4:hover {
+  border-color: #ff9100;
+}
+
+.iXGZpy:focus ~ .c6 .AirportInput__spell {
+  display: block;
+}
+
+.dDmkAF:focus ~ .c6 .AirportInput__spell {
+  display: block;
+}
+
+.gyNfwg:focus ~ .c6 .AirportInput__spell {
+  display: block;
+}
+
+.c5 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  padding: 10px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c5,
+.c5:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c5::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5:focus ~ .c6 .AirportInput__spell {
+  display: block;
+}
+
+.c7 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 10px 0 10px;
+  padding-left: 10px;
+}
+
+.c8 {
+  visibility: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c9 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-size: 14px;
+  color: #808080;
+  background: #ffffff;
+  padding: 10px 10px 10px 9px;
+  padding-right: 10px;
+}
+
+.c9:empty {
+  display: none;
+}
+
+.c9::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+}
+
+.c2 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 21px 0 0 21px;
+  padding: 11.0px;
+  padding-right: 13.1px;
+  padding-left: 21px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c2:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c2:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c10 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 0 21px 21px 0;
+  padding: 11.0px;
+  padding-right: 21px;
+  padding-left: 13.1px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c10:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c10:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .controls-group__swap {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .controls-group__swap {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-ckVGcZ berOiR"
+    className="c1"
   >
     <button
-      className="no-global sc-gZMcBi egQBpH"
+      className="no-global c2"
       disabled={undefined}
       size="large"
     >
       <span
-        className="sc-gqjmRU hdtzDm"
+        className="c3"
         size="large"
       >
         Пойти
       </span>
     </button>
     <div
-      className="sc-gPEVay dVRcuQ"
+      className="c4"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-iRbamj Nayoz"
+        className="c5"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -724,10 +2173,10 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-jlyJG bmDLSd"
+        className="c6 c7"
       >
         <div
-          className="sc-csuQGl fZITyK"
+          className="c8"
         >
           Шереметьево
         </div>
@@ -735,18 +2184,18 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
         
       </div>
       <div
-        className="sc-bRBYWo bcOilx"
+        className="c9"
       >
         SVO
       </div>
     </div>
     <button
-      className="no-global sc-gZMcBi cNYsWJ"
+      className="no-global c10"
       disabled={undefined}
       size="large"
     >
       <span
-        className="sc-gqjmRU hdtzDm"
+        className="c3"
         size="large"
       >
         Найти
@@ -757,19 +2206,548 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
 `;
 
 exports[`Storyshots ControlsGroup Inputs group 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c12 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 15px;
+  width: 15px;
+  fill: transparent;
+}
+
+.fuOTcr .c11 {
+  fill: #007acc;
+}
+
+.fuOTcr:hover .c11 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.cahOUV .c11 {
+  fill: #007acc;
+}
+
+.cahOUV:hover .c11 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.gOHtcC .c11 {
+  fill: #007acc;
+}
+
+.gOHtcC:hover .c11 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.c2 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 21px 0 0 21px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.c2:hover {
+  border-color: #ff9100;
+}
+
+.c13 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 0 21px 21px 0;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: -2px;
+}
+
+.c13:hover {
+  border-color: #ff9100;
+}
+
+.iXGZpy:focus ~ .c4 .AirportInput__spell {
+  display: block;
+}
+
+.c3 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  padding-right: 10px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c3,
+.c3:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:focus ~ .c4 .AirportInput__spell {
+  display: block;
+}
+
+.c14 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  padding-left: 10px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c14,
+.c14:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c14::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c14::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c14:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c14::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c14::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c14::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c14:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c14:focus ~ .c4 .AirportInput__spell {
+  display: block;
+}
+
+.c5 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 10px 0 10px;
+  padding-left: 16px;
+}
+
+.c15 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 10px 0 10px;
+  padding-left: 10px;
+}
+
+.c6 {
+  visibility: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c16 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-size: 14px;
+  color: #808080;
+  background: #ffffff;
+  padding: 10px 10px 10px 9px;
+  padding-right: 16px;
+}
+
+.c16:empty {
+  display: none;
+}
+
+.c16::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+}
+
+.c7 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-size: 14px;
+  color: #808080;
+  background: #ffffff;
+  padding: 10px 10px 10px 9px;
+  padding-right: 10px;
+}
+
+.c7:empty {
+  display: none;
+}
+
+.c7::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .c9 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .c9 {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
+.c8 {
+  position: relative;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 0;
+  cursor: pointer;
+}
+
+.c8 .c11 {
+  fill: #96a0b3;
+}
+
+.c8:hover .c11 {
+  fill: #38afff;
+}
+
+.c10 {
+  box-sizing: content-box;
+  width: 15px;
+  padding: 5px 0;
+  position: absolute;
+  left: -7.5px;
+  top: 50%;
+  margin-top: -12.5px;
+  z-index: 3;
+  -webkit-transfrom: translateZ(0);
+  -ms-transfrom: translateZ(0);
+  transfrom: translateZ(0);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #ffffff 15%, #ffffff 85%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-ckVGcZ berOiR"
+    className="c1"
   >
     <div
-      className="sc-gPEVay btWnfK"
+      className="c2"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-iRbamj ddcRKe"
+        className="c3"
         onBlur={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -779,10 +2757,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-jlyJG giBihK"
+        className="c4 c5"
       >
         <div
-          className="sc-csuQGl fZITyK"
+          className="c6"
         >
           Шереметьево
         </div>
@@ -790,17 +2768,17 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-bRBYWo bcOilx"
+        className="c7"
       >
         SVO
       </div>
     </div>
     <div
-      className="sc-jKJlTe bNlokg"
+      className="c8"
       onClick={[Function]}
     >
       <svg
-        className="controls-group__swap sc-eNQAEJ jUAzDs icon-inherit-color sc-bxivhb doUjBV"
+        className="c9 c10 c11 c12"
         size="xxsmall"
         style={undefined}
       >
@@ -810,12 +2788,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       </svg>
     </div>
     <div
-      className="sc-gPEVay cWiCNU"
+      className="c13"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="sc-iRbamj kVHSmU"
+        className="c14"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -825,10 +2803,10 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="airport-input__geo sc-jlyJG bmDLSd"
+        className="c4 c15"
       >
         <div
-          className="sc-csuQGl fZITyK"
+          className="c6"
         >
           Несуществующий город
         </div>
@@ -836,7 +2814,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="sc-bRBYWo gpToxv"
+        className="c16"
       >
         
       </div>
@@ -846,30 +2824,565 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
 `;
 
 exports[`Storyshots DateRange DateRange 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 .CalendarDay {
+  background: #ffffff;
+  color: #222222;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-letter-spacing: -.21px;
+  -moz-letter-spacing: -.21px;
+  -ms-letter-spacing: -.21px;
+  letter-spacing: -.21px;
+  -webkit-text-align: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 0 2px 0;
+  box-sizing: border-box;
+  width: 42px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.c1 .CalendarDay--blocked,
+.c1 .CalendarDay--blocked-calendar,
+.c1 .CalendarDay--blocked-out-of-range {
+  background: #ffffff;
+  color: #b3b3b3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.c1 .c6--startDate--focused .CalendarDay:hover,
+.c1 .c6--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover,
+.c1 .CalendarDay--selected-start {
+  border-radius: 4px 0 0 4px;
+}
+
+.c1 .c6--endDate--focused .CalendarDay:hover,
+.c1 .CalendarDay--selected-end {
+  border-radius: 0 4px 4px 0;
+}
+
+.c1 .c6--endDate--focused .CalendarDay.CalendarDay--selected-start:hover,
+.c1 .CalendarDay.CalendarDay--selected-start.CalendarDay--selected-end {
+  border-radius: 4px;
+}
+
+.c1 .c6--startDate--focused .CalendarDay:not(.CalendarDay--blocked):hover,
+.c1 .c6--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover:not(.CalendarDay--blocked):hover {
+  position: relative;
+}
+
+.c1 .c6--startDate--focused .CalendarDay:not(.CalendarDay--blocked):hover:after,
+.c1 .c6--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover:not(.CalendarDay--blocked):hover:after {
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: solid 4px transparent;
+  content: " ";
+  pointer-events: none;
+  border-left-color: #38afff;
+  border-left-width: 4px;
+  margin-top: -4px;
+}
+
+.c1 .c6--endDate--focused .CalendarDay:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover {
+  position: relative;
+}
+
+.c1 .c6--endDate--focused .CalendarDay:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover:after {
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: solid 4px transparent;
+  content: " ";
+  pointer-events: none;
+  border-right-color: #38afff;
+  border-right-width: 4px;
+  margin-top: -4px;
+}
+
+.c1 .CalendarDay--selected-span {
+  background: #f0f5fa;
+  color: #222222;
+}
+
+.c1 .CalendarDay--selected-start,
+.c1 .CalendarDay--selected-end,
+.c1 .CalendarDay--selected {
+  background: #b1bdcc;
+  color: #ffffff;
+}
+
+.c1 .CalendarDay--selected-start:active,
+.c1 .CalendarDay--selected-end:active,
+.c1 .CalendarDay--selected:active {
+  background: #b1bdcc;
+}
+
+.c1 .CalendarDay:not(.CalendarDay--blocked):hover {
+  background: #38afff;
+  color: #ffffff;
+}
+
+.c1 .CalendarMonth {
+  -webkit-text-align: center;
+  text-align: center;
+  padding: 0 13px;
+  vertical-align: top;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .CalendarMonth:first-of-type {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c1 .CalendarMonth table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.c1 .CalendarMonth table caption: {
+  caption-side: initial;
+}
+
+.c1 .CalendarMonth--horizontal {
+  display: inline-block;
+  min-height: 100%;
+}
+
+.c1 .CalendarMonth--vertical {
+  display: block;
+}
+
+.c1 .CalendarMonth__caption {
+  color: #222222;
+  -webkit-letter-spacing: -.21px;
+  -moz-letter-spacing: -.21px;
+  -ms-letter-spacing: -.21px;
+  letter-spacing: -.21px;
+  -webkit-text-align: center;
+  text-align: center;
+  -webkit-text-transform: capitalize;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 22px 0 54px;
+  caption-side: initial;
+}
+
+.c1 .CalendarMonth__caption strong {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.c1 .CalendarMonth--vertical-scrollable .CalendarMonth__caption {
+  padding: 5px 0;
+}
+
+.c1 .CalendarMonthGrid {
+  background: #fff;
+  z-index: 0;
+  -webkit-text-align: left;
+  text-align: left;
+}
+
+.c1 .CalendarMonthGrid--animating {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.c1 .CalendarMonthGrid--horizontal {
+  position: absolute;
+  left: 9px;
+  width: 1360px;
+}
+
+.c1 .CalendarMonthGrid--vertical {
+  width: 340px;
+  margin: 0 auto;
+}
+
+.c1 .CalendarMonthGrid--vertical-scrollable {
+  width: 340px;
+  margin: 0 auto;
+  overflow-y: scroll;
+}
+
+.c1 .DayPickerNavigation__prev,
+.c1 .DayPickerNavigation__next {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-align: center;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.c1 .DayPickerNavigation__prev--disabled,
+.c1 .DayPickerNavigation__next--disabled {
+  cursor: default;
+  opacity: .2;
+  pointer-events: none;
+}
+
+.c1 .DayPickerNavigation--horizontal {
+  position: relative;
+}
+
+.c1 .DayPickerNavigation--horizontal .DayPickerNavigation__prev,
+.c1 .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+  top: 18px;
+  z-index: 2;
+  position: absolute;
+}
+
+.c1 .DayPickerNavigation--horizontal .DayPickerNavigation__prev {
+  left: 22px;
+}
+
+.c1 .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+  right: 22px;
+}
+
+.c1 .DayPickerNavigation--vertical {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 52px;
+  width: 100%;
+  z-index: 2;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev,
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__next {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__next--default {
+  border-left: 0;
+}
+
+.c1 .DayPickerNavigation--vertical-scrollable {
+  position: relative;
+}
+
+.c1 .DayPickerNavigation--vertical-scrollable .DayPickerNavigation__next {
+  width: 100%;
+}
+
+.c1 .c6 {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.c1 .c6 .screen-reader-only {
+  border: 0;
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.c1 .c6--with-caret::before,
+.c1 .c6--with-caret::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: auto;
+  border: 10px solid transparent;
+  border-top: 0;
+  left: 22px;
+}
+
+.c1 .c6__input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+
+.c1 .c6__input[readonly] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c1 .c6__display-text {
+  color: #96a0b3;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-letter-spacing: -.11px;
+  -moz-letter-spacing: -.11px;
+  -ms-letter-spacing: -.11px;
+  letter-spacing: -.11px;
+  white-space: nowrap;
+  padding: 10px 10px 10px 16px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 100px 0 0 100px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 0;
+  z-index: 1;
+}
+
+.c1 .c6 ~ .c6 .c6__display-text {
+  border-radius: 0 100px 100px 0;
+  margin-left: -2px;
+  padding: 10px 16px 10px 10px;
+}
+
+.c1 .c6__display-text--has-input {
+  color: #333333;
+  font-weight: 600;
+}
+
+.c1 .c2 #startDate ~ .c6__display-text,
+.c1 .c3 #endDate ~ .c6__display-text {
+  color: #96a0b3;
+  font-weight: normal;
+}
+
+.c1 .c6--startDate--error [id=startDate] ~ .c6__display-text {
+  border-color: #e64926;
+  z-index: 2;
+}
+
+.c1 .c6 .c6__display-text.c6__display-text--focused,
+.c1 .c6:hover .c6__display-text {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c1 .c4 {
+  position: relative;
+  display: block;
+}
+
+.c1 .c4__picker {
+  z-index: 10;
+  background: #ffffff;
+  position: absolute;
+  margin-top: 3px;
+  top: 42px;
+}
+
+.c1 .c4__picker--direction-left {
+  left: 0;
+}
+
+.c1 .c4__picker--direction-right {
+  right: 0;
+}
+
+.c1 .c4Input {
+  background-color: #ffffff;
+  display: block;
+}
+
+.c1 .c4Input__arrow {
+  display: none;
+}
+
+.c1 .c4Input__arrow svg {
+  vertical-align: middle;
+  fill: #38afff;
+  height: 24px;
+  width: 24px;
+}
+
+.c1 .DayPicker {
+  background: #ffffff;
+  position: relative;
+  -webkit-text-align: left;
+  text-align: left;
+}
+
+.c1 .DayPicker--horizontal {
+  box-shadow: 0 3px 7px 0 #62708b;
+  border-radius: 3px;
+}
+
+.c1 .DayPicker__week-headers {
+  position: relative;
+}
+
+.c1 .DayPicker--horizontal .DayPicker__week-headers {
+  margin-left: 9px;
+}
+
+.c1 .DayPicker__week-header {
+  color: #b3b3b3;
+  position: absolute;
+  width: 340px;
+  top: 60px;
+  z-index: 2;
+  padding: 0 13px;
+  -webkit-text-align: left;
+  text-align: left;
+}
+
+.c1 .DayPicker__week-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 .DayPicker__week-header li {
+  display: inline-block;
+  width: 42px;
+  height: 36px;
+  padding-top: 2px;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-letter-spacing: -.21px;
+  -moz-letter-spacing: -.21px;
+  -ms-letter-spacing: -.21px;
+  letter-spacing: -.21px;
+  -webkit-text-align: center;
+  text-align: center;
+}
+
+.c1 .DayPicker--vertical .DayPicker__week-header {
+  margin-left: -170px;
+  left: 50%;
+}
+
+.c1 .DayPicker--vertical-scrollable {
+  height: 100%;
+}
+
+.c1 .DayPicker--vertical-scrollable .DayPicker__week-header {
+  top: 0;
+  display: table-row;
+  background: white;
+}
+
+.c1 .DayPicker--vertical-scrollable .transition-container--vertical {
+  padding-top: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+
+.c1 .DayPicker--vertical-scrollable .DayPicker__week-header {
+  margin-left: 0;
+  left: 0;
+  width: 100%;
+  -webkit-text-align: center;
+  text-align: center;
+}
+
+.c1 .transition-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.c1 .transition-container--horizontal {
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+}
+
+.c1 .transition-container--vertical {
+  width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  .responsive .c1 .c4__picker,
+  .responsive-booking .c1 .c4__picker {
+    top: initial;
+    left: -20px !important;
+    right: -20px !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-cvbbAY eVoYXr"
+    className="c1"
   >
     <div
-      className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
+      className="c2 c3"
     >
       <div
-        className="DateRangePicker"
+        className="c4"
       >
         <div>
           <div
-            className="DateRangePickerInput"
+            className="c4Input"
           >
             <div
-              className="DateInput"
+              className="c6"
             >
               <input
                 aria-describedby=""
                 aria-label="Туда"
                 autoComplete="off"
-                className="DateInput__input"
+                className="c6__input"
                 disabled={false}
                 id="startDate"
                 name="startDate"
@@ -884,24 +3397,24 @@ exports[`Storyshots DateRange DateRange 1`] = `
               />
               
               <div
-                className="DateInput__display-text"
+                className="c6__display-text"
               >
                 Туда
               </div>
             </div>
             <div
-              className="DateRangePickerInput__arrow"
+              className="c4Input__arrow"
             >
               <span />
             </div>
             <div
-              className="DateInput"
+              className="c6"
             >
               <input
                 aria-describedby=""
                 aria-label="Обратно"
                 autoComplete="off"
-                className="DateInput__input"
+                className="c6__input"
                 disabled={false}
                 id="endDate"
                 name="endDate"
@@ -916,7 +3429,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
               />
               
               <div
-                className="DateInput__display-text"
+                className="c6__display-text"
               >
                 Обратно
               </div>
@@ -930,24 +3443,88 @@ exports[`Storyshots DateRange DateRange 1`] = `
 `;
 
 exports[`Storyshots Dropdown Defalut 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c3:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c3:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 .Dropdown__DropdownContent-s5q41kj-1 {
+  left: auto;
+  width: 300px;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <onClickOutside-Mock-Decorator>
     <div
-      className="sc-ktHwxA kDgSSf sc-hSdWYo bmqAoE"
+      className="c1 c2"
     >
       <div
         onClick={[Function]}
       >
         click to open  
         <button
-          className="no-global sc-gZMcBi gBfaHm"
+          className="no-global c3"
           disabled={undefined}
           size="normal"
         >
           <span
-            className="sc-gqjmRU hdtzDm"
+            className="c4"
             size="normal"
           >
             click
@@ -960,8 +3537,85 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 `;
 
 exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  width: 1176px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c2 {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 870px;
+}
+
+.c3 {
+  width: 252px;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  margin-left: 42px;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin: 0;
+    width: auto;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    width: auto;
+    margin-left: 0;
+  }
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -971,10 +3625,10 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
     }
   >
     <div
-      className="sc-hMqMXs jkJMEI"
+      className="c1"
     >
       <div
-        className="sc-kEYyzF fjOgpN"
+        className="c2"
       >
         <div
           style={
@@ -991,7 +3645,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
         </div>
       </div>
       <div
-        className="sc-kkGfuU efatRR"
+        className="c3"
       >
         <div
           style={
@@ -1013,8 +3667,32 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 `;
 
 exports[`Storyshots Fluid layout Single column 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin: 0 auto;
+  max-width: 966px;
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin: 0 18px;
+  }
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -1024,7 +3702,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
     }
   >
     <div
-      className="sc-iAyFgw dNwxhT"
+      className="c1"
     >
       <div
         style={
@@ -1045,8 +3723,82 @@ exports[`Storyshots Fluid layout Single column 1`] = `
 `;
 
 exports[`Storyshots Fluid layout Two columns 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  width: 1176px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c2 {
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 870px;
+}
+
+.c3 {
+  width: 252px;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  margin-left: 42px;
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin: 0;
+    width: auto;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    width: auto;
+    margin-left: 0;
+  }
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
     style={
@@ -1056,10 +3808,10 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
     }
   >
     <div
-      className="sc-hMqMXs jkJMEI"
+      className="c1"
     >
       <div
-        className="sc-kEYyzF fjOgpN"
+        className="c2"
       >
         <div
           style={
@@ -1076,7 +3828,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
         </div>
       </div>
       <div
-        className="sc-kkGfuU bivuqP"
+        className="c3"
       >
         <div
           style={
@@ -1098,14 +3850,45 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 `;
 
 exports[`Storyshots FormItem default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-chPdSV kgupvL"
+    className="c1"
   >
     <label
-      className="sc-kgoBCf cJBTPS"
+      className="c2"
       htmlFor="input"
     >
       Cake is a lie
@@ -1119,11 +3902,33 @@ exports[`Storyshots FormItem default 1`] = `
 `;
 
 exports[`Storyshots Icon Icon with fill 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 42px;
+  width: 42px;
+  fill: #38afff;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <svg
-    className="sc-bxivhb fzMgiT"
+    className="c1"
     size="large"
     style={undefined}
   >
@@ -1135,16 +3940,128 @@ exports[`Storyshots Icon Icon with fill 1`] = `
 `;
 
 exports[`Storyshots Input default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2:focus {
+  outline-style: none;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border-color: #b1bdcc;
+  border-radius: 3px;
+  height: 42px;
+  box-shadow: ;
+  z-index: 1;
+}
+
+.c1:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  display: none;
+  height: 100%;
+  width: 2px;
+  border-radius: 3px 0 0 3px;
+  background-color: #e64926;
+  z-index: 2;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-dxgOiQ Vjnyy"
+    className="c1"
     disabled={undefined}
     size="large"
   >
     <input
-      className="sc-kpOJdX gEINQW"
+      className="c2"
       name="input"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -1156,16 +4073,128 @@ exports[`Storyshots Input default 1`] = `
 `;
 
 exports[`Storyshots Input disabled 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #f0f5fa;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2:focus {
+  outline-style: none;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border-color: #f0f5fa;
+  border-radius: 3px;
+  height: 42px;
+  box-shadow: ;
+  z-index: 1;
+}
+
+.c1:hover {
+  border-color: ;
+  z-index: 2;
+}
+
+.c1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  display: none;
+  height: 100%;
+  width: 2px;
+  border-radius: 3px 0 0 3px;
+  background-color: #e64926;
+  z-index: 2;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-dxgOiQ dMWFPs"
+    className="c1"
     disabled={true}
     size="large"
   >
     <input
-      className="sc-kpOJdX fBbEoC"
+      className="c2"
       disabled={true}
       name="input"
       onBlur={[Function]}
@@ -1179,16 +4208,150 @@ exports[`Storyshots Input disabled 1`] = `
 `;
 
 exports[`Storyshots Input error 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3px 12px 5px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  opacity: 0.97;
+  z-index: 2;
+  border-radius: 3px;
+  background-color: #e64926;
+}
+
+.c2 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2:focus {
+  outline-style: none;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border-color: #b1bdcc;
+  border-radius: 3px;
+  height: 42px;
+  box-shadow: ;
+  z-index: 1;
+}
+
+.c1:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  display: block;
+  height: 100%;
+  width: 2px;
+  border-radius: 3px 0 0 3px;
+  background-color: #e64926;
+  z-index: 2;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-dxgOiQ gJEAMD"
+    className="c1"
     disabled={undefined}
     size="large"
   >
     <input
-      className="sc-kpOJdX gEINQW"
+      className="c2"
       name="input"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -1197,7 +4360,7 @@ exports[`Storyshots Input error 1`] = `
       type="text"
     />
     <span
-      className="sc-kGXeez bUKNtk"
+      className="c3"
     >
       Только латинские буквы
     </span>
@@ -1206,16 +4369,128 @@ exports[`Storyshots Input error 1`] = `
 `;
 
 exports[`Storyshots Input success 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2:focus {
+  outline-style: none;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border-color: #b1bdcc;
+  border-radius: 3px;
+  height: 42px;
+  box-shadow: ;
+  z-index: 1;
+}
+
+.c1:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  display: block;
+  height: 100%;
+  width: 2px;
+  border-radius: 3px 0 0 3px;
+  background-color: #23c256;
+  z-index: 2;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-dxgOiQ cdnOrF"
+    className="c1"
     disabled={undefined}
     size="large"
   >
     <input
-      className="sc-kpOJdX gEINQW"
+      className="c2"
       name="input"
       onBlur={[Function]}
       onFocus={[Function]}
@@ -1228,47 +4503,208 @@ exports[`Storyshots Input success 1`] = `
 `;
 
 exports[`Storyshots PassengerPicker Defalut 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c10 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 18px;
+  width: 18px;
+  fill: #ffffff;
+}
+
+.c8 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+  opacity: .2;
+}
+
+.c11 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c11:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #38afff;
+}
+
+.c11:active {
+  background: #0f99f5;
+  box-shadow: none;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-width: 216px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.c2 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  padding-bottom: 2px;
+  color: #333333;
+}
+
+.c3 {
+  margin: 0;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .6px;
+  -moz-letter-spacing: .6px;
+  -ms-letter-spacing: .6px;
+  letter-spacing: .6px;
+  color: #808080;
+}
+
+.c5 {
+  margin-right: 6px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #333333;
+}
+
+.c7 {
+  margin-left: 6px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div
-    className="sc-caSCKo eMRrci"
+    className="c1"
   >
     <div>
       <div
-        className="sc-gisBJw eDYGFH"
+        className="c2"
       >
         Взрослые
       </div>
       <div
-        className="sc-kjoXOD aeMvF"
+        className="c3"
       >
         До 2 лет, без места
       </div>
     </div>
     <div
-      className="sc-kgAjT kmzIQb"
+      className="c4"
     >
       <span
-        className="sc-cHGsZl eNzLWg"
+        className="c5"
       >
         1
       </span>
       <div
-        className="sc-cJSrbW iaNJqQ"
+        className="c6"
       >
         <button
-          className="no-global sc-TOsTZ hupAjt sc-gZMcBi dkdJqv"
+          className="no-global c7 c8"
           disabled={true}
           onClick={[Function]}
           size="normal"
         >
           <span
-            className="sc-VigVT cerRmq"
+            className="c9"
             size="normal"
           >
             <svg
-              className="sc-bxivhb tbkNI"
+              className="c10"
               size="normal"
               style={undefined}
             >
@@ -1279,17 +4715,17 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
           </span>
         </button>
         <button
-          className="no-global sc-TOsTZ hupAjt sc-gZMcBi ezVieq"
+          className="no-global c7 c11"
           disabled={false}
           onClick={[Function]}
           size="normal"
         >
           <span
-            className="sc-VigVT cerRmq"
+            className="c9"
             size="normal"
           >
             <svg
-              className="sc-bxivhb tbkNI"
+              className="c10"
               size="normal"
               style={undefined}
             >
@@ -1306,29 +4742,179 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
 `;
 
 exports[`Storyshots PriceVariantsButton default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c6 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 + .c1 {
+  margin-left: 10px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  padding: 9px 12px 3px;
+  min-height: 66px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #38afff;
+  box-shadow: 0 0 0 1px #38afff;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  width: 180px;
+}
+
+.c2:hover {
+  border-color: #38afff;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  padding: 9px 12px 3px;
+  min-height: 66px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b1bdcc;
+  box-shadow: 0 0 0 1px transparent;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  width: 180px;
+}
+
+.c9:hover {
+  border-color: #38afff;
+}
+
+.c8 {
+  display: block;
+  padding: 6px 0;
+  font-size: 11px;
+  line-height: 16px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  color: #f2f2f2;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.c3 .c5 {
+  margin-left: 6px;
+}
+
+.c4 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #333333;
+  font-weight: 600;
+}
+
+.c10 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #333333;
+  font-weight: 400;
+}
+
+.c7 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #fc6100;
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div>
     <div
-      className="sc-ksYbfQ kpTUAv"
+      className="c1"
     >
       <div
-        className="sc-hmzhuo hfyEUr"
+        className="c2"
+        onChange={null}
         onClick={[Function]}
         title="Банковской картой он-лайн"
       >
         <div
-          className="sc-hqyNC hAwqf"
+          className="c3"
         >
           <span
-            className="sc-jbKcbu cumgcH"
+            className="c4"
           >
             Банковской картой он-лайн
           </span>
           <div>
             <svg
-              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              className="block-icon c5 c6"
               size="normal"
               style={undefined}
             >
@@ -1339,10 +4925,10 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           </div>
         </div>
         <div
-          className="sc-hqyNC hAwqf"
+          className="c3"
         >
           <span
-            className="sc-dNLxif iHIYVU"
+            className="c7"
           >
             12 234 ₽
              ₽
@@ -1350,40 +4936,41 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
         </div>
       </div>
       <span
-        className="sc-frDJqD gFhaxJ"
+        className="c8"
       >
         Описание
       </span>
     </div>
     <div
-      className="sc-ksYbfQ kpTUAv"
+      className="c1"
     >
       <div
-        className="sc-hmzhuo hMAqIX"
+        className="c9"
+        onChange={null}
         onClick={[Function]}
         title="Эконом Базовый"
       >
         <div
-          className="sc-hqyNC hAwqf"
+          className="c3"
         >
           <span
-            className="sc-jbKcbu ljLxxv"
+            className="c10"
           >
             Эконом Базовый
           </span>
         </div>
         <div
-          className="sc-hqyNC hAwqf"
+          className="c3"
         >
           <span
-            className="sc-dNLxif iHIYVU"
+            className="c7"
           >
             12 234 ₽
              ₽
           </span>
           <div>
             <svg
-              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              className="block-icon c5 c6"
               size="normal"
               style={undefined}
             >
@@ -1392,7 +4979,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              className="block-icon c5 c6"
               size="normal"
               style={undefined}
             >
@@ -1401,7 +4988,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              className="block-icon c5 c6"
               size="normal"
               style={undefined}
             >
@@ -1413,40 +5000,41 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
         </div>
       </div>
       <span
-        className="sc-frDJqD gFhaxJ"
+        className="c8"
       >
         Описание
       </span>
     </div>
     <div
-      className="sc-ksYbfQ kpTUAv"
+      className="c1"
     >
       <div
-        className="sc-hmzhuo hMAqIX"
+        className="c9"
+        onChange={null}
         onClick={[Function]}
         title="Эконом"
       >
         <div
-          className="sc-hqyNC hAwqf"
+          className="c3"
         >
           <span
-            className="sc-jbKcbu ljLxxv"
+            className="c10"
           >
             Эконом
           </span>
         </div>
         <div
-          className="sc-hqyNC hAwqf"
+          className="c3"
         >
           <span
-            className="sc-dNLxif iHIYVU"
+            className="c7"
           >
             12 234 ₽
              ₽
           </span>
           <div>
             <svg
-              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              className="block-icon c5 c6"
               size="normal"
               style={undefined}
             >
@@ -1455,7 +5043,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              className="block-icon c5 c6"
               size="normal"
               style={undefined}
             >
@@ -1464,7 +5052,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
               />
             </svg>
             <svg
-              className="block-icon sc-kvZOFW eiPhbT sc-bxivhb ereCjg"
+              className="block-icon c5 c6"
               size="normal"
               style={undefined}
             >
@@ -1476,7 +5064,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
         </div>
       </div>
       <span
-        className="sc-frDJqD gFhaxJ"
+        className="c8"
       >
         Описание
       </span>
@@ -1486,51 +5074,213 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
 `;
 
 exports[`Storyshots Utils Responsive only 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: none;
+}
+
+.c7 {
+  display: none;
+}
+
+.c5 {
+  display: none;
+}
+
+.c3 {
+  display: none;
+}
+
+.c2 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+}
+
+.c4 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: skyblue;
+}
+
+.c6 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: greenyellow;
+}
+
+.c8 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: dodgerblue;
+}
+
+.c10 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: black;
+}
+
+@media screen and (min-width: 1000px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .responsive .c9,
+  .responsive-booking .c9 {
+    display: none;
+  }
+}
+
 <div
-  className="sc-bdVaJa jBbfIF"
+  className="c0"
 >
   <div>
     <div
-      className="sc-jqCOkK gSsevU"
+      className="c1"
     >
       <div
-        className="sc-cIShpX izRGC"
+        className="c2"
       >
         Desktop
       </div>
     </div>
     <div
-      className="sc-gGBfsJ jpLzXn"
+      className="c3"
     >
       <div
-        className="sc-kafWEX eSuiea"
+        className="c4"
       >
         Handheld
       </div>
     </div>
     <div
-      className="sc-bbmXgH ihTSwa"
+      className="c5"
     >
       <div
-        className="sc-feJyhm cDSFMd"
+        className="c6"
       >
         Tablet
       </div>
     </div>
     <div
-      className="sc-uJMKN cAjYRu"
+      className="c7"
     >
       <div
-        className="sc-iELTvK gTOEWD"
+        className="c8"
       >
         Mobile
       </div>
     </div>
     <div
-      className="sc-jnlKLf iwvxtq"
+      className="c9"
     >
       <div
-        className="sc-cmTdod kwcUXP"
+        className="c10"
       >
         Not mobile
       </div>

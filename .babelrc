@@ -1,20 +1,40 @@
 {
   "env": {
-    "development": {
-      "presets": ["env", "react", "stage-2"],
-      "plugins": ["flow-react-proptypes"]
+    "default": {
+      "plugins": [
+        ["flow-react-proptypes"],
+        ["module-resolver", {
+          "root": ["src"],
+          "cwd": "./",
+          "alias": {
+            "blocks": "./blocks",
+            "components": "./components",
+            "utils": "./utils"
+          }
+        }],
+        ["styled-components", {
+          "ssr": true
+        }]
+      ],
+      "presets": ["env", "react", "stage-2"]
     },
-    "production": {
-      "presets": ["env", "react", "stage-2"],
-      "plugins": ["flow-react-proptypes"]
-    },
-    "test": {
-      "presets": ["env", "react", "stage-2"],
-      "plugins": ["flow-react-proptypes"]
-    },
-    "build": {
-      "presets": [["env", {"modules": false}], "react", "stage-2"],
-      "plugins": ["flow-react-proptypes"],
-    },
+    "esmodules": {
+      "plugins": [
+        ["flow-react-proptypes"],
+        ["module-resolver", {
+          "root": ["src"],
+          "cwd": "./",
+          "alias": {
+            "blocks": "./blocks",
+            "components": "./components",
+            "utils": "./utils"
+          }
+        }],
+        ["styled-components", {
+          "ssr": true
+        }]
+      ],
+      "presets": [["env", {"modules": false}], "react", "stage-2"]
+    }
   }
 }
