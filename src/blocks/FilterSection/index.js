@@ -3,10 +3,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { styles as boxStyles } from '../../components/box'
-import Collapse from '../../components/collapse'
-import Icon from '../../components/icons'
-import Link from '../../utils/link'
+import { styles as boxStyles } from 'components/Box'
+import Collapse from 'components/Collapse'
+import Icon from 'components/Icon'
+import Link from 'utils/link'
 
 
 const Section = styled.section`
@@ -103,7 +103,7 @@ PanelHeaderWrapper.defaultProps = {
 }
 
 
-const FilterBox = (props) => (
+const FilterSection = (props) => (
   <Section className={props.className}>
     <Header>
       {props.headerLeft}
@@ -118,7 +118,7 @@ const FilterBox = (props) => (
   </Section>
 )
 
-FilterBox.propTypes = {
+FilterSection.propTypes = {
   headerLeft: PropTypes.node.isRequired,
   headerRight: PropTypes.node.isRequired,
   content: PropTypes.node.isRequired,
@@ -126,12 +126,12 @@ FilterBox.propTypes = {
   className: PropTypes.string,
 }
 
-FilterBox.defaultProps = {
+FilterSection.defaultProps = {
   collapse: null,
   className: '',
 }
 
-FilterBox.Collapse = Collapse
-FilterBox.Panel = Panel
+FilterSection.Collapse = Collapse
+FilterSection.Panel = Panel
 
-export default FilterBox
+export default FilterSection
