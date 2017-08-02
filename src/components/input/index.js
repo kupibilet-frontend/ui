@@ -151,17 +151,17 @@ class Input extends Component<{}, Props, State> {
     isActive: false,
   }
 
-  handleBlur = () => {
+  handleBlur = (e) => {
     const { onBlur } = this.props
-    if (onBlur) onBlur()
+    if (onBlur) onBlur(e)
     this.setState({
       isActive: false,
     })
   }
 
-  handleFocus = () => {
+  handleFocus = (e) => {
     const { onFocus } = this.props
-    if (onFocus) onFocus()
+    if (onFocus) onFocus(e)
     this.setState({
       isActive: true,
     })
