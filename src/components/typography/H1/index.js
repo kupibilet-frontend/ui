@@ -2,23 +2,16 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const H1 = styled.h1`
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: -1px;
-  ${(props) => (props.verticalRythm &&
-    `margin-bottom: 24px;
-     padding-top: 30px;`
-  )}
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -1.2px;
+  padding-top: 12px
+  margin-bottom: 24px
 `
-
-H1.defaultProps = {
-  verticalRythm: false,
-}
 
 H1.propTypes = {
   children: PropTypes.node.isRequired,
-  verticalRythm: PropTypes.bool,
 }
 
 export default H1
