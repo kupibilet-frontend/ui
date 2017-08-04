@@ -13,7 +13,7 @@
           }
         }],
         ["styled-components", {
-          "ssr": true
+          "minify": false,
         }]
       ],
       "presets": ["env", "react", "stage-2"]
