@@ -4,8 +4,6 @@ const H6 = styled.h6`
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  padding-top: 18px;
-  margin-bottom: 12px;
   letter-spacing: -0.1px;
 `
 

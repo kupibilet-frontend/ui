@@ -1,15 +1,16 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import H1 from './H1/H1'
-import H2 from './H2/H2'
-import H3 from './H3/H3'
-import H4 from './H4/H4'
-import H5 from './H5/H5'
-import H6 from './H6/H6'
-import Text16 from './Text16'
-import Text14 from './Text14'
-import Uppercase20 from './Uppercase20'
-import Uppercase16 from './Uppercase16'
+import H1 from './H1'
+import H2 from './H2'
+import H3 from './H3'
+import H4 from './H4'
+import H5 from './H5'
+import H6 from './H6'
+import Text from './Text'
+import TextSmall from './TextSmall'
+import TextLarge from './TextLarge'
+import UppercaseLarge from './UppercaseLarge'
+import Uppercase from './Uppercase'
 import Caption from './Caption'
 
 storiesOf('Typography', module)
@@ -43,25 +44,30 @@ storiesOf('Typography', module)
       Пересадка 22ч 20 мин
     </H6>
   ))
-  .addWithInfo('Text16', () => (
-    <Text16>
+  .addWithInfo('TextLarge', () => (
+    <TextLarge>
       Пересадка 22ч 20 мин
-    </Text16>
+    </TextLarge>
   ))
-  .addWithInfo('Text14', () => (
-    <Text14>
+  .addWithInfo('Text', () => (
+    <Text>
       Пересадка 22ч 20 мин
-    </Text14>
+    </Text>
   ))
-  .addWithInfo('Uppercase20', () => (
-    <Uppercase20>
+  .addWithInfo('TextSmall', () => (
+    <TextSmall>
       Пересадка 22ч 20 мин
-    </Uppercase20>
+    </TextSmall>
   ))
-  .addWithInfo('Uppercase16', () => (
-    <Uppercase16>
+  .addWithInfo('UppercaseLarge', () => (
+    <UppercaseLarge>
       Пересадка 22ч 20 мин
-    </Uppercase16>
+    </UppercaseLarge>
+  ))
+  .addWithInfo('Uppercase', () => (
+    <Uppercase>
+      Пересадка 22ч 20 мин
+    </Uppercase>
   ))
   .addWithInfo('Caption', () => (
     <Caption>

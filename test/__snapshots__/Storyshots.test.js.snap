@@ -5090,8 +5090,6 @@ exports[`Storyshots Typography Caption 1`] = `
   font-size: 11px;
   font-weight: 400;
   line-height: 16px;
-  padding-top: 6px;
-  margin-bottom: 6px;
   -webkit-letter-spacing: 0.6px;
   -moz-letter-spacing: 0.6px;
   -ms-letter-spacing: 0.6px;
@@ -5130,8 +5128,6 @@ exports[`Storyshots Typography H1 1`] = `
   -moz-letter-spacing: -1.2px;
   -ms-letter-spacing: -1.2px;
   letter-spacing: -1.2px;
-  padding-top: 12px;
-  margin-bottom: 24px;
 }
 
 <div
@@ -5166,8 +5162,6 @@ exports[`Storyshots Typography H2 1`] = `
   -moz-letter-spacing: -1px;
   -ms-letter-spacing: -1px;
   letter-spacing: -1px;
-  padding-top: 24px;
-  margin-bottom: 18px;
 }
 
 <div
@@ -5202,8 +5196,6 @@ exports[`Storyshots Typography H3 1`] = `
   -moz-letter-spacing: -0.6px;
   -ms-letter-spacing: -0.6px;
   letter-spacing: -0.6px;
-  padding-top: 24px;
-  margin-bottom: 18px;
 }
 
 <div
@@ -5238,8 +5230,6 @@ exports[`Storyshots Typography H4 1`] = `
   -moz-letter-spacing: -0.4px;
   -ms-letter-spacing: -0.4px;
   letter-spacing: -0.4px;
-  padding-top: 18px;
-  margin-bottom: 12px;
 }
 
 <div
@@ -5270,8 +5260,6 @@ exports[`Storyshots Typography H5 1`] = `
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  padding-top: 18px;
-  margin-bottom: 12px;
   -webkit-letter-spacing: -0.2px;
   -moz-letter-spacing: -0.2px;
   -ms-letter-spacing: -0.2px;
@@ -5306,8 +5294,6 @@ exports[`Storyshots Typography H6 1`] = `
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  padding-top: 18px;
-  margin-bottom: 12px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5325,7 +5311,67 @@ exports[`Storyshots Typography H6 1`] = `
 </div>
 `;
 
-exports[`Storyshots Typography Text14 1`] = `
+exports[`Storyshots Typography Text 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1"
+  >
+    Пересадка 22ч 20 мин
+  </span>
+</div>
+`;
+
+exports[`Storyshots Typography TextLarge 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1"
+  >
+    Пересадка 22ч 20 мин
+  </span>
+</div>
+`;
+
+exports[`Storyshots Typography TextSmall 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -5342,8 +5388,6 @@ exports[`Storyshots Typography Text14 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  padding-top: 6px;
-  margin-bottom: 6px;
 }
 
 <div
@@ -5357,39 +5401,7 @@ exports[`Storyshots Typography Text14 1`] = `
 </div>
 `;
 
-exports[`Storyshots Typography Text16 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  padding-top: 9px;
-  margin-bottom: 9px;
-}
-
-<div
-  className="c0"
->
-  <span
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </span>
-</div>
-`;
-
-exports[`Storyshots Typography Uppercase16 1`] = `
+exports[`Storyshots Typography Uppercase 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -5406,8 +5418,6 @@ exports[`Storyshots Typography Uppercase16 1`] = `
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
-  padding-top: 9px;
-  margin-bottom: 9px;
   -webkit-letter-spacing: 0.5px;
   -moz-letter-spacing: 0.5px;
   -ms-letter-spacing: 0.5px;
@@ -5427,7 +5437,7 @@ exports[`Storyshots Typography Uppercase16 1`] = `
 </div>
 `;
 
-exports[`Storyshots Typography Uppercase20 1`] = `
+exports[`Storyshots Typography UppercaseLarge 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -5444,8 +5454,6 @@ exports[`Storyshots Typography Uppercase20 1`] = `
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  padding-top: 18px;
-  margin-bottom: 12px;
   -webkit-letter-spacing: 0.4px;
   -moz-letter-spacing: 0.4px;
   -ms-letter-spacing: 0.4px;
