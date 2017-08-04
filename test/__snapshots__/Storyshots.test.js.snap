@@ -2,7 +2,7 @@
 
 exports[`Storyshots Autocomplete Airport 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -51,7 +51,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
   left: 0;
   min-width: 320px;
   max-width: 540px;
-  box-shadow: 0 3px 9px 0 rgba(98, 112, 139, .7);
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
@@ -279,17 +279,17 @@ exports[`Storyshots Autocomplete Airport 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width:599px) {
   .responsive .c1 .c9--open,
   .responsive-booking .c1 .c9--open {
     position: static;
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width:599px) {
   .responsive .c1 .react-autosuggest__suggestions-list,
   .responsive-booking .c1 .react-autosuggest__suggestions-list {
     top: initial;
@@ -367,7 +367,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
 
 exports[`Storyshots Blocks FilterSection 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -439,7 +439,6 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
-  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -535,7 +534,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   border-color: #38afff;
 }
 
-.c4 ;&:hover .c8 {
+.c4:hover .c8 {
   color: #007acc;
 }
 
@@ -706,7 +705,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 
 exports[`Storyshots Blocks Styled Tabs 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -724,7 +723,6 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
-  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -762,7 +760,6 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
-  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -867,7 +864,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
 
 exports[`Storyshots Box Defalut 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -899,7 +896,7 @@ exports[`Storyshots Box Defalut 1`] = `
 
 exports[`Storyshots Buttons Default 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -969,7 +966,7 @@ exports[`Storyshots Buttons Default 1`] = `
 
 exports[`Storyshots Buttons Disabled 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1030,7 +1027,7 @@ exports[`Storyshots Buttons Disabled 1`] = `
 
 exports[`Storyshots Buttons Icon-only button 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1066,6 +1063,7 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
   transform: translateZ(0);
   border-radius: 21px;
   padding: 11.0px;
+  -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: opacity,box-shadow;
   transition-property: opacity,box-shadow;
@@ -1127,7 +1125,7 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
 
 exports[`Storyshots Buttons Sizes 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1197,7 +1195,7 @@ exports[`Storyshots Buttons Sizes 1`] = `
 
 exports[`Storyshots Buttons With icons 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1323,7 +1321,7 @@ exports[`Storyshots Buttons With icons 1`] = `
 
 exports[`Storyshots Checkbox default 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1388,7 +1386,7 @@ exports[`Storyshots Checkbox default 1`] = `
   border-color: #38afff;
 }
 
-.c1 ;&:hover .c5 {
+.c1:hover .c5 {
   color: #007acc;
 }
 
@@ -1427,7 +1425,7 @@ exports[`Storyshots Checkbox default 1`] = `
 
 exports[`Storyshots Checkbox disabled 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1469,11 +1467,11 @@ exports[`Storyshots Checkbox disabled 1`] = `
   color: #b3b3b3;
 }
 
-.gZGdQt:hover .c2 {
+.hinpbq:hover .c2 {
   border-color: #38afff;
 }
 
-.gZGdQt ;&:hover .c5 {
+.hinpbq:hover .c5 {
   color: #007acc;
 }
 
@@ -1501,7 +1499,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
   border-color: #dedede;
 }
 
-.c1 ;&:hover .c5 {
+.c1:hover .c5 {
   color: #b3b3b3;
 }
 
@@ -1538,7 +1536,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
 
 exports[`Storyshots Collapse Accordion 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1622,7 +1620,7 @@ exports[`Storyshots Collapse Accordion 1`] = `
 
 exports[`Storyshots Collapse Default 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1706,7 +1704,7 @@ exports[`Storyshots Collapse Default 1`] = `
 
 exports[`Storyshots Collapse Default active panel 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1804,7 +1802,7 @@ exports[`Storyshots Collapse Default active panel 1`] = `
 
 exports[`Storyshots ControlsGroup Different controls group 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -1842,15 +1840,15 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   border-color: #ff9100;
 }
 
-.iXGZpy:focus ~ .c6 .AirportInput__spell {
+.gCDWtp:focus ~ .c6 .AirportInput__spell {
   display: block;
 }
 
-.dDmkAF:focus ~ .c6 .AirportInput__spell {
+.iQpkFj:focus ~ .c6 .AirportInput__spell {
   display: block;
 }
 
-.gyNfwg:focus ~ .c6 .AirportInput__spell {
+.fXkNax:focus ~ .c6 .AirportInput__spell {
   display: block;
 }
 
@@ -2046,7 +2044,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
 .c2 {
@@ -2207,7 +2205,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
 
 exports[`Storyshots ControlsGroup Inputs group 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -2228,27 +2226,27 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   fill: transparent;
 }
 
-.fuOTcr .c11 {
+.gwvqAl .c11 {
   fill: #007acc;
 }
 
-.fuOTcr:hover .c11 {
+.gwvqAl:hover .c11 {
   fill: rgba(0,122,204,0.8);
 }
 
-.cahOUV .c11 {
+.cigUOu .c11 {
   fill: #007acc;
 }
 
-.cahOUV:hover .c11 {
+.cigUOu:hover .c11 {
   fill: rgba(0,122,204,0.8);
 }
 
-.gOHtcC .c11 {
+.kKnEAB .c11 {
   fill: #007acc;
 }
 
-.gOHtcC:hover .c11 {
+.kKnEAB:hover .c11 {
   fill: rgba(0,122,204,0.8);
 }
 
@@ -2307,7 +2305,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   border-color: #ff9100;
 }
 
-.iXGZpy:focus ~ .c4 .AirportInput__spell {
+.gCDWtp:focus ~ .c4 .AirportInput__spell {
   display: block;
 }
 
@@ -2637,7 +2635,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
 .c7 {
@@ -2681,7 +2679,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
 .c1 {
@@ -2731,7 +2729,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   -webkit-transfrom: translateZ(0);
   -ms-transfrom: translateZ(0);
   transfrom: translateZ(0);
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #ffffff 15%, #ffffff 85%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg,rgba(255,255,255,0) 0%,#ffffff 15%,#ffffff 85%,rgba(255,255,255,0) 100%);
   opacity: 0;
 }
 
@@ -2825,7 +2823,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
 
 exports[`Storyshots DateRange DateRange 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -2845,7 +2843,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-letter-spacing: -.21px;
   -ms-letter-spacing: -.21px;
   letter-spacing: -.21px;
-  -webkit-text-align: center;
   text-align: center;
   cursor: pointer;
   padding: 0 0 2px 0;
@@ -2942,7 +2939,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
 }
 
 .c1 .CalendarMonth {
-  -webkit-text-align: center;
   text-align: center;
   padding: 0 13px;
   vertical-align: top;
@@ -2986,9 +2982,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-letter-spacing: -.21px;
   -ms-letter-spacing: -.21px;
   letter-spacing: -.21px;
-  -webkit-text-align: center;
   text-align: center;
-  -webkit-text-transform: capitalize;
   text-transform: capitalize;
   margin: 0;
   padding: 22px 0 54px;
@@ -3008,7 +3002,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
 .c1 .CalendarMonthGrid {
   background: #fff;
   z-index: 0;
-  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -3043,7 +3036,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-text-align: center;
   text-align: center;
   width: 30px;
   height: 30px;
@@ -3244,7 +3236,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
 .c1 .DayPicker {
   background: #ffffff;
   position: relative;
-  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -3268,7 +3259,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
   top: 60px;
   z-index: 2;
   padding: 0 13px;
-  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -3289,7 +3279,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-letter-spacing: -.21px;
   -ms-letter-spacing: -.21px;
   letter-spacing: -.21px;
-  -webkit-text-align: center;
   text-align: center;
 }
 
@@ -3323,7 +3312,6 @@ exports[`Storyshots DateRange DateRange 1`] = `
   margin-left: 0;
   left: 0;
   width: 100%;
-  -webkit-text-align: center;
   text-align: center;
 }
 
@@ -3342,7 +3330,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   width: 100%;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width:599px) {
   .responsive .c1 .c4__picker,
   .responsive-booking .c1 .c4__picker {
     top: initial;
@@ -3444,7 +3432,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
 
 exports[`Storyshots Dropdown Defalut 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -3502,7 +3490,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
   display: inline-flex;
 }
 
-.c1 .Dropdown__DropdownContent-s5q41kj-1 {
+.c1 .Dropdown__DropdownContent-eersDB {
   left: auto;
   width: 300px;
 }
@@ -3538,7 +3526,7 @@ exports[`Storyshots Dropdown Defalut 1`] = `
 
 exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -3587,7 +3575,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   order: 0;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0;
@@ -3598,7 +3586,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c2,
   .responsive-booking .c2 {
     max-width: none;
@@ -3606,7 +3594,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c3,
   .responsive-booking .c3 {
     width: auto;
@@ -3668,7 +3656,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 
 exports[`Storyshots Fluid layout Single column 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -3684,7 +3672,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
   max-width: 966px;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0 18px;
@@ -3724,7 +3712,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
 
 exports[`Storyshots Fluid layout Two columns 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -3770,7 +3758,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   margin-left: 42px;
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0;
@@ -3781,7 +3769,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c2,
   .responsive-booking .c2 {
     max-width: none;
@@ -3789,7 +3777,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c3,
   .responsive-booking .c3 {
     width: auto;
@@ -3851,7 +3839,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 
 exports[`Storyshots FormItem default 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -3903,7 +3891,7 @@ exports[`Storyshots FormItem default 1`] = `
 
 exports[`Storyshots Icon Icon with fill 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -3941,7 +3929,7 @@ exports[`Storyshots Icon Icon with fill 1`] = `
 
 exports[`Storyshots Input default 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -4074,7 +4062,7 @@ exports[`Storyshots Input default 1`] = `
 
 exports[`Storyshots Input disabled 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -4209,7 +4197,7 @@ exports[`Storyshots Input disabled 1`] = `
 
 exports[`Storyshots Input error 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -4370,7 +4358,7 @@ exports[`Storyshots Input error 1`] = `
 
 exports[`Storyshots Input success 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -4504,7 +4492,7 @@ exports[`Storyshots Input success 1`] = `
 
 exports[`Storyshots PassengerPicker Defalut 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -4540,6 +4528,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   transform: translateZ(0);
   border-radius: 15px;
   padding: 6.0px;
+  -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: opacity,box-shadow;
   transition-property: opacity,box-shadow;
@@ -4561,6 +4550,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   transform: translateZ(0);
   border-radius: 15px;
   padding: 6.0px;
+  -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: opacity,box-shadow;
   transition-property: opacity,box-shadow;
@@ -4626,7 +4616,6 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   margin: 0;
   font-size: 11px;
   line-height: 16px;
-  -webkit-text-transform: uppercase;
   text-transform: uppercase;
   -webkit-letter-spacing: .6px;
   -moz-letter-spacing: .6px;
@@ -4743,7 +4732,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
 
 exports[`Storyshots PriceVariantsButton default 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -4847,7 +4836,6 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   padding: 6px 0;
   font-size: 11px;
   line-height: 16px;
-  -webkit-text-transform: uppercase;
   text-transform: uppercase;
   color: #f2f2f2;
 }
@@ -5075,7 +5063,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
 
 exports[`Storyshots Utils Responsive only 1`] = `
 .c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -5201,35 +5189,35 @@ exports[`Storyshots Utils Responsive only 1`] = `
   background: black;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width:1000px) {
   .responsive .c1,
   .responsive-booking .c1 {
     display: initial;
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width:599px) {
   .responsive .c7,
   .responsive-booking .c7 {
     display: initial;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 999px) {
+@media screen and (min-width:600px) and (max-width:999px) {
   .responsive .c5,
   .responsive-booking .c5 {
     display: initial;
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width:999px) {
   .responsive .c3,
   .responsive-booking .c3 {
     display: initial;
   }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width:599px) {
   .responsive .c9,
   .responsive-booking .c9 {
     display: none;
@@ -5283,6 +5271,230 @@ exports[`Storyshots Utils Responsive only 1`] = `
         className="c10"
       >
         Not mobile
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Utils Typography 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  -webkit-letter-spacing: -1.2px;
+  -moz-letter-spacing: -1.2px;
+  -ms-letter-spacing: -1.2px;
+  letter-spacing: -1.2px;
+  margin: 0;
+}
+
+.c2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 38px;
+  -webkit-letter-spacing: -1px;
+  -moz-letter-spacing: -1px;
+  -ms-letter-spacing: -1px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.c3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 34px;
+  -webkit-letter-spacing: -.6px;
+  -moz-letter-spacing: -.6px;
+  -ms-letter-spacing: -.6px;
+  letter-spacing: -.6px;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  -webkit-letter-spacing: -.4px;
+  -moz-letter-spacing: -.4px;
+  -ms-letter-spacing: -.4px;
+  letter-spacing: -.4px;
+  margin: 0;
+}
+
+.c5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  -webkit-letter-spacing: -.2px;
+  -moz-letter-spacing: -.2px;
+  -ms-letter-spacing: -.2px;
+  letter-spacing: -.2px;
+  margin: 0;
+}
+
+.c6 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  -webkit-letter-spacing: -.1px;
+  -moz-letter-spacing: -.1px;
+  -ms-letter-spacing: -.1px;
+  letter-spacing: -.1px;
+  margin: 0;
+}
+
+.c8 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.c9 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.c7 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.c11 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  -webkit-letter-spacing: .4px;
+  -moz-letter-spacing: .4px;
+  -ms-letter-spacing: .4px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.c12 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  -webkit-letter-spacing: .5px;
+  -moz-letter-spacing: .5px;
+  -ms-letter-spacing: .5px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.c10 {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.6px;
+  -moz-letter-spacing: 0.6px;
+  -ms-letter-spacing: 0.6px;
+  letter-spacing: 0.6px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-around",
+        "width": "100vw",
+      }
+    }
+  >
+    <div>
+      <h1
+        className="c1"
+      >
+        H1: Пересадка 22ч 20 мин
+      </h1>
+      <h2
+        className="c2"
+      >
+        H2: Пересадка 22ч 20 мин
+      </h2>
+      <h3
+        className="c3"
+      >
+        H3: Пересадка 22ч 20 мин
+      </h3>
+      <h4
+        className="c4"
+      >
+        H4: Пересадка 22ч 20 мин
+      </h4>
+      <h5
+        className="c5"
+      >
+        H5: Пересадка 22ч 20 мин
+      </h5>
+      <h6
+        className="c6"
+      >
+        H6: Пересадка 22ч 20 мин
+      </h6>
+    </div>
+    <div>
+      <div>
+        <span
+          className="c7"
+        >
+          TextLarge: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <span
+          className="c8"
+        >
+          Text: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <span
+          className="c9"
+        >
+          TextSmall: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <span
+          className="c10"
+        >
+          Caption: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <h1
+          className="c11"
+        >
+          UppercaseLarge: Пересадка 22ч 20 мин
+        </h1>
+      </div>
+      <div>
+        <h1
+          className="c12"
+        >
+          Uppercase: Пересадка 22ч 20 мин
+        </h1>
       </div>
     </div>
   </div>
