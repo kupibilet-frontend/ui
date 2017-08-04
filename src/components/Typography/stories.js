@@ -13,64 +13,51 @@ import UppercaseLarge from './UppercaseLarge'
 import Uppercase from './Uppercase'
 import Caption from './Caption'
 
-storiesOf('Typography', module)
-  .addWithInfo('H1', () => (
-    <H1>
-      Пересадка 22ч 20 мин
-    </H1>
-  ))
-  .addWithInfo('H2', () => (
-    <H2>
-      Пересадка 22ч 20 мин
-    </H2>
-  ))
-  .addWithInfo('H3', () => (
-    <H3>
-      Пересадка 22ч 20 мин
-    </H3>
-  ))
-  .addWithInfo('H4', () => (
-    <H4>
-      Пересадка 22ч 20 мин
-    </H4>
-  ))
-  .addWithInfo('H5', () => (
-    <H5>
-      Пересадка 22ч 20 мин
-    </H5>
-  ))
-  .addWithInfo('H6', () => (
-    <H6>
-      Пересадка 22ч 20 мин
-    </H6>
-  ))
-  .addWithInfo('TextLarge', () => (
-    <TextLarge>
-      Пересадка 22ч 20 мин
-    </TextLarge>
-  ))
-  .addWithInfo('Text', () => (
-    <Text>
-      Пересадка 22ч 20 мин
-    </Text>
-  ))
-  .addWithInfo('TextSmall', () => (
-    <TextSmall>
-      Пересадка 22ч 20 мин
-    </TextSmall>
-  ))
-  .addWithInfo('UppercaseLarge', () => (
-    <UppercaseLarge>
-      Пересадка 22ч 20 мин
-    </UppercaseLarge>
-  ))
-  .addWithInfo('Uppercase', () => (
-    <Uppercase>
-      Пересадка 22ч 20 мин
-    </Uppercase>
-  ))
-  .addWithInfo('Caption', () => (
-    <Caption>
-      Пересадка 22ч 20 мин
-    </Caption>
+const headers = (
+  <div>
+    <H1>H1: Пересадка 22ч 20 мин</H1>
+    <H2>H2: Пересадка 22ч 20 мин</H2>
+    <H3>H3: Пересадка 22ч 20 мин</H3>
+    <H4>H4: Пересадка 22ч 20 мин</H4>
+    <H5>H5: Пересадка 22ч 20 мин</H5>
+    <H6>H6: Пересадка 22ч 20 мин</H6>
+  </div>
+)
+
+const texts = (
+  <div>
+    <div>
+      <TextLarge>TextLarge: Пересадка 22ч 20 мин</TextLarge>
+    </div>
+    <div>
+      <Text>Text: Пересадка 22ч 20 мин</Text>
+    </div>
+    <div>
+      <TextSmall>TextSmall: Пересадка 22ч 20 мин</TextSmall>
+    </div>
+    <div>
+      <Caption>Caption: Пересадка 22ч 20 мин</Caption>
+    </div>
+    <div>
+      <UppercaseLarge>UppercaseLarge: Пересадка 22ч 20 мин</UppercaseLarge>
+    </div>
+    <div>
+      <Uppercase>Uppercase: Пересадка 22ч 20 мин</Uppercase>
+    </div>
+  </div>
+)
+
+storiesOf('Utils', module)
+  .addWithInfo('Typography', () => (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        width: '100vw',
+        alignItems: 'center',
+      }}
+    >
+      { headers }
+      { texts }
+    </div>
   ))
