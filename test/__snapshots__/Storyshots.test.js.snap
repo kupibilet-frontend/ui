@@ -5130,7 +5130,8 @@ exports[`Storyshots Typography H1 1`] = `
   -moz-letter-spacing: -1.2px;
   -ms-letter-spacing: -1.2px;
   letter-spacing: -1.2px;
-  padding-top: 12px margin-bottom:24px;
+  padding-top: 12px;
+  margin-bottom: 24px;
 }
 
 <div
