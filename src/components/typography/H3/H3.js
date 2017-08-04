@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const H3 = styled.h3`
@@ -9,9 +8,5 @@ const H3 = styled.h3`
   padding-top: 24px;
   margin-bottom: 18px;
 `
-
-H3.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default H3

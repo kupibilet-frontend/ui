@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Uppercase20 = styled.h1`
@@ -10,9 +9,5 @@ const Uppercase20 = styled.h1`
   letter-spacing: 0.4px;
   text-transform: uppercase;
 `
-
-Uppercase20.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Uppercase20

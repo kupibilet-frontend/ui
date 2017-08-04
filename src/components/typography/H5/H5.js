@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const H5 = styled.h5`
@@ -9,9 +8,5 @@ const H5 = styled.h5`
   margin-bottom: 12px;
   letter-spacing: -0.2px;
 `
-
-H5.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default H5
