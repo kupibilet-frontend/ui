@@ -5073,406 +5073,6 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Typography Caption 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 16px;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-}
-
-<div
-  className="c0"
->
-  <span
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </span>
-</div>
-`;
-
-exports[`Storyshots Typography H1 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 44px;
-  -webkit-letter-spacing: -1.2px;
-  -moz-letter-spacing: -1.2px;
-  -ms-letter-spacing: -1.2px;
-  letter-spacing: -1.2px;
-}
-
-<div
-  className="c0"
->
-  <h1
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h1>
-</div>
-`;
-
-exports[`Storyshots Typography H2 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 38px;
-  -webkit-letter-spacing: -1px;
-  -moz-letter-spacing: -1px;
-  -ms-letter-spacing: -1px;
-  letter-spacing: -1px;
-}
-
-<div
-  className="c0"
->
-  <h2
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h2>
-</div>
-`;
-
-exports[`Storyshots Typography H3 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 34px;
-  -webkit-letter-spacing: -0.6px;
-  -moz-letter-spacing: -0.6px;
-  -ms-letter-spacing: -0.6px;
-  letter-spacing: -0.6px;
-}
-
-<div
-  className="c0"
->
-  <h3
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h3>
-</div>
-`;
-
-exports[`Storyshots Typography H4 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 28px;
-  -webkit-letter-spacing: -0.4px;
-  -moz-letter-spacing: -0.4px;
-  -ms-letter-spacing: -0.4px;
-  letter-spacing: -0.4px;
-}
-
-<div
-  className="c0"
->
-  <h4
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h4>
-</div>
-`;
-
-exports[`Storyshots Typography H5 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  -webkit-letter-spacing: -0.2px;
-  -moz-letter-spacing: -0.2px;
-  -ms-letter-spacing: -0.2px;
-  letter-spacing: -0.2px;
-}
-
-<div
-  className="c0"
->
-  <h5
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h5>
-</div>
-`;
-
-exports[`Storyshots Typography H6 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  -webkit-letter-spacing: -0.1px;
-  -moz-letter-spacing: -0.1px;
-  -ms-letter-spacing: -0.1px;
-  letter-spacing: -0.1px;
-}
-
-<div
-  className="c0"
->
-  <h6
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h6>
-</div>
-`;
-
-exports[`Storyshots Typography Text 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-<div
-  className="c0"
->
-  <span
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </span>
-</div>
-`;
-
-exports[`Storyshots Typography TextLarge 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-<div
-  className="c0"
->
-  <span
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </span>
-</div>
-`;
-
-exports[`Storyshots Typography TextSmall 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-<div
-  className="c0"
->
-  <span
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </span>
-</div>
-`;
-
-exports[`Storyshots Typography Uppercase 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  -webkit-letter-spacing: 0.5px;
-  -moz-letter-spacing: 0.5px;
-  -ms-letter-spacing: 0.5px;
-  letter-spacing: 0.5px;
-  -webkit-text-transform: uppercase;
-  text-transform: uppercase;
-}
-
-<div
-  className="c0"
->
-  <h1
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h1>
-</div>
-`;
-
-exports[`Storyshots Typography UppercaseLarge 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  -webkit-letter-spacing: 0.4px;
-  -moz-letter-spacing: 0.4px;
-  -ms-letter-spacing: 0.4px;
-  letter-spacing: 0.4px;
-  -webkit-text-transform: uppercase;
-  text-transform: uppercase;
-}
-
-<div
-  className="c0"
->
-  <h1
-    className="c1"
-  >
-    Пересадка 22ч 20 мин
-  </h1>
-</div>
-`;
-
 exports[`Storyshots Utils Responsive only 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
@@ -5683,6 +5283,232 @@ exports[`Storyshots Utils Responsive only 1`] = `
         className="c10"
       >
         Not mobile
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Utils Typography 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  -webkit-letter-spacing: -1.2px;
+  -moz-letter-spacing: -1.2px;
+  -ms-letter-spacing: -1.2px;
+  letter-spacing: -1.2px;
+  margin: 0;
+}
+
+.c2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 38px;
+  -webkit-letter-spacing: -1px;
+  -moz-letter-spacing: -1px;
+  -ms-letter-spacing: -1px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.c3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 34px;
+  -webkit-letter-spacing: -.6px;
+  -moz-letter-spacing: -.6px;
+  -ms-letter-spacing: -.6px;
+  letter-spacing: -.6px;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  -webkit-letter-spacing: -.4px;
+  -moz-letter-spacing: -.4px;
+  -ms-letter-spacing: -.4px;
+  letter-spacing: -.4px;
+  margin: 0;
+}
+
+.c5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  -webkit-letter-spacing: -.2px;
+  -moz-letter-spacing: -.2px;
+  -ms-letter-spacing: -.2px;
+  letter-spacing: -.2px;
+  margin: 0;
+}
+
+.c6 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  -webkit-letter-spacing: -.1px;
+  -moz-letter-spacing: -.1px;
+  -ms-letter-spacing: -.1px;
+  letter-spacing: -.1px;
+  margin: 0;
+}
+
+.c8 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.c9 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.c7 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.c11 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  -webkit-letter-spacing: .4px;
+  -moz-letter-spacing: .4px;
+  -ms-letter-spacing: .4px;
+  letter-spacing: .4px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.c12 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  -webkit-letter-spacing: .5px;
+  -moz-letter-spacing: .5px;
+  -ms-letter-spacing: .5px;
+  letter-spacing: .5px;
+  -webkit-text-transform: uppercase;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.c10 {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  -webkit-letter-spacing: 0.6px;
+  -moz-letter-spacing: 0.6px;
+  -ms-letter-spacing: 0.6px;
+  letter-spacing: 0.6px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-around",
+        "width": "100vw",
+      }
+    }
+  >
+    <div>
+      <h1
+        className="c1"
+      >
+        H1: Пересадка 22ч 20 мин
+      </h1>
+      <h2
+        className="c2"
+      >
+        H2: Пересадка 22ч 20 мин
+      </h2>
+      <h3
+        className="c3"
+      >
+        H3: Пересадка 22ч 20 мин
+      </h3>
+      <h4
+        className="c4"
+      >
+        H4: Пересадка 22ч 20 мин
+      </h4>
+      <h5
+        className="c5"
+      >
+        H5: Пересадка 22ч 20 мин
+      </h5>
+      <h6
+        className="c6"
+      >
+        H6: Пересадка 22ч 20 мин
+      </h6>
+    </div>
+    <div>
+      <div>
+        <span
+          className="c7"
+        >
+          TextLarge: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <span
+          className="c8"
+        >
+          Text: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <span
+          className="c9"
+        >
+          TextSmall: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <span
+          className="c10"
+        >
+          Caption: Пересадка 22ч 20 мин
+        </span>
+      </div>
+      <div>
+        <h1
+          className="c11"
+        >
+          UppercaseLarge: Пересадка 22ч 20 мин
+        </h1>
+      </div>
+      <div>
+        <h1
+          className="c12"
+        >
+          Uppercase: Пересадка 22ч 20 мин
+        </h1>
       </div>
     </div>
   </div>
