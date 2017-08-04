@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const H6 = styled.h6`
@@ -9,9 +8,5 @@ const H6 = styled.h6`
   margin-bottom: 12px;
   letter-spacing: -0.1px;
 `
-
-H6.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default H6

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Text18 = styled.span`
@@ -8,9 +7,5 @@ const Text18 = styled.span`
   padding-top: 18px;
   margin-bottom: 12px;
 `
-
-Text18.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Text18

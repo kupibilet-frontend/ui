@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Text14 = styled.span`
@@ -8,9 +7,5 @@ const Text14 = styled.span`
   padding-top: 6px;
   margin-bottom: 6px;
 `
-
-Text14.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Text14
