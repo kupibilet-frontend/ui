@@ -1,13 +1,11 @@
 import styled from 'styled-components'
 
-const Uppercase20 = styled.h1`
+const UppercaseLarge = styled.h1`
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  padding-top: 18px;
-  margin-bottom: 12px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
 `
 
-export default Uppercase20
+export default UppercaseLarge
