@@ -2,10 +2,15 @@
 
 exports[`media-queries 1`] = `
 Array [
-  ".class{",
-  ".responsive &,.responsive-booking &{@media ",
+  "
+    .class {
+      ",
+  "
+    .responsive &, .responsive-booking & {
+      @media ",
   "screen and (max-width: 599px)",
-  "{",
+  " {
+        ",
   "
         background: black;
 
@@ -13,11 +18,19 @@ Array [
           background: white;
         }
       ",
-  "}}",
-  " ",
-  ".responsive &,.responsive-booking &{@media ",
+  "
+      }
+    }
+  ",
+  "
+
+      ",
+  "
+    .responsive &, .responsive-booking & {
+      @media ",
   "screen and (min-width: 600px) and (max-width: 999px)",
-  "{",
+  " {
+        ",
   "
         background: black;
 
@@ -25,11 +38,19 @@ Array [
           background: white;
         }
       ",
-  "}}",
-  " ",
-  ".responsive &,.responsive-booking &{@media ",
+  "
+      }
+    }
+  ",
+  "
+
+      ",
+  "
+    .responsive &, .responsive-booking & {
+      @media ",
   "screen and (min-width: 1000px)",
-  "{",
+  " {
+        ",
   "
         background: black;
 
@@ -37,7 +58,12 @@ Array [
           background: white;
         }
       ",
-  "}}",
-  "}",
+  "
+      }
+    }
+  ",
+  "
+    }
+  ",
 ]
 `;
