@@ -126,7 +126,7 @@ const PriceVariantsButton = (props: Props) => {
           }
         </Content>
         <Content>
-          <Price>{price} ₽</Price>
+          <Price>{price}</Price>
           {(hasIcons && iconsPosition === 'bottom') &&
             <div>
               {getIcons(icons)}
