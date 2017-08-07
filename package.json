@@ -72,7 +72,7 @@
     "@kupibilet/react-dates": "~8.2.0",
     "@kupibilet/react-media": "^1.5.1",
     "rc-collapse": "~1.7.0",
-    "rc-tabs": "^8.1.1",
+    "rc-tabs": "^9.0.0",
     "react-autosuggest": "^9.0.0",
     "section-iterator": "^2.0.0"
   },
