@@ -51,7 +51,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
   left: 0;
   min-width: 320px;
   max-width: 540px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  box-shadow: 0 3px 9px 0 rgba(98, 112, 139, .7);
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
@@ -279,17 +279,17 @@ exports[`Storyshots Autocomplete Airport 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width: 599px) {
   .responsive .c1 .c9--open,
   .responsive-booking .c1 .c9--open {
     position: static;
   }
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width: 599px) {
   .responsive .c1 .react-autosuggest__suggestions-list,
   .responsive-booking .c1 .react-autosuggest__suggestions-list {
     top: initial;
@@ -439,6 +439,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -495,8 +496,8 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   box-shadow: inset 0 0 0 1px #b1bdcc;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
+  -webkit-transition-property: background, border;
+  transition-property: background, border;
   background: #ffffff;
   border-radius: 3px;
 }
@@ -534,7 +535,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   border-color: #38afff;
 }
 
-.c4:hover .c8 {
+;  .c4:hover .c8 {
   color: #007acc;
 }
 
@@ -723,6 +724,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -760,6 +762,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -926,8 +929,8 @@ exports[`Storyshots Buttons Default 1`] = `
   padding-left: 15px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c1:hover {
@@ -996,8 +999,8 @@ exports[`Storyshots Buttons Disabled 1`] = `
   padding-left: 15px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
   opacity: .2;
 }
 
@@ -1063,10 +1066,9 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
   transform: translateZ(0);
   border-radius: 21px;
   padding: 11.0px;
-  -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c1:hover {
@@ -1155,8 +1157,8 @@ exports[`Storyshots Buttons Sizes 1`] = `
   padding-left: 21px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c1:hover {
@@ -1235,8 +1237,8 @@ exports[`Storyshots Buttons With icons 1`] = `
   padding-left: 9.4px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c1:hover {
@@ -1347,8 +1349,8 @@ exports[`Storyshots Checkbox default 1`] = `
   box-shadow: inset 0 0 0 1px #b1bdcc;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
+  -webkit-transition-property: background, border;
+  transition-property: background, border;
   background: #ffffff;
   border-radius: 3px;
 }
@@ -1386,7 +1388,7 @@ exports[`Storyshots Checkbox default 1`] = `
   border-color: #38afff;
 }
 
-.c1:hover .c5 {
+;  .c1:hover .c5 {
   color: #007acc;
 }
 
@@ -1451,8 +1453,8 @@ exports[`Storyshots Checkbox disabled 1`] = `
   box-shadow: inset 0 0 0 1px #dedede;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
+  -webkit-transition-property: background, border;
+  transition-property: background, border;
   background: #f2f2f2;
   border-radius: 3px;
 }
@@ -1471,7 +1473,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
   border-color: #38afff;
 }
 
-.hinpbq:hover .c5 {
+;  .hinpbq:hover .c5 {
   color: #007acc;
 }
 
@@ -1499,7 +1501,7 @@ exports[`Storyshots Checkbox disabled 1`] = `
   border-color: #dedede;
 }
 
-.c1:hover .c5 {
+;  .c1:hover .c5 {
   color: #b3b3b3;
 }
 
@@ -2044,7 +2046,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
 }
 
 .c2 {
@@ -2066,8 +2068,8 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   padding-left: 21px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c2:hover {
@@ -2099,8 +2101,8 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   padding-left: 13.1px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c10:hover {
@@ -2635,7 +2637,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
 }
 
 .c7 {
@@ -2679,7 +2681,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   left: -12px;
   width: 12px;
   height: 100%;
-  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 100%);
 }
 
 .c1 {
@@ -2729,7 +2731,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   -webkit-transfrom: translateZ(0);
   -ms-transfrom: translateZ(0);
   transfrom: translateZ(0);
-  background: linear-gradient(180deg,rgba(255,255,255,0) 0%,#ffffff 15%,#ffffff 85%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #ffffff 15%, #ffffff 85%, rgba(255,255,255,0) 100%);
   opacity: 0;
 }
 
@@ -2843,6 +2845,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-letter-spacing: -.21px;
   -ms-letter-spacing: -.21px;
   letter-spacing: -.21px;
+  -webkit-text-align: center;
   text-align: center;
   cursor: pointer;
   padding: 0 0 2px 0;
@@ -2939,6 +2942,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
 }
 
 .c1 .CalendarMonth {
+  -webkit-text-align: center;
   text-align: center;
   padding: 0 13px;
   vertical-align: top;
@@ -2982,7 +2986,9 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-letter-spacing: -.21px;
   -ms-letter-spacing: -.21px;
   letter-spacing: -.21px;
+  -webkit-text-align: center;
   text-align: center;
+  -webkit-text-transform: capitalize;
   text-transform: capitalize;
   margin: 0;
   padding: 22px 0 54px;
@@ -3002,6 +3008,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
 .c1 .CalendarMonthGrid {
   background: #fff;
   z-index: 0;
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -3036,6 +3043,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-align: center;
   text-align: center;
   width: 30px;
   height: 30px;
@@ -3107,7 +3115,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
 
 .c1 .c6 .screen-reader-only {
   border: 0;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -3236,6 +3244,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
 .c1 .DayPicker {
   background: #ffffff;
   position: relative;
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -3259,6 +3268,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   top: 60px;
   z-index: 2;
   padding: 0 13px;
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -3279,6 +3289,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   -moz-letter-spacing: -.21px;
   -ms-letter-spacing: -.21px;
   letter-spacing: -.21px;
+  -webkit-text-align: center;
   text-align: center;
 }
 
@@ -3312,6 +3323,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   margin-left: 0;
   left: 0;
   width: 100%;
+  -webkit-text-align: center;
   text-align: center;
 }
 
@@ -3330,7 +3342,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   width: 100%;
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width: 599px) {
   .responsive .c1 .c4__picker,
   .responsive-booking .c1 .c4__picker {
     top: initial;
@@ -3462,8 +3474,8 @@ exports[`Storyshots Dropdown Defalut 1`] = `
   padding-left: 15px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c3:hover {
@@ -3575,7 +3587,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   order: 0;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0;
@@ -3586,7 +3598,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c2,
   .responsive-booking .c2 {
     max-width: none;
@@ -3594,7 +3606,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c3,
   .responsive-booking .c3 {
     width: auto;
@@ -3672,7 +3684,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
   max-width: 966px;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0 18px;
@@ -3758,7 +3770,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   margin-left: 42px;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0;
@@ -3769,7 +3781,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c2,
   .responsive-booking .c2 {
     max-width: none;
@@ -3777,7 +3789,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c3,
   .responsive-booking .c3 {
     width: auto;
@@ -4009,8 +4021,8 @@ exports[`Storyshots Input default 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color, box-shadow;
+  transition-property: border-color, box-shadow;
   border-width: 1px;
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
@@ -4142,8 +4154,8 @@ exports[`Storyshots Input disabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color, box-shadow;
+  transition-property: border-color, box-shadow;
   border-width: 1px;
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
@@ -4299,8 +4311,8 @@ exports[`Storyshots Input error 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color, box-shadow;
+  transition-property: border-color, box-shadow;
   border-width: 1px;
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
@@ -4438,8 +4450,8 @@ exports[`Storyshots Input success 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color, box-shadow;
+  transition-property: border-color, box-shadow;
   border-width: 1px;
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
@@ -4528,10 +4540,9 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   transform: translateZ(0);
   border-radius: 15px;
   padding: 6.0px;
-  -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
   opacity: .2;
 }
 
@@ -4550,10 +4561,9 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   transform: translateZ(0);
   border-radius: 15px;
   padding: 6.0px;
-  -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
+  -webkit-transition-property: opacity, box-shadow;
+  transition-property: opacity, box-shadow;
 }
 
 .c11:hover {
@@ -4616,6 +4626,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   margin: 0;
   font-size: 11px;
   line-height: 16px;
+  -webkit-text-transform: uppercase;
   text-transform: uppercase;
   -webkit-letter-spacing: .6px;
   -moz-letter-spacing: .6px;
@@ -4790,8 +4801,8 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   cursor: pointer;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color, box-shadow;
+  transition-property: border-color, box-shadow;
   width: 180px;
 }
 
@@ -4822,8 +4833,8 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   cursor: pointer;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color, box-shadow;
+  transition-property: border-color, box-shadow;
   width: 180px;
 }
 
@@ -4836,6 +4847,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   padding: 6px 0;
   font-size: 11px;
   line-height: 16px;
+  -webkit-text-transform: uppercase;
   text-transform: uppercase;
   color: #f2f2f2;
 }
@@ -4919,7 +4931,6 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
             className="c7"
           >
             12 234 ₽
-             ₽
           </span>
         </div>
       </div>
@@ -4954,7 +4965,6 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
             className="c7"
           >
             12 234 ₽
-             ₽
           </span>
           <div>
             <svg
@@ -5018,7 +5028,6 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
             className="c7"
           >
             12 234 ₽
-             ₽
           </span>
           <div>
             <svg
@@ -5189,35 +5198,35 @@ exports[`Storyshots Utils Responsive only 1`] = `
   background: black;
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width: 1000px) {
   .responsive .c1,
   .responsive-booking .c1 {
     display: initial;
   }
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width: 599px) {
   .responsive .c7,
   .responsive-booking .c7 {
     display: initial;
   }
 }
 
-@media screen and (min-width:600px) and (max-width:999px) {
+@media screen and (min-width: 600px) and (max-width: 999px) {
   .responsive .c5,
   .responsive-booking .c5 {
     display: initial;
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width: 999px) {
   .responsive .c3,
   .responsive-booking .c3 {
     display: initial;
   }
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width: 599px) {
   .responsive .c9,
   .responsive-booking .c9 {
     display: none;
@@ -5382,6 +5391,7 @@ exports[`Storyshots Utils Typography 1`] = `
   -moz-letter-spacing: .4px;
   -ms-letter-spacing: .4px;
   letter-spacing: .4px;
+  -webkit-text-transform: uppercase;
   text-transform: uppercase;
   margin: 0;
 }
@@ -5394,6 +5404,7 @@ exports[`Storyshots Utils Typography 1`] = `
   -moz-letter-spacing: .5px;
   -ms-letter-spacing: .5px;
   letter-spacing: .5px;
+  -webkit-text-transform: uppercase;
   text-transform: uppercase;
   margin: 0;
 }
