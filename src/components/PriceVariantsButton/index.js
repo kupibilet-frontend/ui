@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
-import Icon from 'components/Icon'
+import Icon, { IconWrapper } from 'components/Icon'
 import { switchTransition } from 'utils/transitions'
 import { borderSmall } from 'utils/borders'
 
@@ -10,7 +10,7 @@ const Root = styled.div`
   flex-direction: column;
 
   & + & {
-    margin-left: 10px;
+    margin-left: 12px;
   }
 `
 
@@ -52,7 +52,7 @@ const Content = styled.div`
   justify-content: space-between;
   margin-bottom: 6px;
 
-  & ${StyledIcon} {
+  & ${IconWrapper} {
     margin-left: 6px;
   }
 `
@@ -77,20 +77,31 @@ type Props = {
   onChange?: (Event) => void,
   title: string,
   price: string,
-  icons: string[],
+  icons: any[],
   iconsPosition?: string,
   description?: string,
 }
 
 const getIcons = (icons) => (
-  icons.map((item) => (
-    <StyledIcon
-      className="block-icon"
-      key={item}
-      name={item}
+  icons.map((item: string | Object) => {
+    let striked: boolean
+    let name: string
+
+    if (typeof item === 'string') {
+      striked = false
+      name = item
+    } else {
+      striked = item.striked
+      name = item.name
+    }
+
+    return (<StyledIcon
+      key={name}
+      name={name}
       fill="miscDark"
-    />
-  ))
+      striked={striked}
+    />)
+  })
 )
 
 const PriceVariantsButton = (props: Props) => {
@@ -147,7 +158,7 @@ PriceVariantsButton.defaultProps = {
   icons: [],
   iconsPosition: 'bottom',
   description: '',
-  onChange: null,
+  onChange: () => undefined,
 }
 
 export default PriceVariantsButton
