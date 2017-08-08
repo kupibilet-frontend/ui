@@ -28,7 +28,7 @@ const IconSvg = styled.svg`
 export const IconWrapper = styled.span`
   display: inline-flex;
 
-  ${({ striked }) => {
+  ${({ striked, theme }) => {
     if (striked) {
       return `
         position: relative;
@@ -36,7 +36,7 @@ export const IconWrapper = styled.span`
         &::after {
           content: '';
           position: absolute;
-          border-left: red 1px solid;
+          border-left: 1px solid ${theme.color.secondaryDarkest};
           width: 1px;
           height: 26px;
           transform: rotate(-45deg);
