@@ -7,10 +7,24 @@ import updateKnob from 'utils/updateKnob'
 const defaultValues = {
   title: 'Эконом Базовый',
   description: 'Описание',
-  price: '12 234 ₽',
+  price: '12 234',
   topIcon: ['plane'],
   bottomIcon: ['hand-baggage', 'exchange', 'return'],
   active: 1,
+  strikedIcons: [
+    {
+      name: 'hand-baggage',
+      striked: false,
+    },
+    {
+      name: 'exchange',
+      striked: true,
+    },
+    {
+      name: 'return',
+      striked: true,
+    },
+  ],
 }
 
 const onClick = (index) => updateKnob('active', 'number', index)
