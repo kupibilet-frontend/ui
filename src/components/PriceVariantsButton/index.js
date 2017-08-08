@@ -10,7 +10,7 @@ const Root = styled.div`
   flex-direction: column;
 
   & + & {
-    margin-left: 10px;
+    margin-left: 12px;
   }
 `
 
@@ -53,7 +53,7 @@ const Content = styled.div`
   margin-bottom: 6px;
 
   & ${IconWrapper} {
-    margin-left: 10px;
+    margin-left: 6px;
   }
 `
 
