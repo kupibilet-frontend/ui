@@ -25,18 +25,47 @@ const IconSvg = styled.svg`
   fill: ${({ theme, colorKeys }) => getThemeColor(theme, colorKeys.fill)};
 `
 
+export const IconWrapper = styled.span`
+  display: inline-flex;
+
+  & ${IconSvg} {
+    opacity: ${({ striked }) => (striked ? 0.6 : 1)};
+  }
+
+  ${({ striked, theme }) => {
+    if (striked) {
+      return `
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          border-left: 1px solid ${theme.color.secondaryDarkest};
+          width: 1px;
+          height: 26px;
+          transform: rotate(-45deg);
+          top: -5px;
+          left: 8px;
+        }
+      `
+    }
+  }}
+  `
+
 // Scoped inside `colorKeys` because `fill` are valid HTML attrs
-const Icon = ({ size, fill, prefix, name, style, className, inheritColor }) => (
-  <IconSvg
-    className={cn(className, { 'icon-inherit-color': inheritColor })}
-    size={size}
-    colorKeys={{
-      fill,
-    }}
-    style={style}
-  >
-    <use xlinkHref={`#${prefix}_${name}`} />
-  </IconSvg>
+const Icon = ({ size, fill, prefix, name, style, className, inheritColor, striked }) => (
+  <IconWrapper striked={striked}>
+    <IconSvg
+      className={cn(className, { 'icon-inherit-color': inheritColor })}
+      size={size}
+      colorKeys={{
+        fill,
+      }}
+      style={style}
+    >
+      <use xlinkHref={`#${prefix}_${name}`} />
+    </IconSvg>
+  </IconWrapper>
 )
 
 Icon.defaultProps = {
@@ -44,6 +73,7 @@ Icon.defaultProps = {
   size: 'normal',
   fill: null,
   inheritColor: false,
+  striked: false,
 }
 
 Icon.propTypes = {
@@ -55,6 +85,7 @@ Icon.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   inheritColor: PropTypes.bool,
+  striked: PropTypes.bool,
 }
 
 
