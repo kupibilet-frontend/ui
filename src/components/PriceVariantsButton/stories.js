@@ -8,8 +8,8 @@ const defaultValues = {
   title: 'Эконом Базовый',
   description: 'Описание',
   price: '12 234',
-  topIcon: ['plane'],
-  bottomIcon: ['hand-baggage', 'exchange', 'return'],
+  topIcons: ['plane'],
+  bottomIcons: ['hand-baggage', 'exchange', 'return'],
   active: 1,
   strikedIcons: [
     {
@@ -44,7 +44,7 @@ storiesOf('PriceVariantsButton', module)
           title="Банковской картой он-лайн"
           price={price}
           iconsPosition="top"
-          icons={defaultValues.topIcon}
+          icons={defaultValues.topIcons}
           description={description}
           onChange={onClick.bind(null, 1)}
         />
@@ -53,7 +53,7 @@ storiesOf('PriceVariantsButton', module)
           title={title}
           price={price}
           iconsPosition="bottom"
-          icons={defaultValues.bottomIcon}
+          icons={defaultValues.bottomIcons}
           description={description}
           onChange={onClick.bind(null, 2)}
         />
@@ -62,7 +62,7 @@ storiesOf('PriceVariantsButton', module)
           title="Эконом"
           price={price}
           iconsPosition="bottom"
-          icons={defaultValues.bottomIcon}
+          icons={defaultValues.strikedIcons}
           description={description}
           onChange={onClick.bind(null, 3)}
         />
