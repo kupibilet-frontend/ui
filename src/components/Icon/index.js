@@ -23,14 +23,11 @@ const IconSvg = styled.svg`
   height: ${({ size }) => sizes[size]}px;
   width: ${({ size }) => sizes[size]}px;
   fill: ${({ theme, colorKeys }) => getThemeColor(theme, colorKeys.fill)};
+  opacity: ${({ striked }) => (striked ? 0.6 : 1)};
 `
 
 export const IconWrapper = styled.span`
   display: inline-flex;
-
-  & ${IconSvg} {
-    opacity: ${({ striked }) => (striked ? 0.6 : 1)};
-  }
 
   ${({ striked, theme }) => {
     if (striked) {
@@ -62,6 +59,7 @@ const Icon = ({ size, fill, prefix, name, style, className, inheritColor, strike
         fill,
       }}
       style={style}
+      striked={striked}
     >
       <use xlinkHref={`#${prefix}_${name}`} />
     </IconSvg>
