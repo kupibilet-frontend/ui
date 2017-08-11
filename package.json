@@ -1,6 +1,6 @@
 {
   "name": "@kupibilet/ui",
-  "version": "3.0.0-2",
+  "version": "3.0.0-3",
   "description": "UI kit for kupibilet web app",
   "scripts": {
     "pretest": "yarn run lint:js --silent && yarn run lint:css --silent",
