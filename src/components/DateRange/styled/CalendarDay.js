@@ -15,9 +15,20 @@ export default css`
     padding: 0 0 2px 0;
     box-sizing: border-box;
     width: 42px;
-    height: 36px;
+    height: 36px !important;
 
     vertical-align: middle;
+  }
+
+  .CalendarDay__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    width: 42px;
+    color: inherit;
+    font: inherit;
+    display: inline-block;
   }
 
   .CalendarDay--blocked,

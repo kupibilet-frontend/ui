@@ -9,6 +9,11 @@ import addons from '@storybook/addons'
 export default function updateKnob(name, type, value) {
   const channel = addons.getChannel()
 
+  // Date and Moment are instances of Object. But NULL is'nt
+  if (type === 'date' && (value instanceof Object)) {
+    value = value.valueOf() // eslint-disable-line no-param-reassign
+  }
+
   channel.emit('addon:updateKnob:changed', { name, type, value })
 }
 
