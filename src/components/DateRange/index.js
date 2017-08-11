@@ -4,6 +4,7 @@ import cn from 'classnames'
 import moment from 'moment'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
+import getCalendarMonthWidth from '@kupibilet/react-dates/lib/utils/getCalendarMonthWidth'
 import * as consts from '@kupibilet/react-dates/constants'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
@@ -32,8 +33,9 @@ const renderHoverPlaceholder = (day) => (
   </DateInput>
 )
 
-const CalendarNav = ({ direction }) => (
+const CalendarNav = ({ direction, ...props }) => (
   <Button
+    {...props}
     icon={
       <Icon name={`arrow-${direction}`} fill="background" />
     }
@@ -51,7 +53,7 @@ class DateRangePickerWrapper extends React.PureComponent {
   state = {
     focusedInput: null,
     hoveredDate: null,
-    calendarMonthCursor: moment(),
+    calendarMonthCursor: null,
   }
 
   componentWillReceiveProps(nextProps) {
@@ -68,11 +70,8 @@ class DateRangePickerWrapper extends React.PureComponent {
     })
   }
 
-  onPrevMonthClick = () => {
-    const currentMonthCursor = moment(this.state.calendarMonthCursor)
-    currentMonthCursor.subtract(1, 'months')
-    const calendarMonthCursor = moment.max(currentMonthCursor, moment())
-
+  onPrevMonthClick = (calendarCursor) => {
+    const calendarMonthCursor = calendarCursor.startOf('month')
     this.setState({ calendarMonthCursor })
 
     if (this.props.onPrevMonthClick) {
@@ -80,11 +79,8 @@ class DateRangePickerWrapper extends React.PureComponent {
     }
   }
 
-  onNextMonthClick = () => {
-    const currentMonthCursor = moment(this.state.calendarMonthCursor)
-    currentMonthCursor.add(1, 'months')
-    const calendarMonthCursor = moment.min(currentMonthCursor, moment().add(1, 'years'))
-
+  onNextMonthClick = (calendarCursor) => {
+    const calendarMonthCursor = calendarCursor.startOf('month')
     this.setState({ calendarMonthCursor })
 
     if (this.props.onNextMonthClick) {
@@ -99,12 +95,16 @@ class DateRangePickerWrapper extends React.PureComponent {
 
   initialVisibleMonth = () => {
     const { initialVisibleMonth } = this.props
-    return initialVisibleMonth ? initialVisibleMonth() : this.state.calendarMonthCursor
-  }
-
-  modifiers = {
-    // Needed to invert arrow direction of the hovered day
-    beforeStart: (day) => day.isBefore(this.props.startDate, 'day'),
+    if (initialVisibleMonth) {
+      return initialVisibleMonth
+    }
+    if (this.state.calendarMonthCursor) {
+      return this.state.calendarMonthCursor
+    }
+    if (this.props.startDate) {
+      return this.props.startDate.startOf('month')
+    }
+    return moment()
   }
 
   // Render values as placeholder emulation when dates already picked
@@ -178,7 +178,6 @@ class DateRangePickerWrapper extends React.PureComponent {
           onPrevMonthClick={this.onPrevMonthClick}
           onNextMonthClick={this.onNextMonthClick}
           initialVisibleMonth={this.initialVisibleMonth}
-          modifiers={this.modifiers}
           renderInputText={this.renderInputText}
           customArrowIcon={<span />}
           navPrev={<CalendarNav />}
@@ -191,15 +190,18 @@ class DateRangePickerWrapper extends React.PureComponent {
   }
 }
 
+const daySize = 42 // single day cell width in px
+const dayPickerPadding = 9
+
 const DateRange = (props) => {
   const dimensions = {
-    ...DateRange.defaultProps.dimensions,
+    dayPickerWidth: getCalendarMonthWidth(daySize) + (2 * dayPickerPadding),
     ...props.dimensions,
   }
 
   return (
     <StyledDateRange dimensions={dimensions}>
-      <DateRangePickerWrapper {...props} dimensions={dimensions} />
+      <DateRangePickerWrapper {...props} />
     </StyledDateRange>
   )
 }
@@ -212,12 +214,7 @@ DateRange.defaultProps = {
   displayFormat: () => 'DD MMM',
   monthFormat: 'MMMM YYYY',
   anchorDirection: consts.ANCHOR_RIGHT,
-  dimensions: {
-    calendarMonthWidth: 320,
-    dayPickerPadding: 9,
-    monthPadding: 23,
-    dayPickerWidth: 340,
-  },
+  daySize,
   renderInputText,
 }
 
@@ -225,6 +222,7 @@ DateRange.propTypes = {
   ...DateRangePicker.propTypes,
   children: PropTypes.node,
   onDatesChange: PropTypes.func.isRequired,
+  daySize: PropTypes.number,
   meta: PropTypes.shape({
     error: PropTypes.string,
     touched: PropTypes.bool,

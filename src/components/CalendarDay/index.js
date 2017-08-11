@@ -17,10 +17,14 @@ export default class DayCell extends React.PureComponent<void, Props, void> {
     return (
       <Day>
         { day.format('D') }
-        { cost &&
-          <AvgCost isCheap={isCheap}>
-            { cost.toLocaleString(['ru', 'en-US']) }
-          </AvgCost>
+        {
+          cost ? (
+            <AvgCost isCheap={isCheap}>
+              { cost.toLocaleString(['ru', 'en-US']) }
+            </AvgCost>
+          ) : (
+            <AvgCost>&nbsp;</AvgCost>
+          )
         }
       </Day>
     )

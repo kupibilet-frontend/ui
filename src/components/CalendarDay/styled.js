@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Day = styled.span`
   display: inline-block;
+  width: 100%;
 
   font-size: 16px;
   line-height: 20px;

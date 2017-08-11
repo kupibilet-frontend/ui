@@ -69,7 +69,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
-    "@kupibilet/react-dates": "~8.2.0",
+    "@kupibilet/react-dates": "^12.3.0",
     "@kupibilet/react-media": "^1.5.1",
     "rc-collapse": "~1.7.0",
     "rc-tabs": "^9.0.3",

@@ -8,6 +8,7 @@ import DateInputStyles from './DateInput'
 import DateRangePickerStyles from './DateRangePicker'
 import DateRangePickerInputStyles from './DateRangePickerInput'
 import DayPickerStyles from './DayPicker'
+import DayPickerKeyboardShortcutsStyles from './DayPickerKeyboardShortcuts'
 
 export default styled.div`
   ${CalendarDayStyles}
@@ -18,6 +19,7 @@ export default styled.div`
   ${DateRangePickerStyles}
   ${DateRangePickerInputStyles}
   ${DayPickerStyles}
+  ${DayPickerKeyboardShortcutsStyles}
 `
 
 export const DateInput = styled.div`

@@ -2848,8 +2848,19 @@ exports[`Storyshots DateRange DateRange 1`] = `
   padding: 0 0 2px 0;
   box-sizing: border-box;
   width: 42px;
-  height: 36px;
+  height: 36px !important;
   vertical-align: middle;
+}
+
+.c1 .CalendarDay__button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  width: 42px;
+  color: inherit;
+  font: inherit;
+  display: inline-block;
 }
 
 .c1 .CalendarDay--blocked,
@@ -3015,16 +3026,16 @@ exports[`Storyshots DateRange DateRange 1`] = `
 .c1 .CalendarMonthGrid--horizontal {
   position: absolute;
   left: 9px;
-  width: 1360px;
+  width: 1356px;
 }
 
 .c1 .CalendarMonthGrid--vertical {
-  width: 340px;
+  width: 339px;
   margin: 0 auto;
 }
 
 .c1 .CalendarMonthGrid--vertical-scrollable {
-  width: 340px;
+  width: 339px;
   margin: 0 auto;
   overflow-y: scroll;
 }
@@ -3105,7 +3116,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   vertical-align: middle;
 }
 
-.c1 .c6 .screen-reader-only {
+.c1 .c6 .c8 {
   border: 0;
   clip: rect(0,0,0,0);
   height: 1px;
@@ -3255,7 +3266,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
 .c1 .DayPicker__week-header {
   color: #b3b3b3;
   position: absolute;
-  width: 340px;
+  width: 339px;
   top: 60px;
   z-index: 2;
   padding: 0 13px;
@@ -3283,7 +3294,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
 }
 
 .c1 .DayPicker--vertical .DayPicker__week-header {
-  margin-left: -170px;
+  margin-left: -169.5px;
   left: 50%;
 }
 
@@ -3330,6 +3341,11 @@ exports[`Storyshots DateRange DateRange 1`] = `
   width: 100%;
 }
 
+.c1 .DayPickerKeyboardShortcuts__show,
+.c1 .DayPickerKeyboardShortcuts__panel {
+  display: none;
+}
+
 @media screen and (max-width:599px) {
   .responsive .c1 .c4__picker,
   .responsive-booking .c1 .c4__picker {
@@ -3367,10 +3383,10 @@ exports[`Storyshots DateRange DateRange 1`] = `
               className="c6"
             >
               <input
-                aria-describedby=""
+                aria-describedby="c6__screen-reader-message-startDate"
                 aria-label="Туда"
                 autoComplete="off"
-                className="c6__input"
+                className="c6__input needsclick"
                 disabled={false}
                 id="startDate"
                 name="startDate"
@@ -3383,7 +3399,13 @@ exports[`Storyshots DateRange DateRange 1`] = `
                 type="text"
                 value=""
               />
-              
+              <p
+                className="c8"
+                id="c6__screen-reader-message-startDate"
+              >
+                Press the down arrow key to interact with the calendar and
+                  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+              </p>
               <div
                 className="c6__display-text"
               >
@@ -3391,7 +3413,9 @@ exports[`Storyshots DateRange DateRange 1`] = `
               </div>
             </div>
             <div
+              aria-hidden="true"
               className="c4Input__arrow"
+              role="presentation"
             >
               <span />
             </div>
@@ -3399,10 +3423,10 @@ exports[`Storyshots DateRange DateRange 1`] = `
               className="c6"
             >
               <input
-                aria-describedby=""
+                aria-describedby="c6__screen-reader-message-endDate"
                 aria-label="Обратно"
                 autoComplete="off"
-                className="c6__input"
+                className="c6__input needsclick"
                 disabled={false}
                 id="endDate"
                 name="endDate"
@@ -3415,7 +3439,13 @@ exports[`Storyshots DateRange DateRange 1`] = `
                 type="text"
                 value=""
               />
-              
+              <p
+                className="c8"
+                id="c6__screen-reader-message-endDate"
+              >
+                Press the down arrow key to interact with the calendar and
+                  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+              </p>
               <div
                 className="c6__display-text"
               >

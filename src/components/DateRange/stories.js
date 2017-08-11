@@ -26,8 +26,8 @@ const onFocusChange = (focusedInput) => {
 }
 
 const onDatesChange = ({ startDate, endDate }) => {
-  updateKnob('startDate', 'date', startDate ? startDate.toDate() : null)
-  updateKnob('endDate', 'date', endDate ? endDate.toDate() : null)
+  updateKnob('startDate', 'date', startDate || null)
+  updateKnob('endDate', 'date', endDate || null)
 }
 
 storiesOf('DateRange', module)
