@@ -3263,6 +3263,10 @@ exports[`Storyshots DateRange DateRange 1`] = `
   margin-left: 9px;
 }
 
+.c1 .DayPicker__focus-region {
+  outline: none;
+}
+
 .c1 .DayPicker__week-header {
   color: #b3b3b3;
   position: absolute;

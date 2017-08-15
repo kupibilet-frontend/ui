@@ -26,6 +26,10 @@ export default css`
     margin-left: 9px;
   }
 
+  .DayPicker__focus-region {
+    outline: none;
+  }
+
   .DayPicker__week-header {
     color: ${({ theme }) => theme.color.textLight};
     position: absolute;
