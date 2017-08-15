@@ -3924,7 +3924,7 @@ exports[`Storyshots FormItem default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Icon Icon with fill 1`] = `
+exports[`Storyshots Icon Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

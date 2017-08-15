@@ -6,7 +6,7 @@ import cn from 'classnames'
 import { switchTransition } from 'utils/transitions'
 import { getThemeColor, ThemingPropTypes } from 'utils/theme'
 
-const sizes = {
+export const sizes = {
   normal: 18,
   xxsmall: 15,
   xsmall: 24,
