@@ -29,6 +29,7 @@ export default css`
     color: inherit;
     font: inherit;
     display: inline-block;
+    outline: none;
   }
 
   .CalendarDay--blocked,

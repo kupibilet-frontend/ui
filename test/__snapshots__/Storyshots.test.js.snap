@@ -2861,6 +2861,7 @@ exports[`Storyshots DateRange DateRange 1`] = `
   color: inherit;
   font: inherit;
   display: inline-block;
+  outline: none;
 }
 
 .c1 .CalendarDay--blocked,
