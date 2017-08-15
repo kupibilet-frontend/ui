@@ -33,10 +33,9 @@ const renderHoverPlaceholder = (day) => (
   </DateInput>
 )
 
-const CalendarNav = ({ direction, className, ...props }) => (
+const CalendarNav = ({ direction, ...props }) => (
   <Button
     {...props}
-    className={cn(className, 'no-global')}
     icon={
       <Icon name={`arrow-${direction}`} fill="background" />
     }
