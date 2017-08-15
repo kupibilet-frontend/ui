@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cn from 'classnames'
 
 import { StyledButton, StyledButtonText, IconWrap, SIZES } from './styled'
 
@@ -24,7 +23,6 @@ const Button = ({ children, disabled, size, icon, leftIcon, rightIcon, className
     hasLeftIcon={Boolean(leftIcon)}
     hasRightIcon={Boolean(rightIcon)}
     disabled={disabled}
-    className={cn('no-global', className)}
   >
     {
       leftIcon ? (
