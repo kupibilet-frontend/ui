@@ -4538,7 +4538,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   box-sizing: border-box;
 }
 
-.c9 {
+.c10 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -4548,7 +4548,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   fill: #ffffff;
 }
 
-.c7 {
+.c8 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -4570,7 +4570,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   opacity: .2;
 }
 
-.c10 {
+.c11 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -4591,17 +4591,17 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   transition-property: opacity,box-shadow;
 }
 
-.c10:hover {
+.c11:hover {
   cursor: pointer;
   box-shadow: 0 0 0 1px #38afff;
 }
 
-.c10:active {
+.c11:active {
   background: #0f99f5;
   box-shadow: none;
 }
 
-.c8 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4666,6 +4666,10 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   color: #333333;
 }
 
+.c7 {
+  margin-left: 6px;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4714,17 +4718,17 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
         className="c6"
       >
         <button
-          className="c7"
+          className="c7 c8"
           disabled={true}
           onClick={[Function]}
           size="normal"
         >
           <span
-            className="c8"
+            className="c9"
             size="normal"
           >
             <svg
-              className="c9"
+              className="c10"
               size="normal"
               style={undefined}
             >
@@ -4735,17 +4739,17 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
           </span>
         </button>
         <button
-          className="c10"
+          className="c7 c11"
           disabled={false}
           onClick={[Function]}
           size="normal"
         >
           <span
-            className="c8"
+            className="c9"
             size="normal"
           >
             <svg
-              className="c9"
+              className="c10"
               size="normal"
               style={undefined}
             >
