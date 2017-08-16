@@ -5,8 +5,8 @@ import { switchTransition } from 'utils/transitions'
 import { borderSmall } from 'utils/borders'
 
 const borderInput = (props) => {
-  const { active, theme, disabled } = props
-  if (active) {
+  const { active, theme, disabled, noFocus } = props
+  if (active && !noFocus) {
     return `border-color: ${theme.color.primary};`
   } else if (disabled) {
     return `border-color: ${theme.color.miscLightest};`
@@ -95,17 +95,25 @@ const InputWrapper = styled.div`
   align-items: center;
   width: 100%;
   transition-property: border-color, box-shadow;
-  border-width: 1px;
+  border-width: ${({ neighboringInGroup }) => (neighboringInGroup
+    ? '0'
+    : '1px'
+  )};
+border-right: ${({ neighboringInGroup, theme }) => ((neighboringInGroup === 'right'
+  || neighboringInGroup === 'both')
+    ? `1px solid ${theme.color.misc}`
+    : ''
+  )};
   border-style: solid;
   ${switchTransition}
   ${borderInput}
   ${borderSmall}
   height: ${({ size }) => INPUTHEIGHT[size]};
-  box-shadow: ${({ active, theme }) => active && `0 0 0 1px ${theme.color.primary}`};
+  box-shadow: ${({ active, theme, noFocus }) => (active && !noFocus) && `0 0 0 1px ${theme.color.primary}`};
   z-index: ${({ active }) => (active ? '3' : '1')};
 
   &:hover {
-    border-color: ${({ theme, disabled }) => !disabled && theme.color.primary};
+    border-color: ${({ theme, disabled, noFocus }) => (!disabled && !noFocus) && theme.color.primary};
     z-index: 2;
   }
 
@@ -133,6 +141,8 @@ type Props = {
   disabled?: boolean,
   placeholder?: string,
   value?: string,
+  noFocus?: boolean,
+  neighboringInGroup?: null | 'left' | 'right' | 'both',
   onBlur?: Function,
   onFocus?: Function
 }
@@ -174,6 +184,8 @@ class Input extends Component<{}, Props, State> {
       success,
       error,
       disabled,
+      noFocus,
+      neighboringInGroup,
     } = this.props
 
     return (
@@ -183,6 +195,8 @@ class Input extends Component<{}, Props, State> {
         disabled={disabled}
         success={success}
         error={error}
+        noFocus={noFocus}
+        neighboringInGroup={neighboringInGroup}
       >
         <StyledInput
           {...this.props}
