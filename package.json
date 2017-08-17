@@ -33,7 +33,7 @@
     "@storybook/addon-storyshots": "^3.0.2",
     "@storybook/addons": "^3.0.2",
     "@storybook/react": "^3.0.2",
-    "babel-cli": "~6.24.0",
+    "babel-cli": "~6.26.0",
     "babel-jest": "~20.0.3",
     "babel-plugin-flow-react-proptypes": "^4.0.0",
     "babel-plugin-module-resolver": "2.6.2",
