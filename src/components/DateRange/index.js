@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
-import moment from 'moment'
+import moment from '@kupibilet/moment'
 
 import DateRangePicker from '@kupibilet/react-dates/lib/components/DateRangePicker'
 import getCalendarMonthWidth from '@kupibilet/react-dates/lib/utils/getCalendarMonthWidth'
@@ -11,13 +11,10 @@ import Icon from 'components/Icon'
 
 import StyledDateRange, { DateInput, DateInputValue, DateInputDayOfWeek } from './styled'
 
-const shortMonths = [null, 'янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
-const formatShortMonths = (date) => shortMonths[date.format('M')]
-
 const renderInputText = (day) => (
   <DateInput>
     <DateInputValue>
-      { `${day.format('DD')} ${formatShortMonths(day)}` }
+      { day.format('DD MMM') }
     </DateInputValue>
     <DateInputDayOfWeek>
       { day.format('dd') }
@@ -28,7 +25,7 @@ const renderInputText = (day) => (
 const renderHoverPlaceholder = (day) => (
   <DateInput>
     <DateInputValue>
-      { `${day.format('DD')} ${formatShortMonths(day)}` }
+      { day.format('DD MMM') }
     </DateInputValue>
   </DateInput>
 )

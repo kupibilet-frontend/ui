@@ -26,6 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "@kupibilet/icons": "~4.0.0",
+    "@kupibilet/moment": "^0.0.2",
     "@storybook/addon-centered": "^3.0.2",
     "@storybook/addon-info": "^3.0.2",
     "@storybook/addon-knobs": "^3.0.2",
@@ -53,7 +54,6 @@
     "lint-staged": "^4.0.3",
     "lodash": "^4.17.4",
     "mkp": "^1.0.1",
-    "moment": "~2.18.1",
     "move-binaries-to-bin": "~1.0.1",
     "polished": "^1.3.0",
     "prop-types": "^15.5.8",
@@ -78,9 +78,9 @@
   },
   "peerDependencies": {
     "@kupibilet/icons": "^4.0.0",
+    "@kupibilet/moment": "^0.0.2",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
-    "moment": "^2.18.0",
     "polished": "^1.3.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.0",
