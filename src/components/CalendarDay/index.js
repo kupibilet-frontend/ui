@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import type moment$Moment from 'moment'
+import type moment$Moment from '@kupibilet/moment'
 import { Day, AvgCost } from './styled'
 
 type Props = {

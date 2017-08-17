@@ -6,6 +6,12 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-4.0.0.tgz#81c7abf2c4db8b4133e5538b409a654440329f63"
 
+"@kupibilet/moment@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@kupibilet/moment/-/moment-0.0.2.tgz#e40efec0aa51c544420bd091c5554dbf73779c19"
+  dependencies:
+    moment "^2.18.1"
+
 "@kupibilet/react-dates@^12.3.0":
   version "12.3.0"
   resolved "https://registry.yarnpkg.com/@kupibilet/react-dates/-/react-dates-12.3.0.tgz#1c1878ee0725c8d27de94f1cca1d7def9852e806"
@@ -4860,7 +4866,7 @@ mobx@^2.3.4:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-2.7.0.tgz#cf3d82d18c0ca7f458d8f2a240817b3dc7e54a01"
 
-moment@^2.18.1, moment@~2.18.1:
+moment@^2.18.1:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
