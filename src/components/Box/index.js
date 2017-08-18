@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components'
-import { borderLarge } from 'utils/borders'
+import { borderRadiusLarge } from 'utils/borderRadius'
 
 export const styles = css`
   background: ${({ theme }) => (theme.color.background)};
   border: 1px solid ${({ theme }) => (theme.color.miscLighter)};
-  ${borderLarge}
+  ${borderRadiusLarge.all}
 `
 
 const Box = styled.div`
