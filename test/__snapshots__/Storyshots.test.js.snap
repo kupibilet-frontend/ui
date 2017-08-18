@@ -3962,6 +3962,834 @@ exports[`Storyshots Icon Icon with fill 1`] = `
 </div>
 `;
 
+exports[`Storyshots Input Compined inputs group 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 .controls-group__swap {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c3:hover .controls-group__swap {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
+.c4 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-right: 1px solid #b1bdcc;
+  border-radius: 3px 0 0 3px;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::placeholder {
+  color: #96a0b3;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4:focus {
+  outline-style: none;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-right: 1px solid #b1bdcc;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c5:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::placeholder {
+  color: #96a0b3;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c5:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5:focus {
+  outline-style: none;
+}
+
+.c5:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c6 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 0 3px 3px 0;
+}
+
+.c6::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c6:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6::placeholder {
+  color: #96a0b3;
+}
+
+.c6::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c6:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6:focus {
+  outline-style: none;
+}
+
+.c6:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  border-radius: 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  z-index: 1;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c1:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c1:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  display: none;
+  width: 2px;
+  background-color: #e64926;
+  z-index: 4;
+}
+
+.c1 .c2 {
+  height: 100%;
+}
+
+.ftblrW .c2 {
+  height: 100%;
+}
+
+.fvjNEX .c2 {
+  height: 100%;
+}
+
+.ghjLOH .c2 {
+  height: 100%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    disabled={undefined}
+    size="large"
+  >
+    <div
+      className="c2 c3"
+    >
+      <input
+        className="c4"
+        name="input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        placeholder="DD"
+        size="large"
+        type="number"
+      />
+      <input
+        className="c5"
+        name="input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        placeholder="MM"
+        size="large"
+        type="number"
+      />
+      <input
+        className="c6"
+        name="input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        placeholder="YYYY"
+        size="large"
+        type="number"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input Seperate inputs group 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .controls-group__swap {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .controls-group__swap {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-right: 1px solid #b1bdcc;
+  border-radius: 3px 0 0 3px;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::placeholder {
+  color: #96a0b3;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3:focus {
+  outline-style: none;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-right: 1px solid #b1bdcc;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c5:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::placeholder {
+  color: #96a0b3;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c5:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5:focus {
+  outline-style: none;
+}
+
+.c5:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c7 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 0 3px 3px 0;
+}
+
+.c7::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c7::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c7:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c7::placeholder {
+  color: #96a0b3;
+}
+
+.c7::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c7::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c7:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c7:focus {
+  outline-style: none;
+}
+
+.c7:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c7:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c7:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c7:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c7:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c7:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c7:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  z-index: 1;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c2:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c2:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  display: none;
+  width: 2px;
+  background-color: #e64926;
+  z-index: 4;
+}
+
+.c2 .combined-inputs-group {
+  height: 100%;
+}
+
+.c4 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  margin-left: -1px;
+  z-index: 1;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c4:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c4:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  display: none;
+  width: 2px;
+  background-color: #e64926;
+  z-index: 4;
+}
+
+.c4 .combined-inputs-group {
+  height: 100%;
+}
+
+.c6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  margin-left: -1px;
+  z-index: 1;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c6:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c6:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  display: none;
+  width: 2px;
+  background-color: #e64926;
+  z-index: 4;
+}
+
+.c6 .combined-inputs-group {
+  height: 100%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      disabled={undefined}
+      size="large"
+    >
+      <input
+        className="c3"
+        disabled={undefined}
+        name="input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        placeholder="Только прямые рейсы"
+        size="large"
+        type="text"
+      />
+    </div>
+    <div
+      className="c4"
+      disabled={undefined}
+      size="large"
+    >
+      <input
+        className="c5"
+        disabled={undefined}
+        name="input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        placeholder="Только прямые рейсы"
+        size="large"
+        type="text"
+      />
+    </div>
+    <div
+      className="c6"
+      disabled={undefined}
+      size="large"
+    >
+      <input
+        className="c7"
+        disabled={undefined}
+        name="input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        placeholder="Только прямые рейсы"
+        size="large"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Input default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -3984,13 +4812,12 @@ exports[`Storyshots Input default 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
-  box-sizing: border-box;
-  border-radius: 3px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
   color: #333333;
   background-color: #fff;
+  border-radius: 3px;
 }
 
 .c2::-webkit-input-placeholder {
@@ -4006,6 +4833,18 @@ exports[`Storyshots Input default 1`] = `
 }
 
 .c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
   color: #96a0b3;
 }
 
@@ -4029,6 +4868,18 @@ exports[`Storyshots Input default 1`] = `
   color: #b1bdcc;
 }
 
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
 .c1 {
   position: relative;
   display: -webkit-box;
@@ -4044,17 +4895,15 @@ exports[`Storyshots Input default 1`] = `
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
-  border-width: 1px;
+  height: 42px;
+  border-radius: 3px;
+  border: 1px solid #b1bdcc;
   border-style: solid;
+  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  border-color: #b1bdcc;
-  border-radius: 3px;
-  height: 42px;
-  box-shadow: ;
-  z-index: 1;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
 }
 
 .c1:hover {
@@ -4062,17 +4911,20 @@ exports[`Storyshots Input default 1`] = `
   z-index: 2;
 }
 
-.c1::before {
+.c1:before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -1px;
   left: -1px;
+  bottom: -1px;
   display: none;
-  height: 100%;
   width: 2px;
-  border-radius: 3px 0 0 3px;
   background-color: #e64926;
-  z-index: 2;
+  z-index: 4;
+}
+
+.c1 .combined-inputs-group {
+  height: 100%;
 }
 
 <div
@@ -4080,446 +4932,17 @@ exports[`Storyshots Input default 1`] = `
 >
   <div
     className="c1"
-    disabled={undefined}
+    disabled={false}
     size="large"
   >
     <input
       className="c2"
+      disabled={false}
       name="input"
       onBlur={[Function]}
       onFocus={[Function]}
       placeholder="Только прямые рейсы"
       size="large"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Input disabled 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c2 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  max-width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 3px;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: #f0f5fa;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c2::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c2:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c2::placeholder {
-  color: #96a0b3;
-}
-
-.c2:focus {
-  outline-style: none;
-}
-
-.c2:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-between;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
-  border-width: 1px;
-  border-style: solid;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  border-color: #f0f5fa;
-  border-radius: 3px;
-  height: 42px;
-  box-shadow: ;
-  z-index: 1;
-}
-
-.c1:hover {
-  border-color: ;
-  z-index: 2;
-}
-
-.c1::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -1px;
-  display: none;
-  height: 100%;
-  width: 2px;
-  border-radius: 3px 0 0 3px;
-  background-color: #e64926;
-  z-index: 2;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    disabled={true}
-    size="large"
-  >
-    <input
-      className="c2"
-      disabled={true}
-      name="input"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      placeholder="Только прямые рейсы"
-      size="large"
-      type="text"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Input error 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c3 {
-  position: absolute;
-  top: calc(100% + 2px);
-  left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 3px 12px 5px;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-  opacity: 0.97;
-  z-index: 2;
-  border-radius: 3px;
-  background-color: #e64926;
-}
-
-.c2 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  max-width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 3px;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: #fff;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c2::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c2:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c2::placeholder {
-  color: #96a0b3;
-}
-
-.c2:focus {
-  outline-style: none;
-}
-
-.c2:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-between;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
-  border-width: 1px;
-  border-style: solid;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  border-color: #b1bdcc;
-  border-radius: 3px;
-  height: 42px;
-  box-shadow: ;
-  z-index: 1;
-}
-
-.c1:hover {
-  border-color: #38afff;
-  z-index: 2;
-}
-
-.c1::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -1px;
-  display: block;
-  height: 100%;
-  width: 2px;
-  border-radius: 3px 0 0 3px;
-  background-color: #e64926;
-  z-index: 2;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    disabled={undefined}
-    size="large"
-  >
-    <input
-      className="c2"
-      name="input"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      placeholder="Только прямые рейсы"
-      size="large"
-      type="text"
-    />
-    <span
-      className="c3"
-    >
-      Только латинские буквы
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Input success 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c2 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  max-width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 3px;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: #fff;
-}
-
-.c2::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c2::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c2:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c2::placeholder {
-  color: #96a0b3;
-}
-
-.c2:focus {
-  outline-style: none;
-}
-
-.c2:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c2:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-between;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
-  border-width: 1px;
-  border-style: solid;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  border-color: #b1bdcc;
-  border-radius: 3px;
-  height: 42px;
-  box-shadow: ;
-  z-index: 1;
-}
-
-.c1:hover {
-  border-color: #38afff;
-  z-index: 2;
-}
-
-.c1::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -1px;
-  display: block;
-  height: 100%;
-  width: 2px;
-  border-radius: 3px 0 0 3px;
-  background-color: #23c256;
-  z-index: 2;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    disabled={undefined}
-    size="large"
-  >
-    <input
-      className="c2"
-      name="input"
-      onBlur={[Function]}
-      onFocus={[Function]}
-      placeholder="Только прямые рейсы"
-      size="large"
-      type="text"
     />
   </div>
 </div>
