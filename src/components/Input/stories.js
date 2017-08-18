@@ -1,7 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import ControlsGroup from 'components/ControlsGroup'
 import { select, text, boolean } from '@storybook/addon-knobs'
-import Input from './index'
+import Input, { InnerInput } from './index'
 
 const inputDefault = {
   type: 'text',
@@ -22,52 +23,60 @@ const sizesSelect = (defaultValue = 'large') => select(
 
 storiesOf('Input', module)
   .addWithInfo('default', () => {
-    const placeholder = text('placeholder', 'Только прямые рейсы')
+    const placeholder = text('placeholder', inputDefault.placeholder)
+    const disabled = boolean('disabled', false)
+    const success = boolean('success', false)
+    const error = text('error', null)
 
     return (
       <Input
         name={inputDefault.name}
+        disabled={disabled}
+        success={success}
+        error={error}
         size={sizesSelect()}
         placeholder={placeholder}
       />
     )
   })
-  .addWithInfo('disabled', () => {
-    const disabled = boolean('disabled', true)
-
+  .addWithInfo('Seperate inputs group', () => {
     return (
-      <Input
-        type={inputDefault.type}
-        name={inputDefault.name}
-        disabled={disabled}
-        size={sizesSelect()}
-        placeholder={inputDefault.placeholder}
-      />
+      <ControlsGroup>
+        <Input
+          type={inputDefault.type}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+        />
+        <Input
+          type={inputDefault.type}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+        />
+        <Input
+          type={inputDefault.type}
+          size={sizesSelect()}
+          placeholder={inputDefault.placeholder}
+        />
+      </ControlsGroup>
     )
   })
-  .addWithInfo('success', () => {
-    const success = boolean('success', true)
-
+  .addWithInfo('Compined inputs group', () => {
     return (
       <Input
-        type={inputDefault.type}
-        name={inputDefault.name}
-        success={success}
         size={sizesSelect()}
-        placeholder={inputDefault.placeholder}
-      />
-    )
-  })
-  .addWithInfo('error', () => {
-    const error = text('error', inputDefault.error)
-
-    return (
-      <Input
-        type={inputDefault.type}
-        name={inputDefault.name}
-        error={error}
-        size={sizesSelect()}
-        placeholder={inputDefault.placeholder}
-      />
+      >
+        <InnerInput
+          type="number"
+          placeholder="DD"
+        />
+        <InnerInput
+          type="number"
+          placeholder="MM"
+        />
+        <InnerInput
+          type="number"
+          placeholder="YYYY"
+        />
+      </Input>
     )
   })
