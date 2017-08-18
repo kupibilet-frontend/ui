@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import onClickOutside from 'react-onclickoutside'
-import { borderSmall } from 'utils/borders'
+import { borderRadiusSmall } from 'utils/borderRadius'
 import { shadowSmall } from 'utils/shadows'
 
 const DropdownWrapper = styled.div`
@@ -19,7 +19,7 @@ export const DropdownContent = styled.div`
   padding: 18px 12px;
   background: ${({ theme }) => theme.color.background};
   ${shadowSmall}
-  ${borderSmall}
+  ${borderRadiusSmall.all}
   z-index: 10;
 
   margin-bottom: 18px;

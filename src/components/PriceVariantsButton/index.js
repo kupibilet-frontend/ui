@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
 import { switchTransition } from 'utils/transitions'
-import { borderSmall } from 'utils/borders'
+import { borderRadiusSmall } from 'utils/borderRadius'
 
 const Root = styled.div`
   display: inline-flex;
@@ -24,7 +24,7 @@ const Button = styled.div`
   border-style: solid;
   border-color: ${({ active, theme }) => (active ? theme.color.primary : theme.color.misc)};
   box-shadow: 0 0 0 1px ${({ active, theme }) => (active ? theme.color.primary : 'transparent')};
-  ${borderSmall}
+  ${borderRadiusSmall.all}
   background-color: #FFFFFF;
   cursor: pointer;
   ${switchTransition};
