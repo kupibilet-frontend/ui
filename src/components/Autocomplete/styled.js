@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { shadowSmall } from 'utils/shadows'
-import { borderSmall } from 'utils/borders'
+import { borderRadiusSmall } from 'utils/borderRadius'
 import mq from 'utils/media-queries'
 
 export default styled.div`
@@ -43,7 +43,7 @@ export default styled.div`
     min-width: 320px;
     max-width: 540px;
     ${shadowSmall}
-    ${borderSmall}
+    ${borderRadiusSmall.all}
     overflow: hidden;
     z-index: 10;
 

@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { borderSmall } from 'utils/borders'
+import { borderRadiusSmall } from 'utils/borderRadius'
 
 export default css`
   .DayPicker {
@@ -10,7 +10,7 @@ export default css`
 
   .DayPicker--horizontal {
     box-shadow: 0 3px 7px 0 ${({ theme }) => theme.color.miscDarkest};
-    ${borderSmall}
+    ${borderRadiusSmall.all}
 
     // TODO get rid of portals
     // &.DayPicker--portal {}
@@ -94,7 +94,7 @@ export default css`
   .transition-container {
     position: relative;
     overflow: hidden;
-    ${borderSmall}
+    ${borderRadiusSmall.all}
   }
 
   .transition-container--horizontal {
