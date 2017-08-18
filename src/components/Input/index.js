@@ -1,17 +1,20 @@
 // @flow
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { switchTransition } from 'utils/transitions'
-import { borderSmall } from 'utils/borders'
+import ControlsGroup from 'components/ControlsGroup'
 
-const borderInput = (props) => {
+import { switchTransition } from 'utils/transitions'
+import { borderRadiusSmall } from 'utils/borderRadius'
+import placeholder from 'utils/placeholder'
+
+const inputBorderColor = (props) => {
   const { active, theme, disabled } = props
   if (active) {
-    return `border-color: ${theme.color.primary};`
+    return theme.color.primary
   } else if (disabled) {
-    return `border-color: ${theme.color.miscLightest};`
+    return theme.color.miscLightest
   }
-  return `border-color: ${theme.color.misc};`
+  return theme.color.misc
 }
 
 const SIZE = {
@@ -54,74 +57,120 @@ const Error = styled.span`
   color: #fff;
   opacity: 0.97;
   z-index: 2;
-  ${borderSmall}
+  ${borderRadiusSmall.all}
   background-color: ${({ theme }) => theme.color.fail};
 `
 
-const StyledInput = styled.input`
+/* eslint-disable react/prop-types */
+export const InnerInput = styled.input`
   position: relative;
   flex-grow: 1;
   max-width: 100%;
   height: 100%;
   line-height: normal;
   border: none;
-  box-sizing: border-box;
-  ${borderSmall};
+
   padding-left: ${({ size }) => `${SIZE[size]}px`};
   padding-right: ${({ size }) => `${SIZE[size]}px`};
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   color: ${({ theme }) => theme.color.textDarker};
   background-color: ${({ disabled, theme }) => (disabled ? theme.color.miscLightest : '#fff')};
 
-  &::placeholder {
+  ${({ neighboringInGroup, disabled, theme }) => {
+    if (['right', 'both'].includes(neighboringInGroup)) {
+      return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
+    }
+  }}
+
+  ${({ neighboringInGroup, success, error }) => {
+    if (neighboringInGroup === 'right') {
+      return borderRadiusSmall.left
+    } else if (neighboringInGroup === 'left' || success || error) {
+      return borderRadiusSmall.right
+    } else if (neighboringInGroup !== 'both') {
+      return borderRadiusSmall.all
+    }
+
+    return ''
+  }}
+
+  ${placeholder`
     color: ${({ theme }) => theme.color.miscDark};
-  }
+  `}
 
   &:focus {
     outline-style: none;
   }
 
   &:disabled {
-    &::placeholder {
+    ${placeholder`
       color: ${({ theme }) => theme.color.misc};
-    }
+  `}
   }
-`
+  `
 
 const InputWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 100%;
-  transition-property: border-color, box-shadow;
-  border-width: 1px;
-  border-style: solid;
-  ${switchTransition}
-  ${borderInput}
-  ${borderSmall}
   height: ${({ size }) => INPUTHEIGHT[size]};
-  box-shadow: ${({ active, theme }) => active && `0 0 0 1px ${theme.color.primary}`};
-  z-index: ${({ active }) => (active ? '3' : '1')};
+
+  ${({ neighboringInGroup, success, error }) => {
+    if (neighboringInGroup === 'right') {
+      return borderRadiusSmall.left
+    } else if (neighboringInGroup === 'left' || success || error) {
+      return borderRadiusSmall.right
+    } else if (neighboringInGroup !== 'both') {
+      return borderRadiusSmall.all
+    }
+
+    return ''
+  }}
+
+  border: 1px solid ${inputBorderColor};
+  border-style: solid;
+  ${({ active, theme }) => {
+    if (active) {
+      return `box-shadow: 0 0 0 1px ${theme.color.primary};`
+    }
+  }}
+
+  ${({ neighboringInGroup }) => {
+    if (['left', 'both'].includes(neighboringInGroup)) {
+      return 'margin-left: -1px;'
+    }
+  }}
+  z-index: ${({ active, neighboringInGroup }) => (active && neighboringInGroup ? '3' : '1')};
+
+  ${switchTransition}
+  transition-property: border-color, box-shadow;
 
   &:hover {
-    border-color: ${({ theme, disabled }) => !disabled && theme.color.primary};
+    border-color: ${({ theme, disabled }) => (!disabled) && theme.color.primary};
     z-index: 2;
   }
 
-  &::before {
+  &:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -1px;
     left: -1px;
+    bottom: -1px;
     display: ${(props) => setDisplayInputStatus(props)};
-    height: 100%;
     width: 2px;
-    border-radius: 3px 0 0 3px;
-    background-color: ${({ theme, success }) => (success ? theme.color.success : theme.color.fail)};
-    z-index: 2;
+    background-color: ${({ theme, success, error }) => (
+    success && !error ? theme.color.success : theme.color.fail
+  )};
+    z-index: 4;
   }
-`
+
+  .combined-inputs-group {
+    height: 100%;
+  }
+  `
 
 type Props = {
   name: string,
@@ -133,15 +182,18 @@ type Props = {
   disabled?: boolean,
   placeholder?: string,
   value?: string,
+  neighboringInGroup?: null | 'left' | 'right' | 'both',
   onBlur?: Function,
-  onFocus?: Function
+  onFocus?: Function,
+  /* global React$Element */
+  children?: React$Element<*>[],
 }
 
 type State = {
   isActive: boolean,
 }
 
-class Input extends Component<{}, Props, State> {
+class InputControl extends React.PureComponent<Props, State> {
   static defaultProps = {
     name: 'input',
     size: 'normal',
@@ -151,7 +203,7 @@ class Input extends Component<{}, Props, State> {
     isActive: false,
   }
 
-  handleBlur = (e) => {
+  handleBlur = (e: Event) => {
     const { onBlur } = this.props
     if (onBlur) onBlur(e)
     this.setState({
@@ -159,7 +211,7 @@ class Input extends Component<{}, Props, State> {
     })
   }
 
-  handleFocus = (e) => {
+  handleFocus = (e: Event) => {
     const { onFocus } = this.props
     if (onFocus) onFocus(e)
     this.setState({
@@ -174,6 +226,9 @@ class Input extends Component<{}, Props, State> {
       success,
       error,
       disabled,
+      neighboringInGroup,
+      children,
+      ...props
     } = this.props
 
     return (
@@ -183,12 +238,33 @@ class Input extends Component<{}, Props, State> {
         disabled={disabled}
         success={success}
         error={error}
+        neighboringInGroup={neighboringInGroup}
       >
-        <StyledInput
-          {...this.props}
-          onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
-        />
+        {
+          children ? (
+            <ControlsGroup className="combined-inputs-group">
+              { React.Children.map(children, (child) => (
+                React.cloneElement(child, {
+                  ...props,
+                  size,
+                  onFocus: this.handleFocus,
+                  onBlur: this.handleBlur,
+                })
+              )) }
+            </ControlsGroup>
+          ) : (
+            <InnerInput
+              {...props}
+              size={size}
+              disabled={disabled}
+              success={success}
+              error={error}
+              neighboringInGroup={neighboringInGroup}
+              onFocus={this.handleFocus}
+              onBlur={this.handleBlur}
+            />
+          )
+        }
 
         { error && <Error>
           { error }
@@ -199,4 +275,4 @@ class Input extends Component<{}, Props, State> {
   }
 }
 
-export default Input
+export default InputControl
