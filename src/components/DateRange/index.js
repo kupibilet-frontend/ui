@@ -101,7 +101,7 @@ class DateRangePickerWrapper extends React.PureComponent {
       return this.state.calendarMonthCursor
     }
     if (this.props.startDate) {
-      return this.props.startDate.startOf('month')
+      return this.props.startDate.clone().startOf('month')
     }
     return moment()
   }
