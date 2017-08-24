@@ -39,10 +39,10 @@ export const IconWrapper = styled.span`
           position: absolute;
           border-left: 1px solid ${theme.color.secondaryDarkest};
           width: 1px;
-          height: 26px;
+          height: 150%;
           transform: rotate(-45deg);
-          top: -5px;
-          left: 8px;
+          top: -25%;
+          left: 50%;
         }
       `
     }
