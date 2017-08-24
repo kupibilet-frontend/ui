@@ -6,7 +6,7 @@ import cn from 'classnames'
 import { switchTransition } from 'utils/transitions'
 import { getThemeColor, ThemingPropTypes } from 'utils/theme'
 
-const sizes = {
+export const sizes = {
   normal: 18,
   xxsmall: 15,
   xsmall: 24,
@@ -23,20 +23,47 @@ const IconSvg = styled.svg`
   height: ${({ size }) => sizes[size]}px;
   width: ${({ size }) => sizes[size]}px;
   fill: ${({ theme, colorKeys }) => getThemeColor(theme, colorKeys.fill)};
+  opacity: ${({ striked }) => (striked ? 0.6 : 1)};
 `
 
+export const IconWrapper = styled.span`
+  display: inline-flex;
+
+  ${({ striked, theme }) => {
+    if (striked) {
+      return `
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          border-left: 1px solid ${theme.color.secondaryDarkest};
+          width: 1px;
+          height: 150%;
+          transform: rotate(-45deg);
+          top: -25%;
+          left: 50%;
+        }
+      `
+    }
+  }}
+  `
+
 // Scoped inside `colorKeys` because `fill` are valid HTML attrs
-const Icon = ({ size, fill, prefix, name, style, className, inheritColor }) => (
-  <IconSvg
-    className={cn(className, { 'icon-inherit-color': inheritColor })}
-    size={size}
-    colorKeys={{
-      fill,
-    }}
-    style={style}
-  >
-    <use xlinkHref={`#${prefix}_${name}`} />
-  </IconSvg>
+const Icon = ({ size, fill, prefix, name, style, className, inheritColor, striked }) => (
+  <IconWrapper striked={striked}>
+    <IconSvg
+      className={cn(className, { 'icon-inherit-color': inheritColor })}
+      size={size}
+      colorKeys={{
+        fill,
+      }}
+      style={style}
+      striked={striked}
+    >
+      <use xlinkHref={`#${prefix}_${name}`} />
+    </IconSvg>
+  </IconWrapper>
 )
 
 Icon.defaultProps = {
@@ -44,6 +71,7 @@ Icon.defaultProps = {
   size: 'normal',
   fill: null,
   inheritColor: false,
+  striked: false,
 }
 
 Icon.propTypes = {
@@ -55,6 +83,7 @@ Icon.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   inheritColor: PropTypes.bool,
+  striked: PropTypes.bool,
 }
 
 

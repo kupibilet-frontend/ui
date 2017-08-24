@@ -391,7 +391,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   display: none;
 }
 
-.c17 {
+.c18 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -399,6 +399,14 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   height: 15px;
   width: 15px;
   fill: transparent;
+  opacity: 1;
+}
+
+.c15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c1 {
@@ -456,7 +464,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   padding-bottom: 12px;
 }
 
-.c13 .c16 {
+.c13 .c17 {
   fill: #007acc;
 }
 
@@ -464,11 +472,11 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   color: rgba(0,122,204,0.8);
 }
 
-.c13:hover .c16 {
+.c13:hover .c17 {
   fill: rgba(0,122,204,0.8);
 }
 
-.c15 {
+.c16 {
   margin: 3px 0 0 3px;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -685,15 +693,19 @@ exports[`Storyshots Blocks FilterSection 1`] = `
               >
                 Пересадки
               </div>
-              <svg
-                className="c15 c16 c17"
-                size="xxsmall"
-                style={undefined}
+              <span
+                className="c15"
               >
-                <use
-                  xlinkHref="#kb_arrow-down"
-                />
-              </svg>
+                <svg
+                  className="c16 c17 c18"
+                  size="xxsmall"
+                  style={undefined}
+                >
+                  <use
+                    xlinkHref="#kb_arrow-down"
+                  />
+                </svg>
+              </span>
             </div>
           </div>
         </div>
@@ -1038,7 +1050,7 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
   box-sizing: border-box;
 }
 
-.c3 {
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -1046,6 +1058,14 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
   height: 18px;
   width: 18px;
   fill: #ffffff;
+  opacity: 1;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c1 {
@@ -1109,15 +1129,19 @@ exports[`Storyshots Buttons Icon-only button 1`] = `
       className="c2"
       size="large"
     >
-      <svg
+      <span
         className="c3"
-        size="normal"
-        style={undefined}
       >
-        <use
-          xlinkHref="#kb_carrot_monochrome"
-        />
-      </svg>
+        <svg
+          className="c4"
+          size="normal"
+          style={undefined}
+        >
+          <use
+            xlinkHref="#kb_carrot_monochrome"
+          />
+        </svg>
+      </span>
     </span>
   </button>
 </div>
@@ -1206,7 +1230,7 @@ exports[`Storyshots Buttons With icons 1`] = `
   box-sizing: border-box;
 }
 
-.c3 {
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -1214,6 +1238,14 @@ exports[`Storyshots Buttons With icons 1`] = `
   height: 18px;
   width: 18px;
   fill: #ffffff;
+  opacity: 1;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c1 {
@@ -1249,7 +1281,7 @@ exports[`Storyshots Buttons With icons 1`] = `
   box-shadow: none;
 }
 
-.c4 {
+.c5 {
   display: inline-block;
   vertical-align: top;
   padding: 0 5.6px 0 5.6px;
@@ -1285,18 +1317,22 @@ exports[`Storyshots Buttons With icons 1`] = `
       className="c2"
       size="normal"
     >
-      <svg
+      <span
         className="c3"
-        size="normal"
-        style={undefined}
       >
-        <use
-          xlinkHref="#kb_plane"
-        />
-      </svg>
+        <svg
+          className="c4"
+          size="normal"
+          style={undefined}
+        >
+          <use
+            xlinkHref="#kb_plane"
+          />
+        </svg>
+      </span>
     </span>
     <span
-      className="c4"
+      className="c5"
       size="normal"
     >
       Авиабилеты
@@ -1305,15 +1341,19 @@ exports[`Storyshots Buttons With icons 1`] = `
       className="c2"
       size="normal"
     >
-      <svg
+      <span
         className="c3"
-        size="normal"
-        style={undefined}
       >
-        <use
-          xlinkHref="#kb_hand-baggage"
-        />
-      </svg>
+        <svg
+          className="c4"
+          size="normal"
+          style={undefined}
+        >
+          <use
+            xlinkHref="#kb_hand-baggage"
+          />
+        </svg>
+      </span>
     </span>
   </button>
 </div>
@@ -2216,7 +2256,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
 }
 
-.c12 {
+.c13 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -2224,29 +2264,37 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   height: 15px;
   width: 15px;
   fill: transparent;
+  opacity: 1;
 }
 
-.gwvqAl .c11 {
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.gwvqAl .c12 {
   fill: #007acc;
 }
 
-.gwvqAl:hover .c11 {
+.gwvqAl:hover .c12 {
   fill: rgba(0,122,204,0.8);
 }
 
-.cigUOu .c11 {
+.cigUOu .c12 {
   fill: #007acc;
 }
 
-.cigUOu:hover .c11 {
+.cigUOu:hover .c12 {
   fill: rgba(0,122,204,0.8);
 }
 
-.kKnEAB .c11 {
+.kKnEAB .c12 {
   fill: #007acc;
 }
 
-.kKnEAB:hover .c11 {
+.kKnEAB:hover .c12 {
   fill: rgba(0,122,204,0.8);
 }
 
@@ -2277,7 +2325,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   border-color: #ff9100;
 }
 
-.c13 {
+.c14 {
   color: #333333;
   height: 42px;
   width: 100%;
@@ -2301,7 +2349,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   margin-left: -2px;
 }
 
-.c13:hover {
+.c14:hover {
   border-color: #ff9100;
 }
 
@@ -2416,7 +2464,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   display: block;
 }
 
-.c14 {
+.c15 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -2442,14 +2490,14 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   font-weight: 600;
 }
 
-.c14,
-.c14:focus {
+.c15,
+.c15:focus {
   border: none;
   outline: none;
   resize: none;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2459,7 +2507,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2469,7 +2517,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2479,7 +2527,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c14::placeholder {
+.c15::placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2489,7 +2537,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c14::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2499,7 +2547,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c14::-moz-placeholder {
+.c15::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2509,7 +2557,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c14:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2519,7 +2567,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c14:focus ~ .c4 .AirportInput__spell {
+.c15:focus ~ .c4 .AirportInput__spell {
   display: block;
 }
 
@@ -2550,7 +2598,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   padding-left: 16px;
 }
 
-.c15 {
+.c16 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2594,7 +2642,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   user-select: none;
 }
 
-.c16 {
+.c17 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2622,11 +2670,11 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   padding-right: 16px;
 }
 
-.c16:empty {
+.c17:empty {
   display: none;
 }
 
-.c16::before {
+.c17::before {
   content: '';
   display: block;
   position: absolute;
@@ -2689,12 +2737,12 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   display: flex;
 }
 
-.c1 .c9 {
+.c1 .c10 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .c9 {
+.c1:hover .c10 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -2709,15 +2757,15 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   cursor: pointer;
 }
 
-.c8 .c11 {
+.c8 .c12 {
   fill: #96a0b3;
 }
 
-.c8:hover .c11 {
+.c8:hover .c12 {
   fill: #38afff;
 }
 
-.c10 {
+.c11 {
   box-sizing: content-box;
   width: 15px;
   padding: 5px 0;
@@ -2775,23 +2823,27 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
       className="c8"
       onClick={[Function]}
     >
-      <svg
-        className="c9 c10 c11 c12"
-        size="xxsmall"
-        style={undefined}
+      <span
+        className="c9"
       >
-        <use
-          xlinkHref="#kb_left-right"
-        />
-      </svg>
+        <svg
+          className="c10 c11 c12 c13"
+          size="xxsmall"
+          style={undefined}
+        >
+          <use
+            xlinkHref="#kb_left-right"
+          />
+        </svg>
+      </span>
     </div>
     <div
-      className="c13"
+      className="c14"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="c14"
+        className="c15"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -2801,7 +2853,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="c4 c15"
+        className="c4 c16"
       >
         <div
           className="c6"
@@ -2812,7 +2864,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="c16"
+        className="c17"
       >
         
       </div>
@@ -3924,7 +3976,7 @@ exports[`Storyshots FormItem default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Icon Icon with fill 1`] = `
+exports[`Storyshots Icon Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -3937,7 +3989,7 @@ exports[`Storyshots Icon Icon with fill 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c2 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -3945,20 +3997,32 @@ exports[`Storyshots Icon Icon with fill 1`] = `
   height: 42px;
   width: 42px;
   fill: #38afff;
+  opacity: 1;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 <div
   className="c0"
 >
-  <svg
+  <span
     className="c1"
-    size="large"
-    style={undefined}
   >
-    <use
-      xlinkHref="#kb_checkbox"
-    />
-  </svg>
+    <svg
+      className="c2"
+      size="large"
+      style={undefined}
+    >
+      <use
+        xlinkHref="#kb_checkbox"
+      />
+    </svg>
+  </span>
 </div>
 `;
 
@@ -4961,7 +5025,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   box-sizing: border-box;
 }
 
-.c10 {
+.c11 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -4969,6 +5033,14 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   height: 18px;
   width: 18px;
   fill: #ffffff;
+  opacity: 1;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c8 {
@@ -4993,7 +5065,7 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   opacity: .2;
 }
 
-.c11 {
+.c12 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -5014,12 +5086,12 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
   transition-property: opacity,box-shadow;
 }
 
-.c11:hover {
+.c12:hover {
   cursor: pointer;
   box-shadow: 0 0 0 1px #38afff;
 }
 
-.c11:active {
+.c12:active {
   background: #0f99f5;
   box-shadow: none;
 }
@@ -5150,19 +5222,23 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
             className="c9"
             size="normal"
           >
-            <svg
+            <span
               className="c10"
-              size="normal"
-              style={undefined}
             >
-              <use
-                xlinkHref="#kb_minus"
-              />
-            </svg>
+              <svg
+                className="c11"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_minus"
+                />
+              </svg>
+            </span>
           </span>
         </button>
         <button
-          className="c7 c11"
+          className="c7 c12"
           disabled={false}
           onClick={[Function]}
           size="normal"
@@ -5171,15 +5247,19 @@ exports[`Storyshots PassengerPicker Defalut 1`] = `
             className="c9"
             size="normal"
           >
-            <svg
+            <span
               className="c10"
-              size="normal"
-              style={undefined}
             >
-              <use
-                xlinkHref="#kb_plus"
-              />
-            </svg>
+              <svg
+                className="c11"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_plus"
+                />
+              </svg>
+            </span>
           </span>
         </button>
       </div>
@@ -5201,7 +5281,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   box-sizing: border-box;
 }
 
-.c6 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill;
@@ -5209,6 +5289,46 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   height: 18px;
   width: 18px;
   fill: #96a0b3;
+  opacity: 1;
+}
+
+.c13 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 0.6;
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+}
+
+.c12:after {
+  content: '';
+  position: absolute;
+  border-left: 1px solid #fa3a00;
+  width: 1px;
+  height: 150%;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: -25%;
+  left: 50%;
 }
 
 .c1 {
@@ -5222,7 +5342,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
 }
 
 .c1 + .c1 {
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 .c2 {
@@ -5257,7 +5377,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   border-color: #38afff;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5285,11 +5405,11 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   width: 180px;
 }
 
-.c9:hover {
+.c10:hover {
   border-color: #38afff;
 }
 
-.c8 {
+.c9 {
   display: block;
   padding: 6px 0;
   font-size: 11px;
@@ -5322,7 +5442,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   font-weight: 600;
 }
 
-.c10 {
+.c11 {
   font-size: 16px;
   font-weight: normal;
   line-height: 20px;
@@ -5330,7 +5450,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -5359,29 +5479,33 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
             Банковской картой он-лайн
           </span>
           <div>
-            <svg
-              className="block-icon c5 c6"
-              size="normal"
-              style={undefined}
+            <span
+              className="c5 c6"
             >
-              <use
-                xlinkHref="#kb_plane"
-              />
-            </svg>
+              <svg
+                className="c7"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_plane"
+                />
+              </svg>
+            </span>
           </div>
         </div>
         <div
           className="c3"
         >
           <span
-            className="c7"
+            className="c8"
           >
-            12 234 ₽
+            12 234
           </span>
         </div>
       </div>
       <span
-        className="c8"
+        className="c9"
       >
         Описание
       </span>
@@ -5390,7 +5514,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
       className="c1"
     >
       <div
-        className="c9"
+        className="c10"
         onChange={[Function]}
         onClick={[Function]}
         title="Эконом Базовый"
@@ -5399,7 +5523,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           className="c3"
         >
           <span
-            className="c10"
+            className="c11"
           >
             Эконом Базовый
           </span>
@@ -5408,43 +5532,55 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           className="c3"
         >
           <span
-            className="c7"
+            className="c8"
           >
-            12 234 ₽
+            12 234
           </span>
           <div>
-            <svg
-              className="block-icon c5 c6"
-              size="normal"
-              style={undefined}
+            <span
+              className="c5 c6"
             >
-              <use
-                xlinkHref="#kb_hand-baggage"
-              />
-            </svg>
-            <svg
-              className="block-icon c5 c6"
-              size="normal"
-              style={undefined}
+              <svg
+                className="c7"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_hand-baggage"
+                />
+              </svg>
+            </span>
+            <span
+              className="c5 c6"
             >
-              <use
-                xlinkHref="#kb_exchange"
-              />
-            </svg>
-            <svg
-              className="block-icon c5 c6"
-              size="normal"
-              style={undefined}
+              <svg
+                className="c7"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_exchange"
+                />
+              </svg>
+            </span>
+            <span
+              className="c5 c6"
             >
-              <use
-                xlinkHref="#kb_return"
-              />
-            </svg>
+              <svg
+                className="c7"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_return"
+                />
+              </svg>
+            </span>
           </div>
         </div>
       </div>
       <span
-        className="c8"
+        className="c9"
       >
         Описание
       </span>
@@ -5453,7 +5589,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
       className="c1"
     >
       <div
-        className="c9"
+        className="c10"
         onChange={[Function]}
         onClick={[Function]}
         title="Эконом"
@@ -5462,7 +5598,7 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           className="c3"
         >
           <span
-            className="c10"
+            className="c11"
           >
             Эконом
           </span>
@@ -5471,43 +5607,55 @@ exports[`Storyshots PriceVariantsButton default 1`] = `
           className="c3"
         >
           <span
-            className="c7"
+            className="c8"
           >
-            12 234 ₽
+            12 234
           </span>
           <div>
-            <svg
-              className="block-icon c5 c6"
-              size="normal"
-              style={undefined}
+            <span
+              className="c5 c6"
             >
-              <use
-                xlinkHref="#kb_hand-baggage"
-              />
-            </svg>
-            <svg
-              className="block-icon c5 c6"
-              size="normal"
-              style={undefined}
+              <svg
+                className="c7"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_hand-baggage"
+                />
+              </svg>
+            </span>
+            <span
+              className="c5 c12"
             >
-              <use
-                xlinkHref="#kb_exchange"
-              />
-            </svg>
-            <svg
-              className="block-icon c5 c6"
-              size="normal"
-              style={undefined}
+              <svg
+                className="c13"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_exchange"
+                />
+              </svg>
+            </span>
+            <span
+              className="c5 c12"
             >
-              <use
-                xlinkHref="#kb_return"
-              />
-            </svg>
+              <svg
+                className="c13"
+                size="normal"
+                style={undefined}
+              >
+                <use
+                  xlinkHref="#kb_return"
+                />
+              </svg>
+            </span>
           </div>
         </div>
       </div>
       <span
-        className="c8"
+        className="c9"
       >
         Описание
       </span>
