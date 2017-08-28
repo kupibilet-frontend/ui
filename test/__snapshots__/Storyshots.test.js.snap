@@ -86,6 +86,7 @@ exports[`Storyshots Autocomplete Airport 1`] = `
 
 .c2:hover {
   border-color: #ff9100;
+  z-index: 2;
 }
 
 .c4 {
@@ -1878,6 +1879,7 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
 
 .c4:hover {
   border-color: #ff9100;
+  z-index: 2;
 }
 
 .gCDWtp:focus ~ .c6 .AirportInput__spell {
@@ -2166,12 +2168,13 @@ exports[`Storyshots ControlsGroup Different controls group 1`] = `
   display: flex;
 }
 
-.c1 .controls-group__swap {
+.c1 .styled__SwapIcon-fKoejO {
+  opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .controls-group__swap {
+.c1:hover .styled__SwapIcon-fKoejO {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -2323,6 +2326,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
 
 .c2:hover {
   border-color: #ff9100;
+  z-index: 2;
 }
 
 .c14 {
@@ -2351,6 +2355,7 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
 
 .c14:hover {
   border-color: #ff9100;
+  z-index: 2;
 }
 
 .gCDWtp:focus ~ .c4 .AirportInput__spell {
@@ -2730,24 +2735,6 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c1 .c10 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c1:hover .c10 {
-  opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
-}
-
 .c8 {
   position: relative;
   -webkit-align-self: stretch;
@@ -2778,7 +2765,25 @@ exports[`Storyshots ControlsGroup Inputs group 1`] = `
   -ms-transfrom: translateZ(0);
   transfrom: translateZ(0);
   background: linear-gradient(180deg,rgba(255,255,255,0) 0%,#ffffff 15%,#ffffff 85%,rgba(255,255,255,0) 100%);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .c10 {
   opacity: 0;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .c10 {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
 }
 
 <div
@@ -4046,12 +4051,13 @@ exports[`Storyshots Input Compined inputs group 1`] = `
   display: flex;
 }
 
-.c3 .controls-group__swap {
+.c3 .styled__SwapIcon-fKoejO {
+  opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c3:hover .controls-group__swap {
+.c3:hover .styled__SwapIcon-fKoejO {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -4411,12 +4417,13 @@ exports[`Storyshots Input Seperate inputs group 1`] = `
   display: flex;
 }
 
-.c1 .controls-group__swap {
+.c1 .styled__SwapIcon-fKoejO {
+  opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .controls-group__swap {
+.c1:hover .styled__SwapIcon-fKoejO {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
