@@ -76,6 +76,7 @@ export const Container = styled.div`
 
   &:hover {
     border-color: ${({ theme }) => theme.color.secondary};
+    z-index: 2;
   }
   `
 
