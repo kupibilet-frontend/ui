@@ -39,7 +39,6 @@ class Swap extends React.Component<{}, SwapProps, void> {
         onClick={onSwap}
       >
         <SwapIcon
-          className="controls-group__swap"
           name="left-right"
           size="xxsmall"
           inheritColor

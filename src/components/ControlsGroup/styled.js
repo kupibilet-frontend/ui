@@ -14,19 +14,6 @@ const fadeGradient = ({ theme }) => (
   ')'
 )
 
-export const FlexContainer = styled.div`
-  display: flex;
-
-  & .controls-group__swap {
-    ${switchTransition}
-  }
-
-  &:hover .controls-group__swap {
-    opacity: 1;
-    transition-delay: .15s;
-  }
-`
-
 export const SwapContainer = styled.div`
   position: relative;
   align-self: stretch;
@@ -56,6 +43,18 @@ export const SwapIcon = styled(Icon)`
   transfrom: translateZ(0);
 
   background: ${(props) => fadeGradient(props)};
+`
 
-  opacity: 0;
+export const FlexContainer = styled.div`
+  display: flex;
+
+  ${SwapIcon} {
+    opacity: 0;
+    ${switchTransition}
+  }
+
+  &:hover ${SwapIcon} {
+    opacity: 1;
+    transition-delay: .15s;
+  }
 `
