@@ -4,5 +4,12 @@
     "import/resolver": {
       "babel-module": {}
     }
+  },
+  "globals": {
+    "InputEvent": true,
+    "React$Element": true,
+    "RF$FieldProps": true,
+    "RF$EventPayload": true,
+    "RF$onChange": true
   }
 }
