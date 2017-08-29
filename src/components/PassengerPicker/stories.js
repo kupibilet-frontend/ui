@@ -12,7 +12,7 @@ const defaults = {
   isMin: true,
 }
 
-storiesOf('PassengerPicker', module)
+storiesOf('Complex controls/PassengerPicker', module)
   .addWithInfo(
     'Defalut', `
       redux-form совместимый компонент.\n

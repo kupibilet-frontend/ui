@@ -10,7 +10,7 @@ const text = `
   it can be found as a welcome guest in many households across the world.
 `
 
-storiesOf('Collapse', module)
+storiesOf('Complex controls/Collapse', module)
   .addWithInfo('Default', () => (
     <div style={{ width: '252px' }}>
       <Collapse>
