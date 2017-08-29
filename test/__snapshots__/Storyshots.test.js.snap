@@ -58,22 +58,75 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   display: none;
 }
 
-.c18 {
+.c19 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-  height: 15px;
-  width: 15px;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
   fill: transparent;
   opacity: 1;
 }
 
-.c15 {
+.c17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: .1em;
+  padding-left: 3px;
+}
+
+.c14 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c14 .c18 {
+  fill: #007acc;
+}
+
+.c14:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c14:hover .c18 {
+  fill: rgba(0,122,204,0.8);
 }
 
 .c1 {
@@ -108,15 +161,6 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 }
 
 .c13 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  color: #007acc;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  -webkit-transition-property: color;
-  transition-property: color;
   padding-left: 18px;
   padding-right: 18px;
   -webkit-align-items: center;
@@ -129,25 +173,6 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   display: flex;
   padding-top: 12px;
   padding-bottom: 12px;
-}
-
-.c13 .c17 {
-  fill: #007acc;
-}
-
-.c13:hover {
-  color: rgba(0,122,204,0.8);
-}
-
-.c13:hover .c17 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.c16 {
-  margin: 3px 0 0 3px;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
 }
 
 .c11 {
@@ -213,11 +238,11 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   color: #007acc;
 }
 
-.c14 {
+.c15 {
   position: relative;
 }
 
-.c14:before {
+.c15:before {
   display: block;
   position: absolute;
   top: -5px;
@@ -355,23 +380,35 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             <div
               className="c13"
             >
-              <div
-                className="c14"
-              >
-                Пересадки
-              </div>
               <span
-                className="c15"
+                className="c14"
+                href={null}
               >
-                <svg
-                  className="c16 c17 c18"
-                  size="xxsmall"
-                  style={undefined}
+                <span>
+                  <div
+                    className="c15"
+                  >
+                    Пересадки
+                  </div>
+                </span>
+                <span
+                  className="c16"
                 >
-                  <use
-                    xlinkHref="#kb_arrow-down"
-                  />
-                </svg>
+                  <span
+                    className="c17"
+                  >
+                    <svg
+                      className="c18 c19"
+                      fill={null}
+                      rotate={false}
+                      size="normal"
+                    >
+                      <use
+                        xlinkHref="#kb_angle"
+                      />
+                    </svg>
+                  </span>
+                </span>
               </span>
             </div>
           </div>
@@ -1228,8 +1265,9 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 .c13 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
   height: 15px;
   width: 15px;
   fill: transparent;
@@ -1243,11 +1281,11 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   display: inline-flex;
 }
 
-.gwvqAl .c12 {
+.hZFqAs .c12 {
   fill: #007acc;
 }
 
-.gwvqAl:hover .c12 {
+.hZFqAs:hover .c12 {
   fill: rgba(0,122,204,0.8);
 }
 
@@ -1799,8 +1837,9 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
       >
         <svg
           className="c10 c11 c12 c13"
+          fill={null}
+          rotate={false}
           size="xxsmall"
-          style={undefined}
         >
           <use
             xlinkHref="#kb_left-right"
@@ -1954,8 +1993,9 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
 .c11 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
   height: 18px;
   width: 18px;
   fill: #ffffff;
@@ -2153,8 +2193,9 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
             >
               <svg
                 className="c11"
+                fill="background"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_minus"
@@ -2178,8 +2219,9 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
             >
               <svg
                 className="c11"
+                fill="background"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_plus"
@@ -2210,8 +2252,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
 .c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
   height: 18px;
   width: 18px;
   fill: #96a0b3;
@@ -2221,8 +2264,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
 .c13 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
   height: 18px;
   width: 18px;
   fill: #96a0b3;
@@ -2410,8 +2454,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
             >
               <svg
                 className="c7"
+                fill="miscDark"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_plane"
@@ -2468,8 +2513,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
             >
               <svg
                 className="c7"
+                fill="miscDark"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_hand-baggage"
@@ -2481,8 +2527,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
             >
               <svg
                 className="c7"
+                fill="miscDark"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_exchange"
@@ -2494,8 +2541,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
             >
               <svg
                 className="c7"
+                fill="miscDark"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_return"
@@ -2543,8 +2591,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
             >
               <svg
                 className="c7"
+                fill="miscDark"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_hand-baggage"
@@ -2556,8 +2605,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
             >
               <svg
                 className="c13"
+                fill="miscDark"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_exchange"
@@ -2569,8 +2619,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
             >
               <svg
                 className="c13"
+                fill="miscDark"
+                rotate={false}
                 size="normal"
-                style={undefined}
               >
                 <use
                   xlinkHref="#kb_return"
@@ -3103,8 +3154,9 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
 .c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
   height: 18px;
   width: 18px;
   fill: #ffffff;
@@ -3184,8 +3236,9 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
       >
         <svg
           className="c4"
+          fill="background"
+          rotate={false}
           size="normal"
-          style={undefined}
         >
           <use
             xlinkHref="#kb_carrot_monochrome"
@@ -3283,8 +3336,9 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
 .c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
   height: 18px;
   width: 18px;
   fill: #ffffff;
@@ -3372,8 +3426,9 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
       >
         <svg
           className="c4"
+          fill="background"
+          rotate={false}
           size="normal"
-          style={undefined}
         >
           <use
             xlinkHref="#kb_plane"
@@ -3396,8 +3451,9 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
       >
         <svg
           className="c4"
+          fill="background"
+          rotate={false}
           size="normal"
-          style={undefined}
         >
           <use
             xlinkHref="#kb_hand-baggage"
@@ -5256,6 +5312,206 @@ exports[`Storyshots Controls/Input default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/Link <a> link 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c1 .icon-inherit-color {
+  fill: #007acc;
+}
+
+.c1:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c1:hover .icon-inherit-color {
+  fill: rgba(0,122,204,0.8);
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1"
+    href="javascript:void(0)"
+  >
+    <span>
+      I will click you
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Storyshots Controls/Link <span> link 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c5 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: .1em;
+  padding-left: 3px;
+}
+
+.c1 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c1 .c4 {
+  fill: #007acc;
+}
+
+.c1:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c1:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.cigUOu .c4 {
+  fill: #007acc;
+}
+
+.cigUOu:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.kKnEAB .c4 {
+  fill: #007acc;
+}
+
+.kKnEAB:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.jnNeSt .c4 {
+  fill: #96a0b3;
+}
+
+.jnNeSt:hover .c4 {
+  fill: #38afff;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1"
+    href={null}
+    onClick={[Function]}
+  >
+    <span>
+      Dropdown link
+    </span>
+    <span
+      className="c2"
+    >
+      <span
+        className="c3"
+      >
+        <svg
+          className="c4 c5"
+          fill={null}
+          rotate={false}
+          size="normal"
+        >
+          <use
+            xlinkHref="#kb_angle"
+          />
+        </svg>
+      </span>
+    </span>
+  </span>
+</div>
+`;
+
 exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -5637,8 +5893,9 @@ exports[`Storyshots Icon Default 1`] = `
 .c2 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: fill;
-  transition-property: fill;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
   height: 42px;
   width: 42px;
   fill: #38afff;
@@ -5660,8 +5917,9 @@ exports[`Storyshots Icon Default 1`] = `
   >
     <svg
       className="c2"
+      fill="primary"
+      rotate={false}
       size="large"
-      style={undefined}
     >
       <use
         xlinkHref="#kb_checkbox"
