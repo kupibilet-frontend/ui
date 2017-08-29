@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components'
 import { styles as boxStyles } from 'components/Box'
 import Collapse from 'components/Collapse'
 import Icon from 'components/Icon'
-import Link from 'utils/link'
+import Link from 'components/Link'
 
 
 const Section = styled.section`
@@ -36,25 +36,11 @@ const PanelContent = styled(Content)`
 `
 
 const PanelHeader = styled.div`
-  ${Link}
   ${horizontalPadding}
   align-items: center;
   display: flex;
   padding-top: 12px;
   padding-bottom: 12px;
-`
-
-const IconWrapper = styled(Icon)`
-  margin: 3px 0 0 3px;
-  transition-property: transform;
-
-  ${({ isActive }) => {
-    if (isActive) {
-      return `
-        transform: rotate(-180deg);
-      `
-    }
-  }}
 `
 
 const PanelWrapper = styled(Collapse.Panel)`
@@ -83,13 +69,13 @@ Panel.propTypes = {
 
 const PanelHeaderWrapper = (props) => (
   <PanelHeader>
-    {props.children}
-    <IconWrapper
-      name="arrow-down"
-      size="xxsmall"
-      isActive={props.isActive}
-      inheritColor
-    />
+    <Link
+      rightIcon={
+        <Icon name="angle" rotate={props.isActive} inheritColor />
+      }
+    >
+      {props.children}
+    </Link>
   </PanelHeader>
 )
 

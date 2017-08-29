@@ -19,11 +19,19 @@ export const sizes = {
 
 const IconSvg = styled.svg`
   ${switchTransition};
-  transition-property: fill;
+  transition-property: fill, transform;
   height: ${({ size }) => sizes[size]}px;
   width: ${({ size }) => sizes[size]}px;
-  fill: ${({ theme, colorKeys }) => getThemeColor(theme, colorKeys.fill)};
+  fill: ${({ theme, fill }) => getThemeColor(theme, fill)};
   opacity: ${({ striked }) => (striked ? 0.6 : 1)};
+
+  ${({ rotate }) => {
+    if (rotate) {
+      return `
+        transform: rotate(180deg);
+      `
+    }
+  }}
 `
 
 export const IconWrapper = styled.span`
@@ -50,16 +58,12 @@ export const IconWrapper = styled.span`
   `
 
 // Scoped inside `colorKeys` because `fill` are valid HTML attrs
-const Icon = ({ size, fill, prefix, name, style, className, inheritColor, striked }) => (
+const Icon = ({ prefix, name, striked, className, inheritColor, ...props }) => (
   <IconWrapper striked={striked}>
     <IconSvg
-      className={cn(className, { 'icon-inherit-color': inheritColor })}
-      size={size}
-      colorKeys={{
-        fill,
-      }}
-      style={style}
+      {...props}
       striked={striked}
+      className={cn(className, { 'icon-inherit-color': inheritColor })}
     >
       <use xlinkHref={`#${prefix}_${name}`} />
     </IconSvg>
@@ -70,20 +74,21 @@ Icon.defaultProps = {
   prefix: 'kb',
   size: 'normal',
   fill: null,
+  className: null,
   inheritColor: false,
   striked: false,
+  rotate: false,
 }
 
 Icon.propTypes = {
-  /* eslint-disable react/require-default-props */
   name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(Object.keys(sizes)),
   prefix: PropTypes.string,
   fill: ThemingPropTypes.themeColor,
-  style: PropTypes.object,
   className: PropTypes.string,
   inheritColor: PropTypes.bool,
   striked: PropTypes.bool,
+  rotate: PropTypes.bool,
 }
 
 
