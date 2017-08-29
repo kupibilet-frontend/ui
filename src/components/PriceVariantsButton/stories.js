@@ -30,7 +30,7 @@ const defaultValues = {
 const onClick = (index) => updateKnob('active', 'number', index)
 
 /* eslint-disable react/jsx-no-bind */
-storiesOf('PriceVariantsButton', module)
+storiesOf('Complex controls/PriceVariantsButton', module)
   .addWithInfo('default', () => {
     const title = text('title', defaultValues.title)
     const description = text('description', defaultValues.description)

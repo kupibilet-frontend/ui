@@ -13,7 +13,7 @@ const StyledDropdown = styled(Dropdown)`
   }
 `
 
-storiesOf('Dropdown', module)
+storiesOf('Complex controls/Dropdown', module)
   .addWithInfo('Defalut', () => {
     const isOpen = boolean('isOpen', false)
     const onToggle = (event, value) => {

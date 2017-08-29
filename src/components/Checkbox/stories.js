@@ -5,7 +5,7 @@ import updateKnob from 'utils/updateKnob'
 
 import Checkbox from 'components/Checkbox'
 
-storiesOf('Checkbox', module)
+storiesOf('Controls/Checkbox', module)
   .addWithInfo('default', () => {
     const checked = boolean('checked', false)
 

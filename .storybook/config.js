@@ -2,9 +2,20 @@ import { configure, setAddon, addDecorator } from '@storybook/react'
 import centered from '@storybook/addon-centered'
 import { withKnobs } from '@storybook/addon-knobs'
 import infoAddon from '@storybook/addon-info'
+import { setOptions } from '@storybook/addon-options'
 
 import { mockInfoAddon } from '../storybook/addons'
 import { ThemeDecorator, IconsDecorator } from '../storybook/decorators'
+
+setOptions({
+  goFullScreen: false,
+  showLeftPanel: true,
+  showDownPanel: true,
+  showSearchBox: true,
+  downPanelInRight: false,
+  sortStoriesByKind: true,
+})
+
 
 if (process.env.NODE_ENV === 'test') {
   setAddon(mockInfoAddon)

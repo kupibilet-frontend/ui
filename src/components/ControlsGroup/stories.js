@@ -9,7 +9,7 @@ import Button from 'components/Button'
 import ControlsGroup from 'components/ControlsGroup'
 
 /* eslint-disable no-console */
-storiesOf('ControlsGroup', module)
+storiesOf('Complex controls/ControlsGroup', module)
   .addWithInfo('Inputs group', () => (
     <ControlsGroup onSwap={() => console.log('Swap it!')}>
       <AirportInput readOnly value="Шереметьево" city="Москва" IATACode="SVO" />

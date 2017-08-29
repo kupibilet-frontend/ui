@@ -130,7 +130,7 @@ const STORY_DOC_PROPS = {
   ),
 }
 
-storiesOf('Autocomplete', module)
+storiesOf('Controls/Autocomplete', module)
   .addWithInfo(
     'Airport',
     `Uses <AirportInput /> and <AirportSuggest />.

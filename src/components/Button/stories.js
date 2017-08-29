@@ -15,7 +15,7 @@ const sizesSelect = (defaultValue = 'large') => select(
   defaultValue,
 )
 
-storiesOf('Buttons', module)
+storiesOf('Controls/Buttons', module)
   .addWithInfo('Default', () => (
     <Button>
       { text('text', 'Авиабилеты') }
