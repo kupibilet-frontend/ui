@@ -206,7 +206,7 @@ const InputWrapper = styled.div`
   }
   `
 
-const calculatePaddings = ({ left, right, rightGroup, size }) => {
+const getIconWrapPaddings = ({ left, right, rightGroup, size }) => {
   if (left) {
     return `
       padding-left: ${ICON_PADDINGS[size].primary};
@@ -228,7 +228,7 @@ const calculatePaddings = ({ left, right, rightGroup, size }) => {
 const IconWrap = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
-  ${calculatePaddings}
+  ${getIconWrapPaddings}
   display: flex;
   vertical-align: top;
   align-items: center;
