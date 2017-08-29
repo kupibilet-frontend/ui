@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import ControlsGroup from 'components/ControlsGroup'
 import Icon from 'components/Icon'
 import { select, text, boolean } from '@storybook/addon-knobs'
-import Input, { InnerInput } from './index'
+import Input, { InnerInput } from 'components/Input'
 
 const inputDefault = {
   type: 'text',
