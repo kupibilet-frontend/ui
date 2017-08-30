@@ -87,6 +87,9 @@ class InputControl extends React.PureComponent<void, Props, State> {
       ...props
     } = this.props
 
+    const leftIconsArray = React.Children.toArray(leftIcon)
+    const rightIconsArray = React.Children.toArray(rightIcon)
+
     return (
       <InputWrapper
         active={active || this.state.isActive}
@@ -101,10 +104,10 @@ class InputControl extends React.PureComponent<void, Props, State> {
             <IconWrap
               onClick={this.onIconClick}
               size={size}
-              isGroup={Array.isArray(leftIcon)}
+              isGroup={leftIconsArray.length > 1}
               left
             >
-              {leftIcon}
+              {leftIconsArray}
             </IconWrap>
           ) : (
             null
@@ -131,7 +134,6 @@ class InputControl extends React.PureComponent<void, Props, State> {
               disabled={disabled}
               success={success}
               error={error}
-              neighboringInGroup={neighboringInGroup}
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
               innerRef={(el) => this.innerRef(el)}
@@ -143,10 +145,10 @@ class InputControl extends React.PureComponent<void, Props, State> {
             <IconWrap
               onClick={this.onIconClick}
               size={size}
-              isGroup={Array.isArray(rightIcon)}
+              isGroup={rightIconsArray.length > 1}
               right
             >
-              {rightIcon}
+              {rightIconsArray}
             </IconWrap>
           ) : (
             null
