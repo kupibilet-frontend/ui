@@ -114,10 +114,10 @@ storiesOf('Controls/Input', module)
         error={error}
         size={sizesSelect()}
         placeholder={placeholder}
-        rightIconGroup={[
+        rightIcon={React.Children.toArray([
           <Icon name="man" fill="miscDark" />,
           <Icon name="angle" fill="miscDark" />,
-        ]}
+        ])}
       />
     )
   })
