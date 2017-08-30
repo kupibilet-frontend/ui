@@ -17,6 +17,7 @@ storiesOf('Icon', module)
       size={select('size', iconSizes, 'large')}
       fill={select('fill', colorNames, 'primary')}
       striked={boolean('striked', false)}
+      rotate={boolean('rotate', false)}
       inheritColor={boolean('inheritColor', false)}
     />
   ))
