@@ -1,8 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import ControlsGroup from 'components/ControlsGroup'
+import Icon from 'components/Icon'
 import { select, text, boolean } from '@storybook/addon-knobs'
-import Input, { InnerInput } from './index'
+import Input, { InnerInput } from 'components/Input'
 
 const inputDefault = {
   type: 'text',
@@ -39,7 +40,7 @@ storiesOf('Controls/Input', module)
       />
     )
   })
-  .addWithInfo('Seperate inputs group', () => {
+  .addWithInfo('Separate inputs group', () => {
     return (
       <ControlsGroup>
         <Input
@@ -60,7 +61,7 @@ storiesOf('Controls/Input', module)
       </ControlsGroup>
     )
   })
-  .addWithInfo('Compined inputs group', () => {
+  .addWithInfo('Combined inputs group', () => {
     return (
       <Input
         size={sizesSelect()}
@@ -78,5 +79,45 @@ storiesOf('Controls/Input', module)
           placeholder="YYYY"
         />
       </Input>
+    )
+  })
+  .addWithInfo('With icons', () => {
+    const placeholder = text('placeholder', inputDefault.placeholder)
+    const disabled = boolean('disabled', false)
+    const success = boolean('success', false)
+    const error = text('error', null)
+
+    return (
+      <Input
+        name={inputDefault.name}
+        disabled={disabled}
+        success={success}
+        error={error}
+        size={sizesSelect()}
+        placeholder={placeholder}
+        leftIcon={<Icon name="man" fill="miscDark" />}
+        rightIcon={<Icon name="angle" fill="miscDark" />}
+      />
+    )
+  })
+  .addWithInfo('With icon group', () => {
+    const placeholder = text('placeholder', inputDefault.placeholder)
+    const disabled = boolean('disabled', false)
+    const success = boolean('success', false)
+    const error = text('error', null)
+
+    return (
+      <Input
+        name={inputDefault.name}
+        disabled={disabled}
+        success={success}
+        error={error}
+        size={sizesSelect()}
+        placeholder={placeholder}
+        rightIcon={[
+          <Icon name="man" fill="miscDark" />,
+          <Icon name="angle" fill="miscDark" />,
+        ]}
+      />
     )
   })
