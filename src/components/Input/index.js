@@ -26,7 +26,6 @@ type Props = {
   onFocus?: Function,
   leftIcon?: React$Element<*>,
   rightIcon?: React$Element<*>,
-  rightIconGroup?: React$Element<*>[],
   innerRef?: Function,
   /* global React$Element */
   children?: React$Element<*>[],
@@ -85,7 +84,6 @@ class InputControl extends React.PureComponent<void, Props, State> {
       children,
       leftIcon,
       rightIcon,
-      rightIconGroup,
       ...props
     } = this.props
 
@@ -100,7 +98,12 @@ class InputControl extends React.PureComponent<void, Props, State> {
       >
         {
           leftIcon ? (
-            <IconWrap onClick={this.onIconClick} size={size} left>
+            <IconWrap
+              onClick={this.onIconClick}
+              size={size}
+              isGroup={Array.isArray(leftIcon)}
+              left
+            >
               {leftIcon}
             </IconWrap>
           ) : (
@@ -124,7 +127,6 @@ class InputControl extends React.PureComponent<void, Props, State> {
               {...props}
               leftIcon={leftIcon}
               rightIcon={rightIcon}
-              rightIconGroup={rightIconGroup}
               size={size}
               disabled={disabled}
               success={success}
@@ -138,17 +140,13 @@ class InputControl extends React.PureComponent<void, Props, State> {
         }
         {
           rightIcon ? (
-            <IconWrap onClick={this.onIconClick} size={size} right>
+            <IconWrap
+              onClick={this.onIconClick}
+              size={size}
+              isGroup={Array.isArray(rightIcon)}
+              right
+            >
               {rightIcon}
-            </IconWrap>
-          ) : (
-            null
-          )
-        }
-        {
-          rightIconGroup ? (
-            <IconWrap onClick={this.onIconClick} size={size} rightGroup>
-              {rightIconGroup}
             </IconWrap>
           ) : (
             null

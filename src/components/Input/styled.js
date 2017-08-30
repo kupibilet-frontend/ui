@@ -102,7 +102,7 @@ const InnerInput = styled.input`
     ? '0'
     : `${SIZE[size]}px`
   )};
-  padding-right: ${({ size, rightIcon, rightIconGroup }) => (rightIcon || rightIconGroup
+  padding-right: ${({ size, rightIcon }) => (rightIcon
     ? '0'
     : `${SIZE[size]}px`
   )};
@@ -206,21 +206,26 @@ const InputWrapper = styled.div`
   }
   `
 
-const getIconWrapPaddings = ({ left, right, rightGroup, size }) => {
-  if (left) {
+const getIconWrapPaddings = ({ left, right, isGroup, size }) => {
+  if (left && isGroup) {
+    return `
+      padding-left: ${ICON_GROUP_PADDINGS[size].primary};
+      padding-right: ${ICON_GROUP_PADDINGS[size].secondary};
+    `
+  } else if (left) {
     return `
       padding-left: ${ICON_PADDINGS[size].primary};
       padding-right: ${ICON_PADDINGS[size].secondary};
+    `
+  } else if (right && isGroup) {
+    return `
+      padding-left: ${ICON_GROUP_PADDINGS[size].secondary};
+      padding-right: ${ICON_GROUP_PADDINGS[size].primary};
     `
   } else if (right) {
     return `
       padding-left: ${ICON_PADDINGS[size].secondary};
       padding-right: ${ICON_PADDINGS[size].primary};
-    `
-  } else if (rightGroup) {
-    return `
-      padding-left: ${ICON_GROUP_PADDINGS[size].secondary};
-      padding-right: ${ICON_GROUP_PADDINGS[size].primary};
     `
   }
 }
