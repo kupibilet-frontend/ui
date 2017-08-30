@@ -16,31 +16,31 @@ const inputBorderColor = (props) => {
 
 const ICON_PADDINGS = {
   large: {
-    primary: '10px',
-    secondary: '8px',
+    outer: '10px',
+    inner: '8px',
   },
   normal: {
-    primary: '7px',
-    secondary: '5px',
+    outer: '7px',
+    inner: '5px',
   },
   small: {
-    primary: '7px',
-    secondary: '5px',
+    outer: '7px',
+    inner: '5px',
   },
 }
 
 const ICON_GROUP_PADDINGS = {
   large: {
-    primary: '10px',
-    secondary: '3px',
+    outer: '10px',
+    inner: '3px',
   },
   normal: {
-    primary: '7px',
-    secondary: '3px',
+    outer: '7px',
+    inner: '3px',
   },
   small: {
-    primary: '7px',
-    secondary: '3px',
+    outer: '7px',
+    inner: '3px',
   },
 }
 
@@ -209,23 +209,23 @@ const InputWrapper = styled.div`
 const getIconWrapPaddings = ({ left, right, isGroup, size }) => {
   if (left && isGroup) {
     return `
-      padding-left: ${ICON_GROUP_PADDINGS[size].primary};
-      padding-right: ${ICON_GROUP_PADDINGS[size].secondary};
+      padding-left: ${ICON_GROUP_PADDINGS[size].outer};
+      padding-right: ${ICON_GROUP_PADDINGS[size].inner};
     `
   } else if (left) {
     return `
-      padding-left: ${ICON_PADDINGS[size].primary};
-      padding-right: ${ICON_PADDINGS[size].secondary};
+      padding-left: ${ICON_PADDINGS[size].outer};
+      padding-right: ${ICON_PADDINGS[size].inner};
     `
   } else if (right && isGroup) {
     return `
-      padding-left: ${ICON_GROUP_PADDINGS[size].secondary};
-      padding-right: ${ICON_GROUP_PADDINGS[size].primary};
+      padding-left: ${ICON_GROUP_PADDINGS[size].inner};
+      padding-right: ${ICON_GROUP_PADDINGS[size].outer};
     `
   } else if (right) {
     return `
-      padding-left: ${ICON_PADDINGS[size].secondary};
-      padding-right: ${ICON_PADDINGS[size].primary};
+      padding-left: ${ICON_PADDINGS[size].inner};
+      padding-right: ${ICON_PADDINGS[size].outer};
     `
   }
 }
