@@ -4750,8 +4750,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: #fff;
-  border-right: 1px solid #b1bdcc;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px;
 }
 
 .c3::-webkit-input-placeholder {
@@ -4811,166 +4810,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 }
 
 .c3:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c5 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: #fff;
-  border-right: 1px solid #b1bdcc;
-}
-
-.c5::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c5:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5::placeholder {
-  color: #96a0b3;
-}
-
-.c5::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c5:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5:focus {
-  outline-style: none;
-}
-
-.c5:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c7 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: #fff;
-  border-radius: 0 3px 3px 0;
-}
-
-.c7::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c7::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c7:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c7::placeholder {
-  color: #96a0b3;
-}
-
-.c7::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c7::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c7:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c7:focus {
-  outline-style: none;
-}
-
-.c7:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c7:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c7:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c7:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c7:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c7:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c7:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
@@ -5072,7 +4911,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   height: 100%;
 }
 
-.c6 {
+.c5 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5101,12 +4940,12 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   transition-property: border-color,box-shadow;
 }
 
-.c6:hover {
+.c5:hover {
   border-color: #38afff;
   z-index: 2;
 }
 
-.c6:before {
+.c5:before {
   content: '';
   position: absolute;
   top: -1px;
@@ -5118,7 +4957,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   z-index: 4;
 }
 
-.c6 .combined-inputs-group {
+.c5 .combined-inputs-group {
   height: 100%;
 }
 
@@ -5150,7 +4989,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
       size="large"
     >
       <input
-        className="c5"
+        className="c3"
         disabled={undefined}
         name="input"
         onBlur={[Function]}
@@ -5161,12 +5000,12 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
       />
     </div>
     <div
-      className="c6"
+      className="c5"
       disabled={undefined}
       size="large"
     >
       <input
-        className="c7"
+        className="c3"
         disabled={undefined}
         name="input"
         onBlur={[Function]}
