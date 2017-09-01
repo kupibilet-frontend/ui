@@ -24,7 +24,6 @@ const Radio = (props: Props, context: Context) => {
   return (
     <RadioLabel disabled={disabled} className={className}>
       <StyledRadio
-        className="radio"
         disabled={disabled}
         checked={checked}
       />
@@ -34,7 +33,7 @@ const Radio = (props: Props, context: Context) => {
         checked={checked}
         onChange={() => onChange(value)}
       />
-      <LabelText className="label-text" disabled={disabled}>
+      <LabelText disabled={disabled}>
         {label}
       </LabelText>
     </RadioLabel>
@@ -42,8 +41,8 @@ const Radio = (props: Props, context: Context) => {
 }
 
 Radio.contextTypes = {
-  selectedValue: PropTypes.string,
-  onChange: PropTypes.func,
+  selectedValue: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 Radio.defaultProps = {

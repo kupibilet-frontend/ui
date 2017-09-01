@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { switchTransition } from 'utils/transitions'
+import Text from 'components/Typography/Text'
 
 const getRadioBorder = (props, theme) => {
   if (props.checked) {
@@ -19,25 +20,6 @@ const getRadioBackground = (props, theme) => {
 
 export const RadioInput = styled.input`
   display: none;
-`
-
-export const RadioLabel = styled.label`
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
-  display: inline-flex;
-  align-items: start;
-  font-size: 16px;
-  line-height: 18px;
-  position: relative;
-  user-select: none;
-  width: 100%;
-
-  &:hover .radio {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primary)};
-  };
-
-  &:hover .label-text {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
-  };
 `
 
 export const StyledRadio = styled.div`
@@ -65,6 +47,7 @@ export const StyledRadio = styled.div`
     opacity: ${({ checked }) => (checked ? 1 : 0)}
   };
 `
+
 export const LabelText = styled.span`
   ${switchTransition};
   transition-property: color;
@@ -73,4 +56,21 @@ export const LabelText = styled.span`
   ${({ disabled, theme }) => (disabled &&
     `color: ${theme.color.textLight};`
   )}
+`
+
+export const RadioLabel = Text.withComponent('label').extend`
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+  display: inline-flex;
+  align-items: start;
+  position: relative;
+  user-select: none;
+  width: 100%;
+
+  ${StyledRadio}:hover {
+    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primary)};
+  };
+
+  ${LabelText}:hover {
+    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
+  };
 `
