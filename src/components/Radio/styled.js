@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { switchTransition } from 'utils/transitions'
-import Text from 'components/Typography/Text'
 
 const getRadioBorder = (props, theme) => {
   if (props.checked) {
@@ -58,10 +57,10 @@ export const LabelText = styled.span`
   )}
 `
 
-export const RadioLabel = Text.withComponent('label').extend`
+export const RadioLabel = styled.label`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
   display: inline-flex;
-  align-items: start;
+  align-items: center;
   position: relative;
   user-select: none;
   width: 100%;
