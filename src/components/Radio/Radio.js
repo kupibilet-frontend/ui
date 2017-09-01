@@ -4,15 +4,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { RadioLabel, StyledRadio, LabelText, RadioInput } from './styled'
 
+export type Value = string | boolean | number;
+
 type Props = {
-  value: string;
+  value: Value;
   label: string;
   disabled?: boolean;
   className?: string;
 }
 
 type Context = {
-  selectedValue: string;
+  selectedValue: Value;
   onChange: Function;
 }
 
@@ -41,7 +43,11 @@ const Radio = (props: Props, context: Context) => {
 }
 
 Radio.contextTypes = {
-  selectedValue: PropTypes.string.isRequired,
+  selectedValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
   onChange: PropTypes.func.isRequired,
 }
 
