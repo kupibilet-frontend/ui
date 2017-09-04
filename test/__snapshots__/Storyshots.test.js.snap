@@ -384,13 +384,11 @@ exports[`Storyshots Blocks FilterSection 1`] = `
                 className="c14"
                 href={null}
               >
-                <span>
-                  <div
-                    className="c15"
-                  >
-                    Пересадки
-                  </div>
-                </span>
+                <div
+                  className="c15"
+                >
+                  Пересадки
+                </div>
                 <span
                   className="c16"
                 >
@@ -5732,9 +5730,7 @@ exports[`Storyshots Controls/Link <a> link 1`] = `
     className="c1"
     href="javascript:void(0)"
   >
-    <span>
-      I will click you
-    </span>
+    I will click you
   </a>
 </div>
 `;
@@ -5855,9 +5851,7 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
     href={null}
     onClick={[Function]}
   >
-    <span>
-      Dropdown link
-    </span>
+    Dropdown link
     <span
       className="c2"
     >
