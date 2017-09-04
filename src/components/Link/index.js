@@ -40,9 +40,8 @@ const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
           {cloneIconWithSize(leftIcon)}
         </PaddingWrap>
       )}
-      <span>
-        {children}
-      </span>
+
+      {children}
 
       {rightIcon && (
         <PaddingWrap>
