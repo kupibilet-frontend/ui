@@ -16,11 +16,15 @@ import {
 
 type Section = {}
 type SuggestionType = {}
-type onChange = (Event, { newValue: string, method: string }) => void | any
-type onBlur = (Event) => void | any
-type onFocus = (Event) => void | any
+type onChangeType = (Event, { newValue: string, method: string }) => void | any
+type onBlurType = (Event) => void | any
+type onFocusType = (Event) => void | any
 
-type State = {}
+type State = {
+  isOpen: boolean,
+  displayedValue: any,
+  selectedSuggestion: Object,
+}
 
 type Props = {
   suggestions: SuggestionType[] | Section[],
@@ -38,9 +42,9 @@ type Props = {
   renderSuggestion?: (Suggestion, {query: string}) => React.Element<*>,
   inputProps: {
     value: string | number,
-    onChange?: onChange,
-    onBlur?: onBlur,
-    onFocus?: onFocus,
+    onChange?: onChangeType,
+    onBlur?: onBlurType,
+    onFocus?: onFocusType,
     meta?: {
       error: string,
     }
@@ -60,7 +64,7 @@ type Props = {
   defaultValue: any,
 }
 
-class SelectBox extends Component <Props, State> {
+class SelectBox extends Component <void, Props, State> {
   static defaultProps = {
     highlightFirstSuggestion: true,
     getSuggestionValue: (suggestion) => suggestion.value,
@@ -95,7 +99,7 @@ class SelectBox extends Component <Props, State> {
   }
 
   handleCustomSuggestionSelect = (event,
-    { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }
+    { suggestion, suggestionValue, suggestionIndex, sectionIndex, method },
   ) => {
     const { onSuggestionSelected } = this.props
     this.setState({
@@ -111,9 +115,8 @@ class SelectBox extends Component <Props, State> {
   handleFocus = (e) => {
     const { onFocus } = this.props.inputProps
     this.setState({
-      isOpen: true
+      isOpen: true,
     }, () => { if (onFocus) { onFocus(e) } })
-
   }
   handleBlur = () => {
     const { onBlur } = this.props.inputProps
@@ -138,7 +141,7 @@ class SelectBox extends Component <Props, State> {
     }
   }
 
-  renderSuggestion = (suggestion : Object, { query, isHighlighted }) => {
+  renderSuggestion = (suggestion : Object, { isHighlighted }) => {
     const { inputProps } = this.props
     return (
       <Suggestion
@@ -163,7 +166,7 @@ class SelectBox extends Component <Props, State> {
     )
   }
 
-  renderSuggestionsContainer = ({ containerProps , children, query }) => {
+  renderSuggestionsContainer = ({ containerProps, children, query }) => {
     const { renderSuggestionsContainer } = this.props
     return (
       <RelativeWrapper>

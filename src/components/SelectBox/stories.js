@@ -1,8 +1,8 @@
+// @flow
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { text, boolean } from '@storybook/addon-knobs'
-import updateKnob from 'utils/updateKnob'
 
 import SelectBox from 'components/SelectBox'
 
@@ -76,27 +76,17 @@ const initialStateSections = {
       suggestions: allRabbits,
     },
   ],
-  value: ''
+  value: '',
 }
 
-const initialState =  {
+const initialState = {
   suggestions: defaultSuggestions,
   value: '',
 }
 
-const sizesSelect = (defaultValue = 'normal') => select(
-  'size',
-  {
-    large: 'Large',
-    normal: 'Normal',
-    small: 'Small',
-  },
-  defaultValue,
-)
-
 const onSuggestionSelected = (event,
-  { suggestion, suggestionValue, suggestionIndex, sectionIndex, method },
-) => { alert(JSON.stringify(suggestion), 'is selected')}
+  { suggestion },
+) => { alert(JSON.stringify(suggestion), 'is selected') }
 
 const renderSectionTitle = (section) => (
   <SectionHeader>
@@ -104,7 +94,12 @@ const renderSectionTitle = (section) => (
   </SectionHeader>
 )
 
-class SelectBoxStateful extends Component {
+type Props = {
+  state: Object,
+  inputProps: Object,
+}
+
+class SelectBoxStateful extends Component <void, Props, void> {
   constructor(props) {
     super(props)
     this.state = props.state
@@ -112,7 +107,7 @@ class SelectBoxStateful extends Component {
 
   onChange = (returnedValue) => {
     this.setState({
-      value: returnedValue
+      value: returnedValue,
     })
   }
 
@@ -143,7 +138,7 @@ storiesOf('Controls/SelectBox', module)
       <SelectBoxStateful
         state={initialState}
         inputProps={{
-          ...defaultInputProps
+          ...defaultInputProps,
         }}
         error={error}
         success={success}
@@ -160,15 +155,14 @@ storiesOf('Controls/SelectBox', module)
       <SelectBoxStateful
         state={initialState}
         inputProps={{
-          ...defaultInputProps
+          ...defaultInputProps,
         }}
         onSuggestionSelected={onSuggestionSelected}
         error={error}
         success={success}
       />
     )
-  }
-  )
+  })
   .addWithInfo('With custom sections', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
@@ -179,7 +173,7 @@ storiesOf('Controls/SelectBox', module)
       <SelectBoxStateful
         state={initialStateSections}
         inputProps={{
-          ...defaultInputProps
+          ...defaultInputProps,
         }}
         multiSection
         renderSectionTitle={renderSectionTitle}
@@ -187,5 +181,4 @@ storiesOf('Controls/SelectBox', module)
         success={success}
       />
     )
-  }
-  )
+  })
