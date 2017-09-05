@@ -40,9 +40,8 @@ const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
           {cloneIconWithSize(leftIcon)}
         </PaddingWrap>
       )}
-      <span>
-        {children}
-      </span>
+
+      {children}
 
       {rightIcon && (
         <PaddingWrap>
@@ -62,7 +61,7 @@ Link.defaultProps = {
 const StyledLink = styled(Link)`
   ${style}
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
 `
 
 export default StyledLink
