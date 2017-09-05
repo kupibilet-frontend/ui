@@ -6290,6 +6290,1116 @@ exports[`Storyshots Controls/Radio disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/SelectBox Custom suggestion select handler 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c8 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 1;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.hwYiOt .c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hwYiOt .c3::-ms-clear,
+.hwYiOt .c3::-webkit-search-cancel-button {
+  display: none;
+}
+
+.hwYiOt .c3--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.hwYiOt .c3--focused {
+  outline: none;
+}
+
+.hwYiOt .c10 {
+  display: none;
+}
+
+.hwYiOt .c10--open {
+  display: block;
+  position: relative;
+}
+
+.c4 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 11px;
+  padding-right: 0;
+  font-size: 16px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::placeholder {
+  color: #96a0b3;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4:focus {
+  outline-style: none;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  z-index: 1;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c2:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c2:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  display: none;
+  width: 2px;
+  background-color: #e64926;
+  z-index: 4;
+}
+
+.c2 .combined-inputs-group {
+  height: 100%;
+}
+
+.c5 {
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  padding-left: 5px;
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hBtVdJ .c6 {
+  margin-left: 6px;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .c3::-ms-clear,
+.c1 .c3::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .c3--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .c3--focused {
+  outline: none;
+}
+
+.c1 .c10 {
+  display: none;
+}
+
+.c1 .c10--open {
+  z-index: 15;
+  display: block;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c9 {
+  position: relative;
+}
+
+.c11 {
+  margin: 3px 0 0;
+  padding: 0;
+  background-color: #fff;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  left: border-radius:3px 0 0 3px;
+  right: border-radius:0 3px 3px 0;
+  all: border-radius:3px;
+  overflow: hidden;
+}
+
+.c11 to-string:function toString() {
+  return: borderRadiusSmall.all;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .hwYiOt .c10--open,
+  .responsive-booking .hwYiOt .c10--open {
+    position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .c10--open,
+  .responsive-booking .c1 .c10--open {
+    position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c11,
+  .responsive-booking .c11 {
+    top: initial;
+    left: 0;
+    right: 0;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="react-autosuggest__container"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        size="normal"
+      >
+        <input
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-expanded={false}
+          aria-haspopup={false}
+          aria-owns="react-autowhatever-1"
+          autoComplete="off"
+          className="c3 c4"
+          disabled={false}
+          name="input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Купить..."
+          readOnly={true}
+          role="combobox"
+          size="normal"
+          type="text"
+          value=""
+        />
+        <div
+          className="c5"
+          onClick={[Function]}
+          size="normal"
+        >
+          <span
+            className="c6 c7"
+          >
+            <svg
+              className="c8"
+              fill="miscDark"
+              rotate={false}
+              size="normal"
+            >
+              <use
+                xlinkHref="#kb_angle"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        className="c9"
+      >
+        <div
+          className="c10 c11"
+          id="react-autowhatever-1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls/SelectBox With custom sections 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c8 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 1;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.hwYiOt .c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hwYiOt .c3::-ms-clear,
+.hwYiOt .c3::-webkit-search-cancel-button {
+  display: none;
+}
+
+.hwYiOt .c3--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.hwYiOt .c3--focused {
+  outline: none;
+}
+
+.hwYiOt .c10 {
+  display: none;
+}
+
+.hwYiOt .c10--open {
+  display: block;
+  position: relative;
+}
+
+.c4 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 11px;
+  padding-right: 0;
+  font-size: 16px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::placeholder {
+  color: #96a0b3;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4:focus {
+  outline-style: none;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  z-index: 1;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c2:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c2:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  display: none;
+  width: 2px;
+  background-color: #e64926;
+  z-index: 4;
+}
+
+.c2 .combined-inputs-group {
+  height: 100%;
+}
+
+.c5 {
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  padding-left: 5px;
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hBtVdJ .c6 {
+  margin-left: 6px;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .c3::-ms-clear,
+.c1 .c3::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .c3--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .c3--focused {
+  outline: none;
+}
+
+.c1 .c10 {
+  display: none;
+}
+
+.c1 .c10--open {
+  z-index: 15;
+  display: block;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c9 {
+  position: relative;
+}
+
+.c11 {
+  margin: 3px 0 0;
+  padding: 0;
+  background-color: #fff;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  left: border-radius:3px 0 0 3px;
+  right: border-radius:0 3px 3px 0;
+  all: border-radius:3px;
+  overflow: hidden;
+}
+
+.c11 to-string:function toString() {
+  return: borderRadiusSmall.all;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .hwYiOt .c10--open,
+  .responsive-booking .hwYiOt .c10--open {
+    position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .c10--open,
+  .responsive-booking .c1 .c10--open {
+    position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c11,
+  .responsive-booking .c11 {
+    top: initial;
+    left: 0;
+    right: 0;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="react-autosuggest__container"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        size="normal"
+      >
+        <input
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-expanded={false}
+          aria-haspopup={false}
+          aria-owns="react-autowhatever-1"
+          autoComplete="off"
+          className="c3 c4"
+          disabled={false}
+          name="input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Купить..."
+          readOnly={true}
+          role="combobox"
+          size="normal"
+          type="text"
+          value=""
+        />
+        <div
+          className="c5"
+          onClick={[Function]}
+          size="normal"
+        >
+          <span
+            className="c6 c7"
+          >
+            <svg
+              className="c8"
+              fill="miscDark"
+              rotate={false}
+              size="normal"
+            >
+              <use
+                xlinkHref="#kb_angle"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        className="c9"
+      >
+        <div
+          className="c10 c11"
+          id="react-autowhatever-1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls/SelectBox default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c8 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 1;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.hwYiOt .c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hwYiOt .c3::-ms-clear,
+.hwYiOt .c3::-webkit-search-cancel-button {
+  display: none;
+}
+
+.hwYiOt .c3--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.hwYiOt .c3--focused {
+  outline: none;
+}
+
+.hwYiOt .c10 {
+  display: none;
+}
+
+.hwYiOt .c10--open {
+  display: block;
+  position: relative;
+}
+
+.c4 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 11px;
+  padding-right: 0;
+  font-size: 16px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::placeholder {
+  color: #96a0b3;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4:focus {
+  outline-style: none;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  z-index: 1;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c2:hover {
+  border-color: #38afff;
+  z-index: 2;
+}
+
+.c2:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  display: none;
+  width: 2px;
+  background-color: #e64926;
+  z-index: 4;
+}
+
+.c2 .combined-inputs-group {
+  height: 100%;
+}
+
+.c5 {
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  padding-left: 5px;
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.hBtVdJ .c6 {
+  margin-left: 6px;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .c3::-ms-clear,
+.c1 .c3::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .c3--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .c3--focused {
+  outline: none;
+}
+
+.c1 .c10 {
+  display: none;
+}
+
+.c1 .c10--open {
+  z-index: 15;
+  display: block;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c9 {
+  position: relative;
+}
+
+.c11 {
+  margin: 3px 0 0;
+  padding: 0;
+  background-color: #fff;
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  left: border-radius:3px 0 0 3px;
+  right: border-radius:0 3px 3px 0;
+  all: border-radius:3px;
+  overflow: hidden;
+}
+
+.c11 to-string:function toString() {
+  return: borderRadiusSmall.all;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .hwYiOt .c10--open,
+  .responsive-booking .hwYiOt .c10--open {
+    position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .c10--open,
+  .responsive-booking .c1 .c10--open {
+    position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c11,
+  .responsive-booking .c11 {
+    top: initial;
+    left: 0;
+    right: 0;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="react-autosuggest__container"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        size="normal"
+      >
+        <input
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-expanded={false}
+          aria-haspopup={false}
+          aria-owns="react-autowhatever-1"
+          autoComplete="off"
+          className="c3 c4"
+          disabled={false}
+          name="input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Купить..."
+          readOnly={true}
+          role="combobox"
+          size="normal"
+          type="text"
+          value=""
+        />
+        <div
+          className="c5"
+          onClick={[Function]}
+          size="normal"
+        >
+          <span
+            className="c6 c7"
+          >
+            <svg
+              className="c8"
+              fill="miscDark"
+              rotate={false}
+              size="normal"
+            >
+              <use
+                xlinkHref="#kb_angle"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        className="c9"
+      >
+        <div
+          className="c10 c11"
+          id="react-autowhatever-1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
