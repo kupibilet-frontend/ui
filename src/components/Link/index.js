@@ -61,7 +61,7 @@ Link.defaultProps = {
 const StyledLink = styled(Link)`
   ${style}
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
 `
 
 export default StyledLink
