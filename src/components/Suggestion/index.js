@@ -29,4 +29,8 @@ const Suggestion = (props : Props) => {
   )
 }
 
+Suggestion.defaultProps = {
+  isHighlighted: false,
+}
+
 export default Suggestion
