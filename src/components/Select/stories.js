@@ -1,18 +1,14 @@
 // @flow
 import React from 'react'
-import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { text, boolean, object } from '@storybook/addon-knobs'
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 
-import Select from 'components/Select'
+import withReduxForm from 'storybook/decorators/withReduxForm'
+import { Field } from 'redux-form'
 
-const SectionHeader = styled.div`
-  height: 30px;
-  line-height: 30px;
-  padding-left: 9px;
-  color: ${({ theme }) => theme.color.miscDark};
-`
+import RFSelect, { Select } from 'components/Select'
+
 
 const inputDefault = {
   type: 'text',
@@ -82,17 +78,16 @@ const initialState = {
   value: '',
 }
 
-const renderSectionTitle = (section) => (
-  <SectionHeader>
-    {section.title}
-  </SectionHeader>
-)
-
 const onSuggestionSelected = (event, { suggestion }) => {
   updateKnob('value', 'object', suggestion || { value: '' })
 }
 
+
 const getSimpleKey = (suggestion) => suggestion.value
+
+const getSectionSuggestionKey = (suggestion) => suggestion.customKey
+const getSectionSuggestionValue = (suggestion) => suggestion.customValue
+
 
 storiesOf('Controls/Select', module)
   .addWithInfo('default', () => {
@@ -118,30 +113,7 @@ storiesOf('Controls/Select', module)
       />
     )
   })
-  .addWithInfo('Custom suggestion select handler', () => {
-    const placeholder = text('placeholder', inputDefault.placeholder)
-    const disabled = boolean('disabled', false)
-    const success = boolean('success', false)
-    const error = text('error', null)
-    const defaultInputProps = { placeholder, disabled }
-
-    return (
-      <Select
-        suggestions={initialState.suggestions}
-        inputProps={{
-          ...defaultInputProps,
-          value: object('value', { value: '' }),
-          meta: {
-            active: true,
-          },
-        }}
-        onSuggestionSelected={onSuggestionSelected}
-        error={error}
-        success={success}
-      />
-    )
-  })
-  .addWithInfo('With custom sections', () => {
+  .addWithInfo('With custom sections and keys', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -150,17 +122,34 @@ storiesOf('Controls/Select', module)
     return (
       <Select
         suggestions={initialStateSections.suggestions}
+        getSuggestionKey={getSectionSuggestionKey}
+        getSuggestionValue={getSectionSuggestionValue}
+        onSuggestionSelected={onSuggestionSelected}
         inputProps={{
           ...defaultInputProps,
-          value: text('value', ''),
+          value: object('value', { value: '' }),
           meta: {
             active: true,
           },
         }}
         multiSection
-        renderSectionTitle={renderSectionTitle}
         error={error}
         success={success}
       />
+    )
+  })
+  .addDecorator(withReduxForm)
+  .addWithInfo('With Redux Form', () => {
+    return (
+      <Field
+        suggestions={initialState.suggestions}
+        onSuggestionSelected={onSuggestionSelected}
+        getSuggestionKey={getSimpleKey}
+        component={RFSelect}
+        placeholder="Купить..."
+        name="MadRabbitField"
+        label="Пол"
+      />
+
     )
   })
