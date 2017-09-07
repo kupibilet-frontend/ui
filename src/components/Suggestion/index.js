@@ -23,7 +23,7 @@ const Suggestion = (props : Props) => {
         }
       </SuggestionIcon>
       <SuggestionText>
-        {suggestion.label}
+        {suggestion.value}
       </SuggestionText>
     </SuggestionContainer>
   )

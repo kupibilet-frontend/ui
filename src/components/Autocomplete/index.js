@@ -20,8 +20,8 @@ const NON_LETTERS_REGEXP = /[^\w\u0400-\u04FF]/g
 
 const isValuesEqual = (a, b) => {
   /* eslint-disable no-underscore-dangle */
-  const _a = (a || '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
-  const _b = (b || '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
+  const _a = (a ? String(a) : '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
+  const _b = (b ? String(b) : '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
 
   // Not empty and same
   return Boolean(_a && _a === _b)
