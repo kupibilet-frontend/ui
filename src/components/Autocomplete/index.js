@@ -34,7 +34,7 @@ type Suggestion = {}
 type onChange = (Event, { newValue: string, method: string }) => void
 
 type Props = controlsGroupProps & {
-  forceSuggesedValue: boolean,
+  forceSuggestedValue: boolean,
   suggestions: Suggestion[] | Section[],
 
   onSuggestionsFetchRequested: ({ value: string }) => any,
@@ -103,7 +103,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
 
   static propTypes = {
     ...Autosuggest.propTypes,
-    forceSuggesedValue: PropTypes.bool,
+    forceSuggestedValue: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -111,15 +111,16 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     highlightFirstSuggestion: true,
     getSuggestionValue: (suggestion) => suggestion.value,
     getSectionSuggestions: (section) => section.values,
-    forceSuggesedValue: true,
+    forceSuggestedValue: true,
   }
   /* eslint-enable react/sort-comp */
 
   componentWillReceiveProps(nextProps: Props) {
-    const { suggestions, multiSection, inputProps } = nextProps
+    const { suggestions, multiSection, inputProps, forceSuggestedValue } = nextProps
     const { value, IATACode } = inputProps
     const { active } = inputProps.meta
 
+    // TODO extract IATA related and 'autoSuggest'
     const isSuggestAlreadySelected = Boolean(IATACode)
     const valueEqualsWithSuggest = isValuesEqual(value, _get(suggestions, '0.value')) ||
       isValuesEqual(value, _get(suggestions, '0.IATACode'))
@@ -127,7 +128,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     if (valueEqualsWithSuggest && !isSuggestAlreadySelected && suggestions.length === 1) {
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
-    } else if (suggestions.length && !active) {
+    } else if (forceSuggestedValue && suggestions.length && !active) {
       this.selectFirstSuggest(null, nextProps, 'autoFill')
       this.setState({ suggestions: [] })
     } else {
@@ -165,7 +166,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     }
 
     if (!this.autosuggestInstance || !this.autosuggestInstance.justSelectedSuggestion) {
-      if (this.props.forceSuggesedValue) {
+      if (this.props.forceSuggestedValue) {
         this.selectFirstSuggest(event, this.props, 'blur')
       }
     }
