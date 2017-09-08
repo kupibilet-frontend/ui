@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, object } from '@storybook/addon-knobs'
 import updateKnob from 'utils/updateKnob'
 
 import Select from 'components/Select'
@@ -23,31 +23,31 @@ const inputDefault = {
 
 const popularRabbits = [
   {
-    value: 'some custom value',
-    label: 'Супер-заяц купи билет',
+    customKey: 'some custom value',
+    customValue: 'Супер-заяц купи билет',
   },
   {
-    value: 'some custom value2',
-    label: 'Кролик-убийца',
+    customKey: 'some custom value2',
+    customValue: 'Кролик-убийца',
   },
 ]
 
 const allRabbits = [
   {
-    value: 'some custom value',
-    label: 'Супер-заяц купи билет',
+    customKey: 'some custom value',
+    customValue: 'Супер-заяц купи билет',
   },
   {
-    value: 'some custom value2',
-    label: 'Кролик-убийца',
+    customKey: 'some custom value2',
+    customValue: 'Кролик-убийца',
   },
   {
-    value: 'some custom value3',
-    label: 'Высококонверсионный заяц',
+    customKey: 'some custom value3',
+    customValue: 'Высококонверсионный заяц',
   },
   {
-    value: 'some custom value4',
-    label: 'Заяц с главной',
+    customKey: 'some custom value4',
+    customValue: 'Заяц с главной',
   },
 ]
 
@@ -88,9 +88,13 @@ const renderSectionTitle = (section) => (
   </SectionHeader>
 )
 
-const onSuggestionSelected = (event, { suggestionValue }) => {
-  updateKnob('value', 'text', suggestionValue || '')
+const onSuggestionSelected = (event, { suggestion }) => {
+  console.log('updating knob with:')
+  console.info(suggestion)
+  updateKnob('value', 'object', suggestion || { value: '' })
 }
+
+const getSimpleKey = (suggestion) => suggestion.value
 
 storiesOf('Controls/Select', module)
   .addWithInfo('default', () => {
@@ -103,9 +107,10 @@ storiesOf('Controls/Select', module)
       <Select
         suggestions={initialState.suggestions}
         onSuggestionSelected={onSuggestionSelected}
+        getSuggestionKey={getSimpleKey}
         inputProps={{
           ...defaultInputProps,
-          value: text('value', ''),
+          value: object('value', { value: '' }),
           meta: {
             active: true,
           },
@@ -127,7 +132,7 @@ storiesOf('Controls/Select', module)
         suggestions={initialState.suggestions}
         inputProps={{
           ...defaultInputProps,
-          value: text('value', ''),
+          value: object('value', { value: '' }),
           meta: {
             active: true,
           },

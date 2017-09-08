@@ -116,7 +116,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
   /* eslint-enable react/sort-comp */
 
   componentWillReceiveProps(nextProps: Props) {
-    const { suggestions, multiSection, inputProps } = nextProps
+    const { suggestions, multiSection, inputProps, forceSuggesedValue } = nextProps
     const { value, IATACode } = inputProps
     const { active } = inputProps.meta
 
@@ -127,7 +127,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     if (valueEqualsWithSuggest && !isSuggestAlreadySelected && suggestions.length === 1) {
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
-    } else if (suggestions.length && !active) {
+    } else if (forceSuggesedValue && suggestions.length && !active) {
       this.selectFirstSuggest(null, nextProps, 'autoFill')
       this.setState({ suggestions: [] })
     } else {
