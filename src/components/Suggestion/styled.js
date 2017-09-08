@@ -5,7 +5,10 @@ const SuggestionContainer = styled.div`
   flex-flow: row nowrap;
   align-items: center;
   cursor: pointer;
-  background: ${({ theme, isHighlighted }) => (isHighlighted ? theme.color.secondaryLightest : null)};
+  background-color: ${({ theme, isHighlighted }) => (isHighlighted
+    ? theme.color.secondaryLightest
+    : theme.color.background
+  )};
   &:hover {
     background: ${({ theme }) => theme.color.secondaryLightest};
     .icon-inherit-color {
