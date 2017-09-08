@@ -48,7 +48,6 @@ class Select extends React.Component {
 
   renderSuggestion = (suggestion: {}, { isHighlighted }) => {
     const { inputProps, getSuggestionKey, getSuggestionValue } = this.props
-    console.info(inputProps.value)
     return (
       <Suggestion
         suggestion={suggestion}

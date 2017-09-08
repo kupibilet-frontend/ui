@@ -23,7 +23,6 @@ const Suggestion = (props : Props) => {
     getSuggestionKey,
     getSuggestionValue,
   } = props
-  console.info(getSuggestionKey)
   return (
     <SuggestionContainer isHighlighted={isHighlighted}>
       <SuggestionIcon>
