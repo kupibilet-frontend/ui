@@ -89,8 +89,6 @@ const renderSectionTitle = (section) => (
 )
 
 const onSuggestionSelected = (event, { suggestion }) => {
-  console.log('updating knob with:')
-  console.info(suggestion)
   updateKnob('value', 'object', suggestion || { value: '' })
 }
 
