@@ -1,10 +1,16 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { shadowSmall } from 'utils/shadows'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import mq from 'utils/media-queries'
 
-export default styled.div`
+export default css`
+  position: relative;
+
+  ${mq.mobile`
+    position: static;
+  `}
+
   .react-autosuggest__container {}
   .react-autosuggest__container--open {}
   .react-autosuggest__input {
@@ -27,31 +33,10 @@ export default styled.div`
   }
   .react-autosuggest__suggestions-container--open {
     display: block;
-    position: relative;
-
-    ${mq.mobile`
-      position: static;
-    `}
   }
   .react-autosuggest__suggestions-list {
-    margin: 3px 0 0;
     padding: 0;
     list-style-type: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 320px;
-    max-width: 540px;
-    ${shadowSmall}
-    ${borderRadiusSmall.all}
-    overflow: hidden;
-    z-index: 10;
-
-    ${mq.mobile`
-      top: initial;
-      left: 0;
-      right: 0;
-    `}
   }
   .react-autosuggest__suggestion {
     cursor: pointer;
@@ -61,4 +46,25 @@ export default styled.div`
   .react-autosuggest__section-container {}
   .react-autosuggest__section-container--first {}
   .react-autosuggest__section-title {}
+`
+
+export const SuggestionsContainer = styled.div`
+  margin: 3px 0 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 320px;
+  max-width: 540px;
+  ${shadowSmall}
+  ${borderRadiusSmall.all}
+  overflow: hidden;
+  z-index: 10;
+
+  ${mq.mobile`
+    top: initial;
+    left: 0;
+    right: 0;
+  `}
+
 `

@@ -2652,6 +2652,24 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   box-sizing: border-box;
 }
 
+.c10 {
+  margin: 3px 0 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 320px;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.c1 {
+  position: relative;
+}
+
 .c1 .c3 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2678,22 +2696,11 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 
 .c1 .c9--open {
   display: block;
-  position: relative;
 }
 
 .c1 .react-autosuggest__suggestions-list {
-  margin: 3px 0 0;
   padding: 0;
   list-style-type: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 320px;
-  max-width: 540px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
 }
 
 .c1 .react-autosuggest__suggestion {
@@ -2923,18 +2930,18 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c1 .c9--open,
-  .responsive-booking .c1 .c9--open {
-    position: static;
+  .responsive .c10,
+  .responsive-booking .c10 {
+    top: initial;
+    left: 0;
+    right: 0;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c1 .react-autosuggest__suggestions-list,
-  .responsive-booking .c1 .react-autosuggest__suggestions-list {
-    top: initial;
-    left: 0;
-    right: 0;
+  .responsive .c1,
+  .responsive-booking .c1 {
+    position: static;
   }
 }
 
@@ -2952,54 +2959,50 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
       className="c1"
     >
       <div
-        className="react-autosuggest__container"
+        className="c2"
       >
+        <textarea
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-expanded={false}
+          aria-haspopup={false}
+          aria-owns="react-autowhatever-1"
+          autoCapitalize="sentences"
+          autoComplete="off"
+          autoFocus={true}
+          className="c3 c4"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Туда"
+          role="combobox"
+          rows="1"
+          type="text"
+          value=""
+          wrap="off"
+        />
         <div
-          className="c2"
+          className="c5 c6"
         >
-          <textarea
-            aria-activedescendant={null}
-            aria-autocomplete="list"
-            aria-expanded={false}
-            aria-haspopup={false}
-            aria-owns="react-autowhatever-1"
-            autoCapitalize="sentences"
-            autoComplete="off"
-            autoFocus={true}
-            className="c3 c4"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            onKeyDown={[Function]}
-            placeholder="Туда"
-            role="combobox"
-            rows="1"
-            type="text"
-            value=""
-            wrap="off"
-          />
           <div
-            className="c5 c6"
-          >
-            <div
-              className="c7"
-            >
-              
-            </div>
-            
-            
-          </div>
-          <div
-            className="c8"
+            className="c7"
           >
             
           </div>
+          
+          
         </div>
         <div
-          className="c9"
-          id="react-autowhatever-1"
-        />
+          className="c8"
+        >
+          
+        </div>
       </div>
+      <div
+        className="c9 c10"
+        id="react-autowhatever-1"
+      />
     </div>
   </div>
 </div>
@@ -6322,7 +6325,25 @@ exports[`Storyshots Controls/Select Custom suggestion select handler 1`] = `
   display: inline-flex;
 }
 
-.c2 .c4 {
+.c10 {
+  margin: 3px 0 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 320px;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c3 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -6348,22 +6369,11 @@ exports[`Storyshots Controls/Select Custom suggestion select handler 1`] = `
 
 .c2 .c10--open {
   display: block;
-  position: relative;
 }
 
-.c2 .react-autosuggest__suggestions-list {
-  margin: 3px 0 0;
+.c1 .react-autosuggest__suggestions-list {
   padding: 0;
   list-style-type: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 320px;
-  max-width: 540px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
 }
 
 .c2 .react-autosuggest__suggestion {
@@ -6528,18 +6538,18 @@ exports[`Storyshots Controls/Select Custom suggestion select handler 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c2 .c10--open,
-  .responsive-booking .c2 .c10--open {
-    position: static;
+  .responsive .c10,
+  .responsive-booking .c10 {
+    top: initial;
+    left: 0;
+    right: 0;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c2 .react-autosuggest__suggestions-list,
-  .responsive-booking .c2 .react-autosuggest__suggestions-list {
-    top: initial;
-    left: 0;
-    right: 0;
+  .responsive .c1,
+  .responsive-booking .c1 {
+    position: static;
   }
 }
 
@@ -6550,60 +6560,56 @@ exports[`Storyshots Controls/Select Custom suggestion select handler 1`] = `
     className="c1 c2"
   >
     <div
-      className="react-autosuggest__container"
+      className="c2"
+      disabled={false}
+      size="normal"
     >
-      <div
-        className="c3"
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup={false}
+        aria-owns="react-autowhatever-1"
+        autoComplete="off"
+        className="c3 c4"
         disabled={false}
+        name="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Купить..."
+        readOnly={true}
+        role="combobox"
+        size="normal"
+        type="text"
+        value=""
+      />
+      <div
+        className="c5"
+        onClick={[Function]}
         size="normal"
       >
-        <input
-          aria-activedescendant={null}
-          aria-autocomplete="list"
-          aria-expanded={false}
-          aria-haspopup={false}
-          aria-owns="react-autowhatever-1"
-          autoComplete="off"
-          className="c4 c5"
-          disabled={false}
-          name="input"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Купить..."
-          readOnly={true}
-          role="combobox"
-          size="normal"
-          type="text"
-          value=""
-        />
-        <div
-          className="c6"
-          onClick={[Function]}
-          size="normal"
+        <span
+          className="c6 c7"
         >
-          <span
-            className="c7 c8"
+          <svg
+            className="c8"
+            fill="miscDark"
+            rotate={false}
+            size="normal"
           >
-            <svg
-              className="c9"
-              fill="miscDark"
-              rotate={false}
-              size="normal"
-            >
-              <use
-                xlinkHref="#kb_angle"
-              />
-            </svg>
-          </span>
-        </div>
+            <use
+              xlinkHref="#kb_angle"
+            />
+          </svg>
+        </span>
       </div>
-      <div
-        className="c10"
-        id="react-autowhatever-1"
-      />
     </div>
+    <div
+      className="c9 c10"
+      id="react-autowhatever-1"
+    />
   </div>
 </div>
 `;
@@ -6640,7 +6646,26 @@ exports[`Storyshots Controls/Select With custom sections 1`] = `
   display: inline-flex;
 }
 
-.c2 .c4 {
+
+.c10 {
+  margin: 3px 0 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 320px;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c3 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -6666,22 +6691,11 @@ exports[`Storyshots Controls/Select With custom sections 1`] = `
 
 .c2 .c10--open {
   display: block;
-  position: relative;
 }
 
-.c2 .react-autosuggest__suggestions-list {
-  margin: 3px 0 0;
+.c1 .react-autosuggest__suggestions-list {
   padding: 0;
   list-style-type: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 320px;
-  max-width: 540px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
 }
 
 .c2 .react-autosuggest__suggestion {
@@ -6846,18 +6860,18 @@ exports[`Storyshots Controls/Select With custom sections 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c2 .c10--open,
-  .responsive-booking .c2 .c10--open {
-    position: static;
+  .responsive .c10,
+  .responsive-booking .c10 {
+    top: initial;
+    left: 0;
+    right: 0;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c2 .react-autosuggest__suggestions-list,
-  .responsive-booking .c2 .react-autosuggest__suggestions-list {
-    top: initial;
-    left: 0;
-    right: 0;
+  .responsive .c1,
+  .responsive-booking .c1 {
+    position: static;
   }
 }
 
@@ -6868,60 +6882,56 @@ exports[`Storyshots Controls/Select With custom sections 1`] = `
     className="c1 c2"
   >
     <div
-      className="react-autosuggest__container"
+      className="c2"
+      disabled={false}
+      size="normal"
     >
-      <div
-        className="c3"
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup={false}
+        aria-owns="react-autowhatever-1"
+        autoComplete="off"
+        className="c3 c4"
         disabled={false}
+        name="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Купить..."
+        readOnly={true}
+        role="combobox"
+        size="normal"
+        type="text"
+        value=""
+      />
+      <div
+        className="c5"
+        onClick={[Function]}
         size="normal"
       >
-        <input
-          aria-activedescendant={null}
-          aria-autocomplete="list"
-          aria-expanded={false}
-          aria-haspopup={false}
-          aria-owns="react-autowhatever-1"
-          autoComplete="off"
-          className="c4 c5"
-          disabled={false}
-          name="input"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Купить..."
-          readOnly={true}
-          role="combobox"
-          size="normal"
-          type="text"
-          value=""
-        />
-        <div
-          className="c6"
-          onClick={[Function]}
-          size="normal"
+        <span
+          className="c6 c7"
         >
-          <span
-            className="c7 c8"
+          <svg
+            className="c8"
+            fill="miscDark"
+            rotate={false}
+            size="normal"
           >
-            <svg
-              className="c9"
-              fill="miscDark"
-              rotate={false}
-              size="normal"
-            >
-              <use
-                xlinkHref="#kb_angle"
-              />
-            </svg>
-          </span>
-        </div>
+            <use
+              xlinkHref="#kb_angle"
+            />
+          </svg>
+        </span>
       </div>
-      <div
-        className="c10"
-        id="react-autowhatever-1"
-      />
     </div>
+    <div
+      className="c9 c10"
+      id="react-autowhatever-1"
+    />
   </div>
 </div>
 `;
@@ -6958,7 +6968,25 @@ exports[`Storyshots Controls/Select default 1`] = `
   display: inline-flex;
 }
 
-.c2 .c4 {
+.c10 {
+  margin: 3px 0 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 320px;
+  max-width: 540px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c3 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -6984,22 +7012,11 @@ exports[`Storyshots Controls/Select default 1`] = `
 
 .c2 .c10--open {
   display: block;
-  position: relative;
 }
 
-.c2 .react-autosuggest__suggestions-list {
-  margin: 3px 0 0;
+.c1 .react-autosuggest__suggestions-list {
   padding: 0;
   list-style-type: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 320px;
-  max-width: 540px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
 }
 
 .c2 .react-autosuggest__suggestion {
@@ -7164,18 +7181,18 @@ exports[`Storyshots Controls/Select default 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c2 .c10--open,
-  .responsive-booking .c2 .c10--open {
-    position: static;
+  .responsive .c10,
+  .responsive-booking .c10 {
+    top: initial;
+    left: 0;
+    right: 0;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c2 .react-autosuggest__suggestions-list,
-  .responsive-booking .c2 .react-autosuggest__suggestions-list {
-    top: initial;
-    left: 0;
-    right: 0;
+  .responsive .c1,
+  .responsive-booking .c1 {
+    position: static;
   }
 }
 
@@ -7186,60 +7203,56 @@ exports[`Storyshots Controls/Select default 1`] = `
     className="c1 c2"
   >
     <div
-      className="react-autosuggest__container"
+      className="c2"
+      disabled={false}
+      size="normal"
     >
-      <div
-        className="c3"
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-haspopup={false}
+        aria-owns="react-autowhatever-1"
+        autoComplete="off"
+        className="c3 c4"
         disabled={false}
+        name="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Купить..."
+        readOnly={true}
+        role="combobox"
+        size="normal"
+        type="text"
+        value=""
+      />
+      <div
+        className="c5"
+        onClick={[Function]}
         size="normal"
       >
-        <input
-          aria-activedescendant={null}
-          aria-autocomplete="list"
-          aria-expanded={false}
-          aria-haspopup={false}
-          aria-owns="react-autowhatever-1"
-          autoComplete="off"
-          className="c4 c5"
-          disabled={false}
-          name="input"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Купить..."
-          readOnly={true}
-          role="combobox"
-          size="normal"
-          type="text"
-          value=""
-        />
-        <div
-          className="c6"
-          onClick={[Function]}
-          size="normal"
+        <span
+          className="c6 c7"
         >
-          <span
-            className="c7 c8"
+          <svg
+            className="c8"
+            fill="miscDark"
+            rotate={false}
+            size="normal"
           >
-            <svg
-              className="c9"
-              fill="miscDark"
-              rotate={false}
-              size="normal"
-            >
-              <use
-                xlinkHref="#kb_angle"
-              />
-            </svg>
-          </span>
-        </div>
+            <use
+              xlinkHref="#kb_angle"
+            />
+          </svg>
+        </span>
       </div>
-      <div
-        className="c10"
-        id="react-autowhatever-1"
-      />
     </div>
+    <div
+      className="c9 c10"
+      id="react-autowhatever-1"
+    />
   </div>
 </div>
 `;
@@ -7276,33 +7289,32 @@ exports[`Storyshots Controls/SelectBox Custom suggestion select handler 1`] = `
   display: inline-flex;
 }
 
-.hwYiOt .c3 {
+.ldxzJN .c3 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.hwYiOt .c3::-ms-clear,
-.hwYiOt .c3::-webkit-search-cancel-button {
+.ldxzJN .c3::-ms-clear,
+.ldxzJN .c3::-webkit-search-cancel-button {
   display: none;
 }
 
-.hwYiOt .c3--open {
+.ldxzJN .c3--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.hwYiOt .c3--focused {
+.ldxzJN .c3--focused {
   outline: none;
 }
 
-.hwYiOt .c10 {
+.ldxzJN .c10 {
   display: none;
 }
 
-.hwYiOt .c10--open {
+.ldxzJN .c10--open {
   display: block;
-  position: relative;
 }
 
 .c4 {
@@ -7520,13 +7532,6 @@ exports[`Storyshots Controls/SelectBox Custom suggestion select handler 1`] = `
 
 .c11 to-string:function toString() {
   return: borderRadiusSmall.all;
-}
-
-@media screen and (max-width:599px) {
-  .responsive .hwYiOt .c10--open,
-  .responsive-booking .hwYiOt .c10--open {
-    position: static;
-  }
 }
 
 @media screen and (max-width:599px) {
@@ -7646,33 +7651,32 @@ exports[`Storyshots Controls/SelectBox With custom sections 1`] = `
   display: inline-flex;
 }
 
-.hwYiOt .c3 {
+.ldxzJN .c3 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.hwYiOt .c3::-ms-clear,
-.hwYiOt .c3::-webkit-search-cancel-button {
+.ldxzJN .c3::-ms-clear,
+.ldxzJN .c3::-webkit-search-cancel-button {
   display: none;
 }
 
-.hwYiOt .c3--open {
+.ldxzJN .c3--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.hwYiOt .c3--focused {
+.ldxzJN .c3--focused {
   outline: none;
 }
 
-.hwYiOt .c10 {
+.ldxzJN .c10 {
   display: none;
 }
 
-.hwYiOt .c10--open {
+.ldxzJN .c10--open {
   display: block;
-  position: relative;
 }
 
 .c4 {
@@ -7890,13 +7894,6 @@ exports[`Storyshots Controls/SelectBox With custom sections 1`] = `
 
 .c11 to-string:function toString() {
   return: borderRadiusSmall.all;
-}
-
-@media screen and (max-width:599px) {
-  .responsive .hwYiOt .c10--open,
-  .responsive-booking .hwYiOt .c10--open {
-    position: static;
-  }
 }
 
 @media screen and (max-width:599px) {
@@ -8016,33 +8013,32 @@ exports[`Storyshots Controls/SelectBox default 1`] = `
   display: inline-flex;
 }
 
-.hwYiOt .c3 {
+.ldxzJN .c3 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.hwYiOt .c3::-ms-clear,
-.hwYiOt .c3::-webkit-search-cancel-button {
+.ldxzJN .c3::-ms-clear,
+.ldxzJN .c3::-webkit-search-cancel-button {
   display: none;
 }
 
-.hwYiOt .c3--open {
+.ldxzJN .c3--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.hwYiOt .c3--focused {
+.ldxzJN .c3--focused {
   outline: none;
 }
 
-.hwYiOt .c10 {
+.ldxzJN .c10 {
   display: none;
 }
 
-.hwYiOt .c10--open {
+.ldxzJN .c10--open {
   display: block;
-  position: relative;
 }
 
 .c4 {
@@ -8260,13 +8256,6 @@ exports[`Storyshots Controls/SelectBox default 1`] = `
 
 .c11 to-string:function toString() {
   return: borderRadiusSmall.all;
-}
-
-@media screen and (max-width:599px) {
-  .responsive .hwYiOt .c10--open,
-  .responsive-booking .hwYiOt .c10--open {
-    position: static;
-  }
 }
 
 @media screen and (max-width:599px) {
