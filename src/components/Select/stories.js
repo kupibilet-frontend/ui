@@ -67,11 +67,11 @@ const initialStateSections = {
   suggestions: [
     {
       title: 'Популярные зайцы',
-      suggestions: popularRabbits,
+      values: popularRabbits,
     },
     {
       title: 'Все зайцы',
-      suggestions: allRabbits,
+      values: allRabbits,
     },
   ],
   value: '',
