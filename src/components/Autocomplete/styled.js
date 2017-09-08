@@ -35,6 +35,7 @@ export default css`
     display: block;
   }
   .react-autosuggest__suggestions-list {
+    margin: 0;
     padding: 0;
     list-style-type: none;
   }
