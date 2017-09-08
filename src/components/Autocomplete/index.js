@@ -4,6 +4,7 @@
 'no babel-plugin-flow-react-proptypes'
 
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import Autosuggest from 'react-autosuggest'
@@ -11,7 +12,7 @@ import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
 import type { controlsGroupProps } from 'components/ControlsGroup'
 
-import AutocompleteStyled from './styled'
+import style, { SuggestionsContainer } from './styled'
 
 
 // Includes cyrylic unicode range
@@ -91,7 +92,7 @@ const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }
   })
 )
 
-export default class Autocomplete extends React.PureComponent<{}, Props, State> {
+class Autocomplete extends React.PureComponent<{}, Props, State> {
   /* eslint-disable react/sort-comp */
   state = {
     suggestions: this.props.suggestions || [],
@@ -112,6 +113,11 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     getSuggestionValue: (suggestion) => suggestion.value,
     getSectionSuggestions: (section) => section.values,
     forceSuggesedValue: true,
+    renderSuggestionsContainer: ({ containerProps, children, query }) => (
+      <SuggestionsContainer query={query} {...containerProps}>
+        {children}
+      </SuggestionsContainer>
+    ),
   }
   /* eslint-enable react/sort-comp */
 
@@ -231,21 +237,30 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
 
     return (
-      <AutocompleteStyled className={className}>
-        <Autosuggest
-          {...props}
-          inputProps={{
-            neighboringInGroup,
-            ...inputProps,
-            onChange: this.onChange,
-            onBlur: this.onBlur,
-            onKeyDown: this.onKeyDown,
-            spell,
-          }}
-          suggestions={suggestions}
-          ref={(ref) => { this.autosuggestInstance = ref }}
-        />
-      </AutocompleteStyled>
+      <Autosuggest
+        {...props}
+        inputProps={{
+          neighboringInGroup,
+          ...inputProps,
+          onChange: this.onChange,
+          onBlur: this.onBlur,
+          onKeyDown: this.onKeyDown,
+          spell,
+        }}
+        suggestions={suggestions}
+        ref={(ref) => { this.autosuggestInstance = ref }}
+        theme={{
+          // Pass `className` into Autosuggest theme. The `container` is className for root block
+          ...Autosuggest.defaultProps.theme,
+          container: className,
+        }}
+      />
     )
   }
 }
+
+const StyledAutocomplete = styled(Autocomplete)`
+  ${style}
+`
+
+export default StyledAutocomplete
