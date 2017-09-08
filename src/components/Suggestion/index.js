@@ -10,20 +10,29 @@ import {
 
 type Props = {
   suggestion: Object,
-  selectedValue: any,
+  selectedKey: any,
   isHighlighted?: boolean,
+  getSuggestionKey: Function,
+  getSuggestionValue: Function,
 }
 const Suggestion = (props : Props) => {
-  const { suggestion, selectedValue, isHighlighted } = props
+  const {
+    suggestion,
+    selectedKey,
+    isHighlighted,
+    getSuggestionKey,
+    getSuggestionValue,
+  } = props
+  console.info(getSuggestionKey)
   return (
     <SuggestionContainer isHighlighted={isHighlighted}>
       <SuggestionIcon>
-        {selectedValue === suggestion.value &&
+        {selectedKey === getSuggestionKey(suggestion) &&
           <Icon name="checkbox" fill="primaryLight" />
         }
       </SuggestionIcon>
       <SuggestionText>
-        {suggestion.value}
+        {getSuggestionValue(suggestion)}
       </SuggestionText>
     </SuggestionContainer>
   )
@@ -31,6 +40,8 @@ const Suggestion = (props : Props) => {
 
 Suggestion.defaultProps = {
   isHighlighted: false,
+  getSuggestionValue: (suggestion) => suggestion.value,
+  getSuggestionKey: (suggestion) => suggestion.key,
 }
 
 export default Suggestion

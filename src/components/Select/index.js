@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import Autocomplete from 'components/Autocomplete'
 import Input from 'components/Input'
 import Icon from 'components/Icon'
@@ -16,12 +17,14 @@ const InputComponent = ({ isOpen, ...props }) => (
 
 const emptySuggestions = []
 
-export default class Select extends React.Component {
+class Select extends React.Component {
   static defaultProps = {
     forceSuggesedValue: false,
     focusInputOnSuggestionClick: false,
     renderInputComponent: InputComponent,
     shouldRenderSuggestions: () => true,
+    getSuggestionValue: (suggestion) => suggestion.value,
+    getSuggestionKey: (suggestion) => suggestion.key,
   }
 
   state = {
@@ -36,20 +39,30 @@ export default class Select extends React.Component {
     this.setState({ isOpen: false })
   }
 
+  handleBlur = () => {
+    const { onBlur } = this.props.inputProps
+    if (onBlur) {
+      onBlur()
+    }
+  }
+
   renderSuggestion = (suggestion: {}, { isHighlighted }) => {
-    const { inputProps } = this.props
+    const { inputProps, getSuggestionKey, getSuggestionValue } = this.props
+    console.info(inputProps.value)
     return (
       <Suggestion
         suggestion={suggestion}
         isHighlighted={isHighlighted}
-        selectedValue={inputProps.value}
+        getSuggestionKey={getSuggestionKey}
+        getSuggestionValue={getSuggestionValue}
+        selectedKey={getSuggestionKey(inputProps.value)}
       />
     )
   }
 
   render() {
     const { isOpen } = this.state
-    const { inputProps, suggestions } = this.props
+    const { inputProps, suggestions, getSuggestionValue } = this.props
 
     return (
       <Autocomplete
@@ -59,13 +72,20 @@ export default class Select extends React.Component {
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         renderSuggestion={this.renderSuggestion}
         inputProps={{
-          readOnly: true,
           ...inputProps,
-          value: inputProps.value || '',
+          readOnly: true,
+          value: getSuggestionValue(inputProps.value) || '',
           isOpen,
           onChange: () => {},
+          onBlur: this.handleBlur,
         }}
       />
     )
   }
 }
+
+export default styled(Select)`
+  .react-autosuggest__suggestions-list {
+    min-width: 180px;
+  }
+`
