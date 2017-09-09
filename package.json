@@ -3,8 +3,8 @@
   "version": "3.2.2",
   "description": "UI kit for kupibilet web app",
   "scripts": {
-    "pretest": "yarn run lint:js --silent && yarn run lint:css --silent",
-    "test": "yarn run jest --silent",
+    "pretest": "yarn lint:js && yarn lint:css",
+    "test": "yarn jest",
     "start": "BABEL_ENV=default start-storybook -p 9001 -c .storybook",
     "build-storybook": "BABEL_ENV=default build-storybook",
     "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" >&2 && exit 0; stylelint ./src/components/**/*.js",
@@ -14,7 +14,7 @@
     "postinstall": "scripts/check-engines.js && move-bin",
     "build": "BABEL_ENV=esmodules NODE_ENV=production babel src/ -d ./ --ignore stories,test",
     "can-publish": "scripts/is-able-to-publish.js",
-    "prepublishOnly": "yarn run can-publish && yarn run build --silent",
+    "prepublishOnly": "yarn can-publish && yarn build",
     "precommit": "BABEL_ENV=default lint-staged",
     "postversion": "git push --follow-tags"
   },
