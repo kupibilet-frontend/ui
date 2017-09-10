@@ -5895,9 +5895,6 @@ exports[`Storyshots Controls/Radio default 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5910,6 +5907,13 @@ exports[`Storyshots Controls/Radio default 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-shadow: inset 0 0 0 1px #38afff;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -5919,7 +5923,7 @@ exports[`Storyshots Controls/Radio default 1`] = `
 }
 
 .c3:after {
-  content: ' ';
+  content: '';
   width: 8px;
   height: 8px;
   background: #ffffff;
@@ -5935,9 +5939,6 @@ exports[`Storyshots Controls/Radio default 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5950,6 +5951,13 @@ exports[`Storyshots Controls/Radio default 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-shadow: inset 0 0 0 1px #b1bdcc;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -5959,7 +5967,7 @@ exports[`Storyshots Controls/Radio default 1`] = `
 }
 
 .c7:after {
-  content: ' ';
+  content: '';
   width: 8px;
   height: 8px;
   background: #ffffff;
@@ -6085,9 +6093,6 @@ exports[`Storyshots Controls/Radio disabled 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6100,6 +6105,13 @@ exports[`Storyshots Controls/Radio disabled 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-shadow: inset 0 0 0 1px #38afff;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -6109,7 +6121,7 @@ exports[`Storyshots Controls/Radio disabled 1`] = `
 }
 
 .c3:after {
-  content: ' ';
+  content: '';
   width: 8px;
   height: 8px;
   background: #ffffff;
@@ -6125,9 +6137,6 @@ exports[`Storyshots Controls/Radio disabled 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6140,6 +6149,13 @@ exports[`Storyshots Controls/Radio disabled 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-shadow: inset 0 0 0 1px #dedede;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -6149,7 +6165,7 @@ exports[`Storyshots Controls/Radio disabled 1`] = `
 }
 
 .c8:after {
-  content: ' ';
+  content: '';
   width: 8px;
   height: 8px;
   background: #ffffff;
