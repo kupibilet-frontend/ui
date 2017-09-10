@@ -11,12 +11,13 @@
     "lint:js": "BABEL_ENV=default eslint \"./src/**/*.js\"",
     "jest": "BABEL_ENV=default jest --bail --no-cache",
     "flow": "flow",
-    "postinstall": "scripts/check-engines.js && move-bin",
     "build": "BABEL_ENV=esmodules NODE_ENV=production babel src/ -d ./ --ignore stories,test",
     "can-publish": "scripts/is-able-to-publish.js",
+    "postinstall": "scripts/check-engines.js && move-bin",
+    "postversion": "git push --follow-tags",
     "prepublishOnly": "yarn can-publish && yarn build",
     "precommit": "BABEL_ENV=default lint-staged",
-    "postversion": "git push --follow-tags"
+    "prepush": "yarn run test"
   },
   "engines": {
     "node": ">=8",
