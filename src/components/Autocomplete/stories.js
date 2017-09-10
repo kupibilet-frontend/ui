@@ -8,7 +8,7 @@ import Autocomplete from 'components/Autocomplete'
 import AirportInput from 'components/AirportInput'
 import AirportSuggest from 'components/AirportSuggest'
 
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 
 class AutocompleteStatefulWrapper extends React.PureComponent {
   static propTypes = Autocomplete.propTypes

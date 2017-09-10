@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select, date } from '@storybook/addon-knobs'
 import moment from '@kupibilet/moment'
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 
 import DateRange from 'components/DateRange'
 import CalendarDay from 'components/CalendarDay'

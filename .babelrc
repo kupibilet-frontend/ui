@@ -9,7 +9,8 @@
           "alias": {
             "blocks": "./blocks",
             "components": "./components",
-            "utils": "./utils"
+            "utils": "./utils",
+            "storybook": "./storybook"
           }
         }],
         ["styled-components", {
