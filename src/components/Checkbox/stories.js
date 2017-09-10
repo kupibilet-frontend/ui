@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, boolean } from '@storybook/addon-knobs'
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 
 import Checkbox from 'components/Checkbox'
 

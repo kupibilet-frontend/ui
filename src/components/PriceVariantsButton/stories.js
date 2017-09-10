@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, number } from '@storybook/addon-knobs'
 import PriceVariantsButton from 'components/PriceVariantsButton'
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 
 const defaultValues = {
   title: 'Эконом Базовый',
