@@ -7,27 +7,22 @@ import { switchTransition } from 'utils/transitions'
 
 export type Value = string | boolean | number;
 
-const getBorderColor = (props) => {
-  const { theme } = props
-
-  if (props.checked) {
+const getBorderColor = ({ theme, checked, disabled }) => {
+  if (checked) {
     return theme.color.primary
-  } else if (props.disabled) {
+  } else if (disabled) {
     return theme.color.textLighter
   }
 
   return theme.color.misc
 }
 
-const getBoxShadow = (props) =>
-  `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
+const getBoxShadow = (props) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
 
-const getRadioBackground = (props) => {
-  const { theme } = props
-
-  if (props.checked) {
+const getRadioBackground = ({ theme, checked, disabled }) => {
+  if (checked) {
     return theme.color.primary
-  } else if (props.disabled) {
+  } else if (disabled) {
     return theme.color.textLightest
   }
 
@@ -40,12 +35,14 @@ export const RadioInput = styled.input`
 
 export const StyledRadio = styled.div`
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  user-select: none;
 
   ${getBoxShadow};
 
@@ -54,13 +51,13 @@ export const StyledRadio = styled.div`
   background: ${getRadioBackground};
 
   &:after {
-    content: ' ';
+    content: '';
     width: 8px;
     height: 8px;
     background: ${({ theme }) => theme.color.background};
     display: inline-flex;
     border-radius: 50%;
-    opacity: ${({ checked }) => (checked ? 1 : 0)}
+    opacity: ${({ checked }) => (checked ? 1 : 0)};
   };
 `
 
