@@ -1,9 +1,18 @@
-import React from 'react'
+// @flow
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Autocomplete from 'components/Autocomplete'
 import Input from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
+
+/*
+const StyledAutocomplete = styled.Autocomplete`
+  .react-autosuggest__suggestions-list {
+    min-width: 180px;
+  }
+`
+*/
 
 /* eslint-disable react/prop-types */
 const InputComponent = ({ isOpen, ...props }) => (
@@ -17,9 +26,9 @@ const InputComponent = ({ isOpen, ...props }) => (
 
 const emptySuggestions = []
 
-class Select extends React.Component {
+class Select extends Component {
   static defaultProps = {
-    forceSuggesedValue: false,
+    forceSuggestedValue: false,
     focusInputOnSuggestionClick: false,
     renderInputComponent: InputComponent,
     shouldRenderSuggestions: () => true,
@@ -61,8 +70,12 @@ class Select extends React.Component {
 
   render() {
     const { isOpen } = this.state
-    const { inputProps, suggestions, getSuggestionValue } = this.props
-
+    const {
+      inputProps,
+      additionalInputProps,
+      suggestions,
+      getSuggestionValue,
+    } = this.props
     return (
       <Autocomplete
         {...this.props}
@@ -72,6 +85,7 @@ class Select extends React.Component {
         renderSuggestion={this.renderSuggestion}
         inputProps={{
           ...inputProps,
+          ...additionalInputProps,
           readOnly: true,
           value: getSuggestionValue(inputProps.value) || '',
           isOpen,
@@ -83,7 +97,39 @@ class Select extends React.Component {
   }
 }
 
-export default styled(Select)`
+// Disable eslint error: "Declare only one React component per file"
+// eslint-disable-next-line react/no-multi-comp
+class RFSelect extends Component {
+  onSuggestionSelected = (e, { suggestion }) => {
+    const { input } = this.props
+    input.onChange(suggestion)
+  }
+  render() {
+    const { input, meta } = this.props
+    return (
+      <Select
+        {...this.props}
+        onSuggestionSelected={this.onSuggestionSelected}
+        inputProps={{
+          ...input,
+          meta,
+        }}
+      />
+    )
+  }
+}
+
+const Comp = styled(Select)`
+  .react-autosuggest__suggestions-list {
+    min-width: 180px;
+  }
+`
+
+export {
+  Comp as Select,
+}
+
+export default styled(RFSelect)`
   .react-autosuggest__suggestions-list {
     min-width: 180px;
   }
