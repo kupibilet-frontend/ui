@@ -5,6 +5,9 @@
       "babel-module": {}
     }
   },
+  "rules": {
+    "import/no-named-as-default": "off",
+  },
   "globals": {
     "InputEvent": true,
     "React$Element": true,
