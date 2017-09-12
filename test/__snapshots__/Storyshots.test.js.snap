@@ -1113,13 +1113,20 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   transition-property: opacity,box-shadow;
 }
 
+.c2 .icon-inherit-color {
+  fill: #ffffff;
+}
+
 .c2:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .c2:active {
-  background: #0f99f5;
+  background: #008ae6;
   box-shadow: none;
 }
 
@@ -1146,13 +1153,20 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   transition-property: opacity,box-shadow;
 }
 
+.c10 .icon-inherit-color {
+  fill: #ffffff;
+}
+
 .c10:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .c10:active {
-  background: #0f99f5;
+  background: #008ae6;
   box-shadow: none;
 }
 
@@ -1737,6 +1751,18 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
+.fBjKhl .c12 {
+  fill: #ffffff;
+}
+
+.dFbWsi .c12 {
+  fill: #ffffff;
+}
+
+.fEajik .c12 {
+  fill: #ffffff;
+}
+
 .c8 {
   position: relative;
   -webkit-align-self: stretch;
@@ -1917,13 +1943,20 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
   transition-property: opacity,box-shadow;
 }
 
+.c3 .icon-inherit-color {
+  fill: #ffffff;
+}
+
 .c3:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .c3:active {
-  background: #0f99f5;
+  background: #008ae6;
   box-shadow: none;
 }
 
@@ -2029,6 +2062,10 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   opacity: .2;
 }
 
+.c8 .icon-inherit-color {
+  fill: #ffffff;
+}
+
 .c12 {
   font-family: inherit;
   border: none;
@@ -2050,13 +2087,20 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   transition-property: opacity,box-shadow;
 }
 
+.c12 .icon-inherit-color {
+  fill: #ffffff;
+}
+
 .c12:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .c12:active {
-  background: #0f99f5;
+  background: #008ae6;
   box-shadow: none;
 }
 
@@ -3041,13 +3085,20 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
   transition-property: opacity,box-shadow;
 }
 
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
 .c1:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .c1:active {
-  background: #0f99f5;
+  background: #008ae6;
   box-shadow: none;
 }
 
@@ -3062,7 +3113,7 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
+    disabled={false}
     size="normal"
   >
     <span
@@ -3070,67 +3121,6 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
       size="normal"
     >
       Авиабилеты
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Storyshots Controls/Buttons Disabled 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  color: #ffffff;
-  background: #38afff;
-  font-size: 18px;
-  line-height: 18px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: 15px;
-  padding: 6.0px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
-  opacity: .2;
-}
-
-.c2 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0px 0 0px;
-}
-
-<div
-  className="c0"
->
-  <button
-    className="c1"
-    disabled={true}
-    size="normal"
-  >
-    <span
-      className="c2"
-      size="normal"
-    >
-      Cake is a lie
     </span>
   </button>
 </div>
@@ -3149,7 +3139,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
+.c5 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -3157,7 +3147,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   transition-property: fill,transform;
   height: 18px;
   width: 18px;
-  fill: #ffffff;
+  fill: transparent;
   opacity: 1;
 }
 
@@ -3166,6 +3156,38 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.gTTZOM .c4 {
+  fill: #007acc;
+}
+
+.gTTZOM:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.cigUOu .c4 {
+  fill: #007acc;
+}
+
+.cigUOu:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.kKnEAB .c4 {
+  fill: #007acc;
+}
+
+.kKnEAB:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.fBjKhl .c4 {
+  fill: #ffffff;
+}
+
+.dFbWsi .c4 {
+  fill: #ffffff;
 }
 
 .c1 {
@@ -3189,13 +3211,20 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   transition-property: opacity,box-shadow;
 }
 
+.c1 .c4 {
+  fill: #ffffff;
+}
+
 .c1:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .c1:active {
-  background: #0f99f5;
+  background: #008ae6;
   box-shadow: none;
 }
 
@@ -3222,7 +3251,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
+    disabled={false}
     size="large"
   >
     <span
@@ -3233,8 +3262,8 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
         className="c3"
       >
         <svg
-          className="c4"
-          fill="background"
+          className="c4 c5"
+          fill={null}
           rotate={false}
           size="normal"
         >
@@ -3243,76 +3272,6 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
           />
         </svg>
       </span>
-    </span>
-  </button>
-</div>
-`;
-
-exports[`Storyshots Controls/Buttons Sizes 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  color: #ffffff;
-  background: #38afff;
-  font-size: 20px;
-  line-height: 20px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: 21px;
-  padding: 11.0px;
-  padding-right: 21px;
-  padding-left: 21px;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
-}
-
-.c1:hover {
-  cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
-}
-
-.c1:active {
-  background: #0f99f5;
-  box-shadow: none;
-}
-
-.c2 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0px 0 0px;
-}
-
-<div
-  className="c0"
->
-  <button
-    className="c1"
-    disabled={undefined}
-    size="large"
-  >
-    <span
-      className="c2"
-      size="large"
-    >
-      Бальшой
     </span>
   </button>
 </div>
@@ -3331,7 +3290,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
+.c5 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -3339,7 +3298,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   transition-property: fill,transform;
   height: 18px;
   width: 18px;
-  fill: #ffffff;
+  fill: transparent;
   opacity: 1;
 }
 
@@ -3348,6 +3307,34 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.gTTZOM .c4 {
+  fill: #007acc;
+}
+
+.gTTZOM:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.cigUOu .c4 {
+  fill: #007acc;
+}
+
+.cigUOu:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.kKnEAB .c4 {
+  fill: #007acc;
+}
+
+.kKnEAB:hover .c4 {
+  fill: rgba(0,122,204,0.8);
+}
+
+.fBjKhl .c4 {
+  fill: #ffffff;
 }
 
 .c1 {
@@ -3373,17 +3360,24 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   transition-property: opacity,box-shadow;
 }
 
+.c1 .c4 {
+  fill: #ffffff;
+}
+
 .c1:hover {
   cursor: pointer;
-  box-shadow: 0 0 0 1px #38afff;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .c1:active {
-  background: #0f99f5;
+  background: #008ae6;
   box-shadow: none;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
   vertical-align: top;
   padding: 0 5.6px 0 5.6px;
@@ -3412,7 +3406,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
+    disabled={false}
     size="normal"
   >
     <span
@@ -3423,8 +3417,8 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
         className="c3"
       >
         <svg
-          className="c4"
-          fill="background"
+          className="c4 c5"
+          fill={null}
           rotate={false}
           size="normal"
         >
@@ -3435,7 +3429,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
       </span>
     </span>
     <span
-      className="c5"
+      className="c6"
       size="normal"
     >
       Авиабилеты
@@ -3448,8 +3442,8 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
         className="c3"
       >
         <svg
-          className="c4"
-          fill="background"
+          className="c4 c5"
+          fill={null}
           rotate={false}
           size="normal"
         >
@@ -5833,6 +5827,26 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
 
 .kKnEAB:hover .c4 {
   fill: rgba(0,122,204,0.8);
+}
+
+.fBjKhl .c4 {
+  fill: #ffffff;
+}
+
+.dFbWsi .c4 {
+  fill: #ffffff;
+}
+
+.fEajik .c4 {
+  fill: #ffffff;
+}
+
+.gvzHRe .c4 {
+  fill: #ffffff;
+}
+
+.chGMGf .c4 {
+  fill: #ffffff;
 }
 
 .jnNeSt .c4 {

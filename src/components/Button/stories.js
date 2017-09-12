@@ -1,11 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, select } from '@storybook/addon-knobs'
+import { text, select, boolean } from '@storybook/addon-knobs'
 
 import Button from 'components/Button'
 import Icon from 'components/Icon'
 
-const sizesSelect = (defaultValue = 'large') => select(
+const sizesSelect = (defaultValue = 'normal') => select(
   'size',
   {
     small: 'Small',
@@ -14,28 +14,35 @@ const sizesSelect = (defaultValue = 'large') => select(
   },
   defaultValue,
 )
+const variantsSelect = (defaultValue = 'primary') => select(
+  'variant',
+  [
+    'primary',
+    'secondary',
+  ],
+  defaultValue,
+)
 
 storiesOf('Controls/Buttons', module)
   .addWithInfo('Default', () => (
-    <Button>
-      { text('text', 'Авиабилеты') }
-    </Button>
-  ))
-  .addWithInfo('Sizes', () => (
     <Button
       size={sizesSelect()}
+      disabled={boolean('disabled', false)}
+      variant={variantsSelect()}
     >
-      { text('text', 'Бальшой') }
+      { text('text', 'Авиабилеты') }
     </Button>
   ))
   .addWithInfo('With icons', () => (
     <Button
-      size={sizesSelect('normal')}
+      size={sizesSelect()}
+      disabled={boolean('disabled', false)}
+      variant={variantsSelect()}
       leftIcon={
-        <Icon name="plane" fill="background" />
+        <Icon name="plane" inheritColor />
       }
       rightIcon={
-        <Icon name="hand-baggage" fill="background" />
+        <Icon name="hand-baggage" inheritColor />
       }
     >
       {
@@ -44,14 +51,11 @@ storiesOf('Controls/Buttons', module)
   ))
   .addWithInfo('Icon-only button', () => (
     <Button
-      size={sizesSelect()}
+      size={sizesSelect('large')}
+      disabled={boolean('disabled', false)}
+      variant={variantsSelect()}
       icon={
-        <Icon name="carrot_monochrome" fill="background" />
+        <Icon name="carrot_monochrome" inheritColor />
       }
     />
-  ))
-  .addWithInfo('Disabled', () => (
-    <Button disabled>
-      { text('text', 'Cake is a lie') }
-    </Button>
   ))
