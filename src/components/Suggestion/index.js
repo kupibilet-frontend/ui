@@ -8,12 +8,17 @@ import {
   SuggestionText,
 } from './styled'
 
+type SuggestionObject = {
+  key? : any,
+  value? : any,
+}
+
 type Props = {
   suggestion: Object,
-  selectedKey: any,
+  selectedKey?: string | any,
   isHighlighted?: boolean,
-  getSuggestionKey: Function,
-  getSuggestionValue: Function,
+  getSuggestionValue: (Object : SuggestionObject) => string | any,
+  getSuggestionKey: (Object : SuggestionObject) => string | any,
 }
 const Suggestion = (props : Props) => {
   const {
@@ -38,9 +43,10 @@ const Suggestion = (props : Props) => {
 }
 
 Suggestion.defaultProps = {
+  selectedKey: '',
   isHighlighted: false,
-  getSuggestionValue: (suggestion) => suggestion.value,
-  getSuggestionKey: (suggestion) => suggestion.key,
+  getSuggestionValue: (suggestion : SuggestionObject) => suggestion.value,
+  getSuggestionKey: (suggestion : SuggestionObject) => suggestion.key,
 }
 
 export default Suggestion
