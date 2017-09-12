@@ -146,11 +146,8 @@ storiesOf('Controls/Select', module)
         onSuggestionSelected={onSuggestionSelected}
         getSuggestionKey={getSimpleKey}
         component={RFSelect}
-<<<<<<< HEAD
         placeholder="Купить..."
         name="MadRabbitField"
-=======
->>>>>>> New stories, RFSelect, fixes
         label="Пол"
       />
 
