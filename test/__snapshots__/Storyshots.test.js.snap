@@ -7082,6 +7082,7 @@ exports[`Storyshots Utils Typography 1`] = `
   -moz-letter-spacing: 0.6px;
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
 <div
