@@ -5,6 +5,7 @@ const Caption = styled.span`
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.6px;
+  text-transform: uppercase;
 `
 
 export default Caption
