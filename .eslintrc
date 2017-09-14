@@ -7,12 +7,11 @@
   },
   "rules": {
     "import/no-named-as-default": "off",
+    "react/no-multi-comp": "off",
   },
   "globals": {
     "InputEvent": true,
     "React$Element": true,
-    "RF$FieldProps": true,
-    "RF$EventPayload": true,
-    "RF$onChange": true
+    "FieldProps": true
   }
 }
