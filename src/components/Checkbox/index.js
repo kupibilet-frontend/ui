@@ -64,12 +64,8 @@ export class Checkbox extends React.PureComponent<Props, void> {
     )
   }
 }
-
-type RFProps = RF$FieldProps
-
-// Disable eslint error: "Declare only one React component per file"
-// eslint-disable-next-line react/no-multi-comp
-export default class RFCheckbox extends React.PureComponent<RFProps, void> {
+type RFCheckboxProps = FieldProps & {type?: 'checkbox'}
+export default class RFCheckbox extends React.PureComponent<RFCheckboxProps, void> {
   // Ignore RF checkbox behaviour due true/"" values instead of expected true/false
   // See https://github.com/erikras/redux-form/pull/2863 and https://git.io/vHlZn
   onChange = (e: InputEvent) => (
