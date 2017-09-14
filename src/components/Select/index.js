@@ -1,8 +1,8 @@
 // @flow
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Autocomplete from 'components/Autocomplete'
-import Input from 'components/Input'
+import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
 import { SuggestionsContainer } from 'components/Autocomplete/styled'
@@ -19,6 +19,7 @@ const SectionHeader = styled.div`
   color: ${({ theme }) => theme.color.miscDark};
 `
 
+
 type SectionObject = {
   title? : string,
 }
@@ -27,7 +28,8 @@ type SuggestionObject = {
   value? : any,
 }
 type OnChange = (Event, { newValue: string, method: string }) => void
-type OnBlur = () => void
+type OnBlur = (Event) => Event
+
 type Meta = {
   error?: string,
   touched?: boolean,
@@ -42,6 +44,15 @@ type InputProps = {
 /* eslint-disable react/prop-types */
 const defaultInput = ({ isOpen, ...props }) => (
   <Input
+    {...props}
+    rightIcon={
+      <Icon name="angle" rotate={isOpen} fill="miscDark" />
+    }
+  />
+)
+
+const defaultRFInput = ({ isOpen, ...props }) => (
+  <RFInput
     {...props}
     rightIcon={
       <Icon name="angle" rotate={isOpen} fill="miscDark" />
@@ -65,16 +76,17 @@ const emptySuggestions = []
 
 type Props = {
   suggestions: SuggestionObject[] | SectionObject[],
+  selectedSuggestion: SuggestionObject | Object | string,
   forceSuggestedValue: boolean,
   focusInputOnSuggestionClick: boolean,
-  renderInputComponent: (Object) => React.Element<*>,
-  renderSuggestionsContainer: (Object) => React.Element<*>,
-  renderSectionTitle: (Object) => React.Element<*>,
+  renderInputComponent: (Object) => Element,
+  renderSuggestionsContainer: (Object) => Element,
+  renderSectionTitle: (Object) => Element,
   shouldRenderSuggestions: () => boolean,
   getSuggestionValue: (Object) => any,
   getSuggestionKey: (Object) => string,
   onSuggestionSelected? : (Event, {
-    suggestion: Object,
+    suggestion: SuggestionObject,
     suggestionValue: string,
     suggestionIndex: number,
     sectionIndex: ?number,
@@ -89,6 +101,11 @@ type State = {
 
 export class Select extends React.Component <Props, State> {
   static defaultProps = {
+    suggestions: [],
+    selectedSuggestion: {
+      key: '',
+      value: '',
+    },
     forceSuggestedValue: false,
     focusInputOnSuggestionClick: false,
     renderInputComponent: defaultInput,
@@ -97,6 +114,7 @@ export class Select extends React.Component <Props, State> {
     shouldRenderSuggestions: () => true,
     getSuggestionValue: (suggestion : SuggestionObject) => suggestion.value,
     getSuggestionKey: (suggestion : SuggestionObject) => suggestion.key,
+    obBlur: (event) => event,
   }
 
   state = {
@@ -111,22 +129,15 @@ export class Select extends React.Component <Props, State> {
     this.setState({ isOpen: false })
   }
 
-  handleBlur = () => {
-    const { onBlur } = this.props.inputProps
-    if (onBlur) {
-      onBlur()
-    }
-  }
-
   renderSuggestion = (suggestion: {}, { isHighlighted }) => {
-    const { inputProps, getSuggestionKey, getSuggestionValue } = this.props
+    const { selectedSuggestion, getSuggestionKey, getSuggestionValue } = this.props
     return (
       <Suggestion
         suggestion={suggestion}
         isHighlighted={isHighlighted}
         getSuggestionKey={getSuggestionKey}
         getSuggestionValue={getSuggestionValue}
-        selectedKey={getSuggestionKey(inputProps.value)}
+        selectedKey={getSuggestionKey(selectedSuggestion)}
       />
     )
   }
@@ -139,6 +150,8 @@ export class Select extends React.Component <Props, State> {
       getSuggestionValue,
       renderInputComponent,
       renderSuggestionsContainer,
+      onBlur,
+      selectedSuggestion,
     } = this.props
     return (
       <Autocomplete
@@ -152,26 +165,30 @@ export class Select extends React.Component <Props, State> {
         inputProps={{
           ...inputProps,
           readOnly: true,
-          value: getSuggestionValue(inputProps.value) || '',
+          value: getSuggestionValue(selectedSuggestion) || '',
           isOpen,
+          onBlur,
           onChange: () => {},
-          onBlur: this.handleBlur,
         }}
       />
     )
   }
 }
 
-type RFProps = {
-  input: InputProps,
-  meta: Meta,
-}
-// Disable eslint error: "Declare only one React component per file"
-// eslint-disable-next-line react/no-multi-comp
-class RFSelect extends React.Component <RFProps, void> {
-  onSuggestionSelected = (e, { suggestion } : SuggestionObject) => {
+
+type RFProps = FieldProps
+
+export default class RFSelect extends React.Component <RFProps, void> {
+  onSuggestionSelected = (e, { suggestion }) => {
     const { input } = this.props
     input.onChange(suggestion)
+  }
+
+  handleBlur = () => {
+    const { onBlur } = this.props
+    if (onBlur) {
+      onBlur()
+    }
   }
   render() {
     const { input, meta } = this.props
@@ -179,13 +196,14 @@ class RFSelect extends React.Component <RFProps, void> {
       <Select
         {...this.props}
         onSuggestionSelected={this.onSuggestionSelected}
+        selectedSuggestion={input.value}
+        renderInputComponent={defaultRFInput}
         inputProps={{
-          ...input,
+          input,
           meta,
+          onBlur: this.handleBlur,
         }}
       />
     )
   }
 }
-
-export default RFSelect

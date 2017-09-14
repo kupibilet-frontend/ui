@@ -1,9 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { select, text, boolean } from '@storybook/addon-knobs'
+import withReduxForm from 'storybook/decorators/withReduxForm'
+import { Field } from 'redux-form'
 import ControlsGroup from 'components/ControlsGroup'
 import Icon from 'components/Icon'
-import { select, text, boolean } from '@storybook/addon-knobs'
-import Input, { InnerInput } from 'components/Input'
+import RFInput, { Input, InnerInput } from 'components/Input'
 
 const inputDefault = {
   type: 'text',
@@ -38,6 +40,18 @@ storiesOf('Controls/Input', module)
         size={sizesSelect()}
         placeholder={placeholder}
       />
+    )
+  })
+  .addDecorator(withReduxForm)
+  .addWithInfo('With Redux Form', () => {
+    return (
+      <Field
+        component={RFInput}
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+      />
+
     )
   })
   .addWithInfo('Separate inputs group', () => {

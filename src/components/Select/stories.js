@@ -95,12 +95,14 @@ storiesOf('Controls/Select', module)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
     const error = text('error', null)
+    const selectedSuggestion = object('value', { value: '' })
     const defaultInputProps = { placeholder, disabled }
     return (
       <Select
         suggestions={initialState.suggestions}
         onSuggestionSelected={onSuggestionSelected}
         getSuggestionKey={getSimpleKey}
+        selectedSuggestion={selectedSuggestion}
         inputProps={{
           ...defaultInputProps,
           value: object('value', { value: '' }),
@@ -118,6 +120,7 @@ storiesOf('Controls/Select', module)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
     const error = text('error', null)
+    const selectedSuggestion = object('value', { value: '' })
     const defaultInputProps = { placeholder, disabled }
     return (
       <Select
@@ -125,6 +128,7 @@ storiesOf('Controls/Select', module)
         getSuggestionKey={getSectionSuggestionKey}
         getSuggestionValue={getSectionSuggestionValue}
         onSuggestionSelected={onSuggestionSelected}
+        selectedSuggestion={selectedSuggestion}
         inputProps={{
           ...defaultInputProps,
           value: object('value', { value: '' }),
@@ -143,7 +147,6 @@ storiesOf('Controls/Select', module)
     return (
       <Field
         suggestions={initialState.suggestions}
-        onSuggestionSelected={onSuggestionSelected}
         getSuggestionKey={getSimpleKey}
         component={RFSelect}
         placeholder="Купить..."

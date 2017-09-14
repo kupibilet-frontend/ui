@@ -15,7 +15,7 @@ type Props = {
   name: string,
   type?: string,
   active?: boolean,
-  error?: string,
+  error?: boolean | null | string,
   success?: boolean,
   size?: string,
   disabled?: boolean,
@@ -164,4 +164,22 @@ class InputControl extends React.PureComponent<void, Props, State> {
   }
 }
 
-export default InputControl
+type RFProps = FieldProps
+
+const RFInput = (props : RFProps) => {
+  const { input, meta } = props
+  return (
+    <InputControl
+      {...props}
+      {...input}
+      error={meta.touched && meta.error}
+      success={meta.touched && meta.valid}
+    />
+  )
+}
+
+export {
+  InputControl as Input,
+}
+
+export default RFInput
