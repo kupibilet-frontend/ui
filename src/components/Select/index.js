@@ -60,7 +60,8 @@ const defaultRFInput = ({ isOpen, ...props }) => {
         <Icon name="angle" rotate={isOpen} fill="miscDark" />
       }
     />
-)}
+  )
+}
 
 const defaultContainer = ({ containerProps, children }) => (
   <StyledContainer {... containerProps}>
@@ -124,7 +125,6 @@ export class Select extends React.Component <Props, State> {
   }
 
   onSuggestionsFetchRequested = () => {
-    console.log('fetch requested')
     this.setState({ isOpen: true })
   }
 
