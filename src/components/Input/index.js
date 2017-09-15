@@ -170,9 +170,9 @@ const RFInput = (props : RFProps) => {
   const { input, meta } = props
   return (
     <InputControl
-      {...props}
       {...meta}
       {...input}
+      {...props}
       error={meta.touched && meta.error}
       success={meta.touched && meta.valid}
     />
