@@ -5055,6 +5055,7 @@ exports[`Storyshots Controls/Input With Redux Form 1`] = `
     <input
       className="c2"
       disabled={undefined}
+      form="Controls/Input"
       name="input"
       onBlur={[Function]}
       onChange={[Function]}
@@ -6621,6 +6622,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 
 .c10 {
   min-width: 180px;
+  width: 100%;
 }
 
 @media screen and (max-width:599px) {
@@ -6659,6 +6661,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         autoComplete="off"
         className="c3 c4"
         disabled={undefined}
+        form="Controls/Select"
         name="MadRabbitField"
         onBlur={[Function]}
         onChange={[Function]}
@@ -6666,6 +6669,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         onDrop={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        placeholder="Купить..."
         readOnly={true}
         role="combobox"
         size="normal"
@@ -6944,6 +6948,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 
 .c10 {
   min-width: 180px;
+  width: 100%;
 }
 
 @media screen and (max-width:599px) {
@@ -7266,6 +7271,7 @@ exports[`Storyshots Controls/Select default 1`] = `
 
 .c10 {
   min-width: 180px;
+  width: 100%;
 }
 
 @media screen and (max-width:599px) {
