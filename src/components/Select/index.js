@@ -52,16 +52,14 @@ const defaultInput = ({ isOpen, ...props }) => (
   />
 )
 
-const defaultRFInput = ({ isOpen, ...props }) => {
-  return (
-    <RFInput
-      {...props}
-      rightIcon={
-        <Icon name="angle" rotate={isOpen} fill="miscDark" />
-      }
-    />
-  )
-}
+const defaultRFInput = ({ isOpen, ...props }) => (
+  <RFInput
+    {...props}
+    rightIcon={
+      <Icon name="angle" rotate={isOpen} fill="miscDark" />
+    }
+  />
+)
 
 const defaultContainer = ({ containerProps, children }) => (
   <StyledContainer {... containerProps}>
