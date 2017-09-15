@@ -151,7 +151,6 @@ storiesOf('Controls/Select', module)
         component={RFSelect}
         placeholder="Купить..."
         name="MadRabbitField"
-        label="Пол"
       />
 
     )
