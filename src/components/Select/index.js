@@ -10,6 +10,7 @@ import { SuggestionsContainer } from 'components/Autocomplete/styled'
 
 const StyledContainer = styled(SuggestionsContainer)`
   min-width: 180px;
+  width: 100%;
 `
 
 const SectionHeader = styled.div`
@@ -51,14 +52,15 @@ const defaultInput = ({ isOpen, ...props }) => (
   />
 )
 
-const defaultRFInput = ({ isOpen, ...props }) => (
-  <RFInput
-    {...props}
-    rightIcon={
-      <Icon name="angle" rotate={isOpen} fill="miscDark" />
-    }
-  />
-)
+const defaultRFInput = ({ isOpen, ...props }) => {
+  return (
+    <RFInput
+      {...props}
+      rightIcon={
+        <Icon name="angle" rotate={isOpen} fill="miscDark" />
+      }
+    />
+)}
 
 const defaultContainer = ({ containerProps, children }) => (
   <StyledContainer {... containerProps}>
@@ -122,6 +124,7 @@ export class Select extends React.Component <Props, State> {
   }
 
   onSuggestionsFetchRequested = () => {
+    console.log('fetch requested')
     this.setState({ isOpen: true })
   }
 
@@ -191,7 +194,7 @@ export default class RFSelect extends React.Component <RFProps, void> {
     }
   }
   render() {
-    const { input, meta } = this.props
+    const { input, meta, placeholder } = this.props
     return (
       <Select
         {...this.props}
@@ -199,6 +202,7 @@ export default class RFSelect extends React.Component <RFProps, void> {
         selectedSuggestion={input.value}
         renderInputComponent={defaultRFInput}
         inputProps={{
+          placeholder,
           input,
           meta,
           onBlur: this.handleBlur,
