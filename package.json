@@ -17,7 +17,7 @@
     "can-publish": "scripts/is-able-to-publish.js",
     "postinstall": "move-bin",
     "postversion": "git push --follow-tags",
-    "prepublishOnly": "yarn can-publish && yarn build",
+    "prepublishOnly": "yarn build",
     "precommit": "BABEL_ENV=default lint-staged",
     "prepush": "yarn run test"
   },

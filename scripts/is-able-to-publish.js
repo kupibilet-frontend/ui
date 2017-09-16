@@ -22,6 +22,9 @@ if (semver.prerelease(version)) {
 }
 
 exec(
+  // TODO travis getting project by `git clone --depth=2 --branch=TAG`
+  // and completly destroys branches and commits history.
+  // Propably should fetch github release
   'git branch -l master --contains "$TRAVIS_BRANCH"',
   { cwd: path.resolve(__dirname, '../') },
   (err, stdout, stderr) => {
