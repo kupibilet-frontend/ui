@@ -7,7 +7,7 @@
   },
   "rules": {
     "import/no-named-as-default": "off",
-    "react/no-multi-comp": "off",
+    "react/no-multi-comp": "off"
   },
   "globals": {
     "InputEvent": true,
