@@ -1,14 +1,20 @@
 import styled from 'styled-components'
+import Text from 'components/Typography/Text'
 
-const SuggestionContainer = styled.div`
+export const SuggestionContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+
+  height: 30px;
+
   cursor: pointer;
+  color: ${({ theme }) => theme.color.textDarker};
   background-color: ${({ theme, isHighlighted }) => (isHighlighted
     ? theme.color.secondaryLightest
     : theme.color.background
   )};
+
   &:hover {
     background: ${({ theme }) => theme.color.secondaryLightest};
     .icon-inherit-color {
@@ -16,7 +22,7 @@ const SuggestionContainer = styled.div`
     }
   }
 `
-const SuggestionIcon = styled.div`
+export const SuggestionIcon = styled.div`
   width: 30px;
   flex-grow: 0;
   flex-shrink: 0;
@@ -24,12 +30,6 @@ const SuggestionIcon = styled.div`
   align-items: center;
   justify-content: center;
 `
-const SuggestionText = styled.div`
-  width: 100%;
+export const SuggestionText = Text.withComponent('div').extend`
+  flex-grow: 1;
 `
-
-export {
-  SuggestionContainer,
-  SuggestionIcon,
-  SuggestionText,
-}

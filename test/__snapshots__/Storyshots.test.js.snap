@@ -2698,7 +2698,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 
 .c10 {
   margin: 3px 0 0;
-  padding: 0;
+  padding: 3px 0;
   position: absolute;
   top: 100%;
   left: 0;
@@ -6413,7 +6413,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 
 .c11 {
   margin: 3px 0 0;
-  padding: 0;
+  padding: 3px 0;
   position: absolute;
   top: 100%;
   left: 0;
@@ -6739,7 +6739,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 
 .c11 {
   margin: 3px 0 0;
-  padding: 0;
+  padding: 3px 0;
   position: absolute;
   top: 100%;
   left: 0;
@@ -7062,7 +7062,7 @@ exports[`Storyshots Controls/Select default 1`] = `
 
 .c11 {
   margin: 3px 0 0;
-  padding: 0;
+  padding: 3px 0;
   position: absolute;
   top: 100%;
   left: 0;
@@ -7997,6 +7997,12 @@ exports[`Storyshots Utils Typography 1`] = `
   box-sizing: border-box;
 }
 
+.c8 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 .c1 {
   font-size: 44px;
   font-weight: 700;
@@ -8061,12 +8067,6 @@ exports[`Storyshots Utils Typography 1`] = `
   -ms-letter-spacing: -.1px;
   letter-spacing: -.1px;
   margin: 0;
-}
-
-.c8 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
 }
 
 .c9 {

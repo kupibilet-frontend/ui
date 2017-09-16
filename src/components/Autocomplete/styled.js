@@ -51,7 +51,7 @@ export default css`
 
 export const SuggestionsContainer = styled.div`
   margin: 3px 0 0;
-  padding: 0;
+  padding: 3px 0;
   position: absolute;
   top: 100%;
   left: 0;
