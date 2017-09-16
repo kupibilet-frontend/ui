@@ -29,7 +29,6 @@ type SuggestionObject = {
   value? : any,
 }
 type OnChange = (Event, { newValue: string, method: string }) => void
-type OnBlur = (Event) => Event
 
 type Meta = {
   error?: string,
@@ -38,7 +37,6 @@ type Meta = {
 type InputProps = {
   value: SuggestionObject | Object | string,
   onChange?: OnChange,
-  onBlur?: OnBlur,
   meta?: Meta,
 }
 
@@ -115,7 +113,6 @@ export class Select extends React.Component <Props, State> {
     shouldRenderSuggestions: () => true,
     getSuggestionValue: (suggestion : SuggestionObject) => suggestion.value,
     getSuggestionKey: (suggestion : SuggestionObject) => suggestion.key,
-    obBlur: (event) => event,
   }
 
   state = {
@@ -151,7 +148,6 @@ export class Select extends React.Component <Props, State> {
       getSuggestionValue,
       renderInputComponent,
       renderSuggestionsContainer,
-      onBlur,
       selectedSuggestion,
     } = this.props
     return (
@@ -168,7 +164,6 @@ export class Select extends React.Component <Props, State> {
           readOnly: true,
           value: getSuggestionValue(selectedSuggestion) || '',
           isOpen,
-          onBlur,
           onChange: () => {},
         }}
       />
@@ -181,16 +176,13 @@ type RFProps = FieldProps
 
 export default class RFSelect extends React.Component <RFProps, void> {
   onSuggestionSelected = (e, { suggestion }) => {
-    const { input } = this.props
-    input.onChange(suggestion)
+    const { onChange } = this.props.input
+    onChange(suggestion)
   }
 
-  handleBlur = () => {
-    const { onBlur } = this.props
-    if (onBlur) {
-      onBlur()
-    }
-  }
+  // We can't send actual value or event to RF so omit it
+  handleBlur = () => this.props.input.onBlur()
+
   render() {
     const { input, meta, placeholder } = this.props
     return (
@@ -201,8 +193,8 @@ export default class RFSelect extends React.Component <RFProps, void> {
         renderInputComponent={defaultRFInput}
         inputProps={{
           placeholder,
-          input,
           meta,
+          ...input,
           onBlur: this.handleBlur,
         }}
       />
