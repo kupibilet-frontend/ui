@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { text } from '@storybook/addon-knobs'
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 
 import AirportInput from 'components/AirportInput'
 import Button from 'components/Button'

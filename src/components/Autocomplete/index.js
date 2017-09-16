@@ -4,6 +4,7 @@
 'no babel-plugin-flow-react-proptypes'
 
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import Autosuggest from 'react-autosuggest'
@@ -11,7 +12,7 @@ import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
 import type { controlsGroupProps } from 'components/ControlsGroup'
 
-import AutocompleteStyled from './styled'
+import style, { SuggestionsContainer } from './styled'
 
 
 // Includes cyrylic unicode range
@@ -20,8 +21,8 @@ const NON_LETTERS_REGEXP = /[^\w\u0400-\u04FF]/g
 
 const isValuesEqual = (a, b) => {
   /* eslint-disable no-underscore-dangle */
-  const _a = (a || '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
-  const _b = (b || '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
+  const _a = (a ? String(a) : '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
+  const _b = (b ? String(b) : '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
 
   // Not empty and same
   return Boolean(_a && _a === _b)
@@ -34,7 +35,7 @@ type Suggestion = {}
 type onChange = (Event, { newValue: string, method: string }) => void
 
 type Props = controlsGroupProps & {
-  forceSuggesedValue: boolean,
+  forceSuggestedValue: boolean,
   suggestions: Suggestion[] | Section[],
 
   onSuggestionsFetchRequested: ({ value: string }) => any,
@@ -91,7 +92,7 @@ const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }
   })
 )
 
-export default class Autocomplete extends React.PureComponent<{}, Props, State> {
+class Autocomplete extends React.PureComponent<{}, Props, State> {
   /* eslint-disable react/sort-comp */
   state = {
     suggestions: this.props.suggestions || [],
@@ -103,7 +104,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
 
   static propTypes = {
     ...Autosuggest.propTypes,
-    forceSuggesedValue: PropTypes.bool,
+    forceSuggestedValue: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -111,15 +112,21 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     highlightFirstSuggestion: true,
     getSuggestionValue: (suggestion) => suggestion.value,
     getSectionSuggestions: (section) => section.values,
-    forceSuggesedValue: true,
+    forceSuggestedValue: true,
+    renderSuggestionsContainer: ({ containerProps, children, query }) => (
+      <SuggestionsContainer query={query} {...containerProps}>
+        {children}
+      </SuggestionsContainer>
+    ),
   }
   /* eslint-enable react/sort-comp */
 
   componentWillReceiveProps(nextProps: Props) {
-    const { suggestions, multiSection, inputProps } = nextProps
+    const { suggestions, multiSection, inputProps, forceSuggestedValue } = nextProps
     const { value, IATACode } = inputProps
     const { active } = inputProps.meta
 
+    // TODO extract IATA related and 'autoSuggest'
     const isSuggestAlreadySelected = Boolean(IATACode)
     const valueEqualsWithSuggest = isValuesEqual(value, _get(suggestions, '0.value')) ||
       isValuesEqual(value, _get(suggestions, '0.IATACode'))
@@ -127,7 +134,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     if (valueEqualsWithSuggest && !isSuggestAlreadySelected && suggestions.length === 1) {
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
-    } else if (suggestions.length && !active) {
+    } else if (forceSuggestedValue && suggestions.length && !active) {
       this.selectFirstSuggest(null, nextProps, 'autoFill')
       this.setState({ suggestions: [] })
     } else {
@@ -165,7 +172,7 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     }
 
     if (!this.autosuggestInstance || !this.autosuggestInstance.justSelectedSuggestion) {
-      if (this.props.forceSuggesedValue) {
+      if (this.props.forceSuggestedValue) {
         this.selectFirstSuggest(event, this.props, 'blur')
       }
     }
@@ -231,21 +238,30 @@ export default class Autocomplete extends React.PureComponent<{}, Props, State> 
     const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
 
     return (
-      <AutocompleteStyled className={className}>
-        <Autosuggest
-          {...props}
-          inputProps={{
-            neighboringInGroup,
-            ...inputProps,
-            onChange: this.onChange,
-            onBlur: this.onBlur,
-            onKeyDown: this.onKeyDown,
-            spell,
-          }}
-          suggestions={suggestions}
-          ref={(ref) => { this.autosuggestInstance = ref }}
-        />
-      </AutocompleteStyled>
+      <Autosuggest
+        {...props}
+        inputProps={{
+          neighboringInGroup,
+          ...inputProps,
+          onChange: this.onChange,
+          onBlur: this.onBlur,
+          onKeyDown: this.onKeyDown,
+          spell,
+        }}
+        suggestions={suggestions}
+        ref={(ref) => { this.autosuggestInstance = ref }}
+        theme={{
+          // Pass `className` into Autosuggest theme. The `container` is className for root block
+          ...Autosuggest.defaultProps.theme,
+          container: className,
+        }}
+      />
     )
   }
 }
+
+const StyledAutocomplete = styled(Autocomplete)`
+  ${style}
+`
+
+export default StyledAutocomplete

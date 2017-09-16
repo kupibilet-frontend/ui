@@ -4,8 +4,10 @@ import { withKnobs } from '@storybook/addon-knobs'
 import infoAddon from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
 
-import { mockInfoAddon } from '../storybook/addons'
-import { ThemeDecorator, IconsDecorator } from '../storybook/decorators'
+import mockInfoAddon from 'storybook/addons/mockInfo'
+import withTheme from 'storybook/decorators/withTheme'
+import withIcons from 'storybook/decorators/withIcons'
+import withReduxContext from 'storybook/decorators/withReduxContext'
 
 setOptions({
   goFullScreen: false,
@@ -22,10 +24,11 @@ if (process.env.NODE_ENV === 'test') {
 } else {
   setAddon(infoAddon)
   addDecorator(centered)
-  addDecorator(IconsDecorator)
+  addDecorator(withIcons)
 }
 
-addDecorator(ThemeDecorator)
+addDecorator(withReduxContext)
+addDecorator(withTheme)
 addDecorator(withKnobs)
 
 const req = require.context('../src', true, /stories.js$/)
