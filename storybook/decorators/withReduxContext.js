@@ -4,14 +4,14 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { reducer as reduxFormReducer } from 'redux-form'
 import { createLogger } from 'redux-logger'
-import createStorybookListener from 'storybook-addon-redux-listener';
+// import createStorybookListener from 'storybook-addon-redux-listener';
 
 const composeEnhancers = global.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const middlewares = []
 if (process.env.NODE_ENV !== 'test') {
   middlewares.push(
-    createStorybookListener(),
+    // createStorybookListener(),
     createLogger({ collapsed: true }),
   )
 }

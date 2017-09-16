@@ -75,7 +75,6 @@
     "redux-form": "^7.0.4",
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
-    "storybook-addon-redux-listener": "nezed-forks/storybook-addon-redux-listener#feature/upgrade-deps",
     "styled-components": "^2.1.2",
     "stylelint-config-kupibilet": "^3.1.2",
     "stylelint-processor-styled-components": "~0.1.0",
