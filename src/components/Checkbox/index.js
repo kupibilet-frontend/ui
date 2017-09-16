@@ -68,9 +68,10 @@ type RFCheckboxProps = FieldProps & {type?: 'checkbox'}
 export default class RFCheckbox extends React.PureComponent<RFCheckboxProps, void> {
   // Ignore RF checkbox behaviour due true/"" values instead of expected true/false
   // See https://github.com/erikras/redux-form/pull/2863 and https://git.io/vHlZn
-  onChange = (e: InputEvent) => (
-    this.props.input.onChange(e.target.checked)
-  )
+  onChange = (e: InputEvent) => {
+    const { onChange } = this.props.input || this.props
+    onChange(e.target.checked)
+  }
 
   render() {
     const { input, type = 'checkbox', ...props } = this.props
