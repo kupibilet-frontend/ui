@@ -60,12 +60,40 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
 
   return `border-radius: ${SIZES[size]}px;`
 }
+const getButtonColor = ({ theme, variant }) => {
+  if (variant === 'primary') {
+    return theme.color.background
+  } else if (variant === 'secondary') {
+    return theme.color.primaryDarkest
+  }
+}
+const getButtonBackground = ({ theme, variant }) => {
+  if (variant === 'primary') {
+    return theme.color.primary
+  } else if (variant === 'secondary') {
+    return theme.color.miscLightest
+  }
+}
+const getButtonHoverBackground = ({ theme, variant }) => {
+  if (variant === 'primary') {
+    return theme.color.primaryDark
+  } else if (variant === 'secondary') {
+    return theme.color.miscLighter
+  }
+}
+const getButtonActiveBackground = ({ theme, variant }) => {
+  if (variant === 'primary') {
+    return theme.color.primaryDarker
+  } else if (variant === 'secondary') {
+    return theme.color.miscLight
+  }
+}
 
 export const StyledButton = styled.button`
   ${control}
 
-  color: ${({ theme }) => theme.color.background};
-  background: ${({ theme }) => theme.color.primary};
+  color: ${getButtonColor};
+  background: ${getButtonBackground};
 
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: ${({ size }) => TYPOGRAPHY[size]}px;
@@ -88,16 +116,25 @@ export const StyledButton = styled.button`
     'opacity: .2;'
     : '')}
 
+  .icon-inherit-color {
+    fill: ${getButtonColor};
+  }
+
   &:hover {
-    ${({ disabled, theme }) => (!disabled ? `
+    ${(props) => (!props.disabled ? `
       cursor: pointer;
-      box-shadow: 0 0 0 1px ${theme.color.primary};
+      background: ${getButtonHoverBackground(props)};
+      box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
+
+      // Immediately change visual state on hover, mousedown and mouseup
+      // Transition only for mouseleave
+      transition: none;
     ` : '')}
   }
 
   &:active {
-    ${({ disabled, theme }) => (!disabled ? `
-      background: ${theme.color.primaryDark};
+    ${(props) => (!props.disabled ? `
+      background: ${getButtonActiveBackground(props)};
       box-shadow: none;
     ` : '')}
   }

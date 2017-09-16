@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 import Dropdown, { DropdownContent } from 'components/Dropdown'
 import Button from 'components/Button'
 

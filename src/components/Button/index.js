@@ -15,10 +15,11 @@ const cloneIconWithSize = (iconNode, size) => (
   })
 )
 
-const Button = ({ children, disabled, size, icon, leftIcon, rightIcon, ...props }) => (
+const Button = ({ children, variant, disabled, size, icon, leftIcon, rightIcon, ...props }) => (
   <StyledButton
     {...props}
     size={size}
+    variant={variant}
     isIconOnly={Boolean(icon)}
     hasLeftIcon={Boolean(leftIcon)}
     hasRightIcon={Boolean(rightIcon)}
@@ -63,12 +64,14 @@ const Button = ({ children, disabled, size, icon, leftIcon, rightIcon, ...props 
 )
 
 Button.defaultProps = {
+  variant: 'primary',
   size: 'normal',
 }
 
 /* eslint-disable react/require-default-props */
 Button.propTypes = {
   size: PropTypes.oneOf(Object.keys(SIZES)),
+  variant: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node,
   disabled: PropTypes.bool,

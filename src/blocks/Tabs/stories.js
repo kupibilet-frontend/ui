@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
 import { Tabs, TabPane, TabBar, Tab as StyledTab } from 'blocks/Tabs'
-import updateKnob from 'utils/updateKnob'
+import updateKnob from 'storybook/updateKnob'
 
 /* eslint-disable react/prop-types */
 const renderTab = (props) => (
