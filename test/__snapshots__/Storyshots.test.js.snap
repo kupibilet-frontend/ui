@@ -3457,7 +3457,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Checkbox default 1`] = `
+exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -3531,140 +3531,27 @@ exports[`Storyshots Controls/Checkbox default 1`] = `
 <div
   className="c0"
 >
-  <div>
-    <label
-      className="c1"
-      disabled={false}
-    >
-      <span
-        checked={false}
-        className="c2 c3"
-        disabled={false}
-      >
-        <input
-          checked={false}
-          className="c4"
-          disabled={false}
-          name=""
-          onChange={[Function]}
-          type="c2"
-        />
-      </span>
-      <span
-        className="c5 c6"
-        disabled={false}
-      >
-        Авиабилеты
-      </span>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Controls/Checkbox disabled 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c4 {
-  display: none;
-}
-
-.c3 {
-  display: inline-block;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  height: 18px;
-  width: 18px;
-  line-height: 16px;
-  box-shadow: inset 0 0 0 1px #dedede;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
-  background: #f2f2f2;
-  border-radius: 3px;
-}
-
-.c6 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: color;
-  transition-property: color;
-  margin-left: 6px;
-  width: 100%;
-  color: #b3b3b3;
-}
-
-.hinpbq:hover .c2 {
-  border-color: #38afff;
-}
-
-.hinpbq:hover .c5 {
-  color: #007acc;
-}
-
-.c1 {
-  cursor: default;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  font-size: 16px;
-  line-height: 18px;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 100%;
-}
-
-.c1:hover .c2 {
-  border-color: #dedede;
-}
-
-.c1:hover .c5 {
-  color: #b3b3b3;
-}
-
-<div
-  className="c0"
->
   <label
     className="c1"
-    disabled={true}
+    disabled={false}
   >
     <span
       checked={false}
       className="c2 c3"
-      disabled={true}
+      disabled={false}
     >
       <input
         checked={false}
         className="c4"
-        disabled={true}
-        name=""
+        disabled={false}
+        name="c2"
         onChange={[Function]}
         type="c2"
       />
     </span>
     <span
       className="c5 c6"
-      disabled={true}
+      disabled={false}
     >
       Авиабилеты
     </span>

@@ -1,19 +1,18 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+// @flow
+import React from 'react'
 import Icon from 'components/Icon'
 import { CheckboxLabel, StyledCheckbox, IconWrap, CheckboxInput, LabelText } from './styled'
 
+type Props = {
+  onChange?: (InputEvent) => *,
+  checked: boolean,
+  disabled?: boolean,
+  children?: React$Element<*>,
+  name?: string,
+  className?: string,
+}
 
-export default class Checkbox extends PureComponent {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    checked: PropTypes.bool.isRequired,
-    disabled: PropTypes.bool,
-    children: PropTypes.node.isRequired,
-    name: PropTypes.string,
-    className: PropTypes.string,
-  }
-
+export class Checkbox extends React.PureComponent<Props, void> {
   static defaultProps = {
     disabled: false,
     checked: false,
@@ -62,6 +61,29 @@ export default class Checkbox extends PureComponent {
         </LabelText>
 
       </CheckboxLabel>
+    )
+  }
+}
+type RFCheckboxProps = FieldProps & {type?: 'checkbox'}
+export default class RFCheckbox extends React.PureComponent<RFCheckboxProps, void> {
+  // Ignore RF checkbox behaviour due true/"" values instead of expected true/false
+  // See https://github.com/erikras/redux-form/pull/2863 and https://git.io/vHlZn
+  onChange = (e: InputEvent) => (
+    this.props.input.onChange(e.target.checked)
+  )
+
+  render() {
+    const { input, type = 'checkbox', ...props } = this.props
+    const { checked } = input || props
+
+    return (
+      <Checkbox
+        {...props}
+        {...input}
+        type={type}
+        checked={Boolean(checked)}
+        onChange={this.onChange}
+      />
     )
   }
 }
