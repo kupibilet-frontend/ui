@@ -413,7 +413,6 @@ exports[`Storyshots Blocks FilterSection 1`] = `
         </div>
       </div>
     </section>
-    <div />
   </div>
 </div>
 `;
