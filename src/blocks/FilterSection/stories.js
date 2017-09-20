@@ -59,5 +59,6 @@ storiesOf('Blocks', module)
           </FilterSection.Collapse>
         }
       />
+      <div />
     </div>
   ))
