@@ -33,7 +33,7 @@
   "author": "Kupibilet.ru Frontend Team",
   "license": "MIT",
   "devDependencies": {
-    "@kupibilet/icons": "~4.0.0",
+    "@kupibilet/icons": "~5.0.0",
     "@kupibilet/moment": "^0.0.2",
     "@storybook/addon-centered": "^3.2.7",
     "@storybook/addon-info": "^3.2.9",
@@ -91,7 +91,7 @@
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
-    "@kupibilet/icons": "^4.0.0",
+    "@kupibilet/icons": "^5.0.0",
     "@kupibilet/moment": "^0.0.2",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
