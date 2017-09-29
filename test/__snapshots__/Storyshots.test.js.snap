@@ -12719,7 +12719,7 @@ exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
         checked={false}
         className="c0"
         disabled={false}
-        name="check"
+        name="checkmark"
         onChange={[Function]}
         type="checkbox"
       />

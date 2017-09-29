@@ -34,14 +34,14 @@ export class Checkbox extends React.PureComponent<Props, void> {
     return (
       <CheckboxLabel disabled={disabled} className={className}>
         <StyledCheckbox
-          classname="check"
+          classname="checkmark"
           disabled={disabled}
           checked={checked}
         >
           {
             checked ? (
               <IconWrap checked={checked}>
-                <Icon name="check" fill="background" />
+                <Icon name="checkmark" fill="background" />
               </IconWrap>
             ) : (
               null
