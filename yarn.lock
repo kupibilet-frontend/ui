@@ -6,9 +6,9 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@kupibilet/icons@~4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-4.3.0.tgz#0a90a4478bb4c99e9461ba489a22ecf88eebc302"
+"@kupibilet/icons@~5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.0.0.tgz#b265c57e7efbb3a4845bd6a56188747853774167"
 
 "@kupibilet/moment@^0.0.2":
   version "0.0.2"
