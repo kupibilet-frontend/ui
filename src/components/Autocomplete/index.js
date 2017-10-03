@@ -123,8 +123,7 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
 
   componentWillReceiveProps(nextProps: Props) {
     const { suggestions, multiSection, inputProps, forceSuggestedValue } = nextProps
-    const { value, IATACode } = inputProps
-    const { active } = inputProps.meta
+    const { value, IATACode, meta } = inputProps
 
     // TODO extract IATA related and 'autoSuggest'
     const isSuggestAlreadySelected = Boolean(IATACode)
@@ -134,7 +133,7 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
     if (valueEqualsWithSuggest && !isSuggestAlreadySelected && suggestions.length === 1) {
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
-    } else if (forceSuggestedValue && suggestions.length && !active) {
+    } else if (forceSuggestedValue && suggestions.length && meta && !meta.active) {
       this.selectFirstSuggest(null, nextProps, 'autoFill')
       this.setState({ suggestions: [] })
     } else {

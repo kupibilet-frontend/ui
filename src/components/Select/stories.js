@@ -94,7 +94,7 @@ storiesOf('Controls/Select', module)
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
-    const error = text('error', null)
+    const error = text('error', '')
     const selectedSuggestion = object('value', { value: '' })
     const defaultInputProps = { placeholder, disabled }
     return (
@@ -119,7 +119,7 @@ storiesOf('Controls/Select', module)
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
-    const error = text('error', null)
+    const error = text('error', '')
     const selectedSuggestion = object('value', { value: '' })
     const defaultInputProps = { placeholder, disabled }
     return (
