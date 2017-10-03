@@ -58,10 +58,11 @@ export const IconWrapper = styled.span`
   `
 
 // Scoped inside `colorKeys` because `fill` are valid HTML attrs
-const Icon = ({ prefix, name, striked, className, inheritColor, ...props }) => (
+const Icon = ({ prefix, name, striked, className, inheritColor, rotate, ...props }) => (
   <IconWrapper striked={striked}>
     <IconSvg
       {...props}
+      rotate={rotate ? 'true' : ''}
       striked={striked}
       className={cn(className, { 'icon-inherit-color': inheritColor })}
     >
@@ -88,7 +89,7 @@ Icon.propTypes = {
   className: PropTypes.string,
   inheritColor: PropTypes.bool,
   striked: PropTypes.bool,
-  rotate: PropTypes.bool,
+  rotate: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 }
 
 

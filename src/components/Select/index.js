@@ -50,7 +50,9 @@ const defaultInput = ({ isOpen, ...props }) => (
   />
 )
 
-const defaultRFInput = ({ isOpen, ...props }) => (
+// Omit ref cause it can't be set for statless RFInput and not really used by react-autowhatever
+// eslint-disable-next-line no-unused-vars
+const defaultRFInput = ({ isOpen, ref, ...props }) => (
   <RFInput
     {...props}
     rightIcon={

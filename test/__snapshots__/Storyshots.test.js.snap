@@ -398,7 +398,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
                     <svg
                       className="icon-inherit-color c15"
                       fill={null}
-                      rotate={false}
+                      rotate=""
                       size="normal"
                     >
                       <use
@@ -1810,7 +1810,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         <svg
           className="c9 c10 icon-inherit-color c11"
           fill={null}
-          rotate={false}
+          rotate=""
           size="xxsmall"
         >
           <use
@@ -2184,7 +2184,7 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
               <svg
                 className="c11"
                 fill="background"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2210,7 +2210,7 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
               <svg
                 className="c11"
                 fill="background"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2445,7 +2445,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2504,7 +2504,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2518,7 +2518,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2532,7 +2532,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2582,7 +2582,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2596,7 +2596,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c13"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2610,7 +2610,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c13"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -3184,7 +3184,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
         <svg
           className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -3311,7 +3311,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
         <svg
           className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -3336,7 +3336,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
         <svg
           className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5155,7 +5155,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
         <svg
           className="c5"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5169,7 +5169,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
         <svg
           className="c5"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5178,6 +5178,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
         </svg>
       </span>
     </div>
+    
   </div>
 </div>
 `;
@@ -5402,7 +5403,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
         <svg
           className="c4"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5431,7 +5432,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
         <svg
           className="c4"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5440,6 +5441,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
         </svg>
       </span>
     </div>
+    
   </div>
 </div>
 `;
@@ -5603,6 +5605,7 @@ exports[`Storyshots Controls/Input default 1`] = `
       placeholder="Только прямые рейсы"
       size="large"
     />
+    
   </div>
 </div>
 `;
@@ -5766,7 +5769,7 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
         <svg
           className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5969,240 +5972,6 @@ exports[`Storyshots Controls/Radio default 1`] = `
       <span
         className="c5 c6"
         disabled={false}
-      >
-        Трэвэл
-      </span>
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Controls/Radio disabled 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c4 {
-  display: none;
-}
-
-.c3 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-shadow: inset 0 0 0 1px #38afff;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
-  background: #38afff;
-}
-
-.c3:after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 50%;
-  opacity: 1;
-}
-
-.c8 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-shadow: inset 0 0 0 1px #dedede;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
-  background: #f2f2f2;
-}
-
-.c8:after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 50%;
-  opacity: 0;
-}
-
-.c6 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: color;
-  transition-property: color;
-  margin-left: 6px;
-  width: 100%;
-}
-
-.c9 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: color;
-  transition-property: color;
-  margin-left: 6px;
-  width: 100%;
-  color: #b3b3b3;
-}
-
-.c1 {
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 100%;
-}
-
-.c1 .c2:hover {
-  border-color: #38afff;
-}
-
-.c1 .c5:hover {
-  color: #007acc;
-}
-
-.c7 {
-  cursor: default;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 100%;
-}
-
-.c7 .c2:hover {
-  border-color: #dedede;
-}
-
-.c7 .c5:hover {
-  color: #b3b3b3;
-}
-
-<div
-  className="c0"
->
-  <div>
-    <label
-      className="c1"
-      disabled={false}
-    >
-      <div
-        checked={true}
-        className="c2 c3"
-        disabled={false}
-      />
-      <input
-        checked={true}
-        className="c4"
-        disabled={false}
-        label="Базовый"
-        onChange={[Function]}
-        type="radio"
-        value="base"
-      />
-      <span
-        className="c5 c6"
-        disabled={false}
-      >
-        Базовый
-      </span>
-    </label>
-    <label
-      className="c7"
-      disabled={true}
-    >
-      <div
-        checked={false}
-        className="c2 c8"
-        disabled={true}
-      />
-      <input
-        checked={false}
-        className="c4"
-        disabled={true}
-        label="Трэвэл"
-        onChange={[Function]}
-        type="radio"
-        value="travel"
-      />
-      <span
-        className="c5 c9"
-        disabled={true}
       >
         Трэвэл
       </span>
@@ -6519,7 +6288,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
           <svg
             className="c7"
             fill="miscDark"
-            rotate={false}
+            rotate=""
             size="normal"
           >
             <use
@@ -6842,7 +6611,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
           <svg
             className="c7"
             fill="miscDark"
-            rotate={false}
+            rotate=""
             size="normal"
           >
             <use
@@ -7165,7 +6934,7 @@ exports[`Storyshots Controls/Select default 1`] = `
           <svg
             className="c7"
             fill="miscDark"
-            rotate={false}
+            rotate=""
             size="normal"
           >
             <use
@@ -7589,7 +7358,7 @@ exports[`Storyshots Icon Default 1`] = `
     <svg
       className="c2"
       fill="primary"
-      rotate={false}
+      rotate=""
       size="large"
     >
       <use
