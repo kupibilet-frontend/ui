@@ -57,7 +57,7 @@
     "eslint-import-resolver-babel-module": "^3.0.0",
     "flow-bin": "^0.54.0",
     "glob": "^7.1.2",
-    "husky": "~0.13.2",
+    "husky": "~0.15.0-beta.2",
     "jest": "~21.1.0",
     "jest-styled-components": "^4.6.0",
     "lint-staged": "^4.0.3",
