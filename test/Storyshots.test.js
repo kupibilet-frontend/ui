@@ -1,5 +1,5 @@
 import initStoryshots from '@storybook/addon-storyshots'
-
+import './polyfills'
 import 'jest-styled-components'
 
 initStoryshots()
@@ -23,6 +23,3 @@ jest.mock('react-dom', () => {
   ReactDOM.findDOMNode = () => null
   return ReactDOM
 })
-
-// matchMedia polyfill
-window.matchMedia = window.matchMedia || (() => { return { matches: false, addListener: () => {}, removeListener: () => {}, }; });
