@@ -5114,6 +5114,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 3px;
   padding-right: 10px;
   display: -webkit-box;
@@ -5146,7 +5147,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
     />
     <div
       className="c3"
-      onClick={[Function]}
+      onMouseDown={[Function]}
       size="large"
     >
       <span
@@ -5351,6 +5352,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 10px;
   padding-right: 8px;
   display: -webkit-box;
@@ -5371,6 +5373,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 8px;
   padding-right: 10px;
   display: -webkit-box;
@@ -5394,7 +5397,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   >
     <div
       className="c2"
-      onClick={[Function]}
+      onMouseDown={[Function]}
       size="large"
     >
       <span
@@ -5423,7 +5426,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
     />
     <div
       className="c6"
-      onClick={[Function]}
+      onMouseDown={[Function]}
       size="large"
     >
       <span
@@ -6204,6 +6207,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 5px;
   padding-right: 7px;
   display: -webkit-box;
@@ -6279,7 +6283,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
       />
       <div
         className="c4"
-        onClick={[Function]}
+        onMouseDown={[Function]}
         size="normal"
       >
         <span
@@ -6530,6 +6534,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 5px;
   padding-right: 7px;
   display: -webkit-box;
@@ -6602,7 +6607,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
       />
       <div
         className="c4"
-        onClick={[Function]}
+        onMouseDown={[Function]}
         size="normal"
       >
         <span
@@ -6853,6 +6858,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 5px;
   padding-right: 7px;
   display: -webkit-box;
@@ -6925,7 +6931,7 @@ exports[`Storyshots Controls/Select default 1`] = `
       />
       <div
         className="c4"
-        onClick={[Function]}
+        onMouseDown={[Function]}
         size="normal"
       >
         <span
