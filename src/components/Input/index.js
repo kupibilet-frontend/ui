@@ -26,6 +26,8 @@ type Props = {
   onFocus?: Function,
   leftIcon?: React$Element<*>,
   rightIcon?: React$Element<*>,
+  handleLeftIconPress?: Function,
+  handleRightIconPress?: Function,
   innerRef?: Function,
   /* global React$Element */
   children?: React$Element<*>[],
@@ -45,8 +47,11 @@ class InputControl extends React.PureComponent<void, Props, State> {
     isActive: false,
   }
 
-  onIconClick = () => {
-    this.innerInput.focus()
+  onIconPress = (e) => {
+    if (!this.state.isActive) {
+      e.preventDefault()
+      this.innerInput.focus()
+    }
   }
 
   handleFocus = (e: Event) => {
@@ -84,6 +89,8 @@ class InputControl extends React.PureComponent<void, Props, State> {
       children,
       leftIcon,
       rightIcon,
+      handleLeftIconPress,
+      handleRightIconPress,
       ...props
     } = this.props
 
@@ -102,7 +109,10 @@ class InputControl extends React.PureComponent<void, Props, State> {
         {
           leftIcon ? (
             <IconWrap
-              onClick={this.onIconClick}
+              onMouseDown={handleLeftIconPress
+                ? (e) => handleLeftIconPress(this.innerInput, e)
+                : this.onIconPress
+              }
               size={size}
               isGroup={leftIconsArray.length > 1}
               left
@@ -143,7 +153,10 @@ class InputControl extends React.PureComponent<void, Props, State> {
         {
           rightIcon ? (
             <IconWrap
-              onClick={this.onIconClick}
+              onMouseDown={handleRightIconPress
+                ? (e) => handleRightIconPress(this.innerInput, e)
+                : this.onIconPress
+              }
               size={size}
               isGroup={rightIconsArray.length > 1}
               right

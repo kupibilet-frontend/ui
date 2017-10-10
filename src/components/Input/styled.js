@@ -233,6 +233,7 @@ const getIconWrapPaddings = ({ left, right, isGroup, size }) => {
 const IconWrap = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
+  height: 100%;
   ${getIconWrapPaddings}
   display: flex;
   vertical-align: top;
