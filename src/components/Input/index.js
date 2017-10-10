@@ -26,6 +26,8 @@ type Props = {
   onFocus?: Function,
   leftIcon?: React$Element<*>,
   rightIcon?: React$Element<*>,
+  handleLeftIconPress?: Function,
+  handleRightIconPress?: Function,
   innerRef?: Function,
   /* global React$Element */
   children?: React$Element<*>[],
@@ -50,7 +52,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
       e.preventDefault()
       this.innerInput.focus()
     }
-}
+  }
 
   handleFocus = (e: Event) => {
     const { onFocus } = this.props
