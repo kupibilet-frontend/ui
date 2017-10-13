@@ -94,14 +94,21 @@ class Tooltip extends React.Component <TooltipProps, TooltipState> {
   }
 
   componentDidMount() {
-    this.coords = this.getCoordinates(this.childRef)
+    if (this.childRef !== null) {
+      this.coords = this.getCoordinates(this.childRef)
+    }
   }
 
   componentWillUnmount() {
     clearTimeout(this.hoverTimeout)
   }
-
-  getCoordinates = (node : Element) => ReactDOM.findDOMNode(node).getBoundingClientRect()
+  /* eslint-disable react/no-find-dom-node */
+  getCoordinates = (node : Element) => {
+    const availableNode = ReactDOM.findDOMNode(node)
+    if (availableNode) {
+      return ReactDOM.findDOMNode(node).getBoundingClientRect()
+    }
+  }
 
   handleMouseOut = () => {
     clearTimeout(this.hoverTimeout)

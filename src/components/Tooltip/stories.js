@@ -40,7 +40,7 @@ storiesOf('Controls/Tooltip', module)
         error
         content="Зайчику грустно"
       >
-        <div style={{lineHeight: 1, width: '100px', height: '25px', background: 'blue'}}>
+        <div style={{ lineHeight: 1, width: '100px', height: '25px', background: 'blue' }}>
            Не смотри на зайчика
         </div>
       </Tooltip>
