@@ -1,95 +1,101 @@
-// @flow
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Portal } from 'react-portal'
 import { withTheme } from 'styled-components'
 import { GlobalStylesScope } from 'components/ThemeProvider'
+import TextSmall from 'components/Typography/TextSmall'
 import {
-  TooltipBackground,
-  TooltipContainer,
+  PopoverBackground,
+  PopoverContainer,
   RelativeWrapper,
-  TooltipDot,
+  PopoverDot,
   PositionWrapper,
   OrientationWrapper,
-  ContentWrapper,
+  Header,
+  HeaderText,
 } from './styled'
 
 type PortalProps = {
   isOpen: boolean,
   coords: Object | null,
   orientation: string,
+  subOrientation: ?string,
   content: string | Element,
-  success: boolean,
-  error: boolean,
+  header: ?string,
 }
 
-const TooltipPortal = (props : PortalProps) => {
+const PopoverPortal = (props : PortalProps) => {
   const {
     isOpen,
     coords,
     orientation,
+    subOrientation,
     content,
-    success,
-    error,
+    header,
   } = props
   return ((isOpen && coords)
     ? <Portal>
       <StylesProvider>
-        <TooltipContainer
+        <PopoverContainer
           top={coords.top}
           left={coords.left}
           width={coords.width}
           height={coords.height}
           orientation={orientation}
+          subOrientation={subOrientation}
         >
           <PositionWrapper>
-            <OrientationWrapper orientation={orientation}>
+            <OrientationWrapper
+              orientation={orientation}
+              subOrientation={subOrientation}
+            >
               <RelativeWrapper
                 orientation={orientation}
+                subOrientation={subOrientation}
                 width={coords.width}
                 height={coords.height}
               >
-                <TooltipDot
-                  success={success}
-                  error={error}
+                <PopoverDot
+                  orientation={orientation}
                 />
-                <TooltipBackground
-                  success={success}
-                  error={error}
-                >
-                  <ContentWrapper>
+                <PopoverBackground>
+                  {header &&
+                    <Header>
+                      <HeaderText>
+                        {header}
+                      </HeaderText>
+                    </Header>
+                  }
+                  <TextSmall>
                     { content }
-                  </ContentWrapper>
-                </TooltipBackground>
+                  </TextSmall>
+                </PopoverBackground>
               </RelativeWrapper>
             </OrientationWrapper>
           </PositionWrapper>
-        </TooltipContainer>
+        </PopoverContainer>
       </StylesProvider>
     </Portal>
     : null
   )
 }
 
-type TooltipProps = {
+type PopoverProps = {
   children: Object | Element,
   content: string | Element,
+  header: ?string,
   orientation: string,
-  success?: boolean,
-  error?: boolean,
+  subOrientation: ?string,
 }
 
-type TooltipState = {
+type PopoverState = {
   isOpen: boolean,
 }
 
 /* eslint-disable react/prop-types */
-class Tooltip extends React.Component <TooltipProps, TooltipState> {
+class Popover extends React.Component <PopoverProps, PopoverState> {
   static defaultProps = {
     orientation: 'bottom',
-    success: false,
-    error: false,
   }
 
   state = {
@@ -116,12 +122,13 @@ class Tooltip extends React.Component <TooltipProps, TooltipState> {
   handleMouseOut = () => {
     clearTimeout(this.hoverTimeout)
     this.setState({
-      isOpen: false,
+      isOpen: true,
     })
   }
 
   handleMouseOver = () => {
     this.hoverTimeout = setTimeout(() => {
+      this.coords = this.getCoordinates(this.childRef)
       this.setState({
         isOpen: true,
       })
@@ -136,29 +143,29 @@ class Tooltip extends React.Component <TooltipProps, TooltipState> {
     const {
       children,
       orientation,
+      subOrientation,
       content,
-      success,
-      error,
+      header,
     } = this.props
     const { coords } = this
     const { isOpen } = this.state
     return [
-      <TooltipChildrenProxy
-        key="tooltippedElement"
+      <PopoverChildrenProxy
+        key="PopoverpedElement"
         ref={(element) => { this.childRef = element }}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
       >
         {children}
-      </TooltipChildrenProxy>,
-      <TooltipPortal
-        key="tooltipPortal"
+      </PopoverChildrenProxy>,
+      <PopoverPortal
+        key="PopoverPortal"
         coords={coords}
         orientation={orientation}
+        subOrientation={subOrientation}
         isOpen={isOpen}
         content={content}
-        success={success}
-        error={error}
+        header={header}
       />,
     ]
   }
@@ -166,11 +173,11 @@ class Tooltip extends React.Component <TooltipProps, TooltipState> {
 
 const StylesProvider = withTheme(GlobalStylesScope)
 
-class TooltipChildrenProxy extends React.Component {
+class PopoverChildrenProxy extends React.Component {
   render() {
     const { children, ...props } = this.props
     return React.cloneElement(React.Children.only(children), props)
   }
 }
 
-export default Tooltip
+export default Popover

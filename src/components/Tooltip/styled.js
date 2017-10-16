@@ -41,7 +41,7 @@ const TooltipDot = styled.div`
   width: 7px;
   height: 7px;
   margin: 2px;
-  border-radius: 100%;
+  border-radius: 50%;
   background: ${(props) => getBackgroundColor(props)};
 `
 
@@ -53,10 +53,14 @@ const TooltipBackground = styled.div`
   background: ${(props) => getBackgroundColor(props)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 100px;
-  padding: 2px 12px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+const ContentWrapper = styled.div`
+  font-size: 14px;
 `
 
 const TooltipContainer = styled.div`
@@ -106,15 +110,7 @@ const RelativeWrapper = styled.div`
     ${flexDirections[orientation]}
     `
 };
-  justify-content: ${({ orientation }) => {
-    if (orientation === 'left') {
-      return 'flex-start'
-    } else if (orientation === 'right') {
-      return 'flex-start'
-    }
-    return 'flex-start'
-  }
-};
+  justify-content: flex-start;
   align-items: center;
   `
 
@@ -125,4 +121,5 @@ export {
   TooltipDot,
   PositionWrapper,
   OrientationWrapper,
+  ContentWrapper,
 }
