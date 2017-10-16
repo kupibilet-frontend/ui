@@ -102,7 +102,7 @@ const PopoverContainer = styled.div`
         `
       case 'top':
         return `
-          top: ${props.top }px;
+          top: ${props.top}px;
           left: ${props.left}px;
         `
       default:
