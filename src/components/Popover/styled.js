@@ -3,8 +3,8 @@ import { transparentize } from 'polished'
 import Text from 'components/Typography/Text'
 
 const flexDirections = {
-  top: 'column-reverse',
-  bottom: 'column',
+  bottom: 'row',
+  top: 'row',
   left: 'row-reverse',
   right: 'row',
 }
@@ -33,6 +33,15 @@ const getSubCoordinates = ({ subOrientation, width, height, top, left }) => {
     return `top: ${top + height}px;`
   }
   return `left: ${left + width}px;`
+}
+
+const getFlexDirection = (orientation, subOrientation) => {
+  if (orientation === 'top' || orientation === 'bottom') {
+    return subOrientation === 'left'
+      ? 'row-reverse'
+      : flexDirections[orientation]
+  }
+  return flexDirections[orientation]
 }
 
 const getBackgroundColor = ({ theme }) => {
@@ -65,6 +74,7 @@ const PopoverDot = styled.div`
 
 const PopoverBackground = styled.div`
   flex-shrink: 0;
+  flex-grow: 1;
   min-width: 240px;
   max-width: 360px;
   background: ${(props) => getBackgroundColor(props)};
@@ -126,7 +136,12 @@ ${
 const RelativeWrapper = styled.div`
   position: relative;
   display: flex;
-  flex-direction: ${ ({ orientation }) => flexDirections[orientation]
+  flex-direction: ${ ({ orientation, subOrientation }) =>
+    getFlexDirection(orientation, subOrientation)
+};
+flex-wrap: ${({ orientation }) => {
+    if (orientation === 'top' || orientation === 'bottom') return 'wrap'
+  }
 };
   justify-content: flex-start;
   ${({ subOrientation }) => {

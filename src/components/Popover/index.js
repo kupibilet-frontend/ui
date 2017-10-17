@@ -55,9 +55,11 @@ const PopoverPortal = (props : PortalProps) => {
                 width={coords.width}
                 height={coords.height}
               >
-                <PopoverDot
-                  orientation={orientation}
-                />
+                {(orientation !== 'top') &&
+                  <PopoverDot
+                    orientation={orientation}
+                  />
+                }
                 <PopoverBackground>
                   {header &&
                     <Header>
@@ -70,6 +72,11 @@ const PopoverPortal = (props : PortalProps) => {
                     { content }
                   </TextSmall>
                 </PopoverBackground>
+                {(orientation === 'top') &&
+                  <PopoverDot
+                    orientation={orientation}
+                  />
+                }
               </RelativeWrapper>
             </OrientationWrapper>
           </PositionWrapper>

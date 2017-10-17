@@ -101,6 +101,27 @@ storiesOf('Controls/Popover', module)
     )
   })
 
+  .addWithInfo('Bottom&Left', () => {
+    return (
+      <Popover
+        orientation="bottom"
+        subOrientation="left"
+        content={
+          <div>
+            Премия в области научно-популярной литературы «Просветитель»
+            была учреждена основателем и почетным президентом.
+          </div>
+        }
+      >
+        <Button
+          icon={
+            <Icon name="carrot_monochrome" inheritColor />
+          }
+        />
+      </Popover>
+    )
+  })
+
   .addWithInfo('Left&Top&Header', () => {
     return (
       <Popover
