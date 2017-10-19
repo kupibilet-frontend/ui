@@ -15,7 +15,7 @@ storiesOf('Controls/Popover', module)
             была учреждена основателем и почетным президентом.
           </div>
         }
-        orientation="bottom"
+        placement="bottom"
       >
         <Button
           icon={
@@ -28,7 +28,7 @@ storiesOf('Controls/Popover', module)
   .addWithInfo('Right', () => {
     return (
       <Popover
-        orientation="right"
+        placement="right"
         content={
           <div>
             Премия в области научно-популярной литературы «Просветитель»
@@ -45,7 +45,7 @@ storiesOf('Controls/Popover', module)
   .addWithInfo('Left', () => {
     return (
       <Popover
-        orientation="left"
+        placement="left"
         content={
           <div>
             Премия в области научно-популярной литературы «Просветитель»
@@ -62,7 +62,7 @@ storiesOf('Controls/Popover', module)
   .addWithInfo('Top&Header', () => {
     return (
       <Popover
-        orientation="top"
+        placement="top"
         header="Красивый зайчик в шоке"
         content={
           <div>
@@ -83,8 +83,8 @@ storiesOf('Controls/Popover', module)
   .addWithInfo('Top&Left', () => {
     return (
       <Popover
-        orientation="top"
-        subOrientation="left"
+        placement="top"
+        align="left"
         content={
           <div>
             Премия в области научно-популярной литературы «Просветитель»
@@ -104,8 +104,8 @@ storiesOf('Controls/Popover', module)
   .addWithInfo('Bottom&Left', () => {
     return (
       <Popover
-        orientation="bottom"
-        subOrientation="left"
+        placement="bottom"
+        align="left"
         content={
           <div>
             Премия в области научно-популярной литературы «Просветитель»
@@ -125,8 +125,8 @@ storiesOf('Controls/Popover', module)
   .addWithInfo('Left&Top&Header', () => {
     return (
       <Popover
-        orientation="left"
-        subOrientation="top"
+        placement="left"
+        align="top"
         header="Красивый зайчик"
         content={
           <div>
@@ -144,8 +144,8 @@ storiesOf('Controls/Popover', module)
   .addWithInfo('Right&Top', () => {
     return (
       <Popover
-        orientation="right"
-        subOrientation="top"
+        placement="right"
+        align="top"
         content={
           <div>
             Премия в области научно-популярной литературы «Просветитель»

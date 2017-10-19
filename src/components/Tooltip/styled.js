@@ -25,12 +25,12 @@ const getBackgroundColor = ({ theme, error, success }) => {
 const PositionWrapper = styled.div`
   position: relative;
 `
-const OrientationWrapper = styled.div`
+const PlacementWrapper = styled.div`
   position: absolute;
-  ${({ orientation }) => {
-    if (orientation === 'left') {
+  ${({ placement }) => {
+    if (placement === 'left') {
       return 'right: 0;'
-    } else if (orientation === 'right') {
+    } else if (placement === 'right') {
       return 'left: 0;'
     }
   }
@@ -59,17 +59,13 @@ const TooltipBackground = styled.div`
   justify-content: center;
 `
 
-const ContentWrapper = styled.div`
-  font-size: 14px;
-`
-
 const TooltipContainer = styled.div`
   height: 0;
   position: absolute;
   opacity: 0;
   animation: 0.15s ease-out forwards ${arrival};
   ${(props) => {
-    switch (props.orientation) {
+    switch (props.placement) {
       case 'right':
         return `
           top: ${props.top}px;
@@ -98,16 +94,16 @@ const TooltipContainer = styled.div`
 const RelativeWrapper = styled.div`
   min-width: ${({ width }) => `${width}px`};
   min-height: ${({ height }) => `${height}px`};
-  ${ ({ orientation, width }) => {
-    if (orientation === 'top' || orientation === 'bottom') {
+  ${ ({ placement, width }) => {
+    if (placement === 'top' || placement === 'bottom') {
       return `max-width: ${width}px;`
     }
   }
 }
   position: relative;
   display: flex;
-  flex-direction: ${ ({ orientation }) => `
-    ${flexDirections[orientation]}
+  flex-direction: ${ ({ placement }) => `
+    ${flexDirections[placement]}
     `
 };
   justify-content: flex-start;
@@ -120,6 +116,5 @@ export {
   RelativeWrapper,
   TooltipDot,
   PositionWrapper,
-  OrientationWrapper,
-  ContentWrapper,
+  PlacementWrapper,
 }

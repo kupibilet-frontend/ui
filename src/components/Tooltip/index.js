@@ -1,52 +1,51 @@
 // @flow
 
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Portal } from 'react-portal'
-import { withTheme } from 'styled-components'
 import { GlobalStylesScope } from 'components/ThemeProvider'
+import Hint from 'blocks/Hints'
+import TextSmall from 'components/Typography/TextSmall'
 import {
   TooltipBackground,
   TooltipContainer,
   RelativeWrapper,
   TooltipDot,
   PositionWrapper,
-  OrientationWrapper,
-  ContentWrapper,
+  PlacementWrapper,
 } from './styled'
 
 type PortalProps = {
   isOpen: boolean,
   coords: Object | null,
-  orientation: string,
+  placement: string,
   content: string | Element,
-  success: boolean,
-  error: boolean,
+  success: ?boolean,
+  error: ?boolean,
 }
 
 const TooltipPortal = (props : PortalProps) => {
   const {
     isOpen,
     coords,
-    orientation,
+    placement,
     content,
     success,
     error,
   } = props
   return ((isOpen && coords)
     ? <Portal>
-      <StylesProvider>
+      <GlobalStylesScope>
         <TooltipContainer
           top={coords.top}
           left={coords.left}
           width={coords.width}
           height={coords.height}
-          orientation={orientation}
+          placement={placement}
         >
           <PositionWrapper>
-            <OrientationWrapper orientation={orientation}>
+            <PlacementWrapper placement={placement}>
               <RelativeWrapper
-                orientation={orientation}
+                placement={placement}
                 width={coords.width}
                 height={coords.height}
               >
@@ -58,15 +57,15 @@ const TooltipPortal = (props : PortalProps) => {
                   success={success}
                   error={error}
                 >
-                  <ContentWrapper>
+                  <TextSmall>
                     { content }
-                  </ContentWrapper>
+                  </TextSmall>
                 </TooltipBackground>
               </RelativeWrapper>
-            </OrientationWrapper>
+            </PlacementWrapper>
           </PositionWrapper>
         </TooltipContainer>
-      </StylesProvider>
+      </GlobalStylesScope>
     </Portal>
     : null
   )
@@ -75,9 +74,9 @@ const TooltipPortal = (props : PortalProps) => {
 type TooltipProps = {
   children: Object | Element,
   content: string | Element,
-  orientation: string,
-  success?: boolean,
-  error?: boolean,
+  placement: string,
+  success: ?boolean,
+  error: ?boolean,
 }
 
 type TooltipState = {
@@ -85,57 +84,19 @@ type TooltipState = {
 }
 
 /* eslint-disable react/prop-types */
-class Tooltip extends React.Component <TooltipProps, TooltipState> {
+class Tooltip extends Hint {
+  props: TooltipProps
+  state: TooltipState
   static defaultProps = {
-    orientation: 'bottom',
+    placement: 'bottom',
     success: false,
     error: false,
   }
 
-  state = {
-    isOpen: false,
-  }
-
-  componentDidMount() {
-    if (this.childRef !== null) {
-      this.coords = this.getCoordinates(this.childRef)
-    }
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this.hoverTimeout)
-  }
-  /* eslint-disable react/no-find-dom-node */
-  getCoordinates = (node : Element) => {
-    const availableNode = ReactDOM.findDOMNode(node)
-    if (availableNode) {
-      return ReactDOM.findDOMNode(node).getBoundingClientRect()
-    }
-  }
-
-  handleMouseOut = () => {
-    clearTimeout(this.hoverTimeout)
-    this.setState({
-      isOpen: false,
-    })
-  }
-
-  handleMouseOver = () => {
-    this.hoverTimeout = setTimeout(() => {
-      this.setState({
-        isOpen: true,
-      })
-    }, 150)
-  }
-
-  childRef = null
-  coords = null
-  hoverTimeout = null
-
   render() {
     const {
       children,
-      orientation,
+      placement,
       content,
       success,
       error,
@@ -154,7 +115,7 @@ class Tooltip extends React.Component <TooltipProps, TooltipState> {
       <TooltipPortal
         key="tooltipPortal"
         coords={coords}
-        orientation={orientation}
+        placement={placement}
         isOpen={isOpen}
         content={content}
         success={success}
@@ -164,8 +125,7 @@ class Tooltip extends React.Component <TooltipProps, TooltipState> {
   }
 }
 
-const StylesProvider = withTheme(GlobalStylesScope)
-
+// Proxy for possibility to transfer ref to any children
 class TooltipChildrenProxy extends React.Component {
   render() {
     const { children, ...props } = this.props

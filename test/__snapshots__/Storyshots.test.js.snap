@@ -5773,6 +5773,127 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/Popover Bottom&Left 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c4 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c1:hover {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c1:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    disabled={undefined}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    size="normal"
+  >
+    <span
+      className="c2"
+      size="normal"
+    >
+      <span
+        className="c3"
+      >
+        <svg
+          className="icon-inherit-color c4"
+          fill={null}
+          rotate=""
+          size="normal"
+        >
+          <use
+            xlinkHref="#kb_carrot_monochrome"
+          />
+        </svg>
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Storyshots Controls/Popover Left 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';

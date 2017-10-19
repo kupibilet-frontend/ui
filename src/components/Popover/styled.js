@@ -28,20 +28,20 @@ const arrival = keyframes`
   100% { opacity: 1; }
 `
 
-const getSubCoordinates = ({ subOrientation, width, height, top, left }) => {
-  if (subOrientation === 'top') {
+const getSubCoordinates = ({ align, width, height, top, left }) => {
+  if (align === 'top') {
     return `top: ${top + height}px;`
   }
   return `left: ${left + width}px;`
 }
 
-const getFlexDirection = (orientation, subOrientation) => {
-  if (orientation === 'top' || orientation === 'bottom') {
-    return subOrientation === 'left'
+const getFlexDirection = (placement, align) => {
+  if (placement === 'top' || placement === 'bottom') {
+    return align === 'left'
       ? 'row-reverse'
-      : flexDirections[orientation]
+      : flexDirections[placement]
   }
-  return flexDirections[orientation]
+  return flexDirections[placement]
 }
 
 const getBackgroundColor = ({ theme }) => {
@@ -51,28 +51,32 @@ const getBackgroundColor = ({ theme }) => {
 const PositionWrapper = styled.div`
   position: relative;
 `
-const OrientationWrapper = styled.div`
+const PlacementWrapper = styled.div`
   position: absolute;
-  ${({ orientation }) => subPositions[orientation]
+  ${({ placement }) => subPositions[placement]
 }
-${({ subOrientation }) => {
-    if (subOrientation) {
-      return subPositions[subOrientation]
+${({ align }) => {
+    if (align) {
+      return subPositions[align]
     }
   }
 }
 `
 
 const PopoverDot = styled.div`
+  order: ${({ placement }) => {
+    return placement === 'top' ? 3 : 1
+  }};
   flex-shrink: 0;
   width: 7px;
   height: 7px;
-  margin: ${({ orientation }) => dotMargins[orientation]}
+  margin: ${({ placement }) => dotMargins[placement]}
   border-radius: 50%;
   background: ${(props) => getBackgroundColor(props)};
 `
 
 const PopoverBackground = styled.div`
+  order: 2;
   flex-shrink: 0;
   flex-grow: 1;
   min-width: 240px;
@@ -99,7 +103,7 @@ const PopoverContainer = styled.div`
   opacity: 0;
   animation: 0.15s ease-out forwards ${arrival};
   ${(props) => {
-    switch (props.orientation) {
+    switch (props.placement) {
       case 'right':
         return `
           top: ${props.top}px;
@@ -125,7 +129,7 @@ const PopoverContainer = styled.div`
 }
 ${
   (props) => {
-    if (props.subOrientation) {
+    if (props.align) {
       return getSubCoordinates(props)
     }
   }
@@ -136,16 +140,16 @@ ${
 const RelativeWrapper = styled.div`
   position: relative;
   display: flex;
-  flex-direction: ${ ({ orientation, subOrientation }) =>
-    getFlexDirection(orientation, subOrientation)
+  flex-direction: ${ ({ placement, align }) =>
+    getFlexDirection(placement, align)
 };
-flex-wrap: ${({ orientation }) => {
-    if (orientation === 'top' || orientation === 'bottom') return 'wrap'
+flex-wrap: ${({ placement }) => {
+    if (placement === 'top' || placement === 'bottom') return 'wrap'
   }
 };
   justify-content: flex-start;
-  ${({ subOrientation }) => {
-    if (subOrientation) {
+  ${({ align }) => {
+    if (align) {
       return 'align-items: flex-end;'
     }
   }
@@ -158,7 +162,7 @@ export {
   RelativeWrapper,
   PopoverDot,
   PositionWrapper,
-  OrientationWrapper,
+  PlacementWrapper,
   Header,
   HeaderText,
 }

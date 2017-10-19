@@ -10,7 +10,7 @@ storiesOf('Controls/Tooltip', module)
     return (
       <Tooltip
         content="Купи билет. Или два"
-        orientation="bottom"
+        placement="bottom"
       >
         <Button
           icon={
@@ -23,7 +23,7 @@ storiesOf('Controls/Tooltip', module)
   .addWithInfo('Right&Successful', () => {
     return (
       <Tooltip
-        orientation="right"
+        placement="right"
         success
         content="Высококонверсионный заяц доволен"
       >
@@ -36,7 +36,7 @@ storiesOf('Controls/Tooltip', module)
   .addWithInfo('Left&Error', () => {
     return (
       <Tooltip
-        orientation="left"
+        placement="left"
         error
         content="Зайчику грустно"
       >
@@ -49,7 +49,7 @@ storiesOf('Controls/Tooltip', module)
   .addWithInfo('Top', () => {
     return (
       <Tooltip
-        orientation="top"
+        placement="top"
         content="Высококонверсионный заяц следит за тобой. Длинная строка."
       >
         <Button
