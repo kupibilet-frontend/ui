@@ -5894,7 +5894,7 @@ exports[`Storyshots Controls/Popover Bottom&Left 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Popover Left 1`] = `
+exports[`Storyshots Controls/Popover Left&ShouldRender 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -7579,7 +7579,7 @@ exports[`Storyshots Controls/Tooltip Left&Error 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Tooltip Right&Successful 1`] = `
+exports[`Storyshots Controls/Tooltip Right&Successful&shouldRender 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
