@@ -10,6 +10,7 @@ type HintProps = {
   align: ?string,
   error: ?boolean,
   success: ?boolean,
+  shouldRender: boolean,
 }
 
 type HintState = {

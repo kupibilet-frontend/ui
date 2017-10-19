@@ -20,12 +20,13 @@ storiesOf('Controls/Tooltip', module)
       </Tooltip>
     )
   })
-  .addWithInfo('Right&Successful', () => {
+  .addWithInfo('Right&Successful&shouldRender', () => {
     return (
       <Tooltip
         placement="right"
         success
         content="Высококонверсионный заяц доволен"
+        shouldRender={(1 > 0 && 2 < 3)}
       >
         <div>
            (Нет)

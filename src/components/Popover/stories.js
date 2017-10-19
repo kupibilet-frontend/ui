@@ -42,10 +42,11 @@ storiesOf('Controls/Popover', module)
       </Popover>
     )
   })
-  .addWithInfo('Left', () => {
+  .addWithInfo('Left&ShouldRender', () => {
     return (
       <Popover
         placement="left"
+        shouldRender={(1 > 0 && 2 < 3)}
         content={
           <div>
             Премия в области научно-популярной литературы «Просветитель»

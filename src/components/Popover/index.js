@@ -22,6 +22,7 @@ type PortalProps = {
   align: ?string,
   content: Object | Element,
   header: ?string,
+  shouldRender: boolean,
 }
 
 const PopoverPortal = (props : PortalProps) => {
@@ -32,8 +33,9 @@ const PopoverPortal = (props : PortalProps) => {
     align,
     content,
     header,
+    shouldRender,
   } = props
-  return ((isOpen && coords)
+  return ((shouldRender && isOpen && coords)
     ? <Portal>
       <GlobalStylesScope>
         <PopoverContainer
@@ -86,6 +88,7 @@ type PopoverProps = {
   header: ?string,
   placement: string,
   align: ?string,
+  shouldRender: boolean,
 }
 
 type PopoverState = {
@@ -96,6 +99,10 @@ type PopoverState = {
 class Popover extends Hint {
   props: PopoverProps
   state: PopoverState
+  static defaultProps = {
+    placement: 'bottom',
+    shouldRender: true,
+  }
   render() {
     const {
       children,
@@ -103,6 +110,7 @@ class Popover extends Hint {
       align,
       content,
       header,
+      shouldRender,
     } = this.props
     const { coords } = this
     const { isOpen } = this.state
@@ -123,6 +131,7 @@ class Popover extends Hint {
         isOpen={isOpen}
         content={content}
         header={header}
+        shouldRender={shouldRender}
       />,
     ]
   }

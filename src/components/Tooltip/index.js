@@ -21,6 +21,7 @@ type PortalProps = {
   content: string | Element,
   success: ?boolean,
   error: ?boolean,
+  shouldRender: boolean,
 }
 
 const TooltipPortal = (props : PortalProps) => {
@@ -31,8 +32,9 @@ const TooltipPortal = (props : PortalProps) => {
     content,
     success,
     error,
+    shouldRender,
   } = props
-  return ((isOpen && coords)
+  return ((shouldRender && isOpen && coords)
     ? <Portal>
       <GlobalStylesScope>
         <TooltipContainer
@@ -77,6 +79,7 @@ type TooltipProps = {
   placement: string,
   success: ?boolean,
   error: ?boolean,
+  shouldRender: boolean,
 }
 
 type TooltipState = {
@@ -91,6 +94,7 @@ class Tooltip extends Hint {
     placement: 'bottom',
     success: false,
     error: false,
+    shouldRender: true,
   }
 
   render() {
@@ -100,6 +104,7 @@ class Tooltip extends Hint {
       content,
       success,
       error,
+      shouldRender,
     } = this.props
     const { coords } = this
     const { isOpen } = this.state
@@ -120,6 +125,7 @@ class Tooltip extends Hint {
         content={content}
         success={success}
         error={error}
+        shouldRender={shouldRender}
       />,
     ]
   }
