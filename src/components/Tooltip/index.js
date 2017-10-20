@@ -4,6 +4,7 @@ import React from 'react'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
 import Hint from 'blocks/Hints'
+import type { Coordinates } from 'blocks/Hints'
 import TextSmall from 'components/Typography/TextSmall'
 import {
   TooltipBackground,
@@ -16,7 +17,7 @@ import {
 
 type PortalProps = {
   isOpen: boolean,
-  coords: Object | null,
+  coords: Coordinates | null,
   placement: string,
   content: string | Element,
   success: ?boolean,
@@ -34,6 +35,7 @@ const TooltipPortal = (props : PortalProps) => {
     error,
     shouldRender,
   } = props
+
   return ((shouldRender && isOpen && coords)
     ? <Portal>
       <GlobalStylesScope>

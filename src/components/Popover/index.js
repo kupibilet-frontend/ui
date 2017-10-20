@@ -3,6 +3,7 @@ import React from 'react'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
 import Hint from 'blocks/Hints'
+import type { Coordinates } from 'blocks/Hints'
 import TextSmall from 'components/Typography/TextSmall'
 import {
   PopoverBackground,
@@ -15,14 +16,16 @@ import {
   HeaderText,
 } from './styled'
 
+
 type PortalProps = {
   isOpen: boolean,
-  coords: Object | null,
+  coords: Coordinates | null,
   placement: string,
   align: ?string,
   content: Object | Element,
   header: ?string,
   shouldRender: boolean,
+  dotCentering: boolean,
 }
 
 const PopoverPortal = (props : PortalProps) => {
@@ -34,6 +37,7 @@ const PopoverPortal = (props : PortalProps) => {
     content,
     header,
     shouldRender,
+    dotCentering,
   } = props
   return ((shouldRender && isOpen && coords)
     ? <Portal>
@@ -45,6 +49,7 @@ const PopoverPortal = (props : PortalProps) => {
           height={coords.height}
           placement={placement}
           align={align}
+          dotCentering={dotCentering}
         >
           <PositionWrapper>
             <PlacementWrapper
@@ -89,6 +94,7 @@ type PopoverProps = {
   placement: string,
   align: ?string,
   shouldRender: boolean,
+  dotCentering: boolean,
 }
 
 type PopoverState = {
@@ -111,6 +117,7 @@ class Popover extends Hint {
       content,
       header,
       shouldRender,
+      dotCentering,
     } = this.props
     const { coords } = this
     const { isOpen } = this.state
@@ -132,6 +139,7 @@ class Popover extends Hint {
         content={content}
         header={header}
         shouldRender={shouldRender}
+        dotCentering={dotCentering}
       />,
     ]
   }

@@ -2,6 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+/* eslint-disable react/no-unused-prop-types */
 type HintProps = {
   children: Object | Element,
   content: any,
@@ -16,6 +17,15 @@ type HintProps = {
 type HintState = {
   isOpen: boolean,
 }
+
+export type Coordinates = {
+  left: number,
+  top: number,
+  width: number,
+  height: number,
+}
+
+type GetCoordinates = (node : Element) => Coordinates
 
 export default class Hint extends React.Component <HintProps, HintState> {
   static defaultProps = {
@@ -36,17 +46,20 @@ export default class Hint extends React.Component <HintProps, HintState> {
     clearTimeout(this.hoverTimeout)
   }
   /* eslint-disable react/no-find-dom-node */
-  getCoordinates = (node : Element) => {
-    const availableNode = ReactDOM.findDOMNode(node)
-    if (availableNode) {
-      return ReactDOM.findDOMNode(node).getBoundingClientRect()
+  getCoordinates = (node) : GetCoordinates => {
+    const rect = ReactDOM.findDOMNode(node).getBoundingClientRect()
+    return {
+      width: rect.width,
+      height: rect.height,
+      left: rect.left + window.pageXOffset,
+      top: rect.top + window.pageYOffset,
     }
   }
 
   handleMouseOut = () => {
     clearTimeout(this.hoverTimeout)
     this.setState({
-      isOpen: false,
+      isOpen: true,
     })
   }
 

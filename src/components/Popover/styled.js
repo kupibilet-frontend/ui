@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components'
 import { transparentize } from 'polished'
 import Text from 'components/Typography/Text'
 
+const dotShift = 7
+
 const flexDirections = {
   bottom: 'row',
   top: 'row',
@@ -28,11 +30,49 @@ const arrival = keyframes`
   100% { opacity: 1; }
 `
 
-const getSubCoordinates = ({ align, width, height, top, left }) => {
-  if (align === 'top') {
-    return `top: ${top + height}px;`
+const getMainCoords = ({ placement, top, left, width, height }) => {
+  switch (placement) {
+    case 'right':
+      return {
+        top,
+        left: left + width,
+      }
+    case 'bottom':
+      return {
+        top: top + height,
+        left,
+      }
+    case 'top':
+      return {
+        top,
+        left,
+      }
+    default:
+      return {
+        top,
+        left,
+      }
   }
-  return `left: ${left + width}px;`
+}
+const getCoordinates = (props) => {
+  const coords = getMainCoords(props)
+  if (props.align) {
+    const { align, width, height, top, left } = props
+    if (align === 'top') {
+      coords.top = top + height
+    } else {
+      coords.left = left + width
+    }
+  }
+  if (props.dotCentering) {
+    const { placement } = props
+    if (placement === 'left' || placement === 'right') {
+      coords.top += (props.align && props.align === 'top') ? dotShift : -dotShift
+    } else {
+      coords.left += (props.align && props.align === 'left') ? dotShift : -dotShift
+    }
+  }
+  return coords
 }
 
 const getFlexDirection = (placement, align) => {
@@ -61,7 +101,7 @@ ${({ align }) => {
     }
   }
 }
-`
+  `
 
 const PopoverDot = styled.div`
   order: ${({ placement }) => {
@@ -103,35 +143,11 @@ const PopoverContainer = styled.div`
   opacity: 0;
   animation: 0.15s ease-out forwards ${arrival};
   ${(props) => {
-    switch (props.placement) {
-      case 'right':
-        return `
-          top: ${props.top}px;
-          left: ${props.left + props.width}px;
-        `
-      case 'bottom':
-        return `
-          top: ${props.top + props.height}px;
-          left: ${props.left}px;
-        `
-      case 'top':
-        return `
-          top: ${props.top}px;
-          left: ${props.left}px;
-        `
-      default:
-        return `
-          top: ${props.top}px;
-          left: ${props.left}px;
-        `
-    }
-  }
-}
-${
-  (props) => {
-    if (props.align) {
-      return getSubCoordinates(props)
-    }
+    const coords = getCoordinates(props)
+    return `
+      top: ${coords.top}px;
+      left: ${coords.left}px;
+    `
   }
 }
   `

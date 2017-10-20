@@ -160,3 +160,42 @@ storiesOf('Controls/Popover', module)
       </Popover>
     )
   })
+  .addWithInfo('DotCentering&Left&Top', () => {
+    return (
+      <Popover
+        placement="left"
+        align="top"
+        dotCentering
+        content={
+          <div>
+            Премия в области научно-популярной литературы «Просветитель»
+            была учреждена основателем и почетным президентом.
+          </div>
+        }
+      >
+        <Icon
+          name="cross"
+          fill="miscDark"
+        />
+      </Popover>
+    )
+  })
+  .addWithInfo('DotCentering&Top', () => {
+    return (
+      <Popover
+        placement="top"
+        dotCentering
+        content={
+          <div>
+            Премия в области научно-популярной литературы «Просветитель»
+            была учреждена основателем и почетным президентом.
+          </div>
+        }
+      >
+        <Icon
+          name="cross"
+          fill="miscDark"
+        />
+      </Popover>
+    )
+  })
