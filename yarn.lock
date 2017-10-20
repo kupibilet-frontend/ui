@@ -2918,7 +2918,7 @@ eslint-config-airbnb@^15.0.0:
   dependencies:
     eslint-config-airbnb-base "^11.3.0"
 
-eslint-config-kupibilet@^9.2.0:
+eslint-config-kupibilet@^9.3.0:
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/eslint-config-kupibilet/-/eslint-config-kupibilet-9.3.0.tgz#3b44a2242258d79d3f33a5e33c58020b9dd62a21"
   dependencies:
