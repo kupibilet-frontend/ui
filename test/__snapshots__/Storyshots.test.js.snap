@@ -872,6 +872,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   overflow: hidden;
   z-index: 1;
@@ -1298,6 +1299,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   border-radius: 21px 0 0 21px;
   overflow: hidden;
@@ -1326,6 +1328,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   border-radius: 0 21px 21px 0;
   overflow: hidden;
@@ -2656,6 +2659,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
@@ -2717,6 +2721,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   border-radius: 21px;
   overflow: hidden;
@@ -6027,6 +6032,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
@@ -6354,6 +6360,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
@@ -6678,6 +6685,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
