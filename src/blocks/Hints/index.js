@@ -47,12 +47,15 @@ export default class Hint extends React.Component <HintProps, HintState> {
   }
   /* eslint-disable react/no-find-dom-node */
   getCoordinates = (node) : GetCoordinates => {
-    const rect = ReactDOM.findDOMNode(node).getBoundingClientRect()
-    return {
-      width: rect.width,
-      height: rect.height,
-      left: rect.left + window.pageXOffset,
-      top: rect.top + window.pageYOffset,
+    const availableNode = ReactDOM.findDOMNode(node)
+    if (availableNode) {
+      const rect = ReactDOM.findDOMNode(node).getBoundingClientRect()
+      return {
+        width: rect.width,
+        height: rect.height,
+        left: rect.left + window.pageXOffset,
+        top: rect.top + window.pageYOffset,
+      }
     }
   }
 
