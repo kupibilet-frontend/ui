@@ -61,6 +61,7 @@ export const SuggestionsContainer = styled.div`
   ${borderRadiusSmall.all}
   overflow: hidden;
   z-index: 10;
+  background: ${({ theme }) => theme.color.background};
 
   ${mq.mobile`
     top: initial;
