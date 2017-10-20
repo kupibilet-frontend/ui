@@ -108,6 +108,7 @@ class Popover extends Hint {
   static defaultProps = {
     placement: 'bottom',
     shouldRender: true,
+    dotCentering: false,
   }
   render() {
     const {

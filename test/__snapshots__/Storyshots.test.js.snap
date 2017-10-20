@@ -5894,6 +5894,114 @@ exports[`Storyshots Controls/Popover Bottom&Left 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/Popover DotCentering&Left&Top 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 1;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="miscDark"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      rotate=""
+      size="normal"
+    >
+      <use
+        xlinkHref="#kb_cross"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Controls/Popover DotCentering&Top 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 1;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="miscDark"
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      rotate=""
+      size="normal"
+    >
+      <use
+        xlinkHref="#kb_cross"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
 exports[`Storyshots Controls/Popover Left&ShouldRender 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
