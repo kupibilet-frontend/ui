@@ -35,6 +35,7 @@ export const Container = styled.div`
 
   box-sizing: border-box;
   ${switchTransition}
+  background: ${({ theme }) => theme.color.background};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
   ${({ neighboringInGroup }) => {
