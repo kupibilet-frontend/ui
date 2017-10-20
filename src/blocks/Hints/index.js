@@ -62,7 +62,7 @@ export default class Hint extends React.Component <HintProps, HintState> {
   handleMouseOut = () => {
     clearTimeout(this.hoverTimeout)
     this.setState({
-      isOpen: true,
+      isOpen: false,
     })
   }
 
