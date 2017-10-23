@@ -41,6 +41,7 @@ class FullScreen extends React.PureComponent<{}, Props, void> {
 
     const fullScreenButton = (openPortal) => React.cloneElement(button, {
       onClick: openPortal,
+      key: 'full-screen-button',
     })
 
     return (
