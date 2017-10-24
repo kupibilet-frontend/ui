@@ -202,20 +202,3 @@ export {
 }
 
 export default RFInput
-
-
-/*
-&:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: ${(props) => setDisplayInputStatus(props)};
-  width: 2px;
-  background-color: ${({ theme, success, error }) => (
-  success && !error ? theme.color.success : theme.color.fail
-)};
-  z-index: 4;
-}
- */
