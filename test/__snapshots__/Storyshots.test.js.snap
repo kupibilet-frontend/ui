@@ -4132,6 +4132,86 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   transition-delay: .15s;
 }
 
+.c5 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 0 3px 3px 0;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c5:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::placeholder {
+  color: #96a0b3;
+}
+
+.c5::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c5:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c5:focus {
+  outline-style: none;
+}
+
+.c5:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c5:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
 .c3 {
   position: relative;
   -webkit-flex-grow: 1;
@@ -4293,86 +4373,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   color: #b1bdcc;
 }
 
-.c5 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: #fff;
-  border-radius: 0 3px 3px 0;
-}
-
-.c5::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c5:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5::placeholder {
-  color: #96a0b3;
-}
-
-.c5::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c5:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c5:focus {
-  outline-style: none;
-}
-
-.c5:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c5:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
 .c1 {
   position: relative;
   display: -webkit-box;
@@ -4394,7 +4394,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -4403,23 +4402,20 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 
 .c1:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c1:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c1 .combined-inputs-group {
   height: 100%;
+}
+
+.c6 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 <div
@@ -4461,6 +4457,9 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
         type="number"
       />
     </div>
+    <div
+      className="c6"
+    />
   </div>
 </div>
 `;
@@ -4598,7 +4597,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   border-radius: 3px 0 0 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -4607,71 +4605,9 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c2:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c2:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c2 .combined-inputs-group {
-  height: 100%;
-}
-
-.c4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: space-between;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 42px;
-  border: 1px solid #b1bdcc;
-  border-style: solid;
-  margin-left: -1px;
-  z-index: 1;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
-}
-
-.c4:hover {
-  border-color: #38afff;
-  z-index: 2;
-}
-
-.c4:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
-}
-
-.c4 .combined-inputs-group {
   height: 100%;
 }
 
@@ -4693,11 +4629,9 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 42px;
-  border-radius: 0 3px 3px 0;
   border: 1px solid #b1bdcc;
   border-style: solid;
   margin-left: -1px;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -4706,23 +4640,56 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c5:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c5:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c5 .combined-inputs-group {
   height: 100%;
+}
+
+.c6 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 42px;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  margin-left: -1px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c6:hover {
+  border-color: #38afff;
+}
+
+.c6 .combined-inputs-group {
+  height: 100%;
+}
+
+.c4 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 <div
@@ -4746,21 +4713,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
         size="large"
         type="text"
       />
-    </div>
-    <div
-      className="c4"
-      disabled={undefined}
-      size="large"
-    >
-      <input
-        className="c3"
-        disabled={undefined}
-        name="input"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        placeholder="Только прямые рейсы"
-        size="large"
-        type="text"
+      <div
+        className="c4"
       />
     </div>
     <div
@@ -4778,7 +4732,217 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
         size="large"
         type="text"
       />
+      <div
+        className="c4"
+      />
     </div>
+    <div
+      className="c6"
+      disabled={undefined}
+      size="large"
+    >
+      <input
+        className="c3"
+        disabled={undefined}
+        name="input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        placeholder="Только прямые рейсы"
+        size="large"
+        type="text"
+      />
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls/Input Status Indicator 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c4 {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3px 12px 5px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  opacity: 0.97;
+  border-radius: 3px;
+  background-color: #e64926;
+}
+
+.c2 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 0 3px 3px 0;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2:focus {
+  outline-style: none;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 42px;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c1:hover {
+  border-color: #38afff;
+}
+
+.c1 .combined-inputs-group {
+  height: 100%;
+}
+
+.c3 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: block;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    disabled={false}
+    size="large"
+  >
+    <input
+      className="c2"
+      disabled={false}
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      size="large"
+    />
+    <div
+      className="c3"
+    />
+    <span
+      className="c4"
+    >
+      Все очень, очень плохо. Зайцы расстроены.
+    </span>
   </div>
 </div>
 `;
@@ -4897,7 +5061,6 @@ exports[`Storyshots Controls/Input With Redux Form 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -4906,23 +5069,20 @@ exports[`Storyshots Controls/Input With Redux Form 1`] = `
 
 .c1:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c1:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c1 .combined-inputs-group {
   height: 100%;
+}
+
+.c3 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 <div
@@ -4946,6 +5106,9 @@ exports[`Storyshots Controls/Input With Redux Form 1`] = `
       placeholder="Только прямые рейсы"
       size="large"
       value=""
+    />
+    <div
+      className="c3"
     />
   </div>
 </div>
@@ -5084,7 +5247,6 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -5093,23 +5255,20 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
 
 .c1:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c1:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c1 .combined-inputs-group {
   height: 100%;
+}
+
+.c6 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 .c3 {
@@ -5184,6 +5343,9 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
         </svg>
       </span>
     </div>
+    <div
+      className="c6"
+    />
     
   </div>
 </div>
@@ -5322,7 +5484,6 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -5331,23 +5492,20 @@ exports[`Storyshots Controls/Input With icons 1`] = `
 
 .c1:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c1:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c1 .combined-inputs-group {
   height: 100%;
+}
+
+.c7 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 .c2 {
@@ -5449,6 +5607,9 @@ exports[`Storyshots Controls/Input With icons 1`] = `
         </svg>
       </span>
     </div>
+    <div
+      className="c7"
+    />
     
   </div>
 </div>
@@ -5568,7 +5729,6 @@ exports[`Storyshots Controls/Input default 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -5577,23 +5737,20 @@ exports[`Storyshots Controls/Input default 1`] = `
 
 .c1:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c1:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c1 .combined-inputs-group {
   height: 100%;
+}
+
+.c3 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 <div
@@ -5612,6 +5769,9 @@ exports[`Storyshots Controls/Input default 1`] = `
       onFocus={[Function]}
       placeholder="Только прямые рейсы"
       size="large"
+    />
+    <div
+      className="c3"
     />
     
   </div>
@@ -6020,7 +6180,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   display: inline-flex;
 }
 
-.c9 {
+.c10 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -6178,7 +6338,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -6187,23 +6346,20 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 
 .c2:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c2:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c2 .combined-inputs-group {
   height: 100%;
+}
+
+.c8 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 .c4 {
@@ -6231,14 +6387,14 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   margin-left: 6px;
 }
 
-.c8 {
+.c9 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c9,
-  .responsive-booking .c9 {
+  .responsive .c10,
+  .responsive-booking .c10 {
     top: initial;
     left: 0;
     right: 0;
@@ -6307,9 +6463,12 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
           </svg>
         </span>
       </div>
+      <div
+        className="c8"
+      />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8 c9"
+      className="react-autosuggest__suggestions-container c9 c10"
       id="react-autowhatever-1"
     />
   </div>
@@ -6348,7 +6507,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   display: inline-flex;
 }
 
-.c9 {
+.c10 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -6506,7 +6665,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -6515,23 +6673,20 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 
 .c2:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c2:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c2 .combined-inputs-group {
   height: 100%;
+}
+
+.c8 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 .c4 {
@@ -6559,14 +6714,14 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   margin-left: 6px;
 }
 
-.c8 {
+.c9 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c9,
-  .responsive-booking .c9 {
+  .responsive .c10,
+  .responsive-booking .c10 {
     top: initial;
     left: 0;
     right: 0;
@@ -6632,9 +6787,12 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
           </svg>
         </span>
       </div>
+      <div
+        className="c8"
+      />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8 c9"
+      className="react-autosuggest__suggestions-container c9 c10"
       id="react-autowhatever-1"
     />
   </div>
@@ -6673,7 +6831,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   display: inline-flex;
 }
 
-.c9 {
+.c10 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -6831,7 +6989,6 @@ exports[`Storyshots Controls/Select default 1`] = `
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
-  z-index: 1;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
@@ -6840,23 +6997,20 @@ exports[`Storyshots Controls/Select default 1`] = `
 
 .c2:hover {
   border-color: #38afff;
-  z-index: 2;
-}
-
-.c2:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  display: none;
-  width: 2px;
-  background-color: #e64926;
-  z-index: 4;
 }
 
 .c2 .combined-inputs-group {
   height: 100%;
+}
+
+.c8 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
 }
 
 .c4 {
@@ -6884,14 +7038,14 @@ exports[`Storyshots Controls/Select default 1`] = `
   margin-left: 6px;
 }
 
-.c8 {
+.c9 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c9,
-  .responsive-booking .c9 {
+  .responsive .c10,
+  .responsive-booking .c10 {
     top: initial;
     left: 0;
     right: 0;
@@ -6957,9 +7111,12 @@ exports[`Storyshots Controls/Select default 1`] = `
           </svg>
         </span>
       </div>
+      <div
+        className="c8"
+      />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8 c9"
+      className="react-autosuggest__suggestions-container c9 c10"
       id="react-autowhatever-1"
     />
   </div>
