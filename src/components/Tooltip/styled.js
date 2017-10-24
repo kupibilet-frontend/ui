@@ -88,7 +88,9 @@ const TooltipContainer = styled.div`
         `
     }
   }
-  }`
+}
+z-index: 100;
+  `
 
 
 const RelativeWrapper = styled.div`

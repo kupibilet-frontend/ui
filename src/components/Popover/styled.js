@@ -150,6 +150,7 @@ const PopoverContainer = styled.div`
     `
   }
 }
+z-index: 100;
   `
 
 
