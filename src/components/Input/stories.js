@@ -42,6 +42,23 @@ storiesOf('Controls/Input', module)
       />
     )
   })
+  .addWithInfo('Status Indicator', () => {
+    const placeholder = text('placeholder', inputDefault.placeholder)
+    const disabled = boolean('disabled', false)
+    const success = boolean('success', false)
+    const error = text('error', 'Все очень, очень плохо. Зайцы расстроены.')
+
+    return (
+      <Input
+        name={inputDefault.name}
+        disabled={disabled}
+        success={success}
+        error={error}
+        size={sizesSelect()}
+        placeholder={placeholder}
+      />
+    )
+  })
   .addDecorator(withReduxForm)
   .addWithInfo('With Redux Form', () => {
     return (
