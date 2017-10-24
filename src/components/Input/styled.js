@@ -62,7 +62,7 @@ const INPUTHEIGHT = {
   small: '30px',
 }
 
-const setDisplayInputStatus = ({ active, success, error }) => {
+const displayIndicator = ({ active, success, error }) => {
   if (active) {
     return 'none'
   }
@@ -83,7 +83,6 @@ const Error = styled.span`
   line-height: 16px;
   color: #fff;
   opacity: 0.97;
-  z-index: 2;
   ${borderRadiusSmall.all}
   background-color: ${({ theme }) => theme.color.fail};
 `
@@ -177,33 +176,32 @@ const InputWrapper = styled.div`
       return 'margin-left: -1px;'
     }
   }}
-  z-index: ${({ active, neighboringInGroup }) => (active && neighboringInGroup ? '3' : '1')};
+  ${({ active, neighboringInGroup }) => (active && neighboringInGroup
+    ? 'z-index: 1;'
+    : null)}
 
   ${switchTransition}
   transition-property: border-color, box-shadow;
 
   &:hover {
     border-color: ${({ theme, disabled }) => (!disabled) && theme.color.primary};
-    z-index: 2;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    bottom: -1px;
-    display: ${(props) => setDisplayInputStatus(props)};
-    width: 2px;
-    background-color: ${({ theme, success, error }) => (
-    success && !error ? theme.color.success : theme.color.fail
-  )};
-    z-index: 4;
   }
 
   .combined-inputs-group {
     height: 100%;
   }
+  `
+
+const StatusIndicator = styled.div`
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: ${(props) => displayIndicator(props)};
+    height: calc(100% + 2px);
+    width: 2px;
+    background-color: ${({ theme, success, error }) => (
+    success && !error ? theme.color.success : theme.color.fail
+  )};
   `
 
 const getIconWrapPaddings = ({ left, right, isGroup, size }) => {
@@ -245,4 +243,5 @@ export {
   InnerInput,
   InputWrapper,
   IconWrap,
+  StatusIndicator,
 }
