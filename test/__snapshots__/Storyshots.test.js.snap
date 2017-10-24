@@ -7915,19 +7915,22 @@ exports[`Storyshots Full Screen Defalut 1`] = `
 <div
   className="c0"
 >
-  <button
-    className="c1"
-    disabled={undefined}
+  <div
     onClick={[Function]}
-    size="normal"
   >
-    <span
-      className="c2"
+    <button
+      className="c1"
+      disabled={undefined}
       size="normal"
     >
-      Open FullScreen
-    </span>
-  </button>
+      <span
+        className="c2"
+        size="normal"
+      >
+        Open FullScreen
+      </span>
+    </button>
+  </div>
 </div>
 `;
 

@@ -35,19 +35,16 @@ type Props = {
 }
 
 /* eslint-disable react/prop-types */
-class FullScreen extends React.PureComponent<{}, Props, void> {
+class FullScreen extends React.PureComponent<Props> {
   render() {
-    const { header, content, button } = this.props
-
-    const fullScreenButton = (openPortal) => React.cloneElement(button, {
-      onClick: openPortal,
-      key: 'full-screen-button',
-    })
+    const { header, content, trigger } = this.props
 
     return (
       <PortalWithState closeOnOutsideClick closeOnEsc>
         {({ openPortal, closePortal, portal }) => [
-          fullScreenButton(openPortal),
+          <div key="trigger" onClick={openPortal}>
+            {trigger}
+          </div>,
           portal(
             <ThemeProvider>
               <FullScreenContent>

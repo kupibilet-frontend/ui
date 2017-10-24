@@ -22,7 +22,7 @@ storiesOf('Full Screen', module)
             Full Screen Content
           </ContentFullScreen>
         }
-        button={buttonFullScreen}
+        trigger={buttonFullScreen}
       />
     )
   })
