@@ -44,19 +44,6 @@ storiesOf('Controls/Input', module)
       />
     )
   })
-  .addDecorator(withReduxForm)
-  .addWithInfo('With Redux Form&Required', () => {
-    return (
-      <Field
-        component={RFInput}
-        name={inputDefault.name}
-        size={sizesSelect()}
-        placeholder={inputDefault.placeholder}
-        validate={[isRequired]}
-      />
-
-    )
-  })
   .addWithInfo('Separate inputs group', () => {
     return (
       <ControlsGroup>
@@ -136,5 +123,18 @@ storiesOf('Controls/Input', module)
           <Icon name="angle" fill="miscDark" />,
         ]}
       />
+    )
+  })
+  .addDecorator(withReduxForm)
+  .addWithInfo('With RF + validation', () => {
+    return (
+      <Field
+        component={RFInput}
+        name={inputDefault.name}
+        size={sizesSelect()}
+        placeholder={inputDefault.placeholder}
+        validate={[isRequired]}
+      />
+
     )
   })
