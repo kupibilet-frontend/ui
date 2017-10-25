@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import mq from 'utils/media-queries'
 
 const UppercaseLarge = styled.h1`
   font-size: 20px;
@@ -7,6 +8,14 @@ const UppercaseLarge = styled.h1`
   letter-spacing: .4px;
   text-transform: uppercase;
   margin: 0;
+  ${mq.handheld`
+    font-size: 18px;
+    line-height: 22px;
+  `}
+  ${mq.mobile`
+    font-size: 18px;
+    line-height: 22px;
+  `}
 `
 
 export default UppercaseLarge
