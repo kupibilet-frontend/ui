@@ -36,15 +36,25 @@ type Props = {
 
 /* eslint-disable react/prop-types */
 class FullScreen extends React.PureComponent<Props> {
+  onClick = (openPortal, isOpen) => {
+    if (isOpen) {
+      this.props.onClick()
+    }
+    return (openPortal)
+  }
+
   render() {
     const { header, content, trigger } = this.props
 
+    const fullScreenButton = (openPortal, isOpen) => React.cloneElement(trigger, {
+      onClick: this.onClick(openPortal, isOpen),
+      key: 'full-screen-button',
+    })
+
     return (
       <PortalWithState closeOnOutsideClick closeOnEsc>
-        {({ openPortal, closePortal, portal }) => [
-          <div key="trigger" onClick={openPortal}>
-            {trigger}
-          </div>,
+        {({ openPortal, isOpen, closePortal, portal }) => [
+          fullScreenButton(openPortal, isOpen),
           portal(
             <ThemeProvider>
               <FullScreenContent>
