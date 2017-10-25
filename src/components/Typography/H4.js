@@ -12,11 +12,6 @@ const H4 = styled.h4`
     line-height: 24px;
     letter-spacing: -.2px;
   `}
-  ${mq.mobile`
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -.2px;
-  `}
 `
 
 export default H4

@@ -12,11 +12,6 @@ const H2 = styled.h2`
     line-height: 34px;
     letter-spacing: -.6px;
   `}
-  ${mq.mobile`
-    font-size: 30px;
-    line-height: 34px;
-    letter-spacing: -.6px;
-  `}
 `
 
 export default H2
