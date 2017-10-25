@@ -11,6 +11,7 @@ import Link from 'components/Link'
 
 const Section = styled.section`
   ${boxStyles}
+  padding: 0;
 `
 
 const horizontalPadding = css`

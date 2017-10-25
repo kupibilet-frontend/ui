@@ -14,6 +14,7 @@ exports[`Storyshots Blocks Box 1`] = `
 }
 
 .c1 {
+  padding: 30px 42px;
   background: #ffffff;
   border: 1px solid #dde3eb;
   border-radius: 6px;
@@ -25,9 +26,7 @@ exports[`Storyshots Blocks Box 1`] = `
   <div
     className="c1"
   >
-    <p>
-      box content
-    </p>
+    box content
   </div>
 </div>
 `;
@@ -130,9 +129,11 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 }
 
 .c1 {
+  padding: 30px 42px;
   background: #ffffff;
   border: 1px solid #dde3eb;
   border-radius: 6px;
+  padding: 0;
 }
 
 .c2 {
@@ -413,6 +414,93 @@ exports[`Storyshots Blocks FilterSection 1`] = `
         </div>
       </div>
     </section>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Blocks GroupedBox 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  padding: 30px 42px;
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 6px 6px 0 0;
+}
+
+.c3 {
+  padding: 30px 42px;
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  margin-top: -1px;
+}
+
+.c4 {
+  padding: 30px 42px;
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 0 0 6px 6px;
+  margin-top: -1px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 .styled__SwapIcon-fKoejO {
+  opacity: 0;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .styled__SwapIcon-fKoejO {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      box content
+    </div>
+    <div
+      className="c3"
+    >
+      box content
+    </div>
+    <div
+      className="c3"
+    >
+      box content
+    </div>
+    <div
+      className="c4"
+    >
+      box content
+    </div>
   </div>
 </div>
 `;
@@ -1079,6 +1167,28 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1 .styled__SwapIcon-fKoejO {
+  opacity: 0;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .styled__SwapIcon-fKoejO {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
 .c2 {
   font-family: inherit;
   border: none;
@@ -1163,25 +1273,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   display: inline-block;
   vertical-align: top;
   padding: 0 0px 0 0px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c1 .styled__SwapIcon-fKoejO {
-  opacity: 0;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c1:hover .styled__SwapIcon-fKoejO {
-  opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
 }
 
 <div
@@ -1746,11 +1837,26 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   background: linear-gradient(180deg,rgba(255,255,255,0) 0%,#ffffff 15%,#ffffff 85%,rgba(255,255,255,0) 100%);
 }
 
+.leGGEP .c9 {
+  opacity: 0;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.leGGEP:hover .c9 {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c1 .c9 {
@@ -4118,6 +4224,9 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c2 .styled__SwapIcon-fKoejO {
@@ -4483,6 +4592,9 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c1 .styled__SwapIcon-fKoejO {
