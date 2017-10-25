@@ -37,7 +37,7 @@ type Props = {
 /* eslint-disable react/prop-types */
 class FullScreen extends React.PureComponent<Props> {
   onClick = (openPortal, isOpen) => {
-    if (isOpen) {
+    if (isOpen && this.props.onClick) {
       this.props.onClick()
     }
     return (openPortal)

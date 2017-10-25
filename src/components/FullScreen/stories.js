@@ -14,10 +14,6 @@ storiesOf('Full Screen', module)
       justify-content: center;
     `
 
-    const onClick = () => {
-      return console.log('TEST')
-    }
-
     return (
       <FullScreen
         header="Full Screen Header"
@@ -27,7 +23,6 @@ storiesOf('Full Screen', module)
           </ContentFullScreen>
         }
         trigger={buttonFullScreen}
-        onClick={onClick}
       />
     )
   })
