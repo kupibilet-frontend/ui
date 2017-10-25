@@ -29,7 +29,7 @@ storiesOf('Controls/Input', module)
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
-    const error = text('error', null)
+    const error = text('error', '')
 
     return (
       <Input
@@ -99,7 +99,7 @@ storiesOf('Controls/Input', module)
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
-    const error = text('error', null)
+    const error = text('error', '')
 
     return (
       <Input
@@ -118,7 +118,7 @@ storiesOf('Controls/Input', module)
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
-    const error = text('error', null)
+    const error = text('error', '')
 
     return (
       <Input

@@ -45,20 +45,20 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   box-sizing: border-box;
 }
 
-.c12 {
+.c9 {
   overflow: hidden;
 }
 
-.c12 .c10-content {
+.c9 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c12 .c10-content.c10-content-inactive {
+.c9 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
-.c19 {
+.c15 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -70,14 +70,14 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   opacity: 1;
 }
 
-.c17 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c16 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -97,7 +97,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   padding-left: 3px;
 }
 
-.c14 {
+.c11 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   color: #007acc;
@@ -117,15 +117,15 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   align-items: center;
 }
 
-.c14 .c18 {
+.c11 .icon-inherit-color {
   fill: #007acc;
 }
 
-.c14:hover {
+.c11:hover {
   color: rgba(0,122,204,0.8);
 }
 
-.c14:hover .c18 {
+.c11:hover .icon-inherit-color {
   fill: rgba(0,122,204,0.8);
 }
 
@@ -160,7 +160,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   padding-bottom: 24px;
 }
 
-.c13 {
+.c10 {
   padding-left: 18px;
   padding-right: 18px;
   -webkit-align-items: center;
@@ -175,16 +175,16 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   padding-bottom: 12px;
 }
 
-.c11 {
+.c8 {
   margin: 0 -1px;
   border-top: 1px solid #dde3eb;
 }
 
-.c7 {
+.c6 {
   display: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
@@ -201,7 +201,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   border-radius: 3px;
 }
 
-.c9 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: color;
@@ -230,19 +230,19 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   width: 100%;
 }
 
-.c4:hover .c5 {
+.c4:hover .checkbox {
   border-color: #38afff;
 }
 
-.c4:hover .c8 {
+.c4:hover .label-text {
   color: #007acc;
 }
 
-.c15 {
+.c12 {
   position: relative;
 }
 
-.c15:before {
+.c12:before {
   display: block;
   position: absolute;
   top: -5px;
@@ -287,20 +287,20 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             >
               <span
                 checked={false}
-                className="c5 c6"
+                className="c5"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="c7"
+                  className="c6"
                   disabled={false}
                   name=""
                   onChange={[Function]}
-                  type="c5"
+                  type="checkbox"
                 />
               </span>
               <span
-                className="c8 c9"
+                className="label-text c7"
                 disabled={false}
               >
                 Без пересадок
@@ -314,20 +314,20 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             >
               <span
                 checked={false}
-                className="c5 c6"
+                className="c5"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="c7"
+                  className="c6"
                   disabled={false}
                   name=""
                   onChange={[Function]}
-                  type="c5"
+                  type="checkbox"
                 />
               </span>
               <span
-                className="c8 c9"
+                className="label-text c7"
                 disabled={false}
               >
                 1 пересадка
@@ -341,20 +341,20 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             >
               <span
                 checked={false}
-                className="c5 c6"
+                className="c5"
                 disabled={false}
               >
                 <input
                   checked={false}
-                  className="c7"
+                  className="c6"
                   disabled={false}
                   name=""
                   onChange={[Function]}
-                  type="c5"
+                  type="checkbox"
                 />
               </span>
               <span
-                className="c8 c9"
+                className="label-text c7"
                 disabled={false}
               >
                 2 и более
@@ -364,41 +364,41 @@ exports[`Storyshots Blocks FilterSection 1`] = `
         </div>
       </div>
       <div
-        className="c10"
+        className="rc-collapse"
         style={undefined}
       >
         <div
-          className="c10-item c11 c12"
+          className="rc-collapse-item c8 c9"
           style={undefined}
         >
           <div
             aria-expanded={false}
-            className="c10-header"
+            className="rc-collapse-header"
             onClick={[Function]}
             role="tab"
           >
             <div
-              className="c13"
+              className="c10"
             >
               <span
-                className="c14"
+                className="c11"
                 href={null}
               >
                 <div
-                  className="c15"
+                  className="c12"
                 >
                   Пересадки
                 </div>
                 <span
-                  className="c16"
+                  className="c13"
                 >
                   <span
-                    className="c17"
+                    className="c14"
                   >
                     <svg
-                      className="c18 c19"
+                      className="icon-inherit-color c15"
                       fill={null}
-                      rotate={false}
+                      rotate=""
                       size="normal"
                     >
                       <use
@@ -589,16 +589,16 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   box-sizing: border-box;
 }
 
-.c2 {
+.c1 {
   overflow: hidden;
 }
 
-.c2 .c1-content {
+.c1 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c2 .c1-content.c1-content-inactive {
+.c1 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
@@ -613,16 +613,16 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
     }
   >
     <div
-      className="c1"
+      className="rc-collapse"
       style={undefined}
     >
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -630,12 +630,12 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
         </div>
       </div>
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -643,12 +643,12 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
         </div>
       </div>
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -673,16 +673,16 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   box-sizing: border-box;
 }
 
-.c2 {
+.c1 {
   overflow: hidden;
 }
 
-.c2 .c1-content {
+.c1 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c2 .c1-content.c1-content-inactive {
+.c1 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
@@ -697,16 +697,16 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
     }
   >
     <div
-      className="c1"
+      className="rc-collapse"
       style={undefined}
     >
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -714,12 +714,12 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
         </div>
       </div>
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -727,12 +727,12 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
         </div>
       </div>
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -757,16 +757,16 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   box-sizing: border-box;
 }
 
-.c2 {
+.c1 {
   overflow: hidden;
 }
 
-.c2 .c1-content {
+.c1 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c2 .c1-content.c1-content-inactive {
+.c1 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
@@ -781,43 +781,43 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
     }
   >
     <div
-      className="c1"
+      className="rc-collapse"
       style={undefined}
     >
       <div
-        className="c1-item c1-item-active c2"
+        className="rc-collapse-item rc-collapse-item-active c1"
         style={undefined}
       >
         <div
           aria-expanded={true}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
           Foo
         </div>
         <div
-          className="c1-content c1-content-active"
+          className="rc-collapse-content rc-collapse-content-active"
           role="tabpanel"
         >
           <div
-            className="c1-content-box"
+            className="rc-collapse-content-box"
           >
             
-              A dog is a type of domesticated animal.
-              Known for its loyalty and faithfulness,
-              it can be found as a welcome guest in many households across the world.
-            
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+
           </div>
         </div>
       </div>
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -825,12 +825,12 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
         </div>
       </div>
       <div
-        className="c1-item c2"
+        className="rc-collapse-item c1"
         style={undefined}
       >
         <div
           aria-expanded={false}
-          className="c1-header"
+          className="rc-collapse-header"
           onClick={[Function]}
           role="tab"
         >
@@ -872,6 +872,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   overflow: hidden;
   z-index: 1;
@@ -881,18 +882,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
 .c4:hover {
   border-color: #ff9100;
   z-index: 2;
-}
-
-.gCDWtp:focus ~ .c6 .AirportInput__spell {
-  display: block;
-}
-
-.iQpkFj:focus ~ .c6 .AirportInput__spell {
-  display: block;
-}
-
-.fXkNax:focus ~ .c6 .AirportInput__spell {
-  display: block;
 }
 
 .c5 {
@@ -998,11 +987,11 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   opacity: 1;
 }
 
-.c5:focus ~ .c6 .AirportInput__spell {
+.c5:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
-.c7 {
+.c6 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1029,7 +1018,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   padding-left: 10px;
 }
 
-.c8 {
+.c7 {
   visibility: hidden;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
@@ -1046,7 +1035,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   user-select: none;
 }
 
-.c9 {
+.c8 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1074,11 +1063,11 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   padding-right: 10px;
 }
 
-.c9:empty {
+.c8:empty {
   display: none;
 }
 
-.c9::before {
+.c8::before {
   content: '';
   display: block;
   position: absolute;
@@ -1130,7 +1119,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   box-shadow: none;
 }
 
-.c10 {
+.c9 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -1153,11 +1142,11 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   transition-property: opacity,box-shadow;
 }
 
-.c10 .icon-inherit-color {
+.c9 .icon-inherit-color {
   fill: #ffffff;
 }
 
-.c10:hover {
+.c9:hover {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -1165,7 +1154,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   transition: none;
 }
 
-.c10:active {
+.c9:active {
   background: #008ae6;
   box-shadow: none;
 }
@@ -1229,10 +1218,10 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
         wrap="off"
       />
       <div
-        className="c6 c7"
+        className="AirportInput__geo c6"
       >
         <div
-          className="c8"
+          className="c7"
         >
           Шереметьево
         </div>
@@ -1240,13 +1229,13 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
         
       </div>
       <div
-        className="c9"
+        className="c8"
       >
         SVO
       </div>
     </div>
     <button
-      className="c10"
+      className="c9"
       disabled={undefined}
       size="large"
     >
@@ -1274,7 +1263,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
 }
 
-.c13 {
+.c11 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -1286,35 +1275,11 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c9 {
+.c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-}
-
-.gTTZOM .c12 {
-  fill: #007acc;
-}
-
-.gTTZOM:hover .c12 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.cigUOu .c12 {
-  fill: #007acc;
-}
-
-.cigUOu:hover .c12 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.kKnEAB .c12 {
-  fill: #007acc;
-}
-
-.kKnEAB:hover .c12 {
-  fill: rgba(0,122,204,0.8);
 }
 
 .c2 {
@@ -1334,6 +1299,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   border-radius: 21px 0 0 21px;
   overflow: hidden;
@@ -1345,7 +1311,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   z-index: 2;
 }
 
-.c14 {
+.c12 {
   color: #333333;
   height: 42px;
   width: 100%;
@@ -1362,6 +1328,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   border-radius: 0 21px 21px 0;
   overflow: hidden;
@@ -1369,13 +1336,9 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   margin-left: -2px;
 }
 
-.c14:hover {
+.c12:hover {
   border-color: #ff9100;
   z-index: 2;
-}
-
-.gCDWtp:focus ~ .c4 .AirportInput__spell {
-  display: block;
 }
 
 .c3 {
@@ -1481,11 +1444,11 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c3:focus ~ .c4 .AirportInput__spell {
+.c3:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
-.c15 {
+.c13 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -1511,14 +1474,14 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   font-weight: 600;
 }
 
-.c15,
-.c15:focus {
+.c13,
+.c13:focus {
   border: none;
   outline: none;
   resize: none;
 }
 
-.c15::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1528,7 +1491,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c15::-moz-placeholder {
+.c13::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1538,7 +1501,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c15:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1548,7 +1511,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c15::placeholder {
+.c13::placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1558,7 +1521,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c15::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1568,7 +1531,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c15::-moz-placeholder {
+.c13::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1578,7 +1541,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c15:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1588,11 +1551,11 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
 }
 
-.c15:focus ~ .c4 .AirportInput__spell {
+.c13:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
-.c5 {
+.c4 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1619,7 +1582,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   padding-left: 16px;
 }
 
-.c16 {
+.c14 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1646,7 +1609,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   padding-left: 10px;
 }
 
-.c6 {
+.c5 {
   visibility: hidden;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
@@ -1663,7 +1626,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   user-select: none;
 }
 
-.c17 {
+.c15 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1691,11 +1654,11 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   padding-right: 16px;
 }
 
-.c17:empty {
+.c15:empty {
   display: none;
 }
 
-.c17::before {
+.c15::before {
   content: '';
   display: block;
   position: absolute;
@@ -1707,7 +1670,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
-.c7 {
+.c6 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1735,11 +1698,11 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   padding-right: 10px;
 }
 
-.c7:empty {
+.c6:empty {
   display: none;
 }
 
-.c7::before {
+.c6::before {
   content: '';
   display: block;
   position: absolute;
@@ -1751,19 +1714,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
-.fBjKhl .c12 {
-  fill: #ffffff;
-}
-
-.dFbWsi .c12 {
-  fill: #ffffff;
-}
-
-.fEajik .c12 {
-  fill: #ffffff;
-}
-
-.c8 {
+.c7 {
   position: relative;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -1772,15 +1723,15 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   cursor: pointer;
 }
 
-.c8 .c12 {
+.c7 .icon-inherit-color {
   fill: #96a0b3;
 }
 
-.c8:hover .c12 {
+.c7:hover .icon-inherit-color {
   fill: #38afff;
 }
 
-.c11 {
+.c10 {
   box-sizing: content-box;
   width: 15px;
   padding: 5px 0;
@@ -1802,13 +1753,13 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   display: flex;
 }
 
-.c1 .c10 {
+.c1 .c9 {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .c10 {
+.c1:hover .c9 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -1836,10 +1787,10 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="c4 c5"
+        className="AirportInput__geo c4"
       >
         <div
-          className="c6"
+          className="c5"
         >
           Шереметьево
         </div>
@@ -1847,22 +1798,22 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="c7"
+        className="c6"
       >
         SVO
       </div>
     </div>
     <div
-      className="c8"
+      className="c7"
       onClick={[Function]}
     >
       <span
-        className="c9"
+        className="c8"
       >
         <svg
-          className="c10 c11 c12 c13"
+          className="c9 c10 icon-inherit-color c11"
           fill={null}
-          rotate={false}
+          rotate=""
           size="xxsmall"
         >
           <use
@@ -1872,12 +1823,12 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
       </span>
     </div>
     <div
-      className="c14"
+      className="c12"
     >
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="c15"
+        className="c13"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -1887,10 +1838,10 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="c4 c16"
+        className="AirportInput__geo c14"
       >
         <div
-          className="c6"
+          className="c5"
         >
           Несуществующий город
         </div>
@@ -1898,7 +1849,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         
       </div>
       <div
-        className="c17"
+        className="c15"
       >
         
       </div>
@@ -2236,7 +2187,7 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
               <svg
                 className="c11"
                 fill="background"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2262,7 +2213,7 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
               <svg
                 className="c11"
                 fill="background"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2497,7 +2448,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2556,7 +2507,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2570,7 +2521,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2584,7 +2535,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2634,7 +2585,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c7"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2648,7 +2599,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c13"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2662,7 +2613,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
               <svg
                 className="c13"
                 fill="miscDark"
-                rotate={false}
+                rotate=""
                 size="normal"
               >
                 <use
@@ -2696,7 +2647,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   box-sizing: border-box;
 }
 
-.c10 {
+.c7 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -2708,37 +2659,38 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
   position: relative;
 }
 
-.c1 .c3 {
+.c1 .react-autosuggest__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 .c3::-ms-clear,
-.c1 .c3::-webkit-search-cancel-button {
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
   display: none;
 }
 
-.c1 .c3--open {
+.c1 .react-autosuggest__input--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c1 .c3--focused {
+.c1 .react-autosuggest__input--focused {
   outline: none;
 }
 
-.c1 .c9 {
+.c1 .react-autosuggest__suggestions-container {
   display: none;
 }
 
-.c1 .c9--open {
+.c1 .react-autosuggest__suggestions-container--open {
   display: block;
 }
 
@@ -2769,6 +2721,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+  background: #ffffff;
   border: 2px solid #77c8ff;
   border-radius: 21px;
   overflow: hidden;
@@ -2780,7 +2733,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   z-index: 2;
 }
 
-.c4 {
+.c3 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -2805,14 +2758,14 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   font-weight: 600;
 }
 
-.c4,
-.c4:focus {
+.c3,
+.c3:focus {
   border: none;
   outline: none;
   resize: none;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2822,7 +2775,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   opacity: 1;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2832,7 +2785,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   opacity: 1;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2842,7 +2795,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   opacity: 1;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2852,7 +2805,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   opacity: 1;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2862,7 +2815,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   opacity: 1;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2872,7 +2825,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   opacity: 1;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2882,11 +2835,11 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   opacity: 1;
 }
 
-.c4:focus ~ .c5 .AirportInput__spell {
+.c3:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
-.c6 {
+.c4 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2913,7 +2866,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   padding-left: 16px;
 }
 
-.c7 {
+.c5 {
   visibility: hidden;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
@@ -2930,7 +2883,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   user-select: none;
 }
 
-.c8 {
+.c6 {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2958,11 +2911,11 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   padding-right: 16px;
 }
 
-.c8:empty {
+.c6:empty {
   display: none;
 }
 
-.c8::before {
+.c6::before {
   content: '';
   display: block;
   position: absolute;
@@ -2975,8 +2928,8 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c10,
-  .responsive-booking .c10 {
+  .responsive .c7,
+  .responsive-booking .c7 {
     top: initial;
     left: 0;
     right: 0;
@@ -3015,7 +2968,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           autoCapitalize="sentences"
           autoComplete="off"
           autoFocus={true}
-          className="c3 c4"
+          className="react-autosuggest__input c3"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -3028,10 +2981,10 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           wrap="off"
         />
         <div
-          className="c5 c6"
+          className="AirportInput__geo c4"
         >
           <div
-            className="c7"
+            className="c5"
           >
             
           </div>
@@ -3039,13 +2992,13 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           
         </div>
         <div
-          className="c8"
+          className="c6"
         >
           
         </div>
       </div>
       <div
-        className="c9 c10"
+        className="react-autosuggest__suggestions-container c7"
         id="react-autowhatever-1"
       />
     </div>
@@ -3143,7 +3096,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   box-sizing: border-box;
 }
 
-.c5 {
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -3160,38 +3113,6 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-}
-
-.gTTZOM .c4 {
-  fill: #007acc;
-}
-
-.gTTZOM:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.cigUOu .c4 {
-  fill: #007acc;
-}
-
-.cigUOu:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.kKnEAB .c4 {
-  fill: #007acc;
-}
-
-.kKnEAB:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.fBjKhl .c4 {
-  fill: #ffffff;
-}
-
-.dFbWsi .c4 {
-  fill: #ffffff;
 }
 
 .c1 {
@@ -3215,7 +3136,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   transition-property: opacity,box-shadow;
 }
 
-.c1 .c4 {
+.c1 .icon-inherit-color {
   fill: #ffffff;
 }
 
@@ -3266,9 +3187,9 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
         className="c3"
       >
         <svg
-          className="c4 c5"
+          className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -3294,7 +3215,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   box-sizing: border-box;
 }
 
-.c5 {
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -3311,34 +3232,6 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-}
-
-.gTTZOM .c4 {
-  fill: #007acc;
-}
-
-.gTTZOM:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.cigUOu .c4 {
-  fill: #007acc;
-}
-
-.cigUOu:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.kKnEAB .c4 {
-  fill: #007acc;
-}
-
-.kKnEAB:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.fBjKhl .c4 {
-  fill: #ffffff;
 }
 
 .c1 {
@@ -3364,7 +3257,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   transition-property: opacity,box-shadow;
 }
 
-.c1 .c4 {
+.c1 .icon-inherit-color {
   fill: #ffffff;
 }
 
@@ -3381,7 +3274,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   box-shadow: none;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
   vertical-align: top;
   padding: 0 5.6px 0 5.6px;
@@ -3421,9 +3314,9 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
         className="c3"
       >
         <svg
-          className="c4 c5"
+          className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -3433,7 +3326,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
       </span>
     </span>
     <span
-      className="c6"
+      className="c5"
       size="normal"
     >
       Авиабилеты
@@ -3446,9 +3339,9 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
         className="c3"
       >
         <svg
-          className="c4 c5"
+          className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -3474,11 +3367,11 @@ exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
+.c3 {
   display: none;
 }
 
-.c3 {
+.c2 {
   display: inline-block;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
@@ -3495,7 +3388,7 @@ exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
   border-radius: 3px;
 }
 
-.c6 {
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: color;
@@ -3524,11 +3417,11 @@ exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
   width: 100%;
 }
 
-.c1:hover .c2 {
+.c1:hover .checkbox {
   border-color: #38afff;
 }
 
-.c1:hover .c5 {
+.c1:hover .label-text {
   color: #007acc;
 }
 
@@ -3541,20 +3434,20 @@ exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
   >
     <span
       checked={false}
-      className="c2 c3"
+      className="c2"
       disabled={false}
     >
       <input
         checked={false}
-        className="c4"
+        className="c3"
         disabled={false}
-        name="c2"
+        name="checkmark"
         onChange={[Function]}
-        type="c2"
+        type="checkbox"
       />
     </span>
     <span
-      className="c5 c6"
+      className="label-text c4"
       disabled={false}
     >
       Авиабилеты
@@ -3615,29 +3508,29 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   pointer-events: none;
 }
 
-.c1 .c6--startDate--focused .CalendarDay:hover,
-.c1 .c6--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover,
+.c1 .DateInput--startDate--focused .CalendarDay:hover,
+.c1 .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover,
 .c1 .CalendarDay--selected-start {
   border-radius: 4px 0 0 4px;
 }
 
-.c1 .c6--endDate--focused .CalendarDay:hover,
+.c1 .DateInput--endDate--focused .CalendarDay:hover,
 .c1 .CalendarDay--selected-end {
   border-radius: 0 4px 4px 0;
 }
 
-.c1 .c6--endDate--focused .CalendarDay.CalendarDay--selected-start:hover,
+.c1 .DateInput--endDate--focused .CalendarDay.CalendarDay--selected-start:hover,
 .c1 .CalendarDay.CalendarDay--selected-start.CalendarDay--selected-end {
   border-radius: 4px;
 }
 
-.c1 .c6--startDate--focused .CalendarDay:not(.CalendarDay--blocked):hover,
-.c1 .c6--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover:not(.CalendarDay--blocked):hover {
+.c1 .DateInput--startDate--focused .CalendarDay:not(.CalendarDay--blocked):hover,
+.c1 .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover:not(.CalendarDay--blocked):hover {
   position: relative;
 }
 
-.c1 .c6--startDate--focused .CalendarDay:not(.CalendarDay--blocked):hover:after,
-.c1 .c6--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover:not(.CalendarDay--blocked):hover:after {
+.c1 .DateInput--startDate--focused .CalendarDay:not(.CalendarDay--blocked):hover:after,
+.c1 .DateInput--endDate--focused .CalendarDay.CalendarDay--beforeStart:hover:not(.CalendarDay--blocked):hover:after {
   left: 100%;
   top: 50%;
   height: 0;
@@ -3651,11 +3544,11 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   margin-top: -4px;
 }
 
-.c1 .c6--endDate--focused .CalendarDay:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover {
+.c1 .DateInput--endDate--focused .CalendarDay:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover {
   position: relative;
 }
 
-.c1 .c6--endDate--focused .CalendarDay:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover:after {
+.c1 .DateInput--endDate--focused .CalendarDay:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover:after {
   right: 100%;
   top: 50%;
   height: 0;
@@ -3851,7 +3744,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   width: 100%;
 }
 
-.c1 .c6 {
+.c1 .DateInput {
   margin: 0;
   position: relative;
   display: inline-block;
@@ -3859,7 +3752,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   vertical-align: middle;
 }
 
-.c1 .c6 .c8 {
+.c1 .DateInput .screen-reader-only {
   border: 0;
   clip: rect(0,0,0,0);
   height: 1px;
@@ -3870,8 +3763,8 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   width: 1px;
 }
 
-.c1 .c6--with-caret::before,
-.c1 .c6--with-caret::after {
+.c1 .DateInput--with-caret::before,
+.c1 .DateInput--with-caret::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -3881,7 +3774,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   left: 22px;
 }
 
-.c1 .c6__input {
+.c1 .DateInput__input {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -3892,7 +3785,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   z-index: 3;
 }
 
-.c1 .c6__input[readonly] {
+.c1 .DateInput__input[readonly] {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -3902,7 +3795,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   user-select: none;
 }
 
-.c1 .c6__display-text {
+.c1 .DateInput__display-text {
   color: #96a0b3;
   font-size: 18px;
   line-height: 18px;
@@ -3922,40 +3815,40 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   z-index: 1;
 }
 
-.c1 .c6 ~ .c6 .c6__display-text {
+.c1 .DateInput ~ .DateInput .DateInput__display-text {
   border-radius: 0 100px 100px 0;
   margin-left: -2px;
   padding: 10px 16px 10px 10px;
 }
 
-.c1 .c6__display-text--has-input {
+.c1 .DateInput__display-text--has-input {
   color: #333333;
   font-weight: 600;
 }
 
-.c1 .c2 #startDate ~ .c6__display-text,
-.c1 .c3 #endDate ~ .c6__display-text {
+.c1 .DateInput--startDate--placeholder #startDate ~ .DateInput__display-text,
+.c1 .DateInput--endDate--placeholder #endDate ~ .DateInput__display-text {
   color: #96a0b3;
   font-weight: normal;
 }
 
-.c1 .c6--startDate--error [id=startDate] ~ .c6__display-text {
+.c1 .DateInput--startDate--error [id=startDate] ~ .DateInput__display-text {
   border-color: #e64926;
   z-index: 2;
 }
 
-.c1 .c6 .c6__display-text.c6__display-text--focused,
-.c1 .c6:hover .c6__display-text {
+.c1 .DateInput .DateInput__display-text.DateInput__display-text--focused,
+.c1 .DateInput:hover .DateInput__display-text {
   border-color: #ff9100;
   z-index: 2;
 }
 
-.c1 .c4 {
+.c1 .DateRangePicker {
   position: relative;
   display: block;
 }
 
-.c1 .c4__picker {
+.c1 .DateRangePicker__picker {
   z-index: 10;
   background: #ffffff;
   position: absolute;
@@ -3963,24 +3856,24 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   top: 42px;
 }
 
-.c1 .c4__picker--direction-left {
+.c1 .DateRangePicker__picker--direction-left {
   left: 0;
 }
 
-.c1 .c4__picker--direction-right {
+.c1 .DateRangePicker__picker--direction-right {
   right: 0;
 }
 
-.c1 .c4Input {
+.c1 .DateRangePickerInput {
   background-color: #ffffff;
   display: block;
 }
 
-.c1 .c4Input__arrow {
+.c1 .DateRangePickerInput__arrow {
   display: none;
 }
 
-.c1 .c4Input__arrow svg {
+.c1 .DateRangePickerInput__arrow svg {
   vertical-align: middle;
   fill: #38afff;
   height: 24px;
@@ -4094,8 +3987,8 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c1 .c4__picker,
-  .responsive-booking .c1 .c4__picker {
+  .responsive .c1 .DateRangePicker__picker,
+  .responsive-booking .c1 .DateRangePicker__picker {
     top: initial;
     left: -20px !important;
     right: -20px !important;
@@ -4117,23 +4010,23 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
     className="c1"
   >
     <div
-      className="c2 c3"
+      className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
     >
       <div
-        className="c4"
+        className="DateRangePicker"
       >
         <div>
           <div
-            className="c4Input"
+            className="DateRangePickerInput"
           >
             <div
-              className="c6"
+              className="DateInput"
             >
               <input
-                aria-describedby="c6__screen-reader-message-startDate"
+                aria-describedby="DateInput__screen-reader-message-startDate"
                 aria-label="Туда"
                 autoComplete="off"
-                className="c6__input needsclick"
+                className="DateInput__input needsclick"
                 disabled={false}
                 id="startDate"
                 name="startDate"
@@ -4147,33 +4040,33 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
                 value=""
               />
               <p
-                className="c8"
-                id="c6__screen-reader-message-startDate"
+                className="screen-reader-only"
+                id="DateInput__screen-reader-message-startDate"
               >
                 Press the down arrow key to interact with the calendar and
-                  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
               </p>
               <div
-                className="c6__display-text"
+                className="DateInput__display-text"
               >
                 Туда
               </div>
             </div>
             <div
               aria-hidden="true"
-              className="c4Input__arrow"
+              className="DateRangePickerInput__arrow"
               role="presentation"
             >
               <span />
             </div>
             <div
-              className="c6"
+              className="DateInput"
             >
               <input
-                aria-describedby="c6__screen-reader-message-endDate"
+                aria-describedby="DateInput__screen-reader-message-endDate"
                 aria-label="Обратно"
                 autoComplete="off"
-                className="c6__input needsclick"
+                className="DateInput__input needsclick"
                 disabled={false}
                 id="endDate"
                 name="endDate"
@@ -4187,14 +4080,14 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
                 value=""
               />
               <p
-                className="c8"
-                id="c6__screen-reader-message-endDate"
+                className="screen-reader-only"
+                id="DateInput__screen-reader-message-endDate"
               >
                 Press the down arrow key to interact with the calendar and
-                  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+  select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
               </p>
               <div
-                className="c6__display-text"
+                className="DateInput__display-text"
               >
                 Обратно
               </div>
@@ -4220,23 +4113,104 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   box-sizing: border-box;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c3 .styled__SwapIcon-fKoejO {
+.c2 .styled__SwapIcon-fKoejO {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c3:hover .styled__SwapIcon-fKoejO {
+.c2:hover .styled__SwapIcon-fKoejO {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-right: 1px solid #b1bdcc;
+  border-radius: 3px 0 0 3px;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::placeholder {
+  color: #96a0b3;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3:focus {
+  outline-style: none;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
 }
 
 .c4 {
@@ -4257,7 +4231,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   color: #333333;
   background-color: #fff;
   border-right: 1px solid #b1bdcc;
-  border-radius: 3px 0 0 3px;
 }
 
 .c4::-webkit-input-placeholder {
@@ -4337,7 +4310,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: #fff;
-  border-right: 1px solid #b1bdcc;
+  border-radius: 0 3px 3px 0;
 }
 
 .c5::-webkit-input-placeholder {
@@ -4400,86 +4373,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   color: #b1bdcc;
 }
 
-.c6 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: #fff;
-  border-radius: 0 3px 3px 0;
-}
-
-.c6::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c6::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c6:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c6::placeholder {
-  color: #96a0b3;
-}
-
-.c6::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c6::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c6:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c6:focus {
-  outline-style: none;
-}
-
-.c6:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c6:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c6:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c6:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c6:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c6:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c6:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
 .c1 {
   position: relative;
   display: -webkit-box;
@@ -4525,19 +4418,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   z-index: 4;
 }
 
-.c1 .c2 {
-  height: 100%;
-}
-
-.eCxnoy .c2 {
-  height: 100%;
-}
-
-.eaauZF .c2 {
-  height: 100%;
-}
-
-.dzDze .c2 {
+.c1 .combined-inputs-group {
   height: 100%;
 }
 
@@ -4550,10 +4431,10 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
     size="large"
   >
     <div
-      className="c2 c3"
+      className="combined-inputs-group c2"
     >
       <input
-        className="c4"
+        className="c3"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4562,7 +4443,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
         type="number"
       />
       <input
-        className="c5"
+        className="c4"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4571,7 +4452,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
         type="number"
       />
       <input
-        className="c6"
+        className="c5"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -5238,6 +5119,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 3px;
   padding-right: 10px;
   display: -webkit-box;
@@ -5270,7 +5152,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
     />
     <div
       className="c3"
-      onClick={[Function]}
+      onMouseDown={[Function]}
       size="large"
     >
       <span
@@ -5279,7 +5161,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
         <svg
           className="c5"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5293,7 +5175,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
         <svg
           className="c5"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5302,6 +5184,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
         </svg>
       </span>
     </div>
+    
   </div>
 </div>
 `;
@@ -5474,6 +5357,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 10px;
   padding-right: 8px;
   display: -webkit-box;
@@ -5494,6 +5378,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 8px;
   padding-right: 10px;
   display: -webkit-box;
@@ -5517,7 +5402,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   >
     <div
       className="c2"
-      onClick={[Function]}
+      onMouseDown={[Function]}
       size="large"
     >
       <span
@@ -5526,7 +5411,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
         <svg
           className="c4"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5546,7 +5431,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
     />
     <div
       className="c6"
-      onClick={[Function]}
+      onMouseDown={[Function]}
       size="large"
     >
       <span
@@ -5555,7 +5440,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
         <svg
           className="c4"
           fill="miscDark"
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -5564,6 +5449,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
         </svg>
       </span>
     </div>
+    
   </div>
 </div>
 `;
@@ -5727,6 +5613,7 @@ exports[`Storyshots Controls/Input default 1`] = `
       placeholder="Только прямые рейсы"
       size="large"
     />
+    
   </div>
 </div>
 `;
@@ -5801,7 +5688,7 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
   box-sizing: border-box;
 }
 
-.c5 {
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -5860,7 +5747,7 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
   align-items: center;
 }
 
-.c1 .c4 {
+.c1 .icon-inherit-color {
   fill: #007acc;
 }
 
@@ -5868,52 +5755,8 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
   color: rgba(0,122,204,0.8);
 }
 
-.c1:hover .c4 {
+.c1:hover .icon-inherit-color {
   fill: rgba(0,122,204,0.8);
-}
-
-.cigUOu .c4 {
-  fill: #007acc;
-}
-
-.cigUOu:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.kKnEAB .c4 {
-  fill: #007acc;
-}
-
-.kKnEAB:hover .c4 {
-  fill: rgba(0,122,204,0.8);
-}
-
-.fBjKhl .c4 {
-  fill: #ffffff;
-}
-
-.dFbWsi .c4 {
-  fill: #ffffff;
-}
-
-.fEajik .c4 {
-  fill: #ffffff;
-}
-
-.gvzHRe .c4 {
-  fill: #ffffff;
-}
-
-.chGMGf .c4 {
-  fill: #ffffff;
-}
-
-.jnNeSt .c4 {
-  fill: #96a0b3;
-}
-
-.jnNeSt:hover .c4 {
-  fill: #38afff;
 }
 
 <div
@@ -5932,9 +5775,9 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
         className="c3"
       >
         <svg
-          className="c4 c5"
+          className="icon-inherit-color c4"
           fill={null}
-          rotate={false}
+          rotate=""
           size="normal"
         >
           <use
@@ -6145,240 +5988,6 @@ exports[`Storyshots Controls/Radio default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Radio disabled 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c4 {
-  display: none;
-}
-
-.c3 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-shadow: inset 0 0 0 1px #38afff;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
-  background: #38afff;
-}
-
-.c3:after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 50%;
-  opacity: 1;
-}
-
-.c8 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-shadow: inset 0 0 0 1px #dedede;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: background,border;
-  transition-property: background,border;
-  background: #f2f2f2;
-}
-
-.c8:after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 50%;
-  opacity: 0;
-}
-
-.c6 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: color;
-  transition-property: color;
-  margin-left: 6px;
-  width: 100%;
-}
-
-.c9 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: color;
-  transition-property: color;
-  margin-left: 6px;
-  width: 100%;
-  color: #b3b3b3;
-}
-
-.c1 {
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 100%;
-}
-
-.c1 .c2:hover {
-  border-color: #38afff;
-}
-
-.c1 .c5:hover {
-  color: #007acc;
-}
-
-.c7 {
-  cursor: default;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  width: 100%;
-}
-
-.c7 .c2:hover {
-  border-color: #dedede;
-}
-
-.c7 .c5:hover {
-  color: #b3b3b3;
-}
-
-<div
-  className="c0"
->
-  <div>
-    <label
-      className="c1"
-      disabled={false}
-    >
-      <div
-        checked={true}
-        className="c2 c3"
-        disabled={false}
-      />
-      <input
-        checked={true}
-        className="c4"
-        disabled={false}
-        label="Базовый"
-        onChange={[Function]}
-        type="radio"
-        value="base"
-      />
-      <span
-        className="c5 c6"
-        disabled={false}
-      >
-        Базовый
-      </span>
-    </label>
-    <label
-      className="c7"
-      disabled={true}
-    >
-      <div
-        checked={false}
-        className="c2 c8"
-        disabled={true}
-      />
-      <input
-        checked={false}
-        className="c4"
-        disabled={true}
-        label="Трэвэл"
-        onChange={[Function]}
-        type="radio"
-        value="travel"
-      />
-      <span
-        className="c5 c9"
-        disabled={true}
-      >
-        Трэвэл
-      </span>
-    </label>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Controls/Select With Redux Form 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -6392,7 +6001,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   box-sizing: border-box;
 }
 
-.c8 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -6404,14 +6013,14 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   opacity: 1;
 }
 
-.c7 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c11 {
+.c9 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -6423,37 +6032,38 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
   position: relative;
 }
 
-.c1 .c3 {
+.c1 .react-autosuggest__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 .c3::-ms-clear,
-.c1 .c3::-webkit-search-cancel-button {
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
   display: none;
 }
 
-.c1 .c3--open {
+.c1 .react-autosuggest__input--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c1 .c3--focused {
+.c1 .react-autosuggest__input--focused {
   outline: none;
 }
 
-.c1 .c9 {
+.c1 .react-autosuggest__suggestions-container {
   display: none;
 }
 
-.c1 .c9--open {
+.c1 .react-autosuggest__suggestions-container--open {
   display: block;
 }
 
@@ -6467,7 +6077,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c3 {
   position: relative;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -6487,63 +6097,63 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   border-radius: 3px;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: #96a0b3;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4:focus {
+.c3:focus {
   outline-style: none;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::placeholder {
+.c3:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
@@ -6596,13 +6206,14 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c4 {
   -webkit-flex-grow: 0;
   -ms-flex-grow: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 5px;
   padding-right: 7px;
   display: -webkit-box;
@@ -6616,18 +6227,18 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   align-items: center;
 }
 
-.hBtVdJ .c6 {
+.hBtVdJ .c5 {
   margin-left: 6px;
 }
 
-.c10 {
+.c8 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c11,
-  .responsive-booking .c11 {
+  .responsive .c9,
+  .responsive-booking .c9 {
     top: initial;
     left: 0;
     right: 0;
@@ -6659,7 +6270,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         aria-haspopup={false}
         aria-owns="react-autowhatever-1"
         autoComplete="off"
-        className="c3 c4"
+        className="react-autosuggest__input c3"
         disabled={undefined}
         form="Controls/Select"
         name="MadRabbitField"
@@ -6677,17 +6288,17 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         value=""
       />
       <div
-        className="c5"
-        onClick={[Function]}
+        className="c4"
+        onMouseDown={[Function]}
         size="normal"
       >
         <span
-          className="c6 c7"
+          className="c5 c6"
         >
           <svg
-            className="c8"
+            className="c7"
             fill="miscDark"
-            rotate={false}
+            rotate=""
             size="normal"
           >
             <use
@@ -6698,7 +6309,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
       </div>
     </div>
     <div
-      className="c9 c10 c11"
+      className="react-autosuggest__suggestions-container c8 c9"
       id="react-autowhatever-1"
     />
   </div>
@@ -6718,7 +6329,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   box-sizing: border-box;
 }
 
-.c8 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -6730,14 +6341,14 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   opacity: 1;
 }
 
-.c7 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c11 {
+.c9 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -6749,37 +6360,38 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
   position: relative;
 }
 
-.c1 .c3 {
+.c1 .react-autosuggest__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 .c3::-ms-clear,
-.c1 .c3::-webkit-search-cancel-button {
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
   display: none;
 }
 
-.c1 .c3--open {
+.c1 .react-autosuggest__input--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c1 .c3--focused {
+.c1 .react-autosuggest__input--focused {
   outline: none;
 }
 
-.c1 .c9 {
+.c1 .react-autosuggest__suggestions-container {
   display: none;
 }
 
-.c1 .c9--open {
+.c1 .react-autosuggest__suggestions-container--open {
   display: block;
 }
 
@@ -6793,7 +6405,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c3 {
   position: relative;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -6813,63 +6425,63 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   border-radius: 3px;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: #96a0b3;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4:focus {
+.c3:focus {
   outline-style: none;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::placeholder {
+.c3:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
@@ -6922,13 +6534,14 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c4 {
   -webkit-flex-grow: 0;
   -ms-flex-grow: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 5px;
   padding-right: 7px;
   display: -webkit-box;
@@ -6942,18 +6555,18 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   align-items: center;
 }
 
-.hBtVdJ .c6 {
+.hBtVdJ .c5 {
   margin-left: 6px;
 }
 
-.c10 {
+.c8 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c11,
-  .responsive-booking .c11 {
+  .responsive .c9,
+  .responsive-booking .c9 {
     top: initial;
     left: 0;
     right: 0;
@@ -6985,7 +6598,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
         aria-haspopup={false}
         aria-owns="react-autowhatever-1"
         autoComplete="off"
-        className="c3 c4"
+        className="react-autosuggest__input c3"
         disabled={false}
         name="input"
         onBlur={[Function]}
@@ -7000,17 +6613,17 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
         value=""
       />
       <div
-        className="c5"
-        onClick={[Function]}
+        className="c4"
+        onMouseDown={[Function]}
         size="normal"
       >
         <span
-          className="c6 c7"
+          className="c5 c6"
         >
           <svg
-            className="c8"
+            className="c7"
             fill="miscDark"
-            rotate={false}
+            rotate=""
             size="normal"
           >
             <use
@@ -7021,7 +6634,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
       </div>
     </div>
     <div
-      className="c9 c10 c11"
+      className="react-autosuggest__suggestions-container c8 c9"
       id="react-autowhatever-1"
     />
   </div>
@@ -7041,7 +6654,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   box-sizing: border-box;
 }
 
-.c8 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -7053,14 +6666,14 @@ exports[`Storyshots Controls/Select default 1`] = `
   opacity: 1;
 }
 
-.c7 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c11 {
+.c9 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -7072,37 +6685,38 @@ exports[`Storyshots Controls/Select default 1`] = `
   border-radius: 3px;
   overflow: hidden;
   z-index: 10;
+  background: #ffffff;
 }
 
 .c1 {
   position: relative;
 }
 
-.c1 .c3 {
+.c1 .react-autosuggest__input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c1 .c3::-ms-clear,
-.c1 .c3::-webkit-search-cancel-button {
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
   display: none;
 }
 
-.c1 .c3--open {
+.c1 .react-autosuggest__input--open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c1 .c3--focused {
+.c1 .react-autosuggest__input--focused {
   outline: none;
 }
 
-.c1 .c9 {
+.c1 .react-autosuggest__suggestions-container {
   display: none;
 }
 
-.c1 .c9--open {
+.c1 .react-autosuggest__suggestions-container--open {
   display: block;
 }
 
@@ -7116,7 +6730,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   cursor: pointer;
 }
 
-.c4 {
+.c3 {
   position: relative;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -7136,63 +6750,63 @@ exports[`Storyshots Controls/Select default 1`] = `
   border-radius: 3px;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: #96a0b3;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4:focus {
+.c3:focus {
   outline-style: none;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::placeholder {
+.c3:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
@@ -7245,13 +6859,14 @@ exports[`Storyshots Controls/Select default 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c4 {
   -webkit-flex-grow: 0;
   -ms-flex-grow: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
   flex-shrink: 0;
+  height: 100%;
   padding-left: 5px;
   padding-right: 7px;
   display: -webkit-box;
@@ -7265,18 +6880,18 @@ exports[`Storyshots Controls/Select default 1`] = `
   align-items: center;
 }
 
-.hBtVdJ .c6 {
+.hBtVdJ .c5 {
   margin-left: 6px;
 }
 
-.c10 {
+.c8 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c11,
-  .responsive-booking .c11 {
+  .responsive .c9,
+  .responsive-booking .c9 {
     top: initial;
     left: 0;
     right: 0;
@@ -7308,7 +6923,7 @@ exports[`Storyshots Controls/Select default 1`] = `
         aria-haspopup={false}
         aria-owns="react-autowhatever-1"
         autoComplete="off"
-        className="c3 c4"
+        className="react-autosuggest__input c3"
         disabled={false}
         name="input"
         onBlur={[Function]}
@@ -7323,17 +6938,17 @@ exports[`Storyshots Controls/Select default 1`] = `
         value=""
       />
       <div
-        className="c5"
-        onClick={[Function]}
+        className="c4"
+        onMouseDown={[Function]}
         size="normal"
       >
         <span
-          className="c6 c7"
+          className="c5 c6"
         >
           <svg
-            className="c8"
+            className="c7"
             fill="miscDark"
-            rotate={false}
+            rotate=""
             size="normal"
           >
             <use
@@ -7344,7 +6959,7 @@ exports[`Storyshots Controls/Select default 1`] = `
       </div>
     </div>
     <div
-      className="c9 c10 c11"
+      className="react-autosuggest__suggestions-container c8 c9"
       id="react-autowhatever-1"
     />
   </div>
@@ -7757,7 +7372,7 @@ exports[`Storyshots Icon Default 1`] = `
     <svg
       className="c2"
       fill="primary"
-      rotate={false}
+      rotate=""
       size="large"
     >
       <use
@@ -8114,6 +7729,94 @@ exports[`Storyshots Utils Typography 1`] = `
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width:600px) and (max-width:999px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    font-size: 38px;
+    line-height: 38px;
+    -webkit-letter-spacing: -1px;
+    -moz-letter-spacing: -1px;
+    -ms-letter-spacing: -1px;
+    letter-spacing: -1px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    font-size: 30px;
+    line-height: 34px;
+    -webkit-letter-spacing: -.6px;
+    -moz-letter-spacing: -.6px;
+    -ms-letter-spacing: -.6px;
+    letter-spacing: -.6px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    font-size: 30px;
+    line-height: 34px;
+    -webkit-letter-spacing: -.6px;
+    -moz-letter-spacing: -.6px;
+    -ms-letter-spacing: -.6px;
+    letter-spacing: -.6px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.2px;
+    -moz-letter-spacing: -.2px;
+    -ms-letter-spacing: -.2px;
+    letter-spacing: -.2px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-letter-spacing: -.1px;
+    -moz-letter-spacing: -.1px;
+    -ms-letter-spacing: -.1px;
+    letter-spacing: -.1px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c11,
+  .responsive-booking .c11 {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 <div

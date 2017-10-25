@@ -45,16 +45,26 @@ const defaultInput = ({ isOpen, ...props }) => (
   <Input
     {...props}
     rightIcon={
-      <Icon name="angle" rotate={isOpen} fill="miscDark" />
+      <Icon
+        name="angle"
+        rotate={isOpen}
+        fill="miscDark"
+      />
     }
   />
 )
 
-const defaultRFInput = ({ isOpen, ...props }) => (
+// Omit ref cause it can't be set for statless RFInput and not really used by react-autowhatever
+// eslint-disable-next-line no-unused-vars
+const defaultRFInput = ({ isOpen, ref, ...props }) => (
   <RFInput
     {...props}
     rightIcon={
-      <Icon name="angle" rotate={isOpen} fill="miscDark" />
+      <Icon
+        name="angle"
+        rotate={isOpen}
+        fill="miscDark"
+      />
     }
   />
 )
@@ -127,6 +137,17 @@ export class Select extends React.Component <Props, State> {
     this.setState({ isOpen: false })
   }
 
+  handleIconPress = (inputNode, event) => {
+    event.preventDefault()
+    event.stopPropagation()
+    const { isOpen } = this.state
+    if (isOpen) {
+      inputNode.blur()
+    } else {
+      inputNode.focus()
+    }
+  }
+
   renderSuggestion = (suggestion: {}, { isHighlighted }) => {
     const { selectedSuggestion, getSuggestionKey, getSuggestionValue } = this.props
     return (
@@ -165,6 +186,7 @@ export class Select extends React.Component <Props, State> {
           value: getSuggestionValue(selectedSuggestion) || '',
           isOpen,
           onChange: () => {},
+          handleRightIconPress: this.handleIconPress,
         }}
       />
     )

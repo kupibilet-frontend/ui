@@ -13,22 +13,12 @@ const onChange = (value) => {
 storiesOf('Controls/Radio', module)
   .addWithInfo('default', () => {
     const selectedValue = text('selectedValue', 'base')
+    const disabled = boolean('disabled', false)
 
     return (
       <RadioGroup selectedValue={selectedValue} onChange={onChange}>
-        <Radio label="Базовый" value="base" />
-        <Radio label="Трэвэл" value="travel" />
-      </RadioGroup>
-    )
-  })
-
-  .addWithInfo('disabled', () => {
-    const selectedValue = text('selectedValue', 'base')
-
-    return (
-      <RadioGroup selectedValue={selectedValue} onChange={onChange}>
-        <Radio label="Базовый" value="base" />
-        <Radio disabled={boolean('disabled', true)} label="Трэвэл" value="travel" />
+        <Radio disabled={disabled} label="Базовый" value="base" />
+        <Radio disabled={disabled} label="Трэвэл" value="travel" />
       </RadioGroup>
     )
   })

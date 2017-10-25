@@ -13,7 +13,7 @@ storiesOf('Controls/Checkbox', module)
     return (
       <Field
         type="checkbox"
-        name="checkbox"
+        name="checkmark"
         component={Checkbox}
         disabled={boolean('disabled', false)}
       >
