@@ -7,7 +7,7 @@ const H1 = styled.h1`
   line-height: 44px;
   letter-spacing: -1.2px;
   margin: 0;
-  ${mq.handheld`
+  ${mq.tablet`
     font-size: 38px;
     line-height: 38px;
     letter-spacing: -1px;
