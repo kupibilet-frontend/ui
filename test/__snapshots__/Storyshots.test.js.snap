@@ -7731,6 +7731,94 @@ exports[`Storyshots Utils Typography 1`] = `
   text-transform: uppercase;
 }
 
+@media screen and (min-width:600px) and (max-width:999px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    font-size: 38px;
+    line-height: 38px;
+    -webkit-letter-spacing: -1px;
+    -moz-letter-spacing: -1px;
+    -ms-letter-spacing: -1px;
+    letter-spacing: -1px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    font-size: 30px;
+    line-height: 34px;
+    -webkit-letter-spacing: -.6px;
+    -moz-letter-spacing: -.6px;
+    -ms-letter-spacing: -.6px;
+    letter-spacing: -.6px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    font-size: 30px;
+    line-height: 34px;
+    -webkit-letter-spacing: -.6px;
+    -moz-letter-spacing: -.6px;
+    -ms-letter-spacing: -.6px;
+    letter-spacing: -.6px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.2px;
+    -moz-letter-spacing: -.2px;
+    -ms-letter-spacing: -.2px;
+    letter-spacing: -.2px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-letter-spacing: -.1px;
+    -moz-letter-spacing: -.1px;
+    -ms-letter-spacing: -.1px;
+    letter-spacing: -.1px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c11,
+  .responsive-booking .c11 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 <div
   className="c0"
 >

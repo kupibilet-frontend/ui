@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import mq from 'utils/media-queries'
 
 const H5 = styled.h5`
   font-size: 20px;
@@ -6,6 +7,11 @@ const H5 = styled.h5`
   line-height: 24px;
   letter-spacing: -.2px;
   margin: 0;
+  ${mq.handheld`
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -.1px;
+  `}
 `
 
 export default H5
