@@ -24,6 +24,8 @@ const sizesSelect = (defaultValue = 'large') => select(
   defaultValue,
 )
 
+const isRequired = (value) => (value ? undefined : 'Поле должно быть заполнено')
+
 storiesOf('Controls/Input', module)
   .addWithInfo('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
@@ -42,31 +44,15 @@ storiesOf('Controls/Input', module)
       />
     )
   })
-  .addWithInfo('Status Indicator', () => {
-    const placeholder = text('placeholder', inputDefault.placeholder)
-    const disabled = boolean('disabled', false)
-    const success = boolean('success', false)
-    const error = text('error', 'Все очень, очень плохо. Зайцы расстроены.')
-
-    return (
-      <Input
-        name={inputDefault.name}
-        disabled={disabled}
-        success={success}
-        error={error}
-        size={sizesSelect()}
-        placeholder={placeholder}
-      />
-    )
-  })
   .addDecorator(withReduxForm)
-  .addWithInfo('With Redux Form', () => {
+  .addWithInfo('With Redux Form&Required', () => {
     return (
       <Field
         component={RFInput}
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={inputDefault.placeholder}
+        validate={[isRequired]}
       />
 
     )
