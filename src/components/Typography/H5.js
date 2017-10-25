@@ -12,11 +12,6 @@ const H5 = styled.h5`
     line-height: 22px;
     letter-spacing: -.1px;
   `}
-  ${mq.mobile`
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: -.1px;
-  `}
 `
 
 export default H5
