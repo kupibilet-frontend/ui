@@ -42,16 +42,16 @@ storiesOf('Controls/Popover', module)
       </Popover>
     )
   })
-  .addWithInfo('Left&ShouldRender', () => {
+  .addWithInfo('Left&Render Condition', () => {
     return (
       <Popover
         placement="left"
-        shouldRender={(1 > 0 && 2 < 3)}
-        content={
-          <div>
-            Премия в области научно-популярной литературы «Просветитель»
-            была учреждена основателем и почетным президентом.
+        content={(1 > 0 && 2 < 3)
+          ? <div>
+              Премия в области научно-популярной литературы «Просветитель»
+              была учреждена основателем и почетным президентом.
           </div>
+          : null
         }
       >
         <div style={{ lineHeight: 1, width: '100px', height: '25px', background: 'blue' }}>

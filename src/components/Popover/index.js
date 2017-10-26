@@ -2,8 +2,8 @@
 import React from 'react'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
-import Hint from 'blocks/Hints'
-import type { Coordinates } from 'blocks/Hints'
+import Tooltip from 'components/Tooltip'
+import type { Coordinates } from 'components/Tooltip'
 import TextSmall from 'components/Typography/TextSmall'
 import {
   PopoverBackground,
@@ -22,9 +22,8 @@ type PortalProps = {
   coords: Coordinates | null,
   placement: string,
   align: ?string,
-  content: Object | Element,
+  content: any | null,
   header: ?string,
-  shouldRender: boolean,
   dotCentering: boolean,
 }
 
@@ -36,10 +35,9 @@ const PopoverPortal = (props : PortalProps) => {
     align,
     content,
     header,
-    shouldRender,
     dotCentering,
   } = props
-  return ((shouldRender && isOpen && coords)
+  return ((content && isOpen && coords)
     ? <Portal>
       <GlobalStylesScope>
         <PopoverContainer
@@ -89,12 +87,13 @@ const PopoverPortal = (props : PortalProps) => {
 
 type PopoverProps = {
   children: Object | Element,
-  content: any,
+  content: any | null,
   header: ?string,
   placement: string,
   align: ?string,
-  shouldRender: boolean,
-  dotCentering: boolean,
+  dotCentering: ?boolean,
+  success: ?boolean,
+  error: ?boolean,
 }
 
 type PopoverState = {
@@ -102,13 +101,15 @@ type PopoverState = {
 }
 
 /* eslint-disable react/prop-types */
-class Popover extends Hint {
+class Popover extends Tooltip {
   props: PopoverProps
   state: PopoverState
   static defaultProps = {
     placement: 'bottom',
     shouldRender: true,
     dotCentering: false,
+    success: false,
+    error: false,
   }
   render() {
     const {
@@ -148,7 +149,7 @@ class Popover extends Hint {
 
 
 // Proxy for possibility to transfer ref to any children
-class PopoverChildrenProxy extends React.Component {
+class PopoverChildrenProxy extends React.Component<void, void> {
   render() {
     const { children, ...props } = this.props
     return React.cloneElement(React.Children.only(children), props)
