@@ -6002,7 +6002,7 @@ exports[`Storyshots Controls/Popover DotCentering&Top 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Popover Left&ShouldRender 1`] = `
+exports[`Storyshots Controls/Popover Left&Render Condition 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
