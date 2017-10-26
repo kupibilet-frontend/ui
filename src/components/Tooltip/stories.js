@@ -1,57 +1,26 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { select, boolean, text } from '@storybook/addon-knobs'
 import Tooltip from 'components/Tooltip'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
 
+const placements = ['top', 'bottom', 'left', 'right']
 
 storiesOf('Controls/Tooltip', module)
   .addWithInfo('default', () => {
+    const content = text('content', 'Высококонверсионный заяц следит за длинной строкой.')
+    const placement = select('placement', placements, 'bottom')
+    const success = boolean('success', false)
+    // Fix knobs inside jest snapshot runner
+    const error = Boolean(boolean('error', false))
+
     return (
       <Tooltip
-        content="Купи билет. Или два"
-        placement="bottom"
-      >
-        <Button
-          icon={
-            <Icon name="carrot_monochrome" inheritColor />
-          }
-        />
-      </Tooltip>
-    )
-  })
-  .addWithInfo('Right&Successful&shouldRender', () => {
-    return (
-      <Tooltip
-        placement="right"
-        success
-        content="Высококонверсионный заяц доволен"
-        shouldRender={(1 > 0 && 2 < 3)}
-      >
-        <div>
-           (Нет)
-        </div>
-      </Tooltip>
-    )
-  })
-  .addWithInfo('Left&Error', () => {
-    return (
-      <Tooltip
-        placement="left"
-        error
-        content="Зайчику грустно"
-      >
-        <div style={{ lineHeight: 1, width: '100px', height: '25px', background: 'blue' }}>
-           Не смотри на зайчика
-        </div>
-      </Tooltip>
-    )
-  })
-  .addWithInfo('Top', () => {
-    return (
-      <Tooltip
-        placement="top"
-        content="Высококонверсионный заяц следит за тобой. Длинная строка."
+        content={content}
+        placement={placement}
+        success={success}
+        error={error}
       >
         <Button
           icon={
