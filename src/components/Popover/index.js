@@ -127,8 +127,8 @@ class Popover extends Tooltip {
       <PopoverChildrenProxy
         key="PopoverpedElement"
         ref={(element) => { this.childRef = element }}
-        onMouseOver={this.handleMouseOver}
-        onMouseOut={this.handleMouseOut}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
       >
         {children}
       </PopoverChildrenProxy>,

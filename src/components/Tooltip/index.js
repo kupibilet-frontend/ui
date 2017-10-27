@@ -133,14 +133,14 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     }
   }
 
-  handleMouseOut = () => {
+  handleMouseLeave = () => {
     clearTimeout(this.hoverTimeout)
     this.setState({
       isOpen: false,
     })
   }
 
-  handleMouseOver = () => {
+  handleMouseEnter = () => {
     this.hoverTimeout = setTimeout(() => {
       this.coords = this.getCoordinates(this.childRef)
       this.setState({
@@ -168,8 +168,8 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
       <TooltipChildrenProxy
         key="tooltippedElement"
         ref={(element) => { this.childRef = element }}
-        onMouseOver={this.handleMouseOver}
-        onMouseOut={this.handleMouseOut}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
       >
         {children}
       </TooltipChildrenProxy>,
