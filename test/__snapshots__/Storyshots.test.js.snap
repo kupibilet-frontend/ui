@@ -7714,36 +7714,36 @@ exports[`Storyshots Utils Typography 1`] = `
 @media screen and (min-width:600px) and (max-width:999px) {
   .responsive .c1,
   .responsive-booking .c1 {
-    font-size: 38px;
-    line-height: 38px;
-    -webkit-letter-spacing: -1px;
-    -moz-letter-spacing: -1px;
-    -ms-letter-spacing: -1px;
-    letter-spacing: -1px;
+    font-size: 30px;
+    line-height: 34px;
+    -webkit-letter-spacing: -.6px;
+    -moz-letter-spacing: -.6px;
+    -ms-letter-spacing: -.6px;
+    letter-spacing: -.6px;
   }
 }
 
 @media screen and (max-width:599px) {
   .responsive .c1,
   .responsive-booking .c1 {
-    font-size: 30px;
-    line-height: 34px;
-    -webkit-letter-spacing: -.6px;
-    -moz-letter-spacing: -.6px;
-    -ms-letter-spacing: -.6px;
-    letter-spacing: -.6px;
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
   }
 }
 
 @media screen and (max-width:999px) {
   .responsive .c2,
   .responsive-booking .c2 {
-    font-size: 30px;
-    line-height: 34px;
-    -webkit-letter-spacing: -.6px;
-    -moz-letter-spacing: -.6px;
-    -ms-letter-spacing: -.6px;
-    letter-spacing: -.6px;
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
   }
 }
 
