@@ -5867,8 +5867,8 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
   <button
     className="c1"
     disabled={undefined}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     size="normal"
   >
     <span
@@ -5935,8 +5935,8 @@ exports[`Storyshots Controls/Popover With \`dotCentering\` prop 1`] = `
     <svg
       className="c2"
       fill="miscDark"
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       rotate=""
       size="normal"
     >
@@ -6042,8 +6042,8 @@ exports[`Storyshots Controls/Popover With Header 1`] = `
   <button
     className="c1"
     disabled={undefined}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     size="normal"
   >
     <span
@@ -6163,8 +6163,8 @@ exports[`Storyshots Controls/Popover default 1`] = `
   <button
     className="c1"
     disabled={undefined}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     size="normal"
   >
     <span
@@ -7461,8 +7461,8 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   <button
     className="c1"
     disabled={undefined}
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     size="normal"
   >
     <span
