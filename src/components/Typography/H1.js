@@ -8,14 +8,14 @@ const H1 = styled.h1`
   letter-spacing: -1.2px;
   margin: 0;
   ${mq.tablet`
-    font-size: 38px;
-    line-height: 38px;
-    letter-spacing: -1px;
-  `}
-  ${mq.mobile`
     font-size: 30px;
     line-height: 34px;
     letter-spacing: -.6px;
+  `}
+  ${mq.mobile`
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -.4px
   `}
 `
 

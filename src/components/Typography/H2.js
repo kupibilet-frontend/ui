@@ -8,9 +8,9 @@ const H2 = styled.h2`
   letter-spacing: -1px;
   margin: 0;
   ${mq.handheld`
-    font-size: 30px;
-    line-height: 34px;
-    letter-spacing: -.6px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -.4px;
   `}
 `
 
