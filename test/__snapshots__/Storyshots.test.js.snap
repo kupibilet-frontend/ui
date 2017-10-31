@@ -8212,6 +8212,17 @@ exports[`Storyshots Utils Typography 1`] = `
   box-sizing: border-box;
 }
 
+.c5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  -webkit-letter-spacing: -.2px;
+  -moz-letter-spacing: -.2px;
+  -ms-letter-spacing: -.2px;
+  letter-spacing: -.2px;
+  margin: 0;
+}
+
 .c9 {
   font-size: 14px;
   font-weight: 400;
@@ -8268,17 +8279,6 @@ exports[`Storyshots Utils Typography 1`] = `
   margin: 0;
 }
 
-.c5 {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  -webkit-letter-spacing: -.2px;
-  -moz-letter-spacing: -.2px;
-  -ms-letter-spacing: -.2px;
-  letter-spacing: -.2px;
-  margin: 0;
-}
-
 .c6 {
   font-size: 18px;
   font-weight: 600;
@@ -8329,6 +8329,18 @@ exports[`Storyshots Utils Typography 1`] = `
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-letter-spacing: -.1px;
+    -moz-letter-spacing: -.1px;
+    -ms-letter-spacing: -.1px;
+    letter-spacing: -.1px;
+  }
 }
 
 @media screen and (min-width:600px) and (max-width:999px) {
@@ -8388,18 +8400,6 @@ exports[`Storyshots Utils Typography 1`] = `
     -moz-letter-spacing: -.2px;
     -ms-letter-spacing: -.2px;
     letter-spacing: -.2px;
-  }
-}
-
-@media screen and (max-width:999px) {
-  .responsive .c5,
-  .responsive-booking .c5 {
-    font-size: 18px;
-    line-height: 22px;
-    -webkit-letter-spacing: -.1px;
-    -moz-letter-spacing: -.1px;
-    -ms-letter-spacing: -.1px;
-    letter-spacing: -.1px;
   }
 }
 

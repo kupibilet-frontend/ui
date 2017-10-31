@@ -12,17 +12,21 @@ storiesOf('Full Screen', module)
       display: flex;
       height: 100%;
       justify-content: center;
+      width: 100%;
     `
 
     return (
       <FullScreen
-        header="Full Screen Header"
+        header="Заголовок в несколько строк"
         content={
           <ContentFullScreen>
             Full Screen Content
           </ContentFullScreen>
         }
-        trigger={buttonFullScreen}
-      />
+        submitText="Закрыть"
+        cancelText="Отменить"
+      >
+        {buttonFullScreen}
+      </FullScreen>
     )
   })
