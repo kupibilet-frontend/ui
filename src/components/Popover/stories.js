@@ -27,7 +27,7 @@ const getAlign = () => {
     return select(
       'align',
       {
-        right: 'right (default for `placement: top | buttom`)',
+        '': 'null (default)',
         left: 'left',
       },
       'left',
@@ -37,7 +37,7 @@ const getAlign = () => {
   return select(
     'align',
     {
-      bottom: 'bottom (default for `placement: left | right`)',
+      '': 'null (default)',
       top: 'top',
     },
     'top',
