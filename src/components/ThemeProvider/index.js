@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components'
 
 import * as defaultTheme from './theme'
 
-const GlobalStylesScope = styled.div`
+export const GlobalStylesScope = styled.div`
   ${({ theme }) => theme.font}
 
   *,
