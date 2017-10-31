@@ -6143,9 +6143,9 @@ rc-hammerjs@~0.6.0:
     hammerjs "^2.0.8"
     prop-types "^15.5.9"
 
-rc-tabs@^9.0.3:
-  version "9.1.5"
-  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-9.1.5.tgz#12d843d7624d15fcbb6565eea2113c513a4c37a1"
+rc-tabs@^9.1.10:
+  version "9.1.10"
+  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-9.1.10.tgz#4307af2c83314f2c5aa8feae09de08a71a3f3244"
   dependencies:
     babel-runtime "6.x"
     classnames "2.x"
