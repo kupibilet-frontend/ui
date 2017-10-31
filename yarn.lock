@@ -2918,7 +2918,7 @@ eslint-config-airbnb@^15.0.0:
   dependencies:
     eslint-config-airbnb-base "^11.3.0"
 
-eslint-config-kupibilet@^9.2.0:
+eslint-config-kupibilet@^9.3.0:
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/eslint-config-kupibilet/-/eslint-config-kupibilet-9.3.0.tgz#3b44a2242258d79d3f33a5e33c58020b9dd62a21"
   dependencies:
@@ -6143,9 +6143,9 @@ rc-hammerjs@~0.6.0:
     hammerjs "^2.0.8"
     prop-types "^15.5.9"
 
-rc-tabs@^9.0.3:
-  version "9.1.5"
-  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-9.1.5.tgz#12d843d7624d15fcbb6565eea2113c513a4c37a1"
+rc-tabs@^9.1.10:
+  version "9.1.10"
+  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-9.1.10.tgz#4307af2c83314f2c5aa8feae09de08a71a3f3244"
   dependencies:
     babel-runtime "6.x"
     classnames "2.x"
@@ -6302,6 +6302,12 @@ react-onclickoutside@^6.5.0, react-onclickoutside@^6.6.0:
 react-portal@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-3.1.0.tgz#865c44fb72a1da106c649206936559ce891ee899"
+  dependencies:
+    prop-types "^15.5.8"
+
+react-portal@^4.0.0-beta.2:
+  version "4.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.0.0-beta.2.tgz#c25112a87fa209cc14776c739664101e3e9d3732"
   dependencies:
     prop-types "^15.5.8"
 
