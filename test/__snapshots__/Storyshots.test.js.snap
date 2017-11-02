@@ -144,9 +144,9 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: baseline;
   -webkit-box-align: baseline;
@@ -369,7 +369,6 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       >
         <div
           className="rc-collapse-item c8 c9"
-          id={undefined}
           style={undefined}
         >
           <div
@@ -619,7 +618,6 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
     >
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -633,7 +631,6 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -647,7 +644,6 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -706,7 +702,6 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
     >
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -720,7 +715,6 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -734,7 +728,6 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -793,7 +786,6 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
     >
       <div
         className="rc-collapse-item rc-collapse-item-active c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -821,7 +813,6 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -835,7 +826,6 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
         style={undefined}
       >
         <div
@@ -2094,9 +2084,9 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -2326,9 +2316,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   padding: 9px 12px 3px;
   min-height: 66px;
@@ -2358,9 +2348,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   padding: 9px 12px 3px;
   min-height: 66px;
@@ -2396,9 +2386,9 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   margin-bottom: 6px;
 }
@@ -3764,7 +3754,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 
 .c1 .DateInput .screen-reader-only {
   border: 0;
-  -webkit-clip: rect(0,0,0,0);
   clip: rect(0,0,0,0);
   height: 1px;
   margin: -1px;
@@ -4393,9 +4382,9 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4596,9 +4585,9 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4631,9 +4620,9 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4666,9 +4655,9 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4872,9 +4861,9 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5058,9 +5047,9 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5295,9 +5284,9 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5540,9 +5529,9 @@ exports[`Storyshots Controls/Input default 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6566,9 +6555,9 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6893,9 +6882,9 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7217,9 +7206,9 @@ exports[`Storyshots Controls/Select default 1`] = `
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7360,6 +7349,131 @@ exports[`Storyshots Controls/Select default 1`] = `
       id="react-autowhatever-1"
     />
   </div>
+</div>
+`;
+
+exports[`Storyshots Controls/Tooltip Top 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c5 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+}
+
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c1:hover {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c1:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+.hBtVdJ .c3 {
+  margin-left: 6px;
+}
+
+<div
+  className="c0"
+>
+  <button
+    className="c1"
+    disabled={undefined}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    size="normal"
+  >
+    <span
+      className="c2"
+      size="normal"
+    >
+      <span
+        className="c3 c4"
+      >
+        <svg
+          className="icon-inherit-color c5"
+          fill={null}
+          rotate=""
+          size="normal"
+        >
+          <use
+            xlinkHref="#kb_carrot_monochrome"
+          />
+        </svg>
+      </span>
+    </span>
+  </button>
 </div>
 `;
 
@@ -7508,9 +7622,9 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -7694,9 +7808,9 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
+  -webkit-box-pack: space-between;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
+  -ms-flex-pack: space-between;
   justify-content: space-between;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
