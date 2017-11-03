@@ -121,9 +121,11 @@ export const CloseButton = styled.span`
   height: 30px;
   width: 30px;
 
-  &:hover ${StyledIcon} {
-    fill: ${getHoverColor}
-  }
+  ${mq.desktop`
+    &:hover ${StyledIcon} {
+      fill: ${getHoverColor}
+    }
+  `}
 
   ${mq.handheld`
     background: ${({ theme }) => theme.color.miscLightest};
