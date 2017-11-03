@@ -14,19 +14,48 @@ storiesOf('Full Screen', module)
       justify-content: center;
       width: 100%;
     `
-
     return (
-      <FullScreen
-        header="Заголовок в несколько строк"
-        content={
-          <ContentFullScreen>
-            Full Screen Content
-          </ContentFullScreen>
-        }
-        submitText="Закрыть"
-        cancelText="Отменить"
-      >
-        {buttonFullScreen}
-      </FullScreen>
+      <div className="responsive">
+        <FullScreen
+          header="Очень длинный заголовок, который не помещается на одну строку"
+          content={
+            <ContentFullScreen>
+              Full Screen Content
+            </ContentFullScreen>
+          }
+          submitText="Закрыть"
+          cancelText="Отменить"
+        >
+          {buttonFullScreen}
+        </FullScreen>
+      </div>
+    )
+  })
+
+  .addWithInfo('Narrow', () => {
+    const buttonFullScreen = <Button>Open FullScreen</Button>
+    const ContentFullScreen = styled.div`
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
+    `
+    return (
+      <div className="responsive">
+        <FullScreen
+          header="Очень длинный заголовок, который не помещается на одну строку"
+          content={
+            <ContentFullScreen>
+              Full Screen Content
+            </ContentFullScreen>
+          }
+          submitText="Закрыть"
+          cancelText="Отменить"
+          isNarrow
+        >
+          {buttonFullScreen}
+        </FullScreen>
+      </div>
     )
   })
