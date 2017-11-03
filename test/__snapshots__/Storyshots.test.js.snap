@@ -7915,19 +7915,105 @@ exports[`Storyshots Full Screen Defalut 1`] = `
 <div
   className="c0"
 >
-  <button
-    className="c1"
-    disabled={undefined}
-    onClick={[Function]}
-    size="normal"
+  <div
+    className="responsive"
   >
-    <span
-      className="c2"
+    <button
+      className="c1"
+      disabled={undefined}
+      onClick={[Function]}
       size="normal"
     >
-      Open FullScreen
-    </span>
-  </button>
+      <span
+        className="c2"
+        size="normal"
+      >
+        Open FullScreen
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Full Screen Narrow 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c1:hover {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c1:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="responsive"
+  >
+    <button
+      className="c1"
+      disabled={undefined}
+      onClick={[Function]}
+      size="normal"
+    >
+      <span
+        className="c2"
+        size="normal"
+      >
+        Open FullScreen
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
@@ -8212,15 +8298,32 @@ exports[`Storyshots Utils Typography 1`] = `
   box-sizing: border-box;
 }
 
-.c5 {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  -webkit-letter-spacing: -.2px;
-  -moz-letter-spacing: -.2px;
-  -ms-letter-spacing: -.2px;
-  letter-spacing: -.2px;
+.c1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  -webkit-letter-spacing: -1.2px;
+  -moz-letter-spacing: -1.2px;
+  -ms-letter-spacing: -1.2px;
+  letter-spacing: -1.2px;
   margin: 0;
+}
+
+.c4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  -webkit-letter-spacing: -.4px;
+  -moz-letter-spacing: -.4px;
+  -ms-letter-spacing: -.4px;
+  letter-spacing: -.4px;
+  margin: 0;
+}
+
+.c7 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
 }
 
 .c9 {
@@ -8233,17 +8336,6 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-}
-
-.c1 {
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 44px;
-  -webkit-letter-spacing: -1.2px;
-  -moz-letter-spacing: -1.2px;
-  -ms-letter-spacing: -1.2px;
-  letter-spacing: -1.2px;
-  margin: 0;
 }
 
 .c2 {
@@ -8268,14 +8360,14 @@ exports[`Storyshots Utils Typography 1`] = `
   margin: 0;
 }
 
-.c4 {
-  font-size: 24px;
+.c5 {
+  font-size: 20px;
   font-weight: 600;
-  line-height: 28px;
-  -webkit-letter-spacing: -.4px;
-  -moz-letter-spacing: -.4px;
-  -ms-letter-spacing: -.4px;
-  letter-spacing: -.4px;
+  line-height: 24px;
+  -webkit-letter-spacing: -.2px;
+  -moz-letter-spacing: -.2px;
+  -ms-letter-spacing: -.2px;
+  letter-spacing: -.2px;
   margin: 0;
 }
 
@@ -8288,12 +8380,6 @@ exports[`Storyshots Utils Typography 1`] = `
   -ms-letter-spacing: -.1px;
   letter-spacing: -.1px;
   margin: 0;
-}
-
-.c7 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
 }
 
 .c11 {
@@ -8331,18 +8417,6 @@ exports[`Storyshots Utils Typography 1`] = `
   text-transform: uppercase;
 }
 
-@media screen and (max-width:999px) {
-  .responsive .c5,
-  .responsive-booking .c5 {
-    font-size: 18px;
-    line-height: 22px;
-    -webkit-letter-spacing: -.1px;
-    -moz-letter-spacing: -.1px;
-    -ms-letter-spacing: -.1px;
-    letter-spacing: -.1px;
-  }
-}
-
 @media screen and (min-width:600px) and (max-width:999px) {
   .responsive .c1,
   .responsive-booking .c1 {
@@ -8364,6 +8438,26 @@ exports[`Storyshots Utils Typography 1`] = `
     -moz-letter-spacing: -.4px;
     -ms-letter-spacing: -.4px;
     letter-spacing: -.4px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.2px;
+    -moz-letter-spacing: -.2px;
+    -ms-letter-spacing: -.2px;
+    letter-spacing: -.2px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -8392,22 +8486,14 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c4,
-  .responsive-booking .c4 {
-    font-size: 20px;
-    line-height: 24px;
-    -webkit-letter-spacing: -.2px;
-    -moz-letter-spacing: -.2px;
-    -ms-letter-spacing: -.2px;
-    letter-spacing: -.2px;
-  }
-}
-
-@media screen and (max-width:999px) {
-  .responsive .c7,
-  .responsive-booking .c7 {
-    font-size: 16px;
-    line-height: 20px;
+  .responsive .c5,
+  .responsive-booking .c5 {
+    font-size: 18px;
+    line-height: 22px;
+    -webkit-letter-spacing: -.1px;
+    -moz-letter-spacing: -.1px;
+    -ms-letter-spacing: -.1px;
+    letter-spacing: -.1px;
   }
 }
 
