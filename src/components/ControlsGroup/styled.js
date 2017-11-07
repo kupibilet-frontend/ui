@@ -47,6 +47,7 @@ export const SwapIcon = styled(Icon)`
 
 export const FlexContainer = styled.div`
   display: flex;
+  flex-direction: ${(props) => (props.vertical ? 'column' : 'row')};
 
   ${SwapIcon} {
     opacity: 0;
