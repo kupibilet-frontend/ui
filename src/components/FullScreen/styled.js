@@ -34,7 +34,7 @@ const slide = keyframes`
 `
 
 export const Overlay = styled.div`
-  animation-name: ${slide};
+  animation-name: ${fade};
   animation-duration: 0.35s;
 
   ${mq.desktop`
@@ -60,7 +60,7 @@ export const FullScreenContent = styled.div`
   padding: 0 18px;
   position: relative;
   z-index: 11;
-  animation-name: ${fade};
+  animation-name: ${slide};
   animation-duration: 0.35s;
   width: ${(props) => (props.isNarrow ? '588' : '882')}px;
 
