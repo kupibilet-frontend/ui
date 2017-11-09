@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Overlay from './index'
 import Box from 'components/Box'
+import Overlay from './index'
 
 storiesOf('Overlay', module)
   .addWithInfo('Defalut', () => {
