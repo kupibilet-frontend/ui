@@ -8069,6 +8069,257 @@ exports[`Storyshots Icon Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Overlay Defalut 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c11 {
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 6px;
+}
+
+.c6 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 36px;
+  width: 36px;
+  fill: #b3b3b3;
+  opacity: 1;
+}
+
+.c9 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 15px;
+  width: 15px;
+  fill: #007acc;
+  opacity: 1;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  background: rgba(34,34,34,0.85);
+  cursor: pointer;
+  position: fixed;
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-animation-name: eMLfYp;
+  animation-name: eMLfYp;
+  -webkit-animation-duration: 0.35s;
+  animation-duration: 0.35s;
+}
+
+.c2 {
+  display: table;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  padding-top: 0;
+  -webkit-animation-name: iTFmfn;
+  animation-name: iTFmfn;
+  -webkit-animation-duration: 0.35s;
+  animation-duration: 0.35s;
+}
+
+.c3 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.c4 {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+}
+
+.c4:hover .closing-icon {
+  fill: white;
+}
+
+.c10 {
+  display: table;
+  margin: 0 auto;
+}
+
+.c7 {
+  display: none;
+}
+
+.responsive .c7 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  color: #007acc;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.responsive .c7:hover {
+  color: #008ae6;
+}
+
+.responsive .c7:hover .closing-icon,
+.responsive .c7:hover .arrow-icon {
+  fill: #008ae6;
+}
+
+.c8 {
+  margin-left: auto;
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    height: 100%;
+    background: white;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    vertical-align: top;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c10,
+  .responsive-booking .c10 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .responsive .responsive .c7,
+  .responsive-booking .responsive .c7 {
+    display: none;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      onClick={false}
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <span
+            className="c4"
+          >
+            <span
+              className="c5"
+            >
+              <svg
+                className="closing-icon c6"
+                fill="textLight"
+                rotate=""
+                size="medium"
+              >
+                <use
+                  xlinkHref="#kb_cross"
+                />
+              </svg>
+            </span>
+          </span>
+          <div
+            className="c7"
+          >
+            
+            <span
+              className="c8"
+            >
+              <span
+                className="c5"
+              >
+                <svg
+                  className="closing-icon c9"
+                  fill="primaryDarkest"
+                  rotate=""
+                  size="xxsmall"
+                >
+                  <use
+                    xlinkHref="#kb_cross"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            className="c10"
+            onClick={[Function]}
+          >
+            <div
+              className="c11"
+            >
+              <p>
+                Overlay Content
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Utils Responsive only 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -8309,14 +8560,14 @@ exports[`Storyshots Utils Typography 1`] = `
   margin: 0;
 }
 
-.c4 {
-  font-size: 24px;
+.c3 {
+  font-size: 30px;
   font-weight: 600;
-  line-height: 28px;
-  -webkit-letter-spacing: -.4px;
-  -moz-letter-spacing: -.4px;
-  -ms-letter-spacing: -.4px;
-  letter-spacing: -.4px;
+  line-height: 34px;
+  -webkit-letter-spacing: -.6px;
+  -moz-letter-spacing: -.6px;
+  -ms-letter-spacing: -.6px;
+  letter-spacing: -.6px;
   margin: 0;
 }
 
@@ -8349,14 +8600,14 @@ exports[`Storyshots Utils Typography 1`] = `
   margin: 0;
 }
 
-.c3 {
-  font-size: 30px;
+.c4 {
+  font-size: 24px;
   font-weight: 600;
-  line-height: 34px;
-  -webkit-letter-spacing: -.6px;
-  -moz-letter-spacing: -.6px;
-  -ms-letter-spacing: -.6px;
-  letter-spacing: -.6px;
+  line-height: 28px;
+  -webkit-letter-spacing: -.4px;
+  -moz-letter-spacing: -.4px;
+  -ms-letter-spacing: -.4px;
+  letter-spacing: -.4px;
   margin: 0;
 }
 
@@ -8442,14 +8693,14 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c4,
-  .responsive-booking .c4 {
-    font-size: 20px;
-    line-height: 24px;
-    -webkit-letter-spacing: -.2px;
-    -moz-letter-spacing: -.2px;
-    -ms-letter-spacing: -.2px;
-    letter-spacing: -.2px;
+  .responsive .c3,
+  .responsive-booking .c3 {
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
   }
 }
 
@@ -8474,14 +8725,14 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c3,
-  .responsive-booking .c3 {
-    font-size: 24px;
-    line-height: 28px;
-    -webkit-letter-spacing: -.4px;
-    -moz-letter-spacing: -.4px;
-    -ms-letter-spacing: -.4px;
-    letter-spacing: -.4px;
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.2px;
+    -moz-letter-spacing: -.2px;
+    -ms-letter-spacing: -.2px;
+    letter-spacing: -.2px;
   }
 }
 

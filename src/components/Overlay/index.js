@@ -16,15 +16,16 @@ import {
 } from './styled'
 
 type Props = {
-  closePortal: (Event, bool) => void,
+  closePortal: (Event, boolean) => void,
   isDesktop: boolean,
-  backLink: boolean,
+  backLink: string,
   children: React.Element<*>,
 }
 
 class Overlay extends React.Component<{}, Props, void> {
   static defaultProps = {
     backLink: '',
+    closePortal: false,
   }
 
   componentWillMount() {
