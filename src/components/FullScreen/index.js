@@ -2,12 +2,12 @@
 import React from 'react'
 import { PortalWithState } from 'react-portal'
 import H1 from 'components/Typography/H1'
-import H4 from 'components/Typography/H4'
+import H3 from 'components/Typography/H3'
+import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
 
 import {
-  Overlay,
   FullScreenContent,
   Header,
   Content,
@@ -38,10 +38,6 @@ class FullScreen extends React.PureComponent<Props> {
       this.props.onSubmit()
     }
     return (closePortal)
-  }
-
-  stopPropagation = (e) => {
-    e.stopPropagation()
   }
 
   render() {
@@ -76,7 +72,7 @@ class FullScreen extends React.PureComponent<Props> {
       } else if (isNarrow) {
         return 'miscDarkest'
       }
-      return 'textLighter'
+      return 'textLight'
     }
 
     return (
@@ -86,10 +82,10 @@ class FullScreen extends React.PureComponent<Props> {
           portal(
             <GlobalStylesScope>
               <div className="responsive">
-                <Overlay onClick={closePortal}>
-                  <FullScreenContent isNarrow={isNarrow} onClick={this.stopPropagation}>
+                <Overlay closePortal={closePortal}>
+                  <FullScreenContent isNarrow={isNarrow}>
                     <Header>
-                      {(isHandheld || isNarrow) ? <H4>{header}</H4> : <H1>{header}</H1>}
+                      {(isHandheld || isNarrow) ? <H3>{header}</H3> : <H1>{header}</H1>}
                       <CloseButton isNarrow={isNarrow}>
                         <StyledIcon
                           name="cross"

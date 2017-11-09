@@ -2,21 +2,11 @@ import styled, { keyframes } from 'styled-components'
 import { borderRadiusHalf, borderRadiusLarge } from 'utils/borderRadius'
 import { shadowSmall } from 'utils/shadows'
 import mq from 'utils/media-queries'
-import H4 from 'components/Typography/H4'
+import H3 from 'components/Typography/H3'
 import Icon from 'components/Icon'
 import Button from 'components/Button'
 import TextLarge from 'components/Typography/TextLarge'
 import Link from 'components/Link'
-
-const fade = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`
 
 const slide = keyframes`
   0% {
@@ -31,24 +21,6 @@ const slide = keyframes`
   100% {
     transform: translate3d(0, 0, 0);
   }
-`
-
-export const Overlay = styled.div`
-  animation-name: ${fade};
-  animation-duration: 0.35s;
-
-  ${mq.desktop`
-    align-items: center;
-    background: rgba(34, 34, 34, 0.85);
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    padding: 24px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  `}
 `
 
 export const FullScreenContent = styled.div`
@@ -78,21 +50,27 @@ export const FullScreenContent = styled.div`
 export const Header = styled.header`
   align-items: center;
   display: flex;
-  max-width: 588px;
+  flex: 0 0 auto;
   min-height: 60px;
   justify-content: space-between;
   padding: 18px 0;
 
-  ${mq.handheld`
-    max-width: 450px;
+  ${mq.desktop`
+    max-width: 588px;
+  `}
 
-    ${H4} {
-      font-size: 24px;
-    }
+  ${mq.handheld`
+    padding-right: 102px;
   `}
 
   ${mq.mobile`
-    max-width: 222px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 60px;
+
+    ${H3} {
+      font-size: 20px;
+    }
   `}
 `
 
@@ -103,12 +81,6 @@ export const Content = styled.div`
 export const StyledIcon = styled(Icon)`
   cursor: pointer;
 `
-
-const getHoverColor = (props) => {
-  if (props.isNarrow) {
-    return ({ theme }) => theme.color.miscDark
-  } return ({ theme }) => theme.color.textLightest
-}
 
 export const CloseButton = styled.span`
   align-items: center;
@@ -122,9 +94,7 @@ export const CloseButton = styled.span`
   width: 30px;
 
   ${mq.desktop`
-    &:hover ${StyledIcon} {
-      fill: ${getHoverColor}
-    }
+    display: none;
   `}
 
   ${mq.handheld`
@@ -152,7 +122,8 @@ export const SubmitButton = styled(Button)`
   `}
 
   ${mq.mobile`
-    margin-top: 18px;
+    margin: 0;
+    min-height: 42px;
   `}
 `
 
@@ -167,7 +138,11 @@ export const CancelButton = TextLarge.withComponent(Link).extend`
 
   ${mq.handheld`
     font-size: 18px;
-    margin: 12px 0 18px;
+    margin: 0;
+  `}
+
+  ${mq.mobile`
+    margin: 12px 0 0;
   `}
 `
 
@@ -179,12 +154,15 @@ export const Footer = styled.footer`
   padding-top: 30px;
 
   ${mq.handheld`
-    margin-bottom: 24px;
-    padding-top: 24px;
+    margin: 24px 0 0 0;
+    min-height: 90px;
+    padding: 24px 0;
   `}
 
   ${mq.mobile`
     flex-direction: column;
-    margin-bottom: 0;
+    min-height: 114px;
+    margin-top: 18px;
+    padding: 18px 0;
   `}
 `
