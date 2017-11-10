@@ -8252,7 +8252,7 @@ exports[`Storyshots Overlay Defalut 1`] = `
   >
     <div
       className="c1"
-      onClick={false}
+      onClick={undefined}
     >
       <div
         className="c2"
