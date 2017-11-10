@@ -47,6 +47,8 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 
 .c9 {
   overflow: hidden;
+  -webkit-animation: overflowDelay 0.15s forwards;
+  animation: overflowDelay 0.15s forwards;
 }
 
 .c9 .rc-collapse-content {
@@ -592,6 +594,8 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
 
 .c1 {
   overflow: hidden;
+  -webkit-animation: overflowDelay 0.15s forwards;
+  animation: overflowDelay 0.15s forwards;
 }
 
 .c1 .rc-collapse-content {
@@ -679,6 +683,8 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
 
 .c1 {
   overflow: hidden;
+  -webkit-animation: overflowDelay 0.15s forwards;
+  animation: overflowDelay 0.15s forwards;
 }
 
 .c1 .rc-collapse-content {
@@ -764,8 +770,25 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c2 {
   overflow: hidden;
+  -webkit-animation: overflowDelay 0.15s forwards;
+  animation: overflowDelay 0.15s forwards;
+}
+
+.c2 .rc-collapse-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c2 .rc-collapse-content.rc-collapse-content-inactive {
+  display: none;
+}
+
+.c1 {
+  overflow: visible;
+  -webkit-animation: overflowDelay 0.15s forwards;
+  animation: overflowDelay 0.15s forwards;
 }
 
 .c1 .rc-collapse-content {
@@ -820,7 +843,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item c2"
         id={undefined}
         style={undefined}
       >
@@ -834,7 +857,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item c2"
         id={undefined}
         style={undefined}
       >
