@@ -7,8 +7,12 @@ import styled from 'styled-components'
 import { switchTransition, time } from 'utils/transitions'
 
 const PanelStyled = styled(RcCollapse.Panel)`
-  overflow: ${({ isActive }) => (isActive ? 'visible' : 'hidden')};
-  animation: overflowDelay ${time}s forwards;
+  overflow: hidden;
+
+  &.rc-collapse-item-active {
+    overflow: visible;
+    animation: ${time * 4}s overflowDelay;
+  }
 
   .rc-collapse-content {
     ${switchTransition}
@@ -19,7 +23,7 @@ const PanelStyled = styled(RcCollapse.Panel)`
   }
 
   @keyframes overflowDelay {
-    100% { overflow: ${({ isActive }) => (isActive ? 'visible' : 'hidden')} };
+    from { overflow: hidden; }
   }
 `
 
