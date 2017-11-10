@@ -76,6 +76,7 @@ export const Header = styled.header`
 
 export const Content = styled.div`
   display: block;
+  flex-grow: 1;
 `
 
 export const StyledIcon = styled(Icon)`
