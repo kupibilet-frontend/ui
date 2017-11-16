@@ -3,6 +3,7 @@ import { transparentize } from 'polished'
 import { control } from 'utils/reset'
 import placeholder from 'utils/placeholder'
 import { switchTransition } from 'utils/transitions'
+import Icon from 'components/Icon'
 
 const fontStyle = css`
   font-family: inherit;
@@ -215,4 +216,11 @@ export const Code = styled.div`
 
     background: ${(props) => fadeGradient(props)};
   }
+  `
+
+export const StyledIcon = styled(Icon)`
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  right: 9px;
   `

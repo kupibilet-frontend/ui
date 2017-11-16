@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import TextSmall from 'components/Typography/TextSmall'
+import mq from 'utils/media-queries'
+import Icon from 'components/Icon'
 
 export const AirportSuggestContainer = styled.div`
   display: flex;
@@ -11,9 +14,13 @@ export const AirportSuggestContainer = styled.div`
   white-space: nowrap;
 
   box-sizing: content-box;
-  height: 20px;
-  padding: 5px 0 5px 12px;
+  height: 38px;
+  padding: 5px 10px 5px 38px;
   background: ${({ theme }) => theme.color.background};
+
+  ${mq.mobile`
+    border-top: 1px solid ${({ theme }) => theme.color.miscLighter}
+  `}
 
   .react-autosuggest__suggestion--highlighted &,
   &:hover {
@@ -47,19 +54,24 @@ export const Geo = styled.div`
 export const Value = styled.b`
   font-weight: 600;
 `
-export const GeoLabel = styled.span``
+export const GeoLabel = styled(TextSmall)`
+  font-size: 14px;
+`
 
-export const Code = styled.div`
+export const Code = styled(TextSmall)`
+  align-self: center;
   flex-grow: 0;
   flex-shrink: 0;
 
   ${({ theme }) => theme.font}
-  font-size: 14px;
-  line-height: 18px;
   color: ${({ theme }) => theme.color.text};
   text-align: left;
 
   padding: 1px 0;
   margin-left: 15px;
-  width: 46px;
+  width: 42px;
+`
+
+export const StyledIcon = styled(Icon)`
+  ${(props) => (!props.isGeoCity && 'transform: rotate(45deg)')}
 `
