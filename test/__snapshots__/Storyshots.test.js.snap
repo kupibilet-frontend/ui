@@ -2663,8 +2663,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 320px;
-  max-width: 540px;
+  width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
   overflow: hidden;
@@ -2940,9 +2939,12 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 @media screen and (max-width:599px) {
   .responsive .c7,
   .responsive-booking .c7 {
+    padding: 0;
     top: initial;
-    left: 0;
-    right: 0;
+    left: -50%;
+    right: -50%;
+    margin: 12px auto 0;
+    box-shadow: none;
   }
 }
 
@@ -2957,6 +2959,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   className="c0"
 >
   <div
+    className="responsive"
     style={
       Object {
         "width": 244,
@@ -6426,8 +6429,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 320px;
-  max-width: 540px;
+  width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
   overflow: hidden;
@@ -6635,9 +6637,12 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 @media screen and (max-width:599px) {
   .responsive .c10,
   .responsive-booking .c10 {
+    padding: 0;
     top: initial;
-    left: 0;
-    right: 0;
+    left: -50%;
+    right: -50%;
+    margin: 12px auto 0;
+    box-shadow: none;
   }
 }
 
@@ -6753,8 +6758,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 320px;
-  max-width: 540px;
+  width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
   overflow: hidden;
@@ -6962,9 +6966,12 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 @media screen and (max-width:599px) {
   .responsive .c10,
   .responsive-booking .c10 {
+    padding: 0;
     top: initial;
-    left: 0;
-    right: 0;
+    left: -50%;
+    right: -50%;
+    margin: 12px auto 0;
+    box-shadow: none;
   }
 }
 
@@ -7077,8 +7084,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 320px;
-  max-width: 540px;
+  width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
   overflow: hidden;
@@ -7286,9 +7292,12 @@ exports[`Storyshots Controls/Select default 1`] = `
 @media screen and (max-width:599px) {
   .responsive .c10,
   .responsive-booking .c10 {
+    padding: 0;
     top: initial;
-    left: 0;
-    right: 0;
+    left: -50%;
+    right: -50%;
+    margin: 12px auto 0;
+    box-shadow: none;
   }
 }
 
@@ -8549,6 +8558,12 @@ exports[`Storyshots Utils Typography 1`] = `
   box-sizing: border-box;
 }
 
+.c9 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
 .c1 {
   font-size: 44px;
   font-weight: 700;
@@ -8575,12 +8590,6 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-}
-
-.c9 {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
 }
 
 .c8 {
