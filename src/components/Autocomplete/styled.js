@@ -55,8 +55,7 @@ export const SuggestionsContainer = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 320px;
-  max-width: 540px;
+  width: 300px;
   ${shadowSmall}
   ${borderRadiusSmall.all}
   overflow: hidden;
@@ -64,9 +63,12 @@ export const SuggestionsContainer = styled.div`
   background: ${({ theme }) => theme.color.background};
 
   ${mq.mobile`
+    padding: 0;
     top: initial;
-    left: 0;
-    right: 0;
+    left: -50%;
+    right: -50%;
+    margin: 12px auto 0;
+    box-shadow: none;
   `}
 
 `

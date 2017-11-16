@@ -142,7 +142,7 @@ storiesOf('Controls/Autocomplete', module)
       text('value', '')
 
       return (
-        <div style={{ width: 244 }}>
+        <div style={{ width: 244 }} className="responsive">
           <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
         </div>
       )

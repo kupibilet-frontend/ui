@@ -132,6 +132,17 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
         <Code neighboringInGroup={neighboringInGroup}>
           { IATACode }
         </Code>
+
+        {/* focused && !(value === '') &&
+          <StyledIcon
+            size="normal"
+            name="cross"
+            fill="miscLight"
+            focused={focused}
+            onClick={this.clearInput}
+          />
+        */}
+
       </Container>
     )
   }
