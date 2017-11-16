@@ -18,6 +18,10 @@ export const AirportSuggestContainer = styled.div`
   padding: 5px 10px 5px 11px;
   background: ${({ theme }) => theme.color.background};
 
+  ${mq.mobile`
+    border-top: 1px solid ${({ theme }) => theme.color.miscLighter}
+  `}
+
   .react-autosuggest__suggestion--highlighted &,
     &:hover {
       background: ${({ theme }) => theme.color.secondaryLightest};
