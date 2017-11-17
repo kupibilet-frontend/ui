@@ -45,7 +45,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   box-sizing: border-box;
 }
 
-.c9 {
+.c9 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -590,7 +590,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -677,7 +677,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -764,7 +764,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
