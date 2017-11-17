@@ -41,6 +41,15 @@ export default class AirportSuggest extends React.PureComponent {
             />
           </SuggestIcon>
         }
+
+        <SuggestIcon>
+          <StyledIcon
+            size="normal"
+            name={isGeoCity ? 'location' : 'plane'}
+            inheritColor
+            isGeoCity
+          />
+        </SuggestIcon>
         <Geo>
           <Value>
             { value }

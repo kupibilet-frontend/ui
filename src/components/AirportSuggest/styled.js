@@ -15,11 +15,13 @@ export const AirportSuggestContainer = styled.div`
 
   box-sizing: content-box;
   height: 38px;
-  padding: 5px 10px 5px 38px;
+  padding: 5px 10px 5px 11px;
   background: ${({ theme }) => theme.color.background};
 
   ${mq.mobile`
     border-top: 1px solid ${({ theme }) => theme.color.miscLighter}
+    margin: 0 18px;
+    padding: 5px 0;
   `}
 
   .react-autosuggest__suggestion--highlighted &,
@@ -33,6 +35,7 @@ export const AirportSuggestContainer = styled.div`
 `
 
 export const SuggestIcon = styled.div`
+  align-self: center;
   padding: 2.5px 8px 2.5px 0;
 
   .icon-inherit-color {
@@ -73,5 +76,5 @@ export const Code = styled(TextSmall)`
 `
 
 export const StyledIcon = styled(Icon)`
-  ${(props) => (!props.isGeoCity && 'transform: rotate(45deg)')}
+  transform: rotate(90deg);
 `
