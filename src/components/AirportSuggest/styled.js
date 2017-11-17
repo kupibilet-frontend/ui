@@ -18,20 +18,30 @@ export const AirportSuggestContainer = styled.div`
   padding: 5px 10px 5px 11px;
   background: ${({ theme }) => theme.color.background};
 
-  ${mq.mobile`
-    border-top: 1px solid ${({ theme }) => theme.color.miscLighter}
-    margin: 0 18px;
-    padding: 5px 0;
-  `}
-
   .react-autosuggest__suggestion--highlighted &,
-  &:hover {
-    background: ${({ theme }) => theme.color.secondaryLightest};
+    &:hover {
+      background: ${({ theme }) => theme.color.secondaryLightest};
 
-    .icon-inherit-color {
-      fill: ${({ theme }) => theme.color.textDarker};
+      .icon-inherit-color {
+        fill: ${({ theme }) => theme.color.textDarker};
+      }
     }
   }
+
+  ${mq.mobile`
+    border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
+    margin: 0 18px;
+    padding: 5px 0;
+
+    .react-autosuggest__suggestion--highlighted &,
+    &:hover {
+      background: ${({ theme }) => theme.color.background};
+
+      .icon-inherit-color {
+        fill: ${({ theme }) => theme.color.miscDark};
+      }
+    }
+  `}
 `
 
 export const SuggestIcon = styled.div`
@@ -76,5 +86,5 @@ export const Code = styled(TextSmall)`
 `
 
 export const StyledIcon = styled(Icon)`
-  transform: rotate(90deg);
+  ${(props) => (!props.isGeoCity && 'transform: rotate(90deg);')}
 `
