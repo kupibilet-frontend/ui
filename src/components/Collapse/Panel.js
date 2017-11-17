@@ -4,14 +4,11 @@ import React from 'react'
 import RcCollapse from 'rc-collapse'
 import styled from 'styled-components'
 
-import { switchTransition, time } from 'utils/transitions'
+import { switchTransition } from 'utils/transitions'
 
 const PanelStyled = styled(RcCollapse.Panel)`
-  overflow: hidden;
-
-  &.rc-collapse-item-active {
-    overflow: visible;
-    animation: ${time * 4}s overflowDelay;
+  .rc-collapse-anim {
+    overflow: hidden;
   }
 
   .rc-collapse-content {
@@ -20,10 +17,6 @@ const PanelStyled = styled(RcCollapse.Panel)`
 
   .rc-collapse-content.rc-collapse-content-inactive {
     display: none;
-  }
-
-  @keyframes overflowDelay {
-    from { overflow: hidden; }
   }
 `
 

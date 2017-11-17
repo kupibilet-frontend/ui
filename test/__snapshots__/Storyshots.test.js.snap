@@ -45,14 +45,8 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   box-sizing: border-box;
 }
 
-.c9 {
+.c9 .rc-collapse-anim {
   overflow: hidden;
-}
-
-.c9.rc-collapse-item-active {
-  overflow: visible;
-  -webkit-animation: 0.6s overflowDelay;
-  animation: 0.6s overflowDelay;
 }
 
 .c9 .rc-collapse-content {
@@ -596,14 +590,8 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
-}
-
-.c1.rc-collapse-item-active {
-  overflow: visible;
-  -webkit-animation: 0.6s overflowDelay;
-  animation: 0.6s overflowDelay;
 }
 
 .c1 .rc-collapse-content {
@@ -689,14 +677,8 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
-}
-
-.c1.rc-collapse-item-active {
-  overflow: visible;
-  -webkit-animation: 0.6s overflowDelay;
-  animation: 0.6s overflowDelay;
 }
 
 .c1 .rc-collapse-content {
@@ -782,14 +764,8 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
-}
-
-.c1.rc-collapse-item-active {
-  overflow: visible;
-  -webkit-animation: 0.6s overflowDelay;
-  animation: 0.6s overflowDelay;
 }
 
 .c1 .rc-collapse-content {
