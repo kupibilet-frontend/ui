@@ -55,14 +55,6 @@ export default css`
 
     // Anymore overlays inputs text blocks
     z-index: 3;
-
-    // Now we use readonly forever
-    //&[readonly] {
-    //  -moz-user-select: none;
-    //  -webkit-user-select: none;
-    //  -ms-user-select: none;
-    //  user-select: none;
-    //}
   }
 
   // Placeholder state
