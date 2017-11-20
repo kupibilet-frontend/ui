@@ -173,6 +173,7 @@ class DateRangePickerWrapper extends React.PureComponent {
       >
         <DateRangePicker
           {...this.props}
+          readOnly
           onDayHover={this.onDayHover}
           onPrevMonthClick={this.onPrevMonthClick}
           onNextMonthClick={this.onNextMonthClick}

@@ -51,16 +51,10 @@ export default css`
     border: 0;
     height: 100%;
     width: 100%;
+    cursor: pointer;
 
     // Anymore overlays inputs text blocks
     z-index: 3;
-
-    &[readonly] {
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
   }
 
   // Placeholder state
