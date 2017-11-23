@@ -7853,170 +7853,6 @@ exports[`Storyshots FormItem default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Full Screen Defalut 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  color: #ffffff;
-  background: #38afff;
-  font-size: 18px;
-  line-height: 18px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: 15px;
-  padding: 6.0px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
-}
-
-.c1 .icon-inherit-color {
-  fill: #ffffff;
-}
-
-.c1:hover {
-  cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
-  -webkit-transition: none;
-  transition: none;
-}
-
-.c1:active {
-  background: #008ae6;
-  box-shadow: none;
-}
-
-.c2 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0px 0 0px;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="responsive"
-  >
-    <button
-      className="c1"
-      disabled={undefined}
-      onClick={[Function]}
-      size="normal"
-    >
-      <span
-        className="c2"
-        size="normal"
-      >
-        Open FullScreen
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Full Screen Narrow 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  color: #ffffff;
-  background: #38afff;
-  font-size: 18px;
-  line-height: 18px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: 15px;
-  padding: 6.0px;
-  padding-right: 15px;
-  padding-left: 15px;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
-}
-
-.c1 .icon-inherit-color {
-  fill: #ffffff;
-}
-
-.c1:hover {
-  cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
-  -webkit-transition: none;
-  transition: none;
-}
-
-.c1:active {
-  background: #008ae6;
-  box-shadow: none;
-}
-
-.c2 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0px 0 0px;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="responsive"
-  >
-    <button
-      className="c1"
-      disabled={undefined}
-      onClick={[Function]}
-      size="normal"
-    >
-      <span
-        className="c2"
-        size="normal"
-      >
-        Open FullScreen
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Icon Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -8252,25 +8088,13 @@ exports[`Storyshots Overlay Defalut 1`] = `
   box-sizing: border-box;
 }
 
-.c11 {
+.c9 {
   background: #ffffff;
   border: 1px solid #dde3eb;
   border-radius: 6px;
 }
 
-.c6 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 36px;
-  width: 36px;
-  fill: #b3b3b3;
-  opacity: 1;
-}
-
-.c9 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -8282,7 +8106,7 @@ exports[`Storyshots Overlay Defalut 1`] = `
   opacity: 1;
 }
 
-.c5 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8294,6 +8118,7 @@ exports[`Storyshots Overlay Defalut 1`] = `
   cursor: pointer;
   position: fixed;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 100%;
   width: 100%;
   z-index: 10;
@@ -8325,26 +8150,16 @@ exports[`Storyshots Overlay Defalut 1`] = `
   vertical-align: middle;
 }
 
-.c4 {
-  position: absolute;
-  top: 5px;
-  right: 4px;
-}
-
-.c4:hover .closing-icon {
-  fill: white;
-}
-
-.c10 {
+.c8 {
   display: table;
   margin: 0 auto;
 }
 
-.c7 {
+.c4 {
   display: none;
 }
 
-.responsive .c7 {
+.responsive .c4 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8365,16 +8180,16 @@ exports[`Storyshots Overlay Defalut 1`] = `
   line-height: 20px;
 }
 
-.responsive .c7:hover {
+.responsive .c4:hover {
   color: #008ae6;
 }
 
-.responsive .c7:hover .closing-icon,
-.responsive .c7:hover .arrow-icon {
+.responsive .c4:hover .closing-icon,
+.responsive .c4:hover .arrow-icon {
   fill: #008ae6;
 }
 
-.c8 {
+.c5 {
   margin-left: auto;
 }
 
@@ -8394,22 +8209,15 @@ exports[`Storyshots Overlay Defalut 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c4,
-  .responsive-booking .c4 {
-    display: none;
-  }
-}
-
-@media screen and (max-width:999px) {
-  .responsive .c10,
-  .responsive-booking .c10 {
+  .responsive .c8,
+  .responsive-booking .c8 {
     width: 100%;
   }
 }
 
 @media screen and (min-width:1000px) {
-  .responsive .responsive .c7,
-  .responsive-booking .responsive .c7 {
+  .responsive .responsive .c4,
+  .responsive-booking .responsive .c4 {
     display: none;
   }
 }
@@ -8430,36 +8238,18 @@ exports[`Storyshots Overlay Defalut 1`] = `
         <div
           className="c3"
         >
-          <span
-            className="c4"
-          >
-            <span
-              className="c5"
-            >
-              <svg
-                className="closing-icon c6"
-                fill="textLight"
-                rotate=""
-                size="medium"
-              >
-                <use
-                  xlinkHref="#kb_cross"
-                />
-              </svg>
-            </span>
-          </span>
           <div
-            className="c7"
+            className="c4"
           >
             
             <span
-              className="c8"
+              className="c5"
             >
               <span
-                className="c5"
+                className="c6"
               >
                 <svg
-                  className="closing-icon c9"
+                  className="closing-icon c7"
                   fill="primaryDarkest"
                   rotate=""
                   size="xxsmall"
@@ -8472,11 +8262,11 @@ exports[`Storyshots Overlay Defalut 1`] = `
             </span>
           </div>
           <div
-            className="c10"
+            className="c8"
             onClick={[Function]}
           >
             <div
-              className="c11"
+              className="c9"
             >
               <p>
                 Overlay Content

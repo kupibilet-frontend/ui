@@ -20,7 +20,7 @@ type Props = {
   isDesktop: boolean,
   backLink: string,
   children: React.Element<*>,
-  showCloseButton: boolean,
+  showCloseButton?: boolean,
 }
 
 class Overlay extends React.Component<{}, Props, void> {
