@@ -4,9 +4,6 @@ import { shadowSmall } from 'utils/shadows'
 import mq from 'utils/media-queries'
 import H3 from 'components/Typography/H3'
 import Icon from 'components/Icon'
-import Button from 'components/Button'
-import TextLarge from 'components/Typography/TextLarge'
-import Link from 'components/Link'
 
 const slide = keyframes`
   0% {
