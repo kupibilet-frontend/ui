@@ -17,10 +17,7 @@ import {
 } from './styled'
 
 type Props = {
-  heading: React.Element<*>,
-  children: React.Element<*>,
   footer: React.Element<*>,
-
   isCompact: boolean,
   closeOnOutsideClick: boolean,
   closeOnEsc: boolean,
@@ -47,16 +44,6 @@ class Modal extends React.PureComponent<Props> {
     }
   }
 
-  handleClick = () => {
-    if (this.props.onSubmit) {
-      this.props.onSubmit()
-    }
-
-    if (this.props.onClose) {
-      this.props.onClose()
-    }
-  }
-
   handleKeyDown = (event) => {
     switch (event.keyCode) {
       case 27:
@@ -69,18 +56,15 @@ class Modal extends React.PureComponent<Props> {
 
   render() {
     const {
-      children,
       isHandheld,
       isCompact,
       footer,
-      heading,
       renderHeader,
       renderContent,
       renderFooter,
       isOpen,
       closeOnOutsideClick,
       showCloseButton,
-      ...props
     } = this.props
 
     const closeButtonSize = () => {
@@ -101,22 +85,6 @@ class Modal extends React.PureComponent<Props> {
       return 'textLight'
     }
 
-    const ModalHeader = () => (
-      <div>
-        {(isCompact || isHandheld) ? <H3>{heading}</H3> : <H1>{heading}</H1> }
-        {showCloseButton &&
-          <CloseButton isCompact={isCompact}>
-            <StyledIcon
-              name="cross"
-              fill={closeButtonColor()}
-              onClick={this.closePortal}
-              size={closeButtonSize()}
-            />
-          </CloseButton>
-        }
-      </div>
-    )
-
 
     return (
       <div>
@@ -130,9 +98,19 @@ class Modal extends React.PureComponent<Props> {
                 >
                   <ModalContent isCompact={isCompact}>
 
-                    { renderHeader({ ...props, children: ModalHeader() }) }
+                    { renderHeader({ ...this.props }) }
+                    {showCloseButton &&
+                      <CloseButton isCompact={isCompact}>
+                        <StyledIcon
+                          name="cross"
+                          fill={closeButtonColor()}
+                          onClick={this.closePortal}
+                          size={closeButtonSize()}
+                        />
+                      </CloseButton>
+                    }
                     { renderContent(this.props) }
-                    { renderFooter({ ...props, children: this.props.footer }) }
+                    { renderFooter({ ...this.props, children: footer }) }
 
                   </ModalContent>
                 </Overlay>
@@ -146,9 +124,13 @@ class Modal extends React.PureComponent<Props> {
 }
 
 Modal.defaultProps = {
-  renderHeader: (props) => <Header {...props} />,
+  renderHeader: (props) => (
+    <Header {...props}>
+      {(props.isCompact || props.isHandheld) ? <H3>{props.heading}</H3> : <H1>{props.heading}</H1> }
+    </Header>
+  ),
   renderContent: (props) => <Content {...props} />,
-  renderFooter: (props) => <Footer {...props} />,
+  renderFooter: (props) => props.footer && <Footer {...props} />,
 
   isCompact: false,
   closeOnOutsideClick: true,
