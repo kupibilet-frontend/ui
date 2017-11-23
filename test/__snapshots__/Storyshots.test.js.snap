@@ -45,7 +45,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   box-sizing: border-box;
 }
 
-.c9 {
+.c9 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -590,7 +590,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -677,7 +677,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -764,7 +764,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -3793,17 +3793,8 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   border: 0;
   height: 100%;
   width: 100%;
+  cursor: pointer;
   z-index: 3;
-}
-
-.c1 .DateInput__input[readonly] {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .c1 .DateInput__display-text {
@@ -4045,7 +4036,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
                 onFocus={[Function]}
                 onKeyDown={[Function]}
                 placeholder="Туда"
-                readOnly={false}
+                readOnly={true}
                 required={false}
                 type="text"
                 value=""
@@ -4085,7 +4076,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
                 onFocus={[Function]}
                 onKeyDown={[Function]}
                 placeholder="Обратно"
-                readOnly={false}
+                readOnly={true}
                 required={false}
                 type="text"
                 value=""

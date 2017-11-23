@@ -2,6 +2,8 @@
 import React from 'react'
 import ControlsGroup from 'components/ControlsGroup'
 
+/* eslint-disable  react/jsx-no-bind */
+
 import {
   Error,
   InnerInput,
@@ -55,16 +57,16 @@ class InputControl extends React.PureComponent<void, Props, State> {
     }
   }
 
-  handleFocus = (e: Event) => {
-    const { onFocus } = this.props
+  handleFocus = (onFocus, e: Event) => {
+    if (this.props.onFocus) this.props.onFocus(e)
     if (onFocus) onFocus(e)
     this.setState({
       isActive: true,
     })
   }
 
-  handleBlur = (e: Event) => {
-    const { onBlur } = this.props
+  handleBlur = (onBlur, e: Event) => {
+    if (this.props.onBlur) this.props.onBlur(e)
     if (onBlur) onBlur(e)
     this.setState({
       isActive: false,
@@ -131,8 +133,8 @@ class InputControl extends React.PureComponent<void, Props, State> {
                 React.cloneElement(child, {
                   ...props,
                   size,
-                  onFocus: this.handleFocus,
-                  onBlur: this.handleBlur,
+                  onFocus: this.handleFocus.bind(null, child.props.onFocus),
+                  onBlur: this.handleBlur.bind(null, child.props.onBlur),
                 })
               )) }
             </ControlsGroup>
@@ -145,8 +147,8 @@ class InputControl extends React.PureComponent<void, Props, State> {
               disabled={disabled}
               success={success}
               error={error}
-              onFocus={this.handleFocus}
-              onBlur={this.handleBlur}
+              onFocus={this.handleFocus.bind(null, null)}
+              onBlur={this.handleBlur.bind(null, null)}
               innerRef={(el) => this.innerRef(el)}
             />
           )
