@@ -20,6 +20,7 @@ type Props = {
   isDesktop: boolean,
   backLink: string,
   children: React.Element<*>,
+  showCloseButton: boolean,
 }
 
 class Overlay extends React.Component<{}, Props, void> {
@@ -58,9 +59,11 @@ class Overlay extends React.Component<{}, Props, void> {
         >
           <OverlayContentWrap>
             <OverlayCell>
-              <ClosingButton>
-                <Icon name="cross" fill="textLight" size="medium" className="closing-icon" />
-              </ClosingButton>
+              {this.props.showCloseButton &&
+                <ClosingButton>
+                  <Icon name="cross" fill="textLight" size="medium" className="closing-icon" />
+                </ClosingButton>
+              }
               {!this.props.isDesktop &&
                 <OverlayClosePanel>
                   {this.props.backLink &&

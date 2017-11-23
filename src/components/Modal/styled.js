@@ -23,7 +23,7 @@ const slide = keyframes`
   }
 `
 
-export const FullScreenContent = styled.div`
+export const ModalContent = styled.div`
   ${borderRadiusLarge.all}
   background: ${({ theme }) => theme.color.background};
   display: flex;
@@ -34,7 +34,7 @@ export const FullScreenContent = styled.div`
   z-index: 11;
   animation-name: ${slide};
   animation-duration: 0.35s;
-  width: ${(props) => (props.isNarrow ? '588' : '882')}px;
+  width: ${(props) => (props.isCompact ? '588' : '882')}px;
 
   ${mq.handheld`
     border-radius: 0;
@@ -88,9 +88,9 @@ export const CloseButton = styled.span`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  position: ${(props) => (props.isNarrow ? 'absolute' : 'fixed')};
-  right: ${(props) => (props.isNarrow ? '0' : '18')}px;
-  top: ${(props) => (props.isNarrow ? '0' : '15')}px;
+  position: ${(props) => (props.isCompact ? 'absolute' : 'fixed')};
+  right: ${(props) => (props.isCompact ? '0' : '18')}px;
+  top: ${(props) => (props.isCompact ? '0' : '15')}px;
   height: 30px;
   width: 30px;
 
@@ -113,37 +113,6 @@ export const CloseButton = styled.span`
 
   ${mq.handheld`
     margin-left: 72px;
-  `}
-`
-
-export const SubmitButton = styled(Button)`
-  ${mq.handheld`
-    margin: 0 24px 0 0;
-    max-height: 42px;
-  `}
-
-  ${mq.mobile`
-    margin: 0;
-    min-height: 42px;
-  `}
-`
-
-
-export const CancelButton = TextLarge.withComponent(Link).extend`
-  align-self: center;
-  margin: 0 0 0 24px;
-  ${(props) => (props.isNarrow && `
-    font-size: 16px;
-    margin-left: 18px;
-  `)}
-
-  ${mq.handheld`
-    font-size: 18px;
-    margin: 0;
-  `}
-
-  ${mq.mobile`
-    margin: 12px 0 0;
   `}
 `
 

@@ -23,8 +23,8 @@ export const borderRadiusLarge = {
 }
 
 export const borderRadiusHalf = {
-  left: 'border-radius: 50% 0 0 50%;',
-  right: 'border-radius: 0 50% 50% 0;',
-  all: 'border-radius: 50%;',
+  left: 'border-radius: 2em 0 0 2em;',
+  right: 'border-radius: 0 2em 2em 0;',
+  all: 'border-radius: 2em;',
   toString: () => borderRadiusHalf.all,
 }
