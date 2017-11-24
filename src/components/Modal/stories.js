@@ -5,27 +5,20 @@ import { boolean } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
-import TextLarge from 'components/Typography/TextLarge'
-import Link from 'components/Link'
-import { borderRadiusHalf } from 'utils/borderRadius'
 import mq from 'utils/media-queries'
 
 const SubmitButton = styled(Button)`
-  ${borderRadiusHalf.all}
-
   ${mq.handheld`
     margin: 0 24px 0 0;
-    max-height: 42px;
   `}
 
   ${mq.mobile`
     margin: 0;
-    min-height: 42px;
+    width: 100%;
   `}
 `
 
-const CancelButton = TextLarge.withComponent(Link).extend`
-  align-self: center;
+const CancelButton = styled(Button)`
   margin: 0 0 0 24px;
 
   ${mq.handheld`
@@ -34,6 +27,7 @@ const CancelButton = TextLarge.withComponent(Link).extend`
 
   ${mq.mobile`
     margin: 12px 0 0;
+    width: 100%;
   `}
 `
 
@@ -56,20 +50,18 @@ storiesOf('Modal', module)
       updateKnob('isOpen', 'boolean', false)
     }
 
-    const isCompact = boolean('isOpen', false)
-
     const footerContent = (
       <div>
         <SubmitButton
-          size={isCompact ? 'normal' : 'large'}
+          size="large"
           onClick={onClose}
         >
           Отправить
         </SubmitButton>
 
         <CancelButton
+          variant="link"
           onClick={onClose}
-          isCompact={isCompact}
         >
           Отменить
         </CancelButton>
@@ -80,18 +72,15 @@ storiesOf('Modal', module)
         <Button onClick={onClick}>
           Open Modal
         </Button>
-        <div className="responsive">
-          <Modal
-            heading="Очень длинный заголовок, который не помещается на одну строку"
-            footer={footerContent}
-            isOpen={isOpen}
-            onClose={onClose}
-          >
-            <ContentModal>
-              Full Screen Content
-            </ContentModal>
-          </Modal>
-        </div>
+        <Modal
+          heading="Очень длинный заголовок, который не помещается на одну строку"
+          footer={footerContent}
+          isOpen={isOpen}
+          onClose={onClose}
+          renderContent={(props) => <ContentModal {...props} />}
+        >
+          Full Screen Content
+        </Modal>
       </div>
     )
   })
@@ -106,20 +95,19 @@ storiesOf('Modal', module)
       updateKnob('isOpen', 'boolean', false)
     }
 
-    const isCompact = boolean('isOpen', false)
-
     const footerContent = (
       <div>
         <SubmitButton
-          size={isCompact ? 'normal' : 'large'}
+          size={'normal'}
           onClick={onClose}
         >
           Отправить
         </SubmitButton>
 
         <CancelButton
+          variant="link"
           onClick={onClose}
-          isCompact={isCompact}
+          isCompact
         >
           Отменить
         </CancelButton>
@@ -130,19 +118,16 @@ storiesOf('Modal', module)
         <Button onClick={onClick}>
           Open Modal
         </Button>
-        <div className="responsive">
-          <Modal
-            heading="Очень длинный заголовок, который не помещается на одну строку"
-            footer={footerContent}
-            isOpen={isOpen}
-            onClose={onClose}
-            isCompact
-          >
-            <ContentModal>
-              Full Screen Content
-            </ContentModal>
-          </Modal>
-        </div>
+        <Modal
+          heading="Очень длинный заголовок, который не помещается на одну строку"
+          footer={footerContent}
+          isOpen={isOpen}
+          onClose={onClose}
+          renderContent={(props) => <ContentModal {...props} />}
+          isCompact
+        >
+          Full Screen Content
+        </Modal>
       </div>
     )
   })

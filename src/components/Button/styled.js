@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
+import style from 'utils/link'
 
 export const SIZES = {
   small: 12,
@@ -15,7 +16,9 @@ const TYPOGRAPHY = {
   large: 20,
 }
 
-const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon, neighboringInGroup) => {
+const calculateButtonPadding = (
+  size, icon, hasLeftIcon, hasRightIcon, neighboringInGroup, variant,
+) => {
   const spacing = SIZES[size]
   const typographyRelatedPadding = ((spacing * 2 - TYPOGRAPHY[size]) / 2).toFixed(1)
   const iconVisualCenterShift = 5 / 4
@@ -33,6 +36,10 @@ const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon, neighbori
     hasLeftIcon = true
   } else if (neighboringInGroup === 'right') {
     hasRightIcon = true
+  }
+
+  if (variant === 'link') {
+    return 'padding: 0;'
   }
 
   return `
@@ -91,6 +98,7 @@ const getButtonActiveBackground = ({ theme, variant }) => {
 
 export const StyledButton = styled.button`
   ${control}
+  ${({ variant }) => (variant === 'link' && style)}
 
   color: ${getButtonColor};
   background: ${getButtonBackground};
@@ -105,8 +113,8 @@ export const StyledButton = styled.button`
     calculateBorderRadius(size, neighboringInGroup)
   )};
 
-  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup }) => (
-    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup)
+  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup, variant }) => (
+    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup, variant)
   )};
 
   ${switchTransition}

@@ -58,6 +58,8 @@ class Modal extends React.PureComponent<Props> {
     const {
       isHandheld,
       isCompact,
+      heading,
+      children,
       footer,
       renderHeader,
       renderContent,
@@ -87,46 +89,46 @@ class Modal extends React.PureComponent<Props> {
 
 
     return (
-      <div>
-        {isOpen &&
-          <Portal>
-            <GlobalStylesScope>
-              <div className="responsive">
-                <Overlay
-                  closePortal={closeOnOutsideClick && this.closePortal}
-                  showCloseButton={showCloseButton}
-                >
-                  <ModalContent isCompact={isCompact}>
+      isOpen &&
+        <Portal>
+          <GlobalStylesScope>
+            <div className="responsive">
+              <Overlay
+                closePortal={closeOnOutsideClick && this.closePortal}
+                showCloseButton={showCloseButton}
+              >
+                <ModalContent isCompact={isCompact}>
 
-                    { renderHeader({ ...this.props }) }
-                    {showCloseButton &&
-                      <CloseButton isCompact={isCompact}>
-                        <StyledIcon
-                          name="cross"
-                          fill={closeButtonColor()}
-                          onClick={this.closePortal}
-                          size={closeButtonSize()}
-                        />
-                      </CloseButton>
-                    }
-                    { renderContent(this.props) }
-                    { renderFooter({ ...this.props, children: footer }) }
+                  { renderHeader({ ...this.props, children: heading }) }
+                  {showCloseButton &&
+                    <CloseButton isCompact={isCompact}>
+                      <StyledIcon
+                        name="cross"
+                        fill={closeButtonColor()}
+                        onClick={this.closePortal}
+                        size={closeButtonSize()}
+                      />
+                    </CloseButton>
+                  }
+                  { renderContent({ ...this.props, children }) }
+                  { renderFooter({ ...this.props, children: footer }) }
 
-                  </ModalContent>
-                </Overlay>
-              </div>
-            </GlobalStylesScope>,
-          </Portal>
-        }
-      </div>
+                </ModalContent>
+              </Overlay>
+            </div>
+          </GlobalStylesScope>,
+        </Portal>
     )
   }
 }
 
 Modal.defaultProps = {
-  renderHeader: (props) => (
+  renderHeader: (props) => (props.heading &&
     <Header {...props}>
-      {(props.isCompact || props.isHandheld) ? <H3>{props.heading}</H3> : <H1>{props.heading}</H1> }
+      {(props.isCompact || props.isHandheld)
+        ? <H3>{props.heading}</H3>
+        : <H1>{props.heading}</H1>
+      }
     </Header>
   ),
   renderContent: (props) => <Content {...props} />,

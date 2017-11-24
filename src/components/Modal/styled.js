@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { borderRadiusHalf, borderRadiusLarge } from 'utils/borderRadius'
+import { borderRadiusCircle, borderRadiusLarge } from 'utils/borderRadius'
 import { shadowSmall } from 'utils/shadows'
 import mq from 'utils/media-queries'
 import H3 from 'components/Typography/H3'
@@ -86,18 +86,20 @@ export const CloseButton = styled.span`
   display: flex;
   justify-content: center;
   position: ${(props) => (props.isCompact ? 'absolute' : 'fixed')};
-  right: ${(props) => (props.isCompact ? '0' : '18')}px;
-  top: ${(props) => (props.isCompact ? '0' : '15')}px;
+  right: ${(props) => (props.isCompact ? '0' : '4')}px;
+  top: ${(props) => (props.isCompact ? '0' : '5')}px;
   height: 30px;
   width: 30px;
 
   ${mq.desktop`
-    display: none;
+    &:hover ${StyledIcon} {
+      fill: ${(props) => (props.isCompact ? 'miscLight' : 'white')};
+    }
   `}
 
   ${mq.handheld`
     background: ${({ theme }) => theme.color.miscLightest};
-    ${borderRadiusHalf.all}
+    ${borderRadiusCircle.all}
     margin-left: 32px;
     position: fixed;
     right: 18px;

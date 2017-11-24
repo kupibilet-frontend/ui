@@ -8,7 +8,6 @@ import {
   Wrapper,
   OverlayContentWrap,
   OverlayCell,
-  ClosingButton,
   OverlayContent,
   OverlayClosePanel,
   OverlayClosePanelIcon,
@@ -20,7 +19,6 @@ type Props = {
   isDesktop: boolean,
   backLink: string,
   children: React.Element<*>,
-  showCloseButton?: boolean,
 }
 
 class Overlay extends React.Component<{}, Props, void> {
@@ -59,11 +57,6 @@ class Overlay extends React.Component<{}, Props, void> {
         >
           <OverlayContentWrap>
             <OverlayCell>
-              {this.props.showCloseButton &&
-                <ClosingButton>
-                  <Icon name="cross" fill="textLight" size="medium" className="closing-icon" />
-                </ClosingButton>
-              }
               {!this.props.isDesktop &&
                 <OverlayClosePanel>
                   {this.props.backLink &&
