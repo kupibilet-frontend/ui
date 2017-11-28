@@ -13,7 +13,7 @@ import {
 export default class AirportSuggest extends React.PureComponent {
   static propTypes = {
     value: PropTypes.string.isRequired,
-    area: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
     country: PropTypes.string.isRequired,
     IATACode: PropTypes.string.isRequired,
     isCity: PropTypes.bool.isRequired,
@@ -22,12 +22,14 @@ export default class AirportSuggest extends React.PureComponent {
   }
 
   static defaultProps = {
-    area: '',
+    city: '',
+    country: '',
   }
 
   render() {
-    const { value, area, country, isCity, IATACode, isGeoSuggest, isNested } = this.props
+    const { value, city, country, isCity, IATACode, isGeoSuggest, isNested } = this.props
     const isGeoCity = isCity && isGeoSuggest
+    const countryWithComma = country && `, ${country}`
 
     return (
       <AirportSuggestContainer>
@@ -47,9 +49,9 @@ export default class AirportSuggest extends React.PureComponent {
             { value }
           </Value>
           <div>
-            { area &&
+            { (city || country) &&
               <GeoLabel>
-                { isCity ? `Все аэропорты, ${area}` : `${area}, ${country}` }
+                { isCity ? `Все аэропорты, ${country}` : `${city + countryWithComma}` }
               </GeoLabel>
             }
           </div>
