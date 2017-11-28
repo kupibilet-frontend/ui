@@ -7,13 +7,6 @@ import Modal from 'components/Modal'
 import Button from 'components/Button'
 import mq from 'utils/media-queries'
 
-const Wrapper = styled.div`
-  display: flex;
-  ${mq.mobile`
-    flex-direction: column;
-  `}
-`
-
 const CancelButton = styled(Button)`
   margin-left: 12px;
 
@@ -33,23 +26,22 @@ storiesOf('Modal', module)
       updateKnob('isOpen', 'boolean', false)
     }
 
-    const footerContent = (
-      <Wrapper>
-        <Button
-          size="large"
-          onClick={onClose}
-        >
-          Отправить
-        </Button>
+    const footerContent = [
+      <Button
+        size="large"
+        onClick={onClose}
+      >
+        Отправить
+      </Button>,
 
-        <CancelButton
-          variant="link"
-          onClick={onClose}
-        >
-          Отменить
-        </CancelButton>
-      </Wrapper>
-    )
+      <CancelButton
+        variant="link"
+        onClick={onClose}
+      >
+        Отменить
+      </CancelButton>,
+    ]
+
     return (
       <div>
         <Button onClick={onClick}>
@@ -77,24 +69,22 @@ storiesOf('Modal', module)
       updateKnob('isOpen', 'boolean', false)
     }
 
-    const footerContent = (
-      <Wrapper>
-        <Button
-          size="large"
-          onClick={onClose}
-        >
-          Отправить
-        </Button>
+    const footerContent = [
+      <Button
+        size="large"
+        onClick={onClose}
+      >
+        Отправить
+      </Button>,
 
-        <CancelButton
-          variant="link"
-          onClick={onClose}
-          isCompact
-        >
-          Отменить
-        </CancelButton>
-      </Wrapper>
-    )
+      <CancelButton
+        variant="link"
+        onClick={onClose}
+      >
+        Отменить
+      </CancelButton>,
+    ]
+
     return (
       <div>
         <Button onClick={onClick}>
