@@ -7,36 +7,19 @@ import Modal from 'components/Modal'
 import Button from 'components/Button'
 import mq from 'utils/media-queries'
 
-const SubmitButton = styled(Button)`
-  ${mq.handheld`
-    margin: 0 24px 0 0;
-  `}
-
+const Wrapper = styled.div`
+  display: flex;
   ${mq.mobile`
-    margin: 0;
-    width: 100%;
+    flex-direction: column;
   `}
 `
 
 const CancelButton = styled(Button)`
-  margin: 0 0 0 24px;
-
-  ${mq.handheld`
-    margin: 0;
-  `}
+  margin-left: 12px;
 
   ${mq.mobile`
-    margin: 12px 0 0;
-    width: 100%;
+    margin: 12px 0 0 0;
   `}
-`
-
-const ContentModal = styled.div`
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
 `
 
 storiesOf('Modal', module)
@@ -51,13 +34,13 @@ storiesOf('Modal', module)
     }
 
     const footerContent = (
-      <div>
-        <SubmitButton
+      <Wrapper>
+        <Button
           size="large"
           onClick={onClose}
         >
           Отправить
-        </SubmitButton>
+        </Button>
 
         <CancelButton
           variant="link"
@@ -65,7 +48,7 @@ storiesOf('Modal', module)
         >
           Отменить
         </CancelButton>
-      </div>
+      </Wrapper>
     )
     return (
       <div>
@@ -77,7 +60,6 @@ storiesOf('Modal', module)
           footer={footerContent}
           isOpen={isOpen}
           onClose={onClose}
-          renderContent={(props) => <ContentModal {...props} />}
         >
           Full Screen Content
         </Modal>
@@ -96,13 +78,13 @@ storiesOf('Modal', module)
     }
 
     const footerContent = (
-      <div>
-        <SubmitButton
-          size={'normal'}
+      <Wrapper>
+        <Button
+          size="large"
           onClick={onClose}
         >
           Отправить
-        </SubmitButton>
+        </Button>
 
         <CancelButton
           variant="link"
@@ -111,7 +93,7 @@ storiesOf('Modal', module)
         >
           Отменить
         </CancelButton>
-      </div>
+      </Wrapper>
     )
     return (
       <div>
@@ -123,7 +105,6 @@ storiesOf('Modal', module)
           footer={footerContent}
           isOpen={isOpen}
           onClose={onClose}
-          renderContent={(props) => <ContentModal {...props} />}
           isCompact
         >
           Full Screen Content

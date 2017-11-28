@@ -72,8 +72,10 @@ export const Header = styled.header`
 `
 
 export const Content = styled.div`
-  display: block;
+  align-items: center;
+  display: flex;
   flex-grow: 1;
+  justify-content: center;
 `
 
 export const StyledIcon = styled(Icon)`

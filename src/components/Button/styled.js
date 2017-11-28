@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
-import style from 'utils/link'
+import { getLinkColor, getLinkHoverColor } from 'utils/link'
 
 export const SIZES = {
   small: 12,
@@ -16,9 +16,7 @@ const TYPOGRAPHY = {
   large: 20,
 }
 
-const calculateButtonPadding = (
-  size, icon, hasLeftIcon, hasRightIcon, neighboringInGroup, variant,
-) => {
+const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon, neighboringInGroup) => {
   const spacing = SIZES[size]
   const typographyRelatedPadding = ((spacing * 2 - TYPOGRAPHY[size]) / 2).toFixed(1)
   const iconVisualCenterShift = 5 / 4
@@ -36,10 +34,6 @@ const calculateButtonPadding = (
     hasLeftIcon = true
   } else if (neighboringInGroup === 'right') {
     hasRightIcon = true
-  }
-
-  if (variant === 'link') {
-    return 'padding: 0;'
   }
 
   return `
@@ -67,11 +61,18 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
 
   return `border-radius: ${SIZES[size]}px;`
 }
-const getButtonColor = ({ theme, variant }) => {
+const getButtonColor = ({ ...props, theme, variant }) => {
   if (variant === 'primary') {
     return theme.color.background
   } else if (variant === 'secondary') {
     return theme.color.primaryDarkest
+  } else if (variant === 'link') {
+    return getLinkColor(props)
+  }
+}
+const getButtonHoverColor = ({ ...props, variant }) => {
+  if (variant === 'link') {
+    return getLinkHoverColor(props)
   }
 }
 const getButtonBackground = ({ theme, variant }) => {
@@ -98,7 +99,6 @@ const getButtonActiveBackground = ({ theme, variant }) => {
 
 export const StyledButton = styled.button`
   ${control}
-  ${({ variant }) => (variant === 'link' && style)}
 
   color: ${getButtonColor};
   background: ${getButtonBackground};
@@ -131,6 +131,7 @@ export const StyledButton = styled.button`
   &:hover {
     ${(props) => (!props.disabled ? `
       cursor: pointer;
+      ${props.variant === 'link' && `color: ${getButtonHoverColor(props)};`}
       background: ${getButtonHoverBackground(props)};
       box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
 
