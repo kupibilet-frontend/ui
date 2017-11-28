@@ -131,7 +131,6 @@ export const StyledButton = styled.button`
   &:hover {
     ${(props) => (!props.disabled ? `
       cursor: pointer;
-      ${props.variant === 'link' && `color: ${getButtonHoverColor(props)};`}
       background: ${getButtonHoverBackground(props)};
       box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
 
@@ -139,6 +138,8 @@ export const StyledButton = styled.button`
       // Transition only for mouseleave
       transition: none;
     ` : '')}
+
+    ${(props) => ((!props.disabled && props.variant === 'link') && `color: ${getButtonHoverColor(props)};`)}
   }
 
   &:active {
