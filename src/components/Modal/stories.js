@@ -1,46 +1,37 @@
 import React from 'react'
-import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
-import mq from 'utils/media-queries'
 
-const CancelButton = styled(Button)`
-  margin-left: 12px;
+const onClick = () => {
+  updateKnob('isOpen', 'boolean', true)
+}
 
-  ${mq.mobile`
-    margin: 12px 0 0 0;
-  `}
-`
+const onClose = () => {
+  updateKnob('isOpen', 'boolean', false)
+}
+
+const footerContent = [
+  <Button
+    size="large"
+    onClick={onClose}
+  >
+    Отправить
+  </Button>,
+  <Button
+    variant="link"
+    size="large"
+    onClick={onClose}
+  >
+    Отменить
+  </Button>,
+]
 
 storiesOf('Modal', module)
   .addWithInfo('Default', () => {
     const isOpen = boolean('isOpen', false)
-    const onClick = () => {
-      updateKnob('isOpen', 'boolean', true)
-    }
-
-    const onClose = () => {
-      updateKnob('isOpen', 'boolean', false)
-    }
-
-    const footerContent = [
-      <Button
-        size="large"
-        onClick={onClose}
-      >
-        Отправить
-      </Button>,
-
-      <CancelButton
-        variant="link"
-        onClick={onClose}
-      >
-        Отменить
-      </CancelButton>,
-    ]
 
     return (
       <div>
@@ -61,29 +52,6 @@ storiesOf('Modal', module)
 
   .addWithInfo('Compact', () => {
     const isOpen = boolean('isOpen', false)
-    const onClick = () => {
-      updateKnob('isOpen', 'boolean', true)
-    }
-
-    const onClose = () => {
-      updateKnob('isOpen', 'boolean', false)
-    }
-
-    const footerContent = [
-      <Button
-        size="large"
-        onClick={onClose}
-      >
-        Отправить
-      </Button>,
-
-      <CancelButton
-        variant="link"
-        onClick={onClose}
-      >
-        Отменить
-      </CancelButton>,
-    ]
 
     return (
       <div>
