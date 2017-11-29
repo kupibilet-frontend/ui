@@ -29,7 +29,7 @@ const footerContent = [
   </Button>,
 ]
 
-storiesOf('Modal', module)
+storiesOf('Complex controls/Modal', module)
   .addWithInfo('Default', () => {
     const isOpen = boolean('isOpen', false)
 

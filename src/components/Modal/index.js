@@ -16,6 +16,24 @@ import {
   Footer,
 } from './styled'
 
+const getCloseButtonSize = ({ isHandheld, isCompact }) => {
+  if (isHandheld) {
+    return 'normal'
+  } else if (isCompact) {
+    return 'xxsmall'
+  }
+  return 'medium'
+}
+
+const getCloseButtonColor = ({ isHandheld, isCompact }) => {
+  if (isHandheld) {
+    return 'primaryDarkest'
+  } else if (isCompact) {
+    return 'miscDarkest'
+  }
+  return 'textLight'
+}
+
 type Props = {
   footer: React.Element<*>,
   isCompact: boolean,
@@ -26,16 +44,30 @@ type Props = {
 
 /* eslint-disable react/prop-types */
 class Modal extends React.PureComponent<Props> {
-  componentWillMount() {
-    if (this.props.closeOnEsc) {
-      document.addEventListener('keydown', this.handleKeyDown)
-    }
+  static defaultProps = {
+    renderHeader: (props) => (props.heading &&
+      <Header {...props}>
+        {(props.isCompact || props.isHandheld)
+          ? <H3>{props.heading}</H3>
+          : <H1>{props.heading}</H1>
+        }
+      </Header>
+    ),
+    renderContent: (props) => <Content {...props} />,
+    renderFooter: (props) => props.footer && <Footer {...props} />,
+
+    isCompact: false,
+    closeOnOutsideClick: true,
+    closeOnEsc: true,
+    showCloseButton: true,
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyDown)
   }
 
   componentWillUnmount() {
-    if (this.props.closeOnEsc) {
-      document.removeEventListener('keydown', this.handleKeyDown)
-    }
+    document.removeEventListener('keydown', this.handleKeyDown)
   }
 
   closePortal = () => {
@@ -45,21 +77,15 @@ class Modal extends React.PureComponent<Props> {
   }
 
   handleKeyDown = (event) => {
-    switch (event.keyCode) {
-      case 27:
-        this.closePortal()
-        break
-      default:
-        break
+    if (event.keyCode === 27 && this.props.closeOnEsc) {
+      this.closePortal()
     }
   }
 
   render() {
     const {
-      isHandheld,
       isCompact,
       heading,
-      children,
       footer,
       renderHeader,
       renderContent,
@@ -69,75 +95,39 @@ class Modal extends React.PureComponent<Props> {
       showCloseButton,
     } = this.props
 
-    const closeButtonSize = () => {
-      if (isHandheld) {
-        return 'normal'
-      } else if (isCompact) {
-        return 'xxsmall'
-      }
-      return 'medium'
+    if (!isOpen) {
+      return null
     }
-
-    const closeButtonColor = () => {
-      if (isHandheld) {
-        return 'primaryDarkest'
-      } else if (isCompact) {
-        return 'miscDarkest'
-      }
-      return 'textLight'
-    }
-
 
     return (
-      isOpen &&
-        <Portal>
-          <GlobalStylesScope>
-            <div className="responsive">
-              <Overlay
-                closePortal={closeOnOutsideClick && this.closePortal}
-                showCloseButton={showCloseButton}
-              >
-                <ModalContent isCompact={isCompact}>
+      <Portal>
+        <GlobalStylesScope className="responsive">
+          <Overlay
+            closePortal={closeOnOutsideClick && this.closePortal}
+            showCloseButton={showCloseButton}
+          >
+            <ModalContent isCompact={isCompact}>
 
-                  { renderHeader({ ...this.props, children: heading }) }
-                  {showCloseButton &&
-                    <CloseButton isCompact={isCompact}>
-                      <StyledIcon
-                        name="cross"
-                        fill={closeButtonColor()}
-                        onClick={this.closePortal}
-                        size={closeButtonSize()}
-                      />
-                    </CloseButton>
-                  }
-                  { renderContent({ ...this.props, children }) }
-                  { renderFooter({ ...this.props, children: footer }) }
+              { renderHeader({ ...this.props, children: heading }) }
+              {showCloseButton &&
+                <CloseButton isCompact={isCompact}>
+                  <StyledIcon
+                    name="cross"
+                    fill={getCloseButtonColor(this.props)}
+                    onClick={this.closePortal}
+                    size={getCloseButtonSize(this.props)}
+                  />
+                </CloseButton>
+              }
+              { renderContent(this.props) }
+              { renderFooter({ ...this.props, children: footer }) }
 
-                </ModalContent>
-              </Overlay>
-            </div>
-          </GlobalStylesScope>,
-        </Portal>
+            </ModalContent>
+          </Overlay>
+        </GlobalStylesScope>
+      </Portal>
     )
   }
-}
-
-Modal.defaultProps = {
-  renderHeader: (props) => (props.heading &&
-    <Header {...props}>
-      {(props.isCompact || props.isHandheld)
-        ? <H3>{props.heading}</H3>
-        : <H1>{props.heading}</H1>
-      }
-    </Header>
-  ),
-  renderContent: (props) => <Content {...props} />,
-  renderFooter: (props) => props.footer && <Footer {...props} />,
-
-  isCompact: false,
-  closeOnOutsideClick: true,
-  closeOnEsc: true,
-  showCloseButton: true,
 }
 
 export default withMedia(Modal)

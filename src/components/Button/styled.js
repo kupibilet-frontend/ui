@@ -61,7 +61,8 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
 
   return `border-radius: ${SIZES[size]}px;`
 }
-const getButtonColor = ({ ...props, theme, variant }) => {
+const getButtonColor = (props) => {
+  const { theme, variant } = props
   if (variant === 'primary') {
     return theme.color.background
   } else if (variant === 'secondary') {
@@ -70,8 +71,8 @@ const getButtonColor = ({ ...props, theme, variant }) => {
     return getLinkColor(props)
   }
 }
-const getButtonHoverColor = ({ ...props, variant }) => {
-  if (variant === 'link') {
+const getButtonHoverColor = (props) => {
+  if (props.variant === 'link') {
     return getLinkHoverColor(props)
   }
 }
@@ -80,6 +81,8 @@ const getButtonBackground = ({ theme, variant }) => {
     return theme.color.primary
   } else if (variant === 'secondary') {
     return theme.color.miscLightest
+  } if (variant === 'link') {
+    return 'transparent'
   }
 }
 const getButtonHoverBackground = ({ theme, variant }) => {
@@ -87,6 +90,8 @@ const getButtonHoverBackground = ({ theme, variant }) => {
     return theme.color.primaryDark
   } else if (variant === 'secondary') {
     return theme.color.miscLighter
+  } if (variant === 'link') {
+    return 'transparent'
   }
 }
 const getButtonActiveBackground = ({ theme, variant }) => {
@@ -94,6 +99,8 @@ const getButtonActiveBackground = ({ theme, variant }) => {
     return theme.color.primaryDarker
   } else if (variant === 'secondary') {
     return theme.color.miscLight
+  } if (variant === 'link') {
+    return 'transparent'
   }
 }
 
