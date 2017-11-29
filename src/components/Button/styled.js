@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
+import { getLinkColor, getLinkHoverColor } from 'utils/link'
 
 export const SIZES = {
   small: 12,
@@ -60,11 +61,19 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
 
   return `border-radius: ${SIZES[size]}px;`
 }
-const getButtonColor = ({ theme, variant }) => {
+const getButtonColor = (props) => {
+  const { theme, variant } = props
   if (variant === 'primary') {
     return theme.color.background
   } else if (variant === 'secondary') {
     return theme.color.primaryDarkest
+  } else if (variant === 'link') {
+    return getLinkColor(props)
+  }
+}
+const getButtonHoverColor = (props) => {
+  if (props.variant === 'link') {
+    return getLinkHoverColor(props)
   }
 }
 const getButtonBackground = ({ theme, variant }) => {
@@ -72,6 +81,8 @@ const getButtonBackground = ({ theme, variant }) => {
     return theme.color.primary
   } else if (variant === 'secondary') {
     return theme.color.miscLightest
+  } if (variant === 'link') {
+    return 'transparent'
   }
 }
 const getButtonHoverBackground = ({ theme, variant }) => {
@@ -79,6 +90,8 @@ const getButtonHoverBackground = ({ theme, variant }) => {
     return theme.color.primaryDark
   } else if (variant === 'secondary') {
     return theme.color.miscLighter
+  } if (variant === 'link') {
+    return 'transparent'
   }
 }
 const getButtonActiveBackground = ({ theme, variant }) => {
@@ -86,6 +99,8 @@ const getButtonActiveBackground = ({ theme, variant }) => {
     return theme.color.primaryDarker
   } else if (variant === 'secondary') {
     return theme.color.miscLight
+  } if (variant === 'link') {
+    return 'transparent'
   }
 }
 
@@ -105,8 +120,8 @@ export const StyledButton = styled.button`
     calculateBorderRadius(size, neighboringInGroup)
   )};
 
-  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup }) => (
-    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup)
+  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup, variant }) => (
+    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup, variant)
   )};
 
   ${switchTransition}
@@ -130,6 +145,8 @@ export const StyledButton = styled.button`
       // Transition only for mouseleave
       transition: none;
     ` : '')}
+
+    ${(props) => ((!props.disabled && props.variant === 'link') && `color: ${getButtonHoverColor(props)};`)}
   }
 
   &:active {

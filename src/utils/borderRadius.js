@@ -21,3 +21,10 @@ export const borderRadiusLarge = {
   all: 'border-radius: 6px;',
   toString: () => borderRadiusLarge.all,
 }
+
+export const borderRadiusCircle = {
+  left: 'border-radius: 50% 0 0 50%;',
+  right: 'border-radius: 0 50% 50% 0;',
+  all: 'border-radius: 50%;',
+  toString: () => borderRadiusCircle.all,
+}
