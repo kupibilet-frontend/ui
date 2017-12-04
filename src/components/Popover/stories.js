@@ -62,7 +62,7 @@ storiesOf('Controls/Popover', module)
       </Popover>
     )
   })
-  .addWithInfo('With Header', () => {
+  .addWithInfo('With Header&Large', () => {
     const header = text('header', 'Красивый зайчик в шоке')
     const content = getContent()
     const placement = getPlacement()
@@ -72,6 +72,7 @@ storiesOf('Controls/Popover', module)
         placement={placement}
         header={header}
         content={content}
+        size="large"
       >
         <CarrotButton />
       </Popover>

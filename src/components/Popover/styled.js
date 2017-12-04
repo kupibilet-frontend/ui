@@ -4,6 +4,11 @@ import Text from 'components/Typography/Text'
 
 const dotShift = 7
 
+const popoverSizes = {
+  normal: '360px',
+  large: '480px',
+}
+
 const flexDirections = {
   bottom: 'row',
   top: 'row',
@@ -120,7 +125,7 @@ const PopoverBackground = styled.div`
   flex-shrink: 0;
   flex-grow: 1;
   min-width: 240px;
-  max-width: 360px;
+  max-width: ${({ size }) => popoverSizes[size]};
   background: ${(props) => getBackgroundColor(props)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
