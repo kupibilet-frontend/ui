@@ -96,6 +96,11 @@ const InnerInput = styled.input`
   height: 100%;
   line-height: normal;
   border: none;
+  ${({ size }) => (size === 'large'
+    ? 'letter-spacing: -0.1px'
+    : null
+  )
+};
 
   padding-left: ${({ size, leftIcon }) => (leftIcon
     ? '0'

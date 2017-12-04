@@ -4306,6 +4306,10 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4387,6 +4391,10 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4467,6 +4475,10 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4670,6 +4682,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4946,6 +4962,10 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -5132,6 +5152,10 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 0;
   font-size: 18px;
@@ -5369,6 +5393,10 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 0;
   padding-right: 0;
   font-size: 18px;
@@ -5614,6 +5642,10 @@ exports[`Storyshots Controls/Input default 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
