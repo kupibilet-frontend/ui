@@ -72,7 +72,7 @@ storiesOf('Controls/Popover', module)
         placement={placement}
         header={header}
         content={content}
-        isLarge
+        size="large"
       >
         <CarrotButton />
       </Popover>
