@@ -6131,7 +6131,7 @@ exports[`Storyshots Controls/Popover With \`dotCentering\` prop 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Popover With Header 1`] = `
+exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
