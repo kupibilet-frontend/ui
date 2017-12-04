@@ -24,7 +24,8 @@ type PortalProps = {
   align: ?string,
   content: any | null,
   header: ?string,
-  dotCentering: boolean,
+  dotCentering: ?boolean,
+  isLarge: ?boolean,
 }
 
 const PopoverPortal = (props : PortalProps) => {
@@ -36,6 +37,7 @@ const PopoverPortal = (props : PortalProps) => {
     content,
     header,
     dotCentering,
+    isLarge,
   } = props
   return ((content && isOpen && coords)
     ? <Portal>
@@ -63,7 +65,9 @@ const PopoverPortal = (props : PortalProps) => {
                 <PopoverDot
                   placement={placement}
                 />
-                <PopoverBackground>
+                <PopoverBackground
+                  isLarge={isLarge}
+                >
                   {header &&
                     <Header>
                       <HeaderText>
@@ -92,6 +96,7 @@ type PopoverProps = {
   placement: string,
   align: ?string,
   dotCentering: ?boolean,
+  isLarge: ?boolean,
   success: ?boolean,
   error: ?boolean,
 }
@@ -120,6 +125,7 @@ class Popover extends Tooltip {
       header,
       shouldRender,
       dotCentering,
+      isLarge,
     } = this.props
     const { coords } = this
     const { isOpen } = this.state
@@ -142,6 +148,7 @@ class Popover extends Tooltip {
         header={header}
         shouldRender={shouldRender}
         dotCentering={dotCentering}
+        isLarge={isLarge}
       />,
     ]
   }

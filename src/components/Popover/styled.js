@@ -120,7 +120,7 @@ const PopoverBackground = styled.div`
   flex-shrink: 0;
   flex-grow: 1;
   min-width: 240px;
-  max-width: 360px;
+  max-width: ${({ isLarge }) => (isLarge ? '480px' : '360px')};
   background: ${(props) => getBackgroundColor(props)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
