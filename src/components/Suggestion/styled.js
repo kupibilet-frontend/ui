@@ -6,7 +6,7 @@ export const SuggestionContainer = styled.div`
   flex-flow: row nowrap;
   align-items: center;
 
-  height: 30px;
+  min-height: 30px;
 
   cursor: pointer;
   color: ${({ theme }) => theme.color.textDarker};

@@ -3,17 +3,17 @@ import { opacify } from 'polished'
 
 import { switchTransition } from 'utils/transitions'
 
-function getColor(props) {
+export function getLinkColor(props) {
   return props.theme.color.primaryDarkest
 }
 
-function getHoverColor(props) {
-  return opacify(-0.2, getColor(props))
+export function getLinkHoverColor(props) {
+  return opacify(-0.2, getLinkColor(props))
 }
 
 const Link = css`
     ${switchTransition}
-    color: ${getColor};
+    color: ${getLinkColor};
     cursor: pointer;
     font-size: 16px;
     line-height: 20px;
@@ -21,14 +21,14 @@ const Link = css`
     transition-property: color;
 
     .icon-inherit-color {
-      fill: ${getColor};
+      fill: ${getLinkColor};
     }
 
     &:hover {
-      color: ${getHoverColor};
+      color: ${getLinkHoverColor};
 
       .icon-inherit-color {
-        fill: ${getHoverColor};
+        fill: ${getLinkHoverColor};
       }
     }
 `

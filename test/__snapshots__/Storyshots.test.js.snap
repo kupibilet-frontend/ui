@@ -45,7 +45,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   box-sizing: border-box;
 }
 
-.c9 {
+.c9 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -590,7 +590,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -677,7 +677,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -764,7 +764,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c1 .rc-collapse-anim {
   overflow: hidden;
 }
 
@@ -1966,6 +1966,166 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
       </div>
     </div>
   </onClickOutside-Mock-Decorator>
+</div>
+`;
+
+exports[`Storyshots Complex controls/Modal Compact 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c1:hover {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c1:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+<div
+  className="c0"
+>
+  <div>
+    <button
+      className="c1"
+      disabled={undefined}
+      onClick={[Function]}
+      size="normal"
+    >
+      <span
+        className="c2"
+        size="normal"
+      >
+        Open Modal
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Complex controls/Modal Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c1:hover {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c1:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+<div
+  className="c0"
+>
+  <div>
+    <button
+      className="c1"
+      disabled={undefined}
+      onClick={[Function]}
+      size="normal"
+    >
+      <span
+        className="c2"
+        size="normal"
+      >
+        Open Modal
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
@@ -3793,17 +3953,8 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   border: 0;
   height: 100%;
   width: 100%;
+  cursor: pointer;
   z-index: 3;
-}
-
-.c1 .DateInput__input[readonly] {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .c1 .DateInput__display-text {
@@ -4045,7 +4196,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
                 onFocus={[Function]}
                 onKeyDown={[Function]}
                 placeholder="Туда"
-                readOnly={false}
+                readOnly={true}
                 required={false}
                 type="text"
                 value=""
@@ -4085,7 +4236,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
                 onFocus={[Function]}
                 onKeyDown={[Function]}
                 placeholder="Обратно"
-                readOnly={false}
+                readOnly={true}
                 required={false}
                 type="text"
                 value=""
@@ -4155,6 +4306,10 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4236,6 +4391,10 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4316,6 +4475,10 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4519,6 +4682,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4795,6 +4962,10 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -4981,6 +5152,10 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 0;
   font-size: 18px;
@@ -5218,6 +5393,10 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 0;
   padding-right: 0;
   font-size: 18px;
@@ -5463,6 +5642,10 @@ exports[`Storyshots Controls/Input default 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   padding-left: 14px;
   padding-right: 14px;
   font-size: 18px;
@@ -5948,7 +6131,7 @@ exports[`Storyshots Controls/Popover With \`dotCentering\` prop 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Popover With Header 1`] = `
+exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -8134,6 +8317,28 @@ exports[`Storyshots Utils Typography 1`] = `
   box-sizing: border-box;
 }
 
+.c1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  -webkit-letter-spacing: -1.2px;
+  -moz-letter-spacing: -1.2px;
+  -ms-letter-spacing: -1.2px;
+  letter-spacing: -1.2px;
+  margin: 0;
+}
+
+.c3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 34px;
+  -webkit-letter-spacing: -.6px;
+  -moz-letter-spacing: -.6px;
+  -ms-letter-spacing: -.6px;
+  letter-spacing: -.6px;
+  margin: 0;
+}
+
 .c9 {
   font-size: 14px;
   font-weight: 400;
@@ -8146,17 +8351,6 @@ exports[`Storyshots Utils Typography 1`] = `
   line-height: 20px;
 }
 
-.c1 {
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 44px;
-  -webkit-letter-spacing: -1.2px;
-  -moz-letter-spacing: -1.2px;
-  -ms-letter-spacing: -1.2px;
-  letter-spacing: -1.2px;
-  margin: 0;
-}
-
 .c2 {
   font-size: 38px;
   font-weight: 600;
@@ -8165,17 +8359,6 @@ exports[`Storyshots Utils Typography 1`] = `
   -moz-letter-spacing: -1px;
   -ms-letter-spacing: -1px;
   letter-spacing: -1px;
-  margin: 0;
-}
-
-.c3 {
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 34px;
-  -webkit-letter-spacing: -.6px;
-  -moz-letter-spacing: -.6px;
-  -ms-letter-spacing: -.6px;
-  letter-spacing: -.6px;
   margin: 0;
 }
 
@@ -8278,8 +8461,8 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
+  .responsive .c3,
+  .responsive-booking .c3 {
     font-size: 24px;
     line-height: 28px;
     -webkit-letter-spacing: -.4px;
@@ -8290,8 +8473,8 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c3,
-  .responsive-booking .c3 {
+  .responsive .c2,
+  .responsive-booking .c2 {
     font-size: 24px;
     line-height: 28px;
     -webkit-letter-spacing: -.4px;

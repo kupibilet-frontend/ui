@@ -7,7 +7,9 @@ import styled from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 
 const PanelStyled = styled(RcCollapse.Panel)`
-  overflow: hidden;
+  .rc-collapse-anim {
+    overflow: hidden;
+  }
 
   .rc-collapse-content {
     ${switchTransition}
