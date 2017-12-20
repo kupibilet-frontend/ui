@@ -2,22 +2,18 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Slider from './index'
 
-// const startDate = new Date(2017, 3, 2, 1).valueOf()
-// const endDate = new Date(2017, 3, 2, 2).valueOf()
 
-
-const ticketsCount = {}
-
-for (let i = 0; i < 150; ++i) {
-  ticketsCount[i] = i % 4
+const onChange = (values) => {
+  console.info(values)
 }
 
 storiesOf('Controls/Slider', module)
-  .addWithInfo('Slider', () => (
+  .addWithInfo('default', () => (
     <div style={{ width: '252px' }}>
       <Slider
-        sliderData={ticketsCount}
-        displayValue={(val) => val * 2}
+        min={1}
+        max={1000}
+        onChange={onChange}
       />
     </div>
   ))

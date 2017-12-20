@@ -22,17 +22,24 @@ const StyledProgressBar = styled.span`
   top: 0;
   z-index: 4;
 `
-//     transform: translateX(-50%);
-const StyledHandle = styled.span`
+
+const StyledHandle = styled.span.attrs({
+  backgroundcolor: (props) => ((
+    props['aria-valuenow'] === props['aria-valuemin'] ||
+    props['aria-valuenow'] === props['aria-valuemax']
+  ) ? props.theme.color.miscDark : props.theme.color.primary
+  ),
+})`
   ${switchTransition}
+  background-color: ${({ backgroundcolor }) => backgroundcolor};
   transition-property: background-color, box-shadow;
-  background-color: ${({ theme }) => theme.color.primary};
   border-radius: 50%;
   cursor: pointer;
   height: 18px;
   width: 18px;
   top: -6px;
   z-index: 5;
+  transform: translateX(-50%);
 
    &:hover, &:active {
      background-color: ${({ theme }) => theme.color.primary};
