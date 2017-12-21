@@ -76,6 +76,7 @@ export const Content = styled.div`
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  height: 100%;
 `
 
 export const StyledIcon = styled(Icon)`
