@@ -9,29 +9,37 @@ import {
 
 /* eslint-disable react/no-unused-prop-types */
 
-type State = {
-  values: Array
-}
+type SliderValues = Array<number>
 
-type Props = {
-  min: number,
-  max: number,
-  progressBar: () => Element,
-  handle: () => Element,
-  onChange?: () => [],
-  initState?: (number, number) => State
+type State = {
+  values: SliderValues,
 }
 
 type SliderState = {
   min: number,
   max: number,
-  values: [],
+  values: SliderValues,
+}
+
+type Props = {
+  min: number,
+  max: number,
+  values: SliderValues,
+  disabled: boolean,
+  snap: boolean,
+  snapPoints: Array<number>,
+  progressBar: () => Element,
+  handle: () => Element,
+  onChange?: (SliderValues) => void,
+  onValuesUpdated?: (SliderValues) => void,
 }
 
 const getInitialState = (props : Props) => {
-  const { min, max, initState } = props
-  return initState
-    ? initState(min, max)
+  const { min, max, values } = props
+  return values
+    ? {
+      values,
+    }
     : {
       values: [min, max],
     }
@@ -43,6 +51,7 @@ export default class Slider extends React.Component<Props, State> {
     progressBar: StyledProgressBar,
     min: 1,
     max: 100,
+    disabled: false,
   }
   constructor(props) {
     super(props)
@@ -55,23 +64,36 @@ export default class Slider extends React.Component<Props, State> {
   }
 
   updateValues = (sliderState : SliderState) => {
+    const { onValuesUpdated } = this.props
     const { values } = sliderState
     this.setState({
       values,
     })
+    if (onValuesUpdated) onValuesUpdated(values)
   }
 
   render() {
-    const { handle, progressBar, min, max } = this.props
+    const {
+      handle,
+      progressBar,
+      min,
+      max,
+      disabled,
+      snap,
+      snapPoints,
+    } = this.props
     return (
       <StyledSlider
         min={min}
         max={max}
+        disabled={disabled}
         onValuesUpdated={this.updateValues}
         onChange={this.onChange}
         values={this.state.values}
         handle={handle}
         progressBar={progressBar}
+        snap={snap}
+        snapPoints={snapPoints}
       />
     )
   }
