@@ -4,12 +4,14 @@ import { switchTransition } from '../../utils/transitions'
 
 const StyledSlider = styled(Rheostat)`
   width: 100%;
+  height: 100px;
 
   .rheostat-background {
     background-color: ${({ theme }) => theme.color.miscLight};
     height: 6px;
     border-radius: 3px;
     width: 100%;
+    z-index: 2;
   }
   `
 
@@ -47,8 +49,26 @@ const StyledHandle = styled.span.attrs({
    }
   `
 
+const BAR_OFFSET = -94
+
+const getBarColor = ({ isHighlighted, theme }) => (isHighlighted
+  ? theme.color.secondaryLight
+  : theme.color.miscLighter
+)
+
+const StyledPitComponent = styled.span`
+  background-color: ${getBarColor};
+  font-size: 0;
+  bottom: 6px;
+  z-index: 1;
+  transform: translateY(${BAR_OFFSET}px);
+  width: ${({ pitWidth }) => pitWidth}%;
+  height: ${({ children, pitHeightData }) => { return `${pitHeightData[children]}%;` }}
+  `
+
 export {
   StyledSlider,
   StyledProgressBar,
   StyledHandle,
+  StyledPitComponent,
 }

@@ -1,10 +1,12 @@
 // @flow
 import React from 'react'
+import inRange from 'lodash/inRange'
 
 import {
   StyledSlider,
   StyledProgressBar,
   StyledHandle,
+  StyledPitComponent,
 } from './styled'
 
 /* eslint-disable react/no-unused-prop-types */
@@ -34,6 +36,25 @@ type Props = {
   onValuesUpdated?: (SliderValues) => void,
 }
 
+
+const getPitWidth = ({ min, max }) => ((max - min) / 100)
+
+const getPitPoints = ({ sliderData }) => Object.keys(sliderData)
+  .map((key) => key)
+
+const getPitHeight = ({ sliderData }) => {
+  const maxHeight = Math.max.apply(null, Object.values(sliderData).map(
+    (value) => value),
+  )
+  const percent = maxHeight / 100
+  const result = Object.keys(sliderData).reduce((acc, current) => {
+    acc[current] = Math.floor((sliderData[current] / percent))
+    return acc
+  }, {})
+  return result
+}
+
+
 const getInitialState = (props : Props) => {
   const { min, max, values } = props
   return values
@@ -55,7 +76,13 @@ export default class Slider extends React.Component<Props, State> {
   }
   constructor(props) {
     super(props)
-    this.state = getInitialState(props)
+    this.state = {
+      ...getInitialState(props),
+      pitPoints: getPitPoints(props),
+      pitWidth: getPitWidth(props),
+      pitHeightData: getPitHeight(props),
+    }
+    this.touched = false
   }
 
   onChange = (sliderState : SliderState) => {
@@ -63,9 +90,30 @@ export default class Slider extends React.Component<Props, State> {
     if (onChange) onChange(sliderState.values)
   }
 
+  /* eslint-disable react/prop-types */
+
+  getPitComponent = (props) => {
+    const { values } = this.state
+    const { children } = props
+    const { touched } = this
+    const isHighlighted = touched && inRange(children, values[0], values[1])
+
+    return (
+      <StyledPitComponent
+        {...props}
+        isHighlighted={isHighlighted}
+        pitWidth={this.state.pitWidth}
+        pitHeightData={this.state.pitHeightData}
+      />
+    )
+  }
+
+  /* eslint-enable react/prop-types */
+
   updateValues = (sliderState : SliderState) => {
     const { onValuesUpdated } = this.props
     const { values } = sliderState
+    this.touched = true
     this.setState({
       values,
     })
@@ -82,6 +130,10 @@ export default class Slider extends React.Component<Props, State> {
       snap,
       snapPoints,
     } = this.props
+    const {
+      pitPoints,
+    } = this.state
+
     return (
       <StyledSlider
         min={min}
@@ -94,6 +146,8 @@ export default class Slider extends React.Component<Props, State> {
         progressBar={progressBar}
         snap={snap}
         snapPoints={snapPoints}
+        pitComponent={this.getPitComponent}
+        pitPoints={pitPoints}
       />
     )
   }
