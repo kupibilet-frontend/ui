@@ -14,7 +14,7 @@ export const GlobalStylesScope = styled.div`
   }
 `
 
-const ThemeAndScopedStylesProvider = ({ theme = {}, children }) => (
+const ThemeAndScopedStylesProvider = ({ theme = {}, children, ...props }) => (
   <ThemeProvider
     theme={{
       ...defaultTheme,
@@ -25,7 +25,7 @@ const ThemeAndScopedStylesProvider = ({ theme = {}, children }) => (
       },
     }}
   >
-    <GlobalStylesScope>
+    <GlobalStylesScope {...props}>
       { children }
     </GlobalStylesScope>
   </ThemeProvider>
