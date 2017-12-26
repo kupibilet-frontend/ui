@@ -13,7 +13,7 @@ const onClose = () => {
   updateKnob('isOpen', 'boolean', false)
 }
 
-const footerContent = [
+const footerContent = React.Children.toArray([
   <Button
     size="large"
     onClick={onClose}
@@ -27,7 +27,7 @@ const footerContent = [
   >
     Отменить
   </Button>,
-]
+])
 
 storiesOf('Complex controls/Modal', module)
   .addWithInfo('Default', () => {
