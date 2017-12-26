@@ -37,29 +37,35 @@ type SliderState = {
 type Props = {
   min: number,
   max: number,
-  values: SliderValues,
+  values?: SliderValues,
   disabled: boolean,
   snap?: boolean,
   snapPoints?: Array<number>,
-  sliderData: SliderData,
+  sliderData?: SliderData,
   progressBar: () => Element,
   handle: () => Element,
   onChange?: (SliderValues) => void,
   onValuesUpdated?: (SliderValues) => void,
 }
 
-type GetPitWidth = (SliderData) => number
+type GetPitWidth = (SliderData) => number | null
 
 const getPitWidth : GetPitWidth = ({
   sliderData,
-}) => (100 / Object.keys(sliderData).length).toFixed(5)
+}) => (sliderData
+  ? (100 / Object.keys(sliderData).length).toFixed(5)
+  : null
+)
 
-type GetPitPoints = (SliderData) => Array<number>
+type GetPitPoints = (SliderData) => Array<number> | undefined
 
 const getPitPoints : GetPitPoints = ({
   sliderData,
-}) => Object.keys(sliderData)
-  .map((key) => Number(key))
+}) => (sliderData
+  ? Object.keys(sliderData)
+    .map((key) => Number(key))
+  : undefined
+)
 
 type GetPitHeight = (SliderData) => HeightData
 
@@ -98,7 +104,7 @@ export default class Slider extends React.Component<Props, State> {
       values: getInitialValues(props),
       pitPoints: getPitPoints(props),
       pitWidth: getPitWidth(props),
-      pitHeightData: getPitHeight(props),
+      pitHeightData: props.sliderData ? getPitHeight(props) : null,
     }
     this.touched = false
   }
