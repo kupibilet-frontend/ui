@@ -81,8 +81,6 @@ storiesOf('Complex controls/Modal', module)
           isCompact
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
-           
-
         </Modal>
       </div>
     )

@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react'
 import GlobalStylesScope from 'components/ThemeProvider'
-import Icon from 'components/Icon'
 import { withMedia } from 'utils/media-queries'
 
 import {

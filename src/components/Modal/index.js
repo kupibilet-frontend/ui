@@ -35,7 +35,7 @@ const getCloseButtonColor = ({ isHandheld, isCompact }) => {
 }
 
 type Props = {
-  footer: React.Element<*>,
+  footer?: React.Element<*>,
   isCompact: boolean,
   closeOnOutsideClick: boolean,
   closeOnEsc: boolean,
