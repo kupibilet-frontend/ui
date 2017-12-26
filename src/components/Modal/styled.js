@@ -1,24 +1,9 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { borderRadiusCircle, borderRadiusLarge } from 'utils/borderRadius'
 import { shadowSmall } from 'utils/shadows'
 import mq from 'utils/media-queries'
-import H3 from 'components/Typography/H3'
+import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
-
-const slide = keyframes`
-  0% {
-    transform: translate3d(0, 5%, 0);
-    opacity: 0;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-`
 
 export const ModalContent = styled.div`
   ${borderRadiusLarge.all}
@@ -26,21 +11,20 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 18px;
+  padding: 0 42px;
   position: relative;
   z-index: 11;
-  animation-name: ${slide};
-  animation-duration: 0.35s;
+
   width: ${(props) => (props.isCompact ? '588' : '882')}px;
 
+  ${mq.desktop`
+    margin: 24px 0;
+  `}
+
   ${mq.handheld`
+    padding: 0 18px;
     border-radius: 0;
-    position: fixed;
-    overflow: scroll;
-    height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
   `}
 `
 
@@ -50,32 +34,39 @@ export const Header = styled.header`
   flex: 0 0 auto;
   min-height: 60px;
   justify-content: space-between;
-  padding: 18px 0;
+  padding-top: 30px;
+  padding-bottom: ${(props) => (props.isCompact ? '18' : '30')}px;
+  ${H4} {
+    font-weight: 700;
+  }
 
   ${mq.desktop`
     max-width: 588px;
   `}
 
-  ${mq.handheld`
-    padding-right: 102px;
+  ${mq.tablet`
+    padding: 24px 102px 24px 0;
   `}
 
   ${mq.mobile`
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-right: 60px;
+    padding: 18px 62px 18px 0;
 
-    ${H3} {
-      font-size: 20px;
-    }
   `}
 `
 
 export const Content = styled.div`
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-grow: 1;
-  justify-content: center;
+  margin-bottom: 30px;
+  ${mq.tablet`
+    margin-bottom: 24px;
+  `}
+  ${mq.mobile`
+    margin-bottom: 18px;
+  `}
 `
 
 export const StyledIcon = styled(Icon)`
@@ -98,42 +89,28 @@ export const CloseButton = styled.span`
       fill: ${(props) => (props.isCompact ? 'miscLight' : 'white')};
     }
   `}
-
   ${mq.handheld`
     background: ${({ theme }) => theme.color.miscLightest};
     ${borderRadiusCircle.all}
     margin-left: 32px;
-    position: fixed;
+    position: ${(props) => (props.isOnBottom ? 'absolute' : 'fixed')};
     right: 18px;
     top: 15px;
-
-    &:hover {
-      ${shadowSmall}
-    }
-  `}
-
-  ${mq.handheld`
-    margin-left: 72px;
+    ${shadowSmall}
   `}
 `
 
 export const Footer = styled.footer`
   border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
   display: flex;
-  margin-top: 18px;
-  margin-bottom: 30px;
-  padding-top: 30px;
+  padding: ${(props) => (props.isCompact ? '18' : '30')}px 0;
 
   ${mq.handheld`
-    margin: 24px 0 0 0;
-    min-height: 90px;
     padding: 24px 0;
   `}
 
   ${mq.mobile`
     flex-direction: column;
-    min-height: 114px;
-    margin-top: 18px;
     padding: 18px 0;
   `}
 `

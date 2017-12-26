@@ -2,7 +2,7 @@
 import React from 'react'
 import { Portal } from 'react-portal'
 import H1 from 'components/Typography/H1'
-import H3 from 'components/Typography/H3'
+import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
@@ -40,6 +40,7 @@ type Props = {
   closeOnOutsideClick: boolean,
   closeOnEsc: boolean,
   showCloseButton: boolean,
+  isOnBottom: boolean,
 }
 
 /* eslint-disable react/prop-types */
@@ -48,7 +49,7 @@ class Modal extends React.PureComponent<Props> {
     renderHeader: (props) => (props.heading &&
       <Header {...props}>
         {(props.isCompact || props.isHandheld)
-          ? <H3>{props.heading}</H3>
+          ? <H4>{props.heading}</H4>
           : <H1>{props.heading}</H1>
         }
       </Header>
@@ -60,6 +61,7 @@ class Modal extends React.PureComponent<Props> {
     closeOnOutsideClick: true,
     closeOnEsc: true,
     showCloseButton: true,
+    isOnBottom: false,
   }
 
   componentDidMount() {
@@ -93,6 +95,7 @@ class Modal extends React.PureComponent<Props> {
       isOpen,
       closeOnOutsideClick,
       showCloseButton,
+      isOnBottom,
     } = this.props
 
     if (!isOpen) {
@@ -105,12 +108,13 @@ class Modal extends React.PureComponent<Props> {
           <Overlay
             closePortal={closeOnOutsideClick && this.closePortal}
             showCloseButton={showCloseButton}
+            isOnBottom={isOnBottom}
           >
             <ModalContent isCompact={isCompact}>
 
               { renderHeader({ ...this.props, children: heading }) }
               {showCloseButton &&
-                <CloseButton isCompact={isCompact}>
+                <CloseButton isCompact={isCompact} isOnBottom={isOnBottom}>
                   <StyledIcon
                     name="cross"
                     fill={getCloseButtonColor(this.props)}
