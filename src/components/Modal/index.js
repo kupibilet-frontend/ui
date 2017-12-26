@@ -107,11 +107,9 @@ class Modal extends React.PureComponent<Props> {
         <GlobalStylesScope className="responsive">
           <Overlay
             closePortal={closeOnOutsideClick && this.closePortal}
-            showCloseButton={showCloseButton}
             isOnBottom={isOnBottom}
           >
             <ModalContent isCompact={isCompact}>
-
               { renderHeader({ ...this.props, children: heading }) }
               {showCloseButton &&
                 <CloseButton isCompact={isCompact} isOnBottom={isOnBottom}>
