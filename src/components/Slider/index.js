@@ -13,8 +13,19 @@ import {
 
 type SliderValues = Array<number>
 
+type SliderData = {
+  ['pitPoint' : number]: number,
+}
+
+type HeightData = {
+  ['pitPoint' : number]: number,
+}
+
 type State = {
   values: SliderValues,
+  pitPoints: Array<number>,
+  pitWidth: number,
+  pitHeightData: HeightData,
 }
 
 type SliderState = {
@@ -28,21 +39,33 @@ type Props = {
   max: number,
   values: SliderValues,
   disabled: boolean,
-  snap: boolean,
-  snapPoints: Array<number>,
+  snap?: boolean,
+  snapPoints?: Array<number>,
+  sliderData: SliderData,
   progressBar: () => Element,
   handle: () => Element,
   onChange?: (SliderValues) => void,
   onValuesUpdated?: (SliderValues) => void,
 }
 
+type GetPitWidth = (SliderData) => number
 
-const getPitWidth = ({ min, max }) => ((max - min) / 100)
+const getPitWidth : GetPitWidth = ({
+  sliderData,
+}) => (100 / Object.keys(sliderData).length).toFixed(5)
 
-const getPitPoints = ({ sliderData }) => Object.keys(sliderData)
-  .map((key) => key)
+type GetPitPoints = (SliderData) => Array<number>
 
-const getPitHeight = ({ sliderData }) => {
+const getPitPoints : GetPitPoints = ({
+  sliderData,
+}) => Object.keys(sliderData)
+  .map((key) => Number(key))
+
+type GetPitHeight = (SliderData) => HeightData
+
+const getPitHeight : GetPitHeight = ({
+  sliderData,
+}) => {
   const maxHeight = Math.max.apply(null, Object.values(sliderData).map(
     (value) => value),
   )
@@ -54,16 +77,11 @@ const getPitHeight = ({ sliderData }) => {
   return result
 }
 
+type GetInitialValues = (Props) => Array<number>
 
-const getInitialState = (props : Props) => {
+const getInitialValues : GetInitialValues = (props : Props) => {
   const { min, max, values } = props
-  return values
-    ? {
-      values,
-    }
-    : {
-      values: [min, max],
-    }
+  return values || [min, max]
 }
 
 export default class Slider extends React.Component<Props, State> {
@@ -74,10 +92,10 @@ export default class Slider extends React.Component<Props, State> {
     max: 100,
     disabled: false,
   }
-  constructor(props) {
+  constructor(props : Props) {
     super(props)
     this.state = {
-      ...getInitialState(props),
+      values: getInitialValues(props),
       pitPoints: getPitPoints(props),
       pitWidth: getPitWidth(props),
       pitHeightData: getPitHeight(props),
@@ -92,11 +110,11 @@ export default class Slider extends React.Component<Props, State> {
 
   /* eslint-disable react/prop-types */
 
-  getPitComponent = (props) => {
+  getPitComponent = (props : Props) => {
     const { values } = this.state
     const { children } = props
     const { touched } = this
-    const isHighlighted = touched && inRange(children, values[0], values[1])
+    const isHighlighted : boolean = touched && inRange(children, values[0], values[1])
 
     return (
       <StyledPitComponent
