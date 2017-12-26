@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { Component } from 'react'
 import GlobalStylesScope from 'components/ThemeProvider'
 import Icon from 'components/Icon'
 import { withMedia } from 'utils/media-queries'
@@ -7,7 +7,6 @@ import { withMedia } from 'utils/media-queries'
 import {
   Wrapper,
   OverlayContentWrap,
-  OverlayCell,
   OverlayContent,
   OverlayClosePanel,
   OverlayClosePanelIcon,
@@ -18,10 +17,11 @@ type Props = {
   closePortal?: (Event) => void,
   isDesktop: boolean,
   backLink: string,
+  isOnBottom: boolean,
   children: React.Element<*>,
 }
 
-class Overlay extends React.Component<{}, Props, void> {
+class Overlay extends Component<Props, void> {
   static defaultProps = {
     backLink: '',
   }
@@ -50,30 +50,34 @@ class Overlay extends React.Component<{}, Props, void> {
   }
 
   render() {
+    const {
+      closePortal,
+      isOnBottom,
+      children,
+    } = this.props
+
     return (
       <GlobalStylesScope>
         <Wrapper
-          onClick={this.props.closePortal}
+          onClick={closePortal}
         >
-          <OverlayContentWrap>
-            <OverlayCell>
-              {!this.props.isDesktop &&
-                <OverlayClosePanel>
-                  {this.props.backLink &&
-                    <BackLink>
-                      <Icon name="arrow-down" fill="primaryDarkest" size="xxsmall" className="arrow-icon" />
-                      &nbsp;{this.props.backLink}
-                    </BackLink>
-                  }
-                  <OverlayClosePanelIcon>
-                    <Icon name="cross" fill="primaryDarkest" size="xxsmall" className="closing-icon" />
-                  </OverlayClosePanelIcon>
-                </OverlayClosePanel>
-              }
-              <OverlayContent onClick={this.stopPropagation}>
-                {React.cloneElement(this.props.children, { closePortal: this.props.closePortal })}
-              </OverlayContent>
-            </OverlayCell>
+          <OverlayContentWrap isOnBottom={isOnBottom}>
+            {/* {!this.props.isDesktop &&
+              <OverlayClosePanel>
+                {this.props.backLink &&
+                  <BackLink>
+                    <Icon name="arrow-down" fill="primaryDarkest" size="xxsmall" className="arrow-icon" />
+                    &nbsp;{this.props.backLink}
+                  </BackLink>
+                }
+                <OverlayClosePanelIcon>
+                  <Icon name="cross" fill="primaryDarkest" size="xxsmall" className="closing-icon" />
+                </OverlayClosePanelIcon>
+              </OverlayClosePanel>
+            } */}
+            <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
+              {React.cloneElement(children, { closePortal })}
+            </OverlayContent>
           </OverlayContentWrap>
         </Wrapper>
       </GlobalStylesScope>

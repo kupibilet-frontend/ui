@@ -45,26 +45,22 @@ export const Wrapper = styled.div`
 `
 
 export const OverlayContentWrap = styled.div`
-  display: table;
   height: 100%;
   width: 100%;
   opacity: 1;
   padding-top: 0;
   animation-name: ${slide};
   animation-duration: 0.35s;
-
+  text-align: center;
+  &:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
   ${mq.handheld`
     height: 100%;
-    background: white;
-  `}
-`
-
-export const OverlayCell = styled.div`
-  display: table-cell;
-  vertical-align: middle;
-
-  ${mq.handheld`
-    vertical-align: top;
+    ${(props) => (props.isOnBottom ? '' : 'background: white;')}
   `}
 `
 
@@ -83,11 +79,14 @@ export const ClosingButton = styled.span`
 `
 
 export const OverlayContent = styled.div`
-  display: table;
-  margin: 0 auto;
-
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: left;
   ${mq.handheld`
     width: 100%;
+    ${(props) => (props.isOnBottom ? '' : 'min-height: 100%;')}
+    vertical-align: ${(props) => (props.isOnBottom ? 'bottom' : 'top')};
   `}
 `
 export const OverlayClosePanel = styled.div`
