@@ -28,7 +28,7 @@ export const ModalContent = styled.div`
   `}
 `
 
-export const Header = styled.header`
+export const Header = styled.div`
   align-items: center;
   display: flex;
   flex: 0 0 auto;
@@ -100,7 +100,7 @@ export const CloseButton = styled.span`
   `}
 `
 
-export const Footer = styled.footer`
+export const Footer = styled.div`
   border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
   display: flex;
   padding: ${(props) => (props.isCompact ? '18' : '30')}px 0;
