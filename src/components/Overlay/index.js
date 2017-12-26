@@ -8,24 +8,15 @@ import {
   Wrapper,
   OverlayContentWrap,
   OverlayContent,
-  OverlayClosePanel,
-  OverlayClosePanelIcon,
-  BackLink,
 } from './styled'
 
 type Props = {
   closePortal?: (Event) => void,
-  isDesktop: boolean,
-  backLink: string,
   isOnBottom: boolean,
   children: React.Element<*>,
 }
 
 class Overlay extends Component<Props, void> {
-  static defaultProps = {
-    backLink: '',
-  }
-
   componentWillMount() {
     this.calcWidth()
     window.addEventListener('resize', this.calcWidth)
@@ -62,19 +53,6 @@ class Overlay extends Component<Props, void> {
           onClick={closePortal}
         >
           <OverlayContentWrap isOnBottom={isOnBottom}>
-            {/* {!this.props.isDesktop &&
-              <OverlayClosePanel>
-                {this.props.backLink &&
-                  <BackLink>
-                    <Icon name="arrow-down" fill="primaryDarkest" size="xxsmall" className="arrow-icon" />
-                    &nbsp;{this.props.backLink}
-                  </BackLink>
-                }
-                <OverlayClosePanelIcon>
-                  <Icon name="cross" fill="primaryDarkest" size="xxsmall" className="closing-icon" />
-                </OverlayClosePanelIcon>
-              </OverlayClosePanel>
-            } */}
             <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
               {React.cloneElement(children, { closePortal })}
             </OverlayContent>

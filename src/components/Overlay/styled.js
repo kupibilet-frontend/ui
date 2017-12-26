@@ -64,20 +64,6 @@ export const OverlayContentWrap = styled.div`
   `}
 `
 
-export const ClosingButton = styled.span`
-  position: absolute;
-  top: 5px;
-  right: 4px;
-
-  &:hover .closing-icon {
-    fill: white;
-  }
-
-  ${mq.handheld`
-    display: none;
-  `}
-`
-
 export const OverlayContent = styled.div`
   display: inline-flex;
   justify-content: center;
@@ -88,46 +74,4 @@ export const OverlayContent = styled.div`
     ${(props) => (props.isOnBottom ? '' : 'min-height: 100%;')}
     vertical-align: ${(props) => (props.isOnBottom ? 'bottom' : 'top')};
   `}
-`
-export const OverlayClosePanel = styled.div`
-  display: none;
-
-  .responsive & {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 20px;
-    color: ${({ theme }) => theme.color.primaryDarkest};
-    font-size: 16px;
-    line-height: 20px;
-
-    &:hover {
-      color: ${({ theme }) => theme.color.primaryDarker};
-    }
-
-    &:hover {
-      .closing-icon, .arrow-icon {
-        fill: ${({ theme }) => theme.color.primaryDarker};
-      }
-    }
-
-    ${mq.desktop`
-      display: none;
-    `}
-  }
-`
-
-export const OverlayClosePanelIcon = styled.span`
-  margin-left: auto;
-`
-
-export const BackLink = styled.span`
-  display: flex;
-  align-items: center;
-
-  & .arrow-icon {
-    transform: rotate(90deg);
-  }
 `
