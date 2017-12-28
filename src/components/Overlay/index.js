@@ -16,35 +16,13 @@ type Props = {
 }
 
 class Overlay extends Component<Props, void> {
-  constructor() {
-    super()
-    this.scrollPosition = 0
-  }
   componentWillMount() {
-    this.calcWidth()
-    window.addEventListener('resize', this.calcWidth)
-  }
-
-  componentDidMount() {
-    document.body.style.overflow = 'hidden'
-    this.scrollPosition = window.scrollY
-    document.body.style.position = 'fixed'
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.calcWidth)
-    document.body.style.overflow = 'auto'
-    document.body.style.maxWidth = 'none'
-    document.body.style.position = 'relative'
-    window.scrollTo(0, this.scrollPosition)
+    document.body.getElementsByTagName('div')[0].style.overflow = 'auto'
+    document.body.getElementsByTagName('div')[0].style.height = '100%'
   }
 
   stopPropagation = (e) => {
     e.stopPropagation()
-  }
-
-  calcWidth = () => {
-    document.body.style.maxWidth = `${document.body.clientWidth}px`
   }
 
   render() {
