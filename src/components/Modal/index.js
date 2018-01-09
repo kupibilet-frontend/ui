@@ -46,11 +46,11 @@ type Props = {
 /* eslint-disable react/prop-types */
 class Modal extends React.PureComponent<Props> {
   static defaultProps = {
-    renderHeader: (props) => (props.heading &&
-      <Header {...props}>
-        {(props.isCompact || props.isHandheld)
-          ? <H4>{props.heading}</H4>
-          : <H1>{props.heading}</H1>
+    renderHeader: ({ heading, isCompact, isHandheld }) => (heading &&
+      <Header isCompact={isCompact}>
+        {(isCompact || isHandheld)
+          ? <H4>{heading}</H4>
+          : <H1>{heading}</H1>
         }
       </Header>
     ),

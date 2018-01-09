@@ -22,7 +22,6 @@ class Overlay extends Component<Props, void> {
   }
 
   componentDidMount() {
-    document.body.style.overflow = 'hidden'
     this.scrollPosition = window.scrollY
     const node = document.querySelector('body div:first-child')
     if (node) {
@@ -38,7 +37,6 @@ class Overlay extends Component<Props, void> {
       node.style.overflow = ''
       node.style.height = ''
     }
-    document.body.style.overflow = ''
     window.scrollTo(0, this.scrollPosition)
   }
 
