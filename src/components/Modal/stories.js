@@ -13,7 +13,7 @@ const onClose = () => {
   updateKnob('isOpen', 'boolean', false)
 }
 
-const footerContent = [
+const footerContent = React.Children.toArray([
   <Button
     size="large"
     onClick={onClose}
@@ -27,7 +27,7 @@ const footerContent = [
   >
     Отменить
   </Button>,
-]
+])
 
 storiesOf('Complex controls/Modal', module)
   .addWithInfo('Default', () => {
@@ -44,7 +44,22 @@ storiesOf('Complex controls/Modal', module)
           isOpen={isOpen}
           onClose={onClose}
         >
-          Full Screen Content
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
+           non neque tincidunt tincidunt. Suspendisse potenti. Phasellus ligula ante,
+            tempus sit amet nulla at, pretium euismod ipsum. Nullam ex erat, faucibus
+             ac augue eu, tempor tincidunt sapien. Donec bibendum hendrerit dolor at
+              ullamcorper. Fusce eu nulla dictum, convallis quam at, pellentesque lorem.
+               Aenean sit amet augue facilisis, dictum mi non, ornare dui. Sed imperdiet
+               metus nec diam varius commodo. In bibendum elit luctus tempus vulputate.
+                Maecenas ac justo nec urna imperdiet interdum in in massa. Maecenas ut
+                varius magna. Quisque rhoncus tincidunt aliquet. Pellentesque a arcu
+                vestibulum, fermentum ex at, sagittis ligula. Praesent nec purus at
+                elit mollis accumsan vitae vel ex. Donec dictum molestie dui eget tempus.
+                Aenean mi justo, vehicula ac pulvinar non, vestibulum et nisl. Donec ut leo
+                interdum, porta metus at, consequat sem. Interdum et malesuada fames ac ante
+                ipsum primis in faucibus. Aliquam non mi sed nisi ornare mollis. Praesent qu
+                is lobortis est. Nunc congue ornare tortor.
+
         </Modal>
       </div>
     )
@@ -64,6 +79,27 @@ storiesOf('Complex controls/Modal', module)
           isOpen={isOpen}
           onClose={onClose}
           isCompact
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
+        </Modal>
+      </div>
+    )
+  })
+
+  .addWithInfo('Bottom on mobile', () => {
+    const isOpen = boolean('isOpen', false)
+
+    return (
+      <div>
+        <Button onClick={onClick}>
+          Open Modal
+        </Button>
+        <Modal
+          heading="Поделиться"
+          isOpen={isOpen}
+          onClose={onClose}
+          isCompact
+          isOnBottom
         >
           Full Screen Content
         </Modal>

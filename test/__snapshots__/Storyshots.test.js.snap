@@ -20,7 +20,7 @@ exports[`Storyshots Blocks Box 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -254,7 +254,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -511,7 +511,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="rc-tabs rc-tabs-top"
@@ -604,7 +604,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -691,7 +691,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -778,7 +778,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -1195,7 +1195,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -1776,7 +1776,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -1941,7 +1941,7 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <onClickOutside-Mock-Decorator>
     <div
@@ -1966,6 +1966,86 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
       </div>
     </div>
   </onClickOutside-Mock-Decorator>
+</div>
+`;
+
+exports[`Storyshots Complex controls/Modal Bottom on mobile 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c1:hover {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c1:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+<div
+  className="responsive c0"
+>
+  <div>
+    <button
+      className="c1"
+      disabled={undefined}
+      onClick={[Function]}
+      size="normal"
+    >
+      <span
+        className="c2"
+        size="normal"
+      >
+        Open Modal
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
@@ -2029,7 +2109,7 @@ exports[`Storyshots Complex controls/Modal Compact 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div>
     <button
@@ -2109,7 +2189,7 @@ exports[`Storyshots Complex controls/Modal Default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div>
     <button
@@ -2313,7 +2393,7 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -2591,7 +2671,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div>
     <div
@@ -3114,7 +3194,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -3236,7 +3316,7 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <button
     className="c1"
@@ -3342,7 +3422,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <button
     className="c1"
@@ -3469,7 +3549,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <button
     className="c1"
@@ -3596,7 +3676,7 @@ exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <label
     className="c1"
@@ -4166,7 +4246,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -4593,7 +4673,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -4871,7 +4951,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -5080,7 +5160,7 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -5291,7 +5371,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -5553,7 +5633,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -5760,7 +5840,7 @@ exports[`Storyshots Controls/Input default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -5830,7 +5910,7 @@ exports[`Storyshots Controls/Link <a> link 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <a
     className="c1"
@@ -5926,7 +6006,7 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <span
     className="c1"
@@ -6045,7 +6125,7 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <button
     className="c1"
@@ -6110,7 +6190,7 @@ exports[`Storyshots Controls/Popover With \`dotCentering\` prop 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <span
     className="c1"
@@ -6220,7 +6300,7 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <button
     className="c1"
@@ -6341,7 +6421,7 @@ exports[`Storyshots Controls/Popover default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <button
     className="c1"
@@ -6514,7 +6594,7 @@ exports[`Storyshots Controls/Radio default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div>
     <label
@@ -6832,7 +6912,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -7159,7 +7239,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -7483,7 +7563,7 @@ exports[`Storyshots Controls/Select default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -7639,7 +7719,7 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <button
     className="c1"
@@ -7750,7 +7830,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -7827,7 +7907,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -7933,7 +8013,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
@@ -8017,7 +8097,7 @@ exports[`Storyshots FormItem default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     className="c1"
@@ -8069,7 +8149,7 @@ exports[`Storyshots Icon Default 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <span
     className="c1"
@@ -8252,7 +8332,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div>
     <div
@@ -8328,14 +8408,14 @@ exports[`Storyshots Utils Typography 1`] = `
   margin: 0;
 }
 
-.c3 {
-  font-size: 30px;
+.c4 {
+  font-size: 24px;
   font-weight: 600;
-  line-height: 34px;
-  -webkit-letter-spacing: -.6px;
-  -moz-letter-spacing: -.6px;
-  -ms-letter-spacing: -.6px;
-  letter-spacing: -.6px;
+  line-height: 28px;
+  -webkit-letter-spacing: -.4px;
+  -moz-letter-spacing: -.4px;
+  -ms-letter-spacing: -.4px;
+  letter-spacing: -.4px;
   margin: 0;
 }
 
@@ -8362,14 +8442,14 @@ exports[`Storyshots Utils Typography 1`] = `
   margin: 0;
 }
 
-.c4 {
-  font-size: 24px;
+.c3 {
+  font-size: 30px;
   font-weight: 600;
-  line-height: 28px;
-  -webkit-letter-spacing: -.4px;
-  -moz-letter-spacing: -.4px;
-  -ms-letter-spacing: -.4px;
-  letter-spacing: -.4px;
+  line-height: 34px;
+  -webkit-letter-spacing: -.6px;
+  -moz-letter-spacing: -.6px;
+  -ms-letter-spacing: -.6px;
+  letter-spacing: -.6px;
   margin: 0;
 }
 
@@ -8461,14 +8541,14 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c3,
-  .responsive-booking .c3 {
-    font-size: 24px;
-    line-height: 28px;
-    -webkit-letter-spacing: -.4px;
-    -moz-letter-spacing: -.4px;
-    -ms-letter-spacing: -.4px;
-    letter-spacing: -.4px;
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.2px;
+    -moz-letter-spacing: -.2px;
+    -ms-letter-spacing: -.2px;
+    letter-spacing: -.2px;
   }
 }
 
@@ -8485,14 +8565,14 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c4,
-  .responsive-booking .c4 {
-    font-size: 20px;
-    line-height: 24px;
-    -webkit-letter-spacing: -.2px;
-    -moz-letter-spacing: -.2px;
-    -ms-letter-spacing: -.2px;
-    letter-spacing: -.2px;
+  .responsive .c3,
+  .responsive-booking .c3 {
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
   }
 }
 
@@ -8525,7 +8605,7 @@ exports[`Storyshots Utils Typography 1`] = `
 }
 
 <div
-  className="c0"
+  className="responsive c0"
 >
   <div
     style={
