@@ -55,6 +55,7 @@ class Overlay extends Component<Props, void> {
       <GlobalStylesScope>
         <Wrapper
           onClick={closePortal}
+          isOnBottom={isOnBottom}
         >
           <OverlayContentWrap isOnBottom={isOnBottom}>
             <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
