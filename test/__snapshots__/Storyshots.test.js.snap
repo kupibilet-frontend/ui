@@ -7641,7 +7641,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
 
 .c1 {
   width: 100%;
-  height: 100px;
+  height: 100%;
 }
 
 .c1 .rheostat-background {
@@ -7691,853 +7691,12 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
 .c4 {
   background-color: #dde3eb;
   font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 37%;
-}
-
-.c5 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 69%;
-}
-
-.c6 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 58%;
-}
-
-.c7 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 42%;
-}
-
-.c8 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 94%;
-}
-
-.c9 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 57%;
-}
-
-.c10 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 10%;
-}
-
-.c11 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 70%;
-}
-
-.c12 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 6%;
-}
-
-.c13 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 2%;
-}
-
-.c14 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 61%;
-}
-
-.c15 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 51%;
-}
-
-.c16 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 46%;
-}
-
-.c17 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 82%;
-}
-
-.c18 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 65%;
-}
-
-.c19 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 71%;
-}
-
-.c20 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 32%;
-}
-
-.c21 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 77%;
-}
-
-.c22 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 26%;
-}
-
-.c23 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 56%;
-}
-
-.c24 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 75%;
-}
-
-.c25 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 38%;
-}
-
-.c26 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 98%;
-}
-
-.c27 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 52%;
-}
-
-.c28 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 72%;
-}
-
-.c29 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 19%;
-}
-
-.c30 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 5%;
-}
-
-.c31 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 27%;
-}
-
-.c32 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 91%;
-}
-
-.c33 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 14%;
-}
-
-.c34 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 36%;
-}
-
-.c35 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 16%;
-}
-
-.c36 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 74%;
-}
-
-.c37 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 99%;
-}
-
-.c38 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 54%;
-}
-
-.c39 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 45%;
-}
-
-.c40 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 39%;
-}
-
-.c41 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 79%;
-}
-
-.c42 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 59%;
-}
-
-.c43 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 41%;
-}
-
-.c44 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 63%;
-}
-
-.c45 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 92%;
-}
-
-.c46 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 87%;
-}
-
-.c47 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 100%;
-}
-
-.c48 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 17%;
-}
-
-.c49 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 43%;
-}
-
-.c50 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 93%;
-}
-
-.c51 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 60%;
-}
-
-.c52 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 83%;
-}
-
-.c53 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 29%;
-}
-
-.c54 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 24%;
-}
-
-.c55 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 18%;
-}
-
-.c56 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 9%;
-}
-
-.c57 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 21%;
-}
-
-.c58 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 11%;
-}
-
-.c59 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 90%;
-}
-
-.c60 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 80%;
-}
-
-.c61 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 62%;
-}
-
-.c62 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 76%;
-}
-
-.c63 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 64%;
-}
-
-.c64 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 33%;
-}
-
-.c65 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 78%;
-}
-
-.c66 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 1%;
-}
-
-.c67 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 89%;
-}
-
-.c68 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 22%;
-}
-
-.c69 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 67%;
-}
-
-.c70 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 88%;
-}
-
-.c71 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 73%;
-}
-
-.c72 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 3%;
-}
-
-.c73 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 53%;
-}
-
-.c74 {
-  background-color: #dde3eb;
-  font-size: 0;
-  bottom: 6px;
-  z-index: 1;
-  -webkit-transform: translateY(-94px);
-  -ms-transform: translateY(-94px);
-  transform: translateY(-94px);
-  width: 0.82645%;
-  height: 34%;
+  top: 0;
+  z-index: 1;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  width: 1.0416666666666667%;
 }
 
 <div
@@ -8547,7 +7706,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
     style={
       Object {
         "height": "100px",
-        "width": "252px",
+        "width": "852px",
       }
     }
   >
@@ -8565,7 +7724,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         01 января 12:00
       </span>
       <span>
-        03 января 12:00
+        02 января 12:00
       </span>
     </div>
     <div
@@ -8582,7 +7741,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
       />
       <span
         aria-disabled={false}
-        aria-valuemax={1648212}
+        aria-valuemax={1648116}
         aria-valuemin={1648020}
         aria-valuenow={1648020}
         backgroundcolor="#96a0b3"
@@ -8603,9 +7762,9 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
       />
       <span
         aria-disabled={false}
-        aria-valuemax={1648212}
+        aria-valuemax={1648116}
         aria-valuemin={1648020}
-        aria-valuenow={1648212}
+        aria-valuenow={1648116}
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
@@ -8635,1333 +7794,602 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "left": "21.354166666666664%",
+            "height": "61%",
+            "left": "11.458333333333332%",
             "position": "absolute",
           }
         }
-      >
-        1648061
-      </span>
+      />
       <span
-        className="c5"
+        className="c4"
         style={
           Object {
+            "height": "49%",
+            "left": "12.5%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "81%",
+            "left": "13.541666666666666%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "79%",
+            "left": "14.583333333333334%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "84%",
+            "left": "15.625%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "47%",
+            "left": "16.666666666666664%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "81%",
+            "left": "17.708333333333336%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "34%",
+            "left": "18.75%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "29%",
+            "left": "19.791666666666664%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "93%",
+            "left": "20.833333333333336%",
+            "position": "absolute",
+          }
+        }
+      />
+      <span
+        className="c4"
+        style={
+          Object {
+            "height": "96%",
             "left": "21.875%",
             "position": "absolute",
           }
         }
-      >
-        1648062
-      </span>
+      />
       <span
-        className="c6"
+        className="c4"
         style={
           Object {
-            "left": "22.395833333333336%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648063
-      </span>
-      <span
-        className="c5"
-        style={
-          Object {
+            "height": "76%",
             "left": "22.916666666666664%",
             "position": "absolute",
           }
         }
-      >
-        1648064
-      </span>
+      />
       <span
-        className="c7"
+        className="c4"
         style={
           Object {
-            "left": "23.4375%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648065
-      </span>
-      <span
-        className="c8"
-        style={
-          Object {
+            "height": "3%",
             "left": "23.958333333333336%",
             "position": "absolute",
           }
         }
-      >
-        1648066
-      </span>
+      />
       <span
-        className="c9"
+        className="c4"
         style={
           Object {
-            "left": "24.479166666666664%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648067
-      </span>
-      <span
-        className="c10"
-        style={
-          Object {
+            "height": "21%",
             "left": "25%",
             "position": "absolute",
           }
         }
-      >
-        1648068
-      </span>
+      />
       <span
-        className="c11"
+        className="c4"
         style={
           Object {
-            "left": "25.520833333333332%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648069
-      </span>
-      <span
-        className="c12"
-        style={
-          Object {
+            "height": "56%",
             "left": "26.041666666666668%",
             "position": "absolute",
           }
         }
-      >
-        1648070
-      </span>
+      />
       <span
-        className="c7"
+        className="c4"
         style={
           Object {
-            "left": "26.5625%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648071
-      </span>
-      <span
-        className="c13"
-        style={
-          Object {
+            "height": "49%",
             "left": "27.083333333333332%",
             "position": "absolute",
           }
         }
-      >
-        1648072
-      </span>
+      />
       <span
-        className="c14"
+        className="c4"
         style={
           Object {
-            "left": "27.604166666666668%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648073
-      </span>
-      <span
-        className="c15"
-        style={
-          Object {
+            "height": "48%",
             "left": "28.125%",
             "position": "absolute",
           }
         }
-      >
-        1648074
-      </span>
+      />
       <span
-        className="c16"
+        className="c4"
         style={
           Object {
-            "left": "28.645833333333332%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648075
-      </span>
-      <span
-        className="c17"
-        style={
-          Object {
+            "height": "74%",
             "left": "29.166666666666668%",
             "position": "absolute",
           }
         }
-      >
-        1648076
-      </span>
+      />
       <span
-        className="c18"
+        className="c4"
         style={
           Object {
-            "left": "29.6875%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648077
-      </span>
-      <span
-        className="c13"
-        style={
-          Object {
+            "height": "30%",
             "left": "30.208333333333332%",
             "position": "absolute",
           }
         }
-      >
-        1648078
-      </span>
+      />
       <span
-        className="c12"
+        className="c4"
         style={
           Object {
-            "left": "30.729166666666668%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648079
-      </span>
-      <span
-        className="c19"
-        style={
-          Object {
+            "height": "85%",
             "left": "31.25%",
             "position": "absolute",
           }
         }
-      >
-        1648080
-      </span>
+      />
       <span
-        className="c18"
+        className="c4"
         style={
           Object {
-            "left": "31.770833333333332%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648081
-      </span>
-      <span
-        className="c18"
-        style={
-          Object {
+            "height": "91%",
             "left": "32.29166666666667%",
             "position": "absolute",
           }
         }
-      >
-        1648082
-      </span>
+      />
       <span
-        className="c20"
+        className="c4"
         style={
           Object {
-            "left": "32.8125%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648083
-      </span>
-      <span
-        className="c21"
-        style={
-          Object {
+            "height": "96%",
             "left": "33.33333333333333%",
             "position": "absolute",
           }
         }
-      >
-        1648084
-      </span>
+      />
       <span
-        className="c22"
+        className="c4"
         style={
           Object {
-            "left": "33.85416666666667%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648085
-      </span>
-      <span
-        className="c23"
-        style={
-          Object {
+            "height": "30%",
             "left": "34.375%",
             "position": "absolute",
           }
         }
-      >
-        1648086
-      </span>
+      />
       <span
-        className="c24"
+        className="c4"
         style={
           Object {
-            "left": "34.89583333333333%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648087
-      </span>
-      <span
-        className="c25"
-        style={
-          Object {
+            "height": "66%",
             "left": "35.41666666666667%",
             "position": "absolute",
           }
         }
-      >
-        1648088
-      </span>
+      />
       <span
-        className="c26"
+        className="c4"
         style={
           Object {
-            "left": "35.9375%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648089
-      </span>
-      <span
-        className="c27"
-        style={
-          Object {
+            "height": "62%",
             "left": "36.45833333333333%",
             "position": "absolute",
           }
         }
-      >
-        1648090
-      </span>
+      />
       <span
-        className="c27"
+        className="c4"
         style={
           Object {
-            "left": "36.97916666666667%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648091
-      </span>
-      <span
-        className="c28"
-        style={
-          Object {
+            "height": "40%",
             "left": "37.5%",
             "position": "absolute",
           }
         }
-      >
-        1648092
-      </span>
+      />
       <span
-        className="c29"
+        className="c4"
         style={
           Object {
-            "left": "38.02083333333333%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648093
-      </span>
-      <span
-        className="c30"
-        style={
-          Object {
+            "height": "51%",
             "left": "38.54166666666667%",
             "position": "absolute",
           }
         }
-      >
-        1648094
-      </span>
+      />
       <span
-        className="c13"
+        className="c4"
         style={
           Object {
-            "left": "39.0625%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648095
-      </span>
-      <span
-        className="c31"
-        style={
-          Object {
+            "height": "52%",
             "left": "39.58333333333333%",
             "position": "absolute",
           }
         }
-      >
-        1648096
-      </span>
+      />
       <span
-        className="c32"
+        className="c4"
         style={
           Object {
-            "left": "40.10416666666667%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648097
-      </span>
-      <span
-        className="c33"
-        style={
-          Object {
+            "height": "70%",
             "left": "40.625%",
             "position": "absolute",
           }
         }
-      >
-        1648098
-      </span>
+      />
       <span
-        className="c34"
+        className="c4"
         style={
           Object {
-            "left": "41.14583333333333%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648099
-      </span>
-      <span
-        className="c35"
-        style={
-          Object {
+            "height": "57%",
             "left": "41.66666666666667%",
             "position": "absolute",
           }
         }
-      >
-        1648100
-      </span>
+      />
       <span
-        className="c36"
+        className="c4"
         style={
           Object {
-            "left": "42.1875%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648101
-      </span>
-      <span
-        className="c37"
-        style={
-          Object {
+            "height": "96%",
             "left": "42.70833333333333%",
             "position": "absolute",
           }
         }
-      >
-        1648102
-      </span>
+      />
       <span
-        className="c38"
+        className="c4"
         style={
           Object {
-            "left": "43.22916666666667%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648103
-      </span>
-      <span
-        className="c39"
-        style={
-          Object {
+            "height": "12%",
             "left": "43.75%",
             "position": "absolute",
           }
         }
-      >
-        1648104
-      </span>
+      />
       <span
-        className="c27"
+        className="c4"
         style={
           Object {
-            "left": "44.27083333333333%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648105
-      </span>
-      <span
-        className="c38"
-        style={
-          Object {
+            "height": "13%",
             "left": "44.79166666666667%",
             "position": "absolute",
           }
         }
-      >
-        1648106
-      </span>
+      />
       <span
-        className="c40"
+        className="c4"
         style={
           Object {
-            "left": "45.3125%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648107
-      </span>
-      <span
-        className="c41"
-        style={
-          Object {
+            "height": "91%",
             "left": "45.83333333333333%",
             "position": "absolute",
           }
         }
-      >
-        1648108
-      </span>
+      />
       <span
-        className="c32"
+        className="c4"
         style={
           Object {
-            "left": "46.35416666666667%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648109
-      </span>
-      <span
-        className="c32"
-        style={
-          Object {
+            "height": "41%",
             "left": "46.875%",
             "position": "absolute",
           }
         }
-      >
-        1648110
-      </span>
+      />
       <span
-        className="c42"
+        className="c4"
         style={
           Object {
-            "left": "47.39583333333333%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648111
-      </span>
-      <span
-        className="c43"
-        style={
-          Object {
+            "height": "30%",
             "left": "47.91666666666667%",
             "position": "absolute",
           }
         }
-      >
-        1648112
-      </span>
+      />
       <span
-        className="c18"
+        className="c4"
         style={
           Object {
-            "left": "48.4375%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648113
-      </span>
-      <span
-        className="c44"
-        style={
-          Object {
+            "height": "100%",
             "left": "48.95833333333333%",
             "position": "absolute",
           }
         }
-      >
-        1648114
-      </span>
+      />
       <span
-        className="c39"
+        className="c4"
         style={
           Object {
-            "left": "49.47916666666667%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648115
-      </span>
-      <span
-        className="c8"
-        style={
-          Object {
+            "height": "55%",
             "left": "50%",
             "position": "absolute",
           }
         }
-      >
-        1648116
-      </span>
+      />
       <span
-        className="c45"
+        className="c4"
         style={
           Object {
-            "left": "50.520833333333336%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648117
-      </span>
-      <span
-        className="c46"
-        style={
-          Object {
+            "height": "91%",
             "left": "51.041666666666664%",
             "position": "absolute",
           }
         }
-      >
-        1648118
-      </span>
+      />
       <span
-        className="c47"
+        className="c4"
         style={
           Object {
-            "left": "51.5625%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648119
-      </span>
-      <span
-        className="c48"
-        style={
-          Object {
+            "height": "70%",
             "left": "52.083333333333336%",
             "position": "absolute",
           }
         }
-      >
-        1648120
-      </span>
+      />
       <span
-        className="c49"
+        className="c4"
         style={
           Object {
-            "left": "52.604166666666664%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648121
-      </span>
-      <span
-        className="c20"
-        style={
-          Object {
+            "height": "21%",
             "left": "53.125%",
             "position": "absolute",
           }
         }
-      >
-        1648122
-      </span>
+      />
       <span
-        className="c25"
+        className="c4"
         style={
           Object {
-            "left": "53.645833333333336%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648123
-      </span>
-      <span
-        className="c50"
-        style={
-          Object {
+            "height": "48%",
             "left": "54.166666666666664%",
             "position": "absolute",
           }
         }
-      >
-        1648124
-      </span>
+      />
       <span
-        className="c51"
+        className="c4"
         style={
           Object {
-            "left": "54.6875%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648125
-      </span>
-      <span
-        className="c52"
-        style={
-          Object {
+            "height": "99%",
             "left": "55.208333333333336%",
             "position": "absolute",
           }
         }
-      >
-        1648126
-      </span>
+      />
       <span
-        className="c53"
+        className="c4"
         style={
           Object {
-            "left": "55.729166666666664%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648127
-      </span>
-      <span
-        className="c50"
-        style={
-          Object {
+            "height": "84%",
             "left": "56.25%",
             "position": "absolute",
           }
         }
-      >
-        1648128
-      </span>
+      />
       <span
-        className="c54"
+        className="c4"
         style={
           Object {
-            "left": "56.770833333333336%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648129
-      </span>
-      <span
-        className="c55"
-        style={
-          Object {
+            "height": "78%",
             "left": "57.291666666666664%",
             "position": "absolute",
           }
         }
-      >
-        1648130
-      </span>
+      />
       <span
-        className="c12"
+        className="c4"
         style={
           Object {
-            "left": "57.8125%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648131
-      </span>
-      <span
-        className="c56"
-        style={
-          Object {
+            "height": "13%",
             "left": "58.333333333333336%",
             "position": "absolute",
           }
         }
-      >
-        1648132
-      </span>
+      />
       <span
-        className="c7"
+        className="c4"
         style={
           Object {
-            "left": "58.854166666666664%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648133
-      </span>
-      <span
-        className="c57"
-        style={
-          Object {
+            "height": "45%",
             "left": "59.375%",
             "position": "absolute",
           }
         }
-      >
-        1648134
-      </span>
+      />
       <span
-        className="c58"
+        className="c4"
         style={
           Object {
-            "left": "59.895833333333336%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648135
-      </span>
-      <span
-        className="c36"
-        style={
-          Object {
+            "height": "24%",
             "left": "60.416666666666664%",
             "position": "absolute",
           }
         }
-      >
-        1648136
-      </span>
+      />
       <span
-        className="c59"
+        className="c4"
         style={
           Object {
-            "left": "60.9375%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648137
-      </span>
-      <span
-        className="c60"
-        style={
-          Object {
+            "height": "76%",
             "left": "61.458333333333336%",
             "position": "absolute",
           }
         }
-      >
-        1648138
-      </span>
+      />
       <span
-        className="c34"
+        className="c4"
         style={
           Object {
-            "left": "61.979166666666664%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648139
-      </span>
-      <span
-        className="c48"
-        style={
-          Object {
+            "height": "29%",
             "left": "62.5%",
             "position": "absolute",
           }
         }
-      >
-        1648140
-      </span>
+      />
       <span
-        className="c61"
+        className="c4"
         style={
           Object {
-            "left": "63.020833333333336%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648141
-      </span>
-      <span
-        className="c32"
-        style={
-          Object {
+            "height": "24%",
             "left": "63.541666666666664%",
             "position": "absolute",
           }
         }
-      >
-        1648142
-      </span>
+      />
       <span
-        className="c28"
+        className="c4"
         style={
           Object {
-            "left": "64.0625%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648143
-      </span>
-      <span
-        className="c13"
-        style={
-          Object {
+            "height": "49%",
             "left": "64.58333333333334%",
             "position": "absolute",
           }
         }
-      >
-        1648144
-      </span>
+      />
       <span
-        className="c62"
+        className="c4"
         style={
           Object {
-            "left": "65.10416666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648145
-      </span>
-      <span
-        className="c14"
-        style={
-          Object {
+            "height": "76%",
             "left": "65.625%",
             "position": "absolute",
           }
         }
-      >
-        1648146
-      </span>
+      />
       <span
-        className="c57"
+        className="c4"
         style={
           Object {
-            "left": "66.14583333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648147
-      </span>
-      <span
-        className="c14"
-        style={
-          Object {
+            "height": "17%",
             "left": "66.66666666666666%",
             "position": "absolute",
           }
         }
-      >
-        1648148
-      </span>
+      />
       <span
-        className="c26"
+        className="c4"
         style={
           Object {
-            "left": "67.1875%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648149
-      </span>
-      <span
-        className="c42"
-        style={
-          Object {
+            "height": "26%",
             "left": "67.70833333333334%",
             "position": "absolute",
           }
         }
-      >
-        1648150
-      </span>
+      />
       <span
-        className="c7"
+        className="c4"
         style={
           Object {
-            "left": "68.22916666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648151
-      </span>
-      <span
-        className="c19"
-        style={
-          Object {
+            "height": "19%",
             "left": "68.75%",
             "position": "absolute",
           }
         }
-      >
-        1648152
-      </span>
+      />
       <span
-        className="c5"
+        className="c4"
         style={
           Object {
-            "left": "69.27083333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648153
-      </span>
-      <span
-        className="c63"
-        style={
-          Object {
+            "height": "22%",
             "left": "69.79166666666666%",
             "position": "absolute",
           }
         }
-      >
-        1648154
-      </span>
+      />
       <span
-        className="c27"
+        className="c4"
         style={
           Object {
-            "left": "70.3125%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648155
-      </span>
-      <span
-        className="c64"
-        style={
-          Object {
+            "height": "76%",
             "left": "70.83333333333334%",
             "position": "absolute",
           }
         }
-      >
-        1648156
-      </span>
+      />
       <span
-        className="c65"
+        className="c4"
         style={
           Object {
-            "left": "71.35416666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648157
-      </span>
-      <span
-        className="c12"
-        style={
-          Object {
+            "height": "51%",
             "left": "71.875%",
             "position": "absolute",
           }
         }
-      >
-        1648158
-      </span>
+      />
       <span
-        className="c51"
+        className="c4"
         style={
           Object {
-            "left": "72.39583333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648159
-      </span>
-      <span
-        className="c5"
-        style={
-          Object {
+            "height": "8%",
             "left": "72.91666666666666%",
             "position": "absolute",
           }
         }
-      >
-        1648160
-      </span>
-      <span
-        className="c47"
-        style={
-          Object {
-            "left": "73.4375%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648161
-      </span>
-      <span
-        className="c13"
-        style={
-          Object {
-            "left": "73.95833333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648162
-      </span>
-      <span
-        className="c66"
-        style={
-          Object {
-            "left": "74.47916666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648163
-      </span>
-      <span
-        className="c67"
-        style={
-          Object {
-            "left": "75%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648164
-      </span>
-      <span
-        className="c12"
-        style={
-          Object {
-            "left": "75.52083333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648165
-      </span>
-      <span
-        className="c55"
-        style={
-          Object {
-            "left": "76.04166666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648166
-      </span>
-      <span
-        className="c54"
-        style={
-          Object {
-            "left": "76.5625%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648167
-      </span>
-      <span
-        className="c60"
-        style={
-          Object {
-            "left": "77.08333333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648168
-      </span>
-      <span
-        className="c65"
-        style={
-          Object {
-            "left": "77.60416666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648169
-      </span>
-      <span
-        className="c68"
-        style={
-          Object {
-            "left": "78.125%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648170
-      </span>
-      <span
-        className="c40"
-        style={
-          Object {
-            "left": "78.64583333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648171
-      </span>
-      <span
-        className="c69"
-        style={
-          Object {
-            "left": "79.16666666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648172
-      </span>
-      <span
-        className="c70"
-        style={
-          Object {
-            "left": "79.6875%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648173
-      </span>
-      <span
-        className="c27"
-        style={
-          Object {
-            "left": "80.20833333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648174
-      </span>
-      <span
-        className="c17"
-        style={
-          Object {
-            "left": "80.72916666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648175
-      </span>
-      <span
-        className="c71"
-        style={
-          Object {
-            "left": "81.25%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648176
-      </span>
-      <span
-        className="c43"
-        style={
-          Object {
-            "left": "81.77083333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648177
-      </span>
-      <span
-        className="c72"
-        style={
-          Object {
-            "left": "82.29166666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648178
-      </span>
-      <span
-        className="c73"
-        style={
-          Object {
-            "left": "82.8125%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648179
-      </span>
-      <span
-        className="c74"
-        style={
-          Object {
-            "left": "83.33333333333334%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648180
-      </span>
-      <span
-        className="c18"
-        style={
-          Object {
-            "left": "83.85416666666666%",
-            "position": "absolute",
-          }
-        }
-      >
-        1648181
-      </span>
+      />
     </div>
   </div>
 </div>
@@ -9982,7 +8410,7 @@ exports[`Storyshots Controls/Slider default 1`] = `
 
 .c1 {
   width: 100%;
-  height: 100px;
+  height: 100%;
 }
 
 .c1 .rheostat-background {
