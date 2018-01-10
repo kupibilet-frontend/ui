@@ -7794,7 +7794,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "61%",
+            "height": "21%",
             "left": "11.458333333333332%",
             "position": "absolute",
           }
@@ -7804,7 +7804,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "49%",
+            "height": "84%",
             "left": "12.5%",
             "position": "absolute",
           }
@@ -7814,7 +7814,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "81%",
+            "height": "3%",
             "left": "13.541666666666666%",
             "position": "absolute",
           }
@@ -7824,7 +7824,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "79%",
+            "height": "54%",
             "left": "14.583333333333334%",
             "position": "absolute",
           }
@@ -7834,7 +7834,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "84%",
+            "height": "26%",
             "left": "15.625%",
             "position": "absolute",
           }
@@ -7844,7 +7844,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "47%",
+            "height": "14%",
             "left": "16.666666666666664%",
             "position": "absolute",
           }
@@ -7854,7 +7854,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "81%",
+            "height": "64%",
             "left": "17.708333333333336%",
             "position": "absolute",
           }
@@ -7864,7 +7864,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "34%",
+            "height": "81%",
             "left": "18.75%",
             "position": "absolute",
           }
@@ -7874,7 +7874,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "29%",
+            "height": "20%",
             "left": "19.791666666666664%",
             "position": "absolute",
           }
@@ -7884,7 +7884,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "93%",
+            "height": "72%",
             "left": "20.833333333333336%",
             "position": "absolute",
           }
@@ -7894,7 +7894,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "96%",
+            "height": "3%",
             "left": "21.875%",
             "position": "absolute",
           }
@@ -7904,7 +7904,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "76%",
+            "height": "90%",
             "left": "22.916666666666664%",
             "position": "absolute",
           }
@@ -7914,7 +7914,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "3%",
+            "height": "61%",
             "left": "23.958333333333336%",
             "position": "absolute",
           }
@@ -7924,7 +7924,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "21%",
+            "height": "22%",
             "left": "25%",
             "position": "absolute",
           }
@@ -7934,7 +7934,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "56%",
+            "height": "40%",
             "left": "26.041666666666668%",
             "position": "absolute",
           }
@@ -7944,7 +7944,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "49%",
+            "height": "44%",
             "left": "27.083333333333332%",
             "position": "absolute",
           }
@@ -7954,7 +7954,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "48%",
+            "height": "13%",
             "left": "28.125%",
             "position": "absolute",
           }
@@ -7964,7 +7964,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "74%",
+            "height": "60%",
             "left": "29.166666666666668%",
             "position": "absolute",
           }
@@ -7974,7 +7974,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "30%",
+            "height": "87%",
             "left": "30.208333333333332%",
             "position": "absolute",
           }
@@ -7984,7 +7984,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "85%",
+            "height": "6%",
             "left": "31.25%",
             "position": "absolute",
           }
@@ -7994,7 +7994,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "91%",
+            "height": "78%",
             "left": "32.29166666666667%",
             "position": "absolute",
           }
@@ -8004,7 +8004,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "96%",
+            "height": "18%",
             "left": "33.33333333333333%",
             "position": "absolute",
           }
@@ -8014,7 +8014,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "30%",
+            "height": "26%",
             "left": "34.375%",
             "position": "absolute",
           }
@@ -8024,7 +8024,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "66%",
+            "height": "32%",
             "left": "35.41666666666667%",
             "position": "absolute",
           }
@@ -8034,7 +8034,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "62%",
+            "height": "20%",
             "left": "36.45833333333333%",
             "position": "absolute",
           }
@@ -8044,7 +8044,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "40%",
+            "height": "75%",
             "left": "37.5%",
             "position": "absolute",
           }
@@ -8054,7 +8054,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "51%",
+            "height": "22%",
             "left": "38.54166666666667%",
             "position": "absolute",
           }
@@ -8064,7 +8064,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "52%",
+            "height": "60%",
             "left": "39.58333333333333%",
             "position": "absolute",
           }
@@ -8074,7 +8074,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "70%",
+            "height": "12%",
             "left": "40.625%",
             "position": "absolute",
           }
@@ -8084,7 +8084,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "57%",
+            "height": "1%",
             "left": "41.66666666666667%",
             "position": "absolute",
           }
@@ -8094,7 +8094,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "96%",
+            "height": "56%",
             "left": "42.70833333333333%",
             "position": "absolute",
           }
@@ -8104,7 +8104,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "12%",
+            "height": "23%",
             "left": "43.75%",
             "position": "absolute",
           }
@@ -8114,7 +8114,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "13%",
+            "height": "73%",
             "left": "44.79166666666667%",
             "position": "absolute",
           }
@@ -8124,7 +8124,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "91%",
+            "height": "62%",
             "left": "45.83333333333333%",
             "position": "absolute",
           }
@@ -8134,7 +8134,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "41%",
+            "height": "11%",
             "left": "46.875%",
             "position": "absolute",
           }
@@ -8144,7 +8144,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "30%",
+            "height": "49%",
             "left": "47.91666666666667%",
             "position": "absolute",
           }
@@ -8154,7 +8154,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "100%",
+            "height": "10%",
             "left": "48.95833333333333%",
             "position": "absolute",
           }
@@ -8164,7 +8164,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "55%",
+            "height": "63%",
             "left": "50%",
             "position": "absolute",
           }
@@ -8174,7 +8174,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "91%",
+            "height": "81%",
             "left": "51.041666666666664%",
             "position": "absolute",
           }
@@ -8184,7 +8184,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "70%",
+            "height": "61%",
             "left": "52.083333333333336%",
             "position": "absolute",
           }
@@ -8194,7 +8194,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "21%",
+            "height": "2%",
             "left": "53.125%",
             "position": "absolute",
           }
@@ -8204,7 +8204,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "48%",
+            "height": "58%",
             "left": "54.166666666666664%",
             "position": "absolute",
           }
@@ -8214,7 +8214,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "99%",
+            "height": "51%",
             "left": "55.208333333333336%",
             "position": "absolute",
           }
@@ -8224,7 +8224,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "84%",
+            "height": "3%",
             "left": "56.25%",
             "position": "absolute",
           }
@@ -8234,7 +8234,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "78%",
+            "height": "33%",
             "left": "57.291666666666664%",
             "position": "absolute",
           }
@@ -8244,7 +8244,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "13%",
+            "height": "100%",
             "left": "58.333333333333336%",
             "position": "absolute",
           }
@@ -8254,7 +8254,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "45%",
+            "height": "75%",
             "left": "59.375%",
             "position": "absolute",
           }
@@ -8264,7 +8264,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "24%",
+            "height": "1%",
             "left": "60.416666666666664%",
             "position": "absolute",
           }
@@ -8274,7 +8274,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "76%",
+            "height": "39%",
             "left": "61.458333333333336%",
             "position": "absolute",
           }
@@ -8284,7 +8284,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "29%",
+            "height": "16%",
             "left": "62.5%",
             "position": "absolute",
           }
@@ -8294,7 +8294,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "24%",
+            "height": "71%",
             "left": "63.541666666666664%",
             "position": "absolute",
           }
@@ -8304,7 +8304,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "49%",
+            "height": "90%",
             "left": "64.58333333333334%",
             "position": "absolute",
           }
@@ -8314,7 +8314,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "76%",
+            "height": "48%",
             "left": "65.625%",
             "position": "absolute",
           }
@@ -8324,7 +8324,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "17%",
+            "height": "74%",
             "left": "66.66666666666666%",
             "position": "absolute",
           }
@@ -8334,7 +8334,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "26%",
+            "height": "22%",
             "left": "67.70833333333334%",
             "position": "absolute",
           }
@@ -8344,7 +8344,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "19%",
+            "height": "11%",
             "left": "68.75%",
             "position": "absolute",
           }
@@ -8354,7 +8354,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "22%",
+            "height": "64%",
             "left": "69.79166666666666%",
             "position": "absolute",
           }
@@ -8364,7 +8364,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "76%",
+            "height": "44%",
             "left": "70.83333333333334%",
             "position": "absolute",
           }
@@ -8374,7 +8374,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "51%",
+            "height": "74%",
             "left": "71.875%",
             "position": "absolute",
           }
@@ -8384,7 +8384,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         className="c4"
         style={
           Object {
-            "height": "8%",
+            "height": "46%",
             "left": "72.91666666666666%",
             "position": "absolute",
           }
