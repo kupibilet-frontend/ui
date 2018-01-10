@@ -9,7 +9,7 @@ const onChange = (values) => {
 }
 
 const date1 = moment('2017-01-01')
-const date2 = moment('2017-01-03')
+const date2 = moment('2017-01-02')
 
 const formatDate = (date) => date.locale('ru').format('DD MMMM hh:mm')
 const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
@@ -17,8 +17,8 @@ const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
 const generateSliderData = (date) => {
   const sliderData = {}
   let margin = 0
-  const startingPosition = dateToSliderValue(date) + 40
-  for (let i = 0; i < 121; i++) {
+  const startingPosition = dateToSliderValue(date) + 10
+  for (let i = 0; i < 60; i++) {
     margin += 1
     sliderData[startingPosition + margin] = Math.floor((Math.random() * 100) + 1)
   }
@@ -46,7 +46,7 @@ class Container extends React.Component {
   render() {
     const { startDate, endDate, sliderData } = this.state
     return (
-      <div style={{ width: '252px', height: '100px' }}>
+      <div style={{ width: '852px', height: '100px' }}>
         <div
           style={{
             padding: '12px',

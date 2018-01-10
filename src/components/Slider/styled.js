@@ -4,7 +4,7 @@ import { switchTransition } from '../../utils/transitions'
 
 const StyledSlider = styled(Rheostat)`
   width: 100%;
-  height: 100px;
+  height: 100%;
 
   .rheostat-background {
     background-color: ${({ theme }) => theme.color.miscLight};
@@ -49,22 +49,18 @@ const StyledHandle = styled.span.attrs({
    }
   `
 
-const BAR_OFFSET = -94
-
 const getBarColor = ({ isHighlighted, theme }) => (isHighlighted
   ? theme.color.secondaryLight
   : theme.color.miscLighter
 )
-
 const StyledPitComponent = styled.span`
   background-color: ${getBarColor};
   font-size: 0;
-  bottom: 6px;
+  top: 0;
   z-index: 1;
-  transform: translateY(${BAR_OFFSET}px);
+  transform: translateY(-100%);
   width: ${({ pitWidth }) => pitWidth}%;
-  height: ${({ children, pitHeightData }) => { return `${pitHeightData[children]}%;` }}
-  `
+`
 
 export {
   StyledSlider,
