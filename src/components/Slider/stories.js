@@ -11,6 +11,8 @@ const onChange = (values) => {
 const date1 = moment('2017-01-01')
 const date2 = moment('2017-01-02')
 
+const date3 = moment('2017-01-01 04:00')
+
 const formatDate = (date) => date.locale('ru').format('DD MMMM hh:mm')
 const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
 
@@ -18,10 +20,10 @@ const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
 const generateSliderData = (date) => {
   const sliderData = {}
   let margin = 0
-  const startingPosition = dateToSliderValue(date) + 10
-  for (let i = 0; i < 60; i++) {
+  const startingPosition = dateToSliderValue(date)
+  for (let i = 0; i < 10; i++) {
     margin += 1
-    // sliderData[startingPosition + margin] = Math.floor((Math.random() * 100) + 1)  
+    // sliderData[startingPosition + margin] = Math.floor((Math.random() * 100) + 1)
     sliderData[startingPosition + margin] = i
   }
   return sliderData
@@ -33,6 +35,8 @@ class Container extends React.Component {
   state = {
     left: formatDate(date1),
     right: formatDate(date2),
+    min: dateToSliderValue(date1),
+    max: dateToSliderValue(date2),
     startDate: dateToSliderValue(date1),
     endDate: dateToSliderValue(date2),
     sliderData: generateSliderData(date1),
@@ -45,10 +49,22 @@ class Container extends React.Component {
     })
   }
 
+  changeDate = () => {
+    this.setState({
+      endDate: dateToSliderValue(date3),
+    })
+  }
+
   render() {
-    const { startDate, endDate, sliderData } = this.state
+    const {
+      startDate,
+      endDate,
+      sliderData,
+      min,
+      max,
+    } = this.state
     return (
-      <div style={{ width: '852px', height: '100px' }}>
+      <div style={{ width: '852px', height: '100px' }} onClick={this.changeDate}>
         <div
           style={{
             padding: '12px',
@@ -61,8 +77,8 @@ class Container extends React.Component {
           <span>{this.state.right}</span>
         </div>
         <Slider
-          min={startDate}
-          max={endDate}
+          min={min}
+          max={max}
           values={[startDate, endDate]}
           onValuesUpdated={this.onValuesUpdated}
           sliderData={sliderData}

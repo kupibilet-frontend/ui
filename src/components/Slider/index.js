@@ -134,7 +134,20 @@ export default class Slider extends React.Component<Props, State> {
     this.touched = false
   }
 
+  componentWillReceiveProps(nextProps) {
+    const nextValues = nextProps.values
+    const currentValues = this.props.values
+    if (currentValues[0] !== nextValues[0] ||
+      currentValues[1] !== nextValues[1]
+    ) {
+      this.setState({
+        values: nextValues,
+      })
+    }
+  }
+
   onChange = (sliderState : SliderState) => {
+    this.touched = true
     const { onChange } = this.props
     if (onChange) onChange(sliderState.values)
   }
