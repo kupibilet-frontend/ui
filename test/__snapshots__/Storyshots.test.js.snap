@@ -811,7 +811,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           <div
             className="rc-collapse-content-box"
           >
-
+            
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,
   it can be found as a welcome guest in many households across the world.
@@ -1235,8 +1235,8 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
         >
           Шереметьево
         </div>
-
-
+        
+        
       </div>
       <div
         className="c8"
@@ -1804,8 +1804,8 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         >
           Шереметьево
         </div>
-
-
+        
+        
       </div>
       <div
         className="c6"
@@ -1855,13 +1855,13 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         >
           Несуществующий город
         </div>
-
-
+        
+        
       </div>
       <div
         className="c15"
       >
-
+        
       </div>
     </div>
   </div>
@@ -3239,15 +3239,15 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           <div
             className="c5"
           >
-
+            
           </div>
-
-
+          
+          
         </div>
         <div
           className="c6"
         >
-
+          
         </div>
       </div>
       <div
@@ -5427,7 +5427,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
     <div
       className="c6"
     />
-
+    
   </div>
 </div>
 `;
@@ -5695,7 +5695,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
     <div
       className="c7"
     />
-
+    
   </div>
 </div>
 `;
@@ -5862,7 +5862,7 @@ exports[`Storyshots Controls/Input default 1`] = `
     <div
       className="c3"
     />
-
+    
   </div>
 </div>
 `;
@@ -9139,12 +9139,6 @@ exports[`Storyshots Utils Typography 1`] = `
   -ms-letter-spacing: -.4px;
   letter-spacing: -.4px;
   margin: 0;
-}
-
-.c7 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
 }
 
 .c8 {
