@@ -20,8 +20,8 @@ const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
 const generateSliderData = (date) => {
   const sliderData = {}
   let margin = 0
-  const startingPosition = dateToSliderValue(date)
-  for (let i = 0; i < 10; i++) {
+  const startingPosition = dateToSliderValue(date) + 10
+  for (let i = 0; i < 40; i++) {
     margin += 1
     // sliderData[startingPosition + margin] = Math.floor((Math.random() * 100) + 1)
     sliderData[startingPosition + margin] = i
@@ -64,7 +64,7 @@ class Container extends React.Component {
       max,
     } = this.state
     return (
-      <div style={{ width: '852px', height: '100px' }} onClick={this.changeDate}>
+      <div style={{ width: '452px', height: '100px' }} onClick={this.changeDate}>
         <div
           style={{
             padding: '12px',

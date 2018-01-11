@@ -130,8 +130,8 @@ export default class Slider extends React.Component<Props, State> {
       pitPoints: getPitPoints(props),
       pitWidth: getPitWidth(props),
       pitHeightData: props.sliderData ? getPitHeight(props) : null,
+      touched: false,
     }
-    this.touched = false
   }
 
   componentWillReceiveProps(nextProps) {
@@ -142,12 +142,12 @@ export default class Slider extends React.Component<Props, State> {
     ) {
       this.setState({
         values: nextValues,
+        touched: true,
       })
     }
   }
 
   onChange = (sliderState : SliderState) => {
-    this.touched = true
     const { onChange } = this.props
     if (onChange) onChange(sliderState.values)
   }
@@ -156,9 +156,8 @@ export default class Slider extends React.Component<Props, State> {
   /* eslint-disable react/no-children-prop */
 
   getPitComponent = (props : Props) => {
-    const { values } = this.state
+    const { values, touched } = this.state
     const { children } = props
-    const { touched } = this
     const isHighlighted : boolean = touched && inRange(children, values[0], values[1])
 
     return (
@@ -178,9 +177,9 @@ export default class Slider extends React.Component<Props, State> {
   updateValues = (sliderState : SliderState) => {
     const { onValuesUpdated } = this.props
     const { values } = sliderState
-    this.touched = true
     this.setState({
       values,
+      touched: true,
     })
     if (onValuesUpdated) onValuesUpdated(values)
   }
