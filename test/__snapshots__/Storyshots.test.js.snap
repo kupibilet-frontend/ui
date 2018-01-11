@@ -3185,6 +3185,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
     right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
+    width: 100%;
   }
 }
 
@@ -6906,6 +6907,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
     right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
+    width: 100%;
   }
 }
 
@@ -7235,6 +7237,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
     right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
+    width: 100%;
   }
 }
 
@@ -7561,6 +7564,7 @@ exports[`Storyshots Controls/Select default 1`] = `
     right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
+    width: 100%;
   }
 }
 
