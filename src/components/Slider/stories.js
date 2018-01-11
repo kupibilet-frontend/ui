@@ -8,10 +8,10 @@ const onChange = (values) => {
   console.info(values)
 }
 
-const date1 = moment('2017-01-01')
-const date2 = moment('2017-01-02')
+const date1 = moment.utc('2017-01-01')
+const date2 = moment.utc('2017-01-02')
 
-const date3 = moment('2017-01-01 04:00')
+const date3 = moment.utc('2017-01-01 04:00')
 
 const formatDate = (date) => date.locale('ru').format('DD MMMM hh:mm')
 const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)

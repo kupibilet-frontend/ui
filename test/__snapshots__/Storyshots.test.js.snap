@@ -7696,7 +7696,7 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
-  width: 1.0416666666666667%;
+  width: calc(1.0416666666666667% + 1px);
 }
 
 <div
@@ -7742,9 +7742,9 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
       />
       <span
         aria-disabled={false}
-        aria-valuemax={1648116}
-        aria-valuemin={1648020}
-        aria-valuenow={1648020}
+        aria-valuemax={1648128}
+        aria-valuemin={1648032}
+        aria-valuenow={1648032}
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={0}
@@ -7763,9 +7763,9 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
       />
       <span
         aria-disabled={false}
-        aria-valuemax={1648116}
-        aria-valuemin={1648020}
-        aria-valuenow={1648116}
+        aria-valuemax={1648128}
+        aria-valuemin={1648032}
+        aria-valuenow={1648128}
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
