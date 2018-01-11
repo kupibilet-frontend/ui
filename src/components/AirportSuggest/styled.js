@@ -29,8 +29,8 @@ export const AirportSuggestContainer = styled.div`
   }
 
   ${mq.mobile`
+    background: ${({ theme }) => theme.color.background};
     border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
-    margin: 0 18px;
     padding: 5px 0;
 
     .react-autosuggest__suggestion--highlighted &,
@@ -52,6 +52,10 @@ export const SuggestIcon = styled.div`
     fill: ${({ theme }) => theme.color.miscDark};
     transition: none;
   }
+
+  ${mq.mobile`
+    padding: 6px 8px 0;
+  `}
 `
 
 export const Geo = styled.div`
@@ -86,5 +90,5 @@ export const Code = styled(TextSmall)`
 `
 
 export const StyledIcon = styled(Icon)`
-  ${(props) => (!props.isGeoCity && 'transform: rotate(90deg);')}
+  transform: rotate(90deg);
 `

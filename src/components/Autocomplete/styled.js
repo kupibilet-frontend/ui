@@ -69,6 +69,7 @@ export const SuggestionsContainer = styled.div`
     right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
+    width: 100%;
   `}
 
 `
