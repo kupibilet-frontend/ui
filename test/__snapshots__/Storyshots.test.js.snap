@@ -8890,22 +8890,6 @@ exports[`Storyshots Utils Responsive only 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
-  display: none;
-}
-
-.c7 {
-  display: none;
-}
-
-.c5 {
-  display: none;
-}
-
-.c3 {
-  display: none;
-}
-
 .c2 {
   width: 100vw;
   height: 140px;
@@ -9005,31 +8989,45 @@ exports[`Storyshots Utils Responsive only 1`] = `
   background: black;
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (max-width:999px) {
   .responsive .c1,
   .responsive-booking .c1 {
-    display: initial;
+    display: none;
   }
 }
 
-@media screen and (max-width:599px) {
+@media screen and (min-width:1000px) {
   .responsive .c7,
   .responsive-booking .c7 {
-    display: initial;
+    display: none;
   }
 }
 
 @media screen and (min-width:600px) and (max-width:999px) {
-  .responsive .c5,
-  .responsive-booking .c5 {
-    display: initial;
+  .responsive .c7,
+  .responsive-booking .c7 {
+    display: none;
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (min-width:1000px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:1000px) {
   .responsive .c3,
   .responsive-booking .c3 {
-    display: initial;
+    display: none;
   }
 }
 
