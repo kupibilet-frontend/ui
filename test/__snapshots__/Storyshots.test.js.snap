@@ -7703,7 +7703,6 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
   className="responsive c0"
 >
   <div
-    onClick={[Function]}
     style={
       Object {
         "height": "100px",

@@ -59,7 +59,7 @@ const StyledPitComponent = styled.span`
   top: 0;
   z-index: 1;
   transform: translateY(-100%);
-  width: ${({ pitWidth }) => `calc(${pitWidth}% + 1px)`};
+  width: ${({ pitWidth }) => (pitWidth ? `calc(${pitWidth}% + 1px)` : '0px')};
 `
 
 export {

@@ -61,7 +61,7 @@ const getPitPoints : GetPitPoints = ({
   sliderData,
 }) => (sliderData
   ? Object.keys(sliderData)
-    .map((key) => Number(key))
+    .map((key : string) => Number(key))
   : undefined
 )
 
@@ -70,12 +70,12 @@ type GetPitHeight = (SliderData) => HeightData
 const getPitHeight : GetPitHeight = ({
   sliderData,
 }) => {
-  const maxHeight = Math.max.apply(null, Object.values(sliderData))
+  const maxHeight = Math.max(...Object.values(sliderData))
   const percent = maxHeight / 100
-  return Object.keys(sliderData).reduce((acc, current) => {
-    acc[current] = Math.floor((sliderData[current] / percent))
-    return acc
-  }, {})
+  return Object.keys(sliderData).reduce((acc, current) => ({
+    ...acc,
+    [current]: Math.floor((sliderData[current] / percent)),
+  }), {})
 }
 
 type GetInitialValues = (Props) => Array<number>
@@ -86,7 +86,7 @@ const getInitialValues : GetInitialValues = (props : Props) => {
 }
 
 type PitProps = {
-  children: number,
+  pitId: number,
   pitWidth: number,
   pitHeightData: HeightData,
   style: Object,
@@ -96,7 +96,7 @@ type PitProps = {
 class PitComponent extends React.PureComponent <PitProps, void> {
   render() {
     const {
-      children,
+      pitId,
       pitWidth,
       pitHeightData,
       isHighlighted,
@@ -106,7 +106,7 @@ class PitComponent extends React.PureComponent <PitProps, void> {
       <StyledPitComponent
         style={{
           ...style,
-          height: `${pitHeightData[children]}%`,
+          height: `${pitHeightData[pitId]}%`,
         }}
         isHighlighted={isHighlighted}
         pitWidth={pitWidth}
@@ -116,6 +116,7 @@ class PitComponent extends React.PureComponent <PitProps, void> {
 }
 
 export default class Slider extends React.Component<Props, State> {
+  // TODO add an opportunity to pass custom PitComponent
   static defaultProps = {
     handle: StyledHandle,
     progressBar: StyledProgressBar,
@@ -134,16 +135,18 @@ export default class Slider extends React.Component<Props, State> {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    const nextValues = nextProps.values
-    const currentValues = this.props.values
-    if (currentValues[0] !== nextValues[0] ||
-      currentValues[1] !== nextValues[1]
-    ) {
-      this.setState({
-        values: nextValues,
-        touched: true,
-      })
+  componentWillReceiveProps(nextProps : Props) {
+    if (this.props.values) {
+      const nextValues = nextProps.values
+      const currentValues = this.props.values
+      const firstChanged = currentValues[0] !== nextValues[0]
+      const secondChanged = currentValues[1] !== nextValues[1]
+      if (firstChanged || secondChanged) {
+        this.setState({
+          values: nextValues,
+          touched: true,
+        })
+      }
     }
   }
 
@@ -153,17 +156,16 @@ export default class Slider extends React.Component<Props, State> {
   }
 
   /* eslint-disable react/prop-types */
-  /* eslint-disable react/no-children-prop */
 
   getPitComponent = (props : Props) => {
     const { values, touched } = this.state
     const { children } = props
-    const isHighlighted : boolean = touched && inRange(children, values[0], values[1])
+    const isHighlighted : boolean = touched && inRange(children, ...values)
 
     return (
       <PitComponent
         style={props.style}
-        children={props.children}
+        pitId={props.children}
         pitWidth={this.state.pitWidth}
         pitHeightData={this.state.pitHeightData}
         isHighlighted={isHighlighted}
@@ -172,7 +174,6 @@ export default class Slider extends React.Component<Props, State> {
   }
 
   /* eslint-enable react/prop-types */
-  /* eslint-enable react/no-children-prop */
 
   updateValues = (sliderState : SliderState) => {
     const { onValuesUpdated } = this.props
