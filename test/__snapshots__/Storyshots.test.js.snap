@@ -2902,7 +2902,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   padding: 3px 0;
   position: absolute;
   top: 100%;
-  left: 0;
   width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
@@ -3181,8 +3180,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   .responsive-booking .c7 {
     padding: 0;
     top: initial;
-    left: -50%;
-    right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
     width: 100%;
@@ -6692,7 +6689,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   padding: 3px 0;
   position: absolute;
   top: 100%;
-  left: 0;
   width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
@@ -6903,8 +6899,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   .responsive-booking .c10 {
     padding: 0;
     top: initial;
-    left: -50%;
-    right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
     width: 100%;
@@ -7022,7 +7016,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   padding: 3px 0;
   position: absolute;
   top: 100%;
-  left: 0;
   width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
@@ -7233,8 +7226,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   .responsive-booking .c10 {
     padding: 0;
     top: initial;
-    left: -50%;
-    right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
     width: 100%;
@@ -7349,7 +7340,6 @@ exports[`Storyshots Controls/Select default 1`] = `
   padding: 3px 0;
   position: absolute;
   top: 100%;
-  left: 0;
   width: 300px;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   border-radius: 3px;
@@ -7560,8 +7550,6 @@ exports[`Storyshots Controls/Select default 1`] = `
   .responsive-booking .c10 {
     padding: 0;
     top: initial;
-    left: -50%;
-    right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
     width: 100%;
