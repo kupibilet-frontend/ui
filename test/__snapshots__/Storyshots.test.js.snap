@@ -911,7 +911,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   height: 100%;
   padding: 10px 16px;
   padding: 10px;
-  background: transparent;
+  background: none;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1368,7 +1368,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   height: 100%;
   padding: 10px 16px;
   padding-right: 10px;
-  background: transparent;
+  background: none;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1475,7 +1475,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   height: 100%;
   padding: 10px 16px;
   padding-left: 10px;
-  background: transparent;
+  background: none;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2997,7 +2997,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   width: 100%;
   height: 100%;
   padding: 10px 16px;
-  background: transparent;
+  background: none;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
