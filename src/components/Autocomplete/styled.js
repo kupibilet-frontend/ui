@@ -54,7 +54,6 @@ export const SuggestionsContainer = styled.div`
   padding: 3px 0;
   position: absolute;
   top: 100%;
-  left: 0;
   width: 300px;
   ${shadowSmall}
   ${borderRadiusSmall.all}
@@ -65,8 +64,6 @@ export const SuggestionsContainer = styled.div`
   ${mq.mobile`
     padding: 0;
     top: initial;
-    left: -50%;
-    right: -50%;
     margin: 12px auto 0;
     box-shadow: none;
     width: 100%;

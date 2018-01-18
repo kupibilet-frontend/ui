@@ -71,9 +71,7 @@ export const Geo = styled.div`
 export const Value = styled.b`
   font-weight: 600;
 `
-export const GeoLabel = styled(TextSmall)`
-  font-size: 14px;
-`
+export const GeoLabel = styled(TextSmall)``
 
 export const Code = styled(TextSmall)`
   align-self: center;
