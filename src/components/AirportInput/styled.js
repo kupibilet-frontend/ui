@@ -112,7 +112,7 @@ export const Input = styled.textarea`
 
     return ''
   }}
-  background: transparent;
+  background: none;
 
   ${fontStyle}
   font-weight: 600;
