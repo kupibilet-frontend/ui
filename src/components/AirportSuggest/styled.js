@@ -71,14 +71,15 @@ export const Geo = styled.div`
 export const Value = styled.b`
   font-weight: 600;
 `
-export const GeoLabel = styled(TextSmall)``
+export const GeoLabel = styled(TextSmall)`
+  color: ${({ theme }) => theme.color.text};
+`
 
 export const Code = styled(TextSmall)`
   align-self: center;
   flex-grow: 0;
   flex-shrink: 0;
 
-  ${({ theme }) => theme.font}
   color: ${({ theme }) => theme.color.text};
   text-align: left;
 
