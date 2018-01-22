@@ -1,11 +1,18 @@
 // @flow
 
 import React, { Component } from 'react'
+import type { Element } from 'react'
 
 type Props = {
-  children: React.Element<*>,
+  children: Element<*>,
+  targetElement: string,
 }
-export default class Scrollfix extends Component<Props> {
+
+class Scrollfix extends Component<Props> {
+  static defaultProps = {
+    targetElement: '#app',
+  }
+
   constructor() {
     super()
     this.scrollPosition = 0
@@ -13,7 +20,7 @@ export default class Scrollfix extends Component<Props> {
 
   componentDidMount() {
     this.scrollPosition = window.scrollY
-    const node = document.querySelector('body div:first-child')
+    const node = document.querySelector(this.props.targetElement)
     if (node) {
       node.style.overflow = 'auto'
       node.style.height = '100%'
@@ -22,7 +29,7 @@ export default class Scrollfix extends Component<Props> {
   }
 
   componentWillUnmount() {
-    const node = document.querySelector('body div:first-child')
+    const node = document.querySelector(this.props.targetElement)
     if (node) {
       node.style.overflow = ''
       node.style.height = ''
@@ -40,3 +47,5 @@ export default class Scrollfix extends Component<Props> {
     )
   }
 }
+
+export default Scrollfix
