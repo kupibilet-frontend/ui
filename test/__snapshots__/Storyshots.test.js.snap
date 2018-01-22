@@ -918,6 +918,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   line-height: 18px;
   color: inherit;
   font-weight: 600;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
 .c5,
@@ -1002,6 +1003,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
 }
 
 .c6 {
+  -webkit-appearance: none;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1375,6 +1377,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   line-height: 18px;
   color: inherit;
   font-weight: 600;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
 .c3,
@@ -1482,6 +1485,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   line-height: 18px;
   color: inherit;
   font-weight: 600;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
 .c13,
@@ -1566,6 +1570,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 }
 
 .c4 {
+  -webkit-appearance: none;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1593,6 +1598,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 }
 
 .c14 {
+  -webkit-appearance: none;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3004,6 +3010,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   line-height: 18px;
   color: inherit;
   font-weight: 600;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
 .c3,
@@ -3088,6 +3095,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 }
 
 .c4 {
+  -webkit-appearance: none;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
