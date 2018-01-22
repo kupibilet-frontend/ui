@@ -127,7 +127,6 @@ export const Input = styled.textarea`
     display: block;
   }
   ${({ ios }) => ios && 'text-indent: -3px;'}
-  background: ${(props) => fadeGradient(props)};
   `
 
 export const Geo = styled.div`
