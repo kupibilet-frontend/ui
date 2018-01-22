@@ -95,6 +95,10 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
       spell = ''
     }
 
+    const iOS = navigator && navigator.userAgent &&
+      (navigator.userAgent.indexOf('iPhone') !== -1
+      || navigator.userAgent.indexOf('iPad') !== -1)
+
     return (
       <Container
         neighboringInGroup={neighboringInGroup}
@@ -114,6 +118,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           rows="1"
           wrap="off"
           spellcheck="false"
+          ios={iOS}
         />
         <Geo className="AirportInput__geo" neighboringInGroup={neighboringInGroup}>
           <ValuePlaceholder>

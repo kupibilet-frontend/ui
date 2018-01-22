@@ -126,9 +126,12 @@ export const Input = styled.textarea`
   &:focus ~ .AirportInput__geo .AirportInput__spell {
     display: block;
   }
+  ${({ ios }) => ios && 'text-indent: -3px;'}
+  background: ${(props) => fadeGradient(props)};
   `
 
 export const Geo = styled.div`
+  -webkit-appearance: none;
   pointer-events: none;
   user-select: none;
 
