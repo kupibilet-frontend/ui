@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
+import Scrollfix from 'components/Scrollfix'
 
 import {
   Wrapper,
@@ -16,29 +17,6 @@ type Props = {
 }
 
 class Overlay extends Component<Props, void> {
-  constructor() {
-    super()
-    this.scrollPosition = 0
-  }
-
-  componentDidMount() {
-    this.scrollPosition = window.scrollY
-    const node = document.querySelector('body div:first-child')
-    if (node) {
-      node.style.overflow = 'auto'
-      node.style.height = '100%'
-      node.scrollTo(0, this.scrollPosition)
-    }
-  }
-
-  componentWillUnmount() {
-    const node = document.querySelector('body div:first-child')
-    if (node) {
-      node.style.overflow = ''
-      node.style.height = ''
-    }
-    window.scrollTo(0, this.scrollPosition)
-  }
 
   stopPropagation = (e) => {
     e.stopPropagation()
@@ -52,18 +30,20 @@ class Overlay extends Component<Props, void> {
     } = this.props
 
     return (
-      <GlobalStylesScope>
-        <Wrapper
-          onClick={closePortal}
-          isOnBottom={isOnBottom}
-        >
-          <OverlayContentWrap isOnBottom={isOnBottom}>
-            <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
-              {React.cloneElement(children, { closePortal })}
-            </OverlayContent>
-          </OverlayContentWrap>
-        </Wrapper>
-      </GlobalStylesScope>
+      <Scrollfix>
+        <GlobalStylesScope>
+          <Wrapper
+            onClick={closePortal}
+            isOnBottom={isOnBottom}
+          >
+            <OverlayContentWrap isOnBottom={isOnBottom}>
+              <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
+                {React.cloneElement(children, { closePortal })}
+              </OverlayContent>
+            </OverlayContentWrap>
+          </Wrapper>
+        </GlobalStylesScope>
+      </Scrollfix>
     )
   }
 }
