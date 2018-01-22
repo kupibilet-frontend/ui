@@ -5,12 +5,12 @@ import type { Element } from 'react'
 
 type Props = {
   children: Element<*>,
-  targetElement: string,
+  freezableElement: string,
 }
 
 class Scrollfix extends Component<Props> {
   static defaultProps = {
-    targetElement: '#app',
+    freezableElement: '#app',
   }
 
   constructor() {
@@ -20,7 +20,7 @@ class Scrollfix extends Component<Props> {
 
   componentDidMount() {
     this.scrollPosition = window.scrollY
-    const node = document.querySelector(this.props.targetElement)
+    const node = document.querySelector(this.props.freezableElement)
     if (node) {
       node.style.overflow = 'auto'
       node.style.height = '100%'
@@ -29,7 +29,7 @@ class Scrollfix extends Component<Props> {
   }
 
   componentWillUnmount() {
-    const node = document.querySelector(this.props.targetElement)
+    const node = document.querySelector(this.props.freezableElement)
     if (node) {
       node.style.overflow = ''
       node.style.height = ''

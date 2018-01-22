@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react'
+import type { Element } from 'react'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
 import Scrollfix from 'components/Scrollfix'
@@ -13,7 +14,8 @@ import {
 type Props = {
   closePortal?: (Event) => void,
   isOnBottom: boolean,
-  children: React.Element<*>,
+  children: Element<*>,
+  freezableElement: string,
 }
 
 class Overlay extends Component<Props, void> {
@@ -26,10 +28,11 @@ class Overlay extends Component<Props, void> {
       closePortal,
       isOnBottom,
       children,
+      freezableElement,
     } = this.props
 
     return (
-      <Scrollfix>
+      <Scrollfix freezableElement={freezableElement}>
         <GlobalStylesScope>
           <Wrapper
             onClick={closePortal}
