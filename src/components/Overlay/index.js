@@ -17,7 +17,6 @@ type Props = {
 }
 
 class Overlay extends Component<Props, void> {
-
   stopPropagation = (e) => {
     e.stopPropagation()
   }
