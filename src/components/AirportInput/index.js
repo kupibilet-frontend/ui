@@ -49,6 +49,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
     e.persist()
     setTimeout(() => {
       e.target.select()
+      e.target.setSelectionRange(0, 9999)
     })
   }
 
