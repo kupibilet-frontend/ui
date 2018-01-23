@@ -126,7 +126,7 @@ export const Input = styled.textarea`
   &:focus ~ .AirportInput__geo .AirportInput__spell {
     display: block;
   }
-  ${({ ios }) => ios && 'text-indent: -3px;'}
+  ${({ isIOS }) => isIOS && 'text-indent: -3px;'}
   `
 
 export const Geo = styled.div`
