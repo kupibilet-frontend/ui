@@ -1001,10 +1001,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   display: block;
 }
 
-.c5::-webkit-input-placeholder {
-  background: none;
-}
-
 .c6 {
   -webkit-appearance: none;
   pointer-events: none;
@@ -1197,6 +1193,13 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    background: none;
+  }
 }
 
 <div
@@ -1463,10 +1466,6 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   display: block;
 }
 
-.c3::-webkit-input-placeholder {
-  background: none;
-}
-
 .c13 {
   font-family: inherit;
   border: none;
@@ -1572,10 +1571,6 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 
 .c13:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
-}
-
-.c13::-webkit-input-placeholder {
-  background: none;
 }
 
 .c4 {
@@ -1788,6 +1783,20 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    background: none;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c12,
+  .responsive-booking .c12 {
+    background: none;
+  }
 }
 
 <div
@@ -3102,10 +3111,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   display: block;
 }
 
-.c3::-webkit-input-placeholder {
-  background: none;
-}
-
 .c4 {
   -webkit-appearance: none;
   pointer-events: none;
@@ -3210,6 +3215,13 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   .responsive .c1,
   .responsive-booking .c1 {
     position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    background: none;
   }
 }
 
