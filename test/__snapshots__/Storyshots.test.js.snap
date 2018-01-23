@@ -3201,7 +3201,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   className="responsive c0"
 >
   <div
-    className="responsive"
     style={
       Object {
         "width": 244,
