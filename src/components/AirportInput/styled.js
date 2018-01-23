@@ -127,6 +127,10 @@ export const Input = styled.textarea`
     display: block;
   }
   ${({ isIOS }) => isIOS && 'text-indent: -3px;'}
+
+  &::-webkit-input-placeholder {
+    background: none;
+  }
   `
 
 export const Geo = styled.div`
