@@ -42,6 +42,7 @@ export const Container = styled.div`
 
   ${media.mobile`
     background: none;
+    z-index: 10;
   `}
 
   ${({ neighboringInGroup }) => {
