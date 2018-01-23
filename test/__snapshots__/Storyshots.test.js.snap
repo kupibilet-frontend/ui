@@ -1199,6 +1199,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   .responsive .c4,
   .responsive-booking .c4 {
     background: none;
+    z-index: 10;
   }
 }
 
@@ -1789,6 +1790,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   .responsive .c2,
   .responsive-booking .c2 {
     background: none;
+    z-index: 10;
   }
 }
 
@@ -1796,6 +1798,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   .responsive .c12,
   .responsive-booking .c12 {
     background: none;
+    z-index: 10;
   }
 }
 
@@ -3222,6 +3225,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   .responsive .c2,
   .responsive-booking .c2 {
     background: none;
+    z-index: 10;
   }
 }
 
