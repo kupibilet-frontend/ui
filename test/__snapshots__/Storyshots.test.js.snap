@@ -1001,6 +1001,10 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   display: block;
 }
 
+.c5::-webkit-input-placeholder {
+  background: none;
+}
+
 .c6 {
   -webkit-appearance: none;
   pointer-events: none;
@@ -1459,6 +1463,10 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   display: block;
 }
 
+.c3::-webkit-input-placeholder {
+  background: none;
+}
+
 .c13 {
   font-family: inherit;
   border: none;
@@ -1564,6 +1572,10 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 
 .c13:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
+}
+
+.c13::-webkit-input-placeholder {
+  background: none;
 }
 
 .c4 {
@@ -3088,6 +3100,10 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 
 .c3:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
+}
+
+.c3::-webkit-input-placeholder {
+  background: none;
 }
 
 .c4 {
