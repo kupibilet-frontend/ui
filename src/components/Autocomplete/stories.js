@@ -57,7 +57,8 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
         return {
           value: suggest.name.ru,
           isCity,
-          area: isCity ? country : city,
+          city,
+          country,
           IATACode: suggest.code,
           isGeoSuggest: false,
         }

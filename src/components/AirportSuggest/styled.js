@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import TextSmall from 'components/Typography/TextSmall'
+import mq from 'utils/media-queries'
+import Icon from 'components/Icon'
 
 export const AirportSuggestContainer = styled.div`
   display: flex;
@@ -11,27 +14,48 @@ export const AirportSuggestContainer = styled.div`
   white-space: nowrap;
 
   box-sizing: content-box;
-  height: 20px;
-  padding: 5px 0 5px 12px;
+  height: 38px;
+  padding: 6px 12px;
   background: ${({ theme }) => theme.color.background};
 
   .react-autosuggest__suggestion--highlighted &,
-  &:hover {
-    background: ${({ theme }) => theme.color.secondaryLightest};
+    &:hover {
+      background: ${({ theme }) => theme.color.secondaryLightest};
 
-    .icon-inherit-color {
-      fill: ${({ theme }) => theme.color.textDarker};
+      .icon-inherit-color {
+        fill: ${({ theme }) => theme.color.textDarker};
+      }
     }
   }
+
+  ${mq.mobile`
+    background: ${({ theme }) => theme.color.background};
+    border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
+    padding: 5px 0;
+
+    .react-autosuggest__suggestion--highlighted &,
+    &:hover {
+      background: ${({ theme }) => theme.color.background};
+
+      .icon-inherit-color {
+        fill: ${({ theme }) => theme.color.miscDark};
+      }
+    }
+  `}
 `
 
 export const SuggestIcon = styled.div`
+  align-self: center;
   padding: 2.5px 8px 2.5px 0;
 
   .icon-inherit-color {
     fill: ${({ theme }) => theme.color.miscDark};
     transition: none;
   }
+
+  ${mq.mobile`
+    padding: 6px 8px 0;
+  `}
 `
 
 export const Geo = styled.div`
@@ -47,19 +71,23 @@ export const Geo = styled.div`
 export const Value = styled.b`
   font-weight: 600;
 `
-export const GeoLabel = styled.span``
+export const GeoLabel = styled(TextSmall)`
+  color: ${({ theme }) => theme.color.text};
+`
 
-export const Code = styled.div`
+export const Code = styled(TextSmall)`
+  align-self: center;
   flex-grow: 0;
   flex-shrink: 0;
 
-  ${({ theme }) => theme.font}
-  font-size: 14px;
-  line-height: 18px;
   color: ${({ theme }) => theme.color.text};
   text-align: left;
 
   padding: 1px 0;
   margin-left: 15px;
-  width: 46px;
+  width: 42px;
+`
+
+export const StyledIcon = styled(Icon)`
+  transform: rotate(90deg);
 `
