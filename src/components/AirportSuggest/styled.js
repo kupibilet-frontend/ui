@@ -15,7 +15,7 @@ export const AirportSuggestContainer = styled.div`
 
   box-sizing: content-box;
   height: 38px;
-  padding: 5px 10px 5px 11px;
+  padding: 6px 12px;
   background: ${({ theme }) => theme.color.background};
 
   .react-autosuggest__suggestion--highlighted &,
