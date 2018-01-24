@@ -3,6 +3,8 @@ import { transparentize } from 'polished'
 import { control } from 'utils/reset'
 import placeholder from 'utils/placeholder'
 import { switchTransition } from 'utils/transitions'
+import Icon from 'components/Icon'
+import media from 'utils/media-queries'
 
 const fontStyle = css`
   font-family: inherit;
@@ -37,6 +39,11 @@ export const Container = styled.div`
   ${switchTransition}
   background: ${({ theme }) => theme.color.background};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
+
+  ${media.mobile`
+    background: none;
+    z-index: 10;
+  `}
 
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
@@ -111,7 +118,7 @@ export const Input = styled.textarea`
 
     return ''
   }}
-  background: transparent;
+  background: none;
 
   ${fontStyle}
   font-weight: 600;
@@ -125,9 +132,11 @@ export const Input = styled.textarea`
   &:focus ~ .AirportInput__geo .AirportInput__spell {
     display: block;
   }
+  ${({ isIOS }) => isIOS && 'text-indent: -3px;'}
   `
 
 export const Geo = styled.div`
+  -webkit-appearance: none;
   pointer-events: none;
   user-select: none;
 
@@ -215,4 +224,11 @@ export const Code = styled.div`
 
     background: ${(props) => fadeGradient(props)};
   }
+  `
+
+export const StyledIcon = styled(Icon)`
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  right: 9px;
   `
