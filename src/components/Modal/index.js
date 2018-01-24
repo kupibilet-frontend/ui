@@ -96,6 +96,7 @@ class Modal extends React.PureComponent<Props> {
       closeOnOutsideClick,
       showCloseButton,
       isOnBottom,
+      freezableElement,
     } = this.props
 
     if (!isOpen) {
@@ -108,6 +109,7 @@ class Modal extends React.PureComponent<Props> {
           <Overlay
             closePortal={closeOnOutsideClick && this.closePortal}
             isOnBottom={isOnBottom}
+            freezableElement={freezableElement}
           >
             <ModalContent isCompact={isCompact}>
               { renderHeader({ ...this.props, children: heading }) }
