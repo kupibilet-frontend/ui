@@ -97,6 +97,7 @@ export const CloseButton = styled.span`
     right: 18px;
     top: 15px;
     ${shadowSmall}
+    z-index: 2;
   `}
 `
 
