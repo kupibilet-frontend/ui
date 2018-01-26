@@ -93,7 +93,7 @@ export const CloseButton = styled.span`
     background: ${({ theme }) => theme.color.miscLightest};
     ${borderRadiusCircle.all}
     margin-left: 32px;
-    position: ${(props) => (props.isOnBottom ? 'absolute' : 'fixed')};
+    position: absolute;
     right: 18px;
     top: 15px;
     ${shadowSmall}
