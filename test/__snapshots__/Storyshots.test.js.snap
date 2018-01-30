@@ -3923,6 +3923,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 .c1 .CalendarMonthGrid--vertical {
   width: 339px;
   margin: 0 auto;
+  padding-top: 36px;
 }
 
 .c1 .CalendarMonthGrid--vertical-scrollable {
@@ -4224,12 +4225,20 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 .c1 .transition-container--vertical {
+  overflow-y: scroll;
   width: 100%;
 }
 
 .c1 .DayPickerKeyboardShortcuts__show,
 .c1 .DayPickerKeyboardShortcuts__panel {
   display: none;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .CalendarMonth__caption,
+  .responsive-booking .c1 .CalendarMonth__caption {
+    padding: 12px 0;
+  }
 }
 
 @media screen and (max-width:599px) {
@@ -4246,6 +4255,22 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .DayPicker__week-header,
+  .responsive-booking .c1 .DayPicker__week-header {
+    background: #ffffff;
+    border-bottom: 1px solid #dde3eb;
+    top: 0;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .DayPicker__week-header li,
+  .responsive-booking .c1 .DayPicker__week-header li {
+    padding-top: 9px;
   }
 }
 
