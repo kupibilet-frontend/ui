@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
+import media from 'utils/media-queries'
 
 export default css`
   .DayPicker {
@@ -39,6 +40,12 @@ export default css`
     padding: 0 13px;
     text-align: left;
 
+    ${media.mobile`
+      background: ${({ theme }) => theme.color.background};
+      border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
+      top: 0;
+    `}
+
     ul {
       list-style: none;
       margin: 0;
@@ -55,6 +62,10 @@ export default css`
       line-height: 20px;
       letter-spacing: -.21px;
       text-align: center;
+
+      ${media.mobile`
+        padding-top: 9px;
+      `}
     }
   }
 
@@ -102,6 +113,7 @@ export default css`
   }
 
   .transition-container--vertical {
+    overflow-y: scroll;
     width: 100%;
   }
 `

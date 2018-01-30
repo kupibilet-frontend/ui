@@ -1,4 +1,5 @@
 import { css } from 'styled-components'
+import media from 'utils/media-queries'
 
 export default css`
   .CalendarMonth {
@@ -54,6 +55,10 @@ export default css`
       font-weight: 600;
       font-family: inherit;
     }
+
+    ${media.mobile`
+      padding: 12px 0;
+    `}
   }
 
   .CalendarMonth--vertical-scrollable .CalendarMonth__caption {
