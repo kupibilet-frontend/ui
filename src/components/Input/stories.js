@@ -25,6 +25,7 @@ const sizesSelect = (defaultValue = 'large') => select(
 )
 
 const isRequired = (value) => (value ? undefined : 'Поле должно быть заполнено')
+const isNumber = (value) => (/^\d+$/.test(value) ? undefined : 'Только цифры')
 
 storiesOf('Controls/Input', module)
   .addWithInfo('default', () => {
@@ -133,7 +134,7 @@ storiesOf('Controls/Input', module)
         name={inputDefault.name}
         size={sizesSelect()}
         placeholder={inputDefault.placeholder}
-        validate={[isRequired]}
+        validate={[isRequired, isNumber]}
       />
 
     )

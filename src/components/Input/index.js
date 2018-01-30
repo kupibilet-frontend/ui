@@ -40,7 +40,7 @@ type State = {
   isActive: boolean,
 }
 
-class InputControl extends React.PureComponent<void, Props, State> {
+class InputControl extends React.PureComponent<Props, State> {
   static defaultProps = {
     name: 'input',
     size: 'normal',
@@ -188,12 +188,13 @@ type RFProps = FieldProps
 
 const RFInput = (props : RFProps) => {
   const { input, meta } = props
+
   return (
     <InputControl
       {...input}
       {...meta}
       {...props}
-      error={meta.touched && meta.error}
+      error={meta.dirty && !meta.active && meta.error}
       success={meta.touched && meta.valid}
     />
   )
