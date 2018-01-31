@@ -90,7 +90,7 @@
   "dependencies": {
     "@kupibilet/react-dates": "^12.3.0",
     "@kupibilet/react-media": "^1.5.1",
-    "rc-collapse": "~1.7.0",
+    "rc-collapse": "~1.8.0",
     "rc-tabs": "^9.1.10",
     "react-autosuggest": "^9.0.0",
     "react-portal": "^4.0.0-beta.2",
