@@ -41,6 +41,7 @@ export default css`
   }
 
   .DayPickerNavigation--vertical {
+    display: none;
     position: absolute;
     bottom: 0;
     left: 0;

@@ -19,6 +19,15 @@ export default css`
 
   // .DayPicker--vertical.DayPicker--portal {}
 
+  .DayPicker--vertical > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .DayPicker--vertical .DayPicker__focus-region {
+    order: 2;
+  }
+
   .DayPicker__week-headers {
     position: relative;
   }
