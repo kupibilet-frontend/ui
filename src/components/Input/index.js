@@ -10,6 +10,7 @@ import {
   InputWrapper,
   IconWrap,
   StatusIndicator,
+  InnerTextarea,
 } from './styled'
 
 export { InnerInput, Error }
@@ -34,6 +35,8 @@ type Props = {
   innerRef?: Function,
   /* global React$Element */
   children?: React$Element<*>[],
+  textarea?: boolean,
+  rows: number,
 }
 
 type State = {
@@ -81,6 +84,52 @@ class InputControl extends React.PureComponent<void, Props, State> {
     }
   }
 
+  renderField = () => {
+    const {
+      size,
+      success,
+      error,
+      disabled,
+      leftIcon,
+      rightIcon,
+      textarea,
+      rows = 1,
+      ...props
+    } = this.props
+
+    if (textarea) {
+      return (
+        <InnerTextarea
+          {...props}
+          size={size}
+          disabled={disabled}
+          success={success}
+          error={error}
+          onFocus={this.handleFocus.bind(null, null)}
+          onBlur={this.handleBlur.bind(null, null)}
+          innerRef={(el) => this.innerRef(el)}
+          textarea={textarea}
+          resize="none"
+          rows={rows}
+        />
+      )
+    }
+    return (
+      <InnerInput
+        {...props}
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
+        size={size}
+        disabled={disabled}
+        success={success}
+        error={error}
+        onFocus={this.handleFocus.bind(null, null)}
+        onBlur={this.handleBlur.bind(null, null)}
+        innerRef={(el) => this.innerRef(el)}
+      />
+    )
+  }
+
   render() {
     const {
       active,
@@ -94,6 +143,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
       rightIcon,
       handleLeftIconPress,
       handleRightIconPress,
+      textarea,
       ...props
     } = this.props
 
@@ -108,6 +158,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
         success={success}
         error={error}
         neighboringInGroup={neighboringInGroup}
+        textarea={textarea}
       >
         {
           leftIcon ? (
@@ -139,18 +190,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
               )) }
             </ControlsGroup>
           ) : (
-            <InnerInput
-              {...props}
-              leftIcon={leftIcon}
-              rightIcon={rightIcon}
-              size={size}
-              disabled={disabled}
-              success={success}
-              error={error}
-              onFocus={this.handleFocus.bind(null, null)}
-              onBlur={this.handleBlur.bind(null, null)}
-              innerRef={(el) => this.innerRef(el)}
-            />
+            this.renderField()
           )
         }
         {

@@ -14,6 +14,11 @@ const inputBorderColor = (props) => {
   return theme.color.misc
 }
 
+const TEXTAREA_PADDINGS = {
+  large: 10,
+  normal: 8,
+  small: 5,
+}
 const ICON_PADDINGS = {
   large: {
     outer: '10px',
@@ -96,6 +101,17 @@ const InnerInput = styled.input`
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: ${({ size }) => INPUTHEIGHT[size]};
+  ${({ size, textarea }) => {
+    if (textarea) {
+      return `
+        resize: none;
+        padding-top: ${TEXTAREA_PADDINGS[size]}px;
+        padding-bottom: ${TEXTAREA_PADDINGS[size]}px;
+      `
+    }
+    return ''
+  }}
   ${({ size }) => (size === 'large'
     ? 'letter-spacing: -0.1px'
     : null
@@ -147,14 +163,14 @@ const InnerInput = styled.input`
   }
   `
 
+const InnerTextarea = InnerInput.withComponent('textarea')
+
 const InputWrapper = styled.div`
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-
-  height: ${({ size }) => INPUTHEIGHT[size]};
 
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
@@ -249,4 +265,5 @@ export {
   InputWrapper,
   IconWrap,
   StatusIndicator,
+  InnerTextarea,
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { select, text, boolean } from '@storybook/addon-knobs'
+import { select, text, boolean, number } from '@storybook/addon-knobs'
 import withReduxForm from 'storybook/decorators/withReduxForm'
 import { Field } from 'redux-form'
 import ControlsGroup from 'components/ControlsGroup'
@@ -135,6 +135,25 @@ storiesOf('Controls/Input', module)
         placeholder={inputDefault.placeholder}
         validate={[isRequired]}
       />
+    )
+  })
+  .addWithInfo('As textarea', () => {
+    const placeholder = text('placeholder', inputDefault.placeholder)
+    const disabled = boolean('disabled', false)
+    const success = boolean('success', false)
+    const error = text('error', '')
+    const rows = number('rows', 1)
 
+    return (
+      <Input
+        name={inputDefault.name}
+        disabled={disabled}
+        success={success}
+        error={error}
+        size={sizesSelect()}
+        placeholder={placeholder}
+        textarea
+        rows={rows}
+      />
     )
   })
