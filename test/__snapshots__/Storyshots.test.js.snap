@@ -3972,6 +3972,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 .c1 .DayPickerNavigation--vertical {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4136,6 +4137,22 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 .c1 .DayPicker--horizontal {
   box-shadow: 0 3px 7px 0 #62708b;
   border-radius: 3px;
+}
+
+.c1 .DayPicker--vertical > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 .DayPicker--vertical .DayPicker__focus-region {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .c1 .DayPicker__week-headers {
