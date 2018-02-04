@@ -21,7 +21,6 @@ export default css`
   .CalendarMonthGrid--vertical {
     width: ${({ dimensions }) => dimensions.dayPickerWidth}px;
     margin: 0 auto;
-    padding-top: 36px;
   }
 
   .CalendarMonthGrid--vertical-scrollable {

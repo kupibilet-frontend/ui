@@ -81,6 +81,7 @@ export default css`
   .DayPicker--vertical .DayPicker__week-header {
     margin-left: ${({ dimensions }) => -1 * dimensions.dayPickerWidth / 2}px;
     left: 50%;
+    width: 100%;
   }
 
   .DayPicker--vertical-scrollable {
