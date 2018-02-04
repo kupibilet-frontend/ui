@@ -3923,7 +3923,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 .c1 .CalendarMonthGrid--vertical {
   width: 339px;
   margin: 0 auto;
-  padding-top: 36px;
 }
 
 .c1 .CalendarMonthGrid--vertical-scrollable {
@@ -4200,6 +4199,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 .c1 .DayPicker--vertical .DayPicker__week-header {
   margin-left: -169.5px;
   left: 50%;
+  width: 100%;
 }
 
 .c1 .DayPicker--vertical-scrollable {
