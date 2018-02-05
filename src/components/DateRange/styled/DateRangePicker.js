@@ -4,23 +4,23 @@ import mq from 'utils/media-queries'
 const queries = {
   smallPhones: 'screen and (min-width: 321px) and (max-width: 374px)',
   mediumPhones: 'screen and (min-width: 374px) and (max-width: 400px)',
-  mediumPhones: 'screen and (min-width: 400px) and (max-width: 599px)',
+  largePhones: 'screen and (min-width: 400px) and (max-width: 599px)',
 }
 
 const media = {
   smallPhones: (...args) => css`
     @media ${queries.smallPhones} {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `,
   mediumPhones: (...args) => css`
     @media ${queries.mediumPhones} {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `,
   largePhones: (...args) => css`
     @media ${queries.largePhones} {
-      ${ css(...args) }
+      ${css(...args)}
     }
   `,
 }
