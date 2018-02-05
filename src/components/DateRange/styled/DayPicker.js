@@ -79,8 +79,9 @@ export default css`
   }
 
   .DayPicker--vertical .DayPicker__week-header {
-    margin-left: ${({ dimensions }) => -1 * dimensions.dayPickerWidth / 2}px;
-    left: 50%;
+    margin-left: 0;
+    left: 0;
+    text-align: center;
     width: 100%;
   }
 
