@@ -78,6 +78,10 @@ export default css`
     }
   }
 
+  .DayPicker--vertical {
+    width: 100%;
+  }
+
   .DayPicker--vertical .DayPicker__week-header {
     margin-left: 0;
     left: 160.5px;
