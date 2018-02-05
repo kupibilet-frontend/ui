@@ -83,9 +83,11 @@ export default css`
   }
 
   .DayPicker--vertical .DayPicker__week-header {
-    margin-left: 0;
     left: 160.5px;
+    margin-left: 0;
+    padding: 0;
     text-align: center;
+    white-space: nowrap;
     width: 100%;
   }
 

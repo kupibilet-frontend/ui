@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import mq from 'utils/media-queries'
 
 const queries = {
-  smallPhones: 'screen and (min-width: 321px) and (max-width: 374px)',
+  smallPhones: 'screen and (min-width: 330px) and (max-width: 374px)',
   mediumPhones: 'screen and (min-width: 374px) and (max-width: 400px)',
   largePhones: 'screen and (min-width: 400px) and (max-width: 599px)',
 }
