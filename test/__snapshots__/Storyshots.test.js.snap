@@ -4201,9 +4201,11 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 .c1 .DayPicker--vertical .DayPicker__week-header {
-  margin-left: 0;
   left: 160.5px;
+  margin-left: 0;
+  padding: 0;
   text-align: center;
+  white-space: nowrap;
   width: 100%;
 }
 
@@ -4280,7 +4282,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   }
 }
 
-@media screen and (min-width:321px) and (max-width:374px) {
+@media screen and (min-width:330px) and (max-width:374px) {
   .c1 .DateRangePicker__picker--vertical {
     zoom: 1.1;
   }
