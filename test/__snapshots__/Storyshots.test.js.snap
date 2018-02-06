@@ -3971,7 +3971,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 .c1 .DayPickerNavigation--vertical {
-  display: none;
+  background: #ffffff;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3986,6 +3986,33 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   position: relative;
   height: 100%;
   width: 50%;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev {
+  display: none;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__next {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 42px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__next .withTheme {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .c1 .DayPickerNavigation--vertical .DayPickerNavigation__next--default {
