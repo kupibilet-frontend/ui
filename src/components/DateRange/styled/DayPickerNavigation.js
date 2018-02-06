@@ -1,4 +1,5 @@
 import { css } from 'styled-components'
+import Icon from 'components/Icon'
 
 export default css`
   .DayPickerNavigation__prev,
@@ -41,7 +42,7 @@ export default css`
   }
 
   .DayPickerNavigation--vertical {
-    display: none;
+    background: ${({ theme }) => theme.color.background};
     position: absolute;
     bottom: 0;
     left: 0;
@@ -55,6 +56,22 @@ export default css`
       position: relative;
       height: 100%;
       width: 50%;
+    }
+
+    .DayPickerNavigation__prev {
+      display: none;
+    }
+
+    .DayPickerNavigation__next {
+      align-items: center;
+      justify-content: center;
+      height: 42px;
+      display: flex;
+      width: 100%;
+    }
+
+    .DayPickerNavigation__next ${Icon} {
+      transform: rotate(90deg);
     }
 
     .DayPickerNavigation__next--default {
