@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import Icon from 'components/Icon'
+import Icon from '../../../components/Icon'
 
 export default css`
   .DayPickerNavigation__prev,
@@ -64,9 +64,11 @@ export default css`
 
     .DayPickerNavigation__next {
       align-items: center;
+      border-radius: 0;
       justify-content: center;
       height: 42px;
       display: flex;
+      margin-top: 12px;
       width: 100%;
     }
 
