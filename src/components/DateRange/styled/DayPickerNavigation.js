@@ -1,5 +1,4 @@
 import { css } from 'styled-components'
-import Icon from '../../../components/Icon'
 
 export default css`
   .DayPickerNavigation__prev,
@@ -46,7 +45,7 @@ export default css`
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 52px;
+    height: 42px;
     width: 100%;
     z-index: 2;
 
@@ -72,7 +71,7 @@ export default css`
       width: 100%;
     }
 
-    .DayPickerNavigation__next ${Icon} {
+    .DayPickerNavigation__next svg {
       transform: rotate(90deg);
     }
 
