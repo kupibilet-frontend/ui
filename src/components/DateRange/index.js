@@ -53,12 +53,19 @@ class DateRangePickerWrapper extends React.PureComponent {
     focusedInput: null,
     hoveredDate: null,
     calendarMonthCursor: null,
+    months: this.props.numberOfMonths,
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.focusedInput !== this.props.focusedInput) {
       this.setState({
         hoveredDate: null,
+      })
+    }
+
+    if (nextProps.numberOfMonths !== this.props.numberOfMonths) {
+      this.setState({
+        months: nextProps.numberOfMonths,
       })
     }
   }
@@ -184,6 +191,7 @@ class DateRangePickerWrapper extends React.PureComponent {
           navNext={<CalendarNav direction="right" />}
           startDatePlaceholderText={startDatePlaceholder}
           endDatePlaceholderText={endDatePlaceholder}
+          numberOfMonths={this.state.months}
         />
       </div>
     )
