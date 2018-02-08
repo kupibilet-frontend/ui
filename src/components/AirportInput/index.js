@@ -48,7 +48,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
     this.setState({ focused: true })
     e.persist()
     setTimeout(() => {
-      e.target.setSelectionRange(0, 9999)
+      e.target.select()
     })
   }
 
@@ -113,7 +113,6 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           rows="1"
           wrap="off"
           spellcheck="false"
-          isIOS={this.props.isIOS}
         />
         <Geo className="AirportInput__geo" neighboringInGroup={neighboringInGroup}>
           <ValuePlaceholder>
@@ -133,7 +132,6 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
         <Code neighboringInGroup={neighboringInGroup}>
           { IATACode }
         </Code>
-
       </Container>
     )
   }
