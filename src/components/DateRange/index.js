@@ -192,6 +192,7 @@ class DateRangePickerWrapper extends React.PureComponent {
           startDatePlaceholderText={startDatePlaceholder}
           endDatePlaceholderText={endDatePlaceholder}
           numberOfMonths={this.state.months}
+          firstVisibleMonthIndex={this.props.firstVisibleMonthIndex}
         />
       </div>
     )
