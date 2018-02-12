@@ -42,8 +42,13 @@ export const Wrapper = styled.div`
   opacity: 1;
   animation-name: ${fade};
   animation-duration: 0.35s;
+
   ${mq.handheld`
     ${(props) => (props.isOnBottom ? '' : 'background: white;')}
+  `}
+
+  ${mq.mobile`
+    animation: none;
   `}
 `
 
@@ -64,6 +69,10 @@ export const OverlayContentWrap = styled.div`
   ${mq.handheld`
     height: 100%;
     ${(props) => (props.isOnBottom ? '' : 'background: white;')}
+  `}
+
+  ${mq.mobile`
+    animation: none;
   `}
 `
 
