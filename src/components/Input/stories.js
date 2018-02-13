@@ -142,7 +142,7 @@ storiesOf('Controls/Input', module)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
     const error = text('error', '')
-    const rows = number('rows', 1)
+    const rows = number('rows', 4)
 
     return (
       <Input

@@ -102,16 +102,7 @@ const InnerInput = styled.input`
   line-height: normal;
   border: none;
   min-height: ${({ size }) => INPUTHEIGHT[size]};
-  ${({ size, textarea }) => {
-    if (textarea) {
-      return `
-        resize: none;
-        padding-top: ${TEXTAREA_PADDINGS[size]}px;
-        padding-bottom: ${TEXTAREA_PADDINGS[size]}px;
-      `
-    }
-    return ''
-  }}
+
   ${({ size }) => (size === 'large'
     ? 'letter-spacing: -0.1px'
     : null
@@ -163,7 +154,14 @@ const InnerInput = styled.input`
   }
   `
 
-const InnerTextarea = InnerInput.withComponent('textarea')
+const InnerTextarea = InnerInput.withComponent('textarea').extend`
+  ${({ size }) => (`
+      resize: none;
+      padding-top: ${TEXTAREA_PADDINGS[size]}px;
+      padding-bottom: ${TEXTAREA_PADDINGS[size]}px;
+    `
+  )}
+`
 
 const InputWrapper = styled.div`
   position: relative;

@@ -36,7 +36,6 @@ type Props = {
   /* global React$Element */
   children?: React$Element<*>[],
   textarea?: boolean,
-  rows: number,
 }
 
 type State = {
@@ -84,7 +83,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
     }
   }
 
-  renderField = () => {
+  renderInputElement = () => {
     const {
       size,
       success,
@@ -93,32 +92,14 @@ class InputControl extends React.PureComponent<void, Props, State> {
       leftIcon,
       rightIcon,
       textarea,
-      rows = 1,
       ...props
     } = this.props
 
-    if (textarea) {
-      return (
-        <InnerTextarea
-          {...props}
-          size={size}
-          disabled={disabled}
-          success={success}
-          error={error}
-          onFocus={this.handleFocus.bind(null, null)}
-          onBlur={this.handleBlur.bind(null, null)}
-          innerRef={(el) => this.innerRef(el)}
-          textarea={textarea}
-          resize="none"
-          rows={rows}
-        />
-      )
-    }
+    const InputComponent = textarea ? InnerTextarea : InnerInput
+
     return (
-      <InnerInput
+      <InputComponent
         {...props}
-        leftIcon={leftIcon}
-        rightIcon={rightIcon}
         size={size}
         disabled={disabled}
         success={success}
@@ -126,6 +107,10 @@ class InputControl extends React.PureComponent<void, Props, State> {
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
         innerRef={(el) => this.innerRef(el)}
+        textarea={textarea}
+        resize="none"
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
       />
     )
   }
@@ -190,7 +175,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
               )) }
             </ControlsGroup>
           ) : (
-            this.renderField()
+            this.renderInputElement()
           )
         }
         {
