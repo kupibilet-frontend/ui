@@ -4181,7 +4181,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
-  padding-bottom: 42px;
 }
 
 .c1 .DayPicker__week-headers {
@@ -4252,7 +4251,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 .c1 .DayPicker--vertical-scrollable .transition-container--vertical {
   padding-top: 20px;
   height: 100%;
-  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
@@ -4313,19 +4311,19 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 @media screen and (min-width:330px) and (max-width:374px) {
-  .c1 .DateRangePicker__picker--vertical {
+  .c1 .CalendarMonthGrid CalendarMonthGrid--vertical-scrollable {
     zoom: 1.1;
   }
 }
 
 @media screen and (min-width:374px) and (max-width:400px) {
-  .c1 .DateRangePicker__picker--vertical {
+  .c1 .CalendarMonthGrid CalendarMonthGrid--vertical-scrollable {
     zoom: 1.2;
   }
 }
 
 @media screen and (min-width:400px) and (max-width:599px) {
-  .c1 .DateRangePicker__picker--vertical {
+  .c1 .CalendarMonthGrid CalendarMonthGrid--vertical-scrollable {
     zoom: 1.3;
   }
 }
