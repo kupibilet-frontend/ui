@@ -91,19 +91,11 @@ class InputControl extends React.PureComponent<void, Props, State> {
       disabled,
       leftIcon,
       rightIcon,
-<<<<<<< HEAD
       isTextarea,
       ...props
     } = this.props
 
     const InputComponent = isTextarea ? InnerTextarea : InnerInput
-=======
-      textarea,
-      ...props
-    } = this.props
-
-    const InputComponent = textarea ? InnerTextarea : InnerInput
->>>>>>> code style fix
 
     return (
       <InputComponent
@@ -115,12 +107,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
         innerRef={(el) => this.innerRef(el)}
-<<<<<<< HEAD
         isTextarea={isTextarea}
-=======
-        textarea={textarea}
->>>>>>> code style fix
-        resize="none"
         leftIcon={leftIcon}
         rightIcon={rightIcon}
       />
