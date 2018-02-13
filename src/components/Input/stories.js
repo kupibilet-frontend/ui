@@ -152,7 +152,7 @@ storiesOf('Controls/Input', module)
         error={error}
         size={sizesSelect()}
         placeholder={placeholder}
-        textarea
+        isTextarea
         rows={rows}
       />
     )
