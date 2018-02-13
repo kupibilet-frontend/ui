@@ -1,30 +1,6 @@
 import { css } from 'styled-components'
 import mq from 'utils/media-queries'
 
-const queries = {
-  smallPhones: 'screen and (min-width: 330px) and (max-width: 374px)',
-  mediumPhones: 'screen and (min-width: 374px) and (max-width: 400px)',
-  largePhones: 'screen and (min-width: 400px) and (max-width: 599px)',
-}
-
-const media = {
-  smallPhones: (...args) => css`
-    @media ${queries.smallPhones} {
-      ${css(...args)}
-    }
-  `,
-  mediumPhones: (...args) => css`
-    @media ${queries.mediumPhones} {
-      ${css(...args)}
-    }
-  `,
-  largePhones: (...args) => css`
-    @media ${queries.largePhones} {
-      ${css(...args)}
-    }
-  `,
-}
-
 export default css`
   .DateRangePicker {
     position: relative;
@@ -53,19 +29,5 @@ export default css`
 
   .DateRangePicker__picker--direction-right {
       right: 0;
-  }
-
-  .CalendarMonthGrid CalendarMonthGrid--vertical-scrollable {
-    ${media.smallPhones`
-      zoom: 1.1;
-    `}
-
-    ${media.mediumPhones`
-      zoom: 1.2;
-    `}
-
-    ${media.largePhones`
-      zoom: 1.3;
-    `}
   }
 `
