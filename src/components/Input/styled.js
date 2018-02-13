@@ -161,7 +161,7 @@ const InnerTextarea = InnerInput.withComponent('textarea').extend`
       padding-bottom: ${TEXTAREA_PADDINGS[size]}px;
     `
   )}
-`
+  `
 
 const InputWrapper = styled.div`
   position: relative;
