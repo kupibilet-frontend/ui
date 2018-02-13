@@ -35,7 +35,7 @@ type Props = {
   innerRef?: Function,
   /* global React$Element */
   children?: React$Element<*>[],
-  textarea?: boolean,
+  isTextarea?: boolean,
 }
 
 type State = {
@@ -91,11 +91,11 @@ class InputControl extends React.PureComponent<void, Props, State> {
       disabled,
       leftIcon,
       rightIcon,
-      textarea,
+      isTextarea,
       ...props
     } = this.props
 
-    const InputComponent = textarea ? InnerTextarea : InnerInput
+    const InputComponent = isTextarea ? InnerTextarea : InnerInput
 
     return (
       <InputComponent
@@ -107,7 +107,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
         innerRef={(el) => this.innerRef(el)}
-        textarea={textarea}
+        isTextarea={isTextarea}
         resize="none"
         leftIcon={leftIcon}
         rightIcon={rightIcon}
@@ -128,7 +128,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
       rightIcon,
       handleLeftIconPress,
       handleRightIconPress,
-      textarea,
+      isTextarea,
       ...props
     } = this.props
 
@@ -143,7 +143,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
         success={success}
         error={error}
         neighboringInGroup={neighboringInGroup}
-        textarea={textarea}
+        isTextarea={isTextarea}
       >
         {
           leftIcon ? (
