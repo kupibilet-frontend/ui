@@ -26,7 +26,6 @@ export default css`
 
   .DayPicker--vertical .DayPicker__focus-region {
     order: 2;
-    padding-bottom: 42px;
   }
 
   .DayPicker__week-headers {
@@ -104,7 +103,6 @@ export default css`
     .transition-container--vertical {
       padding-top: 20px;
       height: 100%;
-      position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
