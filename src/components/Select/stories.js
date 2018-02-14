@@ -122,7 +122,7 @@ storiesOf('Controls/Select', module)
         }}
         error={error}
         success={success}
-        size = {sizesSelect()}
+        size={sizesSelect()}
       />
     )
   })
