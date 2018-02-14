@@ -4293,24 +4293,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   }
 }
 
-@media screen and (min-width:330px) and (max-width:374px) {
-  .c1 .CalendarMonthGrid--vertical-scrollable {
-    zoom: 1.1;
-  }
-}
-
-@media screen and (min-width:374px) and (max-width:400px) {
-  .c1 .CalendarMonthGrid--vertical-scrollable {
-    zoom: 1.2;
-  }
-}
-
-@media screen and (min-width:400px) and (max-width:599px) {
-  .c1 .CalendarMonthGrid--vertical-scrollable {
-    zoom: 1.3;
-  }
-}
-
 @media screen and (max-width:599px) {
   .responsive .c1 .DateRangePicker__picker,
   .responsive-booking .c1 .DateRangePicker__picker {
@@ -4341,6 +4323,24 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   .responsive .c1 .DayPicker__week-header li,
   .responsive-booking .c1 .DayPicker__week-header li {
     padding-top: 9px;
+  }
+}
+
+@media screen and (min-width:330px) and (max-width:374px) {
+  .c1 .DayPicker--vertical-scrollable {
+    zoom: 1.1;
+  }
+}
+
+@media screen and (min-width:374px) and (max-width:400px) {
+  .c1 .DayPicker--vertical-scrollable {
+    zoom: 1.2;
+  }
+}
+
+@media screen and (min-width:400px) and (max-width:599px) {
+  .c1 .DayPicker--vertical-scrollable {
+    zoom: 1.3;
   }
 }
 
