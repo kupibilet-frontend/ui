@@ -4255,6 +4255,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   bottom: 0;
   right: 0;
   left: 0;
+  position: relative;
   overflow-y: scroll;
 }
 
