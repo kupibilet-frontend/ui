@@ -1,6 +1,30 @@
 import { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import media from 'utils/media-queries'
+import mq from 'utils/media-queries'
+
+const queries = {
+  smallPhones: 'screen and (min-width: 330px) and (max-width: 374px)',
+  mediumPhones: 'screen and (min-width: 374px) and (max-width: 400px)',
+  largePhones: 'screen and (min-width: 400px) and (max-width: 599px)',
+}
+
+const media = {
+  smallPhones: (...args) => css`
+    @media ${queries.smallPhones} {
+      ${css(...args)}
+    }
+  `,
+  mediumPhones: (...args) => css`
+    @media ${queries.mediumPhones} {
+      ${css(...args)}
+    }
+  `,
+  largePhones: (...args) => css`
+    @media ${queries.largePhones} {
+      ${css(...args)}
+    }
+  `,
+}
 
 export default css`
   .DayPicker {
@@ -49,7 +73,7 @@ export default css`
     padding: 0 13px;
     text-align: left;
 
-    ${media.mobile`
+    ${mq.mobile`
       background: ${({ theme }) => theme.color.background};
       border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
       top: 0;
@@ -72,7 +96,7 @@ export default css`
       letter-spacing: -.21px;
       text-align: center;
 
-      ${media.mobile`
+      ${mq.mobile`
         padding-top: 9px;
       `}
     }
@@ -93,6 +117,18 @@ export default css`
 
   .DayPicker--vertical-scrollable {
     height: 100%;
+
+    ${media.smallPhones`
+      zoom: 1.1;
+    `}
+
+    ${media.mediumPhones`
+      zoom: 1.2;
+    `}
+
+    ${media.largePhones`
+      zoom: 1.3;
+    `}
 
     .DayPicker__week-header {
       top: 0;
