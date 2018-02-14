@@ -4410,7 +4410,6 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   color: #333333;
   background-color: #fff;
   border-radius: 3px;
-  resize: none;
   padding-top: 10px;
   padding-bottom: 10px;
 }
