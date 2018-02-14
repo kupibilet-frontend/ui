@@ -4374,6 +4374,176 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/Input As textarea 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  min-height: 42px;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2:focus {
+  outline-style: none;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+}
+
+.c1:hover {
+  border-color: #38afff;
+}
+
+.c1 .combined-inputs-group {
+  height: 100%;
+}
+
+.c3 {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: none;
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: #e64926;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+    disabled={false}
+    size="large"
+  >
+    <textarea
+      className="c2"
+      disabled={false}
+      name="input"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Только прямые рейсы"
+      rows={4}
+      size="large"
+    />
+    <div
+      className="c3"
+    />
+    
+  </div>
+</div>
+`;
+
 exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -4418,6 +4588,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4503,6 +4674,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4587,6 +4759,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4676,7 +4849,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -4794,6 +4966,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4803,7 +4976,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: #fff;
-  border-radius: 3px;
+  border-right: 1px solid #b1bdcc;
+  border-radius: 3px 0 0 3px;
 }
 
 .c3::-webkit-input-placeholder {
@@ -4866,6 +5040,176 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   color: #b1bdcc;
 }
 
+.c6 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  min-height: 42px;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-right: 1px solid #b1bdcc;
+}
+
+.c6::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c6:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6::placeholder {
+  color: #96a0b3;
+}
+
+.c6::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c6:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c6:focus {
+  outline-style: none;
+}
+
+.c6:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c6:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c8 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  min-height: 42px;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: #fff;
+  border-radius: 0 3px 3px 0;
+}
+
+.c8::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c8::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c8:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c8::placeholder {
+  color: #96a0b3;
+}
+
+.c8::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c8::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c8:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c8:focus {
+  outline-style: none;
+}
+
+.c8:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c8:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c8:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c8:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c8:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c8:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c8:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
 .c2 {
   position: relative;
   display: -webkit-box;
@@ -4883,7 +5227,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border-radius: 3px 0 0 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -4918,7 +5261,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border: 1px solid #b1bdcc;
   border-style: solid;
   margin-left: -1px;
@@ -4936,7 +5278,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   height: 100%;
 }
 
-.c6 {
+.c7 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4953,7 +5295,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border-radius: 0 3px 3px 0;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -4964,11 +5305,11 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   transition-property: border-color,box-shadow;
 }
 
-.c6:hover {
+.c7:hover {
   border-color: #38afff;
 }
 
-.c6 .combined-inputs-group {
+.c7 .combined-inputs-group {
   height: 100%;
 }
 
@@ -5013,7 +5354,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
       size="large"
     >
       <input
-        className="c3"
+        className="c6"
         disabled={undefined}
         name="input"
         onBlur={[Function]}
@@ -5027,12 +5368,12 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
       />
     </div>
     <div
-      className="c6"
+      className="c7"
       disabled={undefined}
       size="large"
     >
       <input
-        className="c3"
+        className="c8"
         disabled={undefined}
         name="input"
         onBlur={[Function]}
@@ -5074,6 +5415,7 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5163,7 +5505,6 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5264,6 +5605,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5353,7 +5695,6 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5505,6 +5846,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5594,7 +5936,6 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5754,6 +6095,7 @@ exports[`Storyshots Controls/Input default 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 42px;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5843,7 +6185,6 @@ exports[`Storyshots Controls/Input default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 42px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -6782,6 +7123,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 36px;
   padding-left: 11px;
   padding-right: 0;
   font-size: 16px;
@@ -6867,7 +7209,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 36px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7109,6 +7450,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 36px;
   padding-left: 11px;
   padding-right: 0;
   font-size: 16px;
@@ -7194,7 +7536,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 36px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7433,6 +7774,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
+  min-height: 36px;
   padding-left: 11px;
   padding-right: 0;
   font-size: 16px;
@@ -7518,7 +7860,6 @@ exports[`Storyshots Controls/Select default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 36px;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;

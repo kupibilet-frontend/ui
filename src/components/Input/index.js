@@ -10,6 +10,7 @@ import {
   InputWrapper,
   IconWrap,
   StatusIndicator,
+  InnerTextarea,
 } from './styled'
 
 export { InnerInput, Error }
@@ -34,6 +35,7 @@ type Props = {
   innerRef?: Function,
   /* global React$Element */
   children?: React$Element<*>[],
+  isTextarea?: boolean,
 }
 
 type State = {
@@ -81,6 +83,38 @@ class InputControl extends React.PureComponent<void, Props, State> {
     }
   }
 
+  renderInputElement = () => {
+    const {
+      size,
+      success,
+      error,
+      disabled,
+      leftIcon,
+      rightIcon,
+      isTextarea,
+      ...props
+    } = this.props
+
+    const InputComponent = isTextarea ? InnerTextarea : InnerInput
+
+    return (
+      <InputComponent
+        {...props}
+        size={size}
+        disabled={disabled}
+        success={success}
+        error={error}
+        onFocus={this.handleFocus.bind(null, null)}
+        onBlur={this.handleBlur.bind(null, null)}
+        innerRef={(el) => this.innerRef(el)}
+        isTextarea={isTextarea}
+        resize="none"
+        leftIcon={leftIcon}
+        rightIcon={rightIcon}
+      />
+    )
+  }
+
   render() {
     const {
       active,
@@ -94,6 +128,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
       rightIcon,
       handleLeftIconPress,
       handleRightIconPress,
+      isTextarea,
       ...props
     } = this.props
 
@@ -108,6 +143,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
         success={success}
         error={error}
         neighboringInGroup={neighboringInGroup}
+        isTextarea={isTextarea}
       >
         {
           leftIcon ? (
@@ -139,18 +175,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
               )) }
             </ControlsGroup>
           ) : (
-            <InnerInput
-              {...props}
-              leftIcon={leftIcon}
-              rightIcon={rightIcon}
-              size={size}
-              disabled={disabled}
-              success={success}
-              error={error}
-              onFocus={this.handleFocus.bind(null, null)}
-              onBlur={this.handleBlur.bind(null, null)}
-              innerRef={(el) => this.innerRef(el)}
-            />
+            this.renderInputElement()
           )
         }
         {
