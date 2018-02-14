@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import mq from 'utils/media-queries'
+import media from 'utils/media-queries'
 
 const queries = {
   smallPhones: 'screen and (min-width: 330px) and (max-width: 374px)',
@@ -8,7 +8,7 @@ const queries = {
   largePhones: 'screen and (min-width: 400px) and (max-width: 599px)',
 }
 
-const media = {
+const phoneMedia = {
   smallPhones: (...args) => css`
     @media ${queries.smallPhones} {
       ${css(...args)}
@@ -73,7 +73,7 @@ export default css`
     padding: 0 13px;
     text-align: left;
 
-    ${mq.mobile`
+    ${media.mobile`
       background: ${({ theme }) => theme.color.background};
       border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
       top: 0;
@@ -96,7 +96,7 @@ export default css`
       letter-spacing: -.21px;
       text-align: center;
 
-      ${mq.mobile`
+      ${media.mobile`
         padding-top: 9px;
       `}
     }
@@ -116,19 +116,21 @@ export default css`
   }
 
   .DayPicker--vertical-scrollable {
-    height: 100%;
-
-    ${media.smallPhones`
+    ${phoneMedia.smallPhones`
       zoom: 1.1;
     `}
 
-    ${media.mediumPhones`
+    ${phoneMedia.mediumPhones`
       zoom: 1.2;
     `}
 
-    ${media.largePhones`
+    ${phoneMedia.largePhones`
       zoom: 1.3;
     `}
+  }
+
+  .DayPicker--vertical-scrollable {
+    height: 100%;
 
     .DayPicker__week-header {
       top: 0;
@@ -143,6 +145,7 @@ export default css`
       bottom: 0;
       right: 0;
       left: 0;
+      position: relative;
       overflow-y: scroll;
     }
 
