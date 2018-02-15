@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, boolean, object } from '@storybook/addon-knobs'
+import { select, text, boolean, object } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 
 import withReduxForm from 'storybook/decorators/withReduxForm'
@@ -88,6 +88,15 @@ const getSimpleKey = (suggestion) => suggestion.value
 const getSectionSuggestionKey = (suggestion) => suggestion.customKey
 const getSectionSuggestionValue = (suggestion) => suggestion.customValue
 
+const sizesSelect = (defaultValue = 'large') => select(
+  'size',
+  {
+    large: 'Large',
+    normal: 'Normal',
+    small: 'Small',
+  },
+  defaultValue,
+)
 
 storiesOf('Controls/Select', module)
   .addWithInfo('default', () => {
@@ -97,6 +106,7 @@ storiesOf('Controls/Select', module)
     const error = text('error', '')
     const selectedSuggestion = object('value', { value: '' })
     const defaultInputProps = { placeholder, disabled }
+
     return (
       <Select
         suggestions={initialState.suggestions}
@@ -112,6 +122,7 @@ storiesOf('Controls/Select', module)
         }}
         error={error}
         success={success}
+        size={sizesSelect()}
       />
     )
   })

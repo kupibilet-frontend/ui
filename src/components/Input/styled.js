@@ -168,6 +168,7 @@ const InputWrapper = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  background-color: ${({ theme }) => theme.color.background};
 
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
