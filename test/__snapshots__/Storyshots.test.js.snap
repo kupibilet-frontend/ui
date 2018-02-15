@@ -3258,6 +3258,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           placeholder="Туда"
           role="combobox"
           rows="1"
+          size={undefined}
           type="text"
           value=""
           wrap="off"
@@ -4491,6 +4492,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -4849,6 +4851,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5227,6 +5230,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px 0 0 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5261,6 +5265,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border: 1px solid #b1bdcc;
   border-style: solid;
   margin-left: -1px;
@@ -5295,6 +5300,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 0 3px 3px 0;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5505,6 +5511,7 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5695,6 +5702,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5936,6 +5944,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -6185,6 +6194,7 @@ exports[`Storyshots Controls/Input default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7209,6 +7219,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7536,6 +7547,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7774,10 +7786,14 @@ exports[`Storyshots Controls/Select default 1`] = `
   height: 100%;
   line-height: normal;
   border: none;
-  min-height: 36px;
-  padding-left: 11px;
+  min-height: 42px;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
   padding-right: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: #333333;
   background-color: #fff;
   border-radius: 3px;
@@ -7860,6 +7876,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7895,8 +7912,8 @@ exports[`Storyshots Controls/Select default 1`] = `
   -ms-flex-shrink: 0;
   flex-shrink: 0;
   height: 100%;
-  padding-left: 5px;
-  padding-right: 7px;
+  padding-left: 8px;
+  padding-right: 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7944,7 +7961,7 @@ exports[`Storyshots Controls/Select default 1`] = `
     <div
       className="c2"
       disabled={false}
-      size="normal"
+      size="large"
     >
       <input
         aria-activedescendant={null}
@@ -7963,14 +7980,14 @@ exports[`Storyshots Controls/Select default 1`] = `
         placeholder="Купить..."
         readOnly={true}
         role="combobox"
-        size="normal"
+        size="large"
         type="text"
         value=""
       />
       <div
         className="c4"
         onMouseDown={[Function]}
-        size="normal"
+        size="large"
       >
         <span
           className="c5 c6"

@@ -108,7 +108,6 @@ class InputControl extends React.PureComponent<void, Props, State> {
         onBlur={this.handleBlur.bind(null, null)}
         innerRef={(el) => this.innerRef(el)}
         isTextarea={isTextarea}
-        resize="none"
         leftIcon={leftIcon}
         rightIcon={rightIcon}
       />
