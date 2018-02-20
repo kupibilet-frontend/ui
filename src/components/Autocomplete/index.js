@@ -233,7 +233,7 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
   render() {
     const { suggestions = emptyArray } = this.state
     // Pass neighboringInGroup prop to input
-    const { neighboringInGroup, inputProps, className, ...props } = this.props
+    const { neighboringInGroup, inputProps, size, className, ...props } = this.props
     const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
 
     return (
@@ -246,6 +246,7 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
           onBlur: this.onBlur,
           onKeyDown: this.onKeyDown,
           spell,
+          size,
         }}
         suggestions={suggestions}
         ref={(ref) => { this.autosuggestInstance = ref }}
