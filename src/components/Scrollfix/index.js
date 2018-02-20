@@ -19,12 +19,16 @@ class Scrollfix extends Component<Props> {
   }
 
   componentDidMount() {
-    this.scrollPosition = window.scrollY
+    if (window.scrollY) {
+      this.scrollPosition = window.scrollY
+    }
     const node = document.querySelector(this.props.freezableElement)
     if (node) {
       node.style.overflow = 'auto'
       node.style.height = '100%'
-      node.scrollTo(0, this.scrollPosition)
+      if (this.scrollPosition !== 0) {
+        node.scrollTo(0, this.scrollPosition)
+      }
     }
   }
 
