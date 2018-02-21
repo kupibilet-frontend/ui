@@ -9,7 +9,7 @@ const inputBorderColor = (props) => {
   if (active) {
     return theme.color.primary
   } else if (disabled) {
-    return theme.color.miscLightest
+    return theme.color.miscLighter
   }
   return theme.color.misc
 }
