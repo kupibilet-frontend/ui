@@ -28,7 +28,6 @@ const slide = keyframes`
 
 export const Wrapper = styled.div`
   background: rgba(34, 34, 34, 0.85);
-  cursor: pointer;
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -43,6 +42,10 @@ export const Wrapper = styled.div`
   opacity: 1;
   animation-name: ${fade};
   animation-duration: 0.35s;
+
+  ${mq.desktop`
+    cursor: pointer;
+  `}
 
   ${mq.handheld`
     ${(props) => (props.isOnBottom ? '' : 'background: white;')}
