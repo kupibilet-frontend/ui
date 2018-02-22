@@ -67,7 +67,7 @@
     "husky": "~0.13.2",
     "jest": "^22.0.0",
     "jest-styled-components": "^4.6.0",
-    "lint-staged": "^5.0.0",
+    "lint-staged": "^6.0.1",
     "lodash": "^4.17.4",
     "mkp": "^1.0.1",
     "move-binaries-to-bin": "~1.0.1",
