@@ -4,7 +4,6 @@ import { control } from 'utils/reset'
 import placeholder from 'utils/placeholder'
 import { switchTransition } from 'utils/transitions'
 import Icon from 'components/Icon'
-import media from 'utils/media-queries'
 
 const fontStyle = css`
   font-family: inherit;
