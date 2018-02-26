@@ -4085,6 +4085,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   border: 2px solid #77c8ff;
   border-radius: 100px 0 0 100px;
   overflow: hidden;
+  background-color: #ffffff;
   position: relative;
   margin-right: 0;
   z-index: 1;
@@ -4140,7 +4141,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 .c1 .DateRangePickerInput {
-  background-color: #ffffff;
   display: block;
 }
 
