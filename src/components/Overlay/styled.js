@@ -43,7 +43,7 @@ export const Wrapper = styled.div`
   animation-name: ${fade};
   animation-duration: 0.35s;
 
-  ${mq.mobile`
+  ${mq.desktop`
     cursor: pointer;
   `}
 
