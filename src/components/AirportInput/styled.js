@@ -40,10 +40,6 @@ export const Container = styled.div`
   background: ${({ theme }) => theme.color.background};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
-  ${media.mobile`
-    background: none;
-  `}
-
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
       return 'border-radius: 21px 0 0 21px;'
