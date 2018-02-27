@@ -1195,6 +1195,13 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   transition-delay: .15s;
 }
 
+@media screen and (max-width:599px) {
+  .responsive .c1 .styled__SwapIcon-fKoejO,
+  .responsive-booking .c1 .styled__SwapIcon-fKoejO {
+    opacity: 1;
+  }
+}
+
 <div
   className="responsive c0"
 >
@@ -1776,6 +1783,13 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .c9,
+  .responsive-booking .c1 .c9 {
+    opacity: 1;
+  }
 }
 
 <div
@@ -4850,6 +4864,13 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   background-color: #e64926;
 }
 
+@media screen and (max-width:599px) {
+  .responsive .c2 .styled__SwapIcon-fKoejO,
+  .responsive-booking .c2 .styled__SwapIcon-fKoejO {
+    opacity: 1;
+  }
+}
+
 <div
   className="responsive c0"
 >
@@ -5298,6 +5319,13 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   height: calc(100% + 2px);
   width: 2px;
   background-color: #e64926;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1 .styled__SwapIcon-fKoejO,
+  .responsive-booking .c1 .styled__SwapIcon-fKoejO {
+    opacity: 1;
+  }
 }
 
 <div
