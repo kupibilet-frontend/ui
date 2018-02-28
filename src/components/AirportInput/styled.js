@@ -4,7 +4,6 @@ import { control } from 'utils/reset'
 import placeholder from 'utils/placeholder'
 import { switchTransition } from 'utils/transitions'
 import Icon from 'components/Icon'
-import media from 'utils/media-queries'
 
 const fontStyle = css`
   font-family: inherit;
@@ -39,10 +38,6 @@ export const Container = styled.div`
   ${switchTransition}
   background: ${({ theme }) => theme.color.background};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
-
-  ${media.mobile`
-    background: none;
-  `}
 
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {

@@ -1195,13 +1195,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   transition-delay: .15s;
 }
 
-@media screen and (max-width:599px) {
-  .responsive .c4,
-  .responsive-booking .c4 {
-    background: none;
-  }
-}
-
 <div
   className="responsive c0"
 >
@@ -1783,20 +1776,6 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
-    background: none;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c12,
-  .responsive-booking .c12 {
-    background: none;
-  }
 }
 
 <div
@@ -3218,13 +3197,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   }
 }
 
-@media screen and (max-width:599px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
-    background: none;
-  }
-}
-
 <div
   className="responsive c0"
 >
@@ -4085,6 +4057,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   border: 2px solid #77c8ff;
   border-radius: 100px 0 0 100px;
   overflow: hidden;
+  background-color: #ffffff;
   position: relative;
   margin-right: 0;
   z-index: 1;
@@ -4140,7 +4113,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 .c1 .DateRangePickerInput {
-  background-color: #ffffff;
   display: block;
 }
 

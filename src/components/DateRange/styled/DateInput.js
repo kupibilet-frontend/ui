@@ -70,7 +70,7 @@ export default css`
     border: 2px solid ${({ theme }) => theme.color.primaryLight};
     border-radius: 100px 0 0 100px;
     overflow: hidden;
-
+    background-color: ${({ theme }) => theme.color.background};
     // Input borders overlaying
     position: relative;
     margin-right: 0;
