@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react'
 import Slider from './index'
 
 const onChange = (values) => {
+  /* eslint-disable no-console */
   console.info(values)
+  /* eslint-enable */
 }
 
 const date1 = moment('2017-01-01 00:00')

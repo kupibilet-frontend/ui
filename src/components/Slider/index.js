@@ -40,6 +40,7 @@ type Props = {
   values?: SliderValues,
   disabled: boolean,
   snap?: boolean,
+  isShowPit?: boolean,
   snapPoints?: Array<number>,
   sliderData?: SliderData,
   progressBar: () => Element,
@@ -90,6 +91,7 @@ type PitProps = {
   pitWidth: number,
   pitHeightData: HeightData,
   style: Object,
+  children?: number,
   isHighlighted: boolean,
 }
 
@@ -120,6 +122,7 @@ export default class Slider extends React.Component<Props, State> {
   static defaultProps = {
     handle: StyledHandle,
     progressBar: StyledProgressBar,
+    isShowPit: true,
     min: 1,
     max: 100,
     disabled: false,
@@ -157,15 +160,18 @@ export default class Slider extends React.Component<Props, State> {
 
   /* eslint-disable react/prop-types */
 
-  getPitComponent = (props : Props) => {
+  getPitComponent = (pitProps: PitProps) => {
     const { values, touched } = this.state
-    const { children } = props
+    const { isShowPit } = this.props
+    const { children, style } = pitProps
     const isHighlighted : boolean = touched && inRange(children, ...values)
+
+    if (!isShowPit) return null
 
     return (
       <PitComponent
-        style={props.style}
-        pitId={props.children}
+        style={style}
+        pitId={children}
         pitWidth={this.state.pitWidth}
         pitHeightData={this.state.pitHeightData}
         isHighlighted={isHighlighted}
