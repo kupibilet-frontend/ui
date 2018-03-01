@@ -42,7 +42,7 @@ type State = {
   isActive: boolean,
 }
 
-class InputControl extends React.PureComponent<void, Props, State> {
+class InputControl extends React.PureComponent<Props, State> {
   static defaultProps = {
     name: 'input',
     size: 'normal',
