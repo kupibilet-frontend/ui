@@ -3,34 +3,33 @@ import moment from '@kupibilet/moment'
 import { storiesOf } from '@storybook/react'
 import Slider from './index'
 
+
 const onChange = (values) => {
   console.info(values)
 }
 
-const date1 = moment('2017-01-01 00:00')
-const date2 = moment('2017-01-02 00:00')
+const date1 = moment.utc('2017-01-01')
+const date2 = moment.utc('2017-01-02')
 
-const date3 = moment('2017-01-01 04:00')
+const date3 = moment.utc('2017-01-01 04:00')
 
-const formatDate = (date) => date.locale('ru').format('DD MMMM HH:mm')
-const dateToSliderValue = (date) => +date / 1000 / 60 / 15
+const formatDate = (date) => date.locale('ru').format('DD MMMM hh:mm')
+const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
+
 
 const generateSliderData = (date) => {
   const sliderData = {}
   const startingPosition = dateToSliderValue(date) + 10
   let margin = 0
   for (let i = 0; i < 40; i++) {
-    sliderData[startingPosition + margin] = i
     margin += 1
     // sliderData[startingPosition + margin] = Math.floor((Math.random() * 100) + 1)
+    sliderData[startingPosition + margin] = i
   }
   return sliderData
 }
 
-const valueToDate = (value) =>
-  moment(value * 15 * 60 * 1000)
-    .locale('ru')
-    .format('DD MMMM HH:mm')
+const valueToDate = (value) => moment(value * 15 * 60 * 1000).locale('ru').format('DD MMMM hh:mm')
 
 class Container extends React.Component {
   state = {
@@ -57,7 +56,13 @@ class Container extends React.Component {
   }
 
   render() {
-    const { startDate, endDate, sliderData, min, max } = this.state
+    const {
+      startDate,
+      endDate,
+      sliderData,
+      min,
+      max,
+    } = this.state
     return (
       <div style={{ width: '452px', height: '100px' }}>
         <div
@@ -86,7 +91,13 @@ class Container extends React.Component {
 storiesOf('Controls/Slider', module)
   .addWithInfo('default', () => (
     <div style={{ width: '252px' }}>
-      <Slider min={1} max={1000} onChange={onChange} />
+      <Slider
+        min={1}
+        max={1000}
+        onChange={onChange}
+      />
     </div>
   ))
-  .addWithInfo('With date range', () => <Container />)
+  .addWithInfo('With date range', () => (
+    <Container />
+  ))
