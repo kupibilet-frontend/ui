@@ -5,7 +5,9 @@ import Slider from './index'
 
 
 const onChange = (values) => {
+  /* eslint-disable no-console */
   console.info(values)
+  /* eslint-enable */
 }
 
 const date1 = moment.utc('2017-01-01')
