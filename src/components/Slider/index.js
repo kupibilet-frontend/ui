@@ -91,7 +91,7 @@ type PitProps = {
   pitWidth: number,
   pitHeightData: HeightData,
   style: Object,
-  children: number,
+  children?: number,
   isHighlighted: boolean,
 }
 
