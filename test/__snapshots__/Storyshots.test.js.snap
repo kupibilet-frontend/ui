@@ -3972,6 +3972,10 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 
 .c1 .DayPickerNavigation--vertical {
   background: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3988,10 +3992,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   width: 50%;
 }
 
-.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev {
-  display: none;
-}
-
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev,
 .c1 .DayPickerNavigation--vertical .DayPickerNavigation__next {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4008,7 +4009,22 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   display: -ms-flexbox;
   display: flex;
   margin-top: 12px;
-  width: 100%;
+  text-align: center;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev:hover,
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__next:hover {
+  box-shadow: none;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev {
+  border-right: 1px solid #ffffff;
+}
+
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev svg {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .c1 .DayPickerNavigation--vertical .DayPickerNavigation__next svg {
@@ -4328,19 +4344,19 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 }
 
 @media screen and (min-width:330px) and (max-width:374px) {
-  .c1 .DayPicker--vertical-scrollable {
+  .c1 .DayPicker--vertical {
     zoom: 1.1;
   }
 }
 
 @media screen and (min-width:374px) and (max-width:400px) {
-  .c1 .DayPicker--vertical-scrollable {
+  .c1 .DayPicker--vertical {
     zoom: 1.2;
   }
 }
 
 @media screen and (min-width:400px) and (max-width:599px) {
-  .c1 .DayPicker--vertical-scrollable {
+  .c1 .DayPicker--vertical {
     zoom: 1.3;
   }
 }
