@@ -44,7 +44,7 @@ export default css`
     background: ${({ theme }) => theme.color.background};
     display: flex;
     position: absolute;
-    bottom: 0;
+    bottom: -42px;
     left: 0;
     height: 42px;
     width: 100%;
@@ -65,7 +65,6 @@ export default css`
       justify-content: center;
       height: 42px;
       display: flex;
-      margin-top: 12px;
       text-align: center;
     }
 
@@ -78,10 +77,7 @@ export default css`
       border-right: 1px solid ${({ theme }) => theme.color.background};
     }
 
-    .DayPickerNavigation__prev svg {
-      transform: rotate(-90deg);
-    }
-
+    .DayPickerNavigation__prev svg,
     .DayPickerNavigation__next svg {
       transform: rotate(90deg);
     }

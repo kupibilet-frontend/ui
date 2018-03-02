@@ -3977,7 +3977,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: -42px;
   left: 0;
   height: 42px;
   width: 100%;
@@ -4008,7 +4008,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 12px;
   text-align: center;
 }
 
@@ -4021,12 +4020,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   border-right: 1px solid #ffffff;
 }
 
-.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev svg {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-
+.c1 .DayPickerNavigation--vertical .DayPickerNavigation__prev svg,
 .c1 .DayPickerNavigation--vertical .DayPickerNavigation__next svg {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
