@@ -4378,7 +4378,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
             className="DateRangePickerInput"
           >
             <div
-              className="DateInput"
+              className="DateInput DateInput--open-down"
             >
               <input
                 aria-describedby="DateInput__screen-reader-message-startDate"
@@ -4418,7 +4418,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
               <span />
             </div>
             <div
-              className="DateInput"
+              className="DateInput DateInput--open-down"
             >
               <input
                 aria-describedby="DateInput__screen-reader-message-endDate"
