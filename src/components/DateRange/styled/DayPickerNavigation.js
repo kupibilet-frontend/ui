@@ -47,6 +47,7 @@ export default css`
     bottom: -42px;
     left: 0;
     height: 42px;
+    padding-top: 12px;
     width: 100%;
     z-index: 2;
 
