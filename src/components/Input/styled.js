@@ -119,8 +119,7 @@ const InnerInput = styled.input`
   )};
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   color: ${({ theme }) => theme.color.textDarker};
-  background-color: ${({ disabled, theme }) => (disabled ? theme.color.miscLightest : '#fff')};
-
+  background-color: transparent;
   ${({ neighboringInGroup, disabled, theme }) => {
     if (['right', 'both'].includes(neighboringInGroup)) {
       return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
@@ -168,8 +167,7 @@ const InputWrapper = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.color.background};
-
+  background-color: ${({ disabled, theme }) => (disabled ? theme.color.miscLightest : theme.color.background)};
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left

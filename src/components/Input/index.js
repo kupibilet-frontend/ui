@@ -13,7 +13,7 @@ import {
   InnerTextarea,
 } from './styled'
 
-export { InnerInput, Error }
+export { InnerInput, Error, InputWrapper, IconWrap }
 
 type Props = {
   name: string,
