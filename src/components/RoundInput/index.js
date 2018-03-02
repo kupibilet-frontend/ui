@@ -1,14 +1,7 @@
 // @flow
 import React, { Component } from 'react'
-import { Field, Form, reduxForm } from 'redux-form'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
-import type { fieldInputPropTypes, fieldMetaPropTypes } from 'redux-form'
-import ControlsGroup from 'components/ControlsGroup'
-import { StyledInputWrapper, StyledError, SuccessMessage, Wrapper, StyledButton } from './styled'
+import { StyledInputWrapper, StyledError } from './styled'
 import { InnerInput, IconWrap } from 'components/Input'
-import { NotMobileOnly, MobileOnly} from 'components/ResponsiveOnly'
-
 
 type InputProps = {
   active?: boolean,
@@ -20,32 +13,20 @@ type InputProps = {
   neighboringInGroup?: null | 'left' | 'right' | 'both',
   onBlur?: Function,
   onFocus?: Function,
-  icon?: React$Element<*>,
+  leftIcon?: React$Element<*>,
+  rightIcon?: React$Element<*>,
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
   innerRef?: Function,
+  size?: string,
 }
 
-type FormProps = {
-  inputName: string,
-  buttonText: string,
-  className: string,
-  successMessage?: boolean | null | string,
-  normalize?: Function,
-  onSubmit: Function,
-  validate?: Function,
-}
 
 type State = {
   isActive: boolean,
 }
 
-type FieldProps = {
-  input: fieldInputPropTypes,
-  meta: fieldMetaPropTypes,
-}
-
-class Input extends Component<InputProps, State> {
+export class RoundInput extends Component<InputProps, State> {
   state = {
     isActive: false,
   }
@@ -77,23 +58,24 @@ class Input extends Component<InputProps, State> {
   renderInputElement = () => {
     const {
       disabled,
-      icon,
+      leftIcon,
       placeholder,
       error,
       success,
+      size,
       ...props
     } = this.props
 
     return (
       <InnerInput
-        size="large"
+        size={size}
         disabled={disabled}
         error={error}
         success={success}
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
         innerRef={(el) => this.innerRef(el)}
-        leftIcon={icon}
+        leftIcon={leftIcon}
         placeholder={placeholder}
         {...props}
       />
@@ -105,18 +87,22 @@ class Input extends Component<InputProps, State> {
       active,
       disabled,
       leftIcon,
+      rightIcon,
       handleLeftIconPress,
+      handleRightIconPress,
       error,
       success,
+      size,
       ...props
     } = this.props
 
     const leftIconsArray = React.Children.toArray(leftIcon)
+    const rightIconsArray = React.Children.toArray(rightIcon)
 
     return (
       <StyledInputWrapper
         active={active || this.state.isActive}
-        size="large"
+        size={size}
         success={success}
         error={error}
         disabled={disabled}
@@ -129,7 +115,7 @@ class Input extends Component<InputProps, State> {
                 ? (e) => handleLeftIconPress(this.innerInput, e)
                 : this.onIconPress
               }
-              size="large"
+              size={size}
               isGroup={leftIconsArray.length > 1}
               left
             >
@@ -140,7 +126,24 @@ class Input extends Component<InputProps, State> {
           )
         }
         {this.renderInputElement()}
-        {error && <StyledError size="large">
+        {
+          rightIcon ? (
+            <IconWrap
+              onMouseDown={handleRightIconPress
+                ? (e) => handleRightIconPress(this.innerInput, e)
+                : this.onIconPress
+              }
+              size={size}
+              isGroup={rightIconsArray.length > 1}
+              right
+            >
+              {rightIconsArray}
+            </IconWrap>
+          ) : (
+            null
+          )
+        }
+        {error && <StyledError size={size}>
           {error}
         </StyledError>
         }
@@ -149,10 +152,10 @@ class Input extends Component<InputProps, State> {
   }
 }
 
-const RFInput = (props: FieldProps) => {
+const RFRoundInput = (props: FieldProps) => {
   const { input, meta } = props
   return (
-    <Input
+    <RoundInput
       {...input}
       {...meta}
       {...props}
@@ -162,53 +165,4 @@ const RFInput = (props: FieldProps) => {
   )
 }
 
-const renderInput = ({ input, meta, ...props }: FieldProps) => <RFInput input={input} meta={meta} {...props} />
-
-class InputForm extends Component<void, FormProps> {
-  static defaultProps = {
-    buttonText: 'Отправить',
-  }
-
-  render() {
-    const {
-      buttonText,
-      successMessage,
-      className,
-      inputName,
-      normalize,
-      onSubmit,
-      ...props
-    } = this.props
-    return (
-      <Wrapper className={className}>
-        <NotMobileOnly>
-          <Form onSubmit={onSubmit}>
-            <ControlsGroup>
-              <Field name={inputName} component={renderInput} normalize={normalize} {...props} />
-              <StyledButton type="submit" size="large">{buttonText}</StyledButton>
-            </ControlsGroup>
-          </Form>
-        </NotMobileOnly>
-        <MobileOnly>
-          <Field name={inputName} component={renderInput} normalize={normalize} {...props} />
-          <StyledButton type="submit" size="large">{buttonText}</StyledButton>
-        </MobileOnly>
-        {successMessage && <SuccessMessage>
-          {successMessage}
-        </SuccessMessage>}
-      </Wrapper>
-    )
-  }
-}
-
-const withReduxForm = compose(
-  connect((state, props) => ({
-    form: props.formName,
-    validate: props.validate,
-    touchOnBlur: true,
-    touchOnChange: false,
-  })),
-  reduxForm())
-
-
-export default withReduxForm(InputForm)
+export default RFRoundInput
