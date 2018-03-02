@@ -115,7 +115,7 @@ export default css`
     width: 100%;
   }
 
-  .DayPicker--vertical-scrollable {
+  .DayPicker--vertical {
     ${phoneMedia.smallPhones`
       zoom: 1.1;
     `}
