@@ -1,6 +1,6 @@
 {
   "name": "@kupibilet/ui",
-  "version": "3.6.9",
+  "version": "3.6.10-4",
   "description": "UI kit for kupibilet web app",
   "scripts": {
     "pretest": "yarn lint:js && yarn lint:css",
@@ -88,7 +88,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
-    "@kupibilet/react-dates": "^12.3.0",
+    "@kupibilet/react-dates": "12.7.1",
     "@kupibilet/react-media": "^1.5.1",
     "rc-collapse": "~1.7.0",
     "rc-tabs": "^9.1.10",

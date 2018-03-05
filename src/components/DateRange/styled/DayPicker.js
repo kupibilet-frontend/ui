@@ -1,5 +1,30 @@
 import { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
+import media from 'utils/media-queries'
+
+const queries = {
+  smallPhones: 'screen and (min-width: 330px) and (max-width: 374px)',
+  mediumPhones: 'screen and (min-width: 374px) and (max-width: 400px)',
+  largePhones: 'screen and (min-width: 400px) and (max-width: 599px)',
+}
+
+const phoneMedia = {
+  smallPhones: (...args) => css`
+    @media ${queries.smallPhones} {
+      ${css(...args)}
+    }
+  `,
+  mediumPhones: (...args) => css`
+    @media ${queries.mediumPhones} {
+      ${css(...args)}
+    }
+  `,
+  largePhones: (...args) => css`
+    @media ${queries.largePhones} {
+      ${css(...args)}
+    }
+  `,
+}
 
 export default css`
   .DayPicker {
@@ -17,6 +42,15 @@ export default css`
   }
 
   // .DayPicker--vertical.DayPicker--portal {}
+
+  .DayPicker--vertical > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .DayPicker--vertical .DayPicker__focus-region {
+    order: 2;
+  }
 
   .DayPicker__week-headers {
     position: relative;
@@ -39,6 +73,12 @@ export default css`
     padding: 0 13px;
     text-align: left;
 
+    ${media.mobile`
+      background: ${({ theme }) => theme.color.background};
+      border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
+      top: 0;
+    `}
+
     ul {
       list-style: none;
       margin: 0;
@@ -55,12 +95,38 @@ export default css`
       line-height: 20px;
       letter-spacing: -.21px;
       text-align: center;
+
+      ${media.mobile`
+        padding-top: 9px;
+      `}
     }
   }
 
+  .DayPicker--vertical {
+    width: 100%;
+  }
+
   .DayPicker--vertical .DayPicker__week-header {
-    margin-left: ${({ dimensions }) => -1 * dimensions.dayPickerWidth / 2}px;
-    left: 50%;
+    left: 160.5px;
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .DayPicker--vertical {
+    ${phoneMedia.smallPhones`
+      zoom: 1.1;
+    `}
+
+    ${phoneMedia.mediumPhones`
+      zoom: 1.2;
+    `}
+
+    ${phoneMedia.largePhones`
+      zoom: 1.3;
+    `}
   }
 
   .DayPicker--vertical-scrollable {
@@ -75,11 +141,11 @@ export default css`
     .transition-container--vertical {
       padding-top: 20px;
       height: 100%;
-      position: absolute;
       top: 0;
       bottom: 0;
       right: 0;
       left: 0;
+      position: relative;
       overflow-y: scroll;
     }
 
@@ -102,6 +168,7 @@ export default css`
   }
 
   .transition-container--vertical {
+    overflow-y: scroll;
     width: 100%;
   }
 `

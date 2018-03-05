@@ -41,10 +41,13 @@ export default css`
   }
 
   .DayPickerNavigation--vertical {
+    background: ${({ theme }) => theme.color.background};
+    display: flex;
     position: absolute;
-    bottom: 0;
+    bottom: -42px;
     left: 0;
-    height: 52px;
+    height: 42px;
+    padding-top: 12px;
     width: 100%;
     z-index: 2;
 
@@ -54,6 +57,30 @@ export default css`
       position: relative;
       height: 100%;
       width: 50%;
+    }
+
+    .DayPickerNavigation__prev,
+    .DayPickerNavigation__next {
+      align-items: center;
+      border-radius: 0;
+      justify-content: center;
+      height: 42px;
+      display: flex;
+      text-align: center;
+    }
+
+    .DayPickerNavigation__prev:hover,
+    .DayPickerNavigation__next:hover {
+      box-shadow: none;
+    }
+
+    .DayPickerNavigation__prev {
+      border-right: 1px solid ${({ theme }) => theme.color.background};
+    }
+
+    .DayPickerNavigation__prev svg,
+    .DayPickerNavigation__next svg {
+      transform: rotate(90deg);
     }
 
     .DayPickerNavigation__next--default {
