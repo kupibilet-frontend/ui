@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { transparentize } from 'polished'
 import Icon from 'components/Icon'
 import { switchTransition } from 'utils/transitions'
+import mq from 'utils/media-queries'
 
 const fadeGradient = ({ theme }) => (
   /* eslint-disable prefer-template */
@@ -51,6 +52,10 @@ export const FlexContainer = styled.div`
   ${SwapIcon} {
     opacity: 0;
     ${switchTransition}
+
+    ${mq.handheld`
+      opacity: 1;
+    `}
   }
 
   &:hover ${SwapIcon} {
