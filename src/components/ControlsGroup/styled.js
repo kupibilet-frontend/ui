@@ -53,7 +53,7 @@ export const FlexContainer = styled.div`
     opacity: 0;
     ${switchTransition}
 
-    ${mq.mobile`
+    ${mq.handheld`
       opacity: 1;
     `}
   }
