@@ -40,8 +40,10 @@ export const Wrapper = styled.div`
   left: 0;
   right: 0;
   opacity: 1;
-  animation-name: ${fade};
-  animation-duration: 0.35s;
+  ${mq.desktop`
+    animation-name: ${fade};
+    animation-duration: 0.35s;
+  `}
   ${mq.handheld`
     ${(props) => (props.isOnBottom ? '' : 'background: white;')}
   `}
@@ -52,19 +54,22 @@ export const OverlayContentWrap = styled.div`
   width: 100%;
   opacity: 1;
   padding-top: 0;
-  animation-name: ${slide};
-  animation-duration: 0.35s;
   text-align: center;
-  &:before{
+  ${mq.desktop`
+    animation-name: ${slide};
+    animation-duration: 0.35s;
+  `}
+  ${mq.handheld`
+    height: 100%;
+    ${(props) => (props.isOnBottom ? '' : 'background: white;')}
+  `}
+  &:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
     height: 100%;
   }
-  ${mq.handheld`
-    height: 100%;
-    ${(props) => (props.isOnBottom ? '' : 'background: white;')}
-  `}
+
 `
 
 export const OverlayContent = styled.div`
