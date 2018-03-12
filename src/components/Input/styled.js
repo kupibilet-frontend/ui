@@ -168,7 +168,9 @@ const InputWrapper = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ disabled, theme }) => (disabled ? theme.color.miscLightest : theme.color.background)};
+  background-color: ${({ disabled, theme }) => (
+    disabled ? theme.color.miscLightest : theme.color.background
+  )};
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left

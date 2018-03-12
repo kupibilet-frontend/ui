@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import { InputWrapper, Error } from 'components/Input'
-import Button from 'components/Button'
-import mq from 'utils/media-queries'
 
 export const SIZES = {
   small: 12,

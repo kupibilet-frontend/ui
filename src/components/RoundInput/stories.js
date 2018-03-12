@@ -1,12 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { select, text, boolean, number } from '@storybook/addon-knobs'
-import withReduxForm from 'storybook/decorators/withReduxForm'
-import { Field } from 'redux-form'
+import { text, boolean } from '@storybook/addon-knobs'
 import ControlsGroup from 'components/ControlsGroup'
-import Icon from 'components/Icon'
 import { RoundInput } from 'components/RoundInput'
-import { Input } from 'components/Input'
 import Button from 'components/Button'
 
 

@@ -1,11 +1,11 @@
 // @flow
-import React, { Component } from 'react'
-import { StyledInputWrapper, StyledError, SuccessMessage } from './styled'
+import React, { PureComponent } from 'react'
 import { InnerInput, IconWrap } from 'components/Input'
+import { StyledInputWrapper, StyledError, SuccessMessage } from './styled'
 
 export { SuccessMessage }
 
-type InputProps = {
+type Props = {
   active?: boolean,
   error?: boolean | null | string,
   success?: boolean,
@@ -28,7 +28,7 @@ type State = {
   isActive: boolean,
 }
 
-export class RoundInput extends Component<InputProps, State> {
+export class RoundInput extends PureComponent<void, Props, State> {
   state = {
     isActive: false,
   }
