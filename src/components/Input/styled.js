@@ -120,12 +120,13 @@ const InnerInput = styled.input`
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   color: ${({ theme }) => theme.color.textDarker};
   background-color: transparent;
-  ${({ neighboringInGroup, disabled, theme }) => {
+  &.combined-input{
+    ${({ neighboringInGroup, disabled, theme }) => {
     if (['right', 'both'].includes(neighboringInGroup)) {
       return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
     }
   }}
-
+  }
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left
@@ -194,7 +195,7 @@ const InputWrapper = styled.div`
     }
   }}
   ${({ active, neighboringInGroup }) => (active && neighboringInGroup
-    ? 'z-index: 1;'
+    ? 'z-index: 2;'
     : null)}
 
   ${switchTransition}
@@ -202,6 +203,7 @@ const InputWrapper = styled.div`
 
   &:hover {
     border-color: ${({ theme, disabled }) => (!disabled) && theme.color.primary};
+    z-index: 1;
   }
 
   .combined-inputs-group {

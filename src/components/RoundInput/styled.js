@@ -28,7 +28,6 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
 }
 
 export const StyledInputWrapper = styled(InputWrapper)`
-  z-index: 1;
   ${({ size, neighboringInGroup }) => (
     calculateBorderRadius(size, neighboringInGroup)
   )};
@@ -43,19 +42,5 @@ export const StyledError = styled(Error)`
   `
 
 export const SuccessMessage = styled(Error)`
-  left: 50%;
-  transform: translateX(-50%);
   background-color: ${({ theme }) => theme.color.success};
-  `
-
-export const Wrapper = styled.div`
-    position: relative;
-  `
-
-export const StyledButton = styled(Button)`
-  ${mq.mobile`
-    width: 100%;
-    margin-top: 6px;
-  `}
-
   `

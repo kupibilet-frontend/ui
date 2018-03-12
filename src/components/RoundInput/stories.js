@@ -6,6 +6,7 @@ import { Field } from 'redux-form'
 import ControlsGroup from 'components/ControlsGroup'
 import Icon from 'components/Icon'
 import { RoundInput } from 'components/RoundInput'
+import { Input } from 'components/Input'
 import Button from 'components/Button'
 
 

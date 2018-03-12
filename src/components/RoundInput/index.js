@@ -1,7 +1,9 @@
 // @flow
 import React, { Component } from 'react'
-import { StyledInputWrapper, StyledError } from './styled'
+import { StyledInputWrapper, StyledError, SuccessMessage } from './styled'
 import { InnerInput, IconWrap } from 'components/Input'
+
+export { SuccessMessage }
 
 type InputProps = {
   active?: boolean,
@@ -60,6 +62,7 @@ export class RoundInput extends Component<InputProps, State> {
       disabled,
       leftIcon,
       placeholder,
+      rightIcon,
       error,
       success,
       size,
@@ -76,6 +79,7 @@ export class RoundInput extends Component<InputProps, State> {
         onBlur={this.handleBlur.bind(null, null)}
         innerRef={(el) => this.innerRef(el)}
         leftIcon={leftIcon}
+        rightIcon={rightIcon}
         placeholder={placeholder}
         {...props}
       />
