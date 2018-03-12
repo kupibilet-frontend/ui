@@ -4489,6 +4489,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
 
 .c1:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c1 .combined-inputs-group {
@@ -4585,8 +4586,11 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: transparent;
-  border-right: 1px solid #b1bdcc;
   border-radius: 3px 0 0 3px;
+}
+
+.c3.combined-input {
+  border-right: 1px solid #b1bdcc;
 }
 
 .c3::-webkit-input-placeholder {
@@ -4671,6 +4675,9 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: transparent;
+}
+
+.c4.combined-input {
   border-right: 1px solid #b1bdcc;
 }
 
@@ -4848,6 +4855,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 
 .c1:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c1 .combined-inputs-group {
@@ -4883,7 +4891,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       className="combined-inputs-group c2"
     >
       <input
-        className="c3"
+        className="combined-input c3"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4892,7 +4900,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
         type="number"
       />
       <input
-        className="c4"
+        className="combined-input c4"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4901,7 +4909,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
         type="number"
       />
       <input
-        className="c5"
+        className="combined-input c5"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4971,8 +4979,11 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: transparent;
-  border-right: 1px solid #b1bdcc;
   border-radius: 3px 0 0 3px;
+}
+
+.c3.combined-input {
+  border-right: 1px solid #b1bdcc;
 }
 
 .c3::-webkit-input-placeholder {
@@ -5057,6 +5068,9 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: transparent;
+}
+
+.c6.combined-input {
   border-right: 1px solid #b1bdcc;
 }
 
@@ -5234,6 +5248,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c2:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c2 .combined-inputs-group {
@@ -5269,6 +5284,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c5:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c5 .combined-inputs-group {
@@ -5305,6 +5321,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c7:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c7 .combined-inputs-group {
@@ -5522,6 +5539,7 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
 
 .c1:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c1 .combined-inputs-group {
@@ -5713,6 +5731,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
 
 .c1:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c1 .combined-inputs-group {
@@ -5955,6 +5974,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
 
 .c1:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c1 .combined-inputs-group {
@@ -6205,6 +6225,7 @@ exports[`Storyshots Controls/Input default 1`] = `
 
 .c1:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c1 .combined-inputs-group {
@@ -7160,6 +7181,7 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
 
 .c2:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c2 .combined-inputs-group {
@@ -7167,7 +7189,6 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
 }
 
 .c1 {
-  z-index: 1;
   border-radius: 21px;
 }
 
@@ -7293,8 +7314,11 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: transparent;
-  border-right: 1px solid #b1bdcc;
   border-radius: 3px 0 0 3px;
+}
+
+.c4.combined-input {
+  border-right: 1px solid #b1bdcc;
 }
 
 .c4::-webkit-input-placeholder {
@@ -7386,6 +7410,7 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
 
 .c3:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c3 .combined-inputs-group {
@@ -7393,7 +7418,6 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
 }
 
 .c2 {
-  z-index: 1;
   border-radius: 21px 0 0 21px;
 }
 
@@ -7632,6 +7656,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 
 .c2:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c2 .combined-inputs-group {
@@ -7960,6 +7985,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 
 .c2:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c2 .combined-inputs-group {
@@ -8289,6 +8315,7 @@ exports[`Storyshots Controls/Select default 1`] = `
 
 .c2:hover {
   border-color: #38afff;
+  z-index: 1;
 }
 
 .c2 .combined-inputs-group {
