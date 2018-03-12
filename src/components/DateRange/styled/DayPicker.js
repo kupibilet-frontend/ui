@@ -118,17 +118,17 @@ export default css`
   .DayPicker--vertical {
     ${phoneMedia.smallPhones`
       transform: scale(1.1, 1.1);
-      margin-top: 27px;
+      margin-top: 30px;
     `}
 
     ${phoneMedia.mediumPhones`
       transform: scale(1.2, 1.2);
-      margin-top: 60px;
+      margin-top: 63px;
     `}
 
     ${phoneMedia.largePhones`
       transform: scale(1.3, 1.3);
-      margin-top: 87px;
+      margin-top: 93px;
     `}
   }
 
