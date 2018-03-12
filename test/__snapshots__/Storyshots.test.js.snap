@@ -7421,6 +7421,13 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   border-radius: 21px 0 0 21px;
 }
 
+@media screen and (max-width:999px) {
+  .responsive .c1 .styled__SwapIcon-fKoejO,
+  .responsive-booking .c1 .styled__SwapIcon-fKoejO {
+    opacity: 1;
+  }
+}
+
 <div
   className="responsive c0"
 >
