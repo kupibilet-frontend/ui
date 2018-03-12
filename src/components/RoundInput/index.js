@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react'
 import { InnerInput, IconWrap } from 'components/Input'
+
 import { StyledInputWrapper, StyledError, SuccessMessage } from './styled'
 
 export { SuccessMessage }
@@ -28,7 +29,7 @@ type State = {
   isActive: boolean,
 }
 
-export class RoundInput extends PureComponent<void, Props, State> {
+export class RoundInput extends PureComponent<Props, State> {
   state = {
     isActive: false,
   }
@@ -75,8 +76,8 @@ export class RoundInput extends PureComponent<void, Props, State> {
         disabled={disabled}
         error={error}
         success={success}
-        onFocus={this.handleFocus.bind(null, null)}
-        onBlur={this.handleBlur.bind(null, null)}
+        onFocus={() => this.handleFocus()}
+        onBlur={() => this.handleBlur()}
         innerRef={(el) => this.innerRef(el)}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
