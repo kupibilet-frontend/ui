@@ -42,7 +42,6 @@ export default css`
 
   .DayPickerNavigation--vertical {
     background: ${({ theme }) => theme.color.background};
-    box-sizing: content-box;
     display: flex;
     position: absolute;
     bottom: -42px;
@@ -66,8 +65,7 @@ export default css`
       border-radius: 0;
       justify-content: center;
       height: 42px;
-      display: inline-block;
-      padding: 12px 22%;
+      display: flex;
       text-align: center;
     }
 

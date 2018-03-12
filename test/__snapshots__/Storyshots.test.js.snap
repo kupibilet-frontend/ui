@@ -3972,7 +3972,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 
 .c1 .DayPickerNavigation--vertical {
   background: #ffffff;
-  box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4006,8 +4005,10 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   height: 42px;
-  display: inline-block;
-  padding: 12px 22%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
 }
 
