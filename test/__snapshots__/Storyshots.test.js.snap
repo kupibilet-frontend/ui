@@ -4386,6 +4386,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4577,6 +4578,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4666,6 +4668,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4754,6 +4757,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -4970,6 +4974,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5059,6 +5064,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5147,6 +5153,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5438,6 +5445,7 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5630,6 +5638,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -5873,6 +5882,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -6124,6 +6134,7 @@ exports[`Storyshots Controls/Input default 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -7080,6 +7091,7 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -7305,6 +7317,7 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
@@ -7566,6 +7579,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   line-height: normal;
   border: none;
   min-height: 36px;
+  font-family: inherit;
   padding-left: 11px;
   padding-right: 0;
   font-size: 16px;
@@ -7895,6 +7909,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   line-height: normal;
   border: none;
   min-height: 36px;
+  font-family: inherit;
   padding-left: 11px;
   padding-right: 0;
   font-size: 16px;
@@ -8221,6 +8236,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   line-height: normal;
   border: none;
   min-height: 42px;
+  font-family: inherit;
   -webkit-letter-spacing: -0.1px;
   -moz-letter-spacing: -0.1px;
   -ms-letter-spacing: -0.1px;
