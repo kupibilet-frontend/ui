@@ -3972,6 +3972,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 
 .c1 .DayPickerNavigation--vertical {
   background: #ffffff;
+  box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4005,10 +4006,8 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   height: 42px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
+  padding: 12px 22%;
   text-align: center;
 }
 
@@ -4335,24 +4334,6 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   .responsive .c1 .DayPicker__week-header li,
   .responsive-booking .c1 .DayPicker__week-header li {
     padding-top: 9px;
-  }
-}
-
-@media screen and (min-width:330px) and (max-width:374px) {
-  .c1 .DayPicker--vertical {
-    zoom: 1.1;
-  }
-}
-
-@media screen and (min-width:374px) and (max-width:400px) {
-  .c1 .DayPicker--vertical {
-    zoom: 1.2;
-  }
-}
-
-@media screen and (min-width:400px) and (max-width:599px) {
-  .c1 .DayPicker--vertical {
-    zoom: 1.3;
   }
 }
 
