@@ -2,6 +2,30 @@ import { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import media from 'utils/media-queries'
 
+const queries = {
+  smallPhones: 'screen and (min-width: 330px) and (max-width: 374px)',
+  mediumPhones: 'screen and (min-width: 374px) and (max-width: 400px)',
+  largePhones: 'screen and (min-width: 400px) and (max-width: 599px)',
+}
+
+const phoneMedia = {
+  smallPhones: (...args) => css`
+    @media ${queries.smallPhones} {
+      ${css(...args)}
+    }
+  `,
+  mediumPhones: (...args) => css`
+    @media ${queries.mediumPhones} {
+      ${css(...args)}
+    }
+  `,
+  largePhones: (...args) => css`
+    @media ${queries.largePhones} {
+      ${css(...args)}
+    }
+  `,
+}
+
 export default css`
   .DayPicker {
     background: ${({ theme }) => theme.color.background};
@@ -89,6 +113,23 @@ export default css`
     text-align: center;
     white-space: nowrap;
     width: 100%;
+  }
+
+  .DayPicker--vertical {
+    ${phoneMedia.smallPhones`
+      transform: scale(1.1, 1.1);
+      margin-top: 27px;
+    `}
+
+    ${phoneMedia.mediumPhones`
+      transform: scale(1.2, 1.2);
+      margin-top: 60px;
+    `}
+
+    ${phoneMedia.largePhones`
+      transform: scale(1.3, 1.3);
+      margin-top: 87px;
+    `}
   }
 
   .DayPicker--vertical-scrollable {
