@@ -102,6 +102,7 @@ const InnerInput = styled.input`
   line-height: normal;
   border: none;
   min-height: ${({ size }) => INPUTHEIGHT[size]};
+  font-family: inherit;
 
   ${({ size }) => (size === 'large'
     ? 'letter-spacing: -0.1px'
