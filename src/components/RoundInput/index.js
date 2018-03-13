@@ -1,8 +1,8 @@
 // @flow
 import React, { PureComponent } from 'react'
-import { InnerInput, IconWrap } from 'components/Input'
+import { IconWrap } from 'components/Input'
 
-import { StyledInputWrapper, StyledError, SuccessMessage } from './styled'
+import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } from './styled'
 
 export { SuccessMessage }
 
@@ -71,7 +71,7 @@ export class RoundInput extends PureComponent<Props, State> {
     } = this.props
 
     return (
-      <InnerInput
+      <StyledInnerInput
         size={size}
         disabled={disabled}
         error={error}

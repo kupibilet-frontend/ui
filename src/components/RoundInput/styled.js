@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { InputWrapper, Error } from 'components/Input'
+import { InputWrapper, Error, InnerInput } from 'components/Input'
 
 export const SIZES = {
   small: 12,
@@ -24,6 +24,12 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
 
   return `border-radius: ${SIZES[size]}px;`
 }
+
+export const StyledInnerInput = styled(InnerInput)`
+  ${({ size, neighboringInGroup }) => (
+    calculateBorderRadius(size, neighboringInGroup)
+  )};
+`
 
 export const StyledInputWrapper = styled(InputWrapper)`
   ${({ size, neighboringInGroup }) => (
