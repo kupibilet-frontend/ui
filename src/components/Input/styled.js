@@ -121,11 +121,9 @@ const InnerInput = styled.input`
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   color: ${({ theme }) => theme.color.textDarker};
   background-color: transparent;
-  ${({ neighboringInGroup, disabled, isInputChild, theme }) => {
-    if (isInputChild) {
-      if (['right', 'both'].includes(neighboringInGroup)) {
-        return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
-      }
+  ${({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
+    if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup)) {
+      return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
     }
   }}
   ${({ neighboringInGroup, success, error }) => {
