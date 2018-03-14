@@ -4484,8 +4484,8 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c1:hover {
@@ -4563,185 +4563,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
-}
-
-.c3 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  min-height: 42px;
-  font-family: inherit;
-  -webkit-letter-spacing: -0.1px;
-  -moz-letter-spacing: -0.1px;
-  -ms-letter-spacing: -0.1px;
-  letter-spacing: -0.1px;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: transparent;
-  border-radius: 3px 0 0 3px;
-}
-
-.c3.combined-input {
-  border-right: 1px solid #b1bdcc;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c3::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c3:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c3::placeholder {
-  color: #96a0b3;
-}
-
-.c3::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c3::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c3:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c3:focus {
-  outline-style: none;
-}
-
-.c3:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c3:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c3:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c3:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c3:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c3:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c3:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c4 {
-  position: relative;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  min-height: 42px;
-  font-family: inherit;
-  -webkit-letter-spacing: -0.1px;
-  -moz-letter-spacing: -0.1px;
-  -ms-letter-spacing: -0.1px;
-  letter-spacing: -0.1px;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 18px;
-  color: #333333;
-  background-color: transparent;
-}
-
-.c4.combined-input {
-  border-right: 1px solid #b1bdcc;
-}
-
-.c4::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c4::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c4:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c4::placeholder {
-  color: #96a0b3;
-}
-
-.c4::-webkit-input-placeholder {
-  color: #96a0b3;
-}
-
-.c4::-moz-placeholder {
-  color: #96a0b3;
-}
-
-.c4:-ms-input-placeholder {
-  color: #96a0b3;
-}
-
-.c4:focus {
-  outline-style: none;
-}
-
-.c4:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c4:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c4:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c4:disabled::placeholder {
-  color: #b1bdcc;
-}
-
-.c4:disabled::-webkit-input-placeholder {
-  color: #b1bdcc;
-}
-
-.c4:disabled::-moz-placeholder {
-  color: #b1bdcc;
-}
-
-.c4:disabled:-ms-input-placeholder {
-  color: #b1bdcc;
 }
 
 .c5 {
@@ -4830,6 +4651,179 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   color: #b1bdcc;
 }
 
+.c3 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  min-height: 42px;
+  font-family: inherit;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: transparent;
+  border-right: 1px solid #b1bdcc;
+  border-radius: 3px 0 0 3px;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::placeholder {
+  color: #96a0b3;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3:focus {
+  outline-style: none;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4 {
+  position: relative;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  min-height: 42px;
+  font-family: inherit;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: transparent;
+  border-right: 1px solid #b1bdcc;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::placeholder {
+  color: #96a0b3;
+}
+
+.c4::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c4:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c4:focus {
+  outline-style: none;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c4:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
 .c1 {
   position: relative;
   display: -webkit-box;
@@ -4853,8 +4847,8 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c1:hover {
@@ -4895,7 +4889,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       className="combined-inputs-group c2"
     >
       <input
-        className="combined-input c3"
+        className="c3"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4904,7 +4898,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
         type="number"
       />
       <input
-        className="combined-input c4"
+        className="c4"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4913,7 +4907,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
         type="number"
       />
       <input
-        className="combined-input c5"
+        className="c5"
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -4985,10 +4979,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   color: #333333;
   background-color: transparent;
   border-radius: 3px 0 0 3px;
-}
-
-.c3.combined-input {
-  border-right: 1px solid #b1bdcc;
 }
 
 .c3::-webkit-input-placeholder {
@@ -5074,10 +5064,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   font-size: 18px;
   color: #333333;
   background-color: transparent;
-}
-
-.c6.combined-input {
-  border-right: 1px solid #b1bdcc;
 }
 
 .c6::-webkit-input-placeholder {
@@ -5249,8 +5235,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c2:hover {
@@ -5285,8 +5271,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   margin-left: -1px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c5:hover {
@@ -5322,8 +5308,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   margin-left: -1px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c7:hover {
@@ -5541,8 +5527,8 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c1:hover {
@@ -5734,8 +5720,8 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c1:hover {
@@ -5978,8 +5964,8 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c1:hover {
@@ -6230,8 +6216,8 @@ exports[`Storyshots Controls/Input default 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c1:hover {
@@ -7187,8 +7173,8 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c2:hover {
@@ -7334,10 +7320,6 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   border-radius: 3px 0 0 3px;
 }
 
-.c5.combined-input {
-  border-right: 1px solid #b1bdcc;
-}
-
 .c5::-webkit-input-placeholder {
   color: #96a0b3;
 }
@@ -7421,8 +7403,8 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c3:hover {
@@ -7679,8 +7661,8 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c2:hover {
@@ -8009,8 +7991,8 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c2:hover {
@@ -8340,8 +8322,8 @@ exports[`Storyshots Controls/Select default 1`] = `
   border-style: solid;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  -webkit-transition-property: border-color,box-shadow;
-  transition-property: border-color,box-shadow;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
 
 .c2:hover {
