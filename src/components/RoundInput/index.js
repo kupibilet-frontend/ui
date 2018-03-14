@@ -1,27 +1,15 @@
 // @flow
-import React from 'react'
-import ControlsGroup from 'components/ControlsGroup'
+import React, { PureComponent } from 'react'
+import { IconWrap } from 'components/Input'
 
-/* eslint-disable  react/jsx-no-bind */
+import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } from './styled'
 
-import {
-  Error,
-  InnerInput,
-  InputWrapper,
-  IconWrap,
-  StatusIndicator,
-  InnerTextarea,
-} from './styled'
-
-export { InnerInput, Error, InputWrapper, IconWrap }
+export { SuccessMessage }
 
 type Props = {
-  name: string,
-  type?: string,
   active?: boolean,
   error?: boolean | null | string,
   success?: boolean,
-  size?: string,
   disabled?: boolean,
   placeholder?: string,
   value?: string,
@@ -33,30 +21,17 @@ type Props = {
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
   innerRef?: Function,
-  /* global React$Element */
-  children?: React$Element<*>[],
-  isTextarea?: boolean,
+  size?: string,
 }
+
 
 type State = {
   isActive: boolean,
 }
 
-class InputControl extends React.PureComponent<void, Props, State> {
-  static defaultProps = {
-    name: 'input',
-    size: 'normal',
-  }
-
+export class RoundInput extends PureComponent<Props, State> {
   state = {
     isActive: false,
-  }
-
-  onIconPress = (e) => {
-    if (!this.state.isActive) {
-      e.preventDefault()
-      this.innerInput.focus()
-    }
   }
 
   handleFocus = (onFocus, e: Event) => {
@@ -85,31 +60,29 @@ class InputControl extends React.PureComponent<void, Props, State> {
 
   renderInputElement = () => {
     const {
-      size,
-      success,
-      error,
       disabled,
       leftIcon,
+      placeholder,
       rightIcon,
-      isTextarea,
+      error,
+      success,
+      size,
       ...props
     } = this.props
 
-    const InputComponent = isTextarea ? InnerTextarea : InnerInput
-
     return (
-      <InputComponent
-        {...props}
+      <StyledInnerInput
         size={size}
         disabled={disabled}
-        success={success}
         error={error}
-        onFocus={this.handleFocus.bind(null, null)}
-        onBlur={this.handleBlur.bind(null, null)}
+        success={success}
+        onFocus={() => this.handleFocus()}
+        onBlur={() => this.handleBlur()}
         innerRef={(el) => this.innerRef(el)}
-        isTextarea={isTextarea}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
+        placeholder={placeholder}
+        {...props}
       />
     )
   }
@@ -117,17 +90,14 @@ class InputControl extends React.PureComponent<void, Props, State> {
   render() {
     const {
       active,
-      size,
-      success,
-      error,
       disabled,
-      neighboringInGroup,
-      children,
       leftIcon,
       rightIcon,
       handleLeftIconPress,
       handleRightIconPress,
-      isTextarea,
+      error,
+      success,
+      size,
       ...props
     } = this.props
 
@@ -135,14 +105,13 @@ class InputControl extends React.PureComponent<void, Props, State> {
     const rightIconsArray = React.Children.toArray(rightIcon)
 
     return (
-      <InputWrapper
+      <StyledInputWrapper
         active={active || this.state.isActive}
         size={size}
-        disabled={disabled}
         success={success}
         error={error}
-        neighboringInGroup={neighboringInGroup}
-        isTextarea={isTextarea}
+        disabled={disabled}
+        {...props}
       >
         {
           leftIcon ? (
@@ -161,23 +130,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
             null
           )
         }
-        {
-          children ? (
-            <ControlsGroup className="combined-inputs-group">
-              { React.Children.map(children, (child) => (
-                React.cloneElement(child, {
-                  ...props,
-                  size,
-                  hasInnerGroup: true,
-                  onFocus: this.handleFocus.bind(null, child.props.onFocus),
-                  onBlur: this.handleBlur.bind(null, child.props.onBlur),
-                })
-              )) }
-            </ControlsGroup>
-          ) : (
-            this.renderInputElement()
-          )
-        }
+        {this.renderInputElement()}
         {
           rightIcon ? (
             <IconWrap
@@ -195,26 +148,19 @@ class InputControl extends React.PureComponent<void, Props, State> {
             null
           )
         }
-        <StatusIndicator
-          error={error}
-          success={success}
-          active={active || this.state.isActive}
-        />
-        { error && <Error>
-          { error }
-        </Error>
+        {error && <StyledError size={size}>
+          {error}
+        </StyledError>
         }
-      </InputWrapper>
+      </StyledInputWrapper>
     )
   }
 }
 
-type RFProps = FieldProps
-
-const RFInput = (props : RFProps) => {
+const RFRoundInput = (props: FieldProps) => {
   const { input, meta } = props
   return (
-    <InputControl
+    <RoundInput
       {...input}
       {...meta}
       {...props}
@@ -224,8 +170,4 @@ const RFInput = (props : RFProps) => {
   )
 }
 
-export {
-  InputControl as Input,
-}
-
-export default RFInput
+export default RFRoundInput
