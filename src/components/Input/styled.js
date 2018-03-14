@@ -121,13 +121,13 @@ const InnerInput = styled.input`
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   color: ${({ theme }) => theme.color.textDarker};
   background-color: transparent;
-  &.combined-input{
-    ${({ neighboringInGroup, disabled, theme }) => {
-    if (['right', 'both'].includes(neighboringInGroup)) {
-      return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
+  ${({ neighboringInGroup, disabled, isInputChild, theme }) => {
+    if (isInputChild) {
+      if (['right', 'both'].includes(neighboringInGroup)) {
+        return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
+      }
     }
   }}
-  }
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left
@@ -202,7 +202,7 @@ const InputWrapper = styled.div`
     : null)}
 
   ${switchTransition}
-  transition-property: border-color, box-shadow;
+  transition-property: border-color;
 
   &:hover {
     border-color: ${({ theme, disabled }) => (!disabled) && theme.color.primary};

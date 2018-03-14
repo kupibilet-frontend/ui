@@ -168,7 +168,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
                 React.cloneElement(child, {
                   ...props,
                   size,
-                  className: 'combined-input',
+                  isInputChild: true,
                   onFocus: this.handleFocus.bind(null, child.props.onFocus),
                   onBlur: this.handleBlur.bind(null, child.props.onBlur),
                 })
