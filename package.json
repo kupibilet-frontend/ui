@@ -84,7 +84,7 @@
     "redux-form": "^7.0.4",
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
-    "styled-components": "^2.1.2",
+    "styled-components": "^3.0.0",
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
