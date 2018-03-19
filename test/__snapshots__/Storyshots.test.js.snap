@@ -4479,7 +4479,6 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -4843,7 +4842,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5232,7 +5230,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px 0 0 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5269,7 +5266,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border: 1px solid #b1bdcc;
   border-style: solid;
   margin-left: -1px;
@@ -5306,7 +5302,6 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 0 3px 3px 0;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5527,7 +5522,6 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5721,7 +5715,6 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -5966,7 +5959,6 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -6219,7 +6211,6 @@ exports[`Storyshots Controls/Input default 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7177,7 +7168,6 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7666,7 +7656,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;
@@ -7997,7 +7986,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #ffffff;
-  pointer-events: auto;
   border-radius: 3px;
   border: 1px solid #b1bdcc;
   border-style: solid;

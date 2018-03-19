@@ -171,9 +171,7 @@ const InputWrapper = styled.div`
     disabled ? theme.color.miscLightest : theme.color.background
   )};
 
-  pointer-events: ${({ disabled }) => (
-    disabled ? 'none' : 'auto'
-  )};
+  ${({ disabled }) => disabled && 'pointer-events: none;'}
 
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
