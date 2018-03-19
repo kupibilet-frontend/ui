@@ -170,6 +170,9 @@ const InputWrapper = styled.div`
   background-color: ${({ disabled, theme }) => (
     disabled ? theme.color.miscLightest : theme.color.background
   )};
+
+  ${({ disabled }) => disabled && 'pointer-events: none;'}
+
   ${({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left
