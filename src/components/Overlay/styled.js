@@ -77,6 +77,7 @@ export const OverlayContent = styled.div`
   justify-content: center;
   vertical-align: middle;
   text-align: left;
+  cursor: auto;
   ${mq.handheld`
     width: 100%;
     ${(props) => (props.isOnBottom ? '' : 'min-height: 100%;')}
