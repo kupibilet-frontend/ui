@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { borderRadiusCircle, borderRadiusLarge } from 'utils/borderRadius'
-import { shadowSmall } from 'utils/shadows'
 import mq from 'utils/media-queries'
 import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
@@ -95,8 +94,7 @@ export const CloseButton = styled.span`
     margin-left: 32px;
     position: absolute;
     right: 18px;
-    top: 15px;
-    ${shadowSmall}
+    top: 18px;
     z-index: 2;
   `}
 `
