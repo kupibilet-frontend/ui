@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { borderRadiusCircle, borderRadiusLarge } from 'utils/borderRadius'
-import { shadowSmall } from 'utils/shadows'
 import mq from 'utils/media-queries'
 import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
