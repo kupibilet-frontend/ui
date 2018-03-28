@@ -882,7 +882,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #ffffff;
+  background: #38afff;
   border: 2px solid #77c8ff;
   overflow: hidden;
   z-index: 1;
@@ -911,7 +911,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   height: 100%;
   padding: 10px 16px;
   padding: 10px;
-  background: none;
+  background: #ffffff;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1317,7 +1317,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #ffffff;
+  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 21px 0 0 21px;
   overflow: hidden;
@@ -1346,7 +1346,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #ffffff;
+  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 0 21px 21px 0;
   overflow: hidden;
@@ -1376,7 +1376,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   height: 100%;
   padding: 10px 16px;
   padding-right: 10px;
-  background: none;
+  background: #ffffff;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -1483,7 +1483,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   height: 100%;
   padding: 10px 16px;
   padding-left: 10px;
-  background: none;
+  background: #ffffff;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -2986,7 +2986,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #ffffff;
+  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 21px;
   overflow: hidden;
@@ -3014,13 +3014,20 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   width: 100%;
   height: 100%;
   padding: 10px 16px;
-  background: none;
+  background: #ffffff;
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   color: inherit;
   font-weight: 600;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
 }
 
 .c3,
