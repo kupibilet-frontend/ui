@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { transparentize } from 'polished'
 import { control } from 'utils/reset'
-import placeholder from 'utils/placeholder'
+import placeholderMixin from 'utils/placeholder'
 import { switchTransition } from 'utils/transitions'
 import Icon from 'components/Icon'
 
@@ -36,7 +36,7 @@ export const Container = styled.div`
 
   box-sizing: border-box;
   ${switchTransition}
-  background: ${({ theme }) => theme.color.primaryLight};
+  background: ${({ theme }) => theme.color.primary};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
   ${({ neighboringInGroup }) => {
@@ -117,11 +117,18 @@ export const Input = styled.textarea`
   ${fontStyle}
   font-weight: 600;
 
-  ${placeholder`
+  ${placeholderMixin`
     ${fontStyle}
     color: ${({ theme }) => theme.color.textLight};
     opacity: 1;
   `}
+
+  /* Styles for fake input */
+  ${({ placeholder, children, theme }) => placeholder && !children && `
+    ${fontStyle}
+    color: ${theme.color.textLight};
+    opacity: 1;
+    `}
 
   &:focus ~ .AirportInput__geo .AirportInput__spell {
     display: block;
