@@ -36,6 +36,9 @@ export const Container = styled.div`
 
   box-sizing: border-box;
   ${switchTransition}
+  /* Color for background should be the same as border color
+  ** to avoid blinking and breaking borders. SITE-505
+  */
   background: ${({ theme }) => theme.color.primary};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
@@ -123,7 +126,7 @@ export const Input = styled.textarea`
     opacity: 1;
   `}
 
-  /* Styles for fake input */
+  /* Styles for fake input, like div */
   ${({ placeholder, children, theme }) => placeholder && !children && `
     ${fontStyle}
     color: ${theme.color.textLight};
