@@ -36,7 +36,7 @@ export const Container = styled.div`
 
   box-sizing: border-box;
   ${switchTransition}
-  background: ${({ theme }) => theme.color.background};
+  background: ${({ theme }) => theme.color.primaryLight};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
   ${({ neighboringInGroup }) => {
@@ -112,7 +112,7 @@ export const Input = styled.textarea`
 
     return ''
   }}
-  background: none;
+  background: ${({ theme }) => theme.color.background};
 
   ${fontStyle}
   font-weight: 600;
