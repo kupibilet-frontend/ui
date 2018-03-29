@@ -2901,7 +2901,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Autocomplete Airport 1`] = `
+exports[`Storyshots Controls/AirportInput Fake input with value 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -2914,59 +2914,356 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
-  margin: 3px 0 0;
-  padding: 3px 0;
-  position: absolute;
-  top: 100%;
-  width: 300px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
-  background: #ffffff;
-}
-
 .c1 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  background: #38afff;
+  border: 2px solid #77c8ff;
+  border-radius: 21px;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.c1 .react-autosuggest__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.c1:hover {
+  border-color: #ff9100;
+  z-index: 2;
 }
 
-.c1 .react-autosuggest__input::-ms-clear,
-.c1 .react-autosuggest__input::-webkit-search-cancel-button {
-  display: none;
-}
-
-.c1 .react-autosuggest__input--open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.c1 .react-autosuggest__input--focused {
+.c2 {
+  font-family: inherit;
+  border: none;
   outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
 }
 
-.c1 .react-autosuggest__suggestions-container {
-  display: none;
+.c2,
+.c2:focus {
+  border: none;
+  outline: none;
+  resize: none;
 }
 
-.c1 .react-autosuggest__suggestions-container--open {
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
-.c1 .react-autosuggest__suggestions-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+<div
+  className="responsive c0"
+>
+  <div
+    style={
+      Object {
+        "width": 244,
+      }
+    }
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+        placeholder="Дата вылета"
+        value="1 апр"
+      >
+        1 апр
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls/AirportInput Fake input without value 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
-.c1 .react-autosuggest__suggestion {
-  cursor: pointer;
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  background: #38afff;
+  border: 2px solid #77c8ff;
+  border-radius: 21px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.c1:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c2 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2,
+.c2:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    style={
+      Object {
+        "width": 244,
+      }
+    }
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+        placeholder="Дата вылета"
+      >
+        Дата вылета
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls/Autocomplete Airport 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
 }
 
 .c2 {
@@ -3021,13 +3318,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   line-height: 18px;
   color: inherit;
   font-weight: 600;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
 }
 
 .c3,
@@ -3198,6 +3488,61 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   width: 12px;
   height: 100%;
   background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+}
+
+.c7 {
+  margin: 3px 0 0;
+  padding: 3px 0;
+  position: absolute;
+  top: 100%;
+  width: 300px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+  background: #ffffff;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .react-autosuggest__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .react-autosuggest__input--focused {
+  outline: none;
+}
+
+.c1 .react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.c1 .react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 .react-autosuggest__suggestion {
+  cursor: pointer;
 }
 
 @media screen and (max-width:599px) {
