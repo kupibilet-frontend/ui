@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
-
 import { Container, Input } from './styled'
+import AirportInput from './index'
 
 const DateInput = Input.withComponent('div')
 
@@ -21,26 +21,33 @@ const FakeInput = ({ chidlren, onBlur, onFocus, neighboringInGroup, focused, ...
 }
 
 storiesOf('Controls/AirportInput', module)
-  .addWithInfo('Fake input with value', () => {
+  .addWithInfo('default', () => {
     const placeholder = text('placeholder', 'Дата вылета')
     const value = text('value', '1 апр')
 
     return (
       <div style={{ width: 244 }}>
-        <FakeInput
+        <AirportInput
           placeholder={placeholder}
           value={value}
         />
       </div>
     )
   })
-  .addWithInfo('Fake input without value', () => {
+  .addWithInfo('Fake input, based on div', () => {
     const placeholder = text('placeholder', 'Дата вылета')
+    const value = text('value', '1 апр')
 
     return (
       <div style={{ width: 244 }}>
+        <div style={{ paddingBottom: '20px' }}>
+          <FakeInput
+            placeholder={placeholder}
+          />
+        </div>
         <FakeInput
           placeholder={placeholder}
+          value={value}
         />
       </div>
     )

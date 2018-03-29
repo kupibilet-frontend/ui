@@ -2901,7 +2901,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/AirportInput Fake input with value 1`] = `
+exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -2966,6 +2966,13 @@ exports[`Storyshots Controls/AirportInput Fake input with value 1`] = `
   line-height: 18px;
   color: inherit;
   font-weight: 600;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
 }
 
 .c2,
@@ -3049,6 +3056,112 @@ exports[`Storyshots Controls/AirportInput Fake input with value 1`] = `
   display: block;
 }
 
+.c3 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c3,
+.c3:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
 <div
   className="responsive c0"
 >
@@ -3060,10 +3173,28 @@ exports[`Storyshots Controls/AirportInput Fake input with value 1`] = `
     }
   >
     <div
+      style={
+        Object {
+          "paddingBottom": "20px",
+        }
+      }
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="c2"
+          placeholder="Дата вылета"
+        >
+          Дата вылета
+        </div>
+      </div>
+    </div>
+    <div
       className="c1"
     >
       <div
-        className="c2"
+        className="c3"
         placeholder="Дата вылета"
         value="1 апр"
       >
@@ -3074,7 +3205,7 @@ exports[`Storyshots Controls/AirportInput Fake input with value 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/AirportInput Fake input without value 1`] = `
+exports[`Storyshots Controls/AirportInput default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -3139,13 +3270,6 @@ exports[`Storyshots Controls/AirportInput Fake input without value 1`] = `
   line-height: 18px;
   color: inherit;
   font-weight: 600;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
 }
 
 .c2,
@@ -3229,6 +3353,95 @@ exports[`Storyshots Controls/AirportInput Fake input without value 1`] = `
   display: block;
 }
 
+.c3 {
+  -webkit-appearance: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 10px 0 10px;
+  padding-left: 16px;
+}
+
+.c4 {
+  visibility: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-size: 14px;
+  color: #808080;
+  background: #ffffff;
+  padding: 10px 10px 10px 9px;
+  padding-right: 16px;
+}
+
+.c5:empty {
+  display: none;
+}
+
+.c5::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+}
+
 <div
   className="responsive c0"
 >
@@ -3242,11 +3455,33 @@ exports[`Storyshots Controls/AirportInput Fake input without value 1`] = `
     <div
       className="c1"
     >
-      <div
+      <textarea
+        autoCapitalize="sentences"
+        autoComplete="off"
         className="c2"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         placeholder="Дата вылета"
+        rows="1"
+        value="1 апр"
+        wrap="off"
+      />
+      <div
+        className="AirportInput__geo c3"
       >
-        Дата вылета
+        <div
+          className="c4"
+        >
+          1 апр
+        </div>
+        
+        
+      </div>
+      <div
+        className="c5"
+      >
+        
       </div>
     </div>
   </div>
