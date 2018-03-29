@@ -55,6 +55,15 @@ export const Header = styled.div`
   `}
 `
 
+export const HeaderWrap = styled.div`
+  background: ${({ theme }) => theme.color.background};
+  
+  ${(props) => (props.isFixed && `
+    position: fixed;
+    top: 0;
+  `)}
+`
+
 export const Content = styled.div`
   align-items: flex-start;
   display: flex;
