@@ -2,11 +2,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const LabelWrapper = styled.div`
+export const LabelWrapper = styled.div`
   user-select: none;
 `
 
-const Label = styled.label`
+export const Label = styled.label`
   display: block;
   margin-bottom: 6px;
   font-size: 14px;
