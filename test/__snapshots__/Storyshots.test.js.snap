@@ -1096,6 +1096,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 20px;
@@ -1136,6 +1137,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 20px;
@@ -1904,6 +1906,7 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -2005,6 +2008,7 @@ exports[`Storyshots Complex controls/Modal Bottom on mobile 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -2085,6 +2089,7 @@ exports[`Storyshots Complex controls/Modal Compact 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -2165,6 +2170,7 @@ exports[`Storyshots Complex controls/Modal Default 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -2264,6 +2270,7 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -2290,6 +2297,7 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -3282,6 +3290,86 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/Buttons Button with component <a> 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 18px;
+  line-height: 18px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 15px;
+  padding: 6.0px;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c1 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c1:hover {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c1:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+<div
+  className="responsive c0"
+>
+  <a
+    className="c1"
+    disabled={false}
+    href="/"
+    size="normal"
+    target="_blank"
+  >
+    <span
+      className="c2"
+      size="normal"
+    >
+      Авиабилеты
+    </span>
+  </a>
+</div>
+`;
+
 exports[`Storyshots Controls/Buttons Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -3301,6 +3389,7 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -3397,6 +3486,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 20px;
@@ -3516,6 +3606,7 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -6481,6 +6572,7 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -6656,6 +6748,7 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -6777,6 +6870,7 @@ exports[`Storyshots Controls/Popover default 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
@@ -7242,6 +7336,7 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 20px;
@@ -9211,6 +9306,7 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   outline: none;
   padding: 0;
   margin: 0;
+  display: inline-block;
   color: #ffffff;
   background: #38afff;
   font-size: 18px;
