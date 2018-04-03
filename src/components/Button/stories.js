@@ -59,3 +59,15 @@ storiesOf('Controls/Buttons', module)
       }
     />
   ))
+  .addWithInfo('Button with component <a>', () => (
+    <Button
+      size={sizesSelect()}
+      disabled={boolean('disabled', false)}
+      variant={variantsSelect()}
+      href="/"
+      target="_blank"
+
+    >
+      { text('text', 'Авиабилеты') }
+    </Button>
+  ))

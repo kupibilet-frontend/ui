@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { StyledButton, StyledButtonText, IconWrap, SIZES } from './styled'
+import { StyledButton, StyledButtonLink, StyledButtonText, IconWrap, SIZES } from './styled'
 
 const BUTTON_SIZE_TO_ICON_MAP = {
   small: 'xxsmall',
@@ -15,8 +15,27 @@ const cloneIconWithSize = (iconNode, size) => (
   })
 )
 
-const Button = ({ children, variant, disabled, size, icon, leftIcon, rightIcon, ...props }) => (
-  <StyledButton
+const RenderedComponent = ({ children, href, ...props }) => (href ? (
+  <StyledButtonLink href={href} {...props}>
+    {children}
+  </StyledButtonLink>
+) : (
+  <StyledButton {...props}>
+    {children}
+  </StyledButton>
+))
+
+const Button = ({
+  children: text,
+  variant,
+  disabled,
+  size,
+  icon,
+  leftIcon,
+  rightIcon,
+  ...props
+}) => (
+  <RenderedComponent
     {...props}
     size={size}
     variant={variant}
@@ -46,7 +65,7 @@ const Button = ({ children, variant, disabled, size, icon, leftIcon, rightIcon, 
           hasLeftIcon={Boolean(leftIcon)}
           hasRightIcon={Boolean(rightIcon)}
         >
-          { children }
+          { text }
         </StyledButtonText>
       )
     }
@@ -60,8 +79,9 @@ const Button = ({ children, variant, disabled, size, icon, leftIcon, rightIcon, 
         null
       )
     }
-  </StyledButton>
+  </RenderedComponent>
 )
+
 
 Button.defaultProps = {
   variant: 'primary',
@@ -78,6 +98,11 @@ Button.propTypes = {
   icon: PropTypes.element,
   leftIcon: PropTypes.element,
   rightIcon: PropTypes.element,
+}
+
+RenderedComponent.propTypes = {
+  children: PropTypes.node,
+  href: PropTypes.string,
 }
 
 
