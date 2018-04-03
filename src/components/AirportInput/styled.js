@@ -36,10 +36,6 @@ export const Container = styled.div`
 
   box-sizing: border-box;
   ${switchTransition}
-  /* Color for background should be the same as border color
-  ** to avoid blinking and breaking borders. SITE-505
-  */
-  background: ${({ theme }) => theme.color.primary};
   border: 2px solid ${({ theme }) => theme.color.primaryLight};
 
   ${({ neighboringInGroup }) => {
@@ -80,6 +76,10 @@ export const Container = styled.div`
   }}
 
   &:hover {
+    /* Color for background should be the same as border color
+    ** to avoid blinking and breaking borders. SITE-505
+    */
+    background: ${({ theme }) => theme.color.secondary};
     border-color: ${({ theme }) => theme.color.secondary};
     z-index: 2;
   }
