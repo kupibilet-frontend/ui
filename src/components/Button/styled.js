@@ -106,7 +106,7 @@ const getButtonActiveBackground = ({ theme, variant }) => {
 
 export const StyledButton = styled.button`
   ${control}
-
+  display: inline-block;
   color: ${getButtonColor};
   background: ${getButtonBackground};
 
@@ -156,6 +156,7 @@ export const StyledButton = styled.button`
     ` : '')}
   }
 `
+export const StyledButtonLink = StyledButton.withComponent('a')
 
 export const StyledButtonText = styled.span`
   display: inline-block;
