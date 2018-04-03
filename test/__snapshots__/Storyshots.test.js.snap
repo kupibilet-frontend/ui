@@ -882,7 +882,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #38afff;
   border: 2px solid #77c8ff;
   overflow: hidden;
   z-index: 1;
@@ -890,6 +889,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
 }
 
 .c4:hover {
+  background: #ff9100;
   border-color: #ff9100;
   z-index: 2;
 }
@@ -1319,7 +1319,6 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 21px 0 0 21px;
   overflow: hidden;
@@ -1327,6 +1326,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 }
 
 .c2:hover {
+  background: #ff9100;
   border-color: #ff9100;
   z-index: 2;
 }
@@ -1348,7 +1348,6 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 0 21px 21px 0;
   overflow: hidden;
@@ -1357,6 +1356,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 }
 
 .c12:hover {
+  background: #ff9100;
   border-color: #ff9100;
   z-index: 2;
 }
@@ -2939,7 +2939,6 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 21px;
   overflow: hidden;
@@ -2947,6 +2946,7 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
 }
 
 .c1:hover {
+  background: #ff9100;
   border-color: #ff9100;
   z-index: 2;
 }
@@ -3243,7 +3243,6 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 21px;
   overflow: hidden;
@@ -3251,6 +3250,7 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
 }
 
 .c1:hover {
+  background: #ff9100;
   border-color: #ff9100;
   z-index: 2;
 }
@@ -3526,7 +3526,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  background: #38afff;
   border: 2px solid #77c8ff;
   border-radius: 21px;
   overflow: hidden;
@@ -3534,6 +3533,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 }
 
 .c2:hover {
+  background: #ff9100;
   border-color: #ff9100;
   z-index: 2;
 }
