@@ -32,6 +32,8 @@ const PlacementWrapper = styled.div`
       return 'right: 0;'
     } else if (placement === 'right') {
       return 'left: 0;'
+    } else if (placement === 'top') {
+      return 'transform: translateY(-100%);'
     }
   }
 }
@@ -78,7 +80,7 @@ const TooltipContainer = styled.div`
         `
       case 'top':
         return `
-          top: ${props.top - props.height - 6}px;
+          top: ${props.top}px;
           left: ${props.left}px;
         `
       default:
