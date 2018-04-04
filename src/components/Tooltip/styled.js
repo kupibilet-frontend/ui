@@ -32,6 +32,8 @@ const PlacementWrapper = styled.div`
       return 'right: 0;'
     } else if (placement === 'right') {
       return 'left: 0;'
+    } else if (placement === 'top') {
+      return 'transform: translateY(-100%);'
     }
   }
 }
@@ -99,12 +101,6 @@ const RelativeWrapper = styled.div`
   ${ ({ placement, width }) => {
     if (placement === 'top' || placement === 'bottom') {
       return `max-width: ${width}px;`
-    }
-  }
-}
-${ ({ placement }) => {
-    if (placement === 'top') {
-      return 'transform: translateY(-100%);'
     }
   }
 }
