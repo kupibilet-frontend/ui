@@ -15,7 +15,6 @@ type Props = {
   closePortal?: (Event) => void,
   isOnBottom: boolean,
   children: Element<*>,
-  freezableElement: string,
 }
 
 class Overlay extends Component<Props, void> {
@@ -28,12 +27,11 @@ class Overlay extends Component<Props, void> {
       closePortal,
       isOnBottom,
       children,
-      freezableElement,
     } = this.props
 
     return (
-      <Scrollfix freezableElement={freezableElement}>
-        <GlobalStylesScope>
+      <GlobalStylesScope>
+        <Scrollfix>
           <Wrapper
             onClick={closePortal}
             isOnBottom={isOnBottom}
@@ -44,8 +42,8 @@ class Overlay extends Component<Props, void> {
               </OverlayContent>
             </OverlayContentWrap>
           </Wrapper>
-        </GlobalStylesScope>
-      </Scrollfix>
+        </Scrollfix>
+      </GlobalStylesScope>
     )
   }
 }
