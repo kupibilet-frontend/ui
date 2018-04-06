@@ -42,3 +42,11 @@ deploy:
     on:
       branch: master
       tags: false
+
+  - provider: script
+    script: yarn versionize
+    skip_cleanup: true
+    on:
+      all_branches: true
+      condition: $TRAVIS_BRANCH != "master" && $TRAVIS_BRANCH != "develop"
+      tags: false

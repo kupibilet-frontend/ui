@@ -26,7 +26,8 @@
     "precommit": "BABEL_ENV=default lint-staged",
     "prepush": "yarn run test",
     "postmerge": "yarn fetch-git-tags",
-    "update": "yarn drop-pre-tags"
+    "update": "yarn drop-pre-tags",
+    "versionize": "versionize"
   },
   "engines": {
     "node": ">=8",
@@ -85,6 +86,7 @@
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
     "styled-components": "^2.1.2",
+    "versionize": "^1.0.3",
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
