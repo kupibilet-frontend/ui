@@ -15,13 +15,8 @@
     "prebuild": "scripts/check-engines.js",
     "build": "BABEL_ENV=esmodules NODE_ENV=production babel src/ -d ./ --ignore stories,test",
     "can-publish": "scripts/is-able-to-publish.js",
-    "fetch-git-tags": "git tag | xargs git tag -d &> /dev/null && git fetch origin --tags &> /dev/null",
-    "predrop-pre-tags": "git tag | grep - | xargs git push --no-verify --delete origin &> /dev/null",
-    "drop-pre-tags": "git tag | grep - | xargs git tag -d &> /dev/null",
     "//": "---        Git and NPM hooks section        ---",
     "postinstall": "move-bin; true",
-    "preversion": "yarn fetch-git-tags && yarn drop-pre-tags",
-    "postversion": "git push --follow-tags",
     "prepublishOnly": "yarn build",
     "precommit": "BABEL_ENV=default lint-staged",
     "prepush": "yarn run test",
@@ -86,7 +81,7 @@
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
     "styled-components": "^2.1.2",
-    "versionize": "^1.0.3",
+    "versionize": "1.0.4",
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
