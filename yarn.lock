@@ -14,13 +14,13 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@kupibilet/icons@~5.0.0":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.0.2.tgz#c5fb818baabc4d069443e56278d448bda4691b34"
+"@kupibilet/icons@~5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.1.0.tgz#cdb42afdee1c419c8bacc93c6660d2cc62a1f47d"
 
-"@kupibilet/moment@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@kupibilet/moment/-/moment-0.0.2.tgz#e40efec0aa51c544420bd091c5554dbf73779c19"
+"@kupibilet/moment@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@kupibilet/moment/-/moment-0.0.3.tgz#d0ea81dfeb4b6356ccffda9c26e14f92dd49e6bd"
   dependencies:
     moment "^2.18.1"
 
@@ -3404,9 +3404,9 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@^0.63.0:
-  version "0.63.1"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.63.1.tgz#ab00067c197169a5fb5b4996c8f6927b06694828"
+flow-bin@^0.69.0:
+  version "0.69.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.69.0.tgz#053159a684a6051fcbf0b71a2eb19a9679082da6"
 
 for-each@~0.3.2:
   version "0.3.2"
@@ -6356,9 +6356,9 @@ react-portal@^3.1.0:
   dependencies:
     prop-types "^15.5.8"
 
-react-portal@^4.0.0-beta.2:
-  version "4.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.0.0-beta.2.tgz#c25112a87fa209cc14776c739664101e3e9d3732"
+react-portal@^4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.1.4.tgz#3fc3f3f3a0e81362ab1dc9afa3c4bb5a84ec76a3"
   dependencies:
     prop-types "^15.5.8"
 
