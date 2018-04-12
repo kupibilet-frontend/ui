@@ -3,6 +3,23 @@ import { borderRadiusCircle, borderRadiusLarge } from 'utils/borderRadius'
 import mq from 'utils/media-queries'
 import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
+import isCompact from './utils'
+
+const getWidth = (size) => {
+  switch (size) {
+    case 'thin':
+      return '378'
+
+    case 'compact':
+      return '588'
+
+    case 'wide':
+      return '882'
+
+    default:
+      return '882'
+  }
+}
 
 export const ModalContent = styled.div`
   ${borderRadiusLarge.all}
@@ -14,7 +31,7 @@ export const ModalContent = styled.div`
   position: relative;
   z-index: 11;
 
-  width: ${(props) => (props.isCompact ? '588' : '882')}px;
+  width: ${(props) => getWidth(props.size)}px;
 
   ${mq.desktop`
     margin: 24px 0;
@@ -34,7 +51,7 @@ export const Header = styled.div`
   min-height: 60px;
   justify-content: space-between;
   padding-top: 30px;
-  padding-bottom: ${(props) => (props.isCompact ? '18' : '30')}px;
+  padding-bottom: ${(props) => (isCompact(props.size) ? '18' : '30')}px;
   ${H4} {
     font-weight: 700;
   }
@@ -77,15 +94,15 @@ export const CloseButton = styled.span`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  position: ${(props) => (props.isCompact ? 'absolute' : 'fixed')};
-  right: ${(props) => (props.isCompact ? '0' : '4')}px;
-  top: ${(props) => (props.isCompact ? '0' : '5')}px;
+  position: ${(props) => (isCompact(props.size) ? 'absolute' : 'fixed')};
+  right: ${(props) => (isCompact(props.size) ? '0' : '4')}px;
+  top: ${(props) => (isCompact(props.size) ? '0' : '5')}px;
   height: 30px;
   width: 30px;
 
   ${mq.desktop`
     &:hover ${StyledIcon} {
-      fill: ${(props) => (props.isCompact ? 'miscLight' : 'white')};
+      fill: ${(props) => (isCompact(props.size) ? 'miscLight' : 'white')};
     }
   `}
   ${mq.handheld`
@@ -102,7 +119,7 @@ export const CloseButton = styled.span`
 export const Footer = styled.div`
   border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
   display: flex;
-  padding: ${(props) => (props.isCompact ? '18' : '30')}px 0;
+  padding: ${(props) => (isCompact(props.size) ? '18' : '30')}px 0;
 
   ${mq.handheld`
     padding: 24px 0;
