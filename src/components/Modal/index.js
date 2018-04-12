@@ -14,6 +14,7 @@ import {
   StyledIcon,
   CloseButton,
   Footer,
+  HeaderWrap,
 } from './styled'
 
 const getCloseButtonSize = ({ isHandheld, isCompact }) => {
@@ -112,17 +113,19 @@ class Modal extends React.PureComponent<Props> {
             freezableElement={freezableElement}
           >
             <ModalContent isCompact={isCompact}>
-              { renderHeader({ ...this.props, children: heading }) }
-              {showCloseButton &&
-                <CloseButton isCompact={isCompact} isOnBottom={isOnBottom}>
-                  <StyledIcon
-                    name="cross"
-                    fill={getCloseButtonColor(this.props)}
-                    onClick={this.closePortal}
-                    size={getCloseButtonSize(this.props)}
-                  />
-                </CloseButton>
-              }
+              <HeaderWrap isFixed={this.props.isFixedHeader}>
+                { renderHeader({ ...this.props, children: heading }) }
+                {showCloseButton &&
+                  <CloseButton isCompact={isCompact} isOnBottom={isOnBottom}>
+                    <StyledIcon
+                      name="cross"
+                      fill={getCloseButtonColor(this.props)}
+                      onClick={this.closePortal}
+                      size={getCloseButtonSize(this.props)}
+                    />
+                  </CloseButton>
+                }
+              </HeaderWrap>
               { renderContent(this.props) }
               { renderFooter({ ...this.props, children: footer }) }
 
