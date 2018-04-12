@@ -7752,9 +7752,9 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-versionize@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/versionize/-/versionize-1.0.4.tgz#363b4f2a7dd4fb790d4fa3328e2e9025d6c465b7"
+versionize@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/versionize/-/versionize-1.0.5.tgz#2462bd2d75c51f117c89b2deff9e04f8d91aca7e"
   dependencies:
     find-package-json "^1.0.0"
     semver "^5.5.0"

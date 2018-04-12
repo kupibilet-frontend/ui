@@ -22,6 +22,9 @@ before_install:
 script:
   - yarn test
 
+after_success:
+  - scripts/after-success.sh
+
 before_deploy:
   - yarn build-storybook
   - yarn global add makeshift && makeshift -r registry.npmjs.org
@@ -42,12 +45,4 @@ deploy:
     github_token: $GITHUB_TOKEN
     on:
       branch: master
-      tags: false
-
-  - provider: script
-    script: yarn versionize
-    skip_cleanup: true
-    on:
-      all_branches: true
-      condition: $TRAVIS_BRANCH != "master" && $TRAVIS_BRANCH != "develop"
       tags: false
