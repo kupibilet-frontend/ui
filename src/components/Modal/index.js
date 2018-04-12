@@ -6,6 +6,7 @@ import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
+import isCompact from './utils'
 
 import {
   ModalContent,
@@ -16,19 +17,19 @@ import {
   Footer,
 } from './styled'
 
-const getCloseButtonSize = ({ isHandheld, isCompact }) => {
+const getCloseButtonSize = ({ isHandheld, size }) => {
   if (isHandheld) {
     return 'normal'
-  } else if (isCompact) {
+  } else if (isCompact(size)) {
     return 'xxsmall'
   }
   return 'medium'
 }
 
-const getCloseButtonColor = ({ isHandheld, isCompact }) => {
+const getCloseButtonColor = ({ isHandheld, size }) => {
   if (isHandheld) {
     return 'primaryDarkest'
-  } else if (isCompact) {
+  } else if (isCompact(size)) {
     return 'miscDarkest'
   }
   return 'textLight'
@@ -36,7 +37,7 @@ const getCloseButtonColor = ({ isHandheld, isCompact }) => {
 
 type Props = {
   footer?: React.Element<*>,
-  isCompact: boolean,
+  size: 'wide' | 'compact' | 'thin',
   closeOnOutsideClick: boolean,
   closeOnEsc: boolean,
   showCloseButton: boolean,
@@ -46,9 +47,9 @@ type Props = {
 /* eslint-disable react/prop-types */
 class Modal extends React.PureComponent<Props> {
   static defaultProps = {
-    renderHeader: ({ heading, isCompact, isHandheld }) => (heading &&
-      <Header isCompact={isCompact}>
-        {(isCompact || isHandheld)
+    renderHeader: ({ heading, size, isHandheld }) => (heading &&
+      <Header size={size}>
+        {(isCompact(size) || isHandheld)
           ? <H4>{heading}</H4>
           : <H1>{heading}</H1>
         }
@@ -57,7 +58,7 @@ class Modal extends React.PureComponent<Props> {
     renderContent: (props) => <Content {...props} />,
     renderFooter: (props) => props.footer && <Footer {...props} />,
 
-    isCompact: false,
+    size: 'wide',
     closeOnOutsideClick: true,
     closeOnEsc: true,
     showCloseButton: true,
@@ -86,7 +87,7 @@ class Modal extends React.PureComponent<Props> {
 
   render() {
     const {
-      isCompact,
+      size,
       heading,
       footer,
       renderHeader,
@@ -111,10 +112,10 @@ class Modal extends React.PureComponent<Props> {
             isOnBottom={isOnBottom}
             freezableElement={freezableElement}
           >
-            <ModalContent isCompact={isCompact}>
+            <ModalContent size={size}>
               { renderHeader({ ...this.props, children: heading }) }
               {showCloseButton &&
-                <CloseButton isCompact={isCompact} isOnBottom={isOnBottom}>
+                <CloseButton size={size} isOnBottom={isOnBottom}>
                   <StyledIcon
                     name="cross"
                     fill={getCloseButtonColor(this.props)}
