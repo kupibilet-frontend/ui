@@ -80,7 +80,29 @@ storiesOf('Complex controls/Modal', module)
           isOpen={isOpen}
           onClose={onClose}
           freezableElement="#root"
-          isCompact
+          size="compact"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
+        </Modal>
+      </div>
+    )
+  })
+
+  .addWithInfo('Thin', () => {
+    const isOpen = boolean('isOpen', false)
+
+    return (
+      <div>
+        <Button onClick={onClick}>
+          Open Modal
+        </Button>
+        <Modal
+          heading="Очень длинный заголовок, который не помещается на одну строку"
+          footer={footerContent}
+          isOpen={isOpen}
+          onClose={onClose}
+          freezableElement="#root"
+          size="thin"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
         </Modal>
@@ -101,7 +123,7 @@ storiesOf('Complex controls/Modal', module)
           isOpen={isOpen}
           onClose={onClose}
           freezableElement="#root"
-          isCompact
+          size="compact"
           isOnBottom
         >
           Full Screen Content
