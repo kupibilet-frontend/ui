@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import type moment$Moment from '@kupibilet/moment'
+import moment from '@kupibilet/moment'
 import { Day, AvgCost } from './styled'
 
 type Props = {
@@ -16,7 +17,7 @@ export default class DayCell extends React.PureComponent<void, Props, void> {
 
     return (
       <Day>
-        { day.format('D') }
+        { moment(day).format('D') }
         {
           cost ? (
             <AvgCost isCheap={isCheap}>
