@@ -17,7 +17,9 @@ export const AvgCost = styled.div`
 
   .CalendarDay:not(.CalendarDay--blocked):hover &,
   .CalendarDay--selected-start &,
-  .CalendarDay--selected-end & {
+  .CalendarDay--selected-end &,
+  .DayPicker-Day--start &,
+  .DayPicker-Day--end & {
     color: ${({ theme }) => theme.color.background};
   }
 `
