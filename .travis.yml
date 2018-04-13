@@ -22,6 +22,9 @@ before_install:
 script:
   - yarn test
 
+after_success:
+  - scripts/after-success.sh
+
 before_deploy:
   - yarn build-storybook
   - yarn global add makeshift && makeshift -r registry.npmjs.org
@@ -33,6 +36,7 @@ deploy:
     api_key: $NPM_TOKEN
     on:
       tags: true
+      branch: master
       repo: kupibilet-frontend/ui
 
   - provider: pages
