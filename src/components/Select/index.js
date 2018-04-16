@@ -149,7 +149,7 @@ export class Select extends React.Component <Props, State> {
     }
   }
 
-  renderSuggestionComponent = (suggestion: {}, { isHighlighted }) => {
+  renderSuggestion = (suggestion: {}, { isHighlighted }) => {
     const {
       selectedSuggestion,
       getSuggestionKey,
@@ -157,7 +157,8 @@ export class Select extends React.Component <Props, State> {
       renderSuggestion,
     } = this.props
 
-    return renderSuggestion ||
+    if (renderSuggestion) return renderSuggestion(suggestion, { isHighlighted })
+    return (
       <Suggestion
         suggestion={suggestion}
         isHighlighted={isHighlighted}
@@ -165,6 +166,7 @@ export class Select extends React.Component <Props, State> {
         getSuggestionValue={getSuggestionValue}
         selectedKey={getSuggestionKey(selectedSuggestion)}
       />
+    )
   }
 
   render() {
@@ -185,7 +187,7 @@ export class Select extends React.Component <Props, State> {
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         renderSuggestionsContainer={renderSuggestionsContainer}
         renderInputComponent={renderInputComponent}
-        renderSuggestion={this.renderSuggestionComponent}
+        renderSuggestion={this.renderSuggestion}
         inputProps={{
           ...inputProps,
           readOnly: true,
