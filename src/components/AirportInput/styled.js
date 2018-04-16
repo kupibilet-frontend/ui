@@ -163,9 +163,6 @@ export const Geo = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  padding-left: ${({ neighboringInGroup }) => (
-    ['left', 'both'].includes(neighboringInGroup) ? '8px' : '0'
-  )};
   `
 
 // Use same component as in input due specific text rendering in inputs
