@@ -4,12 +4,11 @@
       "plugins": [
         ["flow-react-proptypes"],
         ["module-resolver", {
-          "root": ["src"],
-          "cwd": "./",
+          "root": ["./"],
           "alias": {
-            "blocks": "./blocks",
-            "components": "./components",
-            "utils": "./utils",
+            "blocks": "./src/blocks",
+            "components": "./src/components",
+            "utils": "./src/utils",
             "storybook": "./storybook"
           }
         }],
@@ -23,12 +22,11 @@
       "plugins": [
         ["flow-react-proptypes"],
         ["module-resolver", {
-          "root": ["src"],
-          "cwd": "./",
+          "root": ["./"],
           "alias": {
-            "blocks": "./blocks",
-            "components": "./components",
-            "utils": "./utils"
+            "blocks": "./src/blocks",
+            "components": "./src/components",
+            "utils": "./src/utils"
           }
         }],
         ["styled-components", {
