@@ -74,6 +74,7 @@ export const Container = styled.div`
 
     return ''
   }}
+  // inner padding for container instead of textarea padding (Safari fix)
   padding: 10px 16px;
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
@@ -113,14 +114,20 @@ export const Input = styled.textarea`
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
       return 'width: calc(100% - 26px);'
     } else if (neighboringInGroup === 'left') {
-      return 'width: calc(100% - 26px); left: 10px;'
+      return `
+        width: calc(100% - 26px);
+        left: 10px;
+        `
     } else if (neighboringInGroup === 'both') {
-      return 'width: calc(100% - 20px); left: 10px;'
+      return `
+        width: calc(100% - 20px);
+        left: 10px;
+        `
     }
     return ''
   }}
@@ -214,6 +221,7 @@ export const Code = styled.div`
   font-size: 14px;
   color: ${({ theme }) => theme.color.text};
   background: ${({ theme }) => theme.color.background};
+  //fix protruding of GeoLabel
   padding: 1px 0 0px 10px;
   margin: -1px 0;
 
