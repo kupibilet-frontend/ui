@@ -938,7 +938,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   width: calc(100% - 20px);
   left: 10px;
   background: transparent;
@@ -1409,7 +1409,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   width: calc(100% - 26px);
   background: transparent;
   font-family: inherit;
@@ -1517,7 +1517,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   width: calc(100% - 26px);
   left: 10px;
   background: transparent;
@@ -3011,7 +3011,7 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   background: transparent;
   font-family: inherit;
   font-size: 18px;
@@ -3118,7 +3118,7 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   background: transparent;
   font-family: inherit;
   font-size: 18px;
@@ -3317,7 +3317,7 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   background: transparent;
   font-family: inherit;
   font-size: 18px;
@@ -3601,7 +3601,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   width: calc(100% - 32px);
   height: 100%;
   padding: 0;
-  height: calc(1em + 2px);
+  height: 20px;
   background: transparent;
   font-family: inherit;
   font-size: 18px;
