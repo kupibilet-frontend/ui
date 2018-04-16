@@ -1056,7 +1056,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  padding-left: 8px;
 }
 
 .c7 {
@@ -1636,35 +1635,6 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  padding-left: 0;
-}
-
-.c14 {
-  -webkit-appearance: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  padding-left: 8px;
 }
 
 .c5 {
@@ -1860,7 +1830,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         wrap="off"
       />
       <div
-        className="AirportInput__geo c14"
+        className="AirportInput__geo c4"
       >
         <div
           className="c5"
@@ -3463,7 +3433,6 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  padding-left: 0;
 }
 
 .c4 {
@@ -3748,7 +3717,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  padding-left: 0;
 }
 
 .c5 {
