@@ -366,6 +366,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       </div>
       <div
         className="rc-collapse"
+        role="tablist"
         style={undefined}
       >
         <div
@@ -377,7 +378,9 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             aria-expanded={false}
             className="rc-collapse-header"
             onClick={[Function]}
+            onKeyPress={[Function]}
             role="tab"
+            tabIndex={0}
           >
             <div
               className="c10"
@@ -618,6 +621,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   >
     <div
       className="rc-collapse"
+      role="tablist"
       style={undefined}
     >
       <div
@@ -629,7 +633,9 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
+          onKeyPress={[Function]}
           role="tab"
+          tabIndex={0}
         >
           Foo
         </div>
@@ -643,7 +649,9 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
+          onKeyPress={[Function]}
           role="tab"
+          tabIndex={0}
         >
           Bar
         </div>
@@ -657,7 +665,9 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
+          onKeyPress={[Function]}
           role="tab"
+          tabIndex={0}
         >
           Mdaaaaa
         </div>
@@ -705,6 +715,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   >
     <div
       className="rc-collapse"
+      role={null}
       style={undefined}
     >
       <div
@@ -716,7 +727,9 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Foo
         </div>
@@ -730,7 +743,9 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Bar
         </div>
@@ -744,7 +759,9 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Mdaaaaa
         </div>
@@ -792,6 +809,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   >
     <div
       className="rc-collapse"
+      role={null}
       style={undefined}
     >
       <div
@@ -803,13 +821,15 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           aria-expanded={true}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Foo
         </div>
         <div
           className="rc-collapse-content rc-collapse-content-active"
-          role="tabpanel"
+          role={null}
         >
           <div
             className="rc-collapse-content-box"
@@ -831,7 +851,9 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Bar
         </div>
@@ -845,7 +867,9 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Mdaaaaa
         </div>
