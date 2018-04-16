@@ -104,6 +104,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -187,7 +188,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 .c5 {
   display: inline-block;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
   width: 18px;
@@ -365,6 +366,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       </div>
       <div
         className="rc-collapse"
+        role="tablist"
         style={undefined}
       >
         <div
@@ -376,7 +378,9 @@ exports[`Storyshots Blocks FilterSection 1`] = `
             aria-expanded={false}
             className="rc-collapse-header"
             onClick={[Function]}
+            onKeyPress={[Function]}
             role="tab"
+            tabIndex={0}
           >
             <div
               className="c10"
@@ -438,6 +442,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -475,6 +480,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -615,6 +621,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   >
     <div
       className="rc-collapse"
+      role="tablist"
       style={undefined}
     >
       <div
@@ -626,7 +633,9 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
+          onKeyPress={[Function]}
           role="tab"
+          tabIndex={0}
         >
           Foo
         </div>
@@ -640,7 +649,9 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
+          onKeyPress={[Function]}
           role="tab"
+          tabIndex={0}
         >
           Bar
         </div>
@@ -654,7 +665,9 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
+          onKeyPress={[Function]}
           role="tab"
+          tabIndex={0}
         >
           Mdaaaaa
         </div>
@@ -702,6 +715,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   >
     <div
       className="rc-collapse"
+      role={null}
       style={undefined}
     >
       <div
@@ -713,7 +727,9 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Foo
         </div>
@@ -727,7 +743,9 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Bar
         </div>
@@ -741,7 +759,9 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Mdaaaaa
         </div>
@@ -789,6 +809,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   >
     <div
       className="rc-collapse"
+      role={null}
       style={undefined}
     >
       <div
@@ -800,13 +821,15 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           aria-expanded={true}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Foo
         </div>
         <div
           className="rc-collapse-content rc-collapse-content-active"
-          role="tabpanel"
+          role={null}
         >
           <div
             className="rc-collapse-content-box"
@@ -828,7 +851,9 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Bar
         </div>
@@ -842,7 +867,9 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           aria-expanded={false}
           className="rc-collapse-header"
           onClick={[Function]}
-          role="tab"
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
         >
           Mdaaaaa
         </div>
@@ -1008,8 +1035,9 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -1032,7 +1060,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
 .c7 {
   visibility: hidden;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   font-family: inherit;
   font-size: 18px;
@@ -1053,11 +1081,12 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -1185,21 +1214,21 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   display: flex;
 }
 
-.c1 .styled__SwapIcon-fKoejO {
+.c1 .styled__SwapIcon-fbcehg {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .styled__SwapIcon-fKoejO {
+.c1:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c1 .styled__SwapIcon-fKoejO,
-  .responsive-booking .c1 .styled__SwapIcon-fKoejO {
+  .responsive .c1 .styled__SwapIcon-fbcehg,
+  .responsive-booking .c1 .styled__SwapIcon-fbcehg {
     opacity: 1;
   }
 }
@@ -1582,8 +1611,9 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -1610,8 +1640,9 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -1634,7 +1665,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 .c5 {
   visibility: hidden;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   font-family: inherit;
   font-size: 18px;
@@ -1655,11 +1686,12 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -1699,11 +1731,12 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -1955,7 +1988,7 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
   display: inline-flex;
 }
 
-.c1 .Dropdown__DropdownContent-eersDB {
+.c1 .Dropdown__DropdownContent-lgcYZG {
   left: auto;
   width: 300px;
 }
@@ -2345,6 +2378,24 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   display: inline-flex;
 }
 
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 .c8 {
   font-family: inherit;
   border: none;
@@ -2409,24 +2460,6 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
 .c12:active {
   background: #008ae6;
   box-shadow: none;
-}
-
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
 }
 
 .c1 {
@@ -3032,6 +3065,112 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
   z-index: 2;
 }
 
+.c3 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c3,
+.c3:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
 .c2 {
   font-family: inherit;
   border: none;
@@ -3142,112 +3281,6 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
 }
 
 .c2:focus ~ .AirportInput__geo .AirportInput__spell {
-  display: block;
-}
-
-.c3 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px 16px;
-  background: #ffffff;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c3,
-.c3:focus {
-  border: none;
-  outline: none;
-  resize: none;
-}
-
-.c3::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
@@ -3449,8 +3482,9 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -3473,7 +3507,7 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
 .c4 {
   visibility: hidden;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   font-family: inherit;
   font-size: 18px;
@@ -3494,11 +3528,12 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -3732,8 +3767,9 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -3756,7 +3792,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 .c5 {
   visibility: hidden;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   font-family: inherit;
   font-size: 18px;
@@ -3777,11 +3813,12 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -4141,6 +4178,24 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   display: inline-flex;
 }
 
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
 .c1 {
   font-family: inherit;
   border: none;
@@ -4178,24 +4233,6 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
 }
 
 <div
@@ -4261,6 +4298,24 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   display: inline-flex;
 }
 
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 .c1 {
   font-family: inherit;
   border: none;
@@ -4306,24 +4361,6 @@ exports[`Storyshots Controls/Buttons With icons 1`] = `
   display: inline-block;
   vertical-align: top;
   padding: 0 5.6px 0 5.6px;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
 }
 
 <div
@@ -4402,7 +4439,7 @@ exports[`Storyshots Controls/Checkbox ReduxForm-ready 1`] = `
 .c2 {
   display: inline-block;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   height: 18px;
   width: 18px;
@@ -5134,11 +5171,12 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
 
 .c2 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -5312,13 +5350,13 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   display: flex;
 }
 
-.c2 .styled__SwapIcon-fKoejO {
+.c2 .styled__SwapIcon-fbcehg {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c2:hover .styled__SwapIcon-fKoejO {
+.c2:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -5326,11 +5364,12 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 
 .c5 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -5412,11 +5451,12 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 
 .c3 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -5499,11 +5539,12 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 
 .c4 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -5630,8 +5671,8 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c2 .styled__SwapIcon-fKoejO,
-  .responsive-booking .c2 .styled__SwapIcon-fKoejO {
+  .responsive .c2 .styled__SwapIcon-fbcehg,
+  .responsive-booking .c2 .styled__SwapIcon-fbcehg {
     opacity: 1;
   }
 }
@@ -5702,13 +5743,13 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   display: flex;
 }
 
-.c1 .styled__SwapIcon-fKoejO {
+.c1 .styled__SwapIcon-fbcehg {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .styled__SwapIcon-fKoejO {
+.c1:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -5716,11 +5757,12 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c3 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -5802,11 +5844,12 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c6 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -5887,11 +5930,12 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c8 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -6091,8 +6135,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c1 .styled__SwapIcon-fKoejO,
-  .responsive-booking .c1 .styled__SwapIcon-fKoejO {
+  .responsive .c1 .styled__SwapIcon-fbcehg,
+  .responsive-booking .c1 .styled__SwapIcon-fbcehg {
     opacity: 1;
   }
 }
@@ -6179,11 +6223,12 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
 
 .c2 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -6370,13 +6415,36 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   display: inline-flex;
 }
 
+.c3 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 3px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c2 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -6502,27 +6570,6 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   background-color: #e64926;
 }
 
-.c3 {
-  -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 3px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 <div
   className="responsive c0"
 >
@@ -6614,13 +6661,58 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   display: inline-flex;
 }
 
+.c2 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c5 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -6746,48 +6838,6 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   background-color: #e64926;
 }
 
-.c2 {
-  -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 10px;
-  padding-right: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6 {
-  -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 8px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 <div
   className="responsive c0"
 >
@@ -6868,11 +6918,12 @@ exports[`Storyshots Controls/Input default 1`] = `
 
 .c2 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -7043,6 +7094,7 @@ exports[`Storyshots Controls/Link <a> link 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -7139,6 +7191,7 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
+  -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -7227,6 +7280,24 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
   display: inline-flex;
 }
 
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 .c1 {
   font-family: inherit;
   border: none;
@@ -7264,24 +7335,6 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
 }
 
 <div
@@ -7403,6 +7456,24 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
   display: inline-flex;
 }
 
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 .c1 {
   font-family: inherit;
   border: none;
@@ -7440,24 +7511,6 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
 }
 
 <div
@@ -7525,6 +7578,24 @@ exports[`Storyshots Controls/Popover default 1`] = `
   display: inline-flex;
 }
 
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 .c1 {
   font-family: inherit;
   border: none;
@@ -7562,24 +7633,6 @@ exports[`Storyshots Controls/Popover default 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
 }
 
 <div
@@ -7634,7 +7687,7 @@ exports[`Storyshots Controls/Radio default 1`] = `
 
 .c3 {
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7678,7 +7731,7 @@ exports[`Storyshots Controls/Radio default 1`] = `
 
 .c7 {
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7828,11 +7881,12 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
 
 .c4 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -8045,13 +8099,13 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   display: flex;
 }
 
-.c1 .styled__SwapIcon-fKoejO {
+.c1 .styled__SwapIcon-fbcehg {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .styled__SwapIcon-fKoejO {
+.c1:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -8059,11 +8113,12 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
 
 .c5 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -8188,8 +8243,8 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c1 .styled__SwapIcon-fKoejO,
-  .responsive-booking .c1 .styled__SwapIcon-fKoejO {
+  .responsive .c1 .styled__SwapIcon-fbcehg,
+  .responsive-booking .c1 .styled__SwapIcon-fbcehg {
     opacity: 1;
   }
 }
@@ -8264,6 +8319,28 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   display: inline-flex;
 }
 
+.c4 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c10 {
   margin: 3px 0 0;
   padding: 3px 0;
@@ -8321,11 +8398,12 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 
 .c3 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -8447,28 +8525,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   background-color: #e64926;
 }
 
-.c4 {
-  -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 5px;
-  padding-right: 7px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.hBtVdJ .c5 {
+.hdktWd .c5 {
   margin-left: 6px;
 }
 
@@ -8594,6 +8651,28 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   display: inline-flex;
 }
 
+.c4 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c10 {
   margin: 3px 0 0;
   padding: 3px 0;
@@ -8651,11 +8730,12 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 
 .c3 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -8777,28 +8857,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   background-color: #e64926;
 }
 
-.c4 {
-  -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 5px;
-  padding-right: 7px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.hBtVdJ .c5 {
+.hdktWd .c5 {
   margin-left: 6px;
 }
 
@@ -8921,6 +8980,28 @@ exports[`Storyshots Controls/Select default 1`] = `
   display: inline-flex;
 }
 
+.c4 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c10 {
   margin: 3px 0 0;
   padding: 3px 0;
@@ -8978,11 +9059,12 @@ exports[`Storyshots Controls/Select default 1`] = `
 
 .c3 {
   position: relative;
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
+  -ms-flex-negative: 1;
   flex-shrink: 1;
   width: 100%;
   height: 100%;
@@ -9108,28 +9190,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   background-color: #e64926;
 }
 
-.c4 {
-  -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 8px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.hBtVdJ .c5 {
+.hdktWd .c5 {
   margin-left: 6px;
 }
 
@@ -9961,6 +10022,24 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   display: inline-flex;
 }
 
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
 .c1 {
   font-family: inherit;
   border: none;
@@ -10000,25 +10079,7 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   box-shadow: none;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
-.hBtVdJ .c3 {
+.hdktWd .c3 {
   margin-left: 6px;
 }
 
@@ -10086,19 +10147,21 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 }
 
 .c2 {
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 870px;
 }
 
 .c3 {
   width: 252px;
+  -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: 42px;
   -webkit-order: 0;
@@ -10272,19 +10335,21 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 }
 
 .c2 {
+  -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 870px;
 }
 
 .c3 {
   width: 252px;
+  -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
-  -ms-flex-grow: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
   -webkit-flex-shrink: 0;
-  -ms-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: 42px;
 }
