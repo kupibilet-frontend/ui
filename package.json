@@ -14,6 +14,7 @@
     "flow": "flow",
     "prebuild": "scripts/check-engines.js",
     "build": "BABEL_ENV=esmodules NODE_ENV=production babel src/ -d ./ --ignore stories,test",
+    "watch": "BABEL_ENV=esmodules NODE_ENV=production babel --watch src/ -d ./ --ignore stories,test",
     "//": "---        Git and NPM hooks section        ---",
     "postinstall": "move-bin; true",
     "prepublishOnly": "yarn build",
