@@ -19,7 +19,11 @@ class Scrollfix extends Component<Props> {
 
   componentWillUnmount() {
     this.element.removeEventListener('mousewheel', this.onWheel, true)
-    this.element.removeEventListener('touchstart', this.getTouchStartCoord, true)
+    this.element.removeEventListener(
+      'touchstart',
+      this.getTouchStartCoord,
+      true
+    )
     this.element.removeEventListener('touchmove', this.onTouch, true)
   }
 
@@ -39,8 +43,8 @@ class Scrollfix extends Component<Props> {
     if (scrollTop <= 1 && deltaY < 0) {
       event.preventDefault()
     } else if (
-      scrollTop + this.element.offsetHeight >= this.element.scrollHeight - 1
-      && deltaY > 0
+      scrollTop + this.element.offsetHeight >= this.element.scrollHeight - 1 &&
+      deltaY > 0
     ) {
       event.preventDefault()
     }
@@ -54,9 +58,7 @@ class Scrollfix extends Component<Props> {
   lastY = 0
 
   render() {
-    const {
-      children,
-    } = this.props
+    const { children } = this.props
     return children
   }
 }

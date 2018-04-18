@@ -16,7 +16,6 @@ import {
   HeaderText,
 } from './styled'
 
-
 type PortalProps = {
   isOpen: boolean,
   coords: Coordinates | null,
@@ -28,7 +27,7 @@ type PortalProps = {
   size: string,
 }
 
-const PopoverPortal = (props : PortalProps) => {
+const PopoverPortal = (props: PortalProps) => {
   const {
     isOpen,
     coords,
@@ -39,8 +38,8 @@ const PopoverPortal = (props : PortalProps) => {
     dotCentering,
     size,
   } = props
-  return ((content && isOpen && coords)
-    ? <Portal>
+  return content && isOpen && coords ? (
+    <Portal>
       <GlobalStylesScope>
         <PopoverContainer
           top={coords.top}
@@ -52,32 +51,21 @@ const PopoverPortal = (props : PortalProps) => {
           dotCentering={dotCentering}
         >
           <PositionWrapper>
-            <PlacementWrapper
-              placement={placement}
-              align={align}
-            >
+            <PlacementWrapper placement={placement} align={align}>
               <RelativeWrapper
                 placement={placement}
                 align={align}
                 width={coords.width}
                 height={coords.height}
               >
-                <PopoverDot
-                  placement={placement}
-                />
-                <PopoverBackground
-                  size={size}
-                >
-                  {header &&
+                <PopoverDot placement={placement} />
+                <PopoverBackground size={size}>
+                  {header && (
                     <Header>
-                      <HeaderText>
-                        {header}
-                      </HeaderText>
+                      <HeaderText>{header}</HeaderText>
                     </Header>
-                  }
-                  <TextSmall>
-                    { content }
-                  </TextSmall>
+                  )}
+                  <TextSmall>{content}</TextSmall>
                 </PopoverBackground>
               </RelativeWrapper>
             </PlacementWrapper>
@@ -85,8 +73,7 @@ const PopoverPortal = (props : PortalProps) => {
         </PopoverContainer>
       </GlobalStylesScope>
     </Portal>
-    : null
-  )
+  ) : null
 }
 
 type PopoverProps = {
@@ -133,7 +120,9 @@ class Popover extends Tooltip {
     return [
       <PopoverChildrenProxy
         key="PopoverpedElement"
-        ref={(element) => { this.childRef = element }}
+        ref={element => {
+          this.childRef = element
+        }}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
@@ -154,7 +143,6 @@ class Popover extends Tooltip {
     ]
   }
 }
-
 
 // Proxy for possibility to transfer ref to any children
 class PopoverChildrenProxy extends React.Component<void, void> {

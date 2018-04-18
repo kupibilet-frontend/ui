@@ -8,7 +8,7 @@ export default css`
     color: ${({ theme }) => theme.color.textDarkest};
     font-size: 16px;
     line-height: 1;
-    letter-spacing: -.21px;
+    letter-spacing: -0.21px;
     text-align: center;
     cursor: pointer;
 
@@ -64,14 +64,13 @@ export default css`
     &:not(.CalendarDay--blocked):hover {
       position: relative;
 
-      ${({ theme }) => (
-    cssArrow({
-      width: 4,
-      heigth: 12,
-      color: theme.color.primary,
-      fromDirection: 'left',
-    })
-  )}
+      ${({ theme }) =>
+        cssArrow({
+          width: 4,
+          heigth: 12,
+          color: theme.color.primary,
+          fromDirection: 'left',
+        })};
     }
   }
 
@@ -79,12 +78,13 @@ export default css`
     &:not(.CalendarDay--blocked):not(.CalendarDay--selected-start):hover {
       position: relative;
 
-      ${({ theme }) => cssArrow({
-    width: 4,
-    heigth: 12,
-    color: theme.color.primary,
-    fromDirection: 'right',
-  })}
+      ${({ theme }) =>
+        cssArrow({
+          width: 4,
+          heigth: 12,
+          color: theme.color.primary,
+          fromDirection: 'right',
+        })};
     }
   }
 

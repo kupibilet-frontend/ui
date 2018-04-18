@@ -7,7 +7,6 @@ import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
 import { SuggestionsContainer } from 'components/Autocomplete/styled'
 
-
 const StyledContainer = styled(SuggestionsContainer)`
   min-width: 180px;
   width: 100%;
@@ -20,13 +19,12 @@ const SectionHeader = styled.div`
   color: ${({ theme }) => theme.color.miscDark};
 `
 
-
 type SectionObject = {
-  title? : string,
+  title?: string,
 }
 type SuggestionObject = {
-  key? : any,
-  value? : any,
+  key?: any,
+  value?: any,
 }
 type OnChange = (Event, { newValue: string, method: string }) => void
 
@@ -44,13 +42,7 @@ type InputProps = {
 const defaultInput = ({ isOpen, ...props }) => (
   <Input
     {...props}
-    rightIcon={
-      <Icon
-        name="angle"
-        rotate={isOpen}
-        fill="miscDark"
-      />
-    }
+    rightIcon={<Icon name="angle" rotate={isOpen} fill="miscDark" />}
   />
 )
 
@@ -59,26 +51,16 @@ const defaultInput = ({ isOpen, ...props }) => (
 const defaultRFInput = ({ isOpen, ref, ...props }) => (
   <RFInput
     {...props}
-    rightIcon={
-      <Icon
-        name="angle"
-        rotate={isOpen}
-        fill="miscDark"
-      />
-    }
+    rightIcon={<Icon name="angle" rotate={isOpen} fill="miscDark" />}
   />
 )
 
 const defaultContainer = ({ containerProps, children }) => (
-  <StyledContainer {... containerProps}>
-    {children}
-  </StyledContainer>
+  <StyledContainer {...containerProps}>{children}</StyledContainer>
 )
 
-const defaultSectionTitle = (section : SectionObject) => (
-  <SectionHeader>
-    {section.title}
-  </SectionHeader>
+const defaultSectionTitle = (section: SectionObject) => (
+  <SectionHeader>{section.title}</SectionHeader>
 )
 
 const emptySuggestions = []
@@ -88,20 +70,23 @@ type Props = {
   selectedSuggestion: SuggestionObject | Object | string,
   forceSuggestedValue: boolean,
   focusInputOnSuggestionClick: boolean,
-  renderInputComponent: (Object) => Element,
-  renderSuggestionsContainer: (Object) => Element,
-  renderSectionTitle: (Object) => Element,
-  renderSuggestion?: (Object) => Element,
+  renderInputComponent: Object => Element,
+  renderSuggestionsContainer: Object => Element,
+  renderSectionTitle: Object => Element,
+  renderSuggestion?: Object => Element,
   shouldRenderSuggestions: () => boolean,
-  getSuggestionValue: (Object) => any,
-  getSuggestionKey: (Object) => string,
-  onSuggestionSelected? : (Event, {
-    suggestion: SuggestionObject,
-    suggestionValue: string,
-    suggestionIndex: number,
-    sectionIndex: ?number,
-    method: 'click' | 'enter' | 'blur' | 'autoSuggest'
-  }) => void,
+  getSuggestionValue: Object => any,
+  getSuggestionKey: Object => string,
+  onSuggestionSelected?: (
+    Event,
+    {
+      suggestion: SuggestionObject,
+      suggestionValue: string,
+      suggestionIndex: number,
+      sectionIndex: ?number,
+      method: 'click' | 'enter' | 'blur' | 'autoSuggest',
+    }
+  ) => void,
   inputProps: InputProps,
 }
 
@@ -109,7 +94,7 @@ type State = {
   isOpen: boolean,
 }
 
-export class Select extends React.Component <Props, State> {
+export class Select extends React.Component<Props, State> {
   static defaultProps = {
     suggestions: [],
     selectedSuggestion: {
@@ -122,9 +107,9 @@ export class Select extends React.Component <Props, State> {
     renderSuggestionsContainer: defaultContainer,
     renderSectionTitle: defaultSectionTitle,
     shouldRenderSuggestions: () => true,
-    getSuggestionValue: (suggestion : SuggestionObject) => suggestion.value,
-    getSuggestionKey: (suggestion : SuggestionObject) => suggestion.key,
-    renderSuggestion: (suggestion : SuggestionObject, props) => (
+    getSuggestionValue: (suggestion: SuggestionObject) => suggestion.value,
+    getSuggestionKey: (suggestion: SuggestionObject) => suggestion.key,
+    renderSuggestion: (suggestion: SuggestionObject, props) => (
       <Suggestion suggestion={suggestion} {...props} />
     ),
   }
@@ -197,10 +182,9 @@ export class Select extends React.Component <Props, State> {
   }
 }
 
-
 type RFProps = FieldProps
 
-export default class RFSelect extends React.Component <RFProps, void> {
+export default class RFSelect extends React.Component<RFProps, void> {
   onSuggestionSelected = (e, { suggestion }) => {
     const { onChange } = this.props.input
     onChange(suggestion)

@@ -22,12 +22,8 @@ type Props = {
 }
 
 const FormItem = ({ children, label, htmlFor, ...props }: Props) => (
-  <LabelWrapper
-    {...props}
-  >
-    <Label htmlFor={htmlFor}>
-      {label}
-    </Label>
+  <LabelWrapper {...props}>
+    <Label htmlFor={htmlFor}>{label}</Label>
 
     {children}
   </LabelWrapper>

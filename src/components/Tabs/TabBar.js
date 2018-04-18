@@ -24,8 +24,8 @@ class TabBar extends React.PureComponent<void, Props, void> {
 
     return (
       <div className={className}>
-        {
-          React.Children.map(children, (child) => renderTab({
+        {React.Children.map(children, child =>
+          renderTab({
             role: 'tab',
             isActive: activeKey === child.key,
             'aria-disabled': child.props.disabled,
@@ -33,8 +33,8 @@ class TabBar extends React.PureComponent<void, Props, void> {
             tabKey: child.key,
             onTabChange: this.onTabChange,
             children: child.props.tab,
-          }))
-        }
+          })
+        )}
       </div>
     )
   }

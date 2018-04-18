@@ -13,14 +13,15 @@ const fontStyle = css`
   color: inherit;
 `
 
-const fadeGradient = ({ theme }) => (
+const fadeGradient = ({ theme }) =>
   /* eslint-disable prefer-template */
   'linear-gradient(' +
-    '90deg, ' +
-    transparentize(1, theme.color.background) + ' 0%, ' +
-    theme.color.background + ' 100%' +
+  '90deg, ' +
+  transparentize(1, theme.color.background) +
+  ' 0%, ' +
+  theme.color.background +
+  ' 100%' +
   ')'
-)
 
 export const Container = styled.div`
   color: ${({ theme }) => theme.color.textDarker};
@@ -35,8 +36,8 @@ export const Container = styled.div`
   position: relative;
 
   box-sizing: border-box;
-  ${switchTransition}
-  border: 2px solid ${({ theme }) => theme.color.primaryLight};
+  ${switchTransition} border: 2px solid ${({ theme }) =>
+  theme.color.primaryLight};
 
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
@@ -48,17 +49,12 @@ export const Container = styled.div`
     }
 
     return ''
-  }}
-  overflow: hidden;
+  }} overflow: hidden;
 
   z-index: 1;
-  ${({ neighboringInGroup }) => (
-    ['left', 'both'].includes(neighboringInGroup) ? (
-      'margin-left: -2px;'
-    ) : (
-      ''
-    )
-  )}
+
+  ${({ neighboringInGroup }) =>
+    ['left', 'both'].includes(neighboringInGroup) ? 'margin-left: -2px;' : ''}
 
   ${({ hasError, focused, theme }) => {
     if (focused) {
@@ -96,9 +92,7 @@ export const Container = styled.div`
   `
 
 export const Input = styled.textarea`
-  ${control}
-
-  &, &:focus {
+  ${control} &, &:focus {
     border: none;
     outline: none;
     resize: none;
@@ -130,33 +124,27 @@ export const Input = styled.textarea`
       `
     }
     return ''
-  }}
+  }} background: transparent;
 
-
-  background: transparent;
-
-  ${fontStyle}
-  font-weight: 600;
+  ${fontStyle} font-weight: 600;
 
   ${placeholderMixin`
     ${fontStyle}
     color: ${({ theme }) => theme.color.textLight};
     opacity: 1;
-  `}
-
-  /* Styles for fake input, like div */
-  ${({ placeholder, value, children, theme }) =>
-    placeholder && !value && children && `
+  `} ${({ placeholder, value, children, theme }) =>
+    placeholder &&
+    !value &&
+    children &&
+    `
       ${fontStyle}
       color: ${theme.color.textLight};
       opacity: 1;
-      `}
-
-  &:focus ~ .AirportInput__geo .AirportInput__spell {
+      `} &:focus ~ .AirportInput__geo .AirportInput__spell {
     display: block;
   }
-  ${({ isIOS }) => isIOS && 'text-indent: -3px;'}
-  `
+  ${({ isIOS }) => isIOS && 'text-indent: -3px;'};
+`
 
 export const Geo = styled.div`
   -webkit-appearance: none;
@@ -170,13 +158,11 @@ export const Geo = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  `
+`
 
 // Use same component as in input due specific text rendering in inputs
 export const Spell = styled.span`
-  ${control}
-
-  display: none;
+  ${control} display: none;
 
   pointer-events: none;
   user-select: none;
@@ -189,25 +175,21 @@ export const Spell = styled.span`
   margin: 0;
   background: transparent;
 
-  ${fontStyle}
-  font-weight: 600;
+  ${fontStyle} font-weight: 600;
   color: ${({ theme }) => theme.color.textLight};
-  `
+`
 
 export const ValuePlaceholder = styled.div`
   visibility: hidden;
   flex-shrink: 0;
 
-  ${fontStyle}
-  font-weight: 600;
+  ${fontStyle} font-weight: 600;
   user-select: none;
-  `
+`
 
 export const GeoLabel = styled.span`
-  ${control}
-  ${fontStyle}
-  user-select: none;
-  `
+  ${control} ${fontStyle} user-select: none;
+`
 
 export const Code = styled.div`
   pointer-events: none;
@@ -217,8 +199,7 @@ export const Code = styled.div`
   flex-shrink: 0;
   align-self: stretch;
 
-  ${fontStyle}
-  font-size: 14px;
+  ${fontStyle} font-size: 14px;
   color: ${({ theme }) => theme.color.text};
   background: ${({ theme }) => theme.color.background};
   //fix protruding of GeoLabel
@@ -239,13 +220,13 @@ export const Code = styled.div`
     width: 12px;
     height: 100%;
 
-    background: ${(props) => fadeGradient(props)};
+    background: ${props => fadeGradient(props)};
   }
-  `
+`
 
 export const StyledIcon = styled(Icon)`
   cursor: pointer;
   position: absolute;
   top: 9px;
   right: 9px;
-  `
+`

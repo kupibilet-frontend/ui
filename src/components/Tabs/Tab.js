@@ -2,8 +2,8 @@ import React from 'react'
 
 /* eslint-disable react/prop-types */
 type Props = {
-  onTabChange: (string) => void,
-  isActive: bool,
+  onTabChange: string => void,
+  isActive: boolean,
 }
 
 export default class Tab extends React.PureComponent<void, Props, void> {
@@ -18,7 +18,7 @@ export default class Tab extends React.PureComponent<void, Props, void> {
 
     return (
       <span tabIndex="0" role="tab" {...props} onFocus={this.onFocus}>
-        { children }
+        {children}
       </span>
     )
   }

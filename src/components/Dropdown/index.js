@@ -18,16 +18,14 @@ export const DropdownContent = styled.div`
   right: 0;
   padding: 18px 12px;
   background: ${({ theme }) => theme.color.background};
-  ${shadowSmall}
-  ${borderRadiusSmall.all}
-  z-index: 10;
+  ${shadowSmall} ${borderRadiusSmall.all} z-index: 10;
 
   margin-bottom: 18px;
 `
 
 type Props = {
-  isOpen: bool,
-  onToggle: (Event, bool) => void,
+  isOpen: boolean,
+  onToggle: (Event, boolean) => void,
   children: React.Element<*>,
   overlay: React.Element<*>,
 }
@@ -60,15 +58,9 @@ class Dropdown extends React.PureComponent<{}, Props, void> {
     })
 
     return (
-      <DropdownWrapper
-        {...this.props}
-      >
+      <DropdownWrapper {...this.props}>
         {dropdownButton}
-        { isOpen &&
-          <DropdownContent>
-            {overlay}
-          </DropdownContent>
-        }
+        {isOpen && <DropdownContent>{overlay}</DropdownContent>}
       </DropdownWrapper>
     )
   }

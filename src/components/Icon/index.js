@@ -31,7 +31,7 @@ const IconSvg = styled.svg`
         transform: rotate(180deg);
       `
     }
-  }}
+  }};
 `
 
 export const IconWrapper = styled.span`
@@ -54,11 +54,19 @@ export const IconWrapper = styled.span`
         }
       `
     }
-  }}
-  `
+  }};
+`
 
 // Scoped inside `colorKeys` because `fill` are valid HTML attrs
-const Icon = ({ prefix, name, striked, className, inheritColor, rotate, ...props }) => (
+const Icon = ({
+  prefix,
+  name,
+  striked,
+  className,
+  inheritColor,
+  rotate,
+  ...props
+}) => (
   <IconWrapper striked={striked}>
     <IconSvg
       {...props}
@@ -91,6 +99,5 @@ Icon.propTypes = {
   striked: PropTypes.bool,
   rotate: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 }
-
 
 export default withTheme(Icon)

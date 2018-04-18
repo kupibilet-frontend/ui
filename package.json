@@ -22,6 +22,14 @@
     "prepush": "yarn run test",
     "versionize": "versionize"
   },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "yarn lint:js",
+      "yarn lint:css",
+      "git add"
+    ]
+  },
   "engines": {
     "node": ">=8",
     "npm": ">=5",
@@ -55,7 +63,9 @@
     "chalk": "^2.1.0",
     "classnames": "~2.2.5",
     "eslint-config-kupibilet": "^9.3.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "flow-bin": "^0.70.0",
     "glob": "^7.1.2",
     "husky": "^0.14.3",
@@ -66,6 +76,7 @@
     "mkp": "^1.0.1",
     "move-binaries-to-bin": "~1.0.1",
     "polished": "^1.3.0",
+    "prettier": "^1.12.1",
     "prop-types": "^15.6.0",
     "raw-loader": "~0.5.1",
     "react": "^16.3.1",

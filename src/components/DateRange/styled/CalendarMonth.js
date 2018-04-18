@@ -38,7 +38,7 @@ export default css`
 
   .CalendarMonth__caption {
     color: ${({ theme }) => theme.color.textDarkest};
-    letter-spacing: -.21px;
+    letter-spacing: -0.21px;
     text-align: center;
     text-transform: capitalize;
 

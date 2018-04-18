@@ -26,25 +26,23 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
 }
 
 export const StyledInnerInput = styled(InnerInput)`
-  ${({ size, neighboringInGroup }) => (
-    calculateBorderRadius(size, neighboringInGroup)
-  )};
+  ${({ size, neighboringInGroup }) =>
+    calculateBorderRadius(size, neighboringInGroup)};
 `
 
 export const StyledInputWrapper = styled(InputWrapper)`
-  ${({ size, neighboringInGroup }) => (
-    calculateBorderRadius(size, neighboringInGroup)
-  )};
+  ${({ size, neighboringInGroup }) =>
+    calculateBorderRadius(size, neighboringInGroup)};
   ${({ theme, active, success, error }) => {
     if (success && !active) return `border-color: ${theme.color.success}`
     else if (error && !active) return `border-color: ${theme.color.fail}`
   }};
-  `
+`
 
 export const StyledError = styled(Error)`
   left: ${({ size }) => `${SIZE[size]}px`};
-  `
+`
 
 export const SuccessMessage = styled(Error)`
   background-color: ${({ theme }) => theme.color.success};
-  `
+`

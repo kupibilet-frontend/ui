@@ -4,7 +4,7 @@ import { SwapContainer, SwapIcon, FlexContainer } from './styled'
 
 type neighboringInGroup = null | 'right' | 'both' | 'left'
 export type controlsGroupProps = {
-  neighboringInGroup: neighboringInGroup
+  neighboringInGroup: neighboringInGroup,
 }
 
 const getNeighboringInGroup = (index, length): neighboringInGroup => {
@@ -18,7 +18,7 @@ const getNeighboringInGroup = (index, length): neighboringInGroup => {
   return 'both'
 }
 
-type onSwap = (Event) => void
+type onSwap = Event => void
 
 type SwapProps = {
   onSwap?: onSwap,
@@ -35,14 +35,8 @@ class Swap extends React.Component<{}, SwapProps, void> {
     const { onSwap } = this.props
 
     return (
-      <SwapContainer
-        onClick={onSwap}
-      >
-        <SwapIcon
-          name="left-right"
-          size="xxsmall"
-          inheritColor
-        />
+      <SwapContainer onClick={onSwap}>
+        <SwapIcon name="left-right" size="xxsmall" inheritColor />
       </SwapContainer>
     )
   }
@@ -61,22 +55,18 @@ const ControlsGroup = ({ children, onSwap, ...props }: ControlsGroupProps) => {
 
   let controls = children
   if (children.length === 2 && onSwap) {
-    controls = [
-      children[0],
-      <Swap onSwap={onSwap} />,
-      children[1],
-    ]
+    controls = [children[0], <Swap onSwap={onSwap} />, children[1]]
   }
 
   return (
     <FlexContainer {...props}>
-      {
-        React.Children.toArray(controls.map((child, index, { length }) => (
+      {React.Children.toArray(
+        controls.map((child, index, { length }) =>
           React.cloneElement(child, {
             neighboringInGroup: getNeighboringInGroup(index, length),
           })
-        )))
-      }
+        )
+      )}
     </FlexContainer>
   )
 }

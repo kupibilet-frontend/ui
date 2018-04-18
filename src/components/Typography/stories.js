@@ -47,17 +47,16 @@ const texts = (
   </div>
 )
 
-storiesOf('Utils', module)
-  .addWithInfo('Typography', () => (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-        width: '100vw',
-        alignItems: 'center',
-      }}
-    >
-      { headers }
-      { texts }
-    </div>
-  ))
+storiesOf('Utils', module).addWithInfo('Typography', () => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-around',
+      width: '100vw',
+      alignItems: 'center',
+    }}
+  >
+    {headers}
+    {texts}
+  </div>
+))

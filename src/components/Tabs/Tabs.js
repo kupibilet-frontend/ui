@@ -16,9 +16,7 @@ class Tabs extends Component<{}, Props, void> {
     renderTabContent: () => <TabContent animated={false} />,
   }
 
-  renderTabBar = () => (
-    this.props.renderTabBar(this.props)
-  )
+  renderTabBar = () => this.props.renderTabBar(this.props)
 
   render() {
     const props = this.props
@@ -31,7 +29,7 @@ class Tabs extends Component<{}, Props, void> {
         renderTabContent={props.renderTabContent}
         activeKey={activeKey}
       >
-        { children }
+        {children}
       </RCTabs>
     )
   }

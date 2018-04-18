@@ -10,8 +10,9 @@ export const Day = styled.span`
 
 export const AvgCost = styled.div`
   font-size: 11px;
-  color: ${({ isCheap, theme }) => (isCheap ? theme.color.success : theme.color.textLight)};
-  letter-spacing: .5px;
+  color: ${({ isCheap, theme }) =>
+    isCheap ? theme.color.success : theme.color.textLight};
+  letter-spacing: 0.5px;
   line-height: 1;
   text-align: center;
 

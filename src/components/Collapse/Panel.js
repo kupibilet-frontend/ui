@@ -12,7 +12,7 @@ const PanelStyled = styled(RcCollapse.Panel)`
   }
 
   .rc-collapse-content {
-    ${switchTransition}
+    ${switchTransition};
   }
 
   .rc-collapse-content.rc-collapse-content-inactive {
@@ -20,7 +20,7 @@ const PanelStyled = styled(RcCollapse.Panel)`
   }
 `
 
-const Panel = (props) => {
+const Panel = props => {
   const { header } = props
   let wrappedHeader = header
 
@@ -30,12 +30,7 @@ const Panel = (props) => {
     })
   }
 
-  return (
-    <PanelStyled
-      {...props}
-      header={wrappedHeader}
-    />
-  )
+  return <PanelStyled {...props} header={wrappedHeader} />
 }
 
 Panel.propTypes = RcCollapse.Panel.propTypes

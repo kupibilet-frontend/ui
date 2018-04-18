@@ -1,7 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { FluidContainer, FluidSection, Aside, SingleFluidSection } from 'components/FluidLayout'
+import {
+  FluidContainer,
+  FluidSection,
+  Aside,
+  SingleFluidSection,
+} from 'components/FluidLayout'
 
 const MainContent = () => (
   <div
@@ -32,37 +37,27 @@ const AsideContent = () => (
 )
 
 storiesOf('Fluid layout', module)
-  .addDecorator((story) => (
-    <div style={{ width: '100vw' }}>
-      { story() }
-    </div>
+  .addDecorator(story => <div style={{ width: '100vw' }}>{story()}</div>)
+  .addWithInfo('Two columns', () => (
+    <FluidContainer>
+      <FluidSection>
+        <MainContent />
+      </FluidSection>
+      <Aside>
+        <AsideContent />
+      </Aside>
+    </FluidContainer>
   ))
-  .addWithInfo(
-    'Two columns',
-    () => (
-      <FluidContainer>
-        <FluidSection>
-          <MainContent />
-        </FluidSection>
-        <Aside>
-          <AsideContent />
-        </Aside>
-      </FluidContainer>
-    ),
-  )
-  .addWithInfo(
-    'Aside on top with beforeSection prop',
-    () => (
-      <FluidContainer>
-        <FluidSection>
-          <MainContent />
-        </FluidSection>
-        <Aside beforeSection>
-          <AsideContent />
-        </Aside>
-      </FluidContainer>
-    ),
-  )
+  .addWithInfo('Aside on top with beforeSection prop', () => (
+    <FluidContainer>
+      <FluidSection>
+        <MainContent />
+      </FluidSection>
+      <Aside beforeSection>
+        <AsideContent />
+      </Aside>
+    </FluidContainer>
+  ))
   .addWithInfo('Single column', () => (
     <SingleFluidSection>
       <MainContent />

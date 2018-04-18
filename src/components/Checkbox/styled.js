@@ -9,7 +9,8 @@ const getCheckboxBackground = (props, theme) => {
     return theme.color.primary
   } else if (props.disabled) {
     return theme.color.textLightest
-  } return theme.color.background
+  }
+  return theme.color.background
 }
 
 const getCheckboxBorder = (props, theme) => {
@@ -17,7 +18,8 @@ const getCheckboxBorder = (props, theme) => {
     return theme.color.primary
   } else if (props.disabled) {
     return theme.color.textLighter
-  } return theme.color.misc
+  }
+  return theme.color.misc
 }
 
 export const CheckboxInput = styled.input`
@@ -27,7 +29,7 @@ export const CheckboxInput = styled.input`
 export const fadeInDown = floatFromTop
 
 export const IconWrap = styled.span`
-  animation: ${(props) => (props.checked ? `${fadeInDown} 0.15s` : 'none')};
+  animation: ${props => (props.checked ? `${fadeInDown} 0.15s` : 'none')};
   display: inline-block;
   height: 18px;
   width: 18px;
@@ -40,12 +42,13 @@ export const StyledCheckbox = styled.span`
   height: 18px;
   width: 18px;
   line-height: 16px;
-  box-shadow: ${(props) => `inset 0 0 0 1px ${getCheckboxBorder(props, props.theme)}`};
+  box-shadow: ${props =>
+    `inset 0 0 0 1px ${getCheckboxBorder(props, props.theme)}`};
 
   ${switchTransition};
   transition-property: background, border;
-  background: ${(props) => getCheckboxBackground(props, props.theme)};
-  ${borderRadiusSmall.all}
+  background: ${props => getCheckboxBackground(props, props.theme)};
+  ${borderRadiusSmall.all};
 `
 
 export const LabelText = styled.span`
@@ -53,13 +56,11 @@ export const LabelText = styled.span`
   transition-property: color;
   margin-left: 6px;
   width: 100%;
-  ${({ disabled, theme }) => (disabled &&
-    `color: ${theme.color.textLight};`
-  )}
+  ${({ disabled, theme }) => disabled && `color: ${theme.color.textLight};`};
 `
 
 export const CheckboxLabel = styled.label`
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   display: inline-flex;
   align-items: start;
   font-size: 16px;
@@ -68,12 +69,13 @@ export const CheckboxLabel = styled.label`
   user-select: none;
   width: 100%;
 
-
   &:hover .checkbox {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primary)};
-  };
+    border-color: ${({ theme, disabled }) =>
+      disabled ? theme.color.textLighter : theme.color.primary};
+  }
 
   &:hover .label-text {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
-  };
+    color: ${({ theme, disabled }) =>
+      disabled ? theme.color.textLight : theme.color.primaryDarkest};
+  }
 `

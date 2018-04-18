@@ -5,7 +5,6 @@ import ControlsGroup from 'components/ControlsGroup'
 import { RoundInput } from 'components/RoundInput'
 import Button from 'components/Button'
 
-
 const inputDefault = {
   type: 'text',
   name: 'input',

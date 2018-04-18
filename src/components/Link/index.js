@@ -11,17 +11,14 @@ const PaddingWrap = styled.span`
   justify-content: center;
   align-items: center;
 
-  padding-top: .1em;
-  ${({ left }) => (
-    left ? 'padding-right: 3px;' : 'padding-left: 3px;'
-  )}
+  padding-top: 0.1em;
+  ${({ left }) => (left ? 'padding-right: 3px;' : 'padding-left: 3px;')};
 `
 
-const cloneIconWithSize = (iconNode) => (
+const cloneIconWithSize = iconNode =>
   React.cloneElement(iconNode, {
     size: iconNode.props.size || 'normal',
   })
-)
 
 type Props = {
   children: Element<*>,
@@ -36,18 +33,12 @@ const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
   return (
     <TagName href={href} {...props}>
       {leftIcon && (
-        <PaddingWrap left>
-          {cloneIconWithSize(leftIcon)}
-        </PaddingWrap>
+        <PaddingWrap left>{cloneIconWithSize(leftIcon)}</PaddingWrap>
       )}
 
       {children}
 
-      {rightIcon && (
-        <PaddingWrap>
-          {cloneIconWithSize(rightIcon)}
-        </PaddingWrap>
-      )}
+      {rightIcon && <PaddingWrap>{cloneIconWithSize(rightIcon)}</PaddingWrap>}
     </TagName>
   )
 }
@@ -59,8 +50,7 @@ Link.defaultProps = {
 }
 
 const StyledLink = styled(Link)`
-  ${style}
-  display: inline-flex;
+  ${style} display: inline-flex;
   align-items: center;
 `
 

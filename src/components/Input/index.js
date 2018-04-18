@@ -52,7 +52,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
     isActive: false,
   }
 
-  onIconPress = (e) => {
+  onIconPress = e => {
     if (!this.state.isActive) {
       e.preventDefault()
       this.innerInput.focus()
@@ -106,7 +106,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
         error={error}
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
-        innerRef={(el) => this.innerRef(el)}
+        innerRef={el => this.innerRef(el)}
         isTextarea={isTextarea}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
@@ -144,66 +144,55 @@ class InputControl extends React.PureComponent<void, Props, State> {
         neighboringInGroup={neighboringInGroup}
         isTextarea={isTextarea}
       >
-        {
-          leftIcon ? (
-            <IconWrap
-              onMouseDown={handleLeftIconPress
-                ? (e) => handleLeftIconPress(this.innerInput, e)
+        {leftIcon ? (
+          <IconWrap
+            onMouseDown={
+              handleLeftIconPress
+                ? e => handleLeftIconPress(this.innerInput, e)
                 : this.onIconPress
-              }
-              size={size}
-              isGroup={leftIconsArray.length > 1}
-              left
-            >
-              {leftIconsArray}
-            </IconWrap>
-          ) : (
-            null
-          )
-        }
-        {
-          children ? (
-            <ControlsGroup className="combined-inputs-group">
-              { React.Children.map(children, (child) => (
-                React.cloneElement(child, {
-                  ...props,
-                  size,
-                  hasInnerGroup: true,
-                  onFocus: this.handleFocus.bind(null, child.props.onFocus),
-                  onBlur: this.handleBlur.bind(null, child.props.onBlur),
-                })
-              )) }
-            </ControlsGroup>
-          ) : (
-            this.renderInputElement()
-          )
-        }
-        {
-          rightIcon ? (
-            <IconWrap
-              onMouseDown={handleRightIconPress
-                ? (e) => handleRightIconPress(this.innerInput, e)
+            }
+            size={size}
+            isGroup={leftIconsArray.length > 1}
+            left
+          >
+            {leftIconsArray}
+          </IconWrap>
+        ) : null}
+        {children ? (
+          <ControlsGroup className="combined-inputs-group">
+            {React.Children.map(children, child =>
+              React.cloneElement(child, {
+                ...props,
+                size,
+                hasInnerGroup: true,
+                onFocus: this.handleFocus.bind(null, child.props.onFocus),
+                onBlur: this.handleBlur.bind(null, child.props.onBlur),
+              })
+            )}
+          </ControlsGroup>
+        ) : (
+          this.renderInputElement()
+        )}
+        {rightIcon ? (
+          <IconWrap
+            onMouseDown={
+              handleRightIconPress
+                ? e => handleRightIconPress(this.innerInput, e)
                 : this.onIconPress
-              }
-              size={size}
-              isGroup={rightIconsArray.length > 1}
-              right
-            >
-              {rightIconsArray}
-            </IconWrap>
-          ) : (
-            null
-          )
-        }
+            }
+            size={size}
+            isGroup={rightIconsArray.length > 1}
+            right
+          >
+            {rightIconsArray}
+          </IconWrap>
+        ) : null}
         <StatusIndicator
           error={error}
           success={success}
           active={active || this.state.isActive}
         />
-        { error && <Error>
-          { error }
-        </Error>
-        }
+        {error && <Error>{error}</Error>}
       </InputWrapper>
     )
   }
@@ -211,7 +200,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
 
 type RFProps = FieldProps
 
-const RFInput = (props : RFProps) => {
+const RFInput = (props: RFProps) => {
   const { input, meta } = props
   return (
     <InputControl
@@ -224,8 +213,6 @@ const RFInput = (props : RFProps) => {
   )
 }
 
-export {
-  InputControl as Input,
-}
+export { InputControl as Input }
 
 export default RFInput

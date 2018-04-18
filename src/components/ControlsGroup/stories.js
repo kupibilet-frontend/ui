@@ -21,12 +21,8 @@ storiesOf('Complex controls/ControlsGroup', module)
   ))
   .addWithInfo('Different controls group', () => (
     <ControlsGroup>
-      <Button size="large">
-        Пойти
-      </Button>
+      <Button size="large">Пойти</Button>
       <AirportInput readOnly value="Шереметьево" city="Москва" IATACode="SVO" />
-      <Button size="large">
-        Найти
-      </Button>
+      <Button size="large">Найти</Button>
     </ControlsGroup>
   ))

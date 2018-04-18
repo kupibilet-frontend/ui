@@ -11,12 +11,11 @@ const H1 = styled.h1`
     font-size: 30px;
     line-height: 34px;
     letter-spacing: -.6px;
-  `}
-  ${mq.mobile`
+  `} ${mq.mobile`
     font-size: 24px;
     line-height: 28px;
     letter-spacing: -.4px
-  `}
+  `};
 `
 
 export default H1

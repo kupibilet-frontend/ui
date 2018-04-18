@@ -22,7 +22,7 @@ export type Coordinates = {
   height: number,
 }
 
-type GetCoordinates = (node : Element) => Coordinates
+type GetCoordinates = (node: Element) => Coordinates
 
 type PortalProps = {
   isOpen: boolean,
@@ -33,18 +33,11 @@ type PortalProps = {
   error: ?boolean,
 }
 
-const TooltipPortal = (props : PortalProps) => {
-  const {
-    isOpen,
-    coords,
-    placement,
-    content,
-    success,
-    error,
-  } = props
+const TooltipPortal = (props: PortalProps) => {
+  const { isOpen, coords, placement, content, success, error } = props
 
-  return ((content && isOpen && coords)
-    ? <Portal>
+  return content && isOpen && coords ? (
+    <Portal>
       <GlobalStylesScope>
         <TooltipContainer
           top={coords.top}
@@ -60,17 +53,9 @@ const TooltipPortal = (props : PortalProps) => {
                 width={coords.width}
                 height={coords.height}
               >
-                <TooltipDot
-                  success={success}
-                  error={error}
-                />
-                <TooltipBackground
-                  success={success}
-                  error={error}
-                >
-                  <TextSmall>
-                    { content }
-                  </TextSmall>
+                <TooltipDot success={success} error={error} />
+                <TooltipBackground success={success} error={error}>
+                  <TextSmall>{content}</TextSmall>
                 </TooltipBackground>
               </RelativeWrapper>
             </PlacementWrapper>
@@ -78,13 +63,12 @@ const TooltipPortal = (props : PortalProps) => {
         </TooltipContainer>
       </GlobalStylesScope>
     </Portal>
-    : null
-  )
+  ) : null
 }
 
 type TooltipProps = {
   children: Object | Element,
-  content: string | Element| any | null,
+  content: string | Element | any | null,
   placement: string,
   success: ?boolean,
   error: ?boolean,
@@ -120,7 +104,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     clearTimeout(this.hoverTimeout)
   }
   /* eslint-disable react/no-find-dom-node */
-  getCoordinates = (node) : GetCoordinates => {
+  getCoordinates = (node): GetCoordinates => {
     const availableNode = ReactDOM.findDOMNode(node)
     if (availableNode) {
       const rect = ReactDOM.findDOMNode(node).getBoundingClientRect()
@@ -167,7 +151,9 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     return [
       <TooltipChildrenProxy
         key="tooltippedElement"
-        ref={(element) => { this.childRef = element }}
+        ref={element => {
+          this.childRef = element
+        }}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
@@ -188,7 +174,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 }
 
 // Proxy for possibility to transfer ref to any children
-class TooltipChildrenProxy extends React.Component <void, void> {
+class TooltipChildrenProxy extends React.Component<void, void> {
   render() {
     const { children, ...props } = this.props
     return React.cloneElement(React.Children.only(children), props)

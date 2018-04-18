@@ -5,23 +5,18 @@ import { text, select, boolean } from '@storybook/addon-knobs'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
 
-const sizesSelect = (defaultValue = 'normal') => select(
-  'size',
-  {
-    small: 'Small',
-    normal: 'Normal',
-    large: 'Large',
-  },
-  defaultValue,
-)
-const variantsSelect = (defaultValue = 'primary') => select(
-  'variant',
-  [
-    'primary',
-    'secondary',
-  ],
-  defaultValue,
-)
+const sizesSelect = (defaultValue = 'normal') =>
+  select(
+    'size',
+    {
+      small: 'Small',
+      normal: 'Normal',
+      large: 'Large',
+    },
+    defaultValue
+  )
+const variantsSelect = (defaultValue = 'primary') =>
+  select('variant', ['primary', 'secondary'], defaultValue)
 
 storiesOf('Controls/Buttons', module)
   .addWithInfo('Default', () => (
@@ -30,7 +25,7 @@ storiesOf('Controls/Buttons', module)
       disabled={boolean('disabled', false)}
       variant={variantsSelect()}
     >
-      { text('text', 'Авиабилеты') }
+      {text('text', 'Авиабилеты')}
     </Button>
   ))
   .addWithInfo('With custom icons', () => (
@@ -38,16 +33,11 @@ storiesOf('Controls/Buttons', module)
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
       variant={variantsSelect()}
-      leftIcon={
-        <Icon name="plane" inheritColor />
-      }
-      rightIcon={
-        <Icon name="hand-baggage" inheritColor />
-      }
+      leftIcon={<Icon name="plane" inheritColor />}
+      rightIcon={<Icon name="hand-baggage" inheritColor />}
     >
-      {
-        text('text', 'Авиабилеты')
-      }</Button>
+      {text('text', 'Авиабилеты')}
+    </Button>
   ))
   .addWithInfo('With left and right icons', () => (
     <Button
@@ -66,9 +56,7 @@ storiesOf('Controls/Buttons', module)
       size={sizesSelect('large')}
       disabled={boolean('disabled', false)}
       variant={variantsSelect()}
-      icon={
-        <Icon name="carrot_monochrome" inheritColor />
-      }
+      icon={<Icon name="carrot_monochrome" inheritColor />}
     />
   ))
   .addWithInfo('Icon-only button', () => (
@@ -86,8 +74,7 @@ storiesOf('Controls/Buttons', module)
       variant={variantsSelect()}
       href="/"
       target="_blank"
-
     >
-      { text('text', 'Авиабилеты') }
+      {text('text', 'Авиабилеты')}
     </Button>
   ))

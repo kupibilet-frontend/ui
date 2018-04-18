@@ -2,25 +2,21 @@
 import React from 'react'
 import Icon from 'components/Icon'
 
-import {
-  SuggestionContainer,
-  SuggestionIcon,
-  SuggestionText,
-} from './styled'
+import { SuggestionContainer, SuggestionIcon, SuggestionText } from './styled'
 
 type SuggestionObject = {
-  key? : any,
-  value? : any,
+  key?: any,
+  value?: any,
 }
 
 type Props = {
   suggestion: Object,
   selectedKey?: string | any,
   isHighlighted?: boolean,
-  getSuggestionValue: (Object : SuggestionObject) => string | any,
-  getSuggestionKey: (Object : SuggestionObject) => string | any,
+  getSuggestionValue: (Object: SuggestionObject) => string | any,
+  getSuggestionKey: (Object: SuggestionObject) => string | any,
 }
-const Suggestion = (props : Props) => {
+const Suggestion = (props: Props) => {
   const {
     suggestion,
     selectedKey,
@@ -31,13 +27,11 @@ const Suggestion = (props : Props) => {
   return (
     <SuggestionContainer isHighlighted={isHighlighted}>
       <SuggestionIcon>
-        {selectedKey === getSuggestionKey(suggestion) &&
+        {selectedKey === getSuggestionKey(suggestion) && (
           <Icon name="checkmark" fill="primaryLight" />
-        }
+        )}
       </SuggestionIcon>
-      <SuggestionText>
-        {getSuggestionValue(suggestion)}
-      </SuggestionText>
+      <SuggestionText>{getSuggestionValue(suggestion)}</SuggestionText>
     </SuggestionContainer>
   )
 }
@@ -45,8 +39,8 @@ const Suggestion = (props : Props) => {
 Suggestion.defaultProps = {
   selectedKey: '',
   isHighlighted: false,
-  getSuggestionValue: (suggestion : SuggestionObject) => suggestion.value,
-  getSuggestionKey: (suggestion : SuggestionObject) => suggestion.key,
+  getSuggestionValue: (suggestion: SuggestionObject) => suggestion.value,
+  getSuggestionKey: (suggestion: SuggestionObject) => suggestion.key,
 }
 
 export default Suggestion

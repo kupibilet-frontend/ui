@@ -59,7 +59,7 @@ const getMainCoords = ({ placement, top, left, width, height }) => {
       }
   }
 }
-const getCoordinates = (props) => {
+const getCoordinates = props => {
   const coords = getMainCoords(props)
   if (props.align) {
     const { align, width, height, top, left } = props
@@ -72,9 +72,10 @@ const getCoordinates = (props) => {
   if (props.dotCentering) {
     const { placement } = props
     if (placement === 'left' || placement === 'right') {
-      coords.top += (props.align && props.align === 'top') ? dotShift : -dotShift
+      coords.top += props.align && props.align === 'top' ? dotShift : -dotShift
     } else {
-      coords.left += (props.align && props.align === 'left') ? dotShift : -dotShift
+      coords.left +=
+        props.align && props.align === 'left' ? dotShift : -dotShift
     }
   }
   return coords
@@ -82,9 +83,7 @@ const getCoordinates = (props) => {
 
 const getFlexDirection = (placement, align) => {
   if (placement === 'top' || placement === 'bottom') {
-    return align === 'left'
-      ? 'row-reverse'
-      : flexDirections[placement]
+    return align === 'left' ? 'row-reverse' : flexDirections[placement]
   }
   return flexDirections[placement]
 }
@@ -98,15 +97,12 @@ const PositionWrapper = styled.div`
 `
 const PlacementWrapper = styled.div`
   position: absolute;
-  ${({ placement }) => subPositions[placement]
-}
-${({ align }) => {
+  ${({ placement }) => subPositions[placement]} ${({ align }) => {
     if (align) {
       return subPositions[align]
     }
-  }
-}
-  `
+  }};
+`
 
 const PopoverDot = styled.div`
   order: ${({ placement }) => {
@@ -117,7 +113,7 @@ const PopoverDot = styled.div`
   height: 7px;
   margin: ${({ placement }) => dotMargins[placement]}
   border-radius: 50%;
-  background: ${(props) => getBackgroundColor(props)};
+  background: ${props => getBackgroundColor(props)};
 `
 
 const PopoverBackground = styled.div`
@@ -126,13 +122,13 @@ const PopoverBackground = styled.div`
   flex-grow: 1;
   min-width: 240px;
   max-width: ${({ size }) => popoverSizes[size]};
-  background: ${(props) => getBackgroundColor(props)};
+  background: ${props => getBackgroundColor(props)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
   padding: 12px;
   display: flex;
   flex-direction: column;
-  `
+`
 
 const HeaderText = styled(Text)`
   font-weight: 600;
@@ -147,36 +143,30 @@ const PopoverContainer = styled.div`
   position: absolute;
   opacity: 0;
   animation: 0.15s ease-out forwards ${arrival};
-  ${(props) => {
+  ${props => {
     const coords = getCoordinates(props)
     return `
       top: ${coords.top}px;
       left: ${coords.left}px;
     `
-  }
-}
-z-index: 100;
-  `
-
+  }} z-index: 100;
+`
 
 const RelativeWrapper = styled.div`
   position: relative;
   display: flex;
-  flex-direction: ${ ({ placement, align }) =>
-    getFlexDirection(placement, align)
-};
-flex-wrap: ${({ placement }) => {
+  flex-direction: ${({ placement, align }) =>
+    getFlexDirection(placement, align)};
+  flex-wrap: ${({ placement }) => {
     if (placement === 'top' || placement === 'bottom') return 'wrap'
-  }
-};
+  }};
   justify-content: flex-start;
   ${({ align }) => {
     if (align) {
       return 'align-items: flex-end;'
     }
-  }
-}
-  `
+  }};
+`
 
 export {
   PopoverBackground,

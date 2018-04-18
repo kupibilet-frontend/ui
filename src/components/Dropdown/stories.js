@@ -13,25 +13,27 @@ const StyledDropdown = styled(Dropdown)`
   }
 `
 
-storiesOf('Complex controls/Dropdown', module)
-  .addWithInfo('Defalut', () => {
-    const isOpen = boolean('isOpen', false)
-    const onToggle = (event, value) => {
-      event.preventDefault()
-      updateKnob('isOpen', 'boolean', value)
-    }
+storiesOf('Complex controls/Dropdown', module).addWithInfo('Defalut', () => {
+  const isOpen = boolean('isOpen', false)
+  const onToggle = (event, value) => {
+    event.preventDefault()
+    updateKnob('isOpen', 'boolean', value)
+  }
 
-    return (
-      <StyledDropdown
-        overlay={<div><h2>Tethered</h2></div>}
-        onToggle={onToggle}
-        isOpen={isOpen}
-      >
+  return (
+    <StyledDropdown
+      overlay={
         <div>
-          click to open
-          &nbsp;
-          <Button>click</Button>
+          <h2>Tethered</h2>
         </div>
-      </StyledDropdown>
-    )
-  })
+      }
+      onToggle={onToggle}
+      isOpen={isOpen}
+    >
+      <div>
+        click to open &nbsp;
+        <Button>click</Button>
+      </div>
+    </StyledDropdown>
+  )
+})

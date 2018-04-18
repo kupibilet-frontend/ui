@@ -15,7 +15,12 @@ storiesOf('Controls/Link', module)
     <Link
       onClick={onToggle}
       rightIcon={
-        <Icon name="angle" inheritColor rotate={boolean('rotate', false)} size="normal" />
+        <Icon
+          name="angle"
+          inheritColor
+          rotate={boolean('rotate', false)}
+          size="normal"
+        />
       }
     >
       Dropdown link
@@ -23,7 +28,5 @@ storiesOf('Controls/Link', module)
   ))
   .addWithInfo('<a> link', () => (
     // eslint-disable-next-line no-script-url
-    <Link href="javascript:void(0)">
-      I will click you
-    </Link>
+    <Link href="javascript:void(0)">I will click you</Link>
   ))
