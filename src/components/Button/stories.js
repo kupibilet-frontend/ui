@@ -33,7 +33,7 @@ storiesOf('Controls/Buttons', module)
       { text('text', 'Авиабилеты') }
     </Button>
   ))
-  .addWithInfo('With icons', () => (
+  .addWithInfo('With custom icons', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
@@ -49,7 +49,19 @@ storiesOf('Controls/Buttons', module)
         text('text', 'Авиабилеты')
       }</Button>
   ))
-  .addWithInfo('Icon-only button', () => (
+  .addWithInfo('With left and right icons', () => (
+    <Button
+      size={sizesSelect()}
+      disabled={boolean('disabled', false)}
+      variant={variantsSelect()}
+      leftIcon="hand-baggage"
+      rightIcon="plane"
+    >
+      {
+        text('text', 'Авиабилеты')
+      }</Button>
+  ))
+  .addWithInfo('Icon-only button (custom icon)', () => (
     <Button
       size={sizesSelect('large')}
       disabled={boolean('disabled', false)}
@@ -57,6 +69,14 @@ storiesOf('Controls/Buttons', module)
       icon={
         <Icon name="carrot_monochrome" inheritColor />
       }
+    />
+  ))
+  .addWithInfo('Icon-only button', () => (
+    <Button
+      size={sizesSelect('large')}
+      disabled={boolean('disabled', false)}
+      variant={variantsSelect()}
+      icon="carrot_monochrome"
     />
   ))
   .addWithInfo('Button with component <a>', () => (

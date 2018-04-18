@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Icon from 'components/Icon'
 import { StyledButton, StyledButtonLink, StyledButtonText, IconWrap, SIZES } from './styled'
 
 const BUTTON_SIZE_TO_ICON_MAP = {
@@ -9,11 +10,20 @@ const BUTTON_SIZE_TO_ICON_MAP = {
   large: 'normal',
 }
 
-const cloneIconWithSize = (iconNode, size) => (
-  React.cloneElement(iconNode, {
-    size: iconNode.props.size || BUTTON_SIZE_TO_ICON_MAP[size],
-  })
-)
+const cloneIconWithSize = (icon, size) => {
+  const sizeByMap = BUTTON_SIZE_TO_ICON_MAP[size]
+  if (React.isValidElement(icon)) {
+    return (
+      React.cloneElement(icon, {
+        size: icon.props.size || sizeByMap,
+      })
+    )
+  } else if (typeof icon === 'string') {
+    return (
+      <Icon name={icon} size={sizeByMap} inheritColor />
+    )
+  }
+}
 
 const RenderedComponent = ({ children, href, ...props }) => (href ? (
   <StyledButtonLink href={href} {...props}>
@@ -95,9 +105,18 @@ Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   disabled: PropTypes.bool,
-  icon: PropTypes.element,
-  leftIcon: PropTypes.element,
-  rightIcon: PropTypes.element,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
+  leftIcon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
+  rightIcon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
 }
 
 RenderedComponent.propTypes = {
