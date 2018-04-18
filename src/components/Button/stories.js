@@ -33,7 +33,7 @@ storiesOf('Controls/Buttons', module)
       { text('text', 'Авиабилеты') }
     </Button>
   ))
-  .addWithInfo('With icons (icon is element)', () => (
+  .addWithInfo('With custom icons', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
@@ -49,7 +49,7 @@ storiesOf('Controls/Buttons', module)
         text('text', 'Авиабилеты')
       }</Button>
   ))
-  .addWithInfo('With icons (icon is text)', () => (
+  .addWithInfo('With left and right icons', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
@@ -61,7 +61,7 @@ storiesOf('Controls/Buttons', module)
         text('text', 'Авиабилеты')
       }</Button>
   ))
-  .addWithInfo('Icon-only button (icon is element)', () => (
+  .addWithInfo('Icon-only button (custom icon)', () => (
     <Button
       size={sizesSelect('large')}
       disabled={boolean('disabled', false)}
@@ -71,7 +71,7 @@ storiesOf('Controls/Buttons', module)
       }
     />
   ))
-  .addWithInfo('Icon-only button (icon is text)', () => (
+  .addWithInfo('Icon-only button', () => (
     <Button
       size={sizesSelect('large')}
       disabled={boolean('disabled', false)}

@@ -4146,7 +4146,7 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons Icon-only button (icon is element) 1`] = `
+exports[`Storyshots Controls/Buttons Icon-only button (custom icon) 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -4266,7 +4266,7 @@ exports[`Storyshots Controls/Buttons Icon-only button (icon is element) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons Icon-only button (icon is text) 1`] = `
+exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -4386,7 +4386,7 @@ exports[`Storyshots Controls/Buttons Icon-only button (icon is text) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons With icons (icon is element) 1`] = `
+exports[`Storyshots Controls/Buttons With custom icons 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -4539,7 +4539,7 @@ exports[`Storyshots Controls/Buttons With icons (icon is element) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons With icons (icon is text) 1`] = `
+exports[`Storyshots Controls/Buttons With left and right icons 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
