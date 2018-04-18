@@ -88,6 +88,7 @@ const Error = styled.span`
   line-height: 16px;
   color: #fff;
   opacity: 0.97;
+  z-index: 2;
   ${borderRadiusSmall.all}
   background-color: ${({ theme }) => theme.color.fail};
 `
