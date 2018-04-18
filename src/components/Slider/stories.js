@@ -5,6 +5,7 @@ import Slider from './index'
 
 
 const onChange = (values) => {
+  // eslint-disable-next-line no-console
   console.info(values)
 }
 
