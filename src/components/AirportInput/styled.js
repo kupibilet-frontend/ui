@@ -122,12 +122,12 @@ export const Input = styled.textarea`
       return `
         width: calc(100% - 26px);
         left: 10px;
-        `
+      `
     } else if (neighboringInGroup === 'both') {
       return `
         width: calc(100% - 20px);
         left: 10px;
-        `
+      `
     }
     return ''
   }}
