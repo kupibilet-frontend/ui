@@ -74,15 +74,25 @@ export const Container = styled.div`
 
     return ''
   }}
+  // inner padding for container instead of textarea padding (Safari fix)
+  padding: 10px 16px;
+  ${({ neighboringInGroup }) => {
+    if (neighboringInGroup === 'right') {
+      return 'padding-right: 10px;'
+    } else if (neighboringInGroup === 'left') {
+      return 'padding-left: 10px;'
+    } else if (neighboringInGroup === 'both') {
+      return 'padding: 10px;'
+    }
+
+    return ''
+  }}
 
   &:hover {
-    /* Color for background should be the same as border color
-    ** to avoid blinking and breaking borders. SITE-505
-    */
-    background: ${({ theme }) => theme.color.secondary};
     border-color: ${({ theme }) => theme.color.secondary};
     z-index: 2;
   }
+
   `
 
 export const Input = styled.textarea`
@@ -97,25 +107,33 @@ export const Input = styled.textarea`
   overflow: hidden;
 
   position: absolute;
-  left: 0;
+  left: 16px;
   right: 0;
-  top: 0;
+  top: 10px;
   bottom: 0;
-  width: 100%;
+  width: calc(100% - 32px);
   height: 100%;
-  padding: 10px 16px;
+  padding: 0;
+  height: 20px;
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
-      return 'padding-right: 10px;'
+      return 'width: calc(100% - 26px);'
     } else if (neighboringInGroup === 'left') {
-      return 'padding-left: 10px;'
+      return `
+        width: calc(100% - 26px);
+        left: 10px;
+      `
     } else if (neighboringInGroup === 'both') {
-      return 'padding: 10px;'
+      return `
+        width: calc(100% - 20px);
+        left: 10px;
+      `
     }
-
     return ''
   }}
-  background: ${({ theme }) => theme.color.background};
+
+
+  background: transparent;
 
   ${fontStyle}
   font-weight: 600;
@@ -152,10 +170,6 @@ export const Geo = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  padding: 10px 0 10px;
-  padding-left: ${({ neighboringInGroup }) => (
-    ['left', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
-  )};
   `
 
 // Use same component as in input due specific text rendering in inputs
@@ -207,11 +221,9 @@ export const Code = styled.div`
   font-size: 14px;
   color: ${({ theme }) => theme.color.text};
   background: ${({ theme }) => theme.color.background};
-
-  padding: 10px 10px 10px 9px;
-  padding-right: ${({ neighboringInGroup }) => (
-    ['right', 'both'].includes(neighboringInGroup) ? '10px' : '16px'
-  )};
+  //fix protruding of GeoLabel
+  padding: 1px 0 0px 10px;
+  margin: -1px 0;
 
   &:empty {
     display: none;
