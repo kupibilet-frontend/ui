@@ -35,8 +35,7 @@ const PlacementWrapper = styled.div`
     } else if (placement === 'top') {
       return 'transform: translateY(-100%);'
     }
-  }
-}
+  }};
 `
 
 const TooltipDot = styled.div`
@@ -44,7 +43,7 @@ const TooltipDot = styled.div`
   height: 7px;
   margin: 2px;
   border-radius: 50%;
-  background: ${(props) => getBackgroundColor(props)};
+  background: ${props => getBackgroundColor(props)};
 `
 
 const TooltipBackground = styled.div`
@@ -52,7 +51,7 @@ const TooltipBackground = styled.div`
   max-height: 24px;
   min-width: 90px;
   white-space: nowrap;
-  background: ${(props) => getBackgroundColor(props)};
+  background: ${props => getBackgroundColor(props)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 100px;
   padding: 0 12px;
@@ -66,7 +65,7 @@ const TooltipContainer = styled.div`
   position: absolute;
   opacity: 0;
   animation: 0.15s ease-out forwards ${arrival};
-  ${(props) => {
+  ${props => {
     switch (props.placement) {
       case 'right':
         return `
@@ -89,30 +88,24 @@ const TooltipContainer = styled.div`
           left: ${props.left}px;
         `
     }
-  }
-}
-z-index: 100;
-  `
-
+  }} z-index: 100;
+`
 
 const RelativeWrapper = styled.div`
   min-width: ${({ width }) => `${width}px`};
   min-height: ${({ height }) => `${height}px`};
-  ${ ({ placement, width }) => {
+  ${({ placement, width }) => {
     if (placement === 'top' || placement === 'bottom') {
       return `max-width: ${width}px;`
     }
-  }
-}
-  position: relative;
+  }} position: relative;
   display: flex;
-  flex-direction: ${ ({ placement }) => `
+  flex-direction: ${({ placement }) => `
     ${flexDirections[placement]}
-    `
-};
+    `};
   justify-content: flex-start;
   align-items: center;
-  `
+`
 
 export {
   TooltipBackground,

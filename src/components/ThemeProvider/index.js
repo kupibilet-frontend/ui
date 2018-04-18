@@ -5,11 +5,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import * as defaultTheme from './theme'
 
 export const GlobalStylesScope = styled.div`
-  ${({ theme }) => theme.font}
-
-  *,
-  *:before,
-  *:after {
+  ${({ theme }) => theme.font} *, *:before, *:after {
     box-sizing: border-box;
   }
 `
@@ -25,9 +21,7 @@ const ThemeAndScopedStylesProvider = ({ theme = {}, children, ...props }) => (
       },
     }}
   >
-    <GlobalStylesScope {...props}>
-      { children }
-    </GlobalStylesScope>
+    <GlobalStylesScope {...props}>{children}</GlobalStylesScope>
   </ThemeProvider>
 )
 

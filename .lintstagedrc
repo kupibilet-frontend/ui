@@ -1,7 +1,9 @@
 concurrent: true
 linters:
   src/**/*.js:
+    - prettier --write
     - eslint
+    - git add .
   # TODO: Fix stylelint. kupibilet-frontend/ui#1
   # src/components/**/*.js:
   #   - stylelint

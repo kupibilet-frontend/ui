@@ -7,19 +7,16 @@ import Icon from 'components/Icon'
 
 const getContent = () => (
   <div>
-    { text(
+    {text(
       'content',
       'Премия в области научно-популярной литературы «Просветитель» \n' +
-      'была учреждена основателем и почетным президентом.',
-    ) }
+        'была учреждена основателем и почетным президентом.'
+    )}
   </div>
 )
 
-const getPlacement = () => select(
-  'placement',
-  ['top', 'bottom', 'left', 'right'],
-  'top',
-)
+const getPlacement = () =>
+  select('placement', ['top', 'bottom', 'left', 'right'], 'top')
 
 const getAlign = () => {
   const placement = getPlacement()
@@ -30,7 +27,7 @@ const getAlign = () => {
         '': 'null (default)',
         left: 'left',
       },
-      'left',
+      'left'
     )
   }
 
@@ -40,11 +37,11 @@ const getAlign = () => {
       '': 'null (default)',
       top: 'top',
     },
-    'top',
+    'top'
   )
 }
 
-const CarrotButton = (props) => (
+const CarrotButton = props => (
   <Button icon={<Icon name="carrot_monochrome" inheritColor />} {...props} />
 )
 
@@ -54,10 +51,7 @@ storiesOf('Controls/Popover', module)
     const placement = getPlacement()
 
     return (
-      <Popover
-        content={content}
-        placement={placement}
-      >
+      <Popover content={content} placement={placement}>
         <CarrotButton />
       </Popover>
     )
@@ -78,7 +72,6 @@ storiesOf('Controls/Popover', module)
       </Popover>
     )
   })
-
   .addWithInfo(
     'With `align` prop',
     `
@@ -90,15 +83,11 @@ storiesOf('Controls/Popover', module)
       const align = getAlign()
 
       return (
-        <Popover
-          content={content}
-          placement={placement}
-          align={align}
-        >
+        <Popover content={content} placement={placement} align={align}>
           <CarrotButton />
         </Popover>
       )
-    },
+    }
   )
   .addWithInfo(
     'With `dotCentering` prop',
@@ -118,11 +107,8 @@ storiesOf('Controls/Popover', module)
           align={align}
           dotCentering={dotCentering}
         >
-          <Icon
-            name="cross"
-            fill="miscDark"
-          />
+          <Icon name="cross" fill="miscDark" />
         </Popover>
       )
-    },
+    }
   )

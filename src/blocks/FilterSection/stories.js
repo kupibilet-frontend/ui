@@ -32,32 +32,48 @@ const WithBorder = styled.div`
     left: -18px;
     content: '';
     width: 2px;
-    background: ${(props) => props.isActive ? 'transparent' : 'red'};
+    background: ${props => (props.isActive ? 'transparent' : 'red')};
   }
 `
 
-storiesOf('Blocks', module)
-  .addWithInfo('FilterSection', () => (
-    <div style={{ width: 252 }}>
-      <FilterSection
-        headerLeft={<div>Пересадки</div>}
-        headerRight={<div>Сбросить</div>}
-        content={
+storiesOf('Blocks', module).addWithInfo('FilterSection', () => (
+  <div style={{ width: 252 }}>
+    <FilterSection
+      headerLeft={<div>Пересадки</div>}
+      headerRight={<div>Сбросить</div>}
+      content={
+        <div>
           <div>
-            <div><Checkbox>Без пересадок</Checkbox></div>
-            <div><Checkbox>1 пересадка</Checkbox></div>
-            <div><Checkbox>2 и более</Checkbox></div>
+            <Checkbox>Без пересадок</Checkbox>
           </div>
-        }
-        collapse={
-          <FilterSection.Collapse accordion>
-            <FilterSection.Panel title={<WithBorder>Пересадки</WithBorder>} key="transfers">
-              <div><CheckboxWithBorder checked>Без ночных пересадок</CheckboxWithBorder></div>
-              <div><Checkbox>Без смены аэропорта</Checkbox></div>
-              <div><Checkbox>Без транзитной визы</Checkbox></div>
-            </FilterSection.Panel>
-          </FilterSection.Collapse>
-        }
-      />
-    </div>
-  ))
+          <div>
+            <Checkbox>1 пересадка</Checkbox>
+          </div>
+          <div>
+            <Checkbox>2 и более</Checkbox>
+          </div>
+        </div>
+      }
+      collapse={
+        <FilterSection.Collapse accordion>
+          <FilterSection.Panel
+            title={<WithBorder>Пересадки</WithBorder>}
+            key="transfers"
+          >
+            <div>
+              <CheckboxWithBorder checked>
+                Без ночных пересадок
+              </CheckboxWithBorder>
+            </div>
+            <div>
+              <Checkbox>Без смены аэропорта</Checkbox>
+            </div>
+            <div>
+              <Checkbox>Без транзитной визы</Checkbox>
+            </div>
+          </FilterSection.Panel>
+        </FilterSection.Collapse>
+      }
+    />
+  </div>
+))

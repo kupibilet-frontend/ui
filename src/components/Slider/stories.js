@@ -3,8 +3,7 @@ import moment from '@kupibilet/moment'
 import { storiesOf } from '@storybook/react'
 import Slider from './index'
 
-
-const onChange = (values) => {
+const onChange = values => {
   // eslint-disable-next-line no-console
   console.info(values)
 }
@@ -14,11 +13,10 @@ const date2 = moment.utc('2017-01-02')
 
 const date3 = moment.utc('2017-01-01 04:00')
 
-const formatDate = (date) => date.locale('ru').format('DD MMMM hh:mm')
-const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
+const formatDate = date => date.locale('ru').format('DD MMMM hh:mm')
+const dateToSliderValue = date => +date / 1000 / 60 / 15
 
-
-const generateSliderData = (date) => {
+const generateSliderData = date => {
   const sliderData = {}
   const startingPosition = dateToSliderValue(date) + 10
   let margin = 0
@@ -30,7 +28,10 @@ const generateSliderData = (date) => {
   return sliderData
 }
 
-const valueToDate = (value) => moment(value * 15 * 60 * 1000).locale('ru').format('DD MMMM hh:mm')
+const valueToDate = value =>
+  moment(value * 15 * 60 * 1000)
+    .locale('ru')
+    .format('DD MMMM hh:mm')
 
 class Container extends React.Component {
   state = {
@@ -43,7 +44,7 @@ class Container extends React.Component {
     sliderData: generateSliderData(date1),
   }
 
-  onValuesUpdated = (values) => {
+  onValuesUpdated = values => {
     this.setState({
       left: valueToDate(values[0]),
       right: valueToDate(values[1]),
@@ -57,13 +58,7 @@ class Container extends React.Component {
   }
 
   render() {
-    const {
-      startDate,
-      endDate,
-      sliderData,
-      min,
-      max,
-    } = this.state
+    const { startDate, endDate, sliderData, min, max } = this.state
     return (
       <div style={{ width: '452px', height: '100px' }}>
         <div
@@ -92,13 +87,7 @@ class Container extends React.Component {
 storiesOf('Controls/Slider', module)
   .addWithInfo('default', () => (
     <div style={{ width: '252px' }}>
-      <Slider
-        min={1}
-        max={1000}
-        onChange={onChange}
-      />
+      <Slider min={1} max={1000} onChange={onChange} />
     </div>
   ))
-  .addWithInfo('With date range', () => (
-    <Container />
-  ))
+  .addWithInfo('With date range', () => <Container />)

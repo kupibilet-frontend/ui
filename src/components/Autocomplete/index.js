@@ -14,7 +14,6 @@ import type { controlsGroupProps } from 'components/ControlsGroup'
 
 import style, { SuggestionsContainer } from './styled'
 
-
 // Includes cyrylic unicode range
 // http://jrgraphix.net/r/Unicode/0400-04FF
 const NON_LETTERS_REGEXP = /[^\w\u0400-\u04FF]/g
@@ -40,25 +39,28 @@ type Props = controlsGroupProps & {
 
   onSuggestionsFetchRequested: ({ value: string }) => any,
   onSuggestionsClearRequested: () => void,
-  onSuggestionSelected: (Event, {
-    suggestion: Object,
-    suggestionValue: string,
-    suggestionIndex: number,
-    sectionIndex: ?number,
-    method: 'click' | 'enter' | 'blur' | 'autoSuggest'
-  }) => void,
+  onSuggestionSelected: (
+    Event,
+    {
+      suggestion: Object,
+      suggestionValue: string,
+      suggestionIndex: number,
+      sectionIndex: ?number,
+      method: 'click' | 'enter' | 'blur' | 'autoSuggest',
+    }
+  ) => void,
   renderInputComponent: ?({}) => React.Element<*>,
-  getSuggestionValue: (Suggestion) => string,
-  renderSuggestion: ?(Suggestion, {query: string}) => React.Element<*>,
+  getSuggestionValue: Suggestion => string,
+  renderSuggestion: ?(Suggestion, { query: string }) => React.Element<*>,
   inputProps: {
     value: string,
     onChange: onChange,
     // can be proxied from redux-form
     meta?: {
       error: string,
-    }
+    },
   },
-  shouldRenderSuggestions: ?string => boolean,
+  shouldRenderSuggestions: (?string) => boolean,
   alwaysRenderSuggestions: ?boolean,
   multiSection: ?boolean,
   renderSectionTitle: ?(Object) => React.Element<*>,
@@ -82,15 +84,17 @@ const getFirstSuggestion = ({ suggestions, multiSection }: Props) => {
   return suggestion || null
 }
 
-const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }: Props) => (
+const getSectionIterator = ({
+  multiSection,
+  suggestions,
+  getSectionSuggestions,
+}: Props) =>
   createSectionIterator({
     multiSection,
-    data: multiSection ?
-      suggestions.map((section) => getSectionSuggestions(section).length)
-      :
-      suggestions.length,
+    data: multiSection
+      ? suggestions.map(section => getSectionSuggestions(section).length)
+      : suggestions.length,
   })
-)
 
 class Autocomplete extends React.PureComponent<{}, Props, State> {
   /* eslint-disable react/sort-comp */
@@ -110,8 +114,8 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
   static defaultProps = {
     ...Autosuggest.defaultProps,
     highlightFirstSuggestion: true,
-    getSuggestionValue: (suggestion) => suggestion.value,
-    getSectionSuggestions: (section) => section.values,
+    getSuggestionValue: suggestion => suggestion.value,
+    getSectionSuggestions: section => section.values,
     forceSuggestedValue: true,
     renderSuggestionsContainer: ({ containerProps, children, query }) => (
       <SuggestionsContainer query={query} {...containerProps}>
@@ -122,39 +126,68 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
   /* eslint-enable react/sort-comp */
 
   componentWillReceiveProps(nextProps: Props) {
-    const { suggestions, multiSection, inputProps, forceSuggestedValue } = nextProps
+    const {
+      suggestions,
+      multiSection,
+      inputProps,
+      forceSuggestedValue,
+    } = nextProps
     const { value, IATACode, meta } = inputProps
 
     // TODO extract IATA related and 'autoSuggest'
     const isSuggestAlreadySelected = Boolean(IATACode)
-    const valueEqualsWithSuggest = isValuesEqual(value, _get(suggestions, '0.value')) ||
+    const valueEqualsWithSuggest =
+      isValuesEqual(value, _get(suggestions, '0.value')) ||
       isValuesEqual(value, _get(suggestions, '0.IATACode'))
 
-    if (valueEqualsWithSuggest && !isSuggestAlreadySelected && suggestions.length === 1) {
+    if (
+      valueEqualsWithSuggest &&
+      !isSuggestAlreadySelected &&
+      suggestions.length === 1
+    ) {
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
-    } else if (forceSuggestedValue && suggestions.length && meta && !meta.active) {
+    } else if (
+      forceSuggestedValue &&
+      suggestions.length &&
+      meta &&
+      !meta.active
+    ) {
       this.selectFirstSuggest(null, nextProps, 'autoFill')
       this.setState({ suggestions: [] })
     } else {
       this.setState({ suggestions })
     }
 
-    if (suggestions !== this.props.suggestions || multiSection !== this.props.multiSection) {
+    if (
+      suggestions !== this.props.suggestions ||
+      multiSection !== this.props.multiSection
+    ) {
       this.sectionIterator = getSectionIterator(nextProps)
     }
   }
 
   onChange: onChange = (event, payload) => {
-    const { highlightedSectionIndex, highlightedSuggestionIndex } = this.autosuggestInstance.state
-    const userAreTyping = payload.newValue.length >= this.props.inputProps.value.length
+    const {
+      highlightedSectionIndex,
+      highlightedSuggestionIndex,
+    } = this.autosuggestInstance.state
+    const userAreTyping =
+      payload.newValue.length >= this.props.inputProps.value.length
 
     let suggestion = null
     if (['down', 'up'].includes(payload.method)) {
-      const iterate = this.sectionIterator[payload.method === 'down' ? 'next' : 'prev']
-      const [sectionIndex, suggestIndex] =
-        iterate([highlightedSectionIndex, highlightedSuggestionIndex])
-      suggestion = this.autosuggestInstance.getSuggestion(sectionIndex, suggestIndex)
+      const iterate = this.sectionIterator[
+        payload.method === 'down' ? 'next' : 'prev'
+      ]
+      const [sectionIndex, suggestIndex] = iterate([
+        highlightedSectionIndex,
+        highlightedSuggestionIndex,
+      ])
+      suggestion = this.autosuggestInstance.getSuggestion(
+        sectionIndex,
+        suggestIndex
+      )
     }
 
     this.props.inputProps.onChange(event, {
@@ -170,7 +203,10 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
       this.props.inputProps.onBlur(event)
     }
 
-    if (!this.autosuggestInstance || !this.autosuggestInstance.justSelectedSuggestion) {
+    if (
+      !this.autosuggestInstance ||
+      !this.autosuggestInstance.justSelectedSuggestion
+    ) {
       if (this.props.forceSuggestedValue) {
         this.selectFirstSuggest(event, this.props, 'blur')
       }
@@ -195,14 +231,22 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
 
     const { isFocused, isCollapsed } = this.autosuggestInstance.state
 
-    const willRenderSuggestions = this.autosuggestInstance.willRenderSuggestions(this.props)
-    const isOpen = alwaysRenderSuggestions || isFocused && !isCollapsed && willRenderSuggestions
+    const willRenderSuggestions = this.autosuggestInstance.willRenderSuggestions(
+      this.props
+    )
+    const isOpen =
+      alwaysRenderSuggestions ||
+      (isFocused && !isCollapsed && willRenderSuggestions)
 
     if (isOpen && !alwaysRenderSuggestions) {
       this.autosuggestInstance.closeSuggestions()
     }
 
-    if (suggestion && (this.userAreTyping || ['blur', 'autoSuggest', 'autoFill'].includes(method))) {
+    if (
+      suggestion &&
+      (this.userAreTyping ||
+        ['blur', 'autoSuggest', 'autoFill'].includes(method))
+    ) {
       const newValue = getSuggestionValue(suggestion)
 
       this.autosuggestInstance.maybeCallOnChange(event, newValue, method)
@@ -233,8 +277,16 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
   render() {
     const { suggestions = emptyArray } = this.state
     // Pass neighboringInGroup prop to input
-    const { neighboringInGroup, inputProps, size, className, ...props } = this.props
-    const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
+    const {
+      neighboringInGroup,
+      inputProps,
+      size,
+      className,
+      ...props
+    } = this.props
+    const spell =
+      (suggestions.length && this.props.getSuggestionValue(suggestions[0])) ||
+      ''
 
     return (
       <Autosuggest
@@ -249,7 +301,9 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
           size,
         }}
         suggestions={suggestions}
-        ref={(ref) => { this.autosuggestInstance = ref }}
+        ref={ref => {
+          this.autosuggestInstance = ref
+        }}
         theme={{
           // Pass `className` into Autosuggest theme. The `container` is className for root block
           ...Autosuggest.defaultProps.theme,
@@ -261,7 +315,7 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
 }
 
 const StyledAutocomplete = styled(Autocomplete)`
-  ${style}
+  ${style};
 `
 
 export default StyledAutocomplete

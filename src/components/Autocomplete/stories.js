@@ -40,7 +40,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
 
     if (method !== 'blur' || !suggest) {
       this.setState({
-        suggest: newValue && suggestion || null,
+        suggest: (newValue && suggestion) || null,
         value: newValue || '',
       })
     }
@@ -48,22 +48,24 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
 
   fetchSuggestions = _throttle(({ value }) => {
     fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
-      .then((data) => data.json())
-      .then(({ data }) => data.map((suggest) => {
-        const isCity = !suggest.city_code
-        const city = (suggest.city_name || suggest.name).ru
-        const country = suggest.country_name && suggest.country_name.ru
+      .then(data => data.json())
+      .then(({ data }) =>
+        data.map(suggest => {
+          const isCity = !suggest.city_code
+          const city = (suggest.city_name || suggest.name).ru
+          const country = suggest.country_name && suggest.country_name.ru
 
-        return {
-          value: suggest.name.ru,
-          isCity,
-          city,
-          country,
-          IATACode: suggest.code,
-          isGeoSuggest: false,
-        }
-      }))
-      .then((suggestions) => {
+          return {
+            value: suggest.name.ru,
+            isCity,
+            city,
+            country,
+            IATACode: suggest.code,
+            isGeoSuggest: false,
+          }
+        })
+      )
+      .then(suggestions => {
         if (value === this.state.value) {
           this.setState({ suggestions })
         }
@@ -76,7 +78,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     })
   }
 
-  shouldRenderSuggestions = (value) => {
+  shouldRenderSuggestions = value => {
     const { suggest } = this.state
 
     return !suggest && value.trim().length > 1
@@ -100,12 +102,8 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
         onSuggestionsFetchRequested={this.fetchSuggestions}
         onSuggestionsClearRequested={this.clearSuggestions}
         onSuggestionSelected={this.onSuggestionSelected}
-        renderSuggestion={(suggestion) => (
-          <AirportSuggest {...suggestion} />
-        )}
-        renderInputComponent={(props) => (
-          <AirportInput {...props} />
-        )}
+        renderSuggestion={suggestion => <AirportSuggest {...suggestion} />}
+        renderInputComponent={props => <AirportInput {...props} />}
         shouldRenderSuggestions={this.shouldRenderSuggestions}
       />
     )
@@ -123,29 +121,24 @@ const STORY_DOC_PROPS = {
   onSuggestionsFetchRequested: () => {},
   onSuggestionsClearRequested: () => {},
   onSuggestionSelected: () => {},
-  renderSuggestion: (suggestion) => (
-    <AirportSuggest {...suggestion} />
-  ),
-  renderInputComponent: (props) => (
-    <AirportInput {...props} />
-  ),
+  renderSuggestion: suggestion => <AirportSuggest {...suggestion} />,
+  renderInputComponent: props => <AirportInput {...props} />,
 }
 
-storiesOf('Controls/Autocomplete', module)
-  .addWithInfo(
-    'Airport',
-    `Uses <AirportInput /> and <AirportSuggest />.
+storiesOf('Controls/Autocomplete', module).addWithInfo(
+  'Airport',
+  `Uses <AirportInput /> and <AirportSuggest />.
     Can be used inside <ControlsGroup />`,
-    () => {
-      // Trigger fake knobs
-      object('suggest', {})
-      object('suggestions', [])
-      text('value', '')
+  () => {
+    // Trigger fake knobs
+    object('suggest', {})
+    object('suggestions', [])
+    text('value', '')
 
-      return (
-        <div style={{ width: 244 }}>
-          <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
-        </div>
-      )
-    },
-  )
+    return (
+      <div style={{ width: 244 }}>
+        <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
+      </div>
+    )
+  }
+)

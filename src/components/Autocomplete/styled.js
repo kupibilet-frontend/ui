@@ -9,10 +9,10 @@ export default css`
 
   ${mq.mobile`
     position: static;
-  `}
-
-  .react-autosuggest__container {}
-  .react-autosuggest__container--open {}
+  `} .react-autosuggest__container {
+  }
+  .react-autosuggest__container--open {
+  }
   .react-autosuggest__input {
     appearance: none;
 
@@ -42,11 +42,16 @@ export default css`
   .react-autosuggest__suggestion {
     cursor: pointer;
   }
-  .react-autosuggest__suggestion--first {}
-  .react-autosuggest__suggestion--highlighted {}
-  .react-autosuggest__section-container {}
-  .react-autosuggest__section-container--first {}
-  .react-autosuggest__section-title {}
+  .react-autosuggest__suggestion--first {
+  }
+  .react-autosuggest__suggestion--highlighted {
+  }
+  .react-autosuggest__section-container {
+  }
+  .react-autosuggest__section-container--first {
+  }
+  .react-autosuggest__section-title {
+  }
 `
 
 export const SuggestionsContainer = styled.div`
@@ -55,9 +60,7 @@ export const SuggestionsContainer = styled.div`
   position: absolute;
   top: 100%;
   width: 300px;
-  ${shadowSmall}
-  ${borderRadiusSmall.all}
-  overflow: hidden;
+  ${shadowSmall} ${borderRadiusSmall.all} overflow: hidden;
   z-index: 10;
   background: ${({ theme }) => theme.color.background};
 
@@ -67,6 +70,5 @@ export const SuggestionsContainer = styled.div`
     margin: 12px auto 0;
     box-shadow: none;
     width: 100%;
-  `}
-
+  `};
 `

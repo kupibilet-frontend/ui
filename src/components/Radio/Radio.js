@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { switchTransition } from 'utils/transitions'
 
-export type Value = string | boolean | number;
+export type Value = string | boolean | number
 
 const getBorderColor = ({ theme, checked, disabled }) => {
   if (checked) {
@@ -17,7 +17,8 @@ const getBorderColor = ({ theme, checked, disabled }) => {
   return theme.color.misc
 }
 
-const getBoxShadow = (props) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
+const getBoxShadow = props =>
+  `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
 
 const getRadioBackground = ({ theme, checked, disabled }) => {
   if (checked) {
@@ -58,7 +59,7 @@ export const StyledRadio = styled.div`
     display: inline-flex;
     border-radius: 50%;
     opacity: ${({ checked }) => (checked ? 1 : 0)};
-  };
+  }
 `
 
 export const LabelText = styled.span`
@@ -66,13 +67,11 @@ export const LabelText = styled.span`
   transition-property: color;
   margin-left: 6px;
   width: 100%;
-  ${({ disabled, theme }) => (disabled &&
-    `color: ${theme.color.textLight};`
-  )}
+  ${({ disabled, theme }) => disabled && `color: ${theme.color.textLight};`};
 `
 
 export const RadioLabel = styled.label`
-  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -80,24 +79,26 @@ export const RadioLabel = styled.label`
   width: 100%;
 
   ${StyledRadio}:hover {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primary)};
-  };
+    border-color: ${({ theme, disabled }) =>
+      disabled ? theme.color.textLighter : theme.color.primary};
+  }
 
   ${LabelText}:hover {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
-  };
+    color: ${({ theme, disabled }) =>
+      disabled ? theme.color.textLight : theme.color.primaryDarkest};
+  }
 `
 
 type Props = {
-  value: Value;
-  label: string;
-  disabled?: boolean;
-  className?: string;
+  value: Value,
+  label: string,
+  disabled?: boolean,
+  className?: string,
 }
 
 type Context = {
-  selectedValue: Value;
-  onChange: Function;
+  selectedValue: Value,
+  onChange: Function,
 }
 
 const Radio = (props: Props, context: Context) => {
@@ -107,19 +108,14 @@ const Radio = (props: Props, context: Context) => {
 
   return (
     <RadioLabel disabled={disabled} className={className}>
-      <StyledRadio
-        disabled={disabled}
-        checked={checked}
-      />
+      <StyledRadio disabled={disabled} checked={checked} />
       <RadioInput
         {...props}
         type="radio"
         checked={checked}
         onChange={() => onChange(value)}
       />
-      <LabelText disabled={disabled}>
-        {label}
-      </LabelText>
+      <LabelText disabled={disabled}>{label}</LabelText>
     </RadioLabel>
   )
 }

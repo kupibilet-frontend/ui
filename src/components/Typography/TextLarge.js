@@ -8,7 +8,7 @@ const TextLarge = styled.span`
   ${mq.handheld`
     font-size: 16px;
     line-height: 20px;
-  `}
+  `};
 `
 
 export default TextLarge

@@ -20,14 +20,14 @@ export default css`
       right: -20px !important;
       display: flex;
       justify-content: center;
-    `}
+    `};
   }
 
   .DateRangePicker__picker--direction-left {
-      left: 0;
+    left: 0;
   }
 
   .DateRangePicker__picker--direction-right {
-      right: 0;
+    right: 0;
   }
 `

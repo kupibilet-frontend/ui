@@ -4,16 +4,19 @@ import Icon from 'components/Icon'
 import { switchTransition } from 'utils/transitions'
 import mq from 'utils/media-queries'
 
-const fadeGradient = ({ theme }) => (
+const fadeGradient = ({ theme }) =>
   /* eslint-disable prefer-template */
   'linear-gradient(' +
-    '180deg, ' +
-    transparentize(1, theme.color.background) + ' 0%, ' +
-    theme.color.background + ' 15%, ' +
-    theme.color.background + ' 85%, ' +
-    transparentize(1, theme.color.background) + ' 100%' +
+  '180deg, ' +
+  transparentize(1, theme.color.background) +
+  ' 0%, ' +
+  theme.color.background +
+  ' 15%, ' +
+  theme.color.background +
+  ' 85%, ' +
+  transparentize(1, theme.color.background) +
+  ' 100%' +
   ')'
-)
 
 export const SwapContainer = styled.div`
   position: relative;
@@ -43,7 +46,7 @@ export const SwapIcon = styled(Icon)`
   z-index: 3;
   transfrom: translateZ(0);
 
-  background: ${(props) => fadeGradient(props)};
+  background: ${props => fadeGradient(props)};
 `
 
 export const FlexContainer = styled.div`
@@ -51,15 +54,13 @@ export const FlexContainer = styled.div`
 
   ${SwapIcon} {
     opacity: 0;
-    ${switchTransition}
-
-    ${mq.handheld`
+    ${switchTransition} ${mq.handheld`
       opacity: 1;
-    `}
+    `};
   }
 
   &:hover ${SwapIcon} {
     opacity: 1;
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
 `

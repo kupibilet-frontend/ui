@@ -7,15 +7,17 @@ import AirportInput from './index'
 const DateInput = Input.withComponent('div')
 
 /* eslint-disable react/prop-types */
-const FakeInput = ({ chidlren, onBlur, onFocus, neighboringInGroup, focused, ...props }) => {
+const FakeInput = ({
+  chidlren,
+  onBlur,
+  onFocus,
+  neighboringInGroup,
+  focused,
+  ...props
+}) => {
   return (
-    <Container
-      neighboringInGroup={neighboringInGroup}
-      focused={focused}
-    >
-      <DateInput {...props}>
-        {props.value || props.placeholder}
-      </DateInput>
+    <Container neighboringInGroup={neighboringInGroup} focused={focused}>
+      <DateInput {...props}>{props.value || props.placeholder}</DateInput>
     </Container>
   )
 }
@@ -27,10 +29,7 @@ storiesOf('Controls/AirportInput', module)
 
     return (
       <div style={{ width: 244 }}>
-        <AirportInput
-          placeholder={placeholder}
-          value={value}
-        />
+        <AirportInput placeholder={placeholder} value={value} />
       </div>
     )
   })
@@ -41,14 +40,9 @@ storiesOf('Controls/AirportInput', module)
     return (
       <div style={{ width: 244 }}>
         <div style={{ paddingBottom: '20px' }}>
-          <FakeInput
-            placeholder={placeholder}
-          />
+          <FakeInput placeholder={placeholder} />
         </div>
-        <FakeInput
-          placeholder={placeholder}
-          value={value}
-        />
+        <FakeInput placeholder={placeholder} value={value} />
       </div>
     )
   })

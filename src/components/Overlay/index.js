@@ -5,39 +5,31 @@ import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
 import Scrollfix from 'components/Scrollfix'
 
-import {
-  Wrapper,
-  OverlayContentWrap,
-  OverlayContent,
-} from './styled'
+import { Wrapper, OverlayContentWrap, OverlayContent } from './styled'
 
 type Props = {
-  closePortal?: (Event) => void,
+  closePortal?: Event => void,
   isOnBottom: boolean,
   children: Element<*>,
 }
 
 class Overlay extends Component<Props, void> {
-  stopPropagation = (e) => {
+  stopPropagation = e => {
     e.stopPropagation()
   }
 
   render() {
-    const {
-      closePortal,
-      isOnBottom,
-      children,
-    } = this.props
+    const { closePortal, isOnBottom, children } = this.props
 
     return (
       <GlobalStylesScope>
         <Scrollfix>
-          <Wrapper
-            onClick={closePortal}
-            isOnBottom={isOnBottom}
-          >
+          <Wrapper onClick={closePortal} isOnBottom={isOnBottom}>
             <OverlayContentWrap isOnBottom={isOnBottom}>
-              <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
+              <OverlayContent
+                onClick={this.stopPropagation}
+                isOnBottom={isOnBottom}
+              >
                 {React.cloneElement(children, { closePortal })}
               </OverlayContent>
             </OverlayContentWrap>
@@ -47,6 +39,5 @@ class Overlay extends Component<Props, void> {
     )
   }
 }
-
 
 export default withMedia(Overlay)

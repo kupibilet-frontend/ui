@@ -8,9 +8,8 @@ import Collapse from 'components/Collapse'
 import Icon from 'components/Icon'
 import Link from 'components/Link'
 
-
 const Section = styled.section`
-  ${boxStyles}
+  ${boxStyles};
 `
 
 const horizontalPadding = css`
@@ -19,16 +18,14 @@ const horizontalPadding = css`
 `
 
 const Header = styled.header`
-  ${horizontalPadding}
-  padding-top: 18px;
+  ${horizontalPadding} padding-top: 18px;
   padding-bottom: 18px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 `
 const Content = styled.div`
-  ${horizontalPadding}
-  padding-bottom: 24px;
+  ${horizontalPadding} padding-bottom: 24px;
 `
 
 const PanelContent = styled(Content)`
@@ -36,8 +33,7 @@ const PanelContent = styled(Content)`
 `
 
 const PanelHeader = styled.div`
-  ${horizontalPadding}
-  align-items: center;
+  ${horizontalPadding} align-items: center;
   display: flex;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -45,18 +41,16 @@ const PanelHeader = styled.div`
 
 const PanelWrapper = styled(Collapse.Panel)`
   margin: 0 -1px;
-  border-top: 1px solid ${({ theme }) => (theme.color.miscLighter)};
+  border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
 `
 
-const Panel = (props) => {
+const Panel = props => {
   return (
     <PanelWrapper
       {...props}
       header={<PanelHeaderWrapper>{props.title}</PanelHeaderWrapper>}
     >
-      <PanelContent>
-        {props.children}
-      </PanelContent>
+      <PanelContent>{props.children}</PanelContent>
     </PanelWrapper>
   )
 }
@@ -66,13 +60,10 @@ Panel.propTypes = {
   title: PropTypes.node.isRequired,
 }
 
-
-const PanelHeaderWrapper = (props) => (
+const PanelHeaderWrapper = props => (
   <PanelHeader>
     <Link
-      rightIcon={
-        <Icon name="angle" rotate={props.isActive} inheritColor />
-      }
+      rightIcon={<Icon name="angle" rotate={props.isActive} inheritColor />}
     >
       {props.children}
     </Link>
@@ -88,18 +79,13 @@ PanelHeaderWrapper.defaultProps = {
   isActive: false,
 }
 
-
-const FilterSection = (props) => (
+const FilterSection = props => (
   <Section className={props.className}>
     <Header>
       {props.headerLeft}
       {props.headerRight}
     </Header>
-    {!!props.content &&
-      <Content>
-        {props.content}
-      </Content>
-    }
+    {!!props.content && <Content>{props.content}</Content>}
     {props.collapse}
   </Section>
 )

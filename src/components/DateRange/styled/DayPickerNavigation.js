@@ -14,12 +14,13 @@ export default css`
   .DayPickerNavigation__prev--disabled,
   .DayPickerNavigation__next--disabled {
     cursor: default;
-    opacity: .2;
+    opacity: 0.2;
     pointer-events: none;
   }
 
   .DayPickerNavigation__prev--default,
-  .DayPickerNavigation__next--default {}
+  .DayPickerNavigation__next--default {
+  }
 
   .DayPickerNavigation--horizontal {
     position: relative;

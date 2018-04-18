@@ -6,9 +6,9 @@ import PropTypes from 'prop-types'
 import type { Value } from './Radio'
 
 type Props = {
-  selectedValue?: Value;
-  onChange: Function;
-  children: Element<*>;
+  selectedValue?: Value,
+  onChange: Function,
+  children: Element<*>,
 }
 
 class RadioGroup extends Component<Props, void> {
@@ -24,11 +24,7 @@ class RadioGroup extends Component<Props, void> {
   render() {
     const { selectedValue, onChange, children, ...rest } = this.props
 
-    return (
-      <div {...rest}>
-        {children}
-      </div>
-    )
+    return <div {...rest}>{children}</div>
   }
 }
 

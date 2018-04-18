@@ -5,19 +5,19 @@ export default function placeholder(...args) {
 
   return css`
     &::placeholder {
-      ${styles}
+      ${styles};
     }
 
     &::-webkit-input-placeholder {
-      ${styles}
+      ${styles};
     }
 
     &::-moz-placeholder {
-      ${styles}
+      ${styles};
     }
 
     &:-ms-input-placeholder {
-      ${styles}
+      ${styles};
     }
   `
 }

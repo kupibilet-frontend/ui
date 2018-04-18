@@ -9,7 +9,6 @@ import { Field } from 'redux-form'
 
 import RFSelect, { Select } from 'components/Select'
 
-
 const inputDefault = {
   type: 'text',
   name: 'input',
@@ -82,21 +81,21 @@ const onSuggestionSelected = (event, { suggestion }) => {
   updateKnob('value', 'object', suggestion || { value: '' })
 }
 
+const getSimpleKey = suggestion => suggestion.value
 
-const getSimpleKey = (suggestion) => suggestion.value
+const getSectionSuggestionKey = suggestion => suggestion.customKey
+const getSectionSuggestionValue = suggestion => suggestion.customValue
 
-const getSectionSuggestionKey = (suggestion) => suggestion.customKey
-const getSectionSuggestionValue = (suggestion) => suggestion.customValue
-
-const sizesSelect = (defaultValue = 'large') => select(
-  'size',
-  {
-    large: 'Large',
-    normal: 'Normal',
-    small: 'Small',
-  },
-  defaultValue,
-)
+const sizesSelect = (defaultValue = 'large') =>
+  select(
+    'size',
+    {
+      large: 'Large',
+      normal: 'Normal',
+      small: 'Small',
+    },
+    defaultValue
+  )
 
 storiesOf('Controls/Select', module)
   .addWithInfo('default', () => {
@@ -163,6 +162,5 @@ storiesOf('Controls/Select', module)
         placeholder="Купить..."
         name="MadRabbitField"
       />
-
     )
   })

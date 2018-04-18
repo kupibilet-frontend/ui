@@ -93,7 +93,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: .1em;
+  padding-top: 0.1em;
   padding-left: 3px;
 }
 
@@ -1223,8 +1223,8 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
 
 .c1:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 
 @media screen and (max-width:999px) {
@@ -1746,8 +1746,8 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
 
 .c1:hover .c9 {
   opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 
 @media screen and (max-width:999px) {
@@ -2425,10 +2425,10 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  -webkit-letter-spacing: .6px;
-  -moz-letter-spacing: .6px;
-  -ms-letter-spacing: .6px;
-  letter-spacing: .6px;
+  -webkit-letter-spacing: 0.6px;
+  -moz-letter-spacing: 0.6px;
+  -ms-letter-spacing: 0.6px;
+  letter-spacing: 0.6px;
   color: #808080;
 }
 
@@ -4742,10 +4742,10 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   color: #222222;
   font-size: 16px;
   line-height: 1;
-  -webkit-letter-spacing: -.21px;
-  -moz-letter-spacing: -.21px;
-  -ms-letter-spacing: -.21px;
-  letter-spacing: -.21px;
+  -webkit-letter-spacing: -0.21px;
+  -moz-letter-spacing: -0.21px;
+  -ms-letter-spacing: -0.21px;
+  letter-spacing: -0.21px;
   text-align: center;
   cursor: pointer;
   padding: 0 0 2px 0;
@@ -4893,10 +4893,10 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 
 .c1 .CalendarMonth__caption {
   color: #222222;
-  -webkit-letter-spacing: -.21px;
-  -moz-letter-spacing: -.21px;
-  -ms-letter-spacing: -.21px;
-  letter-spacing: -.21px;
+  -webkit-letter-spacing: -0.21px;
+  -moz-letter-spacing: -0.21px;
+  -ms-letter-spacing: -0.21px;
+  letter-spacing: -0.21px;
   text-align: center;
   text-transform: capitalize;
   margin: 0;
@@ -4960,7 +4960,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 .c1 .DayPickerNavigation__prev--disabled,
 .c1 .DayPickerNavigation__next--disabled {
   cursor: default;
-  opacity: .2;
+  opacity: 0.2;
   pointer-events: none;
 }
 
@@ -5034,7 +5034,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 
 .c1 .DateInput--with-caret::before,
 .c1 .DateInput--with-caret::after {
-  content: "";
+  content: '';
   display: inline-block;
   position: absolute;
   bottom: auto;
@@ -5059,10 +5059,10 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   color: #96a0b3;
   font-size: 18px;
   line-height: 18px;
-  -webkit-letter-spacing: -.11px;
-  -moz-letter-spacing: -.11px;
-  -ms-letter-spacing: -.11px;
-  letter-spacing: -.11px;
+  -webkit-letter-spacing: -0.11px;
+  -moz-letter-spacing: -0.11px;
+  -ms-letter-spacing: -0.11px;
+  letter-spacing: -0.11px;
   white-space: nowrap;
   padding: 10px 10px 10px 16px;
   -webkit-transition: 0.15s ease-out;
@@ -5093,7 +5093,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   font-weight: normal;
 }
 
-.c1 .DateInput--startDate--error [id=startDate] ~ .DateInput__display-text {
+.c1 .DateInput--startDate--error [id='startDate'] ~ .DateInput__display-text {
   border-color: #e64926;
   z-index: 2;
 }
@@ -5185,10 +5185,10 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
   padding-top: 2px;
   font-size: 16px;
   line-height: 20px;
-  -webkit-letter-spacing: -.21px;
-  -moz-letter-spacing: -.21px;
-  -ms-letter-spacing: -.21px;
-  letter-spacing: -.21px;
+  -webkit-letter-spacing: -0.21px;
+  -moz-letter-spacing: -0.21px;
+  -ms-letter-spacing: -0.21px;
+  letter-spacing: -0.21px;
   text-align: center;
 }
 
@@ -5561,8 +5561,8 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 
 .c2:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 
 .c5 {
@@ -5954,8 +5954,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 
 .c1:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 
 .c3 {
@@ -7383,7 +7383,7 @@ exports[`Storyshots Controls/Link <span> link 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: .1em;
+  padding-top: 0.1em;
   padding-left: 3px;
 }
 
@@ -8310,8 +8310,8 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
 
 .c1:hover .styled__SwapIcon-fbcehg {
   opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
 }
 
 .c5 {
@@ -10988,10 +10988,10 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 24px;
   font-weight: 600;
   line-height: 28px;
-  -webkit-letter-spacing: -.4px;
-  -moz-letter-spacing: -.4px;
-  -ms-letter-spacing: -.4px;
-  letter-spacing: -.4px;
+  -webkit-letter-spacing: -0.4px;
+  -moz-letter-spacing: -0.4px;
+  -ms-letter-spacing: -0.4px;
+  letter-spacing: -0.4px;
   margin: 0;
 }
 
@@ -11016,10 +11016,10 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 30px;
   font-weight: 600;
   line-height: 34px;
-  -webkit-letter-spacing: -.6px;
-  -moz-letter-spacing: -.6px;
-  -ms-letter-spacing: -.6px;
-  letter-spacing: -.6px;
+  -webkit-letter-spacing: -0.6px;
+  -moz-letter-spacing: -0.6px;
+  -ms-letter-spacing: -0.6px;
+  letter-spacing: -0.6px;
   margin: 0;
 }
 
@@ -11027,10 +11027,10 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  -webkit-letter-spacing: -.2px;
-  -moz-letter-spacing: -.2px;
-  -ms-letter-spacing: -.2px;
-  letter-spacing: -.2px;
+  -webkit-letter-spacing: -0.2px;
+  -moz-letter-spacing: -0.2px;
+  -ms-letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
   margin: 0;
 }
 
@@ -11038,10 +11038,10 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  -webkit-letter-spacing: -.1px;
-  -moz-letter-spacing: -.1px;
-  -ms-letter-spacing: -.1px;
-  letter-spacing: -.1px;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
   margin: 0;
 }
 
@@ -11055,10 +11055,10 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  -webkit-letter-spacing: .4px;
-  -moz-letter-spacing: .4px;
-  -ms-letter-spacing: .4px;
-  letter-spacing: .4px;
+  -webkit-letter-spacing: 0.4px;
+  -moz-letter-spacing: 0.4px;
+  -ms-letter-spacing: 0.4px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   margin: 0;
 }
@@ -11067,10 +11067,10 @@ exports[`Storyshots Utils Typography 1`] = `
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   margin: 0;
 }

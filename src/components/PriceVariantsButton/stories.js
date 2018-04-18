@@ -27,11 +27,12 @@ const defaultValues = {
   ],
 }
 
-const onClick = (index) => updateKnob('active', 'number', index)
+const onClick = index => updateKnob('active', 'number', index)
 
 /* eslint-disable react/jsx-no-bind */
-storiesOf('Complex controls/PriceVariantsButton', module)
-  .addWithInfo('default', () => {
+storiesOf('Complex controls/PriceVariantsButton', module).addWithInfo(
+  'default',
+  () => {
     const title = text('title', defaultValues.title)
     const description = text('description', defaultValues.description)
     const price = text('price', defaultValues.price)
@@ -68,4 +69,5 @@ storiesOf('Complex controls/PriceVariantsButton', module)
         />
       </div>
     )
-  })
+  }
+)

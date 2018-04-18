@@ -2,11 +2,8 @@ import styled from 'styled-components'
 import Link from 'utils/link'
 import { Tab } from 'components/Tabs'
 
-
 export default styled(Tab)`
-  ${Link}
-
-  display: inline-block;
+  ${Link} display: inline-block;
   padding: 0 10px;
   border-radius: 100px;
   line-height: 24px;
@@ -23,9 +20,7 @@ export default styled(Tab)`
       `
     }
     return 'background: transparent;'
-  }}
-
-  &:focus {
+  }} &:focus {
     outline: none;
   }
 `

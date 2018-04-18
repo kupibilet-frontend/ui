@@ -10,10 +10,7 @@ export default css`
 
   .DayPicker--horizontal {
     box-shadow: 0 3px 7px 0 ${({ theme }) => theme.color.miscDarkest};
-    ${borderRadiusSmall.all}
-
-    // TODO get rid of portals
-    // &.DayPicker--portal {}
+    ${borderRadiusSmall.all};
   }
 
   // .DayPicker--vertical.DayPicker--portal {}
@@ -53,7 +50,7 @@ export default css`
 
       font-size: 16px;
       line-height: 20px;
-      letter-spacing: -.21px;
+      letter-spacing: -0.21px;
       text-align: center;
     }
   }
@@ -94,7 +91,7 @@ export default css`
   .transition-container {
     position: relative;
     overflow: hidden;
-    ${borderRadiusSmall.all}
+    ${borderRadiusSmall.all};
   }
 
   .transition-container--horizontal {

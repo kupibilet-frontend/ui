@@ -10,10 +10,8 @@ export const SuggestionContainer = styled.div`
 
   cursor: pointer;
   color: ${({ theme }) => theme.color.textDarker};
-  background-color: ${({ theme, isHighlighted }) => (isHighlighted
-    ? theme.color.secondaryLightest
-    : theme.color.background
-  )};
+  background-color: ${({ theme, isHighlighted }) =>
+    isHighlighted ? theme.color.secondaryLightest : theme.color.background};
 
   &:hover {
     background: ${({ theme }) => theme.color.secondaryLightest};

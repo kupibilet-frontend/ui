@@ -26,7 +26,7 @@ export default css`
 
   .DateInput--with-caret::before,
   .DateInput--with-caret::after {
-    content: "";
+    content: '';
     display: inline-block;
     position: absolute;
     bottom: auto;
@@ -62,12 +62,12 @@ export default css`
     color: ${({ theme }) => theme.color.miscDark};
     font-size: 18px;
     line-height: 18px;
-    letter-spacing: -.11px;
+    letter-spacing: -0.11px;
     white-space: nowrap;
 
     padding: 10px 10px 10px 16px;
-    ${switchTransition}
-    border: 2px solid ${({ theme }) => theme.color.primaryLight};
+    ${switchTransition} border: 2px solid ${({ theme }) =>
+  theme.color.primaryLight};
     border-radius: 100px 0 0 100px;
     overflow: hidden;
     background-color: ${({ theme }) => theme.color.background};
@@ -95,7 +95,7 @@ export default css`
     font-weight: normal;
   }
 
-  .DateInput--startDate--error [id=startDate] ~ .DateInput__display-text {
+  .DateInput--startDate--error [id='startDate'] ~ .DateInput__display-text {
     border-color: ${({ theme }) => theme.color.fail};
     z-index: 2;
   }

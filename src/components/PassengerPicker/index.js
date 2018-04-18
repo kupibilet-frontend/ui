@@ -26,7 +26,7 @@ const Description = styled.div`
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   color: ${({ theme }) => theme.color.text};
 `
 
@@ -51,8 +51,8 @@ const CountControls = styled.div`
 `
 type Value = {
   counter: number,
-  isMax: bool,
-  isMin: bool,
+  isMax: boolean,
+  isMin: boolean,
 }
 
 type Props = {
@@ -110,46 +110,35 @@ class PassengerPicker extends Component<{}, Props, State> {
   }
 
   render() {
-    const { title, description, input: { value }, ...props } = this.props
+    const {
+      title,
+      description,
+      input: { value },
+      ...props
+    } = this.props
     const { counter, isMax, isMin } = value
 
     return (
       <Passenger {...props}>
         <div>
-          <Title>
-            {title}
-          </Title>
-          <Description>
-            {description}
-          </Description>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
         </div>
         <PassangerCount>
-          <Current>
-            {counter}
-          </Current>
+          <Current>{counter}</Current>
           <CountControls>
             <ButtonControl
               size="normal"
               disabled={isMin}
               onClick={this.decrement}
-              icon={
-                <Icon
-                  name="minus"
-                  fill="background"
-                />
-              }
+              icon={<Icon name="minus" fill="background" />}
             />
 
             <ButtonControl
               size="normal"
               disabled={isMax}
               onClick={this.increment}
-              icon={
-                <Icon
-                  name="plus"
-                  fill="background"
-                />
-              }
+              icon={<Icon name="plus" fill="background" />}
             />
           </CountControls>
         </PassangerCount>

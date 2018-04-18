@@ -32,7 +32,9 @@ storiesOf('Complex controls/Collapse', module)
   .addWithInfo('Default active panel', () => (
     <div style={{ width: '252px' }}>
       <Collapse defaultActiveKey="foo">
-        <Panel header="Foo" key="foo">{text}</Panel>
+        <Panel header="Foo" key="foo">
+          {text}
+        </Panel>
         <Panel header="Bar">{text}</Panel>
         <Panel header="Mdaaaaa">{text}</Panel>
       </Collapse>

@@ -8,11 +8,15 @@ import DateRange from 'components/DateRange'
 import CalendarDay from 'components/CalendarDay'
 
 const getFocusedInput = (defaultFocusedInput = 'none') => {
-  const focusedInput = select('focusedInput', {
-    none: 'None',
-    [DateRange.START_DATE]: 'Start date',
-    [DateRange.END_DATE]: 'End date',
-  }, defaultFocusedInput)
+  const focusedInput = select(
+    'focusedInput',
+    {
+      none: 'None',
+      [DateRange.START_DATE]: 'Start date',
+      [DateRange.END_DATE]: 'End date',
+    },
+    defaultFocusedInput
+  )
 
   if (focusedInput === 'none') {
     return null
@@ -21,7 +25,7 @@ const getFocusedInput = (defaultFocusedInput = 'none') => {
   return focusedInput
 }
 
-const onFocusChange = (focusedInput) => {
+const onFocusChange = focusedInput => {
   updateKnob('focusedInput', 'select', focusedInput || 'none')
 }
 
@@ -30,8 +34,10 @@ const onDatesChange = ({ startDate, endDate }) => {
   updateKnob('endDate', 'date', endDate || null)
 }
 
-storiesOf('Controls/DateRange', module)
-  .addWithInfo('DateRange', 'with custom calendar cells', () => {
+storiesOf('Controls/DateRange', module).addWithInfo(
+  'DateRange',
+  'with custom calendar cells',
+  () => {
     const startDate = date('startDate', null)
     const endDate = date('endDate', null)
 
@@ -42,13 +48,14 @@ storiesOf('Controls/DateRange', module)
         focusedInput={getFocusedInput()}
         onFocusChange={onFocusChange}
         onDatesChange={onDatesChange}
-        renderDay={(day) => (
+        renderDay={day => (
           <CalendarDay
             day={day}
-            isCheap={(+day.format('DDD') % 9 === 0)}
-            cost={Math.floor(day.format('DDD') * 321 % 100) * 100}
+            isCheap={+day.format('DDD') % 9 === 0}
+            cost={Math.floor((day.format('DDD') * 321) % 100) * 100}
           />
         )}
       />
     )
-  })
+  }
+)

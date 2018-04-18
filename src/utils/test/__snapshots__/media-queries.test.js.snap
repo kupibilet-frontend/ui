@@ -6,7 +6,8 @@ Array [
     .class {
       ",
   "
-    .responsive &, .responsive-booking & {
+    .responsive &,
+    .responsive-booking & {
       @media ",
   "screen and (max-width: 599px)",
   " {
@@ -18,15 +19,14 @@ Array [
           background: white;
         }
       ",
-  "
+  ";
       }
     }
   ",
+  " ",
   "
-
-      ",
-  "
-    .responsive &, .responsive-booking & {
+    .responsive &,
+    .responsive-booking & {
       @media ",
   "screen and (min-width: 600px) and (max-width: 999px)",
   " {
@@ -38,15 +38,14 @@ Array [
           background: white;
         }
       ",
-  "
+  ";
       }
     }
   ",
+  " ",
   "
-
-      ",
-  "
-    .responsive &, .responsive-booking & {
+    .responsive &,
+    .responsive-booking & {
       @media ",
   "screen and (min-width: 1000px)",
   " {
@@ -58,11 +57,11 @@ Array [
           background: white;
         }
       ",
-  "
+  ";
       }
     }
   ",
-  "
+  ";
     }
   ",
 ]

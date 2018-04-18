@@ -10,23 +10,19 @@ test('media-queries', () => {
         &:hover {
           background: white;
         }
-      `}
-
-      ${media.tablet`
+      `} ${media.tablet`
         background: black;
 
         &:hover {
           background: white;
         }
-      `}
-
-      ${media.desktop`
+      `} ${media.desktop`
         background: black;
 
         &:hover {
           background: white;
         }
-      `}
+      `};
     }
   `
 

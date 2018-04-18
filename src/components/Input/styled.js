@@ -3,8 +3,7 @@ import { switchTransition } from 'utils/transitions'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import placeholder from 'utils/placeholder'
 
-
-const inputBorderColor = (props) => {
+const inputBorderColor = props => {
   const { active, theme, disabled } = props
   if (active) {
     return theme.color.primary
@@ -105,61 +104,48 @@ const InnerInput = styled.input`
   min-height: ${({ size }) => INPUTHEIGHT[size]};
   font-family: inherit;
 
-  ${({ size }) => (size === 'large'
-    ? 'letter-spacing: -0.1px'
-    : null
-  )
-};
+  ${({ size }) => (size === 'large' ? 'letter-spacing: -0.1px' : null)};
 
-  padding-left: ${({ size, leftIcon }) => (leftIcon
-    ? '0'
-    : `${SIZE[size]}px`
-  )};
-  padding-right: ${({ size, rightIcon }) => (rightIcon
-    ? '0'
-    : `${SIZE[size]}px`
-  )};
+  padding-left: ${({ size, leftIcon }) => (leftIcon ? '0' : `${SIZE[size]}px`)};
+  padding-right: ${({ size, rightIcon }) =>
+    rightIcon ? '0' : `${SIZE[size]}px`};
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   color: ${({ theme }) => theme.color.textDarker};
   background-color: transparent;
   ${({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
     if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup)) {
-      return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
+      return `border-right: 1px solid ${
+        disabled ? theme.color.miscLightest : theme.color.misc
+      };`
     }
-  }}
-  ${({ neighboringInGroup, success, error }) => {
-    if (neighboringInGroup === 'right') {
-      return borderRadiusSmall.left
-    } else if (neighboringInGroup === 'left' || success || error) {
-      return borderRadiusSmall.right
-    } else if (neighboringInGroup !== 'both') {
-      return borderRadiusSmall.all
-    }
+  }} ${({ neighboringInGroup, success, error }) => {
+  if (neighboringInGroup === 'right') {
+    return borderRadiusSmall.left
+  } else if (neighboringInGroup === 'left' || success || error) {
+    return borderRadiusSmall.right
+  } else if (neighboringInGroup !== 'both') {
+    return borderRadiusSmall.all
+  }
 
-    return ''
-  }}
-
-  ${placeholder`
+  return ''
+}} ${placeholder`
     color: ${({ theme }) => theme.color.miscDark};
-  `}
-
-  &:focus {
+  `} &:focus {
     outline-style: none;
   }
 
   &:disabled {
     ${placeholder`
       color: ${({ theme }) => theme.color.misc};
-  `}
+  `};
   }
-  `
+`
 
 const InnerTextarea = InnerInput.withComponent('textarea').extend`
-  ${({ size }) => (`
+  ${({ size }) => `
       padding-top: ${TEXTAREA_PADDINGS[size]}px;
       padding-bottom: ${TEXTAREA_PADDINGS[size]}px;
-    `
-  )}
+    `}
   `
 
 const InputWrapper = styled.div`
@@ -168,65 +154,58 @@ const InputWrapper = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ disabled, theme }) => (
-    disabled ? theme.color.miscLightest : theme.color.background
-  )};
+  background-color: ${({ disabled, theme }) =>
+    disabled ? theme.color.miscLightest : theme.color.background};
 
-  ${({ disabled }) => disabled && 'pointer-events: none;'}
+  ${({ disabled }) => disabled && 'pointer-events: none;'} ${({
+  neighboringInGroup,
+  success,
+  error,
+}) => {
+  if (neighboringInGroup === 'right') {
+    return borderRadiusSmall.left
+  } else if (neighboringInGroup === 'left' || success || error) {
+    return borderRadiusSmall.right
+  } else if (neighboringInGroup !== 'both') {
+    return borderRadiusSmall.all
+  }
 
-  ${({ neighboringInGroup, success, error }) => {
-    if (neighboringInGroup === 'right') {
-      return borderRadiusSmall.left
-    } else if (neighboringInGroup === 'left' || success || error) {
-      return borderRadiusSmall.right
-    } else if (neighboringInGroup !== 'both') {
-      return borderRadiusSmall.all
-    }
-
-    return ''
-  }}
-
-  border: 1px solid ${inputBorderColor};
+  return ''
+}} border: 1px solid ${inputBorderColor};
   border-style: solid;
   ${({ active, theme }) => {
     if (active) {
       return `box-shadow: 0 0 0 1px ${theme.color.primary};`
     }
-  }}
-
-  ${({ neighboringInGroup }) => {
-    if (['left', 'both'].includes(neighboringInGroup)) {
-      return 'margin-left: -1px;'
-    }
-  }}
-  ${({ active, neighboringInGroup }) => (active && neighboringInGroup
+  }} ${({ neighboringInGroup }) => {
+  if (['left', 'both'].includes(neighboringInGroup)) {
+    return 'margin-left: -1px;'
+  }
+}} ${({ active, neighboringInGroup }) =>
+  active && neighboringInGroup
     ? 'z-index: 2;'
-    : null)}
-
-  ${switchTransition}
-  transition-property: border-color;
+    : null} ${switchTransition} transition-property: border-color;
 
   &:hover {
-    border-color: ${({ theme, disabled }) => (!disabled) && theme.color.primary};
+    border-color: ${({ theme, disabled }) => !disabled && theme.color.primary};
     z-index: 1;
   }
 
   .combined-inputs-group {
     height: 100%;
   }
-  `
+`
 
 const StatusIndicator = styled.div`
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    display: ${(props) => displayIndicator(props)};
-    height: calc(100% + 2px);
-    width: 2px;
-    background-color: ${({ theme, success, error }) => (
-    success && !error ? theme.color.success : theme.color.fail
-  )};
-  `
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: ${props => displayIndicator(props)};
+  height: calc(100% + 2px);
+  width: 2px;
+  background-color: ${({ theme, success, error }) =>
+    success && !error ? theme.color.success : theme.color.fail};
+`
 
 const getIconWrapPaddings = ({ left, right, isGroup, size }) => {
   if (left && isGroup) {
@@ -256,11 +235,10 @@ const IconWrap = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   height: 100%;
-  ${getIconWrapPaddings}
-  display: flex;
+  ${getIconWrapPaddings} display: flex;
   vertical-align: top;
   align-items: center;
-  `
+`
 
 export {
   Error,

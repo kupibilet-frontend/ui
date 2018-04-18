@@ -22,10 +22,11 @@ const Button = styled.div`
   min-height: 66px;
   border-width: 1px;
   border-style: solid;
-  border-color: ${({ active, theme }) => (active ? theme.color.primary : theme.color.misc)};
-  box-shadow: 0 0 0 1px ${({ active, theme }) => (active ? theme.color.primary : 'transparent')};
-  ${borderRadiusSmall.all}
-  background-color: #FFFFFF;
+  border-color: ${({ active, theme }) =>
+    active ? theme.color.primary : theme.color.misc};
+  box-shadow: 0 0 0 1px
+    ${({ active, theme }) => (active ? theme.color.primary : 'transparent')};
+  ${borderRadiusSmall.all} background-color: #FFFFFF;
   cursor: pointer;
   ${switchTransition};
   transition-property: border-color, box-shadow;
@@ -74,7 +75,7 @@ const Price = styled.span`
 
 type Props = {
   active: boolean,
-  onChange?: (Event) => void,
+  onChange?: Event => void,
   title: string,
   price: string,
   icons: any[],
@@ -82,7 +83,7 @@ type Props = {
   description?: string,
 }
 
-const getIcons = (icons) => (
+const getIcons = icons =>
   icons.map((item: string | Object) => {
     let striked: boolean
     let name: string
@@ -95,14 +96,10 @@ const getIcons = (icons) => (
       name = item.name
     }
 
-    return (<StyledIcon
-      key={name}
-      name={name}
-      fill="miscDark"
-      striked={striked}
-    />)
+    return (
+      <StyledIcon key={name} name={name} fill="miscDark" striked={striked} />
+    )
   })
-)
 
 const PriceVariantsButton = (props: Props) => {
   const {
@@ -125,26 +122,15 @@ const PriceVariantsButton = (props: Props) => {
 
   return (
     <Root>
-      <Button
-        {...props}
-        active={active}
-        onClick={onClick}
-      >
+      <Button {...props} active={active} onClick={onClick}>
         <Content>
           <Title active={active}>{title}</Title>
-          {hasIcons && iconsPosition === 'top' &&
-            <div>
-              {getIcons(icons)}
-            </div>
-          }
+          {hasIcons && iconsPosition === 'top' && <div>{getIcons(icons)}</div>}
         </Content>
         <Content>
           <Price>{price}</Price>
-          {(hasIcons && iconsPosition === 'bottom') &&
-            <div>
-              {getIcons(icons)}
-            </div>
-          }
+          {hasIcons &&
+            iconsPosition === 'bottom' && <div>{getIcons(icons)}</div>}
         </Content>
       </Button>
       <Description>{description}</Description>

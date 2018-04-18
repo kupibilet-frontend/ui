@@ -14,17 +14,18 @@ const inputDefault = {
   error: 'Только латинские буквы',
 }
 
-const sizesSelect = (defaultValue = 'large') => select(
-  'size',
-  {
-    large: 'Large',
-    normal: 'Normal',
-    small: 'Small',
-  },
-  defaultValue,
-)
+const sizesSelect = (defaultValue = 'large') =>
+  select(
+    'size',
+    {
+      large: 'Large',
+      normal: 'Normal',
+      small: 'Small',
+    },
+    defaultValue
+  )
 
-const isRequired = (value) => (value ? undefined : 'Поле должно быть заполнено')
+const isRequired = value => (value ? undefined : 'Поле должно быть заполнено')
 
 storiesOf('Controls/Input', module)
   .addWithInfo('default', () => {
@@ -67,21 +68,10 @@ storiesOf('Controls/Input', module)
   })
   .addWithInfo('Combined inputs group', () => {
     return (
-      <Input
-        size={sizesSelect()}
-      >
-        <InnerInput
-          type="number"
-          placeholder="DD"
-        />
-        <InnerInput
-          type="number"
-          placeholder="MM"
-        />
-        <InnerInput
-          type="number"
-          placeholder="YYYY"
-        />
+      <Input size={sizesSelect()}>
+        <InnerInput type="number" placeholder="DD" />
+        <InnerInput type="number" placeholder="MM" />
+        <InnerInput type="number" placeholder="YYYY" />
       </Input>
     )
   })

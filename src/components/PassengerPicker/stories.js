@@ -12,9 +12,9 @@ const defaults = {
   isMin: true,
 }
 
-storiesOf('Complex controls/PassengerPicker', module)
-  .addWithInfo(
-    'Defalut', `
+storiesOf('Complex controls/PassengerPicker', module).addWithInfo(
+  'Defalut',
+  `
       redux-form совместимый компонент.\n
       value в redux-form должно быть объектом вида
 
@@ -24,29 +24,29 @@ storiesOf('Complex controls/PassengerPicker', module)
         \tisMax: bool,
       \t}
     `,
-    () => {
-      const title = text('title', defaults.title)
-      const description = text('description', defaults.description)
-      const value = number('value', defaults.current)
-      const isMax = boolean('isMax', defaults.isMax)
-      const isMin = boolean('isMin', defaults.isMin)
-      const onChange = ({ counter }) => {
-        updateKnob('value', 'number', counter)
-      }
+  () => {
+    const title = text('title', defaults.title)
+    const description = text('description', defaults.description)
+    const value = number('value', defaults.current)
+    const isMax = boolean('isMax', defaults.isMax)
+    const isMin = boolean('isMin', defaults.isMin)
+    const onChange = ({ counter }) => {
+      updateKnob('value', 'number', counter)
+    }
 
-      return (
-        <PassengerPicker
-          title={title}
-          description={description}
-          input={{
-            value: {
-              counter: value,
-              isMax,
-              isMin,
-            },
-            onChange,
-          }}
-        />
-      )
-    },
-  )
+    return (
+      <PassengerPicker
+        title={title}
+        description={description}
+        input={{
+          value: {
+            counter: value,
+            isMax,
+            isMin,
+          },
+          onChange,
+        }}
+      />
+    )
+  }
+)

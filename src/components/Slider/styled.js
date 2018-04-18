@@ -13,7 +13,7 @@ const StyledSlider = styled(Rheostat)`
     width: 100%;
     z-index: 2;
   }
-  `
+`
 
 const StyledProgressBar = styled.span`
   background-color: ${({ theme }) => theme.color.primaryLighter};
@@ -26,14 +26,14 @@ const StyledProgressBar = styled.span`
 `
 
 const StyledHandle = styled.span.attrs({
-  backgroundcolor: (props) => ((
+  backgroundcolor: props =>
     props['aria-valuenow'] === props['aria-valuemin'] ||
     props['aria-valuenow'] === props['aria-valuemax']
-  ) ? props.theme.color.miscDark : props.theme.color.primary
-  ),
+      ? props.theme.color.miscDark
+      : props.theme.color.primary,
 })`
-  ${switchTransition}
-  background-color: ${({ backgroundcolor }) => backgroundcolor};
+  ${switchTransition} background-color: ${({ backgroundcolor }) =>
+  backgroundcolor};
   transition-property: background-color, box-shadow;
   border-radius: 50%;
   cursor: pointer;
@@ -43,16 +43,15 @@ const StyledHandle = styled.span.attrs({
   z-index: 5;
   transform: translateX(-50%);
 
-   &:hover, &:active {
-     background-color: ${({ theme }) => theme.color.primary};
-     box-shadow: 0 0 0 1px ${({ theme }) => theme.color.primary};
-   }
-  `
+  &:hover,
+  &:active {
+    background-color: ${({ theme }) => theme.color.primary};
+    box-shadow: 0 0 0 1px ${({ theme }) => theme.color.primary};
+  }
+`
 
-const getBarColor = ({ isHighlighted, theme }) => (isHighlighted
-  ? theme.color.secondaryLight
-  : theme.color.miscLighter
-)
+const getBarColor = ({ isHighlighted, theme }) =>
+  isHighlighted ? theme.color.secondaryLight : theme.color.miscLighter
 const StyledPitComponent = styled.span`
   background-color: ${getBarColor};
   font-size: 0;
@@ -62,9 +61,4 @@ const StyledPitComponent = styled.span`
   width: ${({ pitWidth }) => (pitWidth ? `calc(${pitWidth}% + 1px)` : '0px')};
 `
 
-export {
-  StyledSlider,
-  StyledProgressBar,
-  StyledHandle,
-  StyledPitComponent,
-}
+export { StyledSlider, StyledProgressBar, StyledHandle, StyledPitComponent }

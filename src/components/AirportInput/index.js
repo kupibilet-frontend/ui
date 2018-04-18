@@ -2,7 +2,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from './styled'
+import {
+  Container,
+  Input,
+  Spell,
+  Geo,
+  Code,
+  ValuePlaceholder,
+  GeoLabel,
+} from './styled'
 
 /* eslint-disable react/prop-types */
 /* global SyntheticInputEvent, SyntheticKeyboardEvent */
@@ -11,20 +19,24 @@ type Props = {
   area: string,
   spell: string,
   IATACode: string,
-  onFocus?: (SyntheticInputEvent) => void,
-  onBlur?: (SyntheticInputEvent) => void,
-  onKeyDown?: (SyntheticKeyboardEvent) => void,
+  onFocus?: SyntheticInputEvent => void,
+  onBlur?: SyntheticInputEvent => void,
+  onKeyDown?: SyntheticKeyboardEvent => void,
   neighboringInGroup: null | 'left' | 'right' | 'both',
   meta?: {
     error?: string,
     touched: boolean,
-  }
+  },
 }
 type State = {
   focused: boolean,
 }
 
-export default class AirportInput extends React.PureComponent<{}, Props, State> {
+export default class AirportInput extends React.PureComponent<
+  {},
+  Props,
+  State
+> {
   /* eslint-disable react/sort-comp */
   static defaultProps = {
     area: '',
@@ -83,7 +95,14 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
   }
 
   render() {
-    const { neighboringInGroup, value, area, IATACode, meta = {}, ...props } = this.props
+    const {
+      neighboringInGroup,
+      value,
+      area,
+      IATACode,
+      meta = {},
+      ...props
+    } = this.props
     const hasError = meta && meta.error
     const { touched } = meta
     const { focused } = this.state
@@ -115,25 +134,16 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           spellcheck="false"
           isIOS={this.props.isIOS}
         />
-        <Geo className="AirportInput__geo" neighboringInGroup={neighboringInGroup}>
-          <ValuePlaceholder>
-            { value }
-          </ValuePlaceholder>
-          { value && spell &&
-            <Spell className="AirportInput__spell">
-              { spell }
-            </Spell>
-          }
-          { area &&
-            <GeoLabel>
-              {`, ${area}`}
-            </GeoLabel>
-          }
+        <Geo
+          className="AirportInput__geo"
+          neighboringInGroup={neighboringInGroup}
+        >
+          <ValuePlaceholder>{value}</ValuePlaceholder>
+          {value &&
+            spell && <Spell className="AirportInput__spell">{spell}</Spell>}
+          {area && <GeoLabel>{`, ${area}`}</GeoLabel>}
         </Geo>
-        <Code neighboringInGroup={neighboringInGroup}>
-          { IATACode }
-        </Code>
-
+        <Code neighboringInGroup={neighboringInGroup}>{IATACode}</Code>
       </Container>
     )
   }

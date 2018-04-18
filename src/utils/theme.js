@@ -1,5 +1,13 @@
-export const getThemeColor = (theme, colorKey, fallbackColor = 'transparent') => {
-  if (process.env.NODE_ENV === 'production' && colorKey && !(colorKey in theme.color)) {
+export const getThemeColor = (
+  theme,
+  colorKey,
+  fallbackColor = 'transparent'
+) => {
+  if (
+    process.env.NODE_ENV === 'production' &&
+    colorKey &&
+    !(colorKey in theme.color)
+  ) {
     /* eslint-disable no-console */
     console.warn(`Unknown color "${colorKey}" supplied`)
   }
@@ -17,7 +25,9 @@ export const ThemingPropTypes = {
     }
 
     if (typeof value === 'string' && !props.theme.color[value]) {
-      return new Error(`Unknown color supplied for <${componentName} ${propName}="${value}">.`)
+      return new Error(
+        `Unknown color supplied for <${componentName} ${propName}="${value}">.`
+      )
     }
 
     return undefined

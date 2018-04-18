@@ -13,7 +13,7 @@ const FluidContainer = styled.div`
     margin: 0;
     width: auto;
     flex-direction: column;
-  `}
+  `};
 `
 
 FluidContainer.displayName = 'FluidContainer'
@@ -25,7 +25,7 @@ const FluidSection = styled.div`
   ${media.handheld`
     max-width: none;
     width: 100%;
-  `}
+  `};
 `
 FluidSection.displayName = 'FluidSection'
 
@@ -38,9 +38,7 @@ const Aside = styled.div`
   ${media.handheld`
     width: auto;
     margin-left: 0;
-  `}
-
-  ${({ beforeSection }) => beforeSection && 'order: 0;'}
+  `} ${({ beforeSection }) => beforeSection && 'order: 0;'};
 `
 Aside.displayName = 'Aside'
 
@@ -50,7 +48,7 @@ const SingleFluidSection = styled.div`
 
   ${media.handheld`
     margin: 0 18px;
-  `}
+  `};
 `
 
 SingleFluidSection.displayName = 'SingleFluidSection'

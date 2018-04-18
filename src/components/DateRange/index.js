@@ -9,33 +9,29 @@ import * as consts from '@kupibilet/react-dates/constants'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
 
-import StyledDateRange, { DateInput, DateInputValue, DateInputDayOfWeek } from './styled'
+import StyledDateRange, {
+  DateInput,
+  DateInputValue,
+  DateInputDayOfWeek,
+} from './styled'
 
-const renderInputText = (day) => (
+const renderInputText = day => (
   <DateInput>
-    <DateInputValue>
-      { day.format('DD MMM') }
-    </DateInputValue>
-    <DateInputDayOfWeek>
-      { day.format('dd') }
-    </DateInputDayOfWeek>
+    <DateInputValue>{day.format('DD MMM')}</DateInputValue>
+    <DateInputDayOfWeek>{day.format('dd')}</DateInputDayOfWeek>
   </DateInput>
 )
 
-const renderHoverPlaceholder = (day) => (
+const renderHoverPlaceholder = day => (
   <DateInput>
-    <DateInputValue>
-      { day.format('DD MMM') }
-    </DateInputValue>
+    <DateInputValue>{day.format('DD MMM')}</DateInputValue>
   </DateInput>
 )
 
 const CalendarNav = ({ direction, ...props }) => (
   <Button
     {...props}
-    icon={
-      <Icon name={`arrow-${direction}`} fill="background" />
-    }
+    icon={<Icon name={`arrow-${direction}`} fill="background" />}
   />
 )
 CalendarNav.defaultProps = {
@@ -63,13 +59,13 @@ class DateRangePickerWrapper extends React.PureComponent {
     }
   }
 
-  onDayHover = (day) => {
+  onDayHover = day => {
     this.setState({
       hoveredDate: day,
     })
   }
 
-  onPrevMonthClick = (calendarCursor) => {
+  onPrevMonthClick = calendarCursor => {
     const calendarMonthCursor = calendarCursor.startOf('month')
     this.setState({ calendarMonthCursor })
 
@@ -78,7 +74,7 @@ class DateRangePickerWrapper extends React.PureComponent {
     }
   }
 
-  onNextMonthClick = (calendarCursor) => {
+  onNextMonthClick = calendarCursor => {
     const calendarMonthCursor = calendarCursor.startOf('month')
     this.setState({ calendarMonthCursor })
 
@@ -116,7 +112,10 @@ class DateRangePickerWrapper extends React.PureComponent {
     if (hoveredDate && !day.isSame(hoveredDate)) {
       // When picking endDate but hovered date are before picked startDate
       // and click will pick startDate instead of focuesd endDate
-      if (focusedInput === consts.END_DATE && hoveredDate.isBefore(startDate, 'day')) {
+      if (
+        focusedInput === consts.END_DATE &&
+        hoveredDate.isBefore(startDate, 'day')
+      ) {
         if (isStartDateInput) {
           return renderHoverPlaceholder(hoveredDate, format)
         }
@@ -140,22 +139,19 @@ class DateRangePickerWrapper extends React.PureComponent {
     const { startDate, focusedInput, endDate, meta = {} } = this.props
     const { touched, error } = meta
 
-    const hoveredStartDate = hoveredDate && (
-      (focusedInput === consts.START_DATE) ||
-      (focusedInput === consts.END_DATE && hoveredDate.isBefore(startDate, 'day'))
-    )
+    const hoveredStartDate =
+      hoveredDate &&
+      (focusedInput === consts.START_DATE ||
+        (focusedInput === consts.END_DATE &&
+          hoveredDate.isBefore(startDate, 'day')))
     const hoveredEndDate = hoveredDate && !hoveredStartDate
 
-    const startDatePlaceholder = hoveredStartDate ? (
-      renderHoverPlaceholder(hoveredDate, this.getDisplayFormat())
-    ) : (
-      this.props.startDatePlaceholderText
-    )
-    const endDatePlaceholder = hoveredEndDate ? (
-      renderHoverPlaceholder(hoveredDate, this.getDisplayFormat())
-    ) : (
-      this.props.endDatePlaceholderText
-    )
+    const startDatePlaceholder = hoveredStartDate
+      ? renderHoverPlaceholder(hoveredDate, this.getDisplayFormat())
+      : this.props.startDatePlaceholderText
+    const endDatePlaceholder = hoveredEndDate
+      ? renderHoverPlaceholder(hoveredDate, this.getDisplayFormat())
+      : this.props.endDatePlaceholderText
 
     return (
       <div
@@ -163,12 +159,12 @@ class DateRangePickerWrapper extends React.PureComponent {
           'DateInput--startDate--error': touched && error,
           'DateInput--startDate--focused': focusedInput === consts.START_DATE,
           'DateInput--endDate--focused': focusedInput === consts.END_DATE,
-          'DateInput--startDate--placeholder': (
-            !startDate || (hoveredStartDate && !hoveredDate.isSame(startDate, 'days'))
-          ),
-          'DateInput--endDate--placeholder': (
-            !endDate || (hoveredEndDate && !hoveredDate.isSame(endDate, 'days'))
-          ),
+          'DateInput--startDate--placeholder':
+            !startDate ||
+            (hoveredStartDate && !hoveredDate.isSame(startDate, 'days')),
+          'DateInput--endDate--placeholder':
+            !endDate ||
+            (hoveredEndDate && !hoveredDate.isSame(endDate, 'days')),
         })}
       >
         <DateRangePicker
@@ -193,9 +189,9 @@ class DateRangePickerWrapper extends React.PureComponent {
 const daySize = 42 // single day cell width in px
 const dayPickerPadding = 9
 
-const DateRange = (props) => {
+const DateRange = props => {
   const dimensions = {
-    dayPickerWidth: getCalendarMonthWidth(daySize) + (2 * dayPickerPadding),
+    dayPickerWidth: getCalendarMonthWidth(daySize) + 2 * dayPickerPadding,
     ...props.dimensions,
   }
 

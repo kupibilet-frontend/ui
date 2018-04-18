@@ -1,10 +1,16 @@
 // @flow
 import React from 'react'
 import Icon from 'components/Icon'
-import { CheckboxLabel, StyledCheckbox, IconWrap, CheckboxInput, LabelText } from './styled'
+import {
+  CheckboxLabel,
+  StyledCheckbox,
+  IconWrap,
+  CheckboxInput,
+  LabelText,
+} from './styled'
 
 type Props = {
-  onChange?: (InputEvent) => *,
+  onChange?: InputEvent => *,
   checked: boolean,
   disabled?: boolean,
   children?: React$Element<*>,
@@ -38,15 +44,11 @@ export class Checkbox extends React.PureComponent<Props, void> {
           disabled={disabled}
           checked={checked}
         >
-          {
-            checked ? (
-              <IconWrap checked={checked}>
-                <Icon name="checkmark" fill="background" />
-              </IconWrap>
-            ) : (
-              null
-            )
-          }
+          {checked ? (
+            <IconWrap checked={checked}>
+              <Icon name="checkmark" fill="background" />
+            </IconWrap>
+          ) : null}
           <CheckboxInput
             type="checkbox"
             checked={checked}
@@ -59,13 +61,15 @@ export class Checkbox extends React.PureComponent<Props, void> {
         <LabelText className="label-text" disabled={disabled}>
           {children}
         </LabelText>
-
       </CheckboxLabel>
     )
   }
 }
-type RFCheckboxProps = FieldProps & {type?: 'checkbox'}
-export default class RFCheckbox extends React.PureComponent<RFCheckboxProps, void> {
+type RFCheckboxProps = FieldProps & { type?: 'checkbox' }
+export default class RFCheckbox extends React.PureComponent<
+  RFCheckboxProps,
+  void
+> {
   // Ignore RF checkbox behaviour due true/"" values instead of expected true/false
   // See https://github.com/erikras/redux-form/pull/2863 and https://git.io/vHlZn
   onChange = (e: InputEvent) => {

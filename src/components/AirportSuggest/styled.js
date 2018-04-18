@@ -55,7 +55,7 @@ export const SuggestIcon = styled.div`
 
   ${mq.mobile`
     padding: 6px 8px 0;
-  `}
+  `};
 `
 
 export const Geo = styled.div`

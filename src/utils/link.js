@@ -12,25 +12,24 @@ export function getLinkHoverColor(props) {
 }
 
 const Link = css`
-    ${switchTransition}
-    color: ${getLinkColor};
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
-    transition-property: color;
+  ${switchTransition} color: ${getLinkColor};
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  transition-property: color;
+
+  .icon-inherit-color {
+    fill: ${getLinkColor};
+  }
+
+  &:hover {
+    color: ${getLinkHoverColor};
 
     .icon-inherit-color {
-      fill: ${getLinkColor};
+      fill: ${getLinkHoverColor};
     }
-
-    &:hover {
-      color: ${getLinkHoverColor};
-
-      .icon-inherit-color {
-        fill: ${getLinkHoverColor};
-      }
-    }
+  }
 `
 
 export default Link

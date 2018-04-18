@@ -2,7 +2,12 @@
 import React, { PureComponent } from 'react'
 import { IconWrap } from 'components/Input'
 
-import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } from './styled'
+import {
+  StyledInputWrapper,
+  StyledError,
+  SuccessMessage,
+  StyledInnerInput,
+} from './styled'
 
 export { SuccessMessage }
 
@@ -23,7 +28,6 @@ type Props = {
   innerRef?: Function,
   size?: string,
 }
-
 
 type State = {
   isActive: boolean,
@@ -78,7 +82,7 @@ export class RoundInput extends PureComponent<Props, State> {
         success={success}
         onFocus={() => this.handleFocus()}
         onBlur={() => this.handleBlur()}
-        innerRef={(el) => this.innerRef(el)}
+        innerRef={el => this.innerRef(el)}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         placeholder={placeholder}
@@ -113,45 +117,36 @@ export class RoundInput extends PureComponent<Props, State> {
         disabled={disabled}
         {...props}
       >
-        {
-          leftIcon ? (
-            <IconWrap
-              onMouseDown={handleLeftIconPress
-                ? (e) => handleLeftIconPress(this.innerInput, e)
+        {leftIcon ? (
+          <IconWrap
+            onMouseDown={
+              handleLeftIconPress
+                ? e => handleLeftIconPress(this.innerInput, e)
                 : this.onIconPress
-              }
-              size={size}
-              isGroup={leftIconsArray.length > 1}
-              left
-            >
-              {leftIconsArray}
-            </IconWrap>
-          ) : (
-            null
-          )
-        }
+            }
+            size={size}
+            isGroup={leftIconsArray.length > 1}
+            left
+          >
+            {leftIconsArray}
+          </IconWrap>
+        ) : null}
         {this.renderInputElement()}
-        {
-          rightIcon ? (
-            <IconWrap
-              onMouseDown={handleRightIconPress
-                ? (e) => handleRightIconPress(this.innerInput, e)
+        {rightIcon ? (
+          <IconWrap
+            onMouseDown={
+              handleRightIconPress
+                ? e => handleRightIconPress(this.innerInput, e)
                 : this.onIconPress
-              }
-              size={size}
-              isGroup={rightIconsArray.length > 1}
-              right
-            >
-              {rightIconsArray}
-            </IconWrap>
-          ) : (
-            null
-          )
-        }
-        {error && <StyledError size={size}>
-          {error}
-        </StyledError>
-        }
+            }
+            size={size}
+            isGroup={rightIconsArray.length > 1}
+            right
+          >
+            {rightIconsArray}
+          </IconWrap>
+        ) : null}
+        {error && <StyledError size={size}>{error}</StyledError>}
       </StyledInputWrapper>
     )
   }

@@ -9,56 +9,52 @@ const queries = {
   isDesktop: 'screen and (min-width: 1000px)',
 }
 
-
 /**
  * @usage
  * const Component = ({ isMobile, isTablet, isHandheld, isDesktop }) => {}
  * export default withMedia(Component)
  */
-export const withMedia = (Component) => (
+export const withMedia = Component =>
   class extends React.Component {
     static displayName = 'withMedia'
 
-    renderMedias = (medias) => (
-      <Component {...this.props} {...medias} />
-    )
+    renderMedias = medias => <Component {...this.props} {...medias} />
 
     render() {
-      return (
-        <Media queries={queries}>
-          { this.renderMedias }
-        </Media>
-      )
+      return <Media queries={queries}>{this.renderMedias}</Media>
     }
   }
-)
 
 const media = {
   mobile: (...args) => css`
-    .responsive &, .responsive-booking & {
+    .responsive &,
+    .responsive-booking & {
       @media ${queries.isMobile} {
-        ${css(...args)}
+        ${css(...args)};
       }
     }
   `,
   tablet: (...args) => css`
-    .responsive &, .responsive-booking & {
+    .responsive &,
+    .responsive-booking & {
       @media ${queries.isTablet} {
-        ${css(...args)}
+        ${css(...args)};
       }
     }
   `,
   handheld: (...args) => css`
-    .responsive &, .responsive-booking & {
+    .responsive &,
+    .responsive-booking & {
       @media ${queries.isHandheld} {
-        ${css(...args)}
+        ${css(...args)};
       }
     }
   `,
   desktop: (...args) => css`
-    .responsive &, .responsive-booking & {
+    .responsive &,
+    .responsive-booking & {
       @media ${queries.isDesktop} {
-        ${css(...args)}
+        ${css(...args)};
       }
     }
   `,

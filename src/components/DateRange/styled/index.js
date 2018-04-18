@@ -11,15 +11,7 @@ import DayPickerStyles from './DayPicker'
 import DayPickerKeyboardShortcutsStyles from './DayPickerKeyboardShortcuts'
 
 export default styled.div`
-  ${CalendarDayStyles}
-  ${CalendarMonthStyles}
-  ${CalendarMonthGridStyles}
-  ${DayPickerNavigationStyles}
-  ${DateInputStyles}
-  ${DateRangePickerStyles}
-  ${DateRangePickerInputStyles}
-  ${DayPickerStyles}
-  ${DayPickerKeyboardShortcutsStyles}
+  ${CalendarDayStyles} ${CalendarMonthStyles} ${CalendarMonthGridStyles} ${DayPickerNavigationStyles} ${DateInputStyles} ${DateRangePickerStyles} ${DateRangePickerInputStyles} ${DayPickerStyles} ${DayPickerKeyboardShortcutsStyles};
 `
 
 export const DateInput = styled.div`
