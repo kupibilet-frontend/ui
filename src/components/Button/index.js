@@ -12,7 +12,7 @@ const BUTTON_SIZE_TO_ICON_MAP = {
 
 const cloneIconWithSize = (icon, size) => {
   const sizeByMap = BUTTON_SIZE_TO_ICON_MAP[size]
-  if (typeof icon === 'object') {
+  if (React.isValidElement(icon)) {
     return (
       React.cloneElement(icon, {
         size: icon.props.size || sizeByMap,
