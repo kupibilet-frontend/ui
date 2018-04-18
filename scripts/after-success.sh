@@ -1,13 +1,15 @@
 #!/bin/bash
 
 if [ "$TRAVIS_PULL_REQUEST" ]; then
-  yarn versionize
+  # When versionize fails exit shell with versionize exit-code
+  yarn versionize || exit $?
 
   VERSION=$(node -e "process.stdout.write(require('./package.json').version)")
   COMMENT="New version of package: \`$VERSION\`"
 
   echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-  npm publish --tag dev
+  # Exit with npm exit-code when it fails
+  npm publish --tag dev || exit $?
   curl \
     -sS \
     -H "Authorization: token $GITHUB_TOKEN" \
