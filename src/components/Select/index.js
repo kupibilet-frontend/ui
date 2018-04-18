@@ -91,6 +91,7 @@ type Props = {
   renderInputComponent: (Object) => Element,
   renderSuggestionsContainer: (Object) => Element,
   renderSectionTitle: (Object) => Element,
+  renderSuggestion?: (Object) => Element,
   shouldRenderSuggestions: () => boolean,
   getSuggestionValue: (Object) => any,
   getSuggestionKey: (Object) => string,
@@ -123,6 +124,9 @@ export class Select extends React.Component <Props, State> {
     shouldRenderSuggestions: () => true,
     getSuggestionValue: (suggestion : SuggestionObject) => suggestion.value,
     getSuggestionKey: (suggestion : SuggestionObject) => suggestion.key,
+    renderSuggestion: (suggestion : SuggestionObject, props) => (
+      <Suggestion suggestion={suggestion} {...props} />
+    ),
   }
 
   state = {
@@ -148,17 +152,17 @@ export class Select extends React.Component <Props, State> {
     }
   }
 
-  renderSuggestion = (suggestion: {}, { isHighlighted }) => {
-    const { selectedSuggestion, getSuggestionKey, getSuggestionValue } = this.props
-    return (
-      <Suggestion
-        suggestion={suggestion}
-        isHighlighted={isHighlighted}
-        getSuggestionKey={getSuggestionKey}
-        getSuggestionValue={getSuggestionValue}
-        selectedKey={getSuggestionKey(selectedSuggestion)}
-      />
-    )
+  renderSuggestion = (suggestion: {}, { query, isHighlighted }) => {
+    const { renderSuggestion, ...props } = this.props
+    const { selectedSuggestion, getSuggestionKey } = this.props
+
+    // Respect react-autocomplete signature…
+    return renderSuggestion(suggestion, {
+      query,
+      isHighlighted,
+      selectedKey: getSuggestionKey(selectedSuggestion),
+      ...props,
+    })
   }
 
   render() {
