@@ -47,9 +47,8 @@ storiesOf('Controls/Buttons', module)
       leftIcon="hand-baggage"
       rightIcon="plane"
     >
-      {
-        text('text', 'Авиабилеты')
-      }</Button>
+      {text('text', 'Авиабилеты')}
+    </Button>
   ))
   .addWithInfo('Icon-only button (custom icon)', () => (
     <Button

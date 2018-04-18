@@ -22,14 +22,6 @@
     "prepush": "yarn run test",
     "versionize": "versionize"
   },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "yarn lint:js",
-      "yarn lint:css",
-      "git add"
-    ]
-  },
   "engines": {
     "node": ">=8",
     "npm": ">=5",
