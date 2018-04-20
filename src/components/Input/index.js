@@ -211,18 +211,15 @@ class InputControl extends React.PureComponent<void, Props, State> {
 
 type RFProps = FieldProps
 
-const RFInput = (props : RFProps) => {
-  const { input, meta } = props
-  return (
-    <InputControl
-      {...input}
-      {...meta}
-      {...props}
-      error={meta.touched && meta.error}
-      success={meta.touched && meta.valid}
-    />
-  )
-}
+const RFInput = ({ input, meta, ...props }: RFProps) => (
+  <InputControl
+    {...input}
+    {...meta}
+    {...props}
+    error={meta.touched && meta.error}
+    success={meta.touched && meta.valid}
+  />
+)
 
 export {
   InputControl as Input,
