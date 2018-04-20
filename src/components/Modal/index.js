@@ -42,6 +42,7 @@ type Props = {
   closeOnEsc: boolean,
   showCloseButton: boolean,
   isOnBottom: boolean,
+  freezableElement?: 'DEPRECATED',
 }
 
 /* eslint-disable react/prop-types */
@@ -97,7 +98,6 @@ class Modal extends React.PureComponent<Props> {
       closeOnOutsideClick,
       showCloseButton,
       isOnBottom,
-      freezableElement,
     } = this.props
 
     if (!isOpen) {
@@ -110,7 +110,6 @@ class Modal extends React.PureComponent<Props> {
           <Overlay
             closePortal={closeOnOutsideClick && this.closePortal}
             isOnBottom={isOnBottom}
-            freezableElement={freezableElement}
           >
             <ModalContent size={size}>
               { renderHeader({ ...this.props, children: heading }) }
