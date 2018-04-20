@@ -1,17 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { boolean } from '@storybook/addon-knobs'
+import { select, boolean } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
+import _get from 'lodash/get'
 
-const onClick = () => {
-  updateKnob('isOpen', 'boolean', true)
-}
-
-const onClose = () => {
-  updateKnob('isOpen', 'boolean', false)
-}
+const isOpen = () => boolean('isOpen', _get(process, 'env.NODE_ENV') !== 'test')
+const onClick = () => updateKnob('isOpen', 'boolean', true)
+const onClose = () => updateKnob('isOpen', 'boolean', false)
+const sizes = ['wide', 'compact', 'thin']
 
 const footerContent = React.Children.toArray([
   <Button
@@ -30,8 +28,8 @@ const footerContent = React.Children.toArray([
 ])
 
 storiesOf('Complex controls/Modal', module)
-  .addWithInfo('Default', () => {
-    const isOpen = boolean('isOpen', false)
+  .addWithInfo('With sizes', () => {
+    const size = select('size', sizes, 'wide')
 
     return (
       <div>
@@ -41,8 +39,9 @@ storiesOf('Complex controls/Modal', module)
         <Modal
           heading="Очень длинный заголовок, который не помещается на одну строку"
           footer={footerContent}
-          isOpen={isOpen}
+          isOpen={isOpen()}
           onClose={onClose}
+          size={size}
           freezableElement="#root"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
@@ -66,53 +65,7 @@ storiesOf('Complex controls/Modal', module)
     )
   })
 
-  .addWithInfo('Compact', () => {
-    const isOpen = boolean('isOpen', false)
-
-    return (
-      <div>
-        <Button onClick={onClick}>
-          Open Modal
-        </Button>
-        <Modal
-          heading="Очень длинный заголовок, который не помещается на одну строку"
-          footer={footerContent}
-          isOpen={isOpen}
-          onClose={onClose}
-          freezableElement="#root"
-          size="compact"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
-        </Modal>
-      </div>
-    )
-  })
-
-  .addWithInfo('Thin', () => {
-    const isOpen = boolean('isOpen', false)
-
-    return (
-      <div>
-        <Button onClick={onClick}>
-          Open Modal
-        </Button>
-        <Modal
-          heading="Очень длинный заголовок, который не помещается на одну строку"
-          footer={footerContent}
-          isOpen={isOpen}
-          onClose={onClose}
-          freezableElement="#root"
-          size="thin"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
-        </Modal>
-      </div>
-    )
-  })
-
   .addWithInfo('Bottom on mobile', () => {
-    const isOpen = boolean('isOpen', false)
-
     return (
       <div>
         <Button onClick={onClick}>
@@ -120,7 +73,7 @@ storiesOf('Complex controls/Modal', module)
         </Button>
         <Modal
           heading="Поделиться"
-          isOpen={isOpen}
+          isOpen={isOpen()}
           onClose={onClose}
           freezableElement="#root"
           size="compact"

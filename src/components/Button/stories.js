@@ -79,7 +79,7 @@ storiesOf('Controls/Buttons', module)
       icon="carrot_monochrome"
     />
   ))
-  .addWithInfo('Button with component <a>', () => (
+  .addWithInfo('Button as <a href="" />', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
