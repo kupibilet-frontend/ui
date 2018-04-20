@@ -6,6 +6,7 @@ import type { Element } from 'react'
 
 type Props = {
   children: Element<*>,
+  freezableElement?: 'DEPRECATED', // eslint-disable-line react/no-unused-prop-types
 }
 
 class Scrollfix extends Component<Props> {
