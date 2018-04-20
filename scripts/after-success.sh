@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$TRAVIS_PULL_REQUEST" ]; then
+if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   # When versionize fails exit shell with versionize exit-code
   yarn versionize || exit $?
 
