@@ -120,7 +120,7 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
     ),
   }
   /* eslint-enable react/sort-comp */
-
+  /* eslint-disable camelcase */
   UNSAFE_componentWillReceiveProps(nextProps: Props) {
     const { suggestions, multiSection, inputProps, forceSuggestedValue } = nextProps
     const { value, IATACode, meta } = inputProps
