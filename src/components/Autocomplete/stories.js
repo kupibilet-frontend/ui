@@ -20,8 +20,8 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     suggestions: [],
   }
 
-  componentWillUpdate(nextProps, nextState) {
-    const { value, suggest, suggestions } = nextState
+  componentDidUpdate() {
+    const { value, suggest, suggestions } = this.state
 
     updateKnob('suggest', 'object', suggest || {})
     updateKnob('suggestions', 'object', suggestions || [])

@@ -124,7 +124,24 @@ export default class Slider extends React.Component<Props, State> {
     max: 100,
     disabled: false,
   }
-  constructor(props : Props) {
+
+  static getDerivedStateFromProps(nextProps: Props, prevState: State) {
+    if (nextProps.values) {
+      const nextValues = nextProps.values
+      const currentValues = prevState.values
+      const firstChanged = currentValues[0] !== nextValues[0]
+      const secondChanged = currentValues[1] !== nextValues[1]
+      if (firstChanged || secondChanged) {
+        return {
+          values: nextValues,
+          touched: true,
+        }
+      }
+    }
+    return null
+  }
+
+  constructor(props: Props) {
     super(props)
     this.state = {
       values: getInitialValues(props),
@@ -132,21 +149,6 @@ export default class Slider extends React.Component<Props, State> {
       pitWidth: getPitWidth(props),
       pitHeightData: props.sliderData ? getPitHeight(props) : null,
       touched: false,
-    }
-  }
-
-  componentWillReceiveProps(nextProps : Props) {
-    if (this.props.values) {
-      const nextValues = nextProps.values
-      const currentValues = this.props.values
-      const firstChanged = currentValues[0] !== nextValues[0]
-      const secondChanged = currentValues[1] !== nextValues[1]
-      if (firstChanged || secondChanged) {
-        this.setState({
-          values: nextValues,
-          touched: true,
-        })
-      }
     }
   }
 
