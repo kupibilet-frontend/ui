@@ -1,8 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
-import updateKnob from 'storybook/updateKnob'
-
 import TabLink from 'components/TabLink'
 
 
