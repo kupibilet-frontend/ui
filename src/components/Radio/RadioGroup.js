@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+// The output of "babel-plugin-flow-react-proptypes" is unpredictable
+// when flow and prop-types used together
 
 class RadioGroup extends Component {
   getChildContext() {
