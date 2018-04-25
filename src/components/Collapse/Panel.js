@@ -18,6 +18,10 @@ const PanelStyled = styled(RcCollapse.Panel)`
   .rc-collapse-content.rc-collapse-content-inactive {
     display: none;
   }
+
+  .rc-collapse-header:focus {
+    outline: none;
+  }
 `
 
 const Panel = (props) => {
