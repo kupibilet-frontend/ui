@@ -1,17 +1,9 @@
-// @flow
-
 import React, { Component } from 'react'
-import type { Element } from 'react'
 import PropTypes from 'prop-types'
-import type { Value } from './Radio'
+// The output of "babel-plugin-flow-react-proptypes" is unpredictable
+// when flow and prop-types used together
 
-type Props = {
-  selectedValue?: Value;
-  onChange: Function;
-  children: Element<*>;
-}
-
-class RadioGroup extends Component<Props, void> {
+class RadioGroup extends Component {
   getChildContext() {
     const { selectedValue, onChange } = this.props
 
@@ -30,6 +22,20 @@ class RadioGroup extends Component<Props, void> {
       </div>
     )
   }
+}
+
+RadioGroup.propTypes = {
+  selectedValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
+  onChange: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
+}
+
+RadioGroup.defaultProps = {
+  selectedValue: '',
 }
 
 RadioGroup.childContextTypes = {
