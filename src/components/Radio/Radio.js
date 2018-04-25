@@ -1,11 +1,7 @@
-// @flow
-
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { switchTransition } from 'utils/transitions'
-
-export type Value = string | boolean | number;
 
 const getBorderColor = ({ theme, checked, disabled }) => {
   if (checked) {
@@ -88,19 +84,7 @@ export const RadioLabel = styled.label`
   };
 `
 
-type Props = {
-  value: Value;
-  label: string;
-  disabled?: boolean;
-  className?: string;
-}
-
-type Context = {
-  selectedValue: Value;
-  onChange: Function;
-}
-
-const Radio = (props: Props, context: Context) => {
+const Radio = (props, context) => {
   const { value, label, disabled, className } = props
   const { selectedValue, onChange } = context
   const checked = value === selectedValue
@@ -123,6 +107,18 @@ const Radio = (props: Props, context: Context) => {
     </RadioLabel>
   )
 }
+
+Radio.propTypes = {
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]).isRequired,
+  label: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  className: PropTypes.string,
+}
+
 
 Radio.contextTypes = {
   selectedValue: PropTypes.oneOfType([
