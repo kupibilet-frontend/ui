@@ -2399,7 +2399,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c8 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -2411,7 +2411,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   opacity: 1;
 }
 
-.c13 {
+.c15 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -2423,14 +2423,14 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   opacity: 0.6;
 }
 
-.c6 {
+.c7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c12 {
+.c14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2438,7 +2438,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   position: relative;
 }
 
-.c12:after {
+.c14:after {
   content: '';
   position: absolute;
   border-left: 1px solid #fa3a00;
@@ -2451,7 +2451,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   left: 50%;
 }
 
-.c1 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2461,11 +2461,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   flex-direction: column;
 }
 
-.c1 + .c1 {
-  margin-left: 12px;
-}
-
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2493,11 +2489,11 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   width: 180px;
 }
 
-.c2:hover {
+.c3:hover {
   border-color: #38afff;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2525,11 +2521,11 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   width: 180px;
 }
 
-.c10:hover {
+.c11:hover {
   border-color: #38afff;
 }
 
-.c9 {
+.c10 {
   display: block;
   padding: 6px 0;
   font-size: 11px;
@@ -2538,7 +2534,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   color: #f2f2f2;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2550,11 +2546,18 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   margin-bottom: 6px;
 }
 
-.c3 .c5 {
-  margin-left: 6px;
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
-.c4 {
+.c5 {
   font-size: 16px;
   font-weight: normal;
   line-height: 20px;
@@ -2562,7 +2565,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   font-weight: 600;
 }
 
-.c11 {
+.c12 {
   font-size: 16px;
   font-weight: normal;
   line-height: 20px;
@@ -2570,11 +2573,23 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   font-weight: 400;
 }
 
-.c8 {
+.c9 {
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
   color: #fc6100;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 12px;
+}
+
+.c13 {
+  margin-left: 6px;
 }
 
 <div
@@ -2586,206 +2601,248 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
     >
       <div
         className="c2"
-        onChange={[Function]}
-        onClick={[Function]}
-        title="Банковской картой он-лайн"
       >
         <div
           className="c3"
+          onChange={[Function]}
+          onClick={[Function]}
+          title="Банковской картой он-лайн"
         >
-          <span
+          <div
             className="c4"
           >
-            Банковской картой он-лайн
-          </span>
-          <div>
             <span
-              className="c5 c6"
+              className="c5"
             >
-              <svg
+              Банковской картой он-лайн
+            </span>
+            <span
+              className="c6"
+            >
+              <span
                 className="c7"
-                fill="miscDark"
-                rotate=""
-                size="normal"
               >
-                <use
-                  xlinkHref="#kb_plane"
-                />
-              </svg>
+                <svg
+                  className="c8"
+                  fill="miscDark"
+                  rotate=""
+                  size="normal"
+                >
+                  <use
+                    xlinkHref="#kb_plane"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            className="c4"
+          >
+            <span
+              className="c9"
+            >
+              12 234
             </span>
           </div>
         </div>
-        <div
-          className="c3"
+        <span
+          className="c10"
         >
-          <span
-            className="c8"
-          >
-            12 234
-          </span>
-        </div>
+          Описание
+        </span>
       </div>
-      <span
-        className="c9"
-      >
-        Описание
-      </span>
     </div>
     <div
       className="c1"
     >
       <div
-        className="c10"
-        onChange={[Function]}
-        onClick={[Function]}
-        title="Эконом Базовый"
+        className="c2"
       >
         <div
-          className="c3"
+          className="c11"
+          onChange={[Function]}
+          onClick={[Function]}
+          title="Эконом Базовый"
         >
-          <span
-            className="c11"
+          <div
+            className="c4"
           >
-            Эконом Базовый
-          </span>
-        </div>
-        <div
-          className="c3"
-        >
-          <span
-            className="c8"
-          >
-            12 234
-          </span>
-          <div>
             <span
-              className="c5 c6"
+              className="c12"
             >
-              <svg
-                className="c7"
-                fill="miscDark"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_hand-baggage"
-                />
-              </svg>
+              Эконом Базовый
+            </span>
+          </div>
+          <div
+            className="c4"
+          >
+            <span
+              className="c9"
+            >
+              12 234
             </span>
             <span
-              className="c5 c6"
+              className="c6"
             >
-              <svg
-                className="c7"
-                fill="miscDark"
-                rotate=""
-                size="normal"
+              <span
+                className="c13"
               >
-                <use
-                  xlinkHref="#kb_exchange"
-                />
-              </svg>
-            </span>
-            <span
-              className="c5 c6"
-            >
-              <svg
-                className="c7"
-                fill="miscDark"
-                rotate=""
-                size="normal"
+                <span
+                  className="c7"
+                >
+                  <svg
+                    className="c8"
+                    fill="miscDark"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_hand-baggage"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="c13"
               >
-                <use
-                  xlinkHref="#kb_return"
-                />
-              </svg>
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_exchange"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="c13"
+              >
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_return"
+                    />
+                  </svg>
+                </span>
+              </span>
             </span>
           </div>
         </div>
+        <span
+          className="c10"
+        >
+          Описание
+        </span>
       </div>
-      <span
-        className="c9"
-      >
-        Описание
-      </span>
     </div>
     <div
       className="c1"
     >
       <div
-        className="c10"
-        onChange={[Function]}
-        onClick={[Function]}
-        title="Эконом"
+        className="c2"
       >
         <div
-          className="c3"
+          className="c11"
+          onChange={[Function]}
+          onClick={[Function]}
+          title="Эконом"
         >
-          <span
-            className="c11"
+          <div
+            className="c4"
           >
-            Эконом
-          </span>
-        </div>
-        <div
-          className="c3"
-        >
-          <span
-            className="c8"
-          >
-            12 234
-          </span>
-          <div>
             <span
-              className="c5 c6"
+              className="c12"
             >
-              <svg
-                className="c7"
-                fill="miscDark"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_hand-baggage"
-                />
-              </svg>
+              Эконом
+            </span>
+          </div>
+          <div
+            className="c4"
+          >
+            <span
+              className="c9"
+            >
+              12 234
             </span>
             <span
-              className="c5 c12"
+              className="c6"
             >
-              <svg
+              <span
                 className="c13"
-                fill="miscDark"
-                rotate=""
-                size="normal"
               >
-                <use
-                  xlinkHref="#kb_exchange"
-                />
-              </svg>
-            </span>
-            <span
-              className="c5 c12"
-            >
-              <svg
+                <span
+                  className="c7"
+                >
+                  <svg
+                    className="c8"
+                    fill="miscDark"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_hand-baggage"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
                 className="c13"
-                fill="miscDark"
-                rotate=""
-                size="normal"
               >
-                <use
-                  xlinkHref="#kb_return"
-                />
-              </svg>
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_exchange"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="c13"
+              >
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_return"
+                    />
+                  </svg>
+                </span>
+              </span>
             </span>
           </div>
         </div>
+        <span
+          className="c10"
+        >
+          Описание
+        </span>
       </div>
-      <span
-        className="c9"
-      >
-        Описание
-      </span>
     </div>
   </div>
 </div>
@@ -8341,7 +8398,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c6 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -8353,7 +8410,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   opacity: 1;
 }
 
-.c6 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8382,7 +8439,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c9 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -8556,7 +8613,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   height: 100%;
 }
 
-.c8 {
+.c7 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -8566,18 +8623,14 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   background-color: #e64926;
 }
 
-.hdktWd .c5 {
-  margin-left: 6px;
-}
-
-.c9 {
+.c8 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c10,
-  .responsive-booking .c10 {
+  .responsive .c9,
+  .responsive-booking .c9 {
     padding: 0;
     top: initial;
     margin: 12px auto 0;
@@ -8634,10 +8687,10 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         size="normal"
       >
         <span
-          className="c5 c6"
+          className="c5"
         >
           <svg
-            className="c7"
+            className="c6"
             fill="miscDark"
             rotate=""
             size="normal"
@@ -8649,11 +8702,11 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         </span>
       </div>
       <div
-        className="c8"
+        className="c7"
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c9 c10"
+      className="react-autosuggest__suggestions-container c8 c9"
       id="react-autowhatever-1"
     />
   </div>
@@ -8673,7 +8726,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c6 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -8685,7 +8738,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   opacity: 1;
 }
 
-.c6 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8714,7 +8767,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c9 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -8888,7 +8941,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   height: 100%;
 }
 
-.c8 {
+.c7 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -8898,18 +8951,14 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   background-color: #e64926;
 }
 
-.hdktWd .c5 {
-  margin-left: 6px;
-}
-
-.c9 {
+.c8 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c10,
-  .responsive-booking .c10 {
+  .responsive .c9,
+  .responsive-booking .c9 {
     padding: 0;
     top: initial;
     margin: 12px auto 0;
@@ -8963,10 +9012,10 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
         size="normal"
       >
         <span
-          className="c5 c6"
+          className="c5"
         >
           <svg
-            className="c7"
+            className="c6"
             fill="miscDark"
             rotate=""
             size="normal"
@@ -8978,11 +9027,11 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
         </span>
       </div>
       <div
-        className="c8"
+        className="c7"
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c9 c10"
+      className="react-autosuggest__suggestions-container c8 c9"
       id="react-autowhatever-1"
     />
   </div>
@@ -9002,7 +9051,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c6 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -9014,7 +9063,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   opacity: 1;
 }
 
-.c6 {
+.c5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -9043,7 +9092,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c9 {
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
@@ -9221,7 +9270,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   height: 100%;
 }
 
-.c8 {
+.c7 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -9231,18 +9280,14 @@ exports[`Storyshots Controls/Select default 1`] = `
   background-color: #e64926;
 }
 
-.hdktWd .c5 {
-  margin-left: 6px;
-}
-
-.c9 {
+.c8 {
   min-width: 180px;
   width: 100%;
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c10,
-  .responsive-booking .c10 {
+  .responsive .c9,
+  .responsive-booking .c9 {
     padding: 0;
     top: initial;
     margin: 12px auto 0;
@@ -9296,10 +9341,10 @@ exports[`Storyshots Controls/Select default 1`] = `
         size="large"
       >
         <span
-          className="c5 c6"
+          className="c5"
         >
           <svg
-            className="c7"
+            className="c6"
             fill="miscDark"
             rotate=""
             size="normal"
@@ -9311,11 +9356,11 @@ exports[`Storyshots Controls/Select default 1`] = `
         </span>
       </div>
       <div
-        className="c8"
+        className="c7"
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c9 c10"
+      className="react-autosuggest__suggestions-container c8 c9"
       id="react-autowhatever-1"
     />
   </div>
@@ -10044,7 +10089,7 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   box-sizing: border-box;
 }
 
-.c5 {
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -10056,7 +10101,7 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   opacity: 1;
 }
 
-.c4 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -10120,10 +10165,6 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   box-shadow: none;
 }
 
-.hdktWd .c3 {
-  margin-left: 6px;
-}
-
 <div
   className="responsive c0"
 >
@@ -10139,10 +10180,10 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
       size="normal"
     >
       <span
-        className="c3 c4"
+        className="c3"
       >
         <svg
-          className="icon-inherit-color c5"
+          className="icon-inherit-color c4"
           fill={null}
           rotate=""
           size="normal"
