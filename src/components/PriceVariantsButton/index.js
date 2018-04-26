@@ -49,6 +49,7 @@ const Content = styled.div`
 
 const Icons = styled.span`
   display: flex;
+  align-items: start;
 `
 
 const Title = styled.span`
