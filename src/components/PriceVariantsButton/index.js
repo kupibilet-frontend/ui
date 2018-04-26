@@ -119,7 +119,7 @@ const PriceVariantsButton = (props: Props) => {
           }
         </Content>
       </Button>
-      <Description>{description}</Description>
+      {description && <Description>{description}</Description>}
     </Root>
   )
 }
