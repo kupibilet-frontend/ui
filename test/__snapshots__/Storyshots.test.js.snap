@@ -58,6 +58,10 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   display: none;
 }
 
+.c9 .rc-collapse-header:focus {
+  outline: none;
+}
+
 .c15 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -609,6 +613,10 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   display: none;
 }
 
+.c1 .rc-collapse-header:focus {
+  outline: none;
+}
+
 <div
   className="responsive c0"
 >
@@ -703,6 +711,10 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   display: none;
 }
 
+.c1 .rc-collapse-header:focus {
+  outline: none;
+}
+
 <div
   className="responsive c0"
 >
@@ -795,6 +807,10 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
 
 .c1 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
+}
+
+.c1 .rc-collapse-header:focus {
+  outline: none;
 }
 
 <div
