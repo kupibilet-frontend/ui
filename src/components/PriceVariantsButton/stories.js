@@ -1,7 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, number } from '@storybook/addon-knobs'
+import styled from 'styled-components'
 import PriceVariantsButton from 'components/PriceVariantsButton'
+import Icon from 'components/Icon'
 import updateKnob from 'storybook/updateKnob'
 
 const defaultValues = {
@@ -9,9 +11,7 @@ const defaultValues = {
   description: 'Описание',
   price: '12 234',
   topIcons: ['plane'],
-  bottomIcons: ['hand-baggage', 'exchange', 'return'],
-  active: 1,
-  strikedIcons: [
+  bottomIcons: [
     {
       name: 'hand-baggage',
       striked: false,
@@ -25,9 +25,37 @@ const defaultValues = {
       striked: true,
     },
   ],
+  active: 1,
 }
 
+const Item = styled.div`
+  display: inline-flex;
+  margin-left: 12px;
+`
+
+const IconWrap = styled.span`
+  margin-left: 6px;
+`
+
 const onClick = (index) => updateKnob('active', 'number', index)
+
+const renderTopIcons = () => defaultValues.topIcons.map((icon) => (
+  <Icon
+    key={icon}
+    name={icon}
+    fill="miscDark"
+  />
+))
+
+const renderBottomIcons = () => defaultValues.bottomIcons.map((icon) => (
+  <IconWrap key={icon.name}>
+    <Icon
+      name={icon.name}
+      striked={icon.striked}
+      fill="miscDark"
+    />
+  </IconWrap>
+))
 
 /* eslint-disable react/jsx-no-bind */
 storiesOf('Complex controls/PriceVariantsButton', module)
@@ -39,33 +67,39 @@ storiesOf('Complex controls/PriceVariantsButton', module)
 
     return (
       <div>
-        <PriceVariantsButton
-          active={active === 1}
-          title="Банковской картой он-лайн"
-          price={price}
-          iconsPosition="top"
-          icons={defaultValues.topIcons}
-          description={description}
-          onChange={onClick.bind(null, 1)}
-        />
-        <PriceVariantsButton
-          active={active === 2}
-          title={title}
-          price={price}
-          iconsPosition="bottom"
-          icons={defaultValues.bottomIcons}
-          description={description}
-          onChange={onClick.bind(null, 2)}
-        />
-        <PriceVariantsButton
-          active={active === 3}
-          title="Эконом"
-          price={price}
-          iconsPosition="bottom"
-          icons={defaultValues.strikedIcons}
-          description={description}
-          onChange={onClick.bind(null, 3)}
-        />
+        <Item>
+          <PriceVariantsButton
+            active={active === 1}
+            title="Банковской картой он-лайн"
+            price={price}
+            iconsPosition="top"
+            icons={renderTopIcons()}
+            description={description}
+            onChange={onClick.bind(null, 1)}
+          />
+        </Item>
+        <Item>
+          <PriceVariantsButton
+            active={active === 2}
+            title={title}
+            price={price}
+            iconsPosition="bottom"
+            icons={renderBottomIcons()}
+            description={description}
+            onChange={onClick.bind(null, 2)}
+          />
+        </Item>
+        <Item>
+          <PriceVariantsButton
+            active={active === 3}
+            title="Эконом"
+            price={price}
+            iconsPosition="bottom"
+            icons={renderBottomIcons()}
+            description={description}
+            onChange={onClick.bind(null, 3)}
+          />
+        </Item>
       </div>
     )
   })
