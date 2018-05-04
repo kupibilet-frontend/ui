@@ -1,17 +1,13 @@
 // @flow
 import React from 'react'
+import type { Element } from 'react'
 import styled from 'styled-components'
-import Icon, { IconWrapper } from 'components/Icon'
 import { switchTransition } from 'utils/transitions'
 import { borderRadiusSmall } from 'utils/borderRadius'
 
 const Root = styled.div`
   display: inline-flex;
   flex-direction: column;
-
-  & + & {
-    margin-left: 12px;
-  }
 `
 
 const Button = styled.div`
@@ -42,19 +38,18 @@ const Description = styled.span`
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.color.textLightest};
+  color: ${({ theme }) => theme.color.miscDarker};
 `
-
-const StyledIcon = styled(Icon)``
 
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 6px;
+`
 
-  & ${IconWrapper} {
-    margin-left: 6px;
-  }
+const Icons = styled.span`
+  display: flex;
+  align-items: start;
 `
 
 const Title = styled.span`
@@ -76,33 +71,11 @@ type Props = {
   active: boolean,
   onChange?: (Event) => void,
   title: string,
-  price: string,
-  icons: any[],
+  price: string | Element<*>,
+  icons: Array<Element<*>>,
   iconsPosition?: string,
   description?: string,
 }
-
-const getIcons = (icons) => (
-  icons.map((item: string | Object) => {
-    let striked: boolean
-    let name: string
-
-    if (typeof item === 'string') {
-      striked = false
-      name = item
-    } else {
-      striked = item.striked
-      name = item.name
-    }
-
-    return (<StyledIcon
-      key={name}
-      name={name}
-      fill="miscDark"
-      striked={striked}
-    />)
-  })
-)
 
 const PriceVariantsButton = (props: Props) => {
   const {
@@ -133,21 +106,21 @@ const PriceVariantsButton = (props: Props) => {
         <Content>
           <Title active={active}>{title}</Title>
           {hasIcons && iconsPosition === 'top' &&
-            <div>
-              {getIcons(icons)}
-            </div>
+            <Icons>
+              {icons}
+            </Icons>
           }
         </Content>
         <Content>
           <Price>{price}</Price>
-          {(hasIcons && iconsPosition === 'bottom') &&
-            <div>
-              {getIcons(icons)}
-            </div>
+          {hasIcons && iconsPosition === 'bottom' &&
+            <Icons>
+              {icons}
+            </Icons>
           }
         </Content>
       </Button>
-      <Description>{description}</Description>
+      {description && <Description>{description}</Description>}
     </Root>
   )
 }
