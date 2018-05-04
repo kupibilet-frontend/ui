@@ -38,7 +38,7 @@ const Description = styled.span`
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.color.textLightest};
+  color: ${({ theme }) => theme.color.miscDarker};
 `
 
 const Content = styled.div`

@@ -2531,7 +2531,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #f2f2f2;
+  color: #7d89a1;
 }
 
 .c4 {
