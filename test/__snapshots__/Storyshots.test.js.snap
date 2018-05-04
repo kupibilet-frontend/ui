@@ -10076,6 +10076,68 @@ exports[`Storyshots Controls/Slider default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/TabLink default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 100px;
+  line-height: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: transparent;
+}
+
+.c1 .icon-inherit-color {
+  fill: #007acc;
+}
+
+.c1:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c1:hover .icon-inherit-color {
+  fill: rgba(0,122,204,0.8);
+}
+
+.c1:focus {
+  outline: none;
+}
+
+<div
+  className="responsive c0"
+>
+  <a
+    className="c1"
+  >
+    Авиабилеты
+  </a>
+</div>
+`;
+
 exports[`Storyshots Controls/Tooltip default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
