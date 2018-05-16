@@ -68,6 +68,10 @@ class Modal extends React.PureComponent<Props> {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown)
+
+    if (this.props.history) {
+      this.props.history.push('/?page=modal')
+    }
   }
 
   componentWillUnmount() {
