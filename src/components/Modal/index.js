@@ -70,17 +70,15 @@ class Modal extends React.PureComponent<Props> {
     document.addEventListener('keydown', this.handleKeyDown)
 
     if (this.props.history) {
-      this.props.history.push('/', { modal: true })
+      this.props.history.push('#modal')
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    const state = this.props.history && this.props.history.location.state &&
-      this.props.history.location.state.modal
-    const nextState = nextProps.history && nextProps.history.location.state &&
-      nextProps.history.location.state.modal
+    const hash = this.props.history && this.props.history.location.hash
+    const nextHash = nextProps.history && nextProps.history.location.hash
 
-    if (state && (nextState !== state)) {
+    if (hash && (nextHash !== hash)) {
       this.closePortal()
     }
   }
