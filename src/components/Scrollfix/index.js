@@ -1,6 +1,7 @@
 // @flow
 
 import { Component } from 'react'
+import { get } from 'lodash'
 import ReactDOM from 'react-dom'
 import type { Element } from 'react'
 
@@ -32,7 +33,10 @@ class Scrollfix extends Component<Props> {
   onTouch = (event: Event) => {
     const currentY = event.changedTouches[0].clientY
     const deltaY = this.lastY - currentY
-    this.onScroll(event, deltaY)
+    const touchesLength = get(event, 'touches.length', 0)
+    if (touchesLength < 2) {
+      this.onScroll(event, deltaY)
+    }
   }
 
   onScroll = (event: Event, deltaY: number) => {
