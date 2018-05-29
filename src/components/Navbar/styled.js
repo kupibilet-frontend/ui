@@ -19,10 +19,10 @@ export const Wrap = styled.div`
   `}
 `
 
-export const ItemStyle = ({ theme, isActive }) => `
+export const Item = styled.span`
   display: inline-block;
   position: relative;
-  color: ${theme.color.primaryDarkest};
+  color: ${({ theme }) => theme.color.primaryDarkest};
   font-size: 18px;
   padding: 10px 0;
   margin-left: 30px;
@@ -34,7 +34,7 @@ export const ItemStyle = ({ theme, isActive }) => `
   }
 
   /* for custom support */
-  ${isActive && `
+  ${({ isActive, theme }) => isActive && `
     background: transparent;
     color: ${theme.color.textDarker};
 
@@ -52,7 +52,7 @@ export const ItemStyle = ({ theme, isActive }) => `
   /* for support NavLink */
   &.active {
     background: transparent;
-    color: ${theme.color.textDarker};
+    color: ${({ theme }) => theme.color.textDarker};
 
     &:after {
       position: absolute;
@@ -61,12 +61,8 @@ export const ItemStyle = ({ theme, isActive }) => `
       height: 2px;
       left: 0;
       content: '';
-      background-color: ${theme.color.secondaryLight};
+      background-color: ${({ theme }) => theme.color.secondaryLight};
     }
   }
 
-`
-
-export const Item = styled.span`
-  ${ItemStyle}
 `
