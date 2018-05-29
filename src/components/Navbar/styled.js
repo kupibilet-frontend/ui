@@ -15,11 +15,12 @@ export const Wrap = styled.div`
       display: none;
     }
 
-    -ms-overflow-style: none;
+    -ms-overflow-style: mone;
   `}
 `
 
 export const Item = styled.span`
+  display: inline-block;
   position: relative;
   color: ${({ theme }) => theme.color.primaryDarkest};
   font-size: 18px;
