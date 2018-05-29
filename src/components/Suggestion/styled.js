@@ -5,7 +5,7 @@ export const SuggestionContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-
+  position: relative;
   min-height: 30px;
 
   cursor: pointer;
@@ -20,6 +20,21 @@ export const SuggestionContainer = styled.div`
     .icon-inherit-color {
       fill: ${({ theme }) => theme.color.textDarker};
     }
+    &::after {
+      background: linear-gradient(to left, ${({ theme }) => theme.color.secondaryLightest} 25%, transparent);
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    right: 0;
+    width: 24px;
+    background: linear-gradient(to left,
+      ${({ theme, isHighlighted }) => (isHighlighted
+        ? theme.color.secondaryLightest
+        : theme.color.background
+      )} 25%, transparent);
   }
 `
 export const SuggestionIcon = styled.div`
@@ -32,4 +47,5 @@ export const SuggestionIcon = styled.div`
 `
 export const SuggestionText = Text.withComponent('div').extend`
   flex-grow: 1;
+  white-space: nowrap;
 `

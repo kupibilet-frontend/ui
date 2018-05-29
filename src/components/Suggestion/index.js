@@ -29,7 +29,7 @@ const Suggestion = (props : Props) => {
     getSuggestionValue,
   } = props
   return (
-    <SuggestionContainer isHighlighted={isHighlighted}>
+    <SuggestionContainer isHighlighted={isHighlighted} title={getSuggestionValue(suggestion)}>
       <SuggestionIcon>
         {selectedKey === getSuggestionKey(suggestion) &&
           <Icon name="checkmark" fill="primaryLight" />
