@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import NavBar, { NavItem } from 'components/Navbar'
+import NavBar, { NavItem } from 'components/NavBar'
 import { number } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 
