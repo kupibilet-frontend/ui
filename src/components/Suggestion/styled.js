@@ -32,9 +32,9 @@ export const SuggestionContainer = styled.div`
     width: 24px;
     background: linear-gradient(to left,
       ${({ theme, isHighlighted }) => (isHighlighted
-        ? theme.color.secondaryLightest
-        : theme.color.background
-      )} 25%, transparent);
+    ? theme.color.secondaryLightest
+    : theme.color.background
+  )} 25%, transparent);
   }
 `
 export const SuggestionIcon = styled.div`
