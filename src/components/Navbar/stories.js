@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Navbar, { Item } from 'components/Navbar'
+import Navbar from 'components/Navbar'
+import { Item } from 'components/Navbar/styled'
 
 const itemList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -21,7 +22,6 @@ class Wrap extends React.Component {
     )
   }
 }
-
 
 storiesOf('Blocks', module)
   .addWithInfo('Navbar', () => <Wrap />)
