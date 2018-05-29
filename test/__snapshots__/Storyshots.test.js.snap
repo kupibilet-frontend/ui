@@ -427,6 +427,180 @@ exports[`Storyshots Blocks FilterSection 1`] = `
 </div>
 `;
 
+exports[`Storyshots Blocks Navbar 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  text-align: center;
+  border-bottom: 1px solid #dedede;
+}
+
+.c1 span {
+  display: inline-block;
+}
+
+.c2 {
+  position: relative;
+  color: #007acc;
+  font-size: 18px;
+  padding: 10px 0;
+  margin-left: 30px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  color: #333333;
+}
+
+.c2:first-child {
+  margin-left: 0;
+}
+
+.c2:after {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  content: '';
+  background-color: #ffb640;
+}
+
+.c2.active {
+  background: transparent;
+  color: #333333;
+}
+
+.c2.active:after {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  content: '';
+  background-color: #ffb640;
+}
+
+.c3 {
+  position: relative;
+  color: #007acc;
+  font-size: 18px;
+  padding: 10px 0;
+  margin-left: 30px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c3:first-child {
+  margin-left: 0;
+}
+
+.c3.active {
+  background: transparent;
+  color: #333333;
+}
+
+.c3.active:after {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  content: '';
+  background-color: #ffb640;
+}
+
+@media screen and (max-width:999px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    overflow-x: scroll;
+    -moz-appearance: menuimage;
+    white-space: nowrap;
+    max-width: 100vw;
+    -ms-overflow-style: none;
+  }
+
+  .responsive .c1::-webkit-scrollbar,
+  .responsive-booking .c1::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <span
+      className="c2"
+      onClick={[Function]}
+    >
+      1
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      2
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      3
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      4
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      5
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      6
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      7
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      8
+    </span>
+    <span
+      className="c3"
+      onClick={[Function]}
+    >
+      9
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Blocks Styled Tabs 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
