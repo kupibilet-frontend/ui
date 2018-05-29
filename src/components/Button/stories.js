@@ -71,6 +71,14 @@ storiesOf('Controls/Buttons', module)
       }
     />
   ))
+  .addWithInfo('Loading button', () => (
+    <Button
+      size={sizesSelect('large')}
+      disabled={boolean('disabled', false)}
+      variant={variantsSelect()}
+      icon="spinner"
+    />
+  ))
   .addWithInfo('Icon-only button', () => (
     <Button
       size={sizesSelect('large')}
