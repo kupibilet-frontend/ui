@@ -7376,7 +7376,6 @@ exports[`Storyshots Controls/NavBar Default 1`] = `
 }
 
 .c1 {
-  text-align: center;
   border-bottom: 1px solid #dedede;
 }
 

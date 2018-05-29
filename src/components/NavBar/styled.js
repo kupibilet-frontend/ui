@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import mq from 'utils/media-queries'
 
 export const Wrap = styled.div`
-  text-align: center;
   border-bottom: 1px solid ${({ theme }) => theme.color.textLighter};
 
   ${mq.handheld`

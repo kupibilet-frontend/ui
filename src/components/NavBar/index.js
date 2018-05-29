@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Wrap } from './styled'
 
-const NavBar = (props) => (
+export const NavBar = (props) => (
   <Wrap>
     {props.children}
   </Wrap>
@@ -13,5 +13,3 @@ NavBar.propTypes = {
 }
 
 export { NavItem } from './styled'
-
-export default NavBar
