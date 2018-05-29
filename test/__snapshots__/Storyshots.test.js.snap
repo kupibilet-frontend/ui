@@ -445,11 +445,8 @@ exports[`Storyshots Blocks Navbar 1`] = `
   border-bottom: 1px solid #dedede;
 }
 
-.c1 span {
-  display: inline-block;
-}
-
 .c2 {
+  display: inline-block;
   position: relative;
   color: #007acc;
   font-size: 18px;
@@ -492,6 +489,7 @@ exports[`Storyshots Blocks Navbar 1`] = `
 }
 
 .c3 {
+  display: inline-block;
   position: relative;
   color: #007acc;
   font-size: 18px;
@@ -528,7 +526,7 @@ exports[`Storyshots Blocks Navbar 1`] = `
     -moz-appearance: menuimage;
     white-space: nowrap;
     max-width: 100vw;
-    -ms-overflow-style: none;
+    -ms-overflow-style: mone;
   }
 
   .responsive .c1::-webkit-scrollbar,
