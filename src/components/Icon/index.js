@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { withTheme } from 'styled-components'
+import styled, { withTheme, keyframes } from 'styled-components'
 import cn from 'classnames'
 
 import { switchTransition } from 'utils/transitions'
@@ -16,6 +16,26 @@ export const sizes = {
   xlarge: 54,
   xxlarge: 60,
 }
+
+const preloader = keyframes`
+  0% { transform: rotate(0deg); }
+
+  6.6%  { transform: rotate(50deg);   }
+  16.6% { transform: rotate(300deg);  }
+  23.4% { transform: rotate(350deg);  }
+  33.4% { transform: rotate(600deg);  }
+  40%   { transform: rotate(650deg);  }
+
+  50%   { transform: rotate(900deg);  }
+
+  56.6% { transform: rotate(950deg);  }
+  66.6% { transform: rotate(1200deg); }
+  73.4% { transform: rotate(1250deg); }
+  83.4% { transform: rotate(1500deg); }
+  90%   { transform: rotate(1550deg); }
+
+  100%  { transform: rotate(1800deg); }
+`
 
 const IconSvg = styled.svg`
   ${switchTransition};
@@ -33,28 +53,8 @@ const IconSvg = styled.svg`
     }
   }}
 
-  @keyframes preloader {
-    0% { transform: rotate(0deg); }
-
-    6.6%  { transform: rotate(50deg);   }
-    16.6% { transform: rotate(300deg);  }
-    23.4% { transform: rotate(350deg);  }
-    33.4% { transform: rotate(600deg);  }
-    40%   { transform: rotate(650deg);  }
-
-    50%   { transform: rotate(900deg);  }
-
-    56.6% { transform: rotate(950deg);  }
-    66.6% { transform: rotate(1200deg); }
-    73.4% { transform: rotate(1250deg); }
-    83.4% { transform: rotate(1500deg); }
-    90%   { transform: rotate(1550deg); }
-
-    100%  { transform: rotate(1800deg); }
-  }
-
   ${({ name }) => name === 'spinner' && `
-    animation: preloader 3s infinite ease-in-out;
+    animation: ${preloader} 3s infinite ease-in-out;
   `}
 `
 
