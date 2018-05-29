@@ -17,10 +17,6 @@ export const Wrap = styled.div`
 
     -ms-overflow-style: none;
   `}
-
-  span {
-    display: inline-block;
-  }
 `
 
 export const Item = styled.span`
