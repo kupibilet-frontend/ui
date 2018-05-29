@@ -19,7 +19,7 @@ export const Wrap = styled.div`
   `}
 `
 
-export const Item = styled.span`
+export const NavItem = styled.span`
   display: inline-block;
   position: relative;
   color: ${({ theme }) => theme.color.primaryDarkest};
@@ -64,5 +64,4 @@ export const Item = styled.span`
       background-color: ${({ theme }) => theme.color.secondaryLight};
     }
   }
-
 `
