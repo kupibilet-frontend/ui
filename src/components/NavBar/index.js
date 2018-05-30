@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Wrap } from './styled'
+import MobileHorizontalScroll from './styled'
 
 export const NavBar = (props) => (
-  <Wrap className={props.className}>
+  <MobileHorizontalScroll className={props.className}>
     {props.children}
-  </Wrap>
+  </MobileHorizontalScroll>
 )
 
 NavBar.defaultProps = {
