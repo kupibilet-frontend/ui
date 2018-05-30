@@ -20,7 +20,8 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     suggestions: [],
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  // eslint-disable-next-line camelcase, react/sort-comp, class-methods-use-this
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     const { value, suggest, suggestions } = nextState
 
     updateKnob('suggest', 'object', suggest || {})
