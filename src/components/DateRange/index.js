@@ -55,7 +55,8 @@ class DateRangePickerWrapper extends React.PureComponent {
     calendarMonthCursor: null,
   }
 
-  componentWillReceiveProps(nextProps) {
+  // eslint-disable-next-line camelcase, react/sort-comp
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.focusedInput !== this.props.focusedInput) {
       this.setState({
         hoveredDate: null,
