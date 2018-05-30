@@ -135,7 +135,8 @@ export default class Slider extends React.Component<Props, State> {
     }
   }
 
-  componentWillReceiveProps(nextProps : Props) {
+  // eslint-disable-next-line camelcase, react/sort-comp
+  UNSAFE_componentWillReceiveProps(nextProps : Props) {
     if (this.props.values) {
       const nextValues = nextProps.values
       const currentValues = this.props.values
