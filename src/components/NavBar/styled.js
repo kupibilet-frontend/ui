@@ -1,21 +1,18 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import mq from 'utils/media-queries'
 
-export const Wrap = styled.div`
+const Wrap = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.color.textLighter};
+  max-width: 100vw;
+  overflow: hidden;
+`
 
-  ${mq.handheld`
-    overflow-x: scroll;
-    -moz-appearance: menuimage;
-    white-space: nowrap;
-    max-width: 100vw;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    -ms-overflow-style: mone;
-  `}
+const Inner = styled.div`
+  margin-bottom: -30px;
+  padding-bottom: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
 `
 
 export const NavItem = styled.span`
@@ -23,7 +20,8 @@ export const NavItem = styled.span`
   position: relative;
   color: ${({ theme }) => theme.color.primaryDarkest};
   font-size: 18px;
-  padding: 10px 0;
+  padding: 11px 0;
+  line-height: 26px;
   margin-left: 30px;
   text-decoration: none;
   cursor: pointer;
@@ -64,3 +62,22 @@ export const NavItem = styled.span`
     }
   }
 `
+
+const MobileHorizontalScroll = (props) => (
+  <Wrap className={props.className}>
+    <Inner>
+      {props.children}
+    </Inner>
+  </Wrap>
+)
+
+MobileHorizontalScroll.defaultProps = {
+  className: '',
+}
+
+MobileHorizontalScroll.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.any.isRequired,
+}
+
+export default MobileHorizontalScroll
