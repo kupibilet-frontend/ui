@@ -168,6 +168,7 @@ class InputControl extends React.PureComponent<void, Props, State> {
                 React.cloneElement(child, {
                   ...props,
                   size,
+                  name: child.props.name,
                   hasInnerGroup: true,
                   onFocus: this.handleFocus.bind(null, child.props.onFocus),
                   onBlur: this.handleBlur.bind(null, child.props.onBlur),

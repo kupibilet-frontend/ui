@@ -5944,7 +5944,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
     >
       <input
         className="c3"
-        name="input"
+        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="DD"
@@ -5953,7 +5953,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       />
       <input
         className="c4"
-        name="input"
+        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="MM"
@@ -5962,7 +5962,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       />
       <input
         className="c5"
-        name="input"
+        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="YYYY"
