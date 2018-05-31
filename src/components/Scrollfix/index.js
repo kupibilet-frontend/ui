@@ -33,7 +33,7 @@ class Scrollfix extends Component<Props> {
   onTouch = (event: Event) => {
     const currentY = event.changedTouches[0].clientY
     const deltaY = this.lastY - currentY
-    
+
     this.onScroll(event, deltaY)
   }
 
