@@ -33,19 +33,19 @@ class Scrollfix extends Component<Props> {
   onTouch = (event: Event) => {
     const currentY = event.changedTouches[0].clientY
     const deltaY = this.lastY - currentY
-    const touchesLength = get(event, 'touches.length', 0)
-    if (touchesLength < 2) {
-      this.onScroll(event, deltaY)
-    }
+
+    this.onScroll(event, deltaY)
   }
 
   onScroll = (event: Event, deltaY: number) => {
     const scrollTop = this.element.scrollTop
-    if (scrollTop <= 1 && deltaY < 0) {
+    const touchesLength = get(event, 'touches.length', 0)
+    if (scrollTop <= 1 && deltaY < 0 && touchesLength < 2) {
       event.preventDefault()
     } else if (
       scrollTop + this.element.offsetHeight >= this.element.scrollHeight - 1
       && deltaY > 0
+      && touchesLength < 2
     ) {
       event.preventDefault()
     }
