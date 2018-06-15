@@ -17,4 +17,4 @@ NavBar.propTypes = {
   children: PropTypes.any.isRequired,
 }
 
-export { NavItem } from './styled'
+export { default as MobileHorizontalScroll, NavItem } from './styled'
