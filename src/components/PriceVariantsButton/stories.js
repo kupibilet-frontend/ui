@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, number } from '@storybook/addon-knobs'
+import { text, number, boolean } from '@storybook/addon-knobs'
 import styled from 'styled-components'
 import PriceVariantsButton from 'components/PriceVariantsButton'
 import Icon from 'components/Icon'
@@ -76,6 +76,7 @@ storiesOf('Complex controls/PriceVariantsButton', module)
             icons={renderTopIcons()}
             description={description}
             onChange={onClick.bind(null, 1)}
+            disabled={boolean('disabled', false)}
           />
         </Item>
         <Item>
@@ -87,6 +88,7 @@ storiesOf('Complex controls/PriceVariantsButton', module)
             icons={renderBottomIcons()}
             description={description}
             onChange={onClick.bind(null, 2)}
+            disabled={boolean('disabled', false)}
           />
         </Item>
         <Item>
@@ -98,6 +100,7 @@ storiesOf('Complex controls/PriceVariantsButton', module)
             icons={renderBottomIcons()}
             description={description}
             onChange={onClick.bind(null, 3)}
+            disabled={boolean('disabled', false)}
           />
         </Item>
       </div>

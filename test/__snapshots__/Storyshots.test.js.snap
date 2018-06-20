@@ -2501,12 +2501,14 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   box-shadow: 0 0 0 1px #38afff;
   border-radius: 3px;
   background-color: #FFFFFF;
-  cursor: pointer;
+  cursor: default;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
   transition-property: border-color,box-shadow;
   width: 180px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .c3:hover {
@@ -2539,6 +2541,8 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   -webkit-transition-property: border-color,box-shadow;
   transition-property: border-color,box-shadow;
   width: 180px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .c11:hover {
@@ -2624,6 +2628,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
       >
         <div
           className="c3"
+          disabled={false}
           onChange={[Function]}
           onClick={[Function]}
           title="Банковской картой он-лайн"
@@ -2681,6 +2686,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
       >
         <div
           className="c11"
+          disabled={false}
           onChange={[Function]}
           onClick={[Function]}
           title="Эконом Базовый"
@@ -2780,6 +2786,7 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
       >
         <div
           className="c11"
+          disabled={false}
           onChange={[Function]}
           onClick={[Function]}
           title="Эконом"
