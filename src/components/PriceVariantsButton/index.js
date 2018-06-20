@@ -22,10 +22,12 @@ const Button = styled.div`
   box-shadow: 0 0 0 1px ${({ active, theme }) => (active ? theme.color.primary : 'transparent')};
   ${borderRadiusSmall.all}
   background-color: #FFFFFF;
-  cursor: pointer;
+  cursor: ${({ active, disabled }) => (active || disabled ? 'default' : 'pointer')};
   ${switchTransition};
   transition-property: border-color, box-shadow;
   width: 180px;
+  opacity: ${({ active, disabled }) => (disabled && !active ? '0.5' : '1')};
+  pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
 
   &:hover {
     border-color: ${({ theme }) => theme.color.primary};
