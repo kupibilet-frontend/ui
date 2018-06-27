@@ -28,7 +28,6 @@ const slide = keyframes`
 
 export const Wrapper = styled.div`
   background: rgba(34, 34, 34, 0.85);
-  cursor: pointer;
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
