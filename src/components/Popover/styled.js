@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { transparentize } from 'polished'
 import Text from 'components/Typography/Text'
+import mq from '../../utils/media-queries'
 
 const dotShift = 7
 
@@ -118,7 +119,12 @@ const PopoverDot = styled.div`
   margin: ${({ placement }) => dotMargins[placement]}
   border-radius: 50%;
   background: ${(props) => getBackgroundColor(props)};
-`
+
+  ${mq.mobile`
+    ${(props) => (props.left && `margin: 2px 0 2px ${props.left - 7}px;`)}
+  `}
+}
+  `
 
 const PopoverBackground = styled.div`
   order: 2;
@@ -132,6 +138,11 @@ const PopoverBackground = styled.div`
   padding: 12px;
   display: flex;
   flex-direction: column;
+
+  ${mq.mobile`
+    flex-grow: 0;
+    width: 100%;
+  `}
   `
 
 const HeaderText = styled(Text)`
@@ -147,6 +158,13 @@ const PopoverContainer = styled.div`
   position: absolute;
   opacity: 0;
   animation: 0.15s ease-out forwards ${arrival};
+
+  ${mq.mobile`
+    left: 0;
+    right: 0;
+    margin: 0 12px;
+  `}
+
   ${(props) => {
     const coords = getCoordinates(props)
     return `
@@ -170,6 +188,10 @@ flex-wrap: ${({ placement }) => {
   }
 };
   justify-content: flex-start;
+
+  ${mq.mobile`
+    flex-direction: row;
+  `}
   ${({ align }) => {
     if (align) {
       return 'align-items: flex-end;'

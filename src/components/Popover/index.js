@@ -64,6 +64,7 @@ const PopoverPortal = (props : PortalProps) => {
               >
                 <PopoverDot
                   placement={placement}
+                  left={coords.left}
                 />
                 <PopoverBackground
                   size={size}
