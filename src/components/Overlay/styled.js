@@ -28,7 +28,6 @@ const slide = keyframes`
 
 export const Wrapper = styled.div`
   background: rgba(34, 34, 34, 0.85);
-  cursor: pointer;
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -41,6 +40,7 @@ export const Wrapper = styled.div`
   right: 0;
   opacity: 1;
   -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
   ${mq.desktop`
     animation-name: ${fade};
     animation-duration: 0.35s;
