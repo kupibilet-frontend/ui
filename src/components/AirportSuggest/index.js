@@ -63,7 +63,7 @@ export default class AirportSuggest extends React.PureComponent {
               <GeoLabel>
                 {singleAirport ? `аэропорт ${singleAirport}` : 'Все аэропорты'}
                 { country && ', ' }
-                {country}`
+                {country}
               </GeoLabel>
             ) : (
               <GeoLabel>
