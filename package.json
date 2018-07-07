@@ -89,7 +89,7 @@
     "rc-tabs": "^9.1.10",
     "react-autosuggest": "^9.0.0",
     "react-portal": "^4.1.4",
-    "rheostat": "^2.1.3",
+    "rheostat": "^3.0.0",
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
