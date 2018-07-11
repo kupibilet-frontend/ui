@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { transparentize } from 'polished'
 import Text from 'components/Typography/Text'
+import mq from 'utils/media-queries'
 
 const dotShift = 7
 
@@ -98,14 +99,16 @@ const PositionWrapper = styled.div`
 `
 const PlacementWrapper = styled.div`
   position: absolute;
-  ${({ placement }) => subPositions[placement]
-}
-${({ align }) => {
+  ${({ placement }) => subPositions[placement]}
+  ${({ align }) => {
     if (align) {
       return subPositions[align]
     }
-  }
-}
+  }}
+
+  ${mq.handheld`
+    width: 100%;
+  `}
   `
 
 const PopoverDot = styled.div`
@@ -118,6 +121,10 @@ const PopoverDot = styled.div`
   margin: ${({ placement }) => dotMargins[placement]}
   border-radius: 50%;
   background: ${(props) => getBackgroundColor(props)};
+
+  ${mq.handheld`
+    display: none;
+  `}
 `
 
 const PopoverBackground = styled.div`
@@ -153,9 +160,13 @@ const PopoverContainer = styled.div`
       top: ${coords.top}px;
       left: ${coords.left}px;
     `
-  }
-}
-z-index: 100;
+  }}
+  z-index: 100;
+  ${mq.handheld`
+    width: 100%;
+    right: 0;
+    left: 0;
+  `}
   `
 
 
@@ -164,19 +175,21 @@ const RelativeWrapper = styled.div`
   display: flex;
   flex-direction: ${ ({ placement, align }) =>
     getFlexDirection(placement, align)
-};
-flex-wrap: ${({ placement }) => {
+  };
+  flex-wrap: ${({ placement }) => {
     if (placement === 'top' || placement === 'bottom') return 'wrap'
-  }
-};
+  }};
   justify-content: flex-start;
   ${({ align }) => {
     if (align) {
       return 'align-items: flex-end;'
     }
-  }
-}
-  `
+  }}
+
+  ${mq.handheld`
+    justify-content: center;
+  `}
+`
 
 export {
   PopoverBackground,
