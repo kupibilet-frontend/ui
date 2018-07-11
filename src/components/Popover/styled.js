@@ -139,6 +139,12 @@ const PopoverBackground = styled.div`
   padding: 12px;
   display: flex;
   flex-direction: column;
+
+  ${mq.handheld`
+    max-width: auto;
+    flex: 1;
+    margin: 12px;
+  `}
   `
 
 const HeaderText = styled(Text)`
