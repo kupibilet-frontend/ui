@@ -11,6 +11,7 @@ import { SuggestionsContainer } from 'components/Autocomplete/styled'
 const StyledContainer = styled(SuggestionsContainer)`
   min-width: 180px;
   width: 100%;
+  position: relative;
 `
 
 const SectionHeader = styled.div`
