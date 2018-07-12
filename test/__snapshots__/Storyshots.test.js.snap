@@ -8966,7 +8966,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 }
 
 .c8 {
-  min-width: 90px;
+  min-width: 180px;
   width: 100%;
   position: relative;
 }
@@ -9296,7 +9296,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 }
 
 .c8 {
-  min-width: 90px;
+  min-width: 180px;
   width: 100%;
   position: relative;
 }
@@ -9627,7 +9627,7 @@ exports[`Storyshots Controls/Select default 1`] = `
 }
 
 .c8 {
-  min-width: 90px;
+  min-width: 180px;
   width: 100%;
   position: relative;
 }
