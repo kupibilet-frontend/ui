@@ -122,6 +122,7 @@ const PopoverDot = styled.div`
   border-radius: 50%;
   background: ${(props) => getBackgroundColor(props)};
 
+  /* На телефона и планшетах скрывать точку */
   ${mq.handheld`
     display: none;
   `}
@@ -140,6 +141,9 @@ const PopoverBackground = styled.div`
   display: flex;
   flex-direction: column;
 
+  /* Отступ от края экрана в 12px, и сверху,
+     так как из за скрытой точки, отступа сверху нет
+   */
   ${mq.handheld`
     max-width: auto;
     flex: 1;
@@ -168,6 +172,7 @@ const PopoverContainer = styled.div`
     `
   }}
   z-index: 100;
+  /* Растягивание контейнера на всю ширину экрана для планшетов и телефонов */
   ${mq.handheld`
     width: 100%;
     right: 0;
