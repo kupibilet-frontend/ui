@@ -9,7 +9,7 @@ import { SuggestionsContainer } from 'components/Autocomplete/styled'
 
 
 const StyledContainer = styled(SuggestionsContainer)`
-  min-width: 180px;
+  min-width: 90px;
   width: 100%;
   position: relative;
 `
