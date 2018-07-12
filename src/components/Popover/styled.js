@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import { transparentize } from 'polished'
 import Text from 'components/Typography/Text'
+import mq from 'utils/media-queries'
 
 const dotShift = 7
 
@@ -98,14 +99,16 @@ const PositionWrapper = styled.div`
 `
 const PlacementWrapper = styled.div`
   position: absolute;
-  ${({ placement }) => subPositions[placement]
-}
-${({ align }) => {
+  ${({ placement }) => subPositions[placement]}
+  ${({ align }) => {
     if (align) {
       return subPositions[align]
     }
-  }
-}
+  }}
+
+  ${mq.handheld`
+    width: 100%;
+  `}
   `
 
 const PopoverDot = styled.div`
@@ -118,6 +121,11 @@ const PopoverDot = styled.div`
   margin: ${({ placement }) => dotMargins[placement]}
   border-radius: 50%;
   background: ${(props) => getBackgroundColor(props)};
+
+  /* На телефона и планшетах скрывать точку */
+  ${mq.handheld`
+    display: none;
+  `}
 `
 
 const PopoverBackground = styled.div`
@@ -132,6 +140,15 @@ const PopoverBackground = styled.div`
   padding: 12px;
   display: flex;
   flex-direction: column;
+
+  /* Отступ от края экрана в 12px, и сверху,
+     так как из за скрытой точки, отступа сверху нет
+   */
+  ${mq.handheld`
+    max-width: auto;
+    flex: 1;
+    margin: 12px;
+  `}
   `
 
 const HeaderText = styled(Text)`
@@ -153,29 +170,34 @@ const PopoverContainer = styled.div`
       top: ${coords.top}px;
       left: ${coords.left}px;
     `
-  }
-}
-z-index: 100;
+  }}
+  z-index: 100;
+  /* Растягивание контейнера на всю ширину экрана для планшетов и телефонов */
+  ${mq.handheld`
+    width: 100%;
+    right: 0;
+    left: 0;
+  `}
   `
 
 
 const RelativeWrapper = styled.div`
   position: relative;
   display: flex;
-  flex-direction: ${ ({ placement, align }) =>
-    getFlexDirection(placement, align)
-};
-flex-wrap: ${({ placement }) => {
+  flex-direction: ${ ({ placement, align }) => getFlexDirection(placement, align)};
+  flex-wrap: ${({ placement }) => {
     if (placement === 'top' || placement === 'bottom') return 'wrap'
-  }
-};
+  }};
   justify-content: flex-start;
   ${({ align }) => {
     if (align) {
       return 'align-items: flex-end;'
     }
-  }
-}
+  }}
+
+  ${mq.handheld`
+    justify-content: center;
+  `}
   `
 
 export {
