@@ -21,7 +21,7 @@ export const SuggestionContainer = styled.div`
       fill: ${({ theme }) => theme.color.textDarker};
     }
     &::after {
-      background: linear-gradient(to left, ${({ theme }) => theme.color.secondaryLightest} 25%, transparent);
+      background: linear-gradient(to left, ${({ theme }) => theme.color.secondaryLightest} 25%, transparent 0%);
     }
   }
   &::after {
@@ -34,7 +34,7 @@ export const SuggestionContainer = styled.div`
       ${({ theme, isHighlighted }) => (isHighlighted
     ? theme.color.secondaryLightest
     : theme.color.background
-  )} 25%, transparent);
+  )} 25%, transparent 0%);
   }
 `
 export const SuggestionIcon = styled.div`
