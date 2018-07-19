@@ -6,11 +6,6 @@ import mq from 'utils/media-queries'
 
 export default css`
   position: relative;
-
-  ${mq.mobile`
-    position: static;
-  `}
-
   .react-autosuggest__container {}
   .react-autosuggest__container--open {}
   .react-autosuggest__input {
@@ -62,11 +57,11 @@ export const SuggestionsContainer = styled.div`
   background: ${({ theme }) => theme.color.background};
 
   ${mq.mobile`
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
+    height: fit-content;
+    width: 90vw;
+    left: 0;
+    max-height: 100vh;
+    overflow: scroll;
   `}
 
 `

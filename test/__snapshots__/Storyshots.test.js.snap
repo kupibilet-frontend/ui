@@ -3768,18 +3768,13 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
 @media screen and (max-width:599px) {
   .responsive .c7,
   .responsive-booking .c7 {
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 90vw;
+    left: 0;
+    max-height: 100vh;
+    overflow: scroll;
   }
 }
 
@@ -8968,24 +8963,18 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
-  position: relative;
 }
 
 @media screen and (max-width:599px) {
   .responsive .c9,
   .responsive-booking .c9 {
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 90vw;
+    left: 0;
+    max-height: 100vh;
+    overflow: scroll;
   }
 }
 
@@ -9298,24 +9287,18 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
-  position: relative;
 }
 
 @media screen and (max-width:599px) {
   .responsive .c9,
   .responsive-booking .c9 {
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 90vw;
+    left: 0;
+    max-height: 100vh;
+    overflow: scroll;
   }
 }
 
@@ -9629,24 +9612,18 @@ exports[`Storyshots Controls/Select default 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
-  position: relative;
 }
 
 @media screen and (max-width:599px) {
   .responsive .c9,
   .responsive-booking .c9 {
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 90vw;
+    left: 0;
+    max-height: 100vh;
+    overflow: scroll;
   }
 }
 
