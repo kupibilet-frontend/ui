@@ -20,7 +20,6 @@ const SectionHeader = styled.div`
   color: ${({ theme }) => theme.color.miscDark};
 `
 
-
 type SectionObject = {
   title? : string,
 }
