@@ -11,7 +11,6 @@ import { SuggestionsContainer } from 'components/Autocomplete/styled'
 const StyledContainer = styled(SuggestionsContainer)`
   min-width: 90px;
   width: 100%;
-  position: relative;
 `
 
 const SectionHeader = styled.div`
@@ -20,7 +19,6 @@ const SectionHeader = styled.div`
   padding-left: 9px;
   color: ${({ theme }) => theme.color.miscDark};
 `
-
 
 type SectionObject = {
   title? : string,
