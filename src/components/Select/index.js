@@ -5,13 +5,17 @@ import Autocomplete from 'components/Autocomplete'
 import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
+import { shadowSmall } from 'utils/shadows'
+import mq from 'utils/media-queries'
 import { SuggestionsContainer } from 'components/Autocomplete/styled'
 
 
 const StyledContainer = styled(SuggestionsContainer)`
   min-width: 90px;
   width: 100%;
-  position: relative;
+  ${mq.mobile`
+    ${shadowSmall};
+  `}
 `
 
 const SectionHeader = styled.div`
