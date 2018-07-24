@@ -54,7 +54,7 @@
     "babel-preset-stage-2": "~6.24.1",
     "chalk": "^2.1.0",
     "classnames": "~2.2.5",
-    "eslint-config-kupibilet": "^9.3.0",
+    "eslint-config-kupibilet": "^10.0.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
     "flow-bin": "^0.74.0",
     "glob": "^7.1.2",
