@@ -8968,7 +8968,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
-  position: relative;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
 }
 
 @media screen and (max-width:599px) {
@@ -9298,7 +9298,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
-  position: relative;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
 }
 
 @media screen and (max-width:599px) {
@@ -9629,7 +9629,7 @@ exports[`Storyshots Controls/Select default 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
-  position: relative;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
 }
 
 @media screen and (max-width:599px) {
