@@ -8968,6 +8968,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
 }
 
 @media screen and (max-width:599px) {
@@ -8985,13 +8986,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   .responsive .c1,
   .responsive-booking .c1 {
     position: static;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   }
 }
 
@@ -9304,6 +9298,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
 }
 
 @media screen and (max-width:599px) {
@@ -9321,13 +9316,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   .responsive .c1,
   .responsive-booking .c1 {
     position: static;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   }
 }
 
@@ -9641,6 +9629,7 @@ exports[`Storyshots Controls/Select default 1`] = `
 .c8 {
   min-width: 90px;
   width: 100%;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
 }
 
 @media screen and (max-width:599px) {
@@ -9658,13 +9647,6 @@ exports[`Storyshots Controls/Select default 1`] = `
   .responsive .c1,
   .responsive-booking .c1 {
     position: static;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
   }
 }
 
