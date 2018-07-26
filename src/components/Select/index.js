@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
+import mq from 'utils/media-queries'
 import Autocomplete from 'components/Autocomplete'
 import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
@@ -12,7 +13,10 @@ import { SuggestionsContainer } from 'components/Autocomplete/styled'
 const StyledContainer = styled(SuggestionsContainer)`
   min-width: 90px;
   width: 100%;
-  ${shadowSmall}
+  ${mq.mobile`
+    ${shadowSmall};
+    margin: 3px 0 0;
+  `}
 `
 
 const SectionHeader = styled.div`
@@ -20,6 +24,14 @@ const SectionHeader = styled.div`
   line-height: 30px;
   padding-left: 9px;
   color: ${({ theme }) => theme.color.miscDark};
+`
+
+const StyledAutocomplete = Autocomplete.extend`
+  && {
+    ${mq.mobile`
+      position: relative;
+    `}
+  }
 `
 
 
@@ -178,7 +190,7 @@ export class Select extends React.Component <Props, State> {
       selectedSuggestion,
     } = this.props
     return (
-      <Autocomplete
+      <StyledAutocomplete
         {...this.props}
         suggestions={isOpen ? suggestions : emptySuggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
