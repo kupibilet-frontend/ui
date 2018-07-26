@@ -1,18 +1,32 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
+import mq from 'utils/media-queries'
 import Autocomplete from 'components/Autocomplete'
 import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
 import { shadowSmall } from 'utils/shadows'
-import { SuggestionsContainer } from 'components/Autocomplete/styled'
+import { borderRadiusSmall } from 'utils/borderRadius'
 
-
-const StyledContainer = styled(SuggestionsContainer)`
+const StyledContainer = styled.div`
+  margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
+  padding: 3px 0;
+  position: absolute;
+  top: 100%;
   ${shadowSmall}
+  ${borderRadiusSmall.all}
+  overflow: hidden;
+  z-index: 10;
+  background: ${({ theme }) => theme.color.background};
+
+  ${mq.mobile`
+    padding: 0;
+    top: initial;
+  `}
+
 `
 
 const SectionHeader = styled.div`
@@ -20,6 +34,14 @@ const SectionHeader = styled.div`
   line-height: 30px;
   padding-left: 9px;
   color: ${({ theme }) => theme.color.miscDark};
+`
+
+const StyledAutocomplete = Autocomplete.extend`
+  && {
+    ${mq.mobile`
+      position: relative;
+    `}
+  }
 `
 
 
@@ -178,7 +200,7 @@ export class Select extends React.Component <Props, State> {
       selectedSuggestion,
     } = this.props
     return (
-      <Autocomplete
+      <StyledAutocomplete
         {...this.props}
         suggestions={isOpen ? suggestions : emptySuggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
