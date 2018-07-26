@@ -7,16 +7,26 @@ import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
 import { shadowSmall } from 'utils/shadows'
-import { SuggestionsContainer } from 'components/Autocomplete/styled'
+import { borderRadiusSmall } from 'utils/borderRadius'
 
-
-const StyledContainer = styled(SuggestionsContainer)`
+const StyledContainer = styled.div`
+  margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
+  padding: 3px 0;
+  position: absolute;
+  top: 100%;
+  ${shadowSmall}
+  ${borderRadiusSmall.all}
+  overflow: hidden;
+  z-index: 10;
+  background: ${({ theme }) => theme.color.background};
+
   ${mq.mobile`
-    ${shadowSmall};
-    margin: 3px 0 0;
+    padding: 0;
+    top: initial;
   `}
+
 `
 
 const SectionHeader = styled.div`
