@@ -8781,19 +8781,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   align-items: center;
 }
 
-.c9 {
-  margin: 3px 0 0;
-  padding: 3px 0;
-  position: absolute;
-  top: 100%;
-  width: 300px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
-  background: #ffffff;
-}
-
 .c1 {
   position: relative;
 }
@@ -8966,26 +8953,38 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 }
 
 .c8 {
+  margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
+  padding: 3px 0;
+  position: absolute;
+  top: 100%;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c9,
-  .responsive-booking .c9 {
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
-  }
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+  background: #ffffff;
 }
 
 @media screen and (max-width:599px) {
   .responsive .c1,
   .responsive-booking .c1 {
     position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1.c1,
+  .responsive-booking .c1.c1 {
+    position: relative;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    padding: 0;
+    top: initial;
   }
 }
 
@@ -9050,7 +9049,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8 c9"
+      className="react-autosuggest__suggestions-container c8"
       id="react-autowhatever-1"
     />
   </div>
@@ -9109,19 +9108,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c9 {
-  margin: 3px 0 0;
-  padding: 3px 0;
-  position: absolute;
-  top: 100%;
-  width: 300px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
-  background: #ffffff;
 }
 
 .c1 {
@@ -9296,26 +9282,38 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 }
 
 .c8 {
+  margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
+  padding: 3px 0;
+  position: absolute;
+  top: 100%;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c9,
-  .responsive-booking .c9 {
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
-  }
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+  background: #ffffff;
 }
 
 @media screen and (max-width:599px) {
   .responsive .c1,
   .responsive-booking .c1 {
     position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1.c1,
+  .responsive-booking .c1.c1 {
+    position: relative;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    padding: 0;
+    top: initial;
   }
 }
 
@@ -9377,7 +9375,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8 c9"
+      className="react-autosuggest__suggestions-container c8"
       id="react-autowhatever-1"
     />
   </div>
@@ -9436,19 +9434,6 @@ exports[`Storyshots Controls/Select default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c9 {
-  margin: 3px 0 0;
-  padding: 3px 0;
-  position: absolute;
-  top: 100%;
-  width: 300px;
-  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-  border-radius: 3px;
-  overflow: hidden;
-  z-index: 10;
-  background: #ffffff;
 }
 
 .c1 {
@@ -9627,26 +9612,38 @@ exports[`Storyshots Controls/Select default 1`] = `
 }
 
 .c8 {
+  margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
+  padding: 3px 0;
+  position: absolute;
+  top: 100%;
   box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c9,
-  .responsive-booking .c9 {
-    padding: 0;
-    top: initial;
-    margin: 12px auto 0;
-    box-shadow: none;
-    width: 100%;
-  }
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+  background: #ffffff;
 }
 
 @media screen and (max-width:599px) {
   .responsive .c1,
   .responsive-booking .c1 {
     position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1.c1,
+  .responsive-booking .c1.c1 {
+    position: relative;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    padding: 0;
+    top: initial;
   }
 }
 
@@ -9708,7 +9705,7 @@ exports[`Storyshots Controls/Select default 1`] = `
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8 c9"
+      className="react-autosuggest__suggestions-container c8"
       id="react-autowhatever-1"
     />
   </div>
