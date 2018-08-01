@@ -33,6 +33,10 @@
   },
   "author": "Kupibilet.ru Frontend Team",
   "license": "MIT",
+  "//": "See https://github.com/react-component/tabs/issues/133",
+  "resolutions": {
+    "rc-tabs": "9.3.0"
+  },
   "devDependencies": {
     "@kupibilet/icons": "~5.3.0",
     "@kupibilet/moment": "^0.0.3",
@@ -86,7 +90,7 @@
     "@kupibilet/react-dates": "^12.3.0",
     "@kupibilet/react-media": "^1.5.1",
     "rc-collapse": "^1.9.0",
-    "rc-tabs": "^9.1.10",
+    "rc-tabs": "9.3.0",
     "react-autosuggest": "^9.0.0",
     "react-portal": "^4.1.4",
     "rheostat": "^2.1.3",
