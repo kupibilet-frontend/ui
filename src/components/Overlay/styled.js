@@ -59,6 +59,7 @@ export const OverlayContentWrap = styled.div`
   ${mq.desktop`
     animation-name: ${slide};
     animation-duration: 0.35s;
+    padding: 24px 0;
   `}
   ${mq.handheld`
     height: 100%;
