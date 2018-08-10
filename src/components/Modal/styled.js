@@ -33,10 +33,6 @@ export const ModalContent = styled.div`
 
   width: ${(props) => getWidth(props.size)}px;
 
-  ${mq.desktop`
-    margin: 24px 0;
-  `}
-
   ${mq.handheld`
     padding: 0 18px;
     border-radius: 0;
