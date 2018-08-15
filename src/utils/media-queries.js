@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from 'styled-components'
 import Media from '@kupibilet/react-media'
 
-const queries = {
+export const queries = {
   isMobile: 'screen and (max-width: 599px)',
   isTablet: 'screen and (min-width: 600px) and (max-width: 999px)',
   isHandheld: 'screen and (max-width: 999px)',
