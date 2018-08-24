@@ -12,13 +12,13 @@ type Props = {
 /* eslint-disable react/prop-types */
 export default class DayCell extends React.PureComponent<void, Props, void> {
   render() {
-    const { day, isCheap, cost } = this.props
+    const { day, isCheap, cost, showPrice } = this.props
 
     return (
       <Day>
         { day.format('D') }
         {
-          cost ? (
+          (cost && showPrice) ? (
             <AvgCost isCheap={isCheap}>
               { cost.toLocaleString(['ru', 'en-US']) }
             </AvgCost>
