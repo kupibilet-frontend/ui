@@ -134,11 +134,13 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   }
 
   handleMouseLeave = () => {
-    if (this.hoverTimeout) clearTimeout(this.hoverTimeout)
+    if (this.hoverTimeout) {
+      clearTimeout(this.hoverTimeout)
+      this.hoverTimeout = null
+    }
     this.setState({
       isOpen: false,
     })
-    this.hoverTimeout = null
   }
 
   handleMouseEnter = () => {
