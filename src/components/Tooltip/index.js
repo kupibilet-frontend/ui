@@ -135,6 +135,8 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 
   handleMouseLeave = () => {
     clearTimeout(this.hoverTimeout)
+    this.hoverTimeout = null
+
     this.setState({
       isOpen: false,
     })
@@ -144,7 +146,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     this.hoverTimeout = setTimeout(() => {
       this.coords = this.getCoordinates(this.childRef)
       this.setState({
-        isOpen: true,
+        isOpen: Boolean(this.hoverTimeout),
       })
     }, 150)
   }
