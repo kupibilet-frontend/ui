@@ -90,7 +90,7 @@
     "@kupibilet/react-dates": "^12.3.0",
     "@kupibilet/react-media": "^1.5.1",
     "rc-collapse": "^1.9.0",
-    "rc-tabs": "9.3.0",
+    "rc-tabs": "9.4.4",
     "react-autosuggest": "^9.0.0",
     "react-portal": "^4.1.4",
     "rheostat": "^2.1.3",
