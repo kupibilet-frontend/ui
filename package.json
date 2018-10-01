@@ -37,6 +37,11 @@
   "resolutions": {
     "rc-tabs": "9.3.0"
   },
+  "greenkeeper": {
+    "lockfiles": {
+      "outOfRangeUpdatesOnly": true
+    }
+  },
   "devDependencies": {
     "@kupibilet/icons": "~5.3.0",
     "@kupibilet/moment": "^0.0.3",
