@@ -29,6 +29,8 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     updateKnob('value', 'text', value || '')
   }
 
+  // TODO airbnb config for `react/sort-comp` are missing UNSAFE_ lifecycles
+  // eslint-disable-next-line react/sort-comp
   onSuggestionSelected = (event, { suggestion, suggestionValue }) => {
     this.setState({
       suggest: suggestion,

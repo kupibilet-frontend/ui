@@ -1,17 +1,44 @@
-{
-  "extends": "kupibilet",
-  "settings": {
-    "import/resolver": {
-      "babel-module": {}
-    }
-  },
-  "rules": {
-    "import/no-named-as-default": "off",
-    "react/no-multi-comp": "off"
-  },
-  "globals": {
-    "InputEvent": true,
-    "React$Element": true,
-    "FieldProps": true
-  }
-}
+extends: kupibilet
+
+settings:
+  import/resolver:
+    babel-module:
+      empty: true
+
+rules:
+  no-else-return: off
+  object-curly-newline:
+    - error
+    -
+      ObjectExpression:
+        minProperties: 8
+        multiline: true
+        consistent: true
+      ObjectPattern:
+        minProperties: 8
+        multiline: true
+        consistent: true
+      ImportDeclaration:
+        minProperties: 8
+        multiline: true
+        consistent: true
+      ExportDeclaration:
+        minProperties: 8
+        multiline: true
+        consistent: true
+  import/no-named-as-default: off
+  react/no-multi-comp: off
+  # rules that impossible to implement in ui from airbnb config
+  lines-between-class-members: off # may be fixed with babel 7
+  react/require-default-props:
+    - error
+    - forbidDefaultForRequired: false
+  react/default-props-match-prop-types: off # dosn't work with `babel-plugin-flow-react-proptypes`
+  react/jsx-one-expression-per-line: off
+  react/destructuring-assignment: off
+  jsx-a11y/anchor-is-valid: off
+
+globals:
+  InputEvent: true
+  React$Element: true
+  FieldProps: true

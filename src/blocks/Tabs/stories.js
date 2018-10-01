@@ -29,17 +29,17 @@ storiesOf('Blocks', module)
     )
     \`\`\`
   `, () => {
-      const activeKey = text('activeKey', '2')
+    const activeKey = text('activeKey', '2')
 
-      return (
-        <Tabs
-          activeKey={activeKey}
-          renderTabBar={renderTabBar}
-          onTabChange={onTabChange}
-        >
-          <TabPane tab="1. Бронирование" key="1">First tab</TabPane>
-          <TabPane tab="2. Оплата" key="2">Second tab</TabPane>
-          <TabPane tab="3. Получение билета" key="3">Third tab</TabPane>
-        </Tabs>
-      )
-    })
+    return (
+      <Tabs
+        activeKey={activeKey}
+        renderTabBar={renderTabBar}
+        onTabChange={onTabChange}
+      >
+        <TabPane tab="1. Бронирование" key="1">First tab</TabPane>
+        <TabPane tab="2. Оплата" key="2">Second tab</TabPane>
+        <TabPane tab="3. Получение билета" key="3">Third tab</TabPane>
+      </Tabs>
+    )
+  })

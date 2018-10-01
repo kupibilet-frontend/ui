@@ -371,12 +371,9 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       <div
         className="rc-collapse"
         role="tablist"
-        style={undefined}
       >
         <div
           className="rc-collapse-item c8 c9"
-          id={undefined}
-          style={undefined}
         >
           <div
             aria-expanded={false}
@@ -528,11 +525,8 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     className="rc-tabs rc-tabs-top"
     style={Object {}}
   >
-    <div
-      className={undefined}
-    >
+    <div>
       <span
-        aria-disabled={undefined}
         className="c1"
         onFocus={[Function]}
         role="tab"
@@ -541,7 +535,6 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
         1. Бронирование
       </span>
       <span
-        aria-disabled={undefined}
         className="c2"
         onFocus={[Function]}
         role="tab"
@@ -550,7 +543,6 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
         2. Оплата
       </span>
       <span
-        aria-disabled={undefined}
         className="c1"
         onFocus={[Function]}
         role="tab"
@@ -561,19 +553,16 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     </div>
     <div
       className="rc-tabs-content rc-tabs-content-no-animated"
-      style={undefined}
     >
       <div
         aria-hidden="true"
         className="rc-tabs-tabpane rc-tabs-tabpane-inactive"
         role="tabpanel"
-        style={undefined}
       />
       <div
         aria-hidden="false"
         className="rc-tabs-tabpane rc-tabs-tabpane-active"
         role="tabpanel"
-        style={undefined}
       >
         Second tab
       </div>
@@ -581,7 +570,6 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
         aria-hidden="true"
         className="rc-tabs-tabpane rc-tabs-tabpane-inactive"
         role="tabpanel"
-        style={undefined}
       />
     </div>
   </div>
@@ -631,12 +619,9 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
     <div
       className="rc-collapse"
       role="tablist"
-      style={undefined}
     >
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -651,8 +636,6 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -667,8 +650,6 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -729,12 +710,9 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
     <div
       className="rc-collapse"
       role={null}
-      style={undefined}
     >
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -749,8 +727,6 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -765,8 +741,6 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -827,12 +801,9 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
     <div
       className="rc-collapse"
       role={null}
-      style={undefined}
     >
       <div
         className="rc-collapse-item rc-collapse-item-active c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={true}
@@ -861,8 +832,6 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -877,8 +846,6 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
       </div>
       <div
         className="rc-collapse-item c1"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded={false}
@@ -1232,21 +1199,21 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   display: flex;
 }
 
-.c1 .styled__SwapIcon-fbcehg {
+.c1 .c10 {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .styled__SwapIcon-fbcehg {
+.c1:hover .c10 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c1 .styled__SwapIcon-fbcehg,
-  .responsive-booking .c1 .styled__SwapIcon-fbcehg {
+  .responsive .c1 .c10,
+  .responsive-booking .c1 .c10 {
     opacity: 1;
   }
 }
@@ -1259,7 +1226,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   >
     <button
       className="c2"
-      disabled={undefined}
       size="large"
     >
       <span
@@ -1303,7 +1269,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
     </div>
     <button
       className="c9"
-      disabled={undefined}
       size="large"
     >
       <span
@@ -1936,7 +1901,7 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
   display: inline-flex;
 }
 
-.c1 .Dropdown__DropdownContent-lgcYZG {
+.c1 .c5 {
   left: auto;
   width: 300px;
 }
@@ -1954,7 +1919,6 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
         click to open  
         <button
           className="c3"
-          disabled={undefined}
           size="normal"
         >
           <span
@@ -2036,7 +2000,6 @@ exports[`Storyshots Complex controls/Modal Bottom on mobile 1`] = `
   <div>
     <button
       className="c1"
-      disabled={undefined}
       onClick={[Function]}
       size="normal"
     >
@@ -2117,7 +2080,6 @@ exports[`Storyshots Complex controls/Modal With sizes 1`] = `
   <div>
     <button
       className="c1"
-      disabled={undefined}
       onClick={[Function]}
       size="normal"
     >
@@ -3816,7 +3778,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           placeholder="Туда"
           role="combobox"
           rows="1"
-          size={undefined}
           type="text"
           value=""
           wrap="off"
@@ -5611,13 +5572,13 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   display: flex;
 }
 
-.c2 .styled__SwapIcon-fbcehg {
+.c2 .c7 {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c2:hover .styled__SwapIcon-fbcehg {
+.c2:hover .c7 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -5932,8 +5893,8 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c2 .styled__SwapIcon-fbcehg,
-  .responsive-booking .c2 .styled__SwapIcon-fbcehg {
+  .responsive .c2 .c7,
+  .responsive-booking .c2 .c7 {
     opacity: 1;
   }
 }
@@ -5943,7 +5904,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 >
   <div
     className="c1"
-    disabled={undefined}
     size="large"
   >
     <div
@@ -5951,7 +5911,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
     >
       <input
         className="c3"
-        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="DD"
@@ -5960,7 +5919,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       />
       <input
         className="c4"
-        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="MM"
@@ -5969,7 +5927,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       />
       <input
         className="c5"
-        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="YYYY"
@@ -6004,13 +5961,13 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   display: flex;
 }
 
-.c1 .styled__SwapIcon-fbcehg {
+.c1 .c9 {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .styled__SwapIcon-fbcehg {
+.c1:hover .c9 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -6396,8 +6353,8 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c1 .styled__SwapIcon-fbcehg,
-  .responsive-booking .c1 .styled__SwapIcon-fbcehg {
+  .responsive .c1 .c9,
+  .responsive-booking .c1 .c9 {
     opacity: 1;
   }
 }
@@ -6410,12 +6367,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   >
     <div
       className="c2"
-      disabled={undefined}
       size="large"
     >
       <input
         className="c3"
-        disabled={undefined}
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -6429,12 +6384,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
     </div>
     <div
       className="c5"
-      disabled={undefined}
       size="large"
     >
       <input
         className="c6"
-        disabled={undefined}
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -6448,12 +6401,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
     </div>
     <div
       className="c7"
-      disabled={undefined}
       size="large"
     >
       <input
         className="c8"
-        disabled={undefined}
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -6620,12 +6571,10 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
 >
   <div
     className="c1"
-    disabled={undefined}
     size="large"
   >
     <input
       className="c2"
-      disabled={undefined}
       form="Controls/Input"
       name="input"
       onBlur={[Function]}
@@ -7778,7 +7727,6 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"
@@ -7956,7 +7904,6 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"
@@ -8079,7 +8026,6 @@ exports[`Storyshots Controls/Popover default 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"
@@ -8456,16 +8402,20 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
   <div
     className="c1 c2"
     disabled={false}
+    onBlur={null}
+    onFocus={null}
     placeholder="Ваш номер телефона"
     size="large"
+    value={null}
   >
     <input
       className="c3 c4"
       disabled={false}
-      onBlur={[Function]}
-      onFocus={[Function]}
+      onBlur={null}
+      onFocus={null}
       placeholder="Ваш номер телефона"
       size="large"
+      value={null}
     />
     
   </div>
@@ -8539,13 +8489,13 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   display: flex;
 }
 
-.c1 .styled__SwapIcon-fbcehg {
+.c1 .c8 {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .styled__SwapIcon-fbcehg {
+.c1:hover .c8 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
@@ -8683,8 +8633,8 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
 }
 
 @media screen and (max-width:999px) {
-  .responsive .c1 .styled__SwapIcon-fbcehg,
-  .responsive-booking .c1 .styled__SwapIcon-fbcehg {
+  .responsive .c1 .c8,
+  .responsive-booking .c1 .c8 {
     opacity: 1;
   }
 }
@@ -8698,22 +8648,25 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
     <div
       className="c2 c3"
       disabled={false}
+      onBlur={null}
+      onFocus={null}
       placeholder="Ваш номер телефона"
       size="large"
+      value={null}
     >
       <input
         className="c4 c5"
         disabled={false}
-        onBlur={[Function]}
-        onFocus={[Function]}
+        onBlur={null}
+        onFocus={null}
         placeholder="Ваш номер телефона"
         size="large"
+        value={null}
       />
       
     </div>
     <button
       className="c6"
-      disabled={undefined}
       size="large"
     >
       <span
@@ -8996,7 +8949,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   >
     <div
       className="c2"
-      disabled={undefined}
       size="normal"
     >
       <input
@@ -9007,7 +8959,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         aria-owns="react-autowhatever-1"
         autoComplete="off"
         className="react-autosuggest__input c3"
-        disabled={undefined}
         form="Controls/Select"
         name="MadRabbitField"
         onBlur={[Function]}
@@ -9833,7 +9784,6 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={0}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -9854,7 +9804,6 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -10373,7 +10322,6 @@ exports[`Storyshots Controls/Slider default 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={0}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -10394,7 +10342,6 @@ exports[`Storyshots Controls/Slider default 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -10515,7 +10462,6 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"

@@ -7,7 +7,7 @@ type Props = {
   onChange?: (InputEvent) => *,
   checked: boolean,
   disabled?: boolean,
-  children?: React$Element<*>,
+  children: React$Element<*>,
   name?: string,
   className?: string,
 }

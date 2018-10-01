@@ -7,10 +7,17 @@ import type { Element } from 'react'
 
 type Props = {
   children: Element<*>,
-  freezableElement?: 'DEPRECATED', // eslint-disable-line react/no-unused-prop-types
+  freezableElement?: 'DEPRECATED and don`t needed anymore', // eslint-disable-line react/no-unused-prop-types
 }
 
 class Scrollfix extends Component<Props> {
+  static defaultProps = {
+    freezableElement: null,
+  }
+
+  element = {}
+  lastY = 0
+
   componentDidMount() {
     // eslint-disable-next-line react/no-find-dom-node
     this.element = ReactDOM.findDOMNode(this)
@@ -38,7 +45,7 @@ class Scrollfix extends Component<Props> {
   }
 
   onScroll = (event: Event, deltaY: number) => {
-    const scrollTop = this.element.scrollTop
+    const { scrollTop } = this.element
     const touchesLength = get(event, 'touches.length', 0)
     if (scrollTop <= 1 && deltaY < 0 && touchesLength < 2) {
       event.preventDefault()
@@ -54,9 +61,6 @@ class Scrollfix extends Component<Props> {
   getTouchStartCoord = (event: Event) => {
     this.lastY = event.changedTouches[0].clientY
   }
-
-  element = {}
-  lastY = 0
 
   render() {
     const {

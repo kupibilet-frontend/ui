@@ -25,7 +25,7 @@ type SwapProps = {
 }
 
 /* eslint-disable react/prop-types */
-class Swap extends React.Component<{}, SwapProps, void> {
+class Swap extends React.PureComponent<{}, SwapProps, void> {
   static defaultProps = {
     onSwap: null,
   }

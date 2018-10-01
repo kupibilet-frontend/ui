@@ -13,4 +13,4 @@
  */
 
 export { Tabs, TabPane, TabBar } from 'components/Tabs'
-export { default as Tab } from 'blocks/Tabs/Tab.js'
+export { default as Tab } from 'blocks/Tabs/Tab'
