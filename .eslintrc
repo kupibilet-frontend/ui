@@ -7,7 +7,11 @@
   },
   "rules": {
     "import/no-named-as-default": "off",
-    "react/no-multi-comp": "off"
+    "react/no-multi-comp": "off",
+    "// rules that impossible to implement in ui from airbnb config": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   },
   "globals": {
     "InputEvent": true,
