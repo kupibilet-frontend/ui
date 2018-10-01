@@ -74,7 +74,7 @@
     "lodash": "^4.17.4",
     "mkp": "^1.0.1",
     "move-binaries-to-bin": "~1.0.1",
-    "polished": "^1.3.0",
+    "polished": "^2.0.1",
     "prop-types": "^15.6.0",
     "raw-loader": "~0.5.1",
     "react": "^16.4.0",
