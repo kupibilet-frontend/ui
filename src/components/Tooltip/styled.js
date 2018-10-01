@@ -106,12 +106,10 @@ const RelativeWrapper = styled.div`
 
   position: relative;
   display: flex;
-  flex-direction: ${({ placement }) => `
-    ${flexDirections[placement]}
-  `};
+  flex-direction: ${({ placement }) => `${flexDirections[placement]}`};
   justify-content: flex-start;
   align-items: center;
-`
+  `
 
 export {
   TooltipBackground,
