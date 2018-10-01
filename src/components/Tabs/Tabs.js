@@ -21,8 +21,7 @@ class Tabs extends Component<{}, Props, void> {
   )
 
   render() {
-    const props = this.props
-    const { activeKey, children } = props
+    const { activeKey, children, ...props } = this.props
 
     return (
       <RCTabs

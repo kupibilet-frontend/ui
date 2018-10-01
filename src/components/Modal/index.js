@@ -42,7 +42,6 @@ type Props = {
   closeOnEsc: boolean,
   showCloseButton: boolean,
   isOnBottom: boolean,
-  freezableElement?: 'DEPRECATED',
 }
 
 /* eslint-disable react/prop-types */
@@ -59,6 +58,7 @@ class Modal extends React.PureComponent<Props> {
     renderContent: (props) => <Content {...props} />,
     renderFooter: (props) => props.footer && <Footer {...props} />,
 
+    footer: null,
     size: 'wide',
     closeOnOutsideClick: true,
     closeOnEsc: true,

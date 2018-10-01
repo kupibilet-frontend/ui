@@ -42,7 +42,6 @@ storiesOf('Complex controls/Modal', module)
           isOpen={isOpen()}
           onClose={onClose}
           size={size}
-          freezableElement="#root"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
            non neque tincidunt tincidunt. Suspendisse potenti. Phasellus ligula ante,
@@ -75,7 +74,6 @@ storiesOf('Complex controls/Modal', module)
           heading="Поделиться"
           isOpen={isOpen()}
           onClose={onClose}
-          freezableElement="#root"
           size="compact"
           isOnBottom
         >

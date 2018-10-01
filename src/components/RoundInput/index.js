@@ -30,6 +30,24 @@ type State = {
 }
 
 export class RoundInput extends PureComponent<Props, State> {
+  static defaultProps = {
+    active: null,
+    error: null,
+    success: null,
+    disabled: null,
+    placeholder: null,
+    value: null,
+    neighboringInGroup: null,
+    onBlur: null,
+    onFocus: null,
+    leftIcon: null,
+    rightIcon: null,
+    handleLeftIconPress: null,
+    handleRightIconPress: null,
+    innerRef: null,
+    size: null,
+  }
+
   state = {
     isActive: false,
   }
@@ -148,10 +166,11 @@ export class RoundInput extends PureComponent<Props, State> {
             null
           )
         }
-        {error && <StyledError size={size}>
-          {error}
-        </StyledError>
-        }
+        {error && (
+          <StyledError size={size}>
+            {error}
+          </StyledError>
+        )}
       </StyledInputWrapper>
     )
   }

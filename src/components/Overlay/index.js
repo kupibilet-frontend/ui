@@ -12,10 +12,9 @@ import {
 } from './styled'
 
 type Props = {
-  closePortal?: (Event) => void,
+  closePortal: (Event) => void,
   isOnBottom: boolean,
   children: Element<*>,
-  freezableElement?: 'DEPRECATED', // eslint-disable-line react/no-unused-prop-types
 }
 
 class Overlay extends Component<Props, void> {

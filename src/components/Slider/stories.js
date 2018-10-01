@@ -15,7 +15,7 @@ const date2 = moment.utc('2017-01-02')
 const date3 = moment.utc('2017-01-01 04:00')
 
 const formatDate = (date) => date.locale('ru').format('DD MMMM hh:mm')
-const dateToSliderValue = (date) => (+date / 1000 / 60 / 15)
+const dateToSliderValue = (date) => (Number(date) / 1000 / 60 / 15)
 
 
 const generateSliderData = (date) => {

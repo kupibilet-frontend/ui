@@ -43,8 +43,8 @@ const TooltipPortal = (props : PortalProps) => {
     error,
   } = props
 
-  return ((content && isOpen && coords)
-    ? <Portal>
+  return ((content && isOpen && coords) ?
+    <Portal>
       <GlobalStylesScope>
         <TooltipContainer
           top={coords.top}
@@ -110,6 +110,10 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     isOpen: false,
   }
 
+  childRef = null
+  coords = null
+  hoverTimeout = null
+
   componentDidMount() {
     if (this.childRef !== null) {
       this.coords = this.getCoordinates(this.childRef)
@@ -150,10 +154,6 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
       })
     }, 150)
   }
-
-  childRef = null
-  coords = null
-  hoverTimeout = null
 
   render() {
     const {

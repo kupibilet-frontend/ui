@@ -39,8 +39,8 @@ const PopoverPortal = (props : PortalProps) => {
     dotCentering,
     size,
   } = props
-  return ((content && isOpen && coords)
-    ? <Portal>
+  return ((content && isOpen && coords) ?
+    <Portal>
       <GlobalStylesScope>
         <PopoverContainer
           top={coords.top}
