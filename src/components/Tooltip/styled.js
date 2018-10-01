@@ -98,21 +98,20 @@ z-index: 100;
 const RelativeWrapper = styled.div`
   min-width: ${({ width }) => `${width}px`};
   min-height: ${({ height }) => `${height}px`};
-  ${ ({ placement, width }) => {
+  ${({ placement, width }) => {
     if (placement === 'top' || placement === 'bottom') {
       return `max-width: ${width}px;`
     }
-  }
-}
+  }}
+
   position: relative;
   display: flex;
-  flex-direction: ${ ({ placement }) => `
+  flex-direction: ${({ placement }) => `
     ${flexDirections[placement]}
-    `
-};
+  `};
   justify-content: flex-start;
   align-items: center;
-  `
+`
 
 export {
   TooltipBackground,

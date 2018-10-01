@@ -124,7 +124,7 @@ const InnerInput = styled.input`
   background-color: transparent;
   ${({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
     if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup)) {
-      return `border-right: 1px solid ${ disabled ? theme.color.miscLightest : theme.color.misc};`
+      return `border-right: 1px solid ${disabled ? theme.color.miscLightest : theme.color.misc};`
     }
   }}
   ${({ neighboringInGroup, success, error }) => {
