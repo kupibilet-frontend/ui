@@ -12,15 +12,13 @@
     "lint:js": "BABEL_ENV=default eslint \"./src/**/*.js\"",
     "jest": "BABEL_ENV=default jest --bail --no-cache",
     "flow": "flow",
+    "versionize": "versionize",
     "prebuild": "scripts/check-engines.js",
     "build": "BABEL_ENV=esmodules NODE_ENV=production babel src/ -d ./ --ignore stories,test",
     "watch": "yarn build --watch",
-    "//": "---        Git and NPM hooks section        ---",
+    "//": "---        NPM hooks section        ---",
     "postinstall": "move-bin; true",
-    "prepublishOnly": "yarn build",
-    "precommit": "BABEL_ENV=default lint-staged",
-    "prepush": "yarn run test",
-    "versionize": "versionize"
+    "prepublishOnly": "yarn build"
   },
   "engines": {
     "node": ">=10",
