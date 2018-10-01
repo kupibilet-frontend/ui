@@ -95,7 +95,7 @@ const FilterSection = (props) => (
       {props.headerLeft}
       {props.headerRight}
     </Header>
-    {!!props.content &&
+    {Boolean(props.content) &&
       <Content>
         {props.content}
       </Content>

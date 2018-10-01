@@ -50,7 +50,6 @@ CalendarNav.propTypes = {
 /* eslint-disable react/prop-types */
 class DateRangePickerWrapper extends React.PureComponent {
   state = {
-    focusedInput: null,
     hoveredDate: null,
     calendarMonthCursor: null,
   }

@@ -8,6 +8,7 @@ import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
 import { shadowSmall } from 'utils/shadows'
 import { borderRadiusSmall } from 'utils/borderRadius'
+import noop from 'lodash/noop'
 
 const StyledContainer = styled.div`
   margin: 3px 0 0;
@@ -151,6 +152,7 @@ export class Select extends React.Component <Props, State> {
     renderSuggestion: (suggestion : SuggestionObject, props) => (
       <Suggestion suggestion={suggestion} {...props} />
     ),
+    onSuggestionSelected: noop,
   }
 
   state = {

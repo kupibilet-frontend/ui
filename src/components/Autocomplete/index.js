@@ -76,6 +76,8 @@ type State = {
 const getFirstSuggestion = ({ suggestions, multiSection }: Props) => {
   let [suggestion] = suggestions
   if (multiSection && suggestion) {
+    // destructuring dosn't work for assignment in babel
+    // eslint-disable-next-line prefer-destructuring
     suggestion = suggestion[0]
   }
 
@@ -121,7 +123,8 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
   }
   /* eslint-enable react/sort-comp */
 
-  // eslint-disable-next-line camelcase
+  // TODO airbnb config for `react/sort-comp` are missing UNSAFE_ lifecycles
+  // eslint-disable-next-line camelcase, react/sort-comp
   UNSAFE_componentWillReceiveProps(nextProps: Props) {
     const { suggestions, multiSection, inputProps, forceSuggestedValue } = nextProps
     const { value, IATACode, meta } = inputProps

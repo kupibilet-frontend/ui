@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import noop from 'lodash/noop'
 import inRange from 'lodash/inRange'
 
 import {
@@ -37,11 +38,11 @@ type SliderState = {
 type Props = {
   min: number,
   max: number,
-  values?: SliderValues,
+  values: SliderValues,
   disabled: boolean,
-  snap?: boolean,
-  snapPoints?: Array<number>,
-  sliderData?: SliderData,
+  snap: boolean,
+  snapPoints: Array<number>,
+  sliderData: SliderData,
   progressBar: () => Element,
   handle: () => Element,
   onChange?: (SliderValues) => void,
@@ -123,6 +124,8 @@ export default class Slider extends React.Component<Props, State> {
     min: 1,
     max: 100,
     disabled: false,
+    onChange: noop,
+    onValuesUpdated: noop,
   }
   constructor(props : Props) {
     super(props)

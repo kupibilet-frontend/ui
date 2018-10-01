@@ -47,7 +47,8 @@ storiesOf('Controls/Buttons', module)
     >
       {
         text('text', 'Авиабилеты')
-      }</Button>
+      }
+    </Button>
   ))
   .addWithInfo('With left and right icons', () => (
     <Button
@@ -59,7 +60,8 @@ storiesOf('Controls/Buttons', module)
     >
       {
         text('text', 'Авиабилеты')
-      }</Button>
+      }
+    </Button>
   ))
   .addWithInfo('Icon-only button (custom icon)', () => (
     <Button
