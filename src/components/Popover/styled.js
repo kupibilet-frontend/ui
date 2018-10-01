@@ -184,7 +184,7 @@ const PopoverContainer = styled.div`
 const RelativeWrapper = styled.div`
   position: relative;
   display: flex;
-  flex-direction: ${ ({ placement, align }) => getFlexDirection(placement, align)};
+  flex-direction: ${({ placement, align }) => getFlexDirection(placement, align)};
   flex-wrap: ${({ placement }) => {
     if (placement === 'top' || placement === 'bottom') return 'wrap'
   }};
