@@ -10,22 +10,9 @@ rules:
   object-curly-newline:
     - error
     -
-      ObjectExpression:
-        minProperties: 8
-        multiline: true
-        consistent: true
-      ObjectPattern:
-        minProperties: 8
-        multiline: true
-        consistent: true
-      ImportDeclaration:
-        minProperties: 8
-        multiline: true
-        consistent: true
-      ExportDeclaration:
-        minProperties: 8
-        multiline: true
-        consistent: true
+      minProperties: 8
+      multiline: true
+      consistent: true
   import/no-named-as-default: off
   react/no-multi-comp: off
   # rules that impossible to implement in ui from airbnb config
