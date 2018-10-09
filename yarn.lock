@@ -848,6 +848,13 @@
     react-moment-proptypes "^1.5.0"
     react-portal "^3.1.0"
 
+"@kupibilet/react-day-picker@^7.2.5":
+  version "7.2.5"
+  resolved "https://registry.yarnpkg.com/@kupibilet/react-day-picker/-/react-day-picker-7.2.5.tgz#c36ac23df6f6f5e0819907e22dfb8d9943710620"
+  integrity sha512-aSxiGDTi+edch1SBW6R6FRC3iuJmHiaqxU85p84dv7HzD3qV7S/LZ4DaVMee8bNfMhwH8iMccgIR63a3kHhHUA==
+  dependencies:
+    prop-types "^15.6.2"
+
 "@kupibilet/react-media@^1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@kupibilet/react-media/-/react-media-1.5.1.tgz#73b8972681e67400477bfccdbd1f02ceb1b94d5b"
@@ -3400,6 +3407,11 @@ component-indexof@0.0.3:
   resolved "https://registry.yarnpkg.com/component-indexof/-/component-indexof-0.0.3.tgz#11d091312239eb8f32c8f25ae9cb002ffe8d3c24"
   integrity sha1-EdCRMSI5648yyPJa6csAL/6NPCQ=
 
+components@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/components/-/components-0.1.0.tgz#2057c08e9c7bf2662feec95c49e5ff2a9ab85ed5"
+  integrity sha1-IFfAjpx78mYv7slcSeX/Kpq4XtU=
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -3551,7 +3563,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.5.2, create-react-class@^15.6.2:
+create-react-class@^15.5.2, create-react-class@^15.6.2, create-react-class@^15.6.3:
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
   integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
@@ -9199,6 +9211,14 @@ react-treebeard@^2.1.0:
     radium "^0.19.0"
     shallowequal "^0.2.2"
     velocity-react "^1.3.1"
+
+react-visibility-sensor@^4.1.1:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-4.1.3.tgz#9a3e9982caff3616cfece94e118e5b3c6e08ce6a"
+  integrity sha512-X+xKuZc0muwR72/jtWerZbrmBo3F3VQwwm6Aqt+9QCILqOng9JzEnYSOqzrOVA5HZenHm5vAr6yRtO2KKRt9yA==
+  dependencies:
+    create-react-class "^15.6.3"
+    prop-types "^15.6.2"
 
 react@^16.4.0:
   version "16.6.0"
