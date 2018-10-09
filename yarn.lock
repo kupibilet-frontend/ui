@@ -124,10 +124,10 @@
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
   integrity sha1-6pn2EhtKjwZbTHH4VZXbJxRJiAc=
 
-"@kupibilet/icons@~5.3.0":
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.3.1.tgz#ead9d6f5f7cc2da8d76ec1fcabaa6f85dad0e475"
-  integrity sha512-1X90s7fwo/7cn29hqHUo0nJe/mLtK9quh61dtaeo9DzuhFMOp2jqgLOyqHY/sWyNUvNosaVbflVdUETiIVErNQ==
+"@kupibilet/icons@~5.3.23":
+  version "5.3.23"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.3.23.tgz#c6ba1eae5ab39621afc8d3a5f22b0612f20e23da"
+  integrity sha512-p+xRJuGDjP/RBq9/B3QInYjQvZRgEDdBVW0JFo7vTZIFEpfVixGksQRnf1h1LqKoUjh20CqQHY7iM1mQqZ5xqA==
 
 "@kupibilet/moment@^0.0.3":
   version "0.0.3"
