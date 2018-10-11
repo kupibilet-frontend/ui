@@ -1,11 +1,43 @@
-import React, { Fragment } from 'react'
+// @flow
+import React, { PureComponent } from 'react'
 import moment from '@kupibilet/moment'
-import styled from 'styled-components'
-import DayPicker from '@kupibilet/react-day-picker'
-import { Container, Input } from 'components/AirportInput/styled'
-import { StyledDateRange } from './styled'
-import css from '@kupibilet/react-day-picker/lib/style.css'
+import { Portal } from 'react-portal'
+import GlobalStylesScope from 'components/ThemeProvider'
+import H4 from 'components/Typography/H4'
+import Button from 'components/Button'
+import { StyledIcon } from 'components/Modal/styled'
+import MonthCaption from './parts/MonthCaption'
 
+import {
+  StyledDayPicker,
+  DateContainer,
+  DateInput,
+  FakeInputPlaceholder,
+  DateInputWrap,
+  DayPickerWrapper,
+  Navbar,
+  NavbarInfo,
+  NavbarButtons,
+  ExtraText,
+  StyledHeader,
+  WeekdaysWrapper,
+  Weekday,
+  StyledModal,
+  PortalWrapper,
+  StyledCloseButton,
+  ButtonWrapper,
+} from './styled'
+
+type Props = {
+  departureDate: {},
+  flightBackDate: {},
+  isHandleld: Boolean,
+  isMobile: Boolean,
+  onMonthVisibilityChange: () => void,
+  renderDay: () => void,
+  closeCalendar: () => void,
+  onReturnDateUnneeded: () => void,
+}
 const WEEKDAYS_SHORT = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 const MONTHS = [
   'Январь',
@@ -22,38 +54,12 @@ const MONTHS = [
   'Декабрь',
 ]
 
-const ReactPickerDateRange = styled(DayPicker)`
-  ${css}
-`
-
-const DateContainer = styled(Container)`
-  width: 50%;
-`
-
-const DateInput = Input.withComponent('div')
-
-const FakeInputPlaceholder = styled.span`
-  color: ${({ theme }) => theme.color.miscDark};
-  font-weight: 400;
-
-  &:disabled {
-    color: ${({ theme }) => theme.color.misc};
-  }
-`
-
-const DateInputWrap = styled.div`
-  background: ${({ theme }) => theme.color.background};
-  display: flex;
-  padding-bottom: 12px;
-  z-index: 2;
-
-  ${(props) => (props.inModal && `
-    margin-top: 60px;
-    padding: 0 18px;
-    position: fixed;
-    width: 100%;
-  `)}
-`
+const WeekdaysRow = () => {
+  const weekdays = WEEKDAYS_SHORT.map((day) => <Weekday key={day}>{day}</Weekday>)
+  return (
+    <WeekdaysWrapper>{weekdays}</WeekdaysWrapper>
+  )
+}
 
 const FakeInput = ({
   children,
@@ -63,32 +69,29 @@ const FakeInput = ({
   focused,
   onClick,
   ...props
-}) => {
-
-  return (
-    <DateContainer
-      neighboringInGroup={neighboringInGroup}
-      focused={focused}
-      inModal={props.inModal}
-      // onClick={props.getFocus}
+}) => (
+  <DateContainer
+    neighboringInGroup={neighboringInGroup}
+    focused={focused}
+    inModal={props.inModal}
+    // onClick={props.getFocus}
+  >
+    <DateInput
+      {...props}
+      onClick={onClick}
     >
-      <DateInput
-        {...props}
-        onClick={onClick}
-      >
-        {props.value || <FakeInputPlaceholder>{props.placeholder}</FakeInputPlaceholder>}
-      </DateInput>
-    </DateContainer>
-  )
-}
+      {props.value || <FakeInputPlaceholder>{props.placeholder}</FakeInputPlaceholder>}
+    </DateInput>
+  </DateContainer>
+)
 
-class ReactDayPicker extends React.PureComponent {
+class ReactDayPicker extends PureComponent <Props> {
   static defaultProps = {
     fromDate: null,
     toDate: null,
     inModal: false,
-    isHandleld: false,
-    isMobile: false,
+    isHandleld: true,
+    isMobile: true,
   }
 
   static getDerivedStateFromProps(props) {
@@ -113,7 +116,6 @@ class ReactDayPicker extends React.PureComponent {
     }
     this.dayPicker = React.createRef()
   }
-
 
   componentDidMount() {
     document.addEventListener('click', this.handleClickOutside, false)
@@ -183,7 +185,6 @@ class ReactDayPicker extends React.PureComponent {
     return 13
   }
 
-
   handleClickOutside = (e) => {
     if (this.dayPicker.current.contains(e.target)) return
     this.setState({ showCalendar: false })
@@ -211,8 +212,32 @@ class ReactDayPicker extends React.PureComponent {
     // this.props.getToState()
   }
 
+  renderNavbar = ({ onPreviousClick, onNextClick }) => (
+    <Navbar>
+      <NavbarInfo>
+        <ExtraText>Цены примерные на 1 взрослого, эконом</ExtraText>
+        <Button variant="secondary">Обратный билет не нужен</Button>
+      </NavbarInfo>
+      <NavbarButtons>
+        <Button
+          onClick={() => onPreviousClick()}
+          icon="arrow-left"
+        />
+        <Button
+          onClick={() => onNextClick()}
+          icon="arrow-right"
+        />
+      </NavbarButtons>
+    </Navbar>
+  )
+
+  closeDayPicker = () => {
+    this.setState({ showCalendar: false })
+  }
+
   render() {
     const { departureDate, flightBackDate } = this.state
+    const { isMobile } = this.props
     const numberOfMonths = this.getNumberOfMonths()
 
     const today = new Date()
@@ -240,15 +265,24 @@ class ReactDayPicker extends React.PureComponent {
       end: toDate,
     }
 
-    const dayPickers = (
+    const captionElement = (
+      <MonthCaption
+        modifiers={modifiers}
+        showFromCalendar={this.state.showFromCalendar}
+        showToCalendar={this.state.showToCalendar}
+        onMonthVisibilityChange={this.props.onMonthVisibilityChange}
+      />
+    )
+
+    const dayPickers = (inModal = false) => (
       <DateInputWrap
-        inModal={this.props.inModal}
+        inModal={inModal}
       >
         <FakeInput
           neighboringInGroup="right"
           focused={this.state.showFromCalendar}
           onClick={this.handleFromClick}
-          inModal={this.props.inModal}
+          inModal={inModal}
           value={inputFromDate}
           placeholder="Туда"
         />
@@ -257,37 +291,89 @@ class ReactDayPicker extends React.PureComponent {
           neighboringInGroup="left"
           focused={this.state.showToCalendar}
           onClick={this.handleToClick}
-          inModal={this.props.inModal}
+          inModal={inModal}
           value={inputToDate}
           placeholder="Обратно"
         />
       </DateInputWrap>
     )
 
+    const calendar = (
+      <DayPickerWrapper>
+        <StyledDayPicker
+          weekdaysShort={WEEKDAYS_SHORT}
+          showWeekDays={!isMobile}
+          modifiers={modifiers}
+          month={today}
+          firstDayOfWeek={0}
+          numberOfMonths={numberOfMonths}
+          months={MONTHS}
+          locale="ru"
+          renderDay={this.props.renderDay}
+          navbarElement={!isMobile ? this.renderNavbar : undefined}
+          captionElement={captionElement}
+          onDayClick={(day) => this.onDayChange(day, modifiers.disabled)}
+        />
+      </DayPickerWrapper>
+    )
+
+    const mobileCalendarHeader = (
+      <Portal>
+        <GlobalStylesScope className="responsive">
+          <PortalWrapper>
+            <StyledHeader>
+              <H4>{this.state.showFromCalendar ? 'Дата туда' : 'Дата обратно'}</H4>
+            </StyledHeader>
+
+            <StyledCloseButton onClick={() => this.props.closeCalendar()}>
+              <StyledIcon
+                name="cross"
+                fill="primaryDarkest"
+                onClick={this.closePortal}
+                size="normal"
+              />
+            </StyledCloseButton>
+
+            {dayPickers(true)}
+
+            {this.state.showToCalendar &&
+              <ButtonWrapper>
+                <Button
+                  onClick={this.props.onReturnDateUnneeded}
+                  variant="secondary"
+                >
+                  Обратный билет не нужен
+                </Button>
+              </ButtonWrapper>
+            }
+
+            <WeekdaysRow />
+          </PortalWrapper>
+        </GlobalStylesScope>
+      </Portal>
+    )
+
     return (
       <div ref={this.dayPicker}>
-        {dayPickers}
+        {dayPickers()}
         {this.state.showCalendar && (this.state.showToCalendar || this.state.showFromCalendar) &&
-          <Fragment>
-            <ReactPickerDateRange
-              inModal={this.props.inModal}
-              modifiers={modifiers}
-              month={today}
-              firstDayOfWeek={1}
-              numberOfMonths={numberOfMonths}
-              months={MONTHS}
-              locale="ru"
-              showWeekDays={false}
-              // renderDay={this.props.renderDay}
-              // captionElement={captionElement}
-              onDayClick={(day) => this.onDayChange(day, modifiers.disabled)}
-            />
-          </Fragment>
+          (
+            isMobile ?
+              <StyledModal
+                isOpen={this.state.showCalendar}
+                onClose={this.closeDayPicker}
+                showCloseButton={false}
+              >
+                {mobileCalendarHeader}
+                {calendar}
+              </StyledModal>
+              :
+              calendar
+          )
         }
       </div>
     )
   }
 }
-
 
 export default ReactDayPicker

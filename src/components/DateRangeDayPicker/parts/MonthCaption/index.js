@@ -22,7 +22,7 @@ type Props = {
   showFromCalendar: boolean,
   showToCalendar: boolean,
   date: string,
-  modifiers: object,
+  modifiers: {},
 }
 
 type State = {
@@ -48,22 +48,21 @@ class MonthCaption extends React.PureComponent<Props, State> {
   }
 
   componentDidMount() {
-    const { date, modifiers, showFromCalendar, showToCalendar } = this.props
     const { isFromSelectedMonth, isToSelectedMonth, isEmptyReturnDate } = this.state
-
-    if (isFromSelectedMonth || isToSelectedMonth || isEmptyReturnDate) {
-      this.selectedMonth && this.selectedMonth.scrollIntoView()
+    if ((isFromSelectedMonth || isToSelectedMonth || isEmptyReturnDate) && this.selectedMonth) {
+      this.selectedMonth.scrollIntoView()
     }
   }
 
   onChange = (isVisible) => {
-    if (isVisible) {
-      this.props.onMonthVisibilityChange(this.props.date)
+    const { onMonthVisibilityChange } = this.props
+    if (isVisible && onMonthVisibilityChange) {
+      onMonthVisibilityChange(this.props.date)
     }
   }
 
   render() {
-    const { date, modifiers, showFromCalendar, showToCalendar } = this.props
+    const { date } = this.props
     const { isFromSelectedMonth, isToSelectedMonth, isEmptyReturnDate } = this.state
 
     const formatDate = moment(date).format('MMMM YYYY')
