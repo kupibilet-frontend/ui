@@ -854,7 +854,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           <div
             className="rc-collapse-content-box"
           >
-            
+
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,
   it can be found as a welcome guest in many households across the world.
@@ -1295,8 +1295,8 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
         >
           Шереметьево
         </div>
-        
-        
+
+
       </div>
       <div
         className="c8"
@@ -1806,8 +1806,8 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         >
           Шереметьево
         </div>
-        
-        
+
+
       </div>
       <div
         className="c6"
@@ -1858,13 +1858,13 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
         >
           Несуществующий город
         </div>
-        
-        
+
+
       </div>
       <div
         className="c6"
       >
-        
+
       </div>
     </div>
   </div>
@@ -3462,13 +3462,13 @@ exports[`Storyshots Controls/AirportInput default 1`] = `
         >
           1 апр
         </div>
-        
-        
+
+
       </div>
       <div
         className="c5"
       >
-        
+
       </div>
     </div>
   </div>
@@ -3831,15 +3831,15 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           <div
             className="c5"
           >
-            
+
           </div>
-          
-          
+
+
         </div>
         <div
           className="c6"
         >
-          
+
         </div>
       </div>
       <div
@@ -5422,6 +5422,259 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 21px 0 0 21px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 16px;
+  padding-right: 10px;
+}
+
+.c3:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c6 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 0 21px 21px 0;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: -2px;
+  padding: 10px 16px;
+  padding-left: 10px;
+}
+
+.c6:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c4 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4,
+.c4:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c4::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c4:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+.c2 {
+  width: 50%;
+}
+
+.c5 {
+  color: #96a0b3;
+  font-weight: 400;
+}
+
+.c5:disabled {
+  color: #b1bdcc;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 12px;
+  z-index: 2;
+  position: relative;
+}
+
+<div
+  className="responsive c0"
+>
+  <div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2 c3"
+      >
+        <div
+          className="c4"
+          onClick={[Function]}
+          placeholder="Туда"
+        >
+          <span
+            className="c5"
+          >
+            Туда
+          </span>
+        </div>
+      </div>
+      <div
+        className="c2 c6"
+      >
+        <div
+          className="c4"
+          onClick={[Function]}
+          placeholder="Обратно"
+        >
+          <span
+            className="c5"
+          >
+            Обратно
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Controls/Input As textarea 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -5591,7 +5844,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
     <div
       className="c3"
     />
-    
+
   </div>
 </div>
 `;
@@ -6892,7 +7145,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
     <div
       className="c6"
     />
-    
+
   </div>
 </div>
 `;
@@ -7168,7 +7421,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
     <div
       className="c7"
     />
-    
+
   </div>
 </div>
 `;
@@ -7339,7 +7592,7 @@ exports[`Storyshots Controls/Input default 1`] = `
     <div
       className="c3"
     />
-    
+
   </div>
 </div>
 `;
@@ -8476,7 +8729,7 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
       size="large"
       value={null}
     />
-    
+
   </div>
 </div>
 `;
@@ -8722,7 +8975,7 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
         size="large"
         value={null}
       />
-      
+
     </div>
     <button
       className="c6"
@@ -11224,17 +11477,6 @@ exports[`Storyshots Utils Typography 1`] = `
   line-height: 18px;
 }
 
-.c1 {
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 44px;
-  -webkit-letter-spacing: -1.2px;
-  -moz-letter-spacing: -1.2px;
-  -ms-letter-spacing: -1.2px;
-  letter-spacing: -1.2px;
-  margin: 0;
-}
-
 .c4 {
   font-size: 24px;
   font-weight: 600;
@@ -11243,6 +11485,17 @@ exports[`Storyshots Utils Typography 1`] = `
   -moz-letter-spacing: -.4px;
   -ms-letter-spacing: -.4px;
   letter-spacing: -.4px;
+  margin: 0;
+}
+
+.c1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  -webkit-letter-spacing: -1.2px;
+  -moz-letter-spacing: -1.2px;
+  -ms-letter-spacing: -1.2px;
+  letter-spacing: -1.2px;
   margin: 0;
 }
 
@@ -11335,6 +11588,18 @@ exports[`Storyshots Utils Typography 1`] = `
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.2px;
+    -moz-letter-spacing: -.2px;
+    -ms-letter-spacing: -.2px;
+    letter-spacing: -.2px;
+  }
 }
 
 @media screen and (min-width:600px) and (max-width:1199px) {
