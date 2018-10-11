@@ -6,6 +6,7 @@ import GlobalStylesScope from 'components/ThemeProvider'
 import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
 import { StyledIcon } from 'components/Modal/styled'
+import { withMedia } from 'utils/media-queries'
 import MonthCaption from './parts/MonthCaption'
 
 import {
@@ -31,7 +32,8 @@ import {
 type Props = {
   departureDate: {},
   flightBackDate: {},
-  isHandleld: Boolean,
+  isTablet: Boolean,
+  isDesktop: Boolean,
   isMobile: Boolean,
   onMonthVisibilityChange: () => void,
   renderDay: () => void,
@@ -89,9 +91,6 @@ class ReactDayPicker extends PureComponent <Props> {
   static defaultProps = {
     fromDate: null,
     toDate: null,
-    inModal: false,
-    isHandleld: true,
-    isMobile: true,
   }
 
   static getDerivedStateFromProps(props) {
@@ -179,9 +178,9 @@ class ReactDayPicker extends PureComponent <Props> {
   }
 
   getNumberOfMonths = () => {
-    const { isHandleld, isMobile } = this.props
-    if (!isHandleld) return 2
-    if (!isMobile) return 1
+    const { isTablet, isDesktop } = this.props
+    if (isDesktop) return 2
+    if (isTablet) return 1
     return 13
   }
 
@@ -376,4 +375,4 @@ class ReactDayPicker extends PureComponent <Props> {
   }
 }
 
-export default ReactDayPicker
+export default withMedia(ReactDayPicker)

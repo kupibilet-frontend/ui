@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import DayPicker from '@kupibilet/react-day-picker'
+import defaultStyles from '@kupibilet/react-day-picker/lib/style.css'
 import mq from 'utils/media-queries'
 import TextSmall from 'components/Typography/TextSmall'
 import { Header, CloseButton } from 'components/Modal/styled'
@@ -10,9 +11,11 @@ import mobileReactDayStyles from './mobile-react-day-styles'
 
 const reactDayStyles = css`
   ${mq.desktop`
+    ${defaultStyles};
     ${notMobileReactDayStyles};
   `}
   ${mq.tablet`
+    ${defaultStyles};
     ${notMobileReactDayStyles};
   `}
   ${mq.mobile`
@@ -156,8 +159,11 @@ export const DateInputWrap = styled.div`
 
 export const DayPickerWrapper = styled.div`
   position: absolute;
-  top: 0;
+  top: 100%;
   right: 0;
+  ${mq.mobile`
+    top: 0;
+  `}
 `
 
 export const Navbar = styled.div`
