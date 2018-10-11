@@ -14,13 +14,14 @@ export default css`
   .DayPicker-Month{
     margin-top: 0;
     position: relative;
+    flex-grow: 1;
     &::after{
       content: '';
       position: absolute;
       display: block;
       height: 1px;
       width: calc(100% + 2em);
-      top: 54px;
+      top: 34px;
       left: -1em;
       background: ${({ theme }) => theme.color.textLighter};
     }
@@ -31,8 +32,9 @@ export default css`
   .DayPicker-Caption{
     text-align: center;
     margin: 0;
-    position: relative;
-    top: 4.5em;
+    position: absolute;
+    width: 100%;
+    top: 3.5em;
     & > div {
       font-weight: 600;
     }

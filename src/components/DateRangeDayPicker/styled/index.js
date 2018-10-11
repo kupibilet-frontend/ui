@@ -167,7 +167,7 @@ export const DayPickerWrapper = styled.div`
 `
 
 export const Navbar = styled.div`
-  padding: 1em 1em 0;
+  padding: 1em;
   position: relative;
 `
 
@@ -175,6 +175,7 @@ export const NavbarInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  white-space: nowrap;
   ${mq.handheld`
     flex-direction: column;
   `}
@@ -185,21 +186,20 @@ export const NavbarButtons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 7em;
+  bottom: -5em;
   left: 0;
   width: 100%;
   padding: 0 1em;
   z-index: 2;
-  ${mq.handheld`
-    top: 9em;
-  `}
 `
 
 export const ExtraText = styled(TextSmall)`
   color: ${({ theme }) => theme.color.text};
-  padding-left: 0.8em;
+  padding-left: 0.5em;
+  margin-right: 18px;
   ${mq.handheld`
     padding-left: 0;
+    margin-right: 0;
     margin-bottom: 1em;
   `}
 `
@@ -223,7 +223,7 @@ export const WeekdaysWrapper = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
   display: flex;
   justify-content: center;
-  margin: 155px 0 0 -18px;
+  margin: ${({ showToCalendar }) => (showToCalendar ? '155px' : '102px')}  0 0 -18px;
   padding: 12px 36px 0;
   position: fixed;
   width: calc(100% + 36px);

@@ -8,7 +8,6 @@ import Button from 'components/Button'
 import { StyledIcon } from 'components/Modal/styled'
 import { withMedia } from 'utils/media-queries'
 import MonthCaption from './parts/MonthCaption'
-
 import {
   StyledDayPicker,
   DateContainer,
@@ -30,16 +29,25 @@ import {
 } from './styled'
 
 type Props = {
-  departureDate: {},
-  flightBackDate: {},
+  fromDate: {},
+  toDate: {},
   isTablet: Boolean,
   isDesktop: Boolean,
   isMobile: Boolean,
   onMonthVisibilityChange: () => void,
   renderDay: () => void,
-  closeCalendar: () => void,
-  onReturnDateUnneeded: () => void,
+  changeFromDate: () => void,
+  changeToDate: () => void,
 }
+
+type State = {
+  showFromCalendar: Boolean,
+  showToCalendar: Boolean,
+  showCalendar: Boolean,
+  departureDate: {} | null,
+  returnDate: {} | null,
+}
+
 const WEEKDAYS_SHORT = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 const MONTHS = [
   'Январь',
@@ -56,10 +64,10 @@ const MONTHS = [
   'Декабрь',
 ]
 
-const WeekdaysRow = () => {
+const WeekdaysRow = ({ showToCalendar }: { showToCalendar: Boolean}) => {
   const weekdays = WEEKDAYS_SHORT.map((day) => <Weekday key={day}>{day}</Weekday>)
   return (
-    <WeekdaysWrapper>{weekdays}</WeekdaysWrapper>
+    <WeekdaysWrapper showToCalendar={showToCalendar}>{weekdays}</WeekdaysWrapper>
   )
 }
 
@@ -76,7 +84,6 @@ const FakeInput = ({
     neighboringInGroup={neighboringInGroup}
     focused={focused}
     inModal={props.inModal}
-    // onClick={props.getFocus}
   >
     <DateInput
       {...props}
@@ -87,31 +94,20 @@ const FakeInput = ({
   </DateContainer>
 )
 
-class ReactDayPicker extends PureComponent <Props> {
+class ReactDayPicker extends PureComponent <Props, State> {
   static defaultProps = {
-    fromDate: null,
-    toDate: null,
-  }
-
-  static getDerivedStateFromProps(props) {
-    if (props.showFromCalendar || props.showToCalendar) {
-      return {
-        showFromCalendar: props.showFromCalendar,
-        showToCalendar: props.showToCalendar,
-      }
-    }
-    return null
+    changeFromDate: () => {},
+    changeToDate: () => {},
   }
 
   constructor(props) {
     super(props)
-
     this.state = {
       showFromCalendar: false,
       showToCalendar: false,
       showCalendar: false,
-      departureDate: props.departureDate,
-      flightBackDate: props.flightBackDate,
+      departureDate: props.fromDate || null,
+      returnDate: props.toDate || null,
     }
     this.dayPicker = React.createRef()
   }
@@ -129,8 +125,13 @@ class ReactDayPicker extends PureComponent <Props> {
       showFromCalendar,
       showToCalendar,
       departureDate,
-      flightBackDate,
+      returnDate,
     } = this.state
+
+    const {
+      changeFromDate,
+      changeToDate,
+    } = this.props
 
     const day = moment(date)
     const clickBefore = day.isBefore(disabled.before, 'day')
@@ -140,40 +141,50 @@ class ReactDayPicker extends PureComponent <Props> {
       return
     }
 
-    if (showFromCalendar && day.isAfter(flightBackDate)) {
+    if (showFromCalendar && day.isAfter(returnDate)) {
+      console.log(1)
       this.setState({
         departureDate: day,
-        flightBackDate: day,
+        returnDate: day,
         showFromCalendar: false,
         showToCalendar: true,
       })
+      changeFromDate(day)
+      changeToDate(day)
     }
 
-    if (showToCalendar && day.isBefore(departureDate)) {
+    if (showToCalendar && (day.isBefore(departureDate) || !departureDate)) {
+      console.log(2)
       this.setState({
         departureDate: day,
-        flightBackDate: day,
+        returnDate: day,
         showFromCalendar: false,
         showToCalendar: false,
         showCalendar: false,
       })
+      changeFromDate(day)
+      changeToDate(day)
     }
 
     if (showFromCalendar) {
+      console.log(3)
       this.setState({
         departureDate: day,
         showFromCalendar: false,
         showToCalendar: true,
       })
+      changeFromDate(day)
     }
 
-    if (this.state.showToCalendar) {
+    if (showToCalendar) {
+      console.log(4)
       this.setState({
-        flightBackDate: day,
+        returnDate: day,
         showFromCalendar: false,
         showToCalendar: false,
         showCalendar: false,
       })
+      changeToDate(day)
     }
   }
 
@@ -185,7 +196,7 @@ class ReactDayPicker extends PureComponent <Props> {
   }
 
   handleClickOutside = (e) => {
-    if (this.dayPicker.current.contains(e.target)) return
+    if (this.dayPicker.current.contains(e.target) || this.props.isMobile) return
     this.setState({ showCalendar: false })
   }
 
@@ -196,8 +207,6 @@ class ReactDayPicker extends PureComponent <Props> {
       showFromCalendar: true,
       showToCalendar: false,
     })
-
-    // this.props.getFromState()
   }
 
   handleToClick = () => {
@@ -207,49 +216,75 @@ class ReactDayPicker extends PureComponent <Props> {
       showToCalendar: true,
       showFromCalendar: false,
     })
-
-    // this.props.getToState()
   }
 
-  renderNavbar = ({ onPreviousClick, onNextClick }) => (
-    <Navbar>
-      <NavbarInfo>
-        <ExtraText>Цены примерные на 1 взрослого, эконом</ExtraText>
-        <Button variant="secondary">Обратный билет не нужен</Button>
-      </NavbarInfo>
-      <NavbarButtons>
-        <Button
-          onClick={() => onPreviousClick()}
-          icon="arrow-left"
-        />
-        <Button
-          onClick={() => onNextClick()}
-          icon="arrow-right"
-        />
-      </NavbarButtons>
-    </Navbar>
-  )
+  renderNavbar = ({ onPreviousClick, onNextClick }) => {
+    const { showToCalendar } = this.state
+    return (
+      <Navbar>
+        <NavbarInfo>
+          <ExtraText>Цены примерные на 1 взрослого, эконом</ExtraText>
+          {showToCalendar &&
+            <Button
+              variant="secondary"
+              onClick={this.onReturnDateUnneeded}
+            >
+              Обратный билет не нужен
+            </Button>}
+        </NavbarInfo>
+        <NavbarButtons>
+          <Button
+            onClick={() => onPreviousClick()}
+            icon="arrow-left"
+          />
+          <Button
+            onClick={() => onNextClick()}
+            icon="arrow-right"
+          />
+        </NavbarButtons>
+      </Navbar>
+    )
+  }
+
+  onReturnDateUnneeded = () => {
+    this.setState({
+      returnDate: null,
+      showFromCalendar: false,
+      showToCalendar: false,
+      showCalendar: false,
+    })
+    this.props.changeToDate(null)
+  }
 
   closeDayPicker = () => {
     this.setState({ showCalendar: false })
   }
 
   render() {
-    const { departureDate, flightBackDate } = this.state
-    const { isMobile } = this.props
+    const {
+      departureDate,
+      returnDate,
+      showFromCalendar,
+      showToCalendar,
+      showCalendar,
+    } = this.state
+    const {
+      isMobile,
+      onMonthVisibilityChange,
+    } = this.props
     const numberOfMonths = this.getNumberOfMonths()
 
     const today = new Date()
     const lastDay = new Date()
     lastDay.setMonth(lastDay.getMonth() + 12)
 
-    const fromDate = moment(departureDate).toDate()
-    const toDate = flightBackDate && moment(flightBackDate).toDate()
+    const fromDate = departureDate && moment(departureDate).toDate()
+    const toDate = returnDate && moment(returnDate).toDate()
 
     const inputFromDate = departureDate &&
     `${moment(departureDate).format('DD MMM')}, ${moment(departureDate).format('ddd')}`
-    const inputToDate = flightBackDate &&
-    `${moment(flightBackDate).format('DD MMM')}, ${moment(flightBackDate).format('ddd')}`
+    const inputToDate = returnDate &&
+    `${moment(returnDate).format('DD MMM')}, ${moment(returnDate).format('ddd')}`
 
     const modifiers = {
       disabled: {
@@ -267,9 +302,9 @@ class ReactDayPicker extends PureComponent <Props> {
     const captionElement = (
       <MonthCaption
         modifiers={modifiers}
-        showFromCalendar={this.state.showFromCalendar}
-        showToCalendar={this.state.showToCalendar}
-        onMonthVisibilityChange={this.props.onMonthVisibilityChange}
+        showFromCalendar={showFromCalendar}
+        showToCalendar={showToCalendar}
+        onMonthVisibilityChange={onMonthVisibilityChange}
       />
     )
 
@@ -279,7 +314,7 @@ class ReactDayPicker extends PureComponent <Props> {
       >
         <FakeInput
           neighboringInGroup="right"
-          focused={this.state.showFromCalendar}
+          focused={showFromCalendar}
           onClick={this.handleFromClick}
           inModal={inModal}
           value={inputFromDate}
@@ -288,7 +323,7 @@ class ReactDayPicker extends PureComponent <Props> {
 
         <FakeInput
           neighboringInGroup="left"
-          focused={this.state.showToCalendar}
+          focused={showToCalendar}
           onClick={this.handleToClick}
           inModal={inModal}
           value={inputToDate}
@@ -321,24 +356,23 @@ class ReactDayPicker extends PureComponent <Props> {
         <GlobalStylesScope className="responsive">
           <PortalWrapper>
             <StyledHeader>
-              <H4>{this.state.showFromCalendar ? 'Дата туда' : 'Дата обратно'}</H4>
+              <H4>{showFromCalendar ? 'Дата туда' : 'Дата обратно'}</H4>
             </StyledHeader>
 
-            <StyledCloseButton onClick={() => this.props.closeCalendar()}>
+            <StyledCloseButton onClick={() => this.closeDayPicker()}>
               <StyledIcon
                 name="cross"
                 fill="primaryDarkest"
-                onClick={this.closePortal}
                 size="normal"
               />
             </StyledCloseButton>
 
             {dayPickers(true)}
 
-            {this.state.showToCalendar &&
+            {showToCalendar &&
               <ButtonWrapper>
                 <Button
-                  onClick={this.props.onReturnDateUnneeded}
+                  onClick={this.onReturnDateUnneeded}
                   variant="secondary"
                 >
                   Обратный билет не нужен
@@ -346,7 +380,7 @@ class ReactDayPicker extends PureComponent <Props> {
               </ButtonWrapper>
             }
 
-            <WeekdaysRow />
+            <WeekdaysRow showToCalendar={showToCalendar} />
           </PortalWrapper>
         </GlobalStylesScope>
       </Portal>
@@ -355,11 +389,11 @@ class ReactDayPicker extends PureComponent <Props> {
     return (
       <div ref={this.dayPicker}>
         {dayPickers()}
-        {this.state.showCalendar && (this.state.showToCalendar || this.state.showFromCalendar) &&
+        {showCalendar && (showToCalendar || showFromCalendar) &&
           (
             isMobile ?
               <StyledModal
-                isOpen={this.state.showCalendar}
+                isOpen={showCalendar}
                 onClose={this.closeDayPicker}
                 showCloseButton={false}
               >
