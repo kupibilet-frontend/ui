@@ -26,6 +26,7 @@ import {
   PortalWrapper,
   StyledCloseButton,
   ButtonWrapper,
+  MainWrapper,
 } from './styled'
 
 type Props = {
@@ -388,22 +389,24 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
     return (
       <div ref={this.dayPicker}>
-        {dayPickers()}
-        {showCalendar && (showToCalendar || showFromCalendar) &&
-          (
-            isMobile ?
-              <StyledModal
-                isOpen={showCalendar}
-                onClose={this.closeDayPicker}
-                showCloseButton={false}
-              >
-                {mobileCalendarHeader}
-                {calendar}
-              </StyledModal>
-              :
-              calendar
-          )
-        }
+        <MainWrapper>
+          {dayPickers()}
+          {showCalendar && (showToCalendar || showFromCalendar) &&
+            (
+              isMobile ?
+                <StyledModal
+                  isOpen={showCalendar}
+                  onClose={this.closeDayPicker}
+                  showCloseButton={false}
+                >
+                  {mobileCalendarHeader}
+                  {calendar}
+                </StyledModal>
+                :
+                calendar
+            )
+          }
+        </MainWrapper>
       </div>
     )
   }

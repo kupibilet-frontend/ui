@@ -274,3 +274,7 @@ export const ButtonWrapper = styled.div`
   width: 100%;
   z-index: 3;
 `
+
+export const MainWrapper = styled.div`
+  position: relative;
+`
