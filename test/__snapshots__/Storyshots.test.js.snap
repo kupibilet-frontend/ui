@@ -1211,7 +1211,7 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   transition-delay: .15s;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1 .c10,
   .responsive-booking .c1 .c10 {
     opacity: 1;
@@ -1732,7 +1732,7 @@ exports[`Storyshots Complex controls/ControlsGroup Inputs group 1`] = `
   transition-delay: .15s;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1 .c9,
   .responsive-booking .c1 .c9 {
     opacity: 1;
@@ -5892,7 +5892,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
   background-color: #e64926;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c2 .c7,
   .responsive-booking .c2 .c7 {
     opacity: 1;
@@ -6352,7 +6352,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   background-color: #e64926;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1 .c9,
   .responsive-booking .c1 .c9 {
     opacity: 1;
@@ -8632,7 +8632,7 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   border-radius: 21px 0 0 21px;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1 .c8,
   .responsive-booking .c1 .c8 {
     opacity: 1;
@@ -10543,7 +10543,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   order: 0;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0;
@@ -10554,7 +10554,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c2,
   .responsive-booking .c2 {
     max-width: none;
@@ -10562,7 +10562,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c3,
   .responsive-booking .c3 {
     width: auto;
@@ -10640,10 +10640,16 @@ exports[`Storyshots Fluid layout Single column 1`] = `
   max-width: 966px;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0 18px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c1.c1 {
+    margin: 0 auto;
   }
 }
 
@@ -10728,7 +10734,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   margin-left: 42px;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1,
   .responsive-booking .c1 {
     margin: 0;
@@ -10739,7 +10745,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c2,
   .responsive-booking .c2 {
     max-width: none;
@@ -10747,7 +10753,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c3,
   .responsive-booking .c3 {
     width: auto;
@@ -11024,28 +11030,28 @@ exports[`Storyshots Utils Responsive only 1`] = `
   background: black;
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c1,
   .responsive-booking .c1 {
     display: none;
   }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1200px) {
   .responsive .c7,
   .responsive-booking .c7 {
     display: none;
   }
 }
 
-@media screen and (min-width:600px) and (max-width:999px) {
+@media screen and (min-width:600px) and (max-width:1199px) {
   .responsive .c7,
   .responsive-booking .c7 {
     display: none;
   }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1200px) {
   .responsive .c5,
   .responsive-booking .c5 {
     display: none;
@@ -11059,7 +11065,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
   }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1200px) {
   .responsive .c3,
   .responsive-booking .c3 {
     display: none;
@@ -11258,7 +11264,7 @@ exports[`Storyshots Utils Typography 1`] = `
   text-transform: uppercase;
 }
 
-@media screen and (min-width:600px) and (max-width:999px) {
+@media screen and (min-width:600px) and (max-width:1199px) {
   .responsive .c1,
   .responsive-booking .c1 {
     font-size: 30px;
@@ -11282,7 +11288,7 @@ exports[`Storyshots Utils Typography 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c4,
   .responsive-booking .c4 {
     font-size: 20px;
@@ -11294,7 +11300,7 @@ exports[`Storyshots Utils Typography 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c2,
   .responsive-booking .c2 {
     font-size: 24px;
@@ -11306,7 +11312,7 @@ exports[`Storyshots Utils Typography 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c3,
   .responsive-booking .c3 {
     font-size: 24px;
@@ -11318,7 +11324,7 @@ exports[`Storyshots Utils Typography 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c5,
   .responsive-booking .c5 {
     font-size: 18px;
@@ -11330,7 +11336,7 @@ exports[`Storyshots Utils Typography 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c7,
   .responsive-booking .c7 {
     font-size: 16px;
@@ -11338,7 +11344,7 @@ exports[`Storyshots Utils Typography 1`] = `
   }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1199px) {
   .responsive .c11,
   .responsive-booking .c11 {
     font-size: 18px;

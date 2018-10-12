@@ -28,7 +28,7 @@ Array [
   "
     .responsive &, .responsive-booking & {
       @media ",
-  "screen and (min-width: 600px) and (max-width: 999px)",
+  "screen and (min-width: 600px) and (max-width: 1199px)",
   " {
         ",
   "
@@ -48,7 +48,7 @@ Array [
   "
     .responsive &, .responsive-booking & {
       @media ",
-  "screen and (min-width: 1000px)",
+  "screen and (min-width: 1200px)",
   " {
         ",
   "
