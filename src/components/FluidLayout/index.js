@@ -51,6 +51,20 @@ const SingleFluidSection = styled.div`
   ${media.handheld`
     margin: 0 18px;
   `}
+
+  /*
+   * In the past responsiveness was broken by purpose at resolutions 1000px - 1199px,
+   * see PR on GitHub: https://github.com/kupibilet-frontend/ui/pull/70
+   * At resolutions 1000px - 1199px (and more) there were desktop version of the app,
+   * but desktop version has 'min-width: 1200px' rule, so there was horizontal scroll
+   *
+   * Now we increase breakpoint for desktop to 1200px, but on resolutions
+   * more than 1000px it is not centered, so we should write this little hack
+   * (I've used !important because styles were overwritten by some old .responsive class)
+   */
+  @media screen and (min-width: 1000px) {
+    margin: 0 auto !important;
+  }
 `
 
 SingleFluidSection.displayName = 'SingleFluidSection'
