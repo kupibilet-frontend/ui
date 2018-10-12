@@ -62,8 +62,10 @@ const SingleFluidSection = styled.div`
    * more than 1000px it is not centered, so we should write this little hack
    * (I've used !important because styles were overwritten by some old .responsive class)
    */
-  @media screen and (min-width: 1000px) {
-    margin: 0 auto !important;
+  && {
+    @media screen and (min-width: 1000px) {
+      margin: 0 auto;
+    }
   }
 `
 
