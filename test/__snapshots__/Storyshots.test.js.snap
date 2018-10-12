@@ -10648,8 +10648,8 @@ exports[`Storyshots Fluid layout Single column 1`] = `
 }
 
 @media screen and (min-width:1000px) {
-  .c1 {
-    margin: 0 auto !important;
+  .c1.c1 {
+    margin: 0 auto;
   }
 }
 
