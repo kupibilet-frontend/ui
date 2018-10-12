@@ -5435,7 +5435,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   box-sizing: border-box;
 }
 
-.c3 {
+.c4 {
   color: #333333;
   height: 42px;
   width: 100%;
@@ -5460,12 +5460,12 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   padding-right: 10px;
 }
 
-.c3:hover {
+.c4:hover {
   border-color: #ff9100;
   z-index: 2;
 }
 
-.c6 {
+.c7 {
   color: #333333;
   height: 42px;
   width: 100%;
@@ -5491,12 +5491,12 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   padding-left: 10px;
 }
 
-.c6:hover {
+.c7:hover {
   border-color: #ff9100;
   z-index: 2;
 }
 
-.c4 {
+.c5 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -5529,14 +5529,14 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4,
-.c4:focus {
+.c5,
+.c5:focus {
   border: none;
   outline: none;
   resize: none;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5546,7 +5546,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5556,7 +5556,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5566,7 +5566,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4::placeholder {
+.c5::placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5576,7 +5576,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5586,7 +5586,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5596,7 +5596,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5606,30 +5606,34 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
   opacity: 1;
 }
 
-.c4:focus ~ .AirportInput__geo .AirportInput__spell {
+.c5:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
-.c2 {
+.c3 {
   width: 50%;
 }
 
-.c5 {
+.c6 {
   color: #96a0b3;
   font-weight: 400;
 }
 
-.c5:disabled {
+.c6:disabled {
   color: #b1bdcc;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 12px;
   z-index: 2;
+  position: relative;
+}
+
+.c1 {
   position: relative;
 }
 
@@ -5641,35 +5645,39 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
       className="c1"
     >
       <div
-        className="c2 c3"
+        className="c2"
       >
         <div
-          className="c4"
-          onClick={[Function]}
-          placeholder="Туда"
-          value={null}
+          className="c3 c4"
         >
-          <span
+          <div
             className="c5"
+            onClick={[Function]}
+            placeholder="Туда"
+            value={null}
           >
-            Туда
-          </span>
+            <span
+              className="c6"
+            >
+              Туда
+            </span>
+          </div>
         </div>
-      </div>
-      <div
-        className="c2 c6"
-      >
         <div
-          className="c4"
-          onClick={[Function]}
-          placeholder="Обратно"
-          value={null}
+          className="c3 c7"
         >
-          <span
+          <div
             className="c5"
+            onClick={[Function]}
+            placeholder="Обратно"
+            value={null}
           >
-            Обратно
-          </span>
+            <span
+              className="c6"
+            >
+              Обратно
+            </span>
+          </div>
         </div>
       </div>
     </div>
