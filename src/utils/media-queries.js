@@ -4,9 +4,9 @@ import Media from '@kupibilet/react-media'
 
 export const queries = {
   isMobile: 'screen and (max-width: 599px)',
-  isTablet: 'screen and (min-width: 600px) and (max-width: 999px)',
-  isHandheld: 'screen and (max-width: 999px)',
-  isDesktop: 'screen and (min-width: 1000px)',
+  isTablet: 'screen and (min-width: 600px) and (max-width: 1199px)',
+  isHandheld: 'screen and (max-width: 1199px)',
+  isDesktop: 'screen and (min-width: 1200px)',
 }
 
 
