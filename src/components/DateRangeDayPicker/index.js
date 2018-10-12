@@ -338,7 +338,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           weekdaysShort={WEEKDAYS_SHORT}
           showWeekDays={!isMobile}
           modifiers={modifiers}
-          month={today}
+          month={!isMobile ? (fromDate || today) : today}
           firstDayOfWeek={0}
           numberOfMonths={numberOfMonths}
           months={MONTHS}
