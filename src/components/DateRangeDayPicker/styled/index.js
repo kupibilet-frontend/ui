@@ -9,106 +9,110 @@ import Modal from 'components/Modal'
 import notMobileReactDayStyles from './not-mobile-react-day-styles'
 import mobileReactDayStyles from './mobile-react-day-styles'
 
+const castomReactDayStyles = css`
+* {
+  outline: none;
+}
+/* Example modifiers */
+
+.DayPicker-Day--sunday {
+  background-color: #f7f8f8;
+}
+
+.DayPicker-Day--sunday:not(.DayPicker-Day--today) {
+  color: #dce0e0;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  position: relative;
+  color: #f0f8ff;
+  background: ${({ theme }) => theme.color.primary};
+  border-radius: 4px 0 0 4px !important;
+  &:hover{
+    background: ${({ theme }) => theme.color.primary};
+  }
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end {
+  border-radius: 0px 4px 4px 0px !important;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end.DayPicker-Day--start {
+  border-radius: 4px !important;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end.DayPicker-Day--start::after {
+  display: none;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--start::after {
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: solid 4px transparent;
+  content: " ";
+  pointer-events: none;
+  border-left-color: #38afff;
+  border-left-width: 4px;
+  margin-top: -4px;
+  z-index: 1;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end::after {
+  left: auto;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: solid 4px transparent;
+  content: " ";
+  pointer-events: none;
+  border-right-color: #38afff;
+  border-right-width: 4px;
+  margin-top: -4px;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+  background-color: #f0f8ff !important;
+  color: ${({ theme }) => theme.color.textDarkest};
+  border-radius: 0px !important;
+}
+
+.DayPicker-Day {
+  border-radius: 0 !important;
+}
+
+.DayPicker-Day--start {
+ border-top-left-radius: 50% !important;
+ border-bottom-left-radius: 50% !important;
+}
+
+.DayPicker-Day--end {
+ border-top-right-radius: 50% !important;
+ border-bottom-right-radius: 50% !important;
+}
+.DayPicker-Day--today {
+  color: inherit;
+  font-weight: inherit;
+}
+`
 const reactDayStyles = css`
   ${mq.desktop`
     ${defaultStyles};
+    ${castomReactDayStyles};
     ${notMobileReactDayStyles};
   `}
   ${mq.tablet`
     ${defaultStyles};
+    ${castomReactDayStyles};
     ${notMobileReactDayStyles};
   `}
   ${mq.mobile`
+    ${castomReactDayStyles};
     ${mobileReactDayStyles};
   `}
-
-  * {
-    outline: none;
-  }
-  /* Example modifiers */
-
-  .DayPicker-Day--sunday {
-    background-color: #f7f8f8;
-  }
-
-  .DayPicker-Day--sunday:not(.DayPicker-Day--today) {
-    color: #dce0e0;
-  }
-
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
-    position: relative;
-    color: #f0f8ff;
-    background: ${({ theme }) => theme.color.primary};
-    border-radius: 4px 0 0 4px !important;
-    &:hover{
-      background: ${({ theme }) => theme.color.primary};
-    }
-  }
-
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end {
-    border-radius: 0px 4px 4px 0px !important;
-  }
-
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end.DayPicker-Day--start {
-    border-radius: 4px !important;
-  }
-
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end.DayPicker-Day--start::after {
-    display: none;
-  }
-
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--start::after {
-    left: 100%;
-    top: 50%;
-    height: 0;
-    width: 0;
-    position: absolute;
-    border: solid 4px transparent;
-    content: " ";
-    pointer-events: none;
-    border-left-color: #38afff;
-    border-left-width: 4px;
-    margin-top: -4px;
-    z-index: 1;
-  }
-
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside).DayPicker-Day--end::after {
-    left: auto;
-    right: 100%;
-    top: 50%;
-    height: 0;
-    width: 0;
-    position: absolute;
-    border: solid 4px transparent;
-    content: " ";
-    pointer-events: none;
-    border-right-color: #38afff;
-    border-right-width: 4px;
-    margin-top: -4px;
-  }
-  .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
-    background-color: #f0f8ff !important;
-    color: ${({ theme }) => theme.color.textDarkest};
-    border-radius: 0px !important;
-  }
-
-  .DayPicker-Day {
-    border-radius: 0 !important;
-  }
-
-  .DayPicker-Day--start {
-   border-top-left-radius: 50% !important;
-   border-bottom-left-radius: 50% !important;
-  }
-
-  .DayPicker-Day--end {
-   border-top-right-radius: 50% !important;
-   border-bottom-right-radius: 50% !important;
-  }
-  .DayPicker-Day--today {
-    color: inherit;
-    font-weight: inherit;
-  }
 `
 
 export const StyledDayPicker = styled(DayPicker)`
@@ -161,6 +165,10 @@ export const DayPickerWrapper = styled.div`
   position: absolute;
   top: 100%;
   right: 0;
+  ${mq.tablet`
+    right: auto;
+    left: 0;
+  `}
   ${mq.mobile`
     top: 0;
   `}

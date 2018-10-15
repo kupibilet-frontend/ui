@@ -21,7 +21,7 @@ export default css`
       display: block;
       height: 1px;
       width: calc(100% + 2em);
-      top: 34px;
+      top: 2em;
       left: -1em;
       background: ${({ theme }) => theme.color.textLighter};
     }

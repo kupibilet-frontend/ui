@@ -32,9 +32,9 @@ import {
 type Props = {
   fromDate: {},
   toDate: {},
-  isTablet: Boolean,
-  isDesktop: Boolean,
-  isMobile: Boolean,
+  isTablet: boolean,
+  isDesktop: boolean,
+  isMobile: boolean,
   onMonthVisibilityChange: () => void,
   renderDay: () => void,
   changeFromDate: () => void,
@@ -42,9 +42,9 @@ type Props = {
 }
 
 type State = {
-  showFromCalendar: Boolean,
-  showToCalendar: Boolean,
-  showCalendar: Boolean,
+  showFromCalendar: boolean,
+  showToCalendar: boolean,
+  showCalendar: boolean,
   departureDate: {} | null,
   returnDate: {} | null,
 }
@@ -65,7 +65,7 @@ const MONTHS = [
   'Декабрь',
 ]
 
-const WeekdaysRow = ({ showToCalendar }: { showToCalendar: Boolean}) => {
+const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
   const weekdays = WEEKDAYS_SHORT.map((day) => <Weekday key={day}>{day}</Weekday>)
   return (
     <WeekdaysWrapper showToCalendar={showToCalendar}>{weekdays}</WeekdaysWrapper>
@@ -85,6 +85,7 @@ const FakeInput = ({
     neighboringInGroup={neighboringInGroup}
     focused={focused}
     inModal={props.inModal}
+    onClick={onClick}
   >
     <DateInput
       {...props}
@@ -99,6 +100,11 @@ class ReactDayPicker extends PureComponent <Props, State> {
   static defaultProps = {
     changeFromDate: () => {},
     changeToDate: () => {},
+    fromDate: null,
+    toDate: null,
+    isTablet: false,
+    isDesktop: true,
+    isMobile: false,
   }
 
   constructor(props) {
@@ -143,7 +149,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     }
 
     if (showFromCalendar && day.isAfter(returnDate)) {
-      console.log(1)
       this.setState({
         departureDate: day,
         returnDate: day,
@@ -155,7 +160,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     }
 
     if (showToCalendar && (day.isBefore(departureDate) || !departureDate)) {
-      console.log(2)
       this.setState({
         departureDate: day,
         returnDate: day,
@@ -168,7 +172,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     }
 
     if (showFromCalendar) {
-      console.log(3)
       this.setState({
         departureDate: day,
         showFromCalendar: false,
@@ -178,7 +181,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     }
 
     if (showToCalendar) {
-      console.log(4)
       this.setState({
         returnDate: day,
         showFromCalendar: false,
@@ -202,7 +204,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
   }
 
   handleFromClick = () => {
-    console.log('from')
     this.setState({
       showCalendar: true,
       showFromCalendar: true,
@@ -211,7 +212,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
   }
 
   handleToClick = () => {
-    console.log('to')
     this.setState({
       showCalendar: true,
       showToCalendar: true,
@@ -235,11 +235,17 @@ class ReactDayPicker extends PureComponent <Props, State> {
         </NavbarInfo>
         <NavbarButtons>
           <Button
-            onClick={() => onPreviousClick()}
+            onClick={(e) => {
+              e.preventDefault()
+              onPreviousClick()
+            }}
             icon="arrow-left"
           />
           <Button
-            onClick={() => onNextClick()}
+            onClick={(e) => {
+              e.preventDefault()
+              onNextClick()
+            }}
             icon="arrow-right"
           />
         </NavbarButtons>
@@ -306,6 +312,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
         showFromCalendar={showFromCalendar}
         showToCalendar={showToCalendar}
         onMonthVisibilityChange={onMonthVisibilityChange}
+        isMobile={isMobile}
       />
     )
 

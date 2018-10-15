@@ -21,8 +21,10 @@ const Caption = styled.div`
 type Props = {
   showFromCalendar: boolean,
   showToCalendar: boolean,
-  date: string,
+  date: string | null,
   modifiers: {},
+  onMonthVisibilityChange: () => void,
+  isMobile: boolean,
 }
 
 type State = {
@@ -31,6 +33,9 @@ type State = {
 
 /* eslint-disable react/prop-types */
 class MonthCaption extends React.PureComponent<Props, State> {
+  static defaultProps = {
+    date: null,
+  }
   constructor(props) {
     super(props)
 
@@ -49,12 +54,21 @@ class MonthCaption extends React.PureComponent<Props, State> {
 
   componentDidMount() {
     const { isFromSelectedMonth, isToSelectedMonth, isEmptyReturnDate } = this.state
-    if ((isFromSelectedMonth || isToSelectedMonth || isEmptyReturnDate) && this.selectedMonth) {
+
+    if ((isFromSelectedMonth || isToSelectedMonth || isEmptyReturnDate) &&
+        this.selectedMonth && this.props.isMobile) {
       this.selectedMonth.scrollIntoView()
     }
   }
 
-  onChange = (isVisible) => {
+  componentDidUpdate(prevProps: Props) {
+    const { onMonthVisibilityChange, date } = this.props
+    if (prevProps.date !== date) {
+      onMonthVisibilityChange(date)
+    }
+  }
+
+  onChange = (isVisible: boolean) => {
     const { onMonthVisibilityChange } = this.props
     if (isVisible && onMonthVisibilityChange) {
       onMonthVisibilityChange(this.props.date)
