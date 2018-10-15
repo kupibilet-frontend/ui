@@ -5649,6 +5649,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
       >
         <div
           className="c3 c4"
+          onClick={[Function]}
         >
           <div
             className="c5"
@@ -5665,6 +5666,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
         </div>
         <div
           className="c3 c7"
+          onClick={[Function]}
         >
           <div
             className="c5"
