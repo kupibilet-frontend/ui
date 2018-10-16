@@ -27,6 +27,7 @@ import {
   StyledCloseButton,
   ButtonWrapper,
   MainWrapper,
+  FakeInputWeekDay,
 } from './styled'
 
 type Props = {
@@ -79,22 +80,31 @@ const FakeInput = ({
   neighboringInGroup,
   focused,
   onClick,
+  value,
   ...props
-}) => (
-  <DateContainer
-    neighboringInGroup={neighboringInGroup}
-    focused={focused}
-    inModal={props.inModal}
-    onClick={onClick}
-  >
-    <DateInput
-      {...props}
+}) => {
+  const inputDate = value && moment(value).format('DD MMM')
+  const weekDay = value && moment(value).format('ddd')
+
+  return (
+    <DateContainer
+      neighboringInGroup={neighboringInGroup}
+      focused={focused}
+      inModal={props.inModal}
       onClick={onClick}
     >
-      {props.value || <FakeInputPlaceholder>{props.placeholder}</FakeInputPlaceholder>}
-    </DateInput>
-  </DateContainer>
-)
+      <DateInput
+        {...props}
+        onClick={onClick}
+        value={inputDate}
+      >
+        {inputDate || <FakeInputPlaceholder>{props.placeholder}</FakeInputPlaceholder>}
+        {weekDay && <FakeInputWeekDay>{weekDay}</FakeInputWeekDay>}
+      </DateInput>
+
+    </DateContainer>
+  )
+}
 
 class ReactDayPicker extends PureComponent <Props, State> {
   static defaultProps = {
@@ -105,6 +115,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     isTablet: false,
     isDesktop: true,
     isMobile: false,
+    onMonthVisibilityChange: () => {},
   }
 
   constructor(props) {
@@ -229,6 +240,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
             <Button
               variant="secondary"
               onClick={this.onReturnDateUnneeded}
+              size="small"
             >
               Обратный билет не нужен
             </Button>}
@@ -288,11 +300,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const fromDate = departureDate && moment(departureDate).toDate()
     const toDate = returnDate && moment(returnDate).toDate()
 
-    const inputFromDate = departureDate &&
-    `${moment(departureDate).format('DD MMM')}, ${moment(departureDate).format('ddd')}`
-    const inputToDate = returnDate &&
-    `${moment(returnDate).format('DD MMM')}, ${moment(returnDate).format('ddd')}`
-
     const modifiers = {
       disabled: {
         before: today,
@@ -325,7 +332,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           focused={showFromCalendar}
           onClick={this.handleFromClick}
           inModal={inModal}
-          value={inputFromDate}
+          value={departureDate}
           placeholder="Туда"
         />
 
@@ -334,7 +341,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           focused={showToCalendar}
           onClick={this.handleToClick}
           inModal={inModal}
-          value={inputToDate}
+          value={returnDate}
           placeholder="Обратно"
         />
       </DateInputWrap>

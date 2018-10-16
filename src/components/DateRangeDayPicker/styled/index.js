@@ -400,7 +400,7 @@ export const DayPickerWrapper = styled.div`
 `
 
 export const Navbar = styled.div`
-  padding: 1em;
+  padding: 1em 1em 0.5em;
   position: relative;
 `
 
@@ -430,6 +430,7 @@ export const ExtraText = styled(TextSmall)`
   color: ${({ theme }) => theme.color.text};
   padding-left: 0.5em;
   margin-right: 18px;
+  line-height: 1.8;
   ${mq.handheld`
     padding-left: 0;
     margin-right: 0;
@@ -510,4 +511,12 @@ export const ButtonWrapper = styled.div`
 
 export const MainWrapper = styled.div`
   position: relative;
+`
+
+export const FakeInputWeekDay = styled(TextSmall)`
+  color: ${({ theme }) => theme.color.text};
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
 `

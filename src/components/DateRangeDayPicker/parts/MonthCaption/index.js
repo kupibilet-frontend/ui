@@ -35,6 +35,7 @@ type State = {
 class MonthCaption extends React.PureComponent<Props, State> {
   static defaultProps = {
     date: null,
+    onMonthVisibilityChange: () => {},
   }
   constructor(props) {
     super(props)
@@ -70,7 +71,7 @@ class MonthCaption extends React.PureComponent<Props, State> {
 
   onChange = (isVisible: boolean) => {
     const { onMonthVisibilityChange } = this.props
-    if (isVisible && onMonthVisibilityChange) {
+    if (isVisible) {
       onMonthVisibilityChange(this.props.date)
     }
   }
