@@ -20,11 +20,6 @@
     "postinstall": "move-bin; true",
     "prepublishOnly": "yarn build"
   },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$":  "<rootDir>/mocks/cssModule.js"
-    }
-  },
   "engines": {
     "node": ">=10",
     "npm": ">=6",
