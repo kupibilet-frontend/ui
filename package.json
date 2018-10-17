@@ -97,7 +97,6 @@
     "@kupibilet/react-dates": "^12.3.0",
     "@kupibilet/react-day-picker": "^7.2.5",
     "@kupibilet/react-media": "^1.5.1",
-    "components": "^0.1.0",
     "rc-collapse": "^1.9.0",
     "rc-tabs": "9.4.6",
     "react-autosuggest": "^9.0.0",
