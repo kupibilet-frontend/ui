@@ -51,20 +51,6 @@ type State = {
 }
 
 const WEEKDAYS_SHORT = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
-const MONTHS = [
-  'Январь',
-  'Февраль',
-  'Март',
-  'Апрель',
-  'Май',
-  'Июнь',
-  'Июль',
-  'Август',
-  'Сентябрь',
-  'Октябрь',
-  'Ноябрь',
-  'Декабрь',
-]
 
 const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
   const weekdays = WEEKDAYS_SHORT.map((day) => <Weekday key={day}>{day}</Weekday>)
@@ -356,7 +342,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           month={!isMobile ? (fromDate || today) : today}
           firstDayOfWeek={0}
           numberOfMonths={numberOfMonths}
-          months={MONTHS}
+          months={moment.months()}
           locale="ru"
           renderDay={this.props.renderDay}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
