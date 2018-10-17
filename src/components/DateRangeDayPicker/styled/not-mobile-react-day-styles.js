@@ -39,4 +39,10 @@ export default css`
       font-weight: 600;
     }
   }
+  .DayPicker-Day{
+    min-width: 2.7em;
+    max-width: 2.7em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
 `

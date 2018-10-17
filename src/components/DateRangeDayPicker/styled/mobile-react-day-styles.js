@@ -207,7 +207,7 @@ export default css`
   right: 2px;
   z-index: 1;
   position: absolute;
-  background: white;
+  background: ${({ theme }) => theme.color.background};
   top: 42px;
   width: 100%;
 }
