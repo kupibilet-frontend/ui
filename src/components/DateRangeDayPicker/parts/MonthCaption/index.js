@@ -36,6 +36,7 @@ class MonthCaption extends React.PureComponent<Props, State> {
   static defaultProps = {
     date: null,
     onMonthVisibilityChange: () => {},
+    showToCalendar: false,
   }
   constructor(props) {
     super(props)
@@ -63,16 +64,16 @@ class MonthCaption extends React.PureComponent<Props, State> {
   }
 
   componentDidUpdate(prevProps: Props) {
-    const { onMonthVisibilityChange, date } = this.props
+    const { onMonthVisibilityChange, date, showToCalendar } = this.props
     if (prevProps.date !== date) {
-      onMonthVisibilityChange(date)
+      onMonthVisibilityChange(date, showToCalendar)
     }
   }
 
   onChange = (isVisible: boolean) => {
-    const { onMonthVisibilityChange } = this.props
+    const { onMonthVisibilityChange, date, showToCalendar } = this.props
     if (isVisible) {
-      onMonthVisibilityChange(this.props.date)
+      onMonthVisibilityChange(date, showToCalendar)
     }
   }
 

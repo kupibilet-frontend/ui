@@ -344,7 +344,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           numberOfMonths={numberOfMonths}
           months={moment.months()}
           locale="ru"
-          renderDay={this.props.renderDay}
+          renderDay={(day) => this.props.renderDay(day, showToCalendar)}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={captionElement}
           onDayClick={(day) => this.onDayChange(day, modifiers.disabled)}
