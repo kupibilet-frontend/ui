@@ -102,6 +102,22 @@ class ReactDayPicker extends PureComponent <Props, State> {
     isDesktop: true,
     isMobile: false,
     onMonthVisibilityChange: () => {},
+    changeDateInputFocus: () => {},
+    isDateInputFocused: false,
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    const { isDateInputFocused, changeDateInputFocus } = props
+    const { showFromCalendar, showCalendar } = state
+    if (isDateInputFocused && !showCalendar && !showFromCalendar) {
+      changeDateInputFocus(false)
+      return {
+        departureInputFocus: true,
+        showFromCalendar: true,
+        showCalendar: true,
+      }
+    }
+    return null
   }
 
   constructor(props) {
@@ -112,6 +128,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       showCalendar: false,
       departureDate: props.fromDate || null,
       returnDate: props.toDate || null,
+      departureInputFocus: false,
     }
     this.dayPicker = React.createRef()
   }
@@ -140,6 +157,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const day = moment(date)
     const clickBefore = day.isBefore(disabled.before, 'day')
     const clickAfter = day.isAfter(disabled.after, 'day')
+
+    this.setState({ departureInputFocus: false })
 
     if (clickBefore || clickAfter) {
       return
@@ -197,7 +216,10 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
   handleClickOutside = (e) => {
     if (this.dayPicker.current.contains(e.target) || this.props.isMobile) return
-    this.setState({ showCalendar: false })
+    this.setState({
+      showCalendar: false,
+      departureInputFocus: false,
+    })
   }
 
   handleFromClick = () => {
@@ -213,6 +235,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       showCalendar: true,
       showToCalendar: true,
       showFromCalendar: false,
+      departureInputFocus: false,
     })
   }
 
@@ -272,6 +295,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       showFromCalendar,
       showToCalendar,
       showCalendar,
+      departureInputFocus,
     } = this.state
     const {
       isMobile,
@@ -315,7 +339,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       >
         <FakeInput
           neighboringInGroup="right"
-          focused={showFromCalendar}
+          focused={departureInputFocus || showFromCalendar}
           onClick={this.handleFromClick}
           inModal={inModal}
           value={departureDate}
