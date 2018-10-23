@@ -48,7 +48,6 @@ type State = {
   showCalendar: boolean,
   departureDate: {} | null,
   returnDate: {} | null,
-  departureInputFocus: boolean,
 }
 
 const WEEKDAYS_SHORT = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
@@ -104,7 +103,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     isMobile: false,
     onMonthVisibilityChange: () => {},
     changeDateInputFocus: () => {},
-    isDateInputFocused: false,
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -113,7 +111,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     if (isDateInputFocused && !showCalendar && !showFromCalendar) {
       changeDateInputFocus(false)
       return {
-        departureInputFocus: true,
         showFromCalendar: true,
         showCalendar: true,
       }
@@ -129,7 +126,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
       showCalendar: false,
       departureDate: props.fromDate || null,
       returnDate: props.toDate || null,
-      departureInputFocus: false,
     }
     this.dayPicker = React.createRef()
   }
@@ -159,8 +155,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const clickBefore = day.isBefore(disabled.before, 'day')
     const clickAfter = day.isAfter(disabled.after, 'day')
 
-    this.setState({ departureInputFocus: false })
-
     if (clickBefore || clickAfter) {
       return
     }
@@ -174,6 +168,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       })
       changeFromDate(day)
       changeToDate(day)
+      return
     }
 
     if (showToCalendar && (day.isBefore(departureDate) || !departureDate)) {
@@ -186,6 +181,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       })
       changeFromDate(day)
       changeToDate(day)
+      return
     }
 
     if (showFromCalendar) {
@@ -195,6 +191,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
         showToCalendar: true,
       })
       changeFromDate(day)
+      return
     }
 
     if (showToCalendar) {
@@ -205,6 +202,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
         showCalendar: false,
       })
       changeToDate(day)
+      return
     }
   }
 
@@ -219,7 +217,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     if (this.dayPicker.current.contains(e.target) || this.props.isMobile) return
     this.setState({
       showCalendar: false,
-      departureInputFocus: false,
       showFromCalendar: false,
       showToCalendar: false,
     })
@@ -238,7 +235,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
       showCalendar: true,
       showToCalendar: true,
       showFromCalendar: false,
-      departureInputFocus: false,
     })
   }
 
@@ -298,7 +294,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
       showFromCalendar,
       showToCalendar,
       showCalendar,
-      departureInputFocus,
     } = this.state
     const {
       isMobile,
@@ -342,7 +337,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       >
         <FakeInput
           neighboringInGroup="right"
-          focused={departureInputFocus || showFromCalendar}
+          focused={showFromCalendar}
           onClick={this.handleFromClick}
           inModal={inModal}
           value={departureDate}
