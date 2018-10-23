@@ -219,6 +219,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
     this.setState({
       showCalendar: false,
       departureInputFocus: false,
+      showFromCalendar: false,
+      showToCalendar: false,
     })
   }
 
