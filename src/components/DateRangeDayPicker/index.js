@@ -48,6 +48,7 @@ type State = {
   showCalendar: boolean,
   departureDate: {} | null,
   returnDate: {} | null,
+  departureInputFocus: boolean,
 }
 
 const WEEKDAYS_SHORT = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
