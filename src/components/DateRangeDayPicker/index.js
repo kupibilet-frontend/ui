@@ -131,11 +131,11 @@ class ReactDayPicker extends PureComponent <Props, State> {
   }
 
   componentDidMount() {
-    document.addEventListener('click', this.handleClickOutside, false)
+    document.addEventListener('mousedown', this.handleClickOutside, false)
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.handleClickOutside, false)
+    document.removeEventListener('mousedown', this.handleClickOutside, false)
   }
 
   onDayChange = (date, disabled) => {
