@@ -5422,7 +5422,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/DateRangeDayPicker DateRange 1`] = `
+exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
