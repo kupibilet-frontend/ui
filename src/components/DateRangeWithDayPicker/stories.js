@@ -1,11 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import moment from '@kupibilet/moment'
-import DateRangeDayPicker from 'components/DateRangeDayPicker'
+import DateRangeDayPicker from 'components/DateRangeWithDayPicker'
 import CalendarDay from 'components/CalendarDay'
 
 storiesOf('Controls/DateRangeDayPicker', module)
-  .addWithInfo('DateRange', 'with custom calendar cells', () => {
+  .addWithInfo('DateRangeWithDayPicker', 'with custom calendar cells', () => {
     return (
       <DateRangeDayPicker
         renderDay={(day) => (
