@@ -202,7 +202,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
         showCalendar: false,
       })
       changeToDate(day)
-      return
     }
   }
 
