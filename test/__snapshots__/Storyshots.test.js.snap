@@ -376,7 +376,7 @@ exports[`Storyshots Blocks FilterSection 1`] = `
           className="rc-collapse-item c8 c9"
         >
           <div
-            aria-expanded={false}
+            aria-expanded="false"
             className="rc-collapse-header"
             onClick={[Function]}
             onKeyPress={[Function]}
@@ -624,7 +624,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -638,7 +638,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -652,7 +652,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -715,7 +715,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -729,7 +729,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -743,7 +743,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -806,7 +806,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
         className="rc-collapse-item rc-collapse-item-active c1"
       >
         <div
-          aria-expanded={true}
+          aria-expanded="true"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -834,7 +834,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -848,7 +848,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
         className="rc-collapse-item c1"
       >
         <div
-          aria-expanded={false}
+          aria-expanded="false"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
@@ -2126,24 +2126,6 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   display: inline-flex;
 }
 
-.c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
 .c8 {
   font-family: inherit;
   border: none;
@@ -2208,6 +2190,24 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
 .c12:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 .c1 {
@@ -2886,113 +2886,6 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
   z-index: 2;
 }
 
-.c3 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  left: 16px;
-  right: 0;
-  top: 10px;
-  bottom: 0;
-  width: calc(100% - 32px);
-  height: 100%;
-  padding: 0;
-  height: 20px;
-  background: transparent;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c3,
-.c3:focus {
-  border: none;
-  outline: none;
-  resize: none;
-}
-
-.c3::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:focus ~ .AirportInput__geo .AirportInput__spell {
-  display: block;
-}
-
 .c2 {
   font-family: inherit;
   border: none;
@@ -3107,6 +3000,113 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
   display: block;
 }
 
+.c3 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c3,
+.c3:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
 <div
   className="responsive c0"
 >
@@ -3128,7 +3128,7 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
         className="c1"
       >
         <div
-          className="c2"
+          className="-div c2"
           placeholder="Дата вылета"
         >
           Дата вылета
@@ -3139,7 +3139,7 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
       className="c1"
     >
       <div
-        className="c3"
+        className="-div c3"
         placeholder="Дата вылета"
         value="1 апр"
       >
@@ -3756,7 +3756,11 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
     }
   >
     <div
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      aria-owns="react-autowhatever-1"
       className="c1"
+      role="combobox"
     >
       <div
         className="c2"
@@ -3764,9 +3768,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
         <textarea
           aria-activedescendant={null}
           aria-autocomplete="list"
-          aria-expanded={false}
-          aria-haspopup={false}
-          aria-owns="react-autowhatever-1"
+          aria-controls="react-autowhatever-1"
           autoCapitalize="sentences"
           autoComplete="off"
           autoFocus={true}
@@ -3776,7 +3778,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           onFocus={[Function]}
           onKeyDown={[Function]}
           placeholder="Туда"
-          role="combobox"
           rows="1"
           type="text"
           value=""
@@ -3802,6 +3803,7 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
       <div
         className="react-autosuggest__suggestions-container c7"
         id="react-autowhatever-1"
+        role="listbox"
       />
     </div>
   </div>
@@ -3872,7 +3874,7 @@ exports[`Storyshots Controls/Buttons Button as <a href="" /> 1`] = `
   className="responsive c0"
 >
   <a
-    className="c1"
+    className="-a c1"
     disabled={false}
     href="/"
     size="normal"
@@ -3998,24 +4000,6 @@ exports[`Storyshots Controls/Buttons Icon-only button (custom icon) 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -4053,6 +4037,24 @@ exports[`Storyshots Controls/Buttons Icon-only button (custom icon) 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
 }
 
 <div
@@ -4119,24 +4121,6 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -4174,6 +4158,24 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
 }
 
 <div
@@ -4242,24 +4244,6 @@ exports[`Storyshots Controls/Buttons Loading button 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -4297,6 +4281,24 @@ exports[`Storyshots Controls/Buttons Loading button 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
 }
 
 <div
@@ -4363,24 +4365,6 @@ exports[`Storyshots Controls/Buttons With custom icons 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -4426,6 +4410,24 @@ exports[`Storyshots Controls/Buttons With custom icons 1`] = `
   display: inline-block;
   vertical-align: top;
   padding: 0 5.6px 0 5.6px;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 <div
@@ -4518,24 +4520,6 @@ exports[`Storyshots Controls/Buttons With left and right icons 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -4581,6 +4565,24 @@ exports[`Storyshots Controls/Buttons With left and right icons 1`] = `
   display: inline-block;
   vertical-align: top;
   padding: 0 5.6px 0 5.6px;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 <div
@@ -5298,7 +5300,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
             className="DateRangePickerInput"
           >
             <div
-              className="DateInput"
+              className="DateInput DateInput--open-down"
             >
               <input
                 aria-describedby="DateInput__screen-reader-message-startDate"
@@ -5338,7 +5340,7 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
               <span />
             </div>
             <div
-              className="DateInput"
+              className="DateInput DateInput--open-down"
             >
               <input
                 aria-describedby="DateInput__screen-reader-message-endDate"
@@ -6625,28 +6627,6 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   display: inline-flex;
 }
 
-.c3 {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 3px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c2 {
   position: relative;
   -webkit-box-flex: 1;
@@ -6780,6 +6760,28 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
   background-color: #e64926;
 }
 
+.c3 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 3px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <div
   className="responsive c0"
 >
@@ -6871,50 +6873,6 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-}
-
-.c2 {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 10px;
-  padding-right: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6 {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 8px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c5 {
@@ -7048,6 +7006,50 @@ exports[`Storyshots Controls/Input With icons 1`] = `
   height: calc(100% + 2px);
   width: 2px;
   background-color: #e64926;
+}
+
+.c2 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -7665,24 +7667,6 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -7720,6 +7704,24 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 <div
@@ -7842,24 +7844,6 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -7897,6 +7881,24 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 <div
@@ -7964,24 +7966,6 @@ exports[`Storyshots Controls/Popover default 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -8019,6 +8003,24 @@ exports[`Storyshots Controls/Popover default 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 <div
@@ -8712,70 +8714,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   display: inline-flex;
 }
 
-.c4 {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 5px;
-  padding-right: 7px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  position: relative;
-}
-
-.c1 .react-autosuggest__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c1 .react-autosuggest__input::-ms-clear,
-.c1 .react-autosuggest__input::-webkit-search-cancel-button {
-  display: none;
-}
-
-.c1 .react-autosuggest__input--open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.c1 .react-autosuggest__input--focused {
-  outline: none;
-}
-
-.c1 .react-autosuggest__suggestions-container {
-  display: none;
-}
-
-.c1 .react-autosuggest__suggestions-container--open {
-  display: block;
-}
-
-.c1 .react-autosuggest__suggestions-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 .react-autosuggest__suggestion {
-  cursor: pointer;
-}
-
 .c3 {
   position: relative;
   -webkit-box-flex: 1;
@@ -8905,6 +8843,28 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   background-color: #e64926;
 }
 
+.c4 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c8 {
   margin: 3px 0 0;
   min-width: 90px;
@@ -8917,6 +8877,56 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   overflow: hidden;
   z-index: 10;
   background: #ffffff;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .react-autosuggest__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .react-autosuggest__input--focused {
+  outline: none;
+}
+
+.c1 .react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.c1 .react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 .react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    padding: 0;
+    top: initial;
+  }
 }
 
 @media screen and (max-width:599px) {
@@ -8933,19 +8943,15 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   }
 }
 
-@media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    padding: 0;
-    top: initial;
-  }
-}
-
 <div
   className="responsive c0"
 >
   <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
     className="c1"
+    role="combobox"
   >
     <div
       className="c2"
@@ -8954,9 +8960,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
       <input
         aria-activedescendant={null}
         aria-autocomplete="list"
-        aria-expanded={false}
-        aria-haspopup={false}
-        aria-owns="react-autowhatever-1"
+        aria-controls="react-autowhatever-1"
         autoComplete="off"
         className="react-autosuggest__input c3"
         form="Controls/Select"
@@ -8969,7 +8973,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         onKeyDown={[Function]}
         placeholder="Купить..."
         readOnly={true}
-        role="combobox"
         size="normal"
         type="text"
         value=""
@@ -9002,6 +9005,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
     <div
       className="react-autosuggest__suggestions-container c8"
       id="react-autowhatever-1"
+      role="listbox"
     />
   </div>
 </div>
@@ -9039,70 +9043,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   display: inline-flex;
 }
 
-.c4 {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 5px;
-  padding-right: 7px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  position: relative;
-}
-
-.c1 .react-autosuggest__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c1 .react-autosuggest__input::-ms-clear,
-.c1 .react-autosuggest__input::-webkit-search-cancel-button {
-  display: none;
-}
-
-.c1 .react-autosuggest__input--open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.c1 .react-autosuggest__input--focused {
-  outline: none;
-}
-
-.c1 .react-autosuggest__suggestions-container {
-  display: none;
-}
-
-.c1 .react-autosuggest__suggestions-container--open {
-  display: block;
-}
-
-.c1 .react-autosuggest__suggestions-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 .react-autosuggest__suggestion {
-  cursor: pointer;
-}
-
 .c3 {
   position: relative;
   -webkit-box-flex: 1;
@@ -9232,6 +9172,28 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   background-color: #e64926;
 }
 
+.c4 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c8 {
   margin: 3px 0 0;
   min-width: 90px;
@@ -9244,147 +9206,6 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   overflow: hidden;
   z-index: 10;
   background: #ffffff;
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c1.c1,
-  .responsive-booking .c1.c1 {
-    position: relative;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    padding: 0;
-    top: initial;
-  }
-}
-
-<div
-  className="responsive c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="c2"
-      disabled={false}
-      size="normal"
-    >
-      <input
-        aria-activedescendant={null}
-        aria-autocomplete="list"
-        aria-expanded={false}
-        aria-haspopup={false}
-        aria-owns="react-autowhatever-1"
-        autoComplete="off"
-        className="react-autosuggest__input c3"
-        disabled={false}
-        name="input"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        placeholder="Купить..."
-        readOnly={true}
-        role="combobox"
-        size="normal"
-        type="text"
-        value=""
-      />
-      <div
-        className="c4"
-        onMouseDown={[Function]}
-        size="normal"
-      >
-        <span
-          className="c5"
-        >
-          <svg
-            className="c6"
-            fill="miscDark"
-            name="angle"
-            rotate=""
-            size="normal"
-          >
-            <use
-              xlinkHref="#kb_angle"
-            />
-          </svg>
-        </span>
-      </div>
-      <div
-        className="c7"
-      />
-    </div>
-    <div
-      className="react-autosuggest__suggestions-container c8"
-      id="react-autowhatever-1"
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Controls/Select default 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c6 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: #96a0b3;
-  opacity: 1;
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c4 {
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  height: 100%;
-  padding-left: 8px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: top;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c1 {
@@ -9427,6 +9248,127 @@ exports[`Storyshots Controls/Select default 1`] = `
 
 .c1 .react-autosuggest__suggestion {
   cursor: pointer;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    padding: 0;
+    top: initial;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    position: static;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1.c1,
+  .responsive-booking .c1.c1 {
+    position: relative;
+  }
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
+    className="c1"
+    role="combobox"
+  >
+    <div
+      className="c2"
+      disabled={false}
+      size="normal"
+    >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls="react-autowhatever-1"
+        autoComplete="off"
+        className="react-autosuggest__input c3"
+        disabled={false}
+        name="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Купить..."
+        readOnly={true}
+        size="normal"
+        type="text"
+        value=""
+      />
+      <div
+        className="c4"
+        onMouseDown={[Function]}
+        size="normal"
+      >
+        <span
+          className="c5"
+        >
+          <svg
+            className="c6"
+            fill="miscDark"
+            name="angle"
+            rotate=""
+            size="normal"
+          >
+            <use
+              xlinkHref="#kb_angle"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c7"
+      />
+    </div>
+    <div
+      className="react-autosuggest__suggestions-container c8"
+      id="react-autowhatever-1"
+      role="listbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls/Select default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c6 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 1;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .c3 {
@@ -9562,6 +9504,28 @@ exports[`Storyshots Controls/Select default 1`] = `
   background-color: #e64926;
 }
 
+.c4 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c8 {
   margin: 3px 0 0;
   min-width: 90px;
@@ -9574,6 +9538,56 @@ exports[`Storyshots Controls/Select default 1`] = `
   overflow: hidden;
   z-index: 10;
   background: #ffffff;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .react-autosuggest__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .react-autosuggest__input--focused {
+  outline: none;
+}
+
+.c1 .react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.c1 .react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 .react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    padding: 0;
+    top: initial;
+  }
 }
 
 @media screen and (max-width:599px) {
@@ -9590,19 +9604,15 @@ exports[`Storyshots Controls/Select default 1`] = `
   }
 }
 
-@media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    padding: 0;
-    top: initial;
-  }
-}
-
 <div
   className="responsive c0"
 >
   <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
     className="c1"
+    role="combobox"
   >
     <div
       className="c2"
@@ -9612,9 +9622,7 @@ exports[`Storyshots Controls/Select default 1`] = `
       <input
         aria-activedescendant={null}
         aria-autocomplete="list"
-        aria-expanded={false}
-        aria-haspopup={false}
-        aria-owns="react-autowhatever-1"
+        aria-controls="react-autowhatever-1"
         autoComplete="off"
         className="react-autosuggest__input c3"
         disabled={false}
@@ -9625,7 +9633,6 @@ exports[`Storyshots Controls/Select default 1`] = `
         onKeyDown={[Function]}
         placeholder="Купить..."
         readOnly={true}
-        role="combobox"
         size="large"
         type="text"
         value=""
@@ -9658,6 +9665,7 @@ exports[`Storyshots Controls/Select default 1`] = `
     <div
       className="react-autosuggest__suggestions-container c8"
       id="react-autowhatever-1"
+      role="listbox"
     />
   </div>
 </div>
@@ -10400,24 +10408,6 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   display: inline-flex;
 }
 
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: top;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
-}
-
 .c1 {
   font-family: inherit;
   border: none;
@@ -10455,6 +10445,24 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
 .c1:active {
   background: #008ae6;
   box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
 }
 
 <div
