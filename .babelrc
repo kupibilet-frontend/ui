@@ -3,6 +3,8 @@
     "default": {
       "plugins": [
         ["flow-react-proptypes"],
+        ["@babel/plugin-proposal-class-properties"],
+        ["@babel/plugin-proposal-export-default-from"],
         ["module-resolver", {
           "root": ["./"],
           "alias": {
@@ -16,11 +18,13 @@
           "minify": false,
         }]
       ],
-      "presets": ["env", "react", "stage-2"]
+      "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-flow"]
     },
     "esmodules": {
       "plugins": [
         ["flow-react-proptypes"],
+        ["@babel/plugin-proposal-class-properties"],
+        ["@babel/plugin-proposal-export-default-from"],
         ["module-resolver", {
           "root": ["./"],
           "alias": {
@@ -33,7 +37,11 @@
           "ssr": true
         }]
       ],
-      "presets": [["env", {"modules": false}], "react", "stage-2"]
+      "presets": [
+        ["@babel/preset-env", {"modules": false}],
+        "@babel/preset-react",
+        "@babel/preset-flow"
+      ]
     }
   }
 }
