@@ -102,13 +102,11 @@ type PopoverProps = {
 }
 
 type PopoverState = {
-  isOpen: boolean,
+  isOpen: false,
 }
 
 /* eslint-disable react/prop-types */
-class Popover extends Tooltip {
-  props: PopoverProps
-  state: PopoverState
+class Popover extends Tooltip<PopoverProps, PopoverState> {
   static defaultProps = {
     placement: 'bottom',
     size: 'normal',
