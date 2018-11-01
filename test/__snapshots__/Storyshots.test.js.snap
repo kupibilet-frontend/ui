@@ -5628,7 +5628,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
   z-index: 2;
   position: relative;
 }
