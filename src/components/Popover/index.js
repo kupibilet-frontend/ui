@@ -102,7 +102,7 @@ type PopoverProps = {
 }
 
 type PopoverState = {
-  isOpen: false,
+  isOpen: boolean,
 }
 
 /* eslint-disable react/prop-types */
