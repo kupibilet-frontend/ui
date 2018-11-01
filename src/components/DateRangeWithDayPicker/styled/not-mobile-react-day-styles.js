@@ -34,7 +34,7 @@ export default css`
     margin: 0;
     position: absolute;
     width: 100%;
-    top: 3.5em;
+    top: 3em;
     & > div {
       font-weight: 600;
     }

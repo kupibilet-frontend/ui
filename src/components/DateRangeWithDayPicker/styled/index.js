@@ -134,7 +134,7 @@ display: table-row;
 
 .DayPicker-Day {
 display: table-cell;
-padding: 0.5em;
+padding: 0.3em;
 border-radius: 50%;
 vertical-align: middle;
 text-align: center;
@@ -373,7 +373,7 @@ export const FakeInputPlaceholder = styled.span`
 
 export const DateInputWrap = styled.div`
   display: flex;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
   z-index: 2;
   position: relative;
 
@@ -401,8 +401,11 @@ export const DayPickerWrapper = styled.div`
 `
 
 export const Navbar = styled.div`
-  padding: 1em 1em 0.5em;
+  padding: 0.5em 1em 0;
   position: relative;
+  ${mq.handheld`
+    padding-bottom: 0.5em;
+  `}
 `
 
 export const NavbarInfo = styled.div`
@@ -420,7 +423,7 @@ export const NavbarButtons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: -5em;
+  bottom: -4.5em;
   left: 0;
   width: 100%;
   padding: 0 1em;
@@ -429,13 +432,11 @@ export const NavbarButtons = styled.div`
 
 export const ExtraText = styled(TextSmall)`
   color: ${({ theme }) => theme.color.text};
-  padding-left: 0.5em;
   margin-right: 18px;
   line-height: 1.8;
   ${mq.handheld`
-    padding-left: 0;
     margin-right: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   `}
 `
 

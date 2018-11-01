@@ -50,7 +50,7 @@ type State = {
   returnDate: {} | null,
 }
 
-const WEEKDAYS_SHORT = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+const WEEKDAYS_SHORT = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
 
 const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
   const weekdays = WEEKDAYS_SHORT.map((day) => <Weekday key={day}>{day}</Weekday>)
@@ -245,7 +245,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
           <ExtraText>Цены примерные на 1 взрослого, эконом</ExtraText>
           {showToCalendar &&
             <Button
-              variant="secondary"
               onClick={this.onReturnDateUnneeded}
               size="small"
             >
@@ -361,7 +360,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           showWeekDays={!isMobile}
           modifiers={modifiers}
           month={!isMobile ? (fromDate || today) : today}
-          firstDayOfWeek={0}
+          firstDayOfWeek={1}
           numberOfMonths={numberOfMonths}
           months={moment.months()}
           locale="ru"
@@ -395,7 +394,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
               <ButtonWrapper>
                 <Button
                   onClick={this.onReturnDateUnneeded}
-                  variant="secondary"
                 >
                   Обратный билет не нужен
                 </Button>
