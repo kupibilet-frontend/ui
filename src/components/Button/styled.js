@@ -50,7 +50,7 @@ const calculateTextPadding = (size, hasLeftIcon, hasRightIcon) => {
   return `0 ${hasRightIcon ? iconPadding : 0}px 0 ${hasLeftIcon ? iconPadding : 0}px`
 }
 
-const calculateBorderRadius = (size, neighboringInGroup) => {
+const calculateBorderRadius = (size, neighboringInGroup, isRoundedRadius) => {
   if (neighboringInGroup === 'both') {
     return ''
   } else if (neighboringInGroup === 'left') {
@@ -59,7 +59,11 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
     return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px;`
   }
 
-  return `border-radius: ${SIZES[size]}px;`
+  if (isRoundedRadius) {
+    return `border-radius: 100%;`
+  }
+
+  return `border-radius: 9px;`
 }
 const getButtonColor = (props) => {
   const { theme, variant } = props
@@ -116,8 +120,8 @@ export const StyledButton = styled.button`
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
 
-  ${({ size, neighboringInGroup }) => (
-    calculateBorderRadius(size, neighboringInGroup)
+  ${({ size, neighboringInGroup, isRoundedRadius }) => (
+    calculateBorderRadius(size, neighboringInGroup, isRoundedRadius)
   )};
 
   ${({ size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup, variant }) => (
