@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { borderRadiusCircle, borderRadiusLarge } from 'utils/borderRadius'
+import { borderRadiusLarge } from 'utils/borderRadius'
 import mq from 'utils/media-queries'
 import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
@@ -103,7 +103,6 @@ export const CloseButton = styled.span`
   `}
   ${mq.handheld`
     background: ${({ theme }) => theme.color.miscLightest};
-    ${borderRadiusCircle.all}
     margin-left: 32px;
     position: absolute;
     right: 18px;
