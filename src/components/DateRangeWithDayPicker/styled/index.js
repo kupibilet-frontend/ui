@@ -353,6 +353,9 @@ export const StyledDayPicker = styled(DayPicker)`
     margin: 0 -18px 12px -18px;
     padding: 0 18px;
     outline: none;
+
+    // hack for some native mobile browsers
+    background: ${({ theme }) => theme.color.background};
   `}
 `
 
