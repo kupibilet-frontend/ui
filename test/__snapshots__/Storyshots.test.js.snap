@@ -5652,7 +5652,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
           onClick={[Function]}
         >
           <div
-            className="c5"
+            className="-div c5"
             onClick={[Function]}
             placeholder="Туда"
             value={null}
@@ -5669,7 +5669,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
           onClick={[Function]}
         >
           <div
-            className="c5"
+            className="-div c5"
             onClick={[Function]}
             placeholder="Обратно"
             value={null}
