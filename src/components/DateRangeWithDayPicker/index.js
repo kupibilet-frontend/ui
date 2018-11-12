@@ -40,6 +40,7 @@ type Props = {
   renderDay: () => void,
   changeFromDate: () => void,
   changeToDate: () => void,
+  onOnewayOnlySelected: () => void,
 }
 
 type State = {
@@ -103,6 +104,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     isMobile: false,
     onMonthVisibilityChange: () => {},
     changeDateInputFocus: () => {},
+    onOnewayOnlySelected: () => {},
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -272,13 +274,18 @@ class ReactDayPicker extends PureComponent <Props, State> {
   }
 
   onReturnDateUnneeded = () => {
+    const {
+      changeToDate,
+      onOnewayOnlySelected,
+    } = this.props
     this.setState({
       returnDate: null,
       showFromCalendar: false,
       showToCalendar: false,
       showCalendar: false,
     })
-    this.props.changeToDate(null)
+    changeToDate(null)
+    onOnewayOnlySelected()
   }
 
   closeDayPicker = () => {
