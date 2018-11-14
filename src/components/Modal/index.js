@@ -12,9 +12,11 @@ import {
   ModalContent,
   Header,
   Content,
-  StyledIcon,
   CloseButton,
   Footer,
+  CancelButton,
+  SubmitButton,
+  StyledIcon,
 } from './styled'
 
 const getCloseButtonSize = ({ isHandheld, size }) => {
@@ -48,16 +50,43 @@ type Props = {
 /* eslint-disable react/prop-types */
 class Modal extends React.PureComponent<Props> {
   static defaultProps = {
-    renderHeader: ({ heading, size, isHandheld }) => (heading &&
+    renderHeader: ({ heading, size }) => (heading &&
       <Header size={size}>
-        {(isCompact(size) || isHandheld)
+        {(isCompact(size))
           ? <H4>{heading}</H4>
           : <H1>{heading}</H1>
         }
       </Header>
     ),
     renderContent: (props) => <Content {...props} />,
-    renderFooter: (props) => props.footer && <Footer {...props} />,
+    renderFooter: (props) => {
+      const footerButtons = props.onSubmitClick || props.onCancelClick
+
+      if (props.footer || footerButtons) {
+        return (
+          ((typeof (props.footer) === 'boolean') || footerButtons)
+            ?
+              <Footer>
+                {props.onSubmitClick &&
+                  <SubmitButton
+                    size="large"
+                    onClick={props.onSubmitClick}
+                  >
+                    {props.submitText || 'Продолжить'}
+                  </SubmitButton>
+                }
+                <CancelButton
+                  onClick={(props.onSubmitClick && props.onCancelClick) || props.onClose}
+                  size="large"
+                  variant="secondary"
+                >
+                  {props.onSubmitClick ? (props.cancelText || 'Отменить') : 'Закрыть'}
+                </CancelButton>
+              </Footer>
+            : <Footer {...props} />
+        )
+      }
+    },
 
     footer: null,
     size: 'wide',
@@ -118,14 +147,16 @@ class Modal extends React.PureComponent<Props> {
             <ModalContent size={size}>
               { renderHeader({ ...this.props, children: heading }) }
               {showCloseButton &&
-                <CloseButton size={size} isOnBottom={isOnBottom}>
-                  <StyledIcon
+                <CloseButton
+                  modalSize={size}
+                  isOnBottom={isOnBottom}
+                  icon={<StyledIcon
                     name="cross"
                     fill={getCloseButtonColor(this.props)}
                     onClick={this.closePortal}
                     size={getCloseButtonSize(this.props)}
-                  />
-                </CloseButton>
+                  />}
+                />
               }
               { renderContent(this.props) }
               { renderFooter({ ...this.props, children: footer }) }

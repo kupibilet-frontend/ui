@@ -113,6 +113,8 @@ export const StyledButton = styled.button`
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: ${({ size }) => TYPOGRAPHY[size]}px;
 
+  max-width: 340px;
+
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
 
