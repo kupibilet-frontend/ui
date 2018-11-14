@@ -5422,6 +5422,271 @@ exports[`Storyshots Controls/DateRange DateRange 1`] = `
 </div>
 `;
 
+exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c4 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 21px 0 0 21px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 16px;
+  padding-right: 10px;
+}
+
+.c4:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c7 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 0 21px 21px 0;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: -2px;
+  padding: 10px 16px;
+  padding-left: 10px;
+}
+
+.c7:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c5 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5,
+.c5:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c5::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c5:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+.c3 {
+  width: 50%;
+}
+
+.c6 {
+  color: #96a0b3;
+  font-weight: 400;
+}
+
+.c6:disabled {
+  color: #b1bdcc;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 6px;
+  z-index: 2;
+  position: relative;
+}
+
+.c1 {
+  position: relative;
+}
+
+<div
+  className="responsive c0"
+>
+  <div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3 c4"
+          onClick={[Function]}
+        >
+          <div
+            className="-div c5"
+            onClick={[Function]}
+            placeholder="Туда"
+            value={null}
+          >
+            <span
+              className="c6"
+            >
+              Туда
+            </span>
+          </div>
+        </div>
+        <div
+          className="c3 c7"
+          onClick={[Function]}
+        >
+          <div
+            className="-div c5"
+            onClick={[Function]}
+            placeholder="Обратно"
+            value={null}
+          >
+            <span
+              className="c6"
+            >
+              Обратно
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Controls/Input As textarea 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -11224,17 +11489,6 @@ exports[`Storyshots Utils Typography 1`] = `
   line-height: 18px;
 }
 
-.c1 {
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 44px;
-  -webkit-letter-spacing: -1.2px;
-  -moz-letter-spacing: -1.2px;
-  -ms-letter-spacing: -1.2px;
-  letter-spacing: -1.2px;
-  margin: 0;
-}
-
 .c4 {
   font-size: 24px;
   font-weight: 600;
@@ -11243,6 +11497,17 @@ exports[`Storyshots Utils Typography 1`] = `
   -moz-letter-spacing: -.4px;
   -ms-letter-spacing: -.4px;
   letter-spacing: -.4px;
+  margin: 0;
+}
+
+.c1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 44px;
+  -webkit-letter-spacing: -1.2px;
+  -moz-letter-spacing: -1.2px;
+  -ms-letter-spacing: -1.2px;
+  letter-spacing: -1.2px;
   margin: 0;
 }
 
@@ -11337,6 +11602,18 @@ exports[`Storyshots Utils Typography 1`] = `
   text-transform: uppercase;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-letter-spacing: -.2px;
+    -moz-letter-spacing: -.2px;
+    -ms-letter-spacing: -.2px;
+    letter-spacing: -.2px;
+  }
+}
+
 @media screen and (min-width:600px) and (max-width:1199px) {
   .responsive .c1,
   .responsive-booking .c1 {
@@ -11358,18 +11635,6 @@ exports[`Storyshots Utils Typography 1`] = `
     -moz-letter-spacing: -.4px;
     -ms-letter-spacing: -.4px;
     letter-spacing: -.4px;
-  }
-}
-
-@media screen and (max-width:1199px) {
-  .responsive .c4,
-  .responsive-booking .c4 {
-    font-size: 20px;
-    line-height: 24px;
-    -webkit-letter-spacing: -.2px;
-    -moz-letter-spacing: -.2px;
-    -ms-letter-spacing: -.2px;
-    letter-spacing: -.2px;
   }
 }
 

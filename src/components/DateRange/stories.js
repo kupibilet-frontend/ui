@@ -45,7 +45,7 @@ storiesOf('Controls/DateRange', module)
         renderDay={(day) => (
           <CalendarDay
             day={day}
-            isCheap={(Number(day).format('DDD') % 9 === 0)}
+            isCheap={(Number(day.format('DDD')) % 9 === 0)}
             cost={Math.floor(day.format('DDD') * 321 % 100) * 100}
           />
         )}
