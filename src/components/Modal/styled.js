@@ -119,7 +119,6 @@ export const CloseButton = styled(Button)`
 `
 
 export const Footer = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.color.miscLighter};
   display: flex;
   padding: ${(props) => (isCompact(props.size) ? '18' : '30')}px 42px;
 

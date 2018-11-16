@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
 import { getLinkColor, getLinkHoverColor } from 'utils/link'
+import mq from 'utils/media-queries'
 
 export const SIZES = {
   small: 12,
@@ -113,7 +114,9 @@ export const StyledButton = styled.button`
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: ${({ size }) => TYPOGRAPHY[size]}px;
 
-  max-width: 340px;
+  ${mq.handheld`
+    max-width: 340px;
+  `}
 
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
