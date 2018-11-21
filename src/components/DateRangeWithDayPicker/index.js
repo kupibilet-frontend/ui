@@ -135,10 +135,12 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside, false)
+    document.addEventListener('keydown', this.handleKeyPress, false)
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside, false)
+    document.removeEventListener('keydown', this.handleKeyPress, false)
   }
 
   onDayChange = (date, disabled) => {
@@ -222,6 +224,32 @@ class ReactDayPicker extends PureComponent <Props, State> {
       showFromCalendar: false,
       showToCalendar: false,
     })
+  }
+
+  handleKeyPress = (e) => {
+    const { keyCode } = e
+    const { showFromCalendar, showToCalendar } = this.state
+    const { changeFromDate, changeToDate } = this.props
+    const clearDate = keyCode === 8 || keyCode === 46
+
+    if (clearDate && showFromCalendar) {
+      this.setState({
+        departureDate: null,
+        showCalendar: false,
+        showFromCalendar: false,
+        showToCalendar: false,
+      })
+      changeFromDate(null)
+    }
+    if (clearDate && showToCalendar) {
+      this.setState({
+        returnDate: null,
+        showCalendar: false,
+        showFromCalendar: false,
+        showToCalendar: false,
+      })
+      changeToDate(null)
+    }
   }
 
   handleFromClick = () => {
