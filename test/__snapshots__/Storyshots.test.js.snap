@@ -5612,6 +5612,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
 
 .c3 {
   width: 50%;
+  min-width: 106px;
 }
 
 .c6 {
