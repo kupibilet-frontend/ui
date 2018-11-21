@@ -361,6 +361,7 @@ export const StyledDayPicker = styled(DayPicker)`
 
 export const DateContainer = styled(Container)`
   width: 50%;
+  min-width: 106px;
 `
 
 export const DateInput = Input.withComponent('div')
