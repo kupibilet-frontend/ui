@@ -73,11 +73,10 @@ storiesOf('COMPONENTS|Complex controls/Modal', module)
         </Button>
         <Modal
           heading="Очень длинный заголовок, который не помещается на одну строку"
-          footer
           isOpen={isOpen()}
           onClose={onClose}
-          onSubmitButtonClick={onClose}
-          onCancelButtonClick={onClose}
+          onSubmitClick={onClose}
+          onCancelClick={onClose}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
            non neque tincidunt tincidunt. Suspendisse potenti. Phasellus ligula ante,
@@ -110,6 +109,40 @@ storiesOf('COMPONENTS|Complex controls/Modal', module)
           heading="Очень длинный заголовок, который не помещается на одну строку"
           isOpen={isOpen()}
           onClose={onClose}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
+           non neque tincidunt tincidunt. Suspendisse potenti. Phasellus ligula ante,
+            tempus sit amet nulla at, pretium euismod ipsum. Nullam ex erat, faucibus
+             ac augue eu, tempor tincidunt sapien. Donec bibendum hendrerit dolor at
+              ullamcorper. Fusce eu nulla dictum, convallis quam at, pellentesque lorem.
+               Aenean sit amet augue facilisis, dictum mi non, ornare dui. Sed imperdiet
+               metus nec diam varius commodo. In bibendum elit luctus tempus vulputate.
+                Maecenas ac justo nec urna imperdiet interdum in in massa. Maecenas ut
+                varius magna. Quisque rhoncus tincidunt aliquet. Pellentesque a arcu
+                vestibulum, fermentum ex at, sagittis ligula. Praesent nec purus at
+                elit mollis accumsan vitae vel ex. Donec dictum molestie dui eget tempus.
+                Aenean mi justo, vehicula ac pulvinar non, vestibulum et nisl. Donec ut leo
+                interdum, porta metus at, consequat sem. Interdum et malesuada fames ac ante
+                ipsum primis in faucibus. Aliquam non mi sed nisi ornare mollis. Praesent qu
+                is lobortis est. Nunc congue ornare tortor.
+
+        </Modal>
+      </div>
+    )
+  })
+
+  .add('With no cancel button', () => {
+    return (
+      <div>
+        <Button onClick={onClick}>
+          Open Modal
+        </Button>
+        <Modal
+          heading="Очень длинный заголовок, который не помещается на одну строку"
+          isOpen={isOpen()}
+          onClose={onClose}
+          onSubmitClick={onClose}
+          hideCancelButton
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
            non neque tincidunt tincidunt. Suspendisse potenti. Phasellus ligula ante,

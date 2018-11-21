@@ -45,6 +45,11 @@ type Props = {
   showCloseButton: boolean,
   isOnBottom: boolean,
   scrollFix?: boolean,
+  onSubmitClick?: Function,
+  onCancelClick?: Function,
+  submitText?: string,
+  cancelText?: string,
+  hideCancelButton?: boolean,
 }
 
 /* eslint-disable react/prop-types */
@@ -72,16 +77,18 @@ class Modal extends React.PureComponent<Props> {
                     size="large"
                     onClick={props.onSubmitClick}
                   >
-                    {props.submitText || 'Продолжить'}
+                    {props.submitText}
                   </SubmitButton>
                 }
-                <CancelButton
-                  onClick={(props.onSubmitClick && props.onCancelClick) || props.onClose}
-                  size="large"
-                  variant="secondary"
-                >
-                  {props.onSubmitClick ? (props.cancelText || 'Отменить') : 'Закрыть'}
-                </CancelButton>
+                {!props.hideCancelButton &&
+                  <CancelButton
+                    onClick={props.onCancelClick || props.onClose}
+                    size="large"
+                    variant="secondary"
+                  >
+                    {props.onSubmitClick ? props.cancelText : 'Закрыть'}
+                  </CancelButton>
+                }
               </Footer>
             : <Footer {...props} />
         )
@@ -95,6 +102,11 @@ class Modal extends React.PureComponent<Props> {
     showCloseButton: true,
     isOnBottom: false,
     scrollFix: true,
+    onSubmitClick: null,
+    onCancelClick: null,
+    submitText: 'Продолжить',
+    cancelText: 'Отменить',
+    hideCancelButton: false,
   }
 
   componentDidMount() {
