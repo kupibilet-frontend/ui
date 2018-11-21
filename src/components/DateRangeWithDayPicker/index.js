@@ -54,7 +54,8 @@ type State = {
 const WEEKDAYS_SHORT = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
 
 const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
-  const weekdays = WEEKDAYS_SHORT.map((day) => <Weekday key={day}>{day}</Weekday>)
+  const weekdays = WEEKDAYS_SHORT.slice(1).concat(WEEKDAYS_SHORT.slice(0, 1))
+    .map((day) => <Weekday key={day}>{day}</Weekday>)
   return (
     <WeekdaysWrapper showToCalendar={showToCalendar}>{weekdays}</WeekdaysWrapper>
   )
