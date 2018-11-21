@@ -85,6 +85,7 @@ const FakeInput = ({
         {...props}
         onClick={onClick}
         value={inputDate}
+        neighboringInGroup={neighboringInGroup}
       >
         {inputDate || <FakeInputPlaceholder>{props.placeholder}</FakeInputPlaceholder>}
         {weekDay && <FakeInputWeekDay>{weekDay}</FakeInputWeekDay>}
