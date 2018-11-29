@@ -393,7 +393,7 @@ export const DayPickerWrapper = styled.div`
   position: absolute;
   top: 100%;
   right: 0;
-  z-index: 2;
+  z-index: 4;
   ${mq.tablet`
     right: auto;
     left: 0;
