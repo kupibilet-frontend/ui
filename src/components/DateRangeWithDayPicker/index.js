@@ -41,6 +41,7 @@ type Props = {
   changeFromDate: () => void,
   changeToDate: () => void,
   onOnewayOnlySelected: () => void,
+  meta: {},
 }
 
 type State = {
@@ -51,11 +52,13 @@ type State = {
   returnDate: {} | null,
 }
 
-const WEEKDAYS_SHORT = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+const BACKSPACE_KEYCODE = 8
+const DELETE_KEYCODE = 46
+const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+const WEEKDAYS_SHORT_FROM_MONDAY = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
 const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
-  const weekdays = WEEKDAYS_SHORT.slice(1).concat(WEEKDAYS_SHORT.slice(0, 1))
-    .map((day) => <Weekday key={day}>{day}</Weekday>)
+  const weekdays = WEEKDAYS_SHORT_FROM_MONDAY.map((day) => <Weekday key={day}>{day}</Weekday>)
   return (
     <WeekdaysWrapper showToCalendar={showToCalendar}>{weekdays}</WeekdaysWrapper>
   )
@@ -69,6 +72,7 @@ const FakeInput = ({
   focused,
   onClick,
   value,
+  invalid,
   ...props
 }) => {
   const inputDate = value && moment(value).format('DD MMM')
@@ -80,6 +84,7 @@ const FakeInput = ({
       focused={focused}
       inModal={props.inModal}
       onClick={onClick}
+      hasError={invalid}
     >
       <DateInput
         {...props}
@@ -136,12 +141,12 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside, false)
-    document.addEventListener('keydown', this.handleKeyPress, false)
+    document.addEventListener('keydown', this.shouldClearDate, false)
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside, false)
-    document.removeEventListener('keydown', this.handleKeyPress, false)
+    document.removeEventListener('keydown', this.shouldClearDate, false)
   }
 
   onDayChange = (date, disabled) => {
@@ -227,11 +232,11 @@ class ReactDayPicker extends PureComponent <Props, State> {
     })
   }
 
-  handleKeyPress = (e) => {
+  shouldClearDate = (e) => {
     const { keyCode } = e
     const { showFromCalendar, showToCalendar } = this.state
     const { changeFromDate, changeToDate } = this.props
-    const clearDate = keyCode === 8 || keyCode === 46
+    const clearDate = keyCode === BACKSPACE_KEYCODE || keyCode === DELETE_KEYCODE
 
     if (clearDate && showFromCalendar) {
       this.setState({
@@ -333,6 +338,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const {
       isMobile,
       onMonthVisibilityChange,
+      meta,
     } = this.props
     const numberOfMonths = this.getNumberOfMonths()
 
@@ -376,6 +382,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           onClick={this.handleFromClick}
           inModal={inModal}
           value={departureDate}
+          invalid={meta.invalid}
           placeholder="Туда"
         />
 
@@ -393,7 +400,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const calendar = (
       <DayPickerWrapper>
         <StyledDayPicker
-          weekdaysShort={WEEKDAYS_SHORT}
+          weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
           showWeekDays={!isMobile}
           modifiers={modifiers}
           month={!isMobile ? (fromDate || today) : today}
