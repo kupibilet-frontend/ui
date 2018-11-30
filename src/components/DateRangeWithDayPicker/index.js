@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react'
 import moment from '@kupibilet/moment'
 import { Portal } from 'react-portal'
+import { get } from 'lodash'
 import GlobalStylesScope from 'components/ThemeProvider'
 import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
@@ -112,6 +113,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     onMonthVisibilityChange: () => {},
     changeDateInputFocus: () => {},
     onOnewayOnlySelected: () => {},
+    meta: {},
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -382,7 +384,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           onClick={this.handleFromClick}
           inModal={inModal}
           value={departureDate}
-          invalid={meta.invalid}
+          invalid={get(meta, 'invalid')}
           placeholder="Туда"
         />
 
