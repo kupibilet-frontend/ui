@@ -21,7 +21,7 @@ const Caption = styled.div`
 type Props = {
   showFromCalendar: boolean,
   showToCalendar: boolean,
-  date: string | null,
+  date: Date | null,
   modifiers: {},
   onMonthVisibilityChange: () => void,
   isMobile: boolean,

@@ -292,6 +292,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
     this.setState({ showCalendar: false })
   }
 
+  addYear = (date) => new Date(date.getFullYear() + 1, date.getMonth(), date.getDate())
+
   render() {
     const {
       departureDate,
@@ -367,6 +369,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
           showWeekDays={!isMobile}
           modifiers={modifiers}
           month={!isMobile ? (fromDate || today) : today}
+          fromMonth={today}
+          toMonth={this.addYear(today)}
           firstDayOfWeek={1}
           numberOfMonths={numberOfMonths}
           months={moment.months()}
