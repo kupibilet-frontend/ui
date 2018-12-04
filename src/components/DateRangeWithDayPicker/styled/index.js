@@ -361,9 +361,13 @@ export const StyledDayPicker = styled(DayPicker)`
 
 export const DateContainer = styled(Container)`
   width: 50%;
+  min-width: 106px;
 `
 
-export const DateInput = Input.withComponent('div')
+export const DateInput = styled(Input.withComponent('div'))`
+  width: calc(100% - 26px);
+  ${({ neighboringInGroup }) => neighboringInGroup === 'left' && 'left: 10px;'}
+`
 
 export const FakeInputPlaceholder = styled.span`
   color: ${({ theme }) => theme.color.miscDark};
@@ -521,7 +525,7 @@ export const MainWrapper = styled.div`
 export const FakeInputWeekDay = styled(TextSmall)`
   color: ${({ theme }) => theme.color.text};
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 0;
   text-transform: uppercase;
 `
