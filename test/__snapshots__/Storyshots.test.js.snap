@@ -5465,7 +5465,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   z-index: 2;
 }
 
-.c7 {
+.c8 {
   color: #333333;
   height: 42px;
   width: 100%;
@@ -5491,12 +5491,12 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   padding-left: 10px;
 }
 
-.c7:hover {
+.c8:hover {
   border-color: #ff9100;
   z-index: 2;
 }
 
-.c5 {
+.c6 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -5513,6 +5513,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   height: 100%;
   padding: 0;
   height: 20px;
+  width: calc(100% - 26px);
   background: transparent;
   font-family: inherit;
   font-size: 18px;
@@ -5529,14 +5530,14 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5,
-.c5:focus {
+.c6,
+.c6:focus {
   border: none;
   outline: none;
   resize: none;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5546,7 +5547,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5556,7 +5557,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5566,7 +5567,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5::placeholder {
+.c6::placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5576,7 +5577,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5586,7 +5587,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5596,7 +5597,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -5606,20 +5607,146 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   opacity: 1;
 }
 
-.c5:focus ~ .AirportInput__geo .AirportInput__spell {
+.c6:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+.c10 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  width: calc(100% - 26px);
+  left: 10px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10,
+.c10:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c10::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c10:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
 .c3 {
   width: 50%;
+  min-width: 106px;
 }
 
-.c6 {
+.c5 {
+  width: calc(100% - 26px);
+}
+
+.c9 {
+  width: calc(100% - 26px);
+  left: 10px;
+}
+
+.c7 {
   color: #96a0b3;
   font-weight: 400;
 }
 
-.c6:disabled {
+.c7:disabled {
   color: #b1bdcc;
 }
 
@@ -5652,30 +5779,30 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
           onClick={[Function]}
         >
           <div
-            className="-div c5"
+            className="c5 -div c6"
             onClick={[Function]}
             placeholder="Туда"
             value={null}
           >
             <span
-              className="c6"
+              className="c7"
             >
               Туда
             </span>
           </div>
         </div>
         <div
-          className="c3 c7"
+          className="c3 c8"
           onClick={[Function]}
         >
           <div
-            className="-div c5"
+            className="c9 -div c10"
             onClick={[Function]}
             placeholder="Обратно"
             value={null}
           >
             <span
-              className="c6"
+              className="c7"
             >
               Обратно
             </span>

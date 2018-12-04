@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react'
 import moment from '@kupibilet/moment'
 import { Portal } from 'react-portal'
+import { get } from 'lodash'
 import GlobalStylesScope from 'components/ThemeProvider'
 import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
@@ -41,6 +42,7 @@ type Props = {
   changeFromDate: () => void,
   changeToDate: () => void,
   onOnewayOnlySelected: () => void,
+  meta: {},
 }
 
 type State = {
@@ -51,10 +53,13 @@ type State = {
   returnDate: {} | null,
 }
 
-const WEEKDAYS_SHORT = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+const BACKSPACE_KEYCODE = 8
+const DELETE_KEYCODE = 46
+const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+const WEEKDAYS_SHORT_FROM_MONDAY = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
 const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
-  const weekdays = WEEKDAYS_SHORT.map((day) => <Weekday key={day}>{day}</Weekday>)
+  const weekdays = WEEKDAYS_SHORT_FROM_MONDAY.map((day) => <Weekday key={day}>{day}</Weekday>)
   return (
     <WeekdaysWrapper showToCalendar={showToCalendar}>{weekdays}</WeekdaysWrapper>
   )
@@ -68,6 +73,7 @@ const FakeInput = ({
   focused,
   onClick,
   value,
+  invalid,
   ...props
 }) => {
   const inputDate = value && moment(value).format('DD MMM')
@@ -79,11 +85,13 @@ const FakeInput = ({
       focused={focused}
       inModal={props.inModal}
       onClick={onClick}
+      hasError={invalid}
     >
       <DateInput
         {...props}
         onClick={onClick}
         value={inputDate}
+        neighboringInGroup={neighboringInGroup}
       >
         {inputDate || <FakeInputPlaceholder>{props.placeholder}</FakeInputPlaceholder>}
         {weekDay && <FakeInputWeekDay>{weekDay}</FakeInputWeekDay>}
@@ -105,6 +113,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     onMonthVisibilityChange: () => {},
     changeDateInputFocus: () => {},
     onOnewayOnlySelected: () => {},
+    meta: {},
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -134,10 +143,12 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside, false)
+    document.addEventListener('keydown', this.shouldClearDate, false)
   }
 
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside, false)
+    document.removeEventListener('keydown', this.shouldClearDate, false)
   }
 
   onDayChange = (date, disabled) => {
@@ -223,6 +234,32 @@ class ReactDayPicker extends PureComponent <Props, State> {
     })
   }
 
+  shouldClearDate = (e) => {
+    const { keyCode } = e
+    const { showFromCalendar, showToCalendar } = this.state
+    const { changeFromDate, changeToDate } = this.props
+    const clearDate = keyCode === BACKSPACE_KEYCODE || keyCode === DELETE_KEYCODE
+
+    if (clearDate && showFromCalendar) {
+      this.setState({
+        departureDate: null,
+        showCalendar: false,
+        showFromCalendar: false,
+        showToCalendar: false,
+      })
+      changeFromDate(null)
+    }
+    if (clearDate && showToCalendar) {
+      this.setState({
+        returnDate: null,
+        showCalendar: false,
+        showFromCalendar: false,
+        showToCalendar: false,
+      })
+      changeToDate(null)
+    }
+  }
+
   handleFromClick = () => {
     this.setState({
       showCalendar: true,
@@ -303,6 +340,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const {
       isMobile,
       onMonthVisibilityChange,
+      meta,
     } = this.props
     const numberOfMonths = this.getNumberOfMonths()
 
@@ -346,6 +384,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           onClick={this.handleFromClick}
           inModal={inModal}
           value={departureDate}
+          invalid={get(meta, 'invalid')}
           placeholder="Туда"
         />
 
@@ -363,7 +402,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const calendar = (
       <DayPickerWrapper>
         <StyledDayPicker
-          weekdaysShort={WEEKDAYS_SHORT}
+          weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
           showWeekDays={!isMobile}
           modifiers={modifiers}
           month={!isMobile ? (fromDate || today) : today}
