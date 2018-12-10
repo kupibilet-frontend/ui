@@ -88,7 +88,7 @@ export const StyledIcon = styled(Icon)`
   cursor: pointer;
 `
 
-export const CloseButton = styled(Button)`
+export const CloseIcon = styled(Button)`
   background: none;
   position: ${(props) => (isCompact(props.modalSize) ? 'absolute' : 'fixed')};
   right: ${(props) => (isCompact(props.modalSize) ? '0' : '4')}px;
@@ -133,7 +133,7 @@ export const Footer = styled.div`
   `}
 `
 
-export const CancelButton = styled(Button)`
+export const CloseButton = styled(Button)`
   ${mq.mobile`
     width: 100%;
     margin-top: 12px;

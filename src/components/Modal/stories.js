@@ -39,7 +39,7 @@ storiesOf('COMPONENTS|Complex controls/Modal', module)
         </Button>
         <Modal
           heading="Очень длинный заголовок, который не помещается на одну строку"
-          footer={footerContent}
+          renderFooter={footerContent}
           isOpen={isOpen()}
           onClose={onClose}
           size={size}
@@ -142,7 +142,7 @@ storiesOf('COMPONENTS|Complex controls/Modal', module)
           isOpen={isOpen()}
           onClose={onClose}
           onSubmitClick={onClose}
-          hideCancelButton
+          shouldRenderCloseButton={false}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum nisi
            non neque tincidunt tincidunt. Suspendisse potenti. Phasellus ligula ante,
