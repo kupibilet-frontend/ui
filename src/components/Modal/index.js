@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Portal } from 'react-portal'
-import H1 from 'components/Typography/H1'
+import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
@@ -54,7 +54,7 @@ class Modal extends React.PureComponent<Props> {
   static defaultProps = {
     renderHeader: ({ heading, size }) => (heading &&
       <Header size={size}>
-        <H1>{heading}</H1>
+        <H4>{heading}</H4>
       </Header>
     ),
     renderContent: (props) => <Content {...props} />,
