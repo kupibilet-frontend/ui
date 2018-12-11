@@ -165,6 +165,7 @@ const InnerTextarea = InnerInput.withComponent('textarea').extend`
 const InputWrapper = styled.div`
   position: relative;
   display: flex;
+  display: -moz-box;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
