@@ -12557,6 +12557,65 @@ exports[`Storyshots Icon Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Utils List 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 28px;
+}
+
+.c2 {
+  line-height: 22px;
+  padding-left: 9px;
+}
+
+<div
+  className="responsive c0"
+>
+  <ul
+    className="c1"
+    style={
+      Object {
+        "width": "284px",
+      }
+    }
+  >
+    <li
+      className="c2"
+    >
+      Мы рады всем карточкам и банкам
+    </li>
+    <li
+      className="c2"
+    >
+      Гарантируем быстрый возврат средств
+    </li>
+    <li
+      className="c2"
+    >
+      Не будет проблем с двойным списанием авиакомпании
+    </li>
+    <li
+      className="c2"
+    >
+      Цена билета
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Storyshots Utils Responsive only 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
