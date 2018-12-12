@@ -12,6 +12,7 @@ import TextLarge from './TextLarge'
 import UppercaseLarge from './UppercaseLarge'
 import Uppercase from './Uppercase'
 import Caption from './Caption'
+import { List, ListItem } from './List'
 
 const headers = (
   <div>
@@ -60,4 +61,12 @@ storiesOf('Utils', module)
       { headers }
       { texts }
     </div>
+  ))
+  .addWithInfo('List', () => (
+    <List style={{ width: '284px' }}>
+      <ListItem>Мы рады всем карточкам и банкам</ListItem>
+      <ListItem>Гарантируем быстрый возврат средств</ListItem>
+      <ListItem>Не будет проблем с двойным списанием авиакомпании</ListItem>
+      <ListItem>Цена билета</ListItem>
+    </List>
   ))
