@@ -47,7 +47,7 @@ type Props = {
   submitText?: string,
   closeButtonText?: string,
   shouldRenderCloseButton?: boolean,
-  renderFooter?: React.Element<*>,
+  footer?: React.Element<*>,
 }
 
 class Modal extends React.PureComponent<Props> {
@@ -58,7 +58,7 @@ class Modal extends React.PureComponent<Props> {
       </Header>
     ),
     renderContent: (props) => <Content {...props} />,
-    renderFooter: null,
+    footer: null,
     size: 'wide',
     closeOnOutsideClick: true,
     closeOnEsc: true,
@@ -97,7 +97,7 @@ class Modal extends React.PureComponent<Props> {
       heading,
       renderHeader,
       renderContent,
-      renderFooter,
+      footer,
       isOpen,
       closeOnOutsideClick,
       shouldRenderCloseIcon,
@@ -137,7 +137,7 @@ class Modal extends React.PureComponent<Props> {
                 />
               }
               { renderContent(this.props) }
-              { renderFooter ? <Footer {...this.props}>{renderFooter}</Footer> :
+              { footer ? <Footer {...this.props}>{footer}</Footer> :
               <Footer>
                 {onSubmitClick &&
                   <SubmitButton
