@@ -346,6 +346,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
     const today = new Date()
     const lastDay = new Date()
+    lastDay.setDate(lastDay.getDate() - 1)
     lastDay.setMonth(lastDay.getMonth() + 12)
 
     const fromDate = departureDate && moment(departureDate).toDate()
