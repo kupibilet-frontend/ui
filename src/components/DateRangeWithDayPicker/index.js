@@ -2,7 +2,6 @@
 import React, { PureComponent } from 'react'
 import moment from '@kupibilet/moment'
 import { Portal } from 'react-portal'
-import { get } from 'lodash'
 import GlobalStylesScope from 'components/ThemeProvider'
 import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
@@ -352,6 +351,9 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const fromDate = departureDate && moment(departureDate).toDate()
     const toDate = returnDate && moment(returnDate).toDate()
 
+    const hasError = meta && meta.error
+    const { touched } = meta
+
     const modifiers = {
       disabled: {
         before: today,
@@ -385,7 +387,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           onClick={this.handleFromClick}
           inModal={inModal}
           value={departureDate}
-          invalid={get(meta, 'invalid')}
+          invalid={touched && hasError}
           placeholder="Туда"
         />
 
