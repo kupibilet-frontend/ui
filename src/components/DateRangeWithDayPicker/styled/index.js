@@ -417,7 +417,7 @@ export const Navbar = styled.div`
 
 export const NavbarInfo = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   white-space: nowrap;
   ${mq.handheld`
@@ -435,16 +435,6 @@ export const NavbarButtons = styled.div`
   width: 100%;
   padding: 0 1em;
   z-index: 2;
-`
-
-export const ExtraText = styled(TextSmall)`
-  color: ${({ theme }) => theme.color.text};
-  margin-right: 18px;
-  line-height: 1.8;
-  ${mq.handheld`
-    margin-right: 0;
-    margin-bottom: 0.5em;
-  `}
 `
 
 

@@ -19,7 +19,6 @@ import {
   Navbar,
   NavbarInfo,
   NavbarButtons,
-  ExtraText,
   StyledHeader,
   WeekdaysWrapper,
   Weekday,
@@ -281,7 +280,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     return (
       <Navbar>
         <NavbarInfo>
-          <ExtraText>Цены примерные на 1 взрослого, эконом</ExtraText>
           {showToCalendar &&
             <Button
               onClick={this.onReturnDateUnneeded}
