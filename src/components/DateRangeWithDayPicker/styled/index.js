@@ -383,6 +383,7 @@ export const DateInputWrap = styled.div`
   padding-bottom: 6px;
   z-index: 2;
   position: relative;
+  outline: none;
 
   ${({ inModal, theme }) => (inModal && `
     margin-top: 60px;

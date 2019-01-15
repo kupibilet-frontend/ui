@@ -224,7 +224,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
   }
 
   handleClickOutside = (e) => {
-    if (this.dayPicker.current.contains(e.target) || this.props.isMobile) return
+    if (this.dayPicker.current.contains(e.relatedTarget || e.target) || this.props.isMobile) return
     this.setState({
       showCalendar: false,
       showFromCalendar: false,
@@ -294,6 +294,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onPreviousClick()
             }}
             icon="arrow-left"
+            tabIndex={-1}
           />
           <Button
             onClick={(e) => {
@@ -301,6 +302,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onNextClick()
             }}
             icon="arrow-right"
+            tabIndex={-1}
           />
         </NavbarButtons>
       </Navbar>
@@ -380,6 +382,9 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const dayPickers = (inModal = false) => (
       <DateInputWrap
         inModal={inModal}
+        onFocus={this.handleFromClick}
+        onBlur={this.handleClickOutside}
+        tabIndex={0}
       >
         <FakeInput
           neighboringInGroup="right"
@@ -419,6 +424,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={captionElement}
           onDayClick={(day) => this.onDayChange(day, modifiers.disabled)}
+          tabIndex={-1}
         />
       </DayPickerWrapper>
     )
