@@ -2,7 +2,6 @@
 import React, { PureComponent } from 'react'
 import moment from '@kupibilet/moment'
 import { Portal } from 'react-portal'
-import { get } from 'lodash'
 import GlobalStylesScope from 'components/ThemeProvider'
 import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
@@ -19,7 +18,6 @@ import {
   Navbar,
   NavbarInfo,
   NavbarButtons,
-  ExtraText,
   StyledHeader,
   WeekdaysWrapper,
   Weekday,
@@ -281,7 +279,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
     return (
       <Navbar>
         <NavbarInfo>
-          <ExtraText>Цены примерные на 1 взрослого, эконом</ExtraText>
           {showToCalendar &&
             <Button
               onClick={this.onReturnDateUnneeded}
@@ -348,10 +345,14 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
     const today = new Date()
     const lastDay = new Date()
+    lastDay.setDate(lastDay.getDate() - 1)
     lastDay.setMonth(lastDay.getMonth() + 12)
 
     const fromDate = departureDate && moment(departureDate).toDate()
     const toDate = returnDate && moment(returnDate).toDate()
+
+    const hasError = meta && meta.error
+    const { touched } = meta
 
     const modifiers = {
       disabled: {
@@ -386,7 +387,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           onClick={this.handleFromClick}
           inModal={inModal}
           value={departureDate}
-          invalid={get(meta, 'invalid')}
+          invalid={touched && hasError}
           placeholder="Туда"
         />
 
