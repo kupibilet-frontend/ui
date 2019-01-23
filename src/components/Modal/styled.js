@@ -123,7 +123,6 @@ export const Footer = styled.div`
   padding: ${(props) => (isCompact(props.size) ? '18' : '30')}px 42px;
 
   ${mq.handheld`
-    align-items: center;
     padding: 24px 18px;
   `}
 
