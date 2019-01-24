@@ -137,7 +137,7 @@ class Modal extends React.PureComponent<Props> {
                 />
               }
               { renderContent(this.props) }
-              { footer ? <Footer {...this.props}>{footer}</Footer> :
+              { footer || (!isOnBottom &&
               <Footer>
                 {onSubmitClick &&
                   <SubmitButton
@@ -156,7 +156,7 @@ class Modal extends React.PureComponent<Props> {
                     {onSubmitClick ? closeButtonText : 'Закрыть'}
                   </CloseButton>
                 }
-              </Footer>}
+              </Footer>)}
             </ModalContent>
           </Overlay>
         </GlobalStylesScope>

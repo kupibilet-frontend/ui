@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select, boolean } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
+import styled from 'styled-components'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 import _get from 'lodash/get'
@@ -11,21 +12,28 @@ const onClick = () => updateKnob('isOpen', 'boolean', true)
 const onClose = () => updateKnob('isOpen', 'boolean', false)
 const sizes = ['wide', 'compact', 'thin']
 
-const footerContent = React.Children.toArray([
-  <Button
-    size="large"
-    onClick={onClose}
-  >
-    Отправить
-  </Button>,
-  <Button
-    variant="link"
-    size="large"
-    onClick={onClose}
-  >
-    Отменить
-  </Button>,
-])
+const FooterWrapper = styled.div`
+  display: flex;
+  padding: 12px 18px;
+`
+
+const footerContent = (
+  <FooterWrapper>
+    <Button
+      size="large"
+      onClick={onClose}
+    >
+      Отправить
+    </Button>
+    <Button
+      variant="link"
+      size="large"
+      onClick={onClose}
+    >
+      Отменить
+    </Button>
+  </FooterWrapper>
+)
 
 
 storiesOf('COMPONENTS|Complex controls/Modal', module)
@@ -39,7 +47,7 @@ storiesOf('COMPONENTS|Complex controls/Modal', module)
         </Button>
         <Modal
           heading="Очень длинный заголовок, который не помещается на одну строку"
-          renderFooter={footerContent}
+          footer={footerContent}
           isOpen={isOpen()}
           onClose={onClose}
           size={size}
