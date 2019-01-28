@@ -1986,7 +1986,8 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   fill: #ffffff;
 }
 
-.c2:hover {
+.c2:hover,
+.c2:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2027,7 +2028,8 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   fill: #ffffff;
 }
 
-.c9:hover {
+.c9:hover,
+.c9:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2728,7 +2730,8 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
   fill: #ffffff;
 }
 
-.c3:hover {
+.c3:hover,
+.c3:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2829,7 +2832,8 @@ exports[`Storyshots Complex controls/Modal Bottom on mobile 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2909,7 +2913,8 @@ exports[`Storyshots Complex controls/Modal With sizes 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -3033,7 +3038,8 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   fill: #ffffff;
 }
 
-.c12:hover {
+.c12:hover,
+.c12:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -4705,7 +4711,8 @@ exports[`Storyshots Controls/Buttons Button as <a href="" /> 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -4785,7 +4792,8 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -4880,7 +4888,8 @@ exports[`Storyshots Controls/Buttons Icon-only button (custom icon) 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5001,7 +5010,8 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5124,7 +5134,8 @@ exports[`Storyshots Controls/Buttons Loading button 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5247,7 +5258,8 @@ exports[`Storyshots Controls/Buttons With custom icons 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5402,7 +5414,8 @@ exports[`Storyshots Controls/Buttons With left and right icons 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -8943,7 +8956,8 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -9120,7 +9134,8 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -9242,7 +9257,8 @@ exports[`Storyshots Controls/Popover default 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -9715,7 +9731,8 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   fill: #ffffff;
 }
 
-.c6:hover {
+.c6:hover,
+.c6:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -11684,7 +11701,8 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
