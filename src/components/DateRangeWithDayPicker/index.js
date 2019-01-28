@@ -294,7 +294,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onPreviousClick()
             }}
             icon="arrow-left"
-            tabIndex={-1}
           />
           <Button
             onClick={(e) => {
@@ -302,7 +301,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onNextClick()
             }}
             icon="arrow-right"
-            tabIndex={-1}
           />
         </NavbarButtons>
       </Navbar>
