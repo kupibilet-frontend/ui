@@ -127,6 +127,7 @@ export const Footer = styled.div`
   `}
 
   ${mq.mobile`
+    align-items: center;
     flex-direction: column;
     padding: 18px;
   `}
