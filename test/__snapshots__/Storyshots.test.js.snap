@@ -6555,6 +6555,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
 .c3 {
   width: 50%;
   min-width: 106px;
+  outline: none;
 }
 
 .c5 {
@@ -6599,17 +6600,15 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
     >
       <div
         className="c2"
-        onBlur={[Function]}
-        onFocus={[Function]}
-        tabIndex={0}
       >
         <div
           className="c3 c4"
-          onClick={[Function]}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          tabIndex={0}
         >
           <div
             className="c5 -div c6"
-            onClick={[Function]}
             placeholder="Туда"
             value={null}
           >
@@ -6622,11 +6621,12 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
         </div>
         <div
           className="c3 c8"
-          onClick={[Function]}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          tabIndex={0}
         >
           <div
             className="c9 -div c10"
-            onClick={[Function]}
             placeholder="Обратно"
             value={null}
           >
