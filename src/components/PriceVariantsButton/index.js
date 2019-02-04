@@ -4,6 +4,7 @@ import type { Element } from 'react'
 import styled from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { borderRadiusSmall } from 'utils/borderRadius'
+import Price from '../Typography/Price'
 
 const Root = styled.div`
   display: inline-flex;
@@ -60,13 +61,6 @@ const Title = styled.span`
   line-height: 20px;
   color: ${({ theme }) => theme.color.textDarker};
   font-weight: ${({ active }) => (active ? 600 : 400)};
-`
-
-const Price = styled.span`
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  color: ${({ theme }) => theme.color.secondaryDarker};
 `
 
 type Props = {

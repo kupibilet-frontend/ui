@@ -13,6 +13,7 @@ import UppercaseLarge from './UppercaseLarge'
 import Uppercase from './Uppercase'
 import Caption from './Caption'
 import { List, ListItem } from './List'
+import Price from './Price'
 
 const headers = (
   <div>
@@ -44,6 +45,9 @@ const texts = (
     </div>
     <div>
       <Uppercase>Uppercase: Пересадка 22ч 20 мин</Uppercase>
+    </div>
+    <div>
+      Цена: <Price>12 345</Price>
     </div>
   </div>
 )
