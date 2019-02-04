@@ -2474,6 +2474,13 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   left: 50%;
 }
 
+.c9 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #fc6100;
+}
+
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2598,13 +2605,6 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
   line-height: 20px;
   color: #333333;
   font-weight: 400;
-}
-
-.c9 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  color: #fc6100;
 }
 
 .c1 {
@@ -12877,6 +12877,13 @@ exports[`Storyshots Utils Typography 1`] = `
   line-height: 20px;
 }
 
+.c13 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #fc6100;
+}
+
 .c2 {
   font-size: 38px;
   font-weight: 600;
@@ -13137,6 +13144,14 @@ exports[`Storyshots Utils Typography 1`] = `
         >
           Uppercase: Пересадка 22ч 20 мин
         </h1>
+      </div>
+      <div>
+        Цена: 
+        <span
+          className="c13"
+        >
+          12 345
+        </span>
       </div>
     </div>
   </div>
