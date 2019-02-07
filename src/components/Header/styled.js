@@ -6,8 +6,7 @@ export const HeaderWrapper = styled.header`
   width: 100%;
   background: ${({ theme }) => theme.color.background};
   border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
-  // eslint-disable-next-line no-confusing-arrow
-  border-top: ${({ withTopBorder, theme }) => withTopBorder ? `1px solid ${theme.color.miscLighter}` : 'none'};
+  border-top: ${({ withTopBorder, theme }) => (withTopBorder ? `1px solid ${theme.color.miscLighter}` : 'none')};
 `
 
 export const HeaderInner = styled.div`
