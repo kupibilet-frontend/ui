@@ -19,8 +19,6 @@ type LogoLinkParams = {
 }
 
 type Props = {
-  withTopBorder?: boolean,
-  innerMaxWidth?: string,
   leftSide?: React.Node,
   rightSide?: React.Node,
   logoLinkComponent?: React.Node, // You can choose Link from React Router
@@ -29,8 +27,6 @@ type Props = {
 
 const Header = (props: Props) => {
   const {
-    withTopBorder,
-    innerMaxWidth,
     leftSide,
     rightSide,
     logoLinkComponent,
@@ -44,8 +40,8 @@ const Header = (props: Props) => {
   const logoLink = <Element {...params} />
 
   return (
-    <HeaderWrapper withTopBorder={withTopBorder}>
-      <HeaderInner innerMaxWidth={innerMaxWidth}>
+    <HeaderWrapper>
+      <HeaderInner>
         <LeftSide>
           <Logo>
             {logoLink}
@@ -61,8 +57,6 @@ const Header = (props: Props) => {
 }
 
 Header.defaultProps = {
-  withTopBorder: false,
-  innerMaxWidth: '1178px',
   leftSide: null,
   rightSide: null,
   logoLinkComponent: 'a',

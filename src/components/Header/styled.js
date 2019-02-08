@@ -6,11 +6,10 @@ export const HeaderWrapper = styled.header`
   width: 100%;
   background: ${({ theme }) => theme.color.background};
   border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
-  border-top: ${({ withTopBorder, theme }) => (withTopBorder ? `1px solid ${theme.color.miscLighter}` : 'none')};
 `
 
 export const HeaderInner = styled.div`
-  max-width: ${({ innerMaxWidth }) => innerMaxWidth};
+  max-width: 1178px;
   height: 48px;
   display: flex;
   align-items: center;
