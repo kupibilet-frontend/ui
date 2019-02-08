@@ -1990,11 +1990,10 @@ exports[`Storyshots Complex controls/Header Header 1`] = `
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid #dde3eb;
-  border-top: 1px solid #dde3eb;
 }
 
 .c2 {
-  max-width: 666px;
+  max-width: 1178px;
   height: 48px;
   display: -webkit-box;
   display: -webkit-flex;
