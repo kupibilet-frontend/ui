@@ -1,19 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Header from 'components/Header'
+import DefaultHeaderLogo from 'components/Header/DefaultHeaderLogo'
 
-const leftSide = <span style={{ marginLeft: '18px' }}>Left side</span>
-const rightSide = <span>Right side</span>
-const CustomComponent = 'a' // In real life we'll use Link from React Router
+// This is an example how we can overwrite the default header
+const renderLogo = () => {
+  const Logo = DefaultHeaderLogo.withComponent('a') // In real life, here will be `Link` from React Router
+  return <Logo href="https://www.kupibilet.ru" />
+}
 
 storiesOf('Complex controls/Header', module)
   .addWithInfo('Header', () => (
     <div style={{ width: '100vw' }}>
       <Header
-        leftSide={leftSide}
-        rightSide={rightSide}
-        logoLinkComponent={CustomComponent}
-        logoLinkParams={{ href: 'https://kupibilet.ru', rel: 'nofollow', title: 'Go to Kupibilet.ru' }}
+        renderLogo={renderLogo}
+        renderLeftSide={() => <span style={{ marginLeft: '18px' }}>Left side</span>}
+        renderRightSide={() => <span>Right side</span>}
       />
     </div>
   ))

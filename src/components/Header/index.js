@@ -1,66 +1,44 @@
 // @flow
 import React from 'react'
 
+import DefaultHeaderLogo from './DefaultHeaderLogo'
+
 import {
   HeaderWrapper,
   HeaderInner,
-  LeftSide,
-  RightSide,
-  Logo,
-  LogoLink,
+  HeaderContent,
 } from './styled'
 
-type LogoLinkParams = {
-  title?: string, // A message to show when the user hovers over the logo
-  href?: string, // Use it with normal <a>
-  to?: string, // Use it with React Router <Link>
-  rel?: string, // You can set "nofollow"
-  // ... <-- You can pass anything else if you really-really want to
-}
-
 type Props = {
-  leftSide?: React.Node,
-  rightSide?: React.Node,
-  logoLinkComponent?: React.Node, // You can choose Link from React Router
-  logoLinkParams?: LogoLinkParams, // You can pass additional parameters
+  renderLogo?: () => React.Node,
+  renderLeftSide?: () => React.Node,
+  renderRightSide?: () => React.Node,
 }
 
 const Header = (props: Props) => {
   const {
-    leftSide,
-    rightSide,
-    logoLinkComponent,
-    logoLinkParams,
+    renderLogo,
+    renderLeftSide,
+    renderRightSide,
   } = props
-
-  // Here we construct our logo link element.
-  // Sometimes it might be useful to render it as <a> and sometimes as <Link>
-  const Element = logoLinkComponent ? LogoLink.withComponent(logoLinkComponent) : LogoLink
-  const params = logoLinkParams || {}
-  const logoLink = <Element {...params} />
 
   return (
     <HeaderWrapper>
       <HeaderInner>
-        <LeftSide>
-          <Logo>
-            {logoLink}
-          </Logo>
-          {leftSide}
-        </LeftSide>
-        <RightSide>
-          {rightSide}
-        </RightSide>
+        { renderLogo() }
+        <HeaderContent>
+          { renderLeftSide() }
+          { renderRightSide() }
+        </HeaderContent>
       </HeaderInner>
     </HeaderWrapper>
   )
 }
 
 Header.defaultProps = {
-  leftSide: null,
-  rightSide: null,
-  logoLinkComponent: 'a',
-  logoLinkParams: { href: '#' },
+  renderLogo: () => <DefaultHeaderLogo />,
+  renderLeftSide: () => null,
+  renderRightSide: () => null,
 }
 
 export default Header
