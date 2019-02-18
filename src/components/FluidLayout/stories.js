@@ -31,7 +31,7 @@ const AsideContent = () => (
   </div>
 )
 
-storiesOf('Fluid layout', module)
+storiesOf('Layout/Fluid layout', module)
   .addDecorator((story) => (
     <div style={{ width: '100vw' }}>
       { story() }

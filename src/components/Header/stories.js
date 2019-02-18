@@ -9,7 +9,7 @@ const renderLogo = () => {
   return <Logo href="https://www.kupibilet.ru" />
 }
 
-storiesOf('Complex controls/Header', module)
+storiesOf('Layout/Header', module)
   .addWithInfo('Header', () => (
     <div style={{ width: '100vw' }}>
       <Header
