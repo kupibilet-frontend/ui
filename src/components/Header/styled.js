@@ -22,6 +22,13 @@ export const HeaderInner = styled.div`
 export const HeaderContent = styled.div`
   flex-grow: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${({ flexEnd }) => (flexEnd ? 'flex-end' : 'space-between')};
   align-items: center;
+`
+
+export const LogoContainer = styled.div`
+  margin-right: 18px;
+  ${mq.mobile`
+    margin-right: 12px;
+  `}
 `
