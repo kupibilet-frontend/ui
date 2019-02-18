@@ -12395,16 +12395,12 @@ exports[`Storyshots Layout/Header Header 1`] = `
         <div
           className="c5"
         >
-          <div>
-            <span>
-              Left side
-            </span>
-          </div>
-          <div>
-            <span>
-              Right side
-            </span>
-          </div>
+          <span>
+            Left side
+          </span>
+          <span>
+            Right side
+          </span>
         </div>
       </div>
     </header>

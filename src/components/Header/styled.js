@@ -22,7 +22,7 @@ export const HeaderInner = styled.div`
 export const HeaderContent = styled.div`
   flex-grow: 1;
   display: flex;
-  justify-content: ${({ flexEnd }) => (flexEnd ? 'flex-end' : 'space-between')};
+  justify-content: space-between;
   align-items: center;
 `
 

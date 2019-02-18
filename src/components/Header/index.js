@@ -30,17 +30,9 @@ const Header = (props: Props) => {
           { renderLogo() }
         </LogoContainer>
 
-        <HeaderContent flexEnd={!renderLeftSide}>
-          {renderLeftSide && (
-            <div>
-              { renderLeftSide() }
-            </div>
-          )}
-          {renderRightSide && (
-            <div>
-              { renderRightSide() }
-            </div>
-          )}
+        <HeaderContent>
+          { renderLeftSide() }
+          { renderRightSide() }
         </HeaderContent>
       </HeaderInner>
     </HeaderWrapper>
@@ -49,8 +41,8 @@ const Header = (props: Props) => {
 
 Header.defaultProps = {
   renderLogo: () => <DefaultHeaderLogo />,
-  renderLeftSide: null,
-  renderRightSide: null,
+  renderLeftSide: () => <div />,
+  renderRightSide: () => <div />,
 }
 
 export default Header
