@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 
-import StyledCollapse, { StyledPanel } from 'components/StyledCollapse'
+import StyledCollapse, { StyledPanel } from 'blocks/Collapse'
 
 const text = `
   Here you can add your styled React component
@@ -28,7 +28,7 @@ const CustomHeader = styled.div`
 const CustomStyledCollapse = styled(StyledCollapse)`
   display: flex;
   margin-left: -10px;
-  
+
   & > * {
     flex-grow: 1;
     flex-basis: 0;
@@ -36,7 +36,7 @@ const CustomStyledCollapse = styled(StyledCollapse)`
   }
 `
 
-storiesOf('Complex controls/StyledCollapse', module)
+storiesOf('Blocks/Collapse', module)
   .addWithInfo('Default', () => (
     <CollapseContainer>
       <StyledCollapse defaultActiveKey={['0']}>

@@ -45,23 +45,6 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   box-sizing: border-box;
 }
 
-.c9 .rc-collapse-anim {
-  overflow: hidden;
-}
-
-.c9 .rc-collapse-content {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c9 .rc-collapse-content.rc-collapse-content-inactive {
-  display: none;
-}
-
-.c9 .rc-collapse-header:focus {
-  outline: none;
-}
-
 .c15 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -79,6 +62,23 @@ exports[`Storyshots Blocks FilterSection 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.c9 .rc-collapse-anim {
+  overflow: hidden;
+}
+
+.c9 .rc-collapse-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c9 .rc-collapse-content.rc-collapse-content-inactive {
+  display: none;
+}
+
+.c9 .rc-collapse-header:focus {
+  outline: none;
 }
 
 .c13 {
@@ -591,7 +591,7 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
 </div>
 `;
 
-exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
+exports[`Storyshots Blocks/Collapse Accordion 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -604,32 +604,101 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
   box-sizing: border-box;
 }
 
-.c1 .rc-collapse-anim {
+.c7 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c9 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c2 .rc-collapse-anim {
   overflow: hidden;
 }
 
-.c1 .rc-collapse-content {
+.c2 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1 .rc-collapse-content.rc-collapse-content-inactive {
+.c2 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
-.c1 .rc-collapse-header:focus {
+.c2 .rc-collapse-header:focus {
   outline: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  border-bottom: 1px solid #dde3eb;
+}
+
+.c4 {
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6 {
+  fill: #7d89a1;
+  display: block;
+}
+
+.c8 {
+  padding: 0 0;
+}
+
+.c1 {
+  width: 400px;
 }
 
 <div
   className="responsive c0"
 >
   <div
-    style={
-      Object {
-        "width": "252px",
-      }
-    }
+    className="c1"
   >
     <div
       className="rc-collapse"
@@ -637,23 +706,62 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
       style={undefined}
     >
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item rc-collapse-item-active c2"
         id={undefined}
         style={undefined}
       >
         <div
-          aria-expanded="false"
+          aria-expanded="true"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="tab"
           tabIndex={0}
         >
-          Foo
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Close me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c7"
+                fill={null}
+                name="angle"
+                rotate="true"
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="rc-collapse-content rc-collapse-content-active"
+          role="tabpanel"
+        >
+          <div
+            className="rc-collapse-content-box"
+          >
+            <div
+              className="c8"
+            >
+              
+  Here you can add your styled React component
+
+            </div>
+          </div>
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item c2"
         id={undefined}
         style={undefined}
       >
@@ -665,11 +773,34 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           role="tab"
           tabIndex={0}
         >
-          Bar
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c9"
+                fill={null}
+                name="angle"
+                rotate=""
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item c2"
         id={undefined}
         style={undefined}
       >
@@ -681,7 +812,30 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
           role="tab"
           tabIndex={0}
         >
-          Mdaaaaa
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c9"
+                fill={null}
+                name="angle"
+                rotate=""
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -689,7 +843,7 @@ exports[`Storyshots Complex controls/Collapse Accordion 1`] = `
 </div>
 `;
 
-exports[`Storyshots Complex controls/Collapse Default 1`] = `
+exports[`Storyshots Blocks/Collapse Always open 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -702,32 +856,89 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
   box-sizing: border-box;
 }
 
-.c1 .rc-collapse-anim {
+.c7 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c2 .rc-collapse-anim {
   overflow: hidden;
 }
 
-.c1 .rc-collapse-content {
+.c2 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1 .rc-collapse-content.rc-collapse-content-inactive {
+.c2 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
-.c1 .rc-collapse-header:focus {
+.c2 .rc-collapse-header:focus {
   outline: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  border-bottom: 1px solid #dde3eb;
+}
+
+.c4 {
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6 {
+  fill: #7d89a1;
+  display: block;
+}
+
+.c8 {
+  padding: 0 0;
+}
+
+.c1 {
+  width: 400px;
 }
 
 <div
   className="responsive c0"
 >
   <div
-    style={
-      Object {
-        "width": "252px",
-      }
-    }
+    className="c1"
   >
     <div
       className="rc-collapse"
@@ -735,51 +946,168 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
       style={undefined}
     >
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
         id={undefined}
         style={undefined}
       >
         <div
-          aria-expanded="false"
+          aria-expanded="true"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
-          tabIndex={0}
+          tabIndex={-1}
         >
-          Foo
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Close me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c7"
+                fill={null}
+                name="angle"
+                rotate="true"
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="rc-collapse-content rc-collapse-content-active"
+          role={null}
+        >
+          <div
+            className="rc-collapse-content-box"
+          >
+            <div
+              className="c8"
+            >
+              
+  Here you can add your styled React component
+
+            </div>
+          </div>
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
         id={undefined}
         style={undefined}
       >
         <div
-          aria-expanded="false"
+          aria-expanded="true"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
-          tabIndex={0}
+          tabIndex={-1}
         >
-          Bar
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c7"
+                fill={null}
+                name="angle"
+                rotate="true"
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="rc-collapse-content rc-collapse-content-active"
+          role={null}
+        >
+          <div
+            className="rc-collapse-content-box"
+          >
+            <div
+              className="c8"
+            >
+              
+  Here you can add your styled React component
+
+            </div>
+          </div>
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
         id={undefined}
         style={undefined}
       >
         <div
-          aria-expanded="false"
+          aria-expanded="true"
           className="rc-collapse-header"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
-          tabIndex={0}
+          tabIndex={-1}
         >
-          Mdaaaaa
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c7"
+                fill={null}
+                name="angle"
+                rotate="true"
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="rc-collapse-content rc-collapse-content-active"
+          role={null}
+        >
+          <div
+            className="rc-collapse-content-box"
+          >
+            <div
+              className="c8"
+            >
+              
+  Here you can add your styled React component
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -787,7 +1115,7 @@ exports[`Storyshots Complex controls/Collapse Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
+exports[`Storyshots Blocks/Collapse Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -800,32 +1128,101 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
   box-sizing: border-box;
 }
 
-.c1 .rc-collapse-anim {
+.c7 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c9 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c2 .rc-collapse-anim {
   overflow: hidden;
 }
 
-.c1 .rc-collapse-content {
+.c2 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1 .rc-collapse-content.rc-collapse-content-inactive {
+.c2 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
-.c1 .rc-collapse-header:focus {
+.c2 .rc-collapse-header:focus {
   outline: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  border-bottom: 1px solid #dde3eb;
+}
+
+.c4 {
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6 {
+  fill: #7d89a1;
+  display: block;
+}
+
+.c8 {
+  padding: 0 0;
+}
+
+.c1 {
+  width: 400px;
 }
 
 <div
   className="responsive c0"
 >
   <div
-    style={
-      Object {
-        "width": "252px",
-      }
-    }
+    className="c1"
   >
     <div
       className="rc-collapse"
@@ -833,7 +1230,7 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
       style={undefined}
     >
       <div
-        className="rc-collapse-item rc-collapse-item-active c1"
+        className="rc-collapse-item rc-collapse-item-active c2"
         id={undefined}
         style={undefined}
       >
@@ -845,7 +1242,30 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           role="button"
           tabIndex={0}
         >
-          Foo
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Close me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c7"
+                fill={null}
+                name="angle"
+                rotate="true"
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
         <div
           className="rc-collapse-content rc-collapse-content-active"
@@ -854,16 +1274,18 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           <div
             className="rc-collapse-content-box"
           >
-            
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
+            <div
+              className="c8"
+            >
+              
+  Here you can add your styled React component
 
+            </div>
           </div>
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item c2"
         id={undefined}
         style={undefined}
       >
@@ -875,11 +1297,34 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           role="button"
           tabIndex={0}
         >
-          Bar
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c9"
+                fill={null}
+                name="angle"
+                rotate=""
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
       <div
-        className="rc-collapse-item c1"
+        className="rc-collapse-item c2"
         id={undefined}
         style={undefined}
       >
@@ -891,7 +1336,428 @@ exports[`Storyshots Complex controls/Collapse Default active panel 1`] = `
           role="button"
           tabIndex={0}
         >
-          Mdaaaaa
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c9"
+                fill={null}
+                name="angle"
+                rotate=""
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Blocks/Collapse Render custom header and layout 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 .rc-collapse-anim {
+  overflow: hidden;
+}
+
+.c3 .rc-collapse-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c3 .rc-collapse-content.rc-collapse-content-inactive {
+  display: none;
+}
+
+.c3 .rc-collapse-header:focus {
+  outline: none;
+}
+
+.c5 {
+  padding: 0 0;
+}
+
+.c1 {
+  width: 900px;
+}
+
+.c4 {
+  color: crimson;
+  font-style: italic;
+  font-weight: normal;
+  padding: 4px;
+  border: crimson 1px dashed;
+  margin-bottom: 5px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -10px;
+}
+
+.c2 > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  margin-right: 10px;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="rc-collapse c2"
+      role={null}
+      style={undefined}
+    >
+      <div
+        className="rc-collapse-item rc-collapse-item-active c3"
+        id={undefined}
+        style={undefined}
+      >
+        <div
+          aria-expanded="true"
+          className="rc-collapse-header"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4"
+          >
+            I am a 
+            <b>
+              stylish
+            </b>
+             header 1
+          </div>
+        </div>
+        <div
+          className="rc-collapse-content rc-collapse-content-active"
+          role={null}
+        >
+          <div
+            className="rc-collapse-content-box"
+          >
+            <div
+              className="c5"
+            >
+              
+  Here you can add your styled React component
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item c3"
+        id={undefined}
+        style={undefined}
+      >
+        <div
+          aria-expanded="false"
+          className="rc-collapse-header"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4"
+          >
+            I am a 
+            <code>
+              stylish
+            </code>
+             header 2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Blocks/Collapse With paddings 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c7 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.c9 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: transparent;
+  opacity: 1;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c2 .rc-collapse-anim {
+  overflow: hidden;
+}
+
+.c2 .rc-collapse-content {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c2 .rc-collapse-content.rc-collapse-content-inactive {
+  display: none;
+}
+
+.c2 .rc-collapse-header:focus {
+  outline: none;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 18px;
+  width: 100%;
+  border-bottom: 1px solid #dde3eb;
+}
+
+.c4 {
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6 {
+  fill: #7d89a1;
+  display: block;
+}
+
+.c8 {
+  padding: 0 18px;
+}
+
+.c1 {
+  width: 400px;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="rc-collapse"
+      role="tablist"
+      style={undefined}
+    >
+      <div
+        className="rc-collapse-item rc-collapse-item-active c2"
+        id={undefined}
+        style={undefined}
+      >
+        <div
+          aria-expanded="true"
+          className="rc-collapse-header"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="tab"
+          tabIndex={0}
+        >
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Close me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c7"
+                fill={null}
+                name="angle"
+                rotate="true"
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="rc-collapse-content rc-collapse-content-active"
+          role="tabpanel"
+        >
+          <div
+            className="rc-collapse-content-box"
+          >
+            <div
+              className="c8"
+            >
+              
+  Here you can add your styled React component
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item c2"
+        id={undefined}
+        style={undefined}
+      >
+        <div
+          aria-expanded="false"
+          className="rc-collapse-header"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="tab"
+          tabIndex={0}
+        >
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c9"
+                fill={null}
+                name="angle"
+                rotate=""
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="rc-collapse-item c2"
+        id={undefined}
+        style={undefined}
+      >
+        <div
+          aria-expanded="false"
+          className="rc-collapse-header"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="tab"
+          tabIndex={0}
+        >
+          <div
+            className="c3"
+          >
+            <div
+              className="c4"
+            >
+              Open me
+            </div>
+            <span
+              className="c5"
+            >
+              <svg
+                className="c6 c9"
+                fill={null}
+                name="angle"
+                rotate=""
+                size="normal"
+              >
+                <use
+                  xlinkHref="#kb_angle"
+                />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1973,156 +2839,6 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
 </div>
 `;
 
-exports[`Storyshots Complex controls/Header Header 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c1 {
-  width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid #dde3eb;
-}
-
-.c2 {
-  max-width: 1178px;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.c4 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  color: #007acc;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition-property: color;
-  transition-property: color;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: block;
-  height: 24px;
-  width: 132px;
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjI0Ij48ZGVmcz48cGF0aCBpZD0iYSIgZD0iTS40OTkuNTFoMi41djIuNWgtMi41Vi41MXoiLz48cGF0aCBpZD0iYyIgZD0iTTUuODQzLjc1NFY3Ljg3SC41NTVWLjc1NGg1LjI4OHoiLz48cGF0aCBpZD0iZSIgZD0iTTAgMjMuNDkxaDEzMC44NDNWMUgweiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC4yNSAtLjI0KSI+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTExNC45OTkgMjIuMjRhMS4yNSAxLjI1IDAgMSAxLTIuNTAxIDAgMS4yNSAxLjI1IDAgMCAxIDIuNSAwem0wLTMuOTk4YTEuMjUgMS4yNSAwIDEgMC0yLjUwMS4wMDEgMS4yNSAxLjI1IDAgMCAwIDIuNSAwbTAtMy45OThhMS4yNSAxLjI1IDAgMSAwLTIuNSAwIDEuMjUgMS4yNSAwIDAgMCAyLjUgMG0wLTMuOTk5YTEuMjUgMS4yNSAwIDEgMC0yLjUuMDAxIDEuMjUgMS4yNSAwIDAgMCAyLjUgMG0wLTMuOTk5YTEuMjUgMS4yNSAwIDEgMC0yLjUuMDAxIDEuMjUgMS4yNSAwIDAgMCAyLjUgMCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMiAuNDkpIj48bWFzayBpZD0iYiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjYSIvPjwvbWFzaz48cGF0aCBmaWxsPSIjMDA4QUU2IiBkPSJNMi45OTkgMS43NmExLjI1IDEuMjUgMCAxIDAtMi41MDEgMCAxLjI1IDEuMjUgMCAwIDAgMi41IDAiIG1hc2s9InVybCgjYikiLz48L2c+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTEyMi4wNjcgNy41MTljLjk1IDAgMS40NzQtLjQwNiAxLjQ3NC0xLjE5NyAwLS44MDEtLjUyNS0xLjA4LTEuNDc0LTEuMDhoLS45OTRWNy41MmguOTk0em0tMi4yMzMtMy4yN2gyLjM2YzEuNDUzIDAgMi41NjMuNTE0IDIuNTYzIDIuMDczIDAgMS4wNjgtLjU1NSAxLjcxLTEuMzg4IDEuOTk4bDEuNjY4IDIuOTE3aC0xLjM5bC0xLjUwNi0yLjczNWgtMS4wNjl2Mi43MzVoLTEuMjM5VjQuMjQ5eiIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNSAzLjQ5KSI+PG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2MiLz48L21hc2s+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTS41NTUgNC42NzVWLjc1NWgxLjI0VjQuNzdjMCAxLjUxOC41NjUgMi4wMiAxLjQxIDIuMDIuODU0IDAgMS40NTItLjUwMiAxLjQ1Mi0yLjAyVi43NTRoMS4xODZ2My45MjFjMCAyLjI5Ny0xLjAxNCAzLjE5NS0yLjYzOSAzLjE5NS0xLjYxMyAwLTIuNjQ5LS44OTgtMi42NDktMy4xOTUiIG1hc2s9InVybCgjZCkiLz48L2c+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTkuNDg4IDIwLjI0MWwtNC40MzYtNy43MDYtMi40NDcgMi45OTd2NC43MDlIMFY0LjI0OWgyLjYwNXY3LjI3OGguMjQ5bDUuNzYtNy4yNzhoMi45NjFsLTQuODkzIDYuMjA5IDUuNzYyIDkuNzgzek0yMC4yODcgMjAuNDkzYy0xLjkyIDAtMy4zOC0uNTYzLTQuMzgtMS42NzMtMS4wOS0xLjIxLTEuNjIyLTMuMTA1LTEuNjIyLTUuNjNWNC4yNWgyLjYwNXY5LjE2MmMwIDMuMjA1IDEuMTA4IDQuNzYzIDMuMzY1IDQuNzYzIDIuMzIzIDAgMy40NjMtMS41NTggMy40NjMtNC43NjNWNC4yNWgyLjYwNXY4Ljk0MWMwIDIuNTMxLS41NTUgNC40MjUtMS42MzEgNS42My0uOTkxIDEuMTEtMi40OCAxLjY3My00LjQwNSAxLjY3M20xMi4yMzUtOC4zMzhoMi4xOGMyLjQ1NyAwIDMuNjUxLTEuMDAzIDMuNjUxLTMuMDQ0IDAtMS45NTItMS4xMjItMi43OTYtMy43NS0yLjc5NmgtMi4wODF2NS44NHptLTIuNjk1IDguMDg2VjQuMjQ5aDQuOTk5YzEuOTE0IDAgMy40MDIuMzM5IDQuNDIxIDEuMDUgMS4xNTcuODA4IDEuNzQ0IDIuMDY2IDEuNzQ0IDMuODAyIDAgMy4yMjYtMi4yNjcgNS4xMi02LjA2NiA1LjEyaC0yLjQwM3Y2LjAyaC0yLjY5NXoiLz48bWFzayBpZD0iZiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjZSIvPjwvbWFzaz48cGF0aCBmaWxsPSIjMDA4QUU2IiBtYXNrPSJ1cmwoI2YpIiBkPSJNNDQuMTExIDIwLjI0MWgyLjY5NVY0LjI1aC0yLjY5NXpNNTMuMzY1IDEwLjg5N2gyLjEwNWMyLjczIDAgMy4zMDQtMS4zMDcgMy4zMDQtMi4zODYgMC0xLjU2Ni0xLjAwNC0yLjI4Ni0zLjI1NS0yLjI4NmgtMi4xNTR2NC42NzJ6bTAgNy4yNzdoMi40NzZjMi40ODUgMCAzLjc5OC0uOTU2IDMuNzk4LTIuNzYgMC0xLjcwOS0xLjI0Mi0yLjU0LTMuNzk4LTIuNTRoLTIuNDc2djUuM3pNNTAuNjcgMjAuMjRWNC4yNWg1LjA0N2MzLjc4IDAgNS42OTYgMS4yODYgNS42OTYgMy44NjggMCAxLjU5LS44NiAyLjk1Ni0yLjE3IDMuNDE2bC0uMDM4LjAxdi4yMzRsLjA0OS4wMTZjMS45Mi40MjcgMy4wMSAxLjc5MiAzLjAxIDMuNzQ1IDAgMS41MjEtLjU4NyAyLjcyNS0xLjczNSAzLjUzNy0xLjA1OC43NDctMi41OCAxLjE2NC00LjM5MiAxLjE2NEg1MC42N3pNNjUuMzE0IDIwLjI0MWgyLjY5NVY0LjI1aC0yLjY5NXpNNzIuMzIxIDIwLjI0MVY0LjI0OWgyLjYwNXYxMy43NDZoNi43Mzh2Mi4yNDZ6TTg0LjE4IDIwLjI0MVY0LjI0OWg5LjYxM3YyLjE1N2gtNi45MTh2NC4zMTJoNS44NHYyLjI0NmgtNS44NHY1LjAzMWg3LjE4N3YyLjI0NnpNMTAxLjI1IDIwLjI0MVY2LjQwNmgtNC42NzJWNC4yNDloMTIuMDM5djIuMTU3aC00LjY3MnYxMy44MzV6Ii8+PC9nPjwvc3ZnPg==');
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.c3 .icon-inherit-color {
-  fill: #007acc;
-}
-
-.c3:hover {
-  color: rgba(0,122,204,0.8);
-}
-
-.c3:hover .icon-inherit-color {
-  fill: rgba(0,122,204,0.8);
-}
-
-.c3:hover {
-  opacity: 0.8;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-@media screen and (max-width:1199px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
-    padding: 0 18px;
-  }
-}
-
-<div
-  className="responsive c0"
->
-  <div
-    style={
-      Object {
-        "width": "100vw",
-      }
-    }
-  >
-    <header
-      className="c1"
-    >
-      <div
-        className="c2"
-      >
-        <a
-          className="c3"
-          href="https://www.kupibilet.ru"
-        />
-        <div
-          className="c4"
-        >
-          <span
-            style={
-              Object {
-                "marginLeft": "18px",
-              }
-            }
-          >
-            Left side
-          </span>
-          <span>
-            Right side
-          </span>
-        </div>
-      </div>
-    </header>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Complex controls/Modal Bottom on mobile 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
@@ -3029,1180 +3745,6 @@ exports[`Storyshots Complex controls/PriceVariantsButton default 1`] = `
         >
           Описание
         </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Complex controls/StyledCollapse Accordion 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c2 .rc-collapse-anim {
-  overflow: hidden;
-}
-
-.c2 .rc-collapse-content {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c2 .rc-collapse-content.rc-collapse-content-inactive {
-  display: none;
-}
-
-.c2 .rc-collapse-header:focus {
-  outline: none;
-}
-
-.c9 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: transparent;
-  opacity: 1;
-}
-
-.c7 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: transparent;
-  opacity: 1;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 0;
-  width: 100%;
-  border-bottom: 1px solid #dde3eb;
-}
-
-.c4 {
-  font-weight: 700;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c6 {
-  fill: #7d89a1;
-  display: block;
-}
-
-.c8 {
-  padding: 0 0;
-}
-
-.c1 {
-  width: 400px;
-}
-
-<div
-  className="responsive c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="rc-collapse"
-      role="tablist"
-      style={undefined}
-    >
-      <div
-        className="rc-collapse-item rc-collapse-item-active c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="true"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="tab"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Close me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c7"
-                fill={null}
-                name="angle"
-                rotate="true"
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div
-          className="rc-collapse-content rc-collapse-content-active"
-          role="tabpanel"
-        >
-          <div
-            className="rc-collapse-content-box"
-          >
-            <div
-              className="c8"
-            >
-              
-  Here you can add your styled React component
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="false"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="tab"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c9"
-                fill={null}
-                name="angle"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="false"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="tab"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c9"
-                fill={null}
-                name="angle"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Complex controls/StyledCollapse Always open 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c2 .rc-collapse-anim {
-  overflow: hidden;
-}
-
-.c2 .rc-collapse-content {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c2 .rc-collapse-content.rc-collapse-content-inactive {
-  display: none;
-}
-
-.c2 .rc-collapse-header:focus {
-  outline: none;
-}
-
-.c7 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: transparent;
-  opacity: 1;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 0;
-  width: 100%;
-  border-bottom: 1px solid #dde3eb;
-}
-
-.c4 {
-  font-weight: 700;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c6 {
-  fill: #7d89a1;
-  display: block;
-}
-
-.c8 {
-  padding: 0 0;
-}
-
-.c1 {
-  width: 400px;
-}
-
-<div
-  className="responsive c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="rc-collapse"
-      role={null}
-      style={undefined}
-    >
-      <div
-        className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="true"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={-1}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Close me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c7"
-                fill={null}
-                name="angle"
-                rotate="true"
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div
-          className="rc-collapse-content rc-collapse-content-active"
-          role={null}
-        >
-          <div
-            className="rc-collapse-content-box"
-          >
-            <div
-              className="c8"
-            >
-              
-  Here you can add your styled React component
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="true"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={-1}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c7"
-                fill={null}
-                name="angle"
-                rotate="true"
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div
-          className="rc-collapse-content rc-collapse-content-active"
-          role={null}
-        >
-          <div
-            className="rc-collapse-content-box"
-          >
-            <div
-              className="c8"
-            >
-              
-  Here you can add your styled React component
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="true"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={-1}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c7"
-                fill={null}
-                name="angle"
-                rotate="true"
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div
-          className="rc-collapse-content rc-collapse-content-active"
-          role={null}
-        >
-          <div
-            className="rc-collapse-content-box"
-          >
-            <div
-              className="c8"
-            >
-              
-  Here you can add your styled React component
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Complex controls/StyledCollapse Default 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c2 .rc-collapse-anim {
-  overflow: hidden;
-}
-
-.c2 .rc-collapse-content {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c2 .rc-collapse-content.rc-collapse-content-inactive {
-  display: none;
-}
-
-.c2 .rc-collapse-header:focus {
-  outline: none;
-}
-
-.c9 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: transparent;
-  opacity: 1;
-}
-
-.c7 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: transparent;
-  opacity: 1;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 0;
-  width: 100%;
-  border-bottom: 1px solid #dde3eb;
-}
-
-.c4 {
-  font-weight: 700;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c6 {
-  fill: #7d89a1;
-  display: block;
-}
-
-.c8 {
-  padding: 0 0;
-}
-
-.c1 {
-  width: 400px;
-}
-
-<div
-  className="responsive c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="rc-collapse"
-      role={null}
-      style={undefined}
-    >
-      <div
-        className="rc-collapse-item rc-collapse-item-active c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="true"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Close me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c7"
-                fill={null}
-                name="angle"
-                rotate="true"
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div
-          className="rc-collapse-content rc-collapse-content-active"
-          role={null}
-        >
-          <div
-            className="rc-collapse-content-box"
-          >
-            <div
-              className="c8"
-            >
-              
-  Here you can add your styled React component
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="false"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c9"
-                fill={null}
-                name="angle"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="false"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c9"
-                fill={null}
-                name="angle"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Complex controls/StyledCollapse Render custom header and layout 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c3 .rc-collapse-anim {
-  overflow: hidden;
-}
-
-.c3 .rc-collapse-content {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c3 .rc-collapse-content.rc-collapse-content-inactive {
-  display: none;
-}
-
-.c3 .rc-collapse-header:focus {
-  outline: none;
-}
-
-.c5 {
-  padding: 0 0;
-}
-
-.c1 {
-  width: 900px;
-}
-
-.c4 {
-  color: crimson;
-  font-style: italic;
-  font-weight: normal;
-  padding: 4px;
-  border: crimson 1px dashed;
-  margin-bottom: 5px;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -10px;
-}
-
-.c2 > * {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  margin-right: 10px;
-}
-
-<div
-  className="responsive c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="rc-collapse c2"
-      role={null}
-      style={undefined}
-    >
-      <div
-        className="rc-collapse-item rc-collapse-item-active c3"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="true"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-        >
-          <div
-            className="c4"
-          >
-            I am a 
-            <b>
-              stylish
-            </b>
-             header 1
-          </div>
-        </div>
-        <div
-          className="rc-collapse-content rc-collapse-content-active"
-          role={null}
-        >
-          <div
-            className="rc-collapse-content-box"
-          >
-            <div
-              className="c5"
-            >
-              
-  Here you can add your styled React component
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item c3"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="false"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-        >
-          <div
-            className="c4"
-          >
-            I am a 
-            <code>
-              stylish
-            </code>
-             header 2
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Complex controls/StyledCollapse With paddings 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c2 .rc-collapse-anim {
-  overflow: hidden;
-}
-
-.c2 .rc-collapse-content {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c2 .rc-collapse-content.rc-collapse-content-inactive {
-  display: none;
-}
-
-.c2 .rc-collapse-header:focus {
-  outline: none;
-}
-
-.c9 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: transparent;
-  opacity: 1;
-}
-
-.c7 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
-  fill: transparent;
-  opacity: 1;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.c5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px 18px;
-  width: 100%;
-  border-bottom: 1px solid #dde3eb;
-}
-
-.c4 {
-  font-weight: 700;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.c6 {
-  fill: #7d89a1;
-  display: block;
-}
-
-.c8 {
-  padding: 0 18px;
-}
-
-.c1 {
-  width: 400px;
-}
-
-<div
-  className="responsive c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="rc-collapse"
-      role="tablist"
-      style={undefined}
-    >
-      <div
-        className="rc-collapse-item rc-collapse-item-active c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="true"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="tab"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Close me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c7"
-                fill={null}
-                name="angle"
-                rotate="true"
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <div
-          className="rc-collapse-content rc-collapse-content-active"
-          role="tabpanel"
-        >
-          <div
-            className="rc-collapse-content-box"
-          >
-            <div
-              className="c8"
-            >
-              
-  Here you can add your styled React component
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="false"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="tab"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c9"
-                fill={null}
-                name="angle"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
-      >
-        <div
-          aria-expanded="false"
-          className="rc-collapse-header"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="tab"
-          tabIndex={0}
-        >
-          <div
-            className="c3"
-          >
-            <div
-              className="c4"
-            >
-              Open me
-            </div>
-            <span
-              className="c5"
-            >
-              <svg
-                className="c6 c9"
-                fill={null}
-                name="angle"
-                rotate=""
-                size="normal"
-              >
-                <use
-                  xlinkHref="#kb_angle"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -12279,7 +11821,112 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
+exports[`Storyshots FormItem default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <label
+      className="c2"
+      htmlFor="input"
+    >
+      Cake is a lie
+    </label>
+    <input
+      id="input"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Icon Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 42px;
+  width: 42px;
+  fill: #38afff;
+  opacity: 1;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+<div
+  className="responsive c0"
+>
+  <span
+    className="c1"
+  >
+    <svg
+      className="c2"
+      fill="primary"
+      name="checkbox"
+      rotate=""
+      size="large"
+    >
+      <use
+        xlinkHref="#kb_checkbox"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Layout/Fluid layout Aside on top with beforeSection prop 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -12411,7 +12058,7 @@ exports[`Storyshots Fluid layout Aside on top with beforeSection prop 1`] = `
 </div>
 `;
 
-exports[`Storyshots Fluid layout Single column 1`] = `
+exports[`Storyshots Layout/Fluid layout Single column 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -12473,7 +12120,7 @@ exports[`Storyshots Fluid layout Single column 1`] = `
 </div>
 `;
 
-exports[`Storyshots Fluid layout Two columns 1`] = `
+exports[`Storyshots Layout/Fluid layout Two columns 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -12602,7 +12249,7 @@ exports[`Storyshots Fluid layout Two columns 1`] = `
 </div>
 `;
 
-exports[`Storyshots FormItem default 1`] = `
+exports[`Storyshots Layout/Header Header 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -12616,94 +12263,139 @@ exports[`Storyshots FormItem default 1`] = `
 }
 
 .c1 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #dde3eb;
 }
 
 .c2 {
+  max-width: 1178px;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.c4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   display: block;
-  margin-bottom: 6px;
-  font-size: 14px;
-  line-height: 18px;
-  color: #333333;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  height: 24px;
+  width: 132px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjI0Ij48ZGVmcz48cGF0aCBpZD0iYSIgZD0iTS40OTkuNTFoMi41djIuNWgtMi41Vi41MXoiLz48cGF0aCBpZD0iYyIgZD0iTTUuODQzLjc1NFY3Ljg3SC41NTVWLjc1NGg1LjI4OHoiLz48cGF0aCBpZD0iZSIgZD0iTTAgMjMuNDkxaDEzMC44NDNWMUgweiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC4yNSAtLjI0KSI+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTExNC45OTkgMjIuMjRhMS4yNSAxLjI1IDAgMSAxLTIuNTAxIDAgMS4yNSAxLjI1IDAgMCAxIDIuNSAwem0wLTMuOTk4YTEuMjUgMS4yNSAwIDEgMC0yLjUwMS4wMDEgMS4yNSAxLjI1IDAgMCAwIDIuNSAwbTAtMy45OThhMS4yNSAxLjI1IDAgMSAwLTIuNSAwIDEuMjUgMS4yNSAwIDAgMCAyLjUgMG0wLTMuOTk5YTEuMjUgMS4yNSAwIDEgMC0yLjUuMDAxIDEuMjUgMS4yNSAwIDAgMCAyLjUgMG0wLTMuOTk5YTEuMjUgMS4yNSAwIDEgMC0yLjUuMDAxIDEuMjUgMS4yNSAwIDAgMCAyLjUgMCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMiAuNDkpIj48bWFzayBpZD0iYiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjYSIvPjwvbWFzaz48cGF0aCBmaWxsPSIjMDA4QUU2IiBkPSJNMi45OTkgMS43NmExLjI1IDEuMjUgMCAxIDAtMi41MDEgMCAxLjI1IDEuMjUgMCAwIDAgMi41IDAiIG1hc2s9InVybCgjYikiLz48L2c+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTEyMi4wNjcgNy41MTljLjk1IDAgMS40NzQtLjQwNiAxLjQ3NC0xLjE5NyAwLS44MDEtLjUyNS0xLjA4LTEuNDc0LTEuMDhoLS45OTRWNy41MmguOTk0em0tMi4yMzMtMy4yN2gyLjM2YzEuNDUzIDAgMi41NjMuNTE0IDIuNTYzIDIuMDczIDAgMS4wNjgtLjU1NSAxLjcxLTEuMzg4IDEuOTk4bDEuNjY4IDIuOTE3aC0xLjM5bC0xLjUwNi0yLjczNWgtMS4wNjl2Mi43MzVoLTEuMjM5VjQuMjQ5eiIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNSAzLjQ5KSI+PG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2MiLz48L21hc2s+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTS41NTUgNC42NzVWLjc1NWgxLjI0VjQuNzdjMCAxLjUxOC41NjUgMi4wMiAxLjQxIDIuMDIuODU0IDAgMS40NTItLjUwMiAxLjQ1Mi0yLjAyVi43NTRoMS4xODZ2My45MjFjMCAyLjI5Ny0xLjAxNCAzLjE5NS0yLjYzOSAzLjE5NS0xLjYxMyAwLTIuNjQ5LS44OTgtMi42NDktMy4xOTUiIG1hc2s9InVybCgjZCkiLz48L2c+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTkuNDg4IDIwLjI0MWwtNC40MzYtNy43MDYtMi40NDcgMi45OTd2NC43MDlIMFY0LjI0OWgyLjYwNXY3LjI3OGguMjQ5bDUuNzYtNy4yNzhoMi45NjFsLTQuODkzIDYuMjA5IDUuNzYyIDkuNzgzek0yMC4yODcgMjAuNDkzYy0xLjkyIDAtMy4zOC0uNTYzLTQuMzgtMS42NzMtMS4wOS0xLjIxLTEuNjIyLTMuMTA1LTEuNjIyLTUuNjNWNC4yNWgyLjYwNXY5LjE2MmMwIDMuMjA1IDEuMTA4IDQuNzYzIDMuMzY1IDQuNzYzIDIuMzIzIDAgMy40NjMtMS41NTggMy40NjMtNC43NjNWNC4yNWgyLjYwNXY4Ljk0MWMwIDIuNTMxLS41NTUgNC40MjUtMS42MzEgNS42My0uOTkxIDEuMTEtMi40OCAxLjY3My00LjQwNSAxLjY3M20xMi4yMzUtOC4zMzhoMi4xOGMyLjQ1NyAwIDMuNjUxLTEuMDAzIDMuNjUxLTMuMDQ0IDAtMS45NTItMS4xMjItMi43OTYtMy43NS0yLjc5NmgtMi4wODF2NS44NHptLTIuNjk1IDguMDg2VjQuMjQ5aDQuOTk5YzEuOTE0IDAgMy40MDIuMzM5IDQuNDIxIDEuMDUgMS4xNTcuODA4IDEuNzQ0IDIuMDY2IDEuNzQ0IDMuODAyIDAgMy4yMjYtMi4yNjcgNS4xMi02LjA2NiA1LjEyaC0yLjQwM3Y2LjAyaC0yLjY5NXoiLz48bWFzayBpZD0iZiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjZSIvPjwvbWFzaz48cGF0aCBmaWxsPSIjMDA4QUU2IiBtYXNrPSJ1cmwoI2YpIiBkPSJNNDQuMTExIDIwLjI0MWgyLjY5NVY0LjI1aC0yLjY5NXpNNTMuMzY1IDEwLjg5N2gyLjEwNWMyLjczIDAgMy4zMDQtMS4zMDcgMy4zMDQtMi4zODYgMC0xLjU2Ni0xLjAwNC0yLjI4Ni0zLjI1NS0yLjI4NmgtMi4xNTR2NC42NzJ6bTAgNy4yNzdoMi40NzZjMi40ODUgMCAzLjc5OC0uOTU2IDMuNzk4LTIuNzYgMC0xLjcwOS0xLjI0Mi0yLjU0LTMuNzk4LTIuNTRoLTIuNDc2djUuM3pNNTAuNjcgMjAuMjRWNC4yNWg1LjA0N2MzLjc4IDAgNS42OTYgMS4yODYgNS42OTYgMy44NjggMCAxLjU5LS44NiAyLjk1Ni0yLjE3IDMuNDE2bC0uMDM4LjAxdi4yMzRsLjA0OS4wMTZjMS45Mi40MjcgMy4wMSAxLjc5MiAzLjAxIDMuNzQ1IDAgMS41MjEtLjU4NyAyLjcyNS0xLjczNSAzLjUzNy0xLjA1OC43NDctMi41OCAxLjE2NC00LjM5MiAxLjE2NEg1MC42N3pNNjUuMzE0IDIwLjI0MWgyLjY5NVY0LjI1aC0yLjY5NXpNNzIuMzIxIDIwLjI0MVY0LjI0OWgyLjYwNXYxMy43NDZoNi43Mzh2Mi4yNDZ6TTg0LjE4IDIwLjI0MVY0LjI0OWg5LjYxM3YyLjE1N2gtNi45MTh2NC4zMTJoNS44NHYyLjI0NmgtNS44NHY1LjAzMWg3LjE4N3YyLjI0NnpNMTAxLjI1IDIwLjI0MVY2LjQwNmgtNC42NzJWNC4yNDloMTIuMDM5djIuMTU3aC00LjY3MnYxMy44MzV6Ii8+PC9nPjwvc3ZnPg==');
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.c3 .icon-inherit-color {
+  fill: #007acc;
+}
+
+.c3:hover {
+  color: rgba(0,122,204,0.8);
+}
+
+.c3:hover .icon-inherit-color {
+  fill: rgba(0,122,204,0.8);
+}
+
+.c3:hover {
+  opacity: 0.8;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    padding: 0 18px;
+  }
 }
 
 <div
   className="responsive c0"
 >
   <div
-    className="c1"
+    style={
+      Object {
+        "width": "100vw",
+      }
+    }
   >
-    <label
-      className="c2"
-      htmlFor="input"
+    <header
+      className="c1"
     >
-      Cake is a lie
-    </label>
-    <input
-      id="input"
-      type="text"
-    />
+      <div
+        className="c2"
+      >
+        <a
+          className="c3"
+          href="https://www.kupibilet.ru"
+        />
+        <div
+          className="c4"
+        >
+          <span
+            style={
+              Object {
+                "marginLeft": "18px",
+              }
+            }
+          >
+            Left side
+          </span>
+          <span>
+            Right side
+          </span>
+        </div>
+      </div>
+    </header>
   </div>
-</div>
-`;
-
-exports[`Storyshots Icon Default 1`] = `
-.c0 {
-  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-.c0 *,
-.c0 *:before,
-.c0 *:after {
-  box-sizing: border-box;
-}
-
-.c2 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: fill,-webkit-transform;
-  -webkit-transition-property: fill,transform;
-  transition-property: fill,transform;
-  height: 42px;
-  width: 42px;
-  fill: #38afff;
-  opacity: 1;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-<div
-  className="responsive c0"
->
-  <span
-    className="c1"
-  >
-    <svg
-      className="c2"
-      fill="primary"
-      name="checkbox"
-      rotate=""
-      size="large"
-    >
-      <use
-        xlinkHref="#kb_checkbox"
-      />
-    </svg>
-  </span>
 </div>
 `;
 
@@ -13296,7 +12988,7 @@ exports[`Storyshots Utils Typography 1`] = `
         </h1>
       </div>
       <div>
-        Цена: 
+        Price: 
         <span
           className="c13"
         >

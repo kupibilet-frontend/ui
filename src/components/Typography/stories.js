@@ -47,7 +47,7 @@ const texts = (
       <Uppercase>Uppercase: Пересадка 22ч 20 мин</Uppercase>
     </div>
     <div>
-      Цена: <Price>12 345</Price>
+      Price: <Price>12 345</Price>
     </div>
   </div>
 )
