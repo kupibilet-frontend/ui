@@ -12286,7 +12286,7 @@ exports[`Storyshots Layout/Header Header 1`] = `
   margin: 0 auto;
 }
 
-.c4 {
+.c5 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -12306,6 +12306,10 @@ exports[`Storyshots Layout/Header Header 1`] = `
 }
 
 .c3 {
+  margin-right: 18px;
+}
+
+.c4 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   color: #007acc;
@@ -12332,19 +12336,19 @@ exports[`Storyshots Layout/Header Header 1`] = `
   backface-visibility: hidden;
 }
 
-.c3 .icon-inherit-color {
+.c4 .icon-inherit-color {
   fill: #007acc;
 }
 
-.c3:hover {
+.c4:hover {
   color: rgba(0,122,204,0.8);
 }
 
-.c3:hover .icon-inherit-color {
+.c4:hover .icon-inherit-color {
   fill: rgba(0,122,204,0.8);
 }
 
-.c3:hover {
+.c4:hover {
   opacity: 0.8;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -12354,6 +12358,13 @@ exports[`Storyshots Layout/Header Header 1`] = `
   .responsive .c2,
   .responsive-booking .c2 {
     padding: 0 18px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    margin-right: 12px;
   }
 }
 
@@ -12373,20 +12384,18 @@ exports[`Storyshots Layout/Header Header 1`] = `
       <div
         className="c2"
       >
-        <a
-          className="c3"
-          href="https://www.kupibilet.ru"
-        />
         <div
-          className="c4"
+          className="c3"
         >
-          <span
-            style={
-              Object {
-                "marginLeft": "18px",
-              }
-            }
-          >
+          <a
+            className="c4"
+            href="https://www.kupibilet.ru"
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <span>
             Left side
           </span>
           <span>

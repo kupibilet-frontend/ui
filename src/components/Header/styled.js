@@ -25,3 +25,10 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
 `
+
+export const LogoContainer = styled.div`
+  margin-right: 18px;
+  ${mq.mobile`
+    margin-right: 12px;
+  `}
+`
