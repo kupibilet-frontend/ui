@@ -14,7 +14,7 @@ storiesOf('Layout/Header', module)
     <div style={{ width: '100vw' }}>
       <Header
         renderLogo={renderLogo}
-        renderLeftSide={() => <span style={{ marginLeft: '18px' }}>Left side</span>}
+        renderLeftSide={() => <span>Left side</span>}
         renderRightSide={() => <span>Right side</span>}
       />
     </div>

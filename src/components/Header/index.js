@@ -7,6 +7,7 @@ import {
   HeaderWrapper,
   HeaderInner,
   HeaderContent,
+  LogoContainer,
 } from './styled'
 
 type Props = {
@@ -25,7 +26,10 @@ const Header = (props: Props) => {
   return (
     <HeaderWrapper>
       <HeaderInner>
-        { renderLogo() }
+        <LogoContainer>
+          { renderLogo() }
+        </LogoContainer>
+
         <HeaderContent>
           { renderLeftSide() }
           { renderRightSide() }
@@ -37,8 +41,8 @@ const Header = (props: Props) => {
 
 Header.defaultProps = {
   renderLogo: () => <DefaultHeaderLogo />,
-  renderLeftSide: () => null,
-  renderRightSide: () => null,
+  renderLeftSide: () => <div />,
+  renderRightSide: () => <div />,
 }
 
 export default Header
