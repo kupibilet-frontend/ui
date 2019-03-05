@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import createTestId from '../../utils/createTestId'
 import {
   AirportSuggestContainer,
   SuggestIcon,
@@ -20,6 +21,7 @@ export default class AirportSuggest extends React.PureComponent {
     isGeoSuggest: PropTypes.bool.isRequired,
     isNested: PropTypes.bool.isRequired,
     singleAirport: PropTypes.string,
+    namespace: PropTypes.string,
   }
 
   static defaultProps = {
@@ -37,12 +39,13 @@ export default class AirportSuggest extends React.PureComponent {
       IATACode,
       isGeoSuggest,
       isNested,
+      namespace,
       singleAirport,
     } = this.props
     const isGeoCity = isCity && isGeoSuggest
 
     return (
-      <AirportSuggestContainer>
+      <AirportSuggestContainer {...createTestId(`${namespace}.suggest`, {value: IATACode})}>
         { isGeoCity || isNested &&
           <SuggestIcon>
             <StyledIcon

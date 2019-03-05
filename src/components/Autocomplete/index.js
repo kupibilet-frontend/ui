@@ -11,6 +11,7 @@ import Autosuggest from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
 import type { controlsGroupProps } from 'components/ControlsGroup'
+import createTestId from '../../utils/createTestId'
 
 import style, { SuggestionsContainer } from './styled'
 
@@ -237,12 +238,13 @@ class Autocomplete extends React.PureComponent<{}, Props, State> {
   render() {
     const { suggestions = emptyArray } = this.state
     // Pass neighboringInGroup prop to input
-    const { neighboringInGroup, inputProps, size, className, ...props } = this.props
+    const { neighboringInGroup, inputProps, namespace, size, className, ...props } = this.props
     const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
 
     return (
       <Autosuggest
         {...props}
+        {...createTestId(`${namespace}.autocomplete`)}
         inputProps={{
           neighboringInGroup,
           ...inputProps,
