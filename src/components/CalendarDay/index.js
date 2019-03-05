@@ -2,11 +2,13 @@
 import React, { PureComponent } from 'react'
 import type moment$Moment from '@kupibilet/moment'
 import { Day, AvgCost } from './styled'
+import createE2EId from '../../utils/createE2EId'
 
 type Props = {
   day: moment$Moment,
   isCheap?: boolean,
   cost?: number,
+  namespace: string,
 }
 
 /* eslint-disable react/prop-types */
@@ -17,10 +19,12 @@ export default class DayCell extends PureComponent<Props, void> {
   }
 
   render() {
-    const { day, isCheap, cost } = this.props
-
+    const { day, isCheap, cost, namespace } = this.props
+    const valueDay = day.format('D')
+    const testIdDate = day.format('DD.MM.YYYY')
+    const month = day.format('M')
     return (
-      <Day>
+      <Day {...createE2EId(`${namespace}.day`, { day: valueDay, month, fulldate: testIdDate, cost })}>
         { day.format('D') }
         {
           cost ? (

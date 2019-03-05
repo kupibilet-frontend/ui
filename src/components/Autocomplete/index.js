@@ -11,6 +11,7 @@ import Autosuggest from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
 import type { controlsGroupProps } from 'components/ControlsGroup'
+import createE2EId from '../../utils/createE2EId'
 
 import style, { SuggestionsContainer } from './styled'
 
@@ -37,7 +38,7 @@ type onChange = (Event, { newValue: string, method: string }) => void
 type Props = controlsGroupProps & {
   forceSuggestedValue: boolean,
   suggestions: Suggestion[] | Section[],
-
+  namespace: string,
   onSuggestionsFetchRequested: ({ value: string }) => any,
   onSuggestionsClearRequested: () => void,
   onSuggestionSelected: (Event, {
@@ -251,12 +252,13 @@ class Autocomplete extends PureComponent<Props, State> {
   render() {
     const { suggestions = emptyArray } = this.state
     // Pass neighboringInGroup prop to input
-    const { neighboringInGroup, inputProps, size, className, ...props } = this.props
+    const { neighboringInGroup, inputProps, namespace, size, className, ...props } = this.props
     const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
 
     return (
       <Autosuggest
         {...props}
+        {...createE2EId(`${namespace}.autocomplete`)}
         inputProps={{
           neighboringInGroup,
           ...inputProps,

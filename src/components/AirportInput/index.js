@@ -2,6 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import createE2EId from '../../utils/createE2EId'
 import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from './styled'
 
 /* eslint-disable react/prop-types */
@@ -10,6 +11,7 @@ type Props = {
   value: string,
   area: string,
   spell: string,
+  namespace: string,
   IATACode: string,
   onClick?: (SyntheticInputEvent) => void,
   onFocus?: (SyntheticInputEvent) => void,
@@ -87,7 +89,7 @@ export default class AirportInput extends React.PureComponent<Props, State, null
   }
 
   render() {
-    const { neighboringInGroup, value, area, IATACode, meta = {}, ...props } = this.props
+    const { neighboringInGroup, value, area, namespace, IATACode, meta = {}, ...props } = this.props
     const hasError = meta && meta.error
     const { touched } = meta
     const { focused } = this.state
@@ -108,6 +110,7 @@ export default class AirportInput extends React.PureComponent<Props, State, null
           {...props}
           ref={this.onRef}
           value={value}
+          {...createE2EId(`${namespace}.input`)}
           neighboringInGroup={neighboringInGroup}
           onFocus={this.onFocus}
           onBlur={this.onBlur}

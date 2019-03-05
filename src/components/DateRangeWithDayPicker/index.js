@@ -7,6 +7,8 @@ import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
 import { StyledIcon } from 'components/Modal/styled'
 import { withMedia } from 'utils/media-queries'
+import createE2EId from 'utils/createE2EId'
+
 import MonthCaption from './parts/MonthCaption'
 import {
   StyledDayPicker,
@@ -44,6 +46,7 @@ type Props = {
   endDatePlaceholderText?: string,
   alwaysNeedDateTo?: boolean,
   meta: {},
+  namespace: string,
 }
 
 type State = {
@@ -305,6 +308,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onClick={this.onReturnDateUnneeded}
               size="small"
               onBlur={this.handleClickOutside}
+              {...createE2EId(`${this.props.namespace}.button.no_return`)}
             >
               Обратный билет не нужен
             </Button>
@@ -318,6 +322,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
             }}
             icon="arrow-left"
             tabIndex={-1}
+            {...createE2EId(`${this.props.namespace}.button.prev_month`)}
           />
           <Button
             onClick={(e) => {
@@ -326,6 +331,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
             }}
             icon="arrow-right"
             tabIndex={-1}
+            {...createE2EId(`${this.props.namespace}.button.next_month`)}
           />
         </NavbarButtons>
       </Navbar>
@@ -398,6 +404,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const captionElement = (
       <MonthCaption
         modifiers={modifiers}
+        namespace={this.props.namespace}
         showFromCalendar={showFromCalendar}
         showToCalendar={showToCalendar}
         onMonthVisibilityChange={onMonthVisibilityChange}
@@ -418,6 +425,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           value={departureDate}
           invalid={touched && hasError}
           placeholder={startDatePlaceholderText}
+          {...createE2EId(`${this.props.namespace}.input.departure`)}
         />
 
         <FakeInput
@@ -428,6 +436,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           inModal={inModal}
           value={returnDate}
           placeholder={endDatePlaceholderText}
+          {...createE2EId(`${this.props.namespace}.input.return`)}
         />
       </DateInputWrap>
     )
@@ -435,6 +444,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const calendar = (
       <DayPickerWrapper>
         <StyledDayPicker
+          {...createE2EId(`${this.props.namespace}.datepicker`)}
           weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
           showWeekDays={!isMobile}
           modifiers={modifiers}
@@ -479,6 +489,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               <ButtonWrapper>
                 <Button
                   onClick={this.onReturnDateUnneeded}
+                  {...createE2EId(`${this.props.namespace}.button.no_return`)}
                 >
                   Обратный билет не нужен
                 </Button>

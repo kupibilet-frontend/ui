@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import createE2EId from '../../utils/createE2EId'
 import {
   AirportSuggestContainer,
   SuggestIcon,
@@ -20,12 +21,14 @@ export default class AirportSuggest extends React.PureComponent {
     isGeoSuggest: PropTypes.bool.isRequired,
     isNested: PropTypes.bool.isRequired,
     singleAirport: PropTypes.string,
+    namespace: PropTypes.string,
   }
 
   static defaultProps = {
     city: '',
     country: '',
     singleAirport: '',
+    namespace: '',
   }
 
   render() {
@@ -37,12 +40,13 @@ export default class AirportSuggest extends React.PureComponent {
       IATACode,
       isGeoSuggest,
       isNested,
+      namespace,
       singleAirport,
     } = this.props
     const isGeoCity = isCity && isGeoSuggest
 
     return (
-      <AirportSuggestContainer>
+      <AirportSuggestContainer {...createE2EId(`${namespace}.suggest`, { iatacode: IATACode })}>
         { (isGeoCity || isNested) ? (
           <SuggestIcon>
             <StyledIcon

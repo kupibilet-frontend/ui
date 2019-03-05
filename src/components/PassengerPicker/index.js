@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
 import Button from 'components/Button'
+import createE2EId from 'utils/createE2EId'
 
 const Passenger = styled.div`
   display: flex;
@@ -56,6 +57,7 @@ type Value = {
 }
 
 type Props = {
+  namespace: string,
   input: {
     value: Value,
     onChange: Value => void,
@@ -110,7 +112,7 @@ class PassengerPicker extends Component<Props, State, null> {
   }
 
   render() {
-    const { title, description, input: { value }, ...props } = this.props
+    const { title, description, namespace, input: { value }, ...props } = this.props
     const { counter, isMax, isMin } = value
 
     return (
@@ -124,12 +126,13 @@ class PassengerPicker extends Component<Props, State, null> {
           </Description>
         </div>
         <PassangerCount>
-          <Current>
+          <Current {...createE2EId(`${namespace}.${title}.counter`, { value: counter })}>
             {counter}
           </Current>
           <CountControls>
             <ButtonControl
               size="normal"
+              {...createE2EId(`${namespace}.${title}.button.minus`, { action: 'minus' })}
               disabled={isMin}
               onClick={this.decrement}
               icon={
@@ -142,6 +145,7 @@ class PassengerPicker extends Component<Props, State, null> {
 
             <ButtonControl
               size="normal"
+              {...createE2EId(`${namespace}.${title}.button.plus`, { action: 'plus' })}
               disabled={isMax}
               onClick={this.increment}
               icon={
