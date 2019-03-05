@@ -7,6 +7,8 @@ import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
 import { StyledIcon } from 'components/Modal/styled'
 import { withMedia } from 'utils/media-queries'
+import createTestId from '../../utils/createTestId'
+
 import MonthCaption from './parts/MonthCaption'
 import {
   StyledDayPicker,
@@ -389,6 +391,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           value={departureDate}
           invalid={touched && hasError}
           placeholder="Туда"
+          {...createTestId(`${this.props.namespace}.input.departure`)}
         />
 
         <FakeInput
@@ -398,6 +401,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           inModal={inModal}
           value={returnDate}
           placeholder="Обратно"
+          {...createTestId(`${this.props.namespace}.input.return`)}
         />
       </DateInputWrap>
     )
@@ -445,6 +449,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               <ButtonWrapper>
                 <Button
                   onClick={this.onReturnDateUnneeded}
+                  {...createTestId(`${this.props.namespace}.button`)}
                 >
                   Обратный билет не нужен
                 </Button>

@@ -2,6 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import createTestId from '../../utils/createTestId'
 import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from './styled'
 
 /* eslint-disable react/prop-types */
@@ -10,6 +11,7 @@ type Props = {
   value: string,
   area: string,
   spell: string,
+  namespace: string,
   IATACode: string,
   onFocus?: (SyntheticInputEvent) => void,
   onBlur?: (SyntheticInputEvent) => void,
@@ -83,7 +85,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
   }
 
   render() {
-    const { neighboringInGroup, value, area, IATACode, meta = {}, ...props } = this.props
+    const { neighboringInGroup, value, area, namespace, IATACode, meta = {}, ...props } = this.props
     const hasError = meta && meta.error
     const { touched } = meta
     const { focused } = this.state
@@ -104,6 +106,7 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
           {...props}
           ref={this.onRef}
           value={value}
+          {...createTestId(`${namespace}.input`)}
           neighboringInGroup={neighboringInGroup}
           onFocus={this.onFocus}
           onBlur={this.onBlur}

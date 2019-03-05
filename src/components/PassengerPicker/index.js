@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
 import Button from 'components/Button'
+import createTestId from '../../utils/createTestId'
 
 const Passenger = styled.div`
   display: flex;
@@ -56,6 +57,7 @@ type Value = {
 }
 
 type Props = {
+  namespace: string,
   input: {
     value: Value,
     onChange: Value => void,
@@ -110,7 +112,7 @@ class PassengerPicker extends Component<{}, Props, State> {
   }
 
   render() {
-    const { title, description, input: { value }, ...props } = this.props
+    const { title, description, namespace, input: { value }, ...props } = this.props
     const { counter, isMax, isMin } = value
 
     return (
@@ -123,13 +125,14 @@ class PassengerPicker extends Component<{}, Props, State> {
             {description}
           </Description>
         </div>
-        <PassangerCount>
+        <PassangerCount {...createTestId(`${namespace}.counter`)}>
           <Current>
             {counter}
           </Current>
           <CountControls>
             <ButtonControl
               size="normal"
+              {...createTestId(`${namespace}.button`, {action: 'minus'})}
               disabled={isMin}
               onClick={this.decrement}
               icon={
@@ -142,6 +145,7 @@ class PassengerPicker extends Component<{}, Props, State> {
 
             <ButtonControl
               size="normal"
+              {...createTestId(`${namespace}.button`, {action: 'plus'})}
               disabled={isMax}
               onClick={this.increment}
               icon={
