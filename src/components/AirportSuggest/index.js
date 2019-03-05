@@ -28,6 +28,7 @@ export default class AirportSuggest extends React.PureComponent {
     city: '',
     country: '',
     singleAirport: '',
+    namespace: '',
   }
 
   render() {
@@ -45,7 +46,7 @@ export default class AirportSuggest extends React.PureComponent {
     const isGeoCity = isCity && isGeoSuggest
 
     return (
-      <AirportSuggestContainer {...createTestId(`${namespace}.suggest`, {value: IATACode})}>
+      <AirportSuggestContainer {...createTestId(`${namespace}.suggest`, { value: IATACode })}>
         { isGeoCity || isNested &&
           <SuggestIcon>
             <StyledIcon

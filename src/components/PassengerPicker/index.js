@@ -132,7 +132,7 @@ class PassengerPicker extends Component<{}, Props, State> {
           <CountControls>
             <ButtonControl
               size="normal"
-              {...createTestId(`${namespace}.button`, {action: 'minus'})}
+              {...createTestId(`${namespace}.button.minus`, { action: 'minus' })}
               disabled={isMin}
               onClick={this.decrement}
               icon={
@@ -145,7 +145,7 @@ class PassengerPicker extends Component<{}, Props, State> {
 
             <ButtonControl
               size="normal"
-              {...createTestId(`${namespace}.button`, {action: 'plus'})}
+              {...createTestId(`${namespace}.button.plus`, { action: 'plus' })}
               disabled={isMax}
               onClick={this.increment}
               icon={
