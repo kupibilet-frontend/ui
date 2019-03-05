@@ -1,5 +1,5 @@
 const createTestId = (id, additionalParams = {}) => {
-  if (!/debug=true/.test(window.parent.location.href)) return
+  if (!/debug=true/.test(window.parent.location.href) || !/debug=true/.test(window.location.href)) return
   const additionalKeys = Object.keys(additionalParams)
   const paramsArray = additionalKeys.length > 0 ?
     additionalKeys.map((item) => {
