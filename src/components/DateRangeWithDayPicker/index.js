@@ -7,6 +7,8 @@ import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
 import { StyledIcon } from 'components/Modal/styled'
 import { withMedia } from 'utils/media-queries'
+import createE2EId from 'utils/createE2EId'
+
 import MonthCaption from './parts/MonthCaption'
 import {
   StyledDayPicker,
@@ -44,6 +46,7 @@ type Props = {
   endDatePlaceholderText?: string,
   alwaysNeedDateTo?: boolean,
   meta: {},
+  namespace: string,
 }
 
 type State = {
@@ -295,7 +298,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
   renderNavbar = ({ onPreviousClick, onNextClick }) => {
     const { showToCalendar } = this.state
-    const { alwaysNeedDateTo } = this.props
+    const { alwaysNeedDateTo, namespace } = this.props
 
     return (
       <Navbar>
@@ -305,6 +308,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onClick={this.onReturnDateUnneeded}
               size="small"
               onBlur={this.handleClickOutside}
+              namespace={`${namespace}.no_return`}
             >
               Обратный билет не нужен
             </Button>
@@ -318,6 +322,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
             }}
             icon="arrow-left"
             tabIndex={-1}
+            namespace={`${namespace}.prev_month`}
           />
           <Button
             onClick={(e) => {
@@ -326,6 +331,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
             }}
             icon="arrow-right"
             tabIndex={-1}
+            namespace={`${namespace}.next_month`}
           />
         </NavbarButtons>
       </Navbar>
@@ -368,6 +374,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
       startDatePlaceholderText,
       endDatePlaceholderText,
       alwaysNeedDateTo,
+      namespace,
     } = this.props
     const numberOfMonths = this.getNumberOfMonths()
 
@@ -398,6 +405,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const captionElement = (
       <MonthCaption
         modifiers={modifiers}
+        namespace={namespace}
         showFromCalendar={showFromCalendar}
         showToCalendar={showToCalendar}
         onMonthVisibilityChange={onMonthVisibilityChange}
@@ -418,6 +426,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           value={departureDate}
           invalid={touched && hasError}
           placeholder={startDatePlaceholderText}
+          {...createE2EId(`${namespace}.input.departure`)}
         />
 
         <FakeInput
@@ -428,6 +437,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           inModal={inModal}
           value={returnDate}
           placeholder={endDatePlaceholderText}
+          {...createE2EId(`${namespace}.input.return`)}
         />
       </DateInputWrap>
     )
@@ -479,6 +489,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               <ButtonWrapper>
                 <Button
                   onClick={this.onReturnDateUnneeded}
+                  namespace={`${namespace}.no_return`}
                 >
                   Обратный билет не нужен
                 </Button>

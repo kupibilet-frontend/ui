@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import moment from '@kupibilet/moment'
 import VisibilitySensor from 'react-visibility-sensor'
 import mq from 'utils/media-queries'
+import createE2EId from 'utils/createE2EId'
 
 const Caption = styled.div`
   ${(props) => (props.isFromSelected && mq.mobile`
@@ -78,18 +79,20 @@ class MonthCaption extends React.PureComponent<Props, State> {
   }
 
   render() {
-    const { date } = this.props
+    const { date, namespace } = this.props
     const { isFromSelectedMonth, isToSelectedMonth, isEmptyReturnDate } = this.state
 
     const formatDate = moment(date).format('MMMM YYYY')
     const month = formatDate[0].toUpperCase() + formatDate.substr(1)
-
+    const testIdMonth = moment(date).format('M')
+    const testIdYear = moment(date).format('YYYY')
     return (
       <VisibilitySensor
         onChange={this.onChange}
         partialVisibility
       >
         <Caption
+          {...createE2EId(`${namespace}.caption.date`, { month: testIdMonth, year: testIdYear, monthname: month })}
           className="DayPicker-Caption"
           ref={(element) => { this.selectedMonth = element }}
           isFromSelected={isFromSelectedMonth}

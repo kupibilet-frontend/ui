@@ -3,5 +3,4 @@
 !components/**/*.js
 !utils/**/*.js
 **/*stories*
-**/*test*
 flow-typed

@@ -4,6 +4,7 @@ import type { Element } from 'react'
 import styled from 'styled-components'
 
 import style from 'utils/link'
+import createE2EId from 'utils/createE2EId'
 
 const PaddingWrap = styled.span`
   display: inline-flex;
@@ -28,13 +29,15 @@ type Props = {
   leftIcon?: Element<*>,
   rightIcon?: Element<*>,
   href?: string,
+  namespace?: string,
+  e2eParams?: Object<string>,
 }
 
-const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
+const Link = ({ children, href, leftIcon, rightIcon, namespace, e2eParams, ...props }: Props) => {
   const TagName = href ? 'a' : 'span'
 
   return (
-    <TagName href={href} {...props}>
+    <TagName href={href} {...createE2EId(`${namespace}.link`, e2eParams)} {...props}>
       {leftIcon && (
         <PaddingWrap left>
           {cloneIconWithSize(leftIcon)}
@@ -56,6 +59,8 @@ Link.defaultProps = {
   href: null,
   leftIcon: null,
   rightIcon: null,
+  namespace: undefined,
+  e2eParams: {},
 }
 
 const StyledLink = styled(Link)`

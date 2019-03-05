@@ -6,6 +6,7 @@ import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
 import { isCompact } from './utils'
+import createE2EId from '../../utils/createE2EId'
 
 import {
   ModalContent,
@@ -57,7 +58,10 @@ class Modal extends React.PureComponent<Props> {
   static defaultProps = {
     heading: '',
     renderHeader: ({ heading, size }) => (heading ? (
-      <Header size={size}>
+      <Header
+        size={size}
+        {...createE2EId('modal.heading', { value: heading })}
+      >
         <H4>{heading}</H4>
       </Header>
     ) : null),
@@ -148,13 +152,17 @@ class Modal extends React.PureComponent<Props> {
             isOnBottom={isOnBottom}
             scrollFix={scrollFix}
           >
-            <ModalContent size={size}>
+            <ModalContent
+              {...createE2EId('modal')}
+              size={size}
+            >
               { renderHeader({ ...this.props, children: heading }) }
               {shouldRenderCloseIcon ? (
                 <CloseIcon
                   modalSize={size}
                   isOnBottom={isOnBottom}
                   icon={<StyledIcon
+                    {...createE2EId('modal.cross')}
                     name="cross"
                     fill={getCloseIconColor(this.props)}
                     onClick={this.closePortal}

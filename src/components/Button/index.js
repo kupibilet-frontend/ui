@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Icon from 'components/Icon'
+import createE2EId from 'utils/createE2EId'
 import { StyledButton, StyledButtonLink, StyledButtonText, IconWrap, SIZES } from './styled'
 
 const BUTTON_SIZE_TO_ICON_MAP = {
@@ -43,6 +44,8 @@ const Button = ({
   icon,
   leftIcon,
   rightIcon,
+  namespace,
+  e2eParams,
   ...props
 }) => (
   <RenderedComponent
@@ -53,6 +56,7 @@ const Button = ({
     hasLeftIcon={Boolean(leftIcon)}
     hasRightIcon={Boolean(rightIcon)}
     disabled={disabled}
+    {...createE2EId(`${namespace}.button`, e2eParams)}
   >
     {
       leftIcon ? (
@@ -117,6 +121,8 @@ Button.propTypes = {
     PropTypes.string,
     PropTypes.element,
   ]),
+  namespace: PropTypes.string,
+  e2eParams: PropTypes.objectOf(PropTypes.string),
 }
 
 RenderedComponent.propTypes = {

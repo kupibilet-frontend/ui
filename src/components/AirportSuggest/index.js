@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import createE2EId from '../../utils/createE2EId'
 import {
   AirportSuggestContainer,
   SuggestIcon,
@@ -42,11 +43,12 @@ export default class AirportSuggest extends React.PureComponent {
     const isGeoCity = isCity && isGeoSuggest
 
     return (
-      <AirportSuggestContainer>
+      <AirportSuggestContainer {...createE2EId(`site.search_form.suggest.line`, { iatacode: IATACode })}>
         { (isGeoCity || isNested) ? (
           <SuggestIcon>
             <StyledIcon
               size="normal"
+              {...createE2EId(`site.search_form.suggest.line.icon`)}
               name={isGeoCity ? 'location' : 'plane'}
               inheritColor
               isGeoCity
@@ -55,10 +57,14 @@ export default class AirportSuggest extends React.PureComponent {
         ) : null}
 
         <Geo>
-          <Value>
+          <Value
+            {...createE2EId(`site.search_form.suggest.line.label.top`)}
+          >
             { value }
           </Value>
-          <div>
+          <div
+            {...createE2EId(`site.search_form.suggest.line.label.bottom`)}
+          >
             { isCity ? (
               <GeoLabel>
                 {singleAirport ? `аэропорт ${singleAirport}` : 'Все аэропорты'}
@@ -75,7 +81,9 @@ export default class AirportSuggest extends React.PureComponent {
             }
           </div>
         </Geo>
-        <Code>
+        <Code
+          {...createE2EId(`site.search_form.suggest.line.iata`)}
+        >
           { IATACode }
         </Code>
       </AirportSuggestContainer>

@@ -8,6 +8,7 @@ import {
   CheckboxInput,
   LabelText,
 } from './styled'
+import createE2EId from '../../utils/createE2EId'
 
 type Props = {
   onChange?: (InputEvent) => *,
@@ -16,6 +17,7 @@ type Props = {
   children: React$Element<*>,
   name?: string,
   className?: string,
+  namespace?: string,
 }
 
 export class Checkbox extends React.PureComponent<Props, void> {
@@ -25,6 +27,7 @@ export class Checkbox extends React.PureComponent<Props, void> {
     onChange() {},
     name: '',
     className: '',
+    namespace: undefined,
   }
 
   render() {
@@ -35,6 +38,7 @@ export class Checkbox extends React.PureComponent<Props, void> {
       children,
       name,
       className,
+      namespace,
     } = this.props
 
     return (
@@ -43,6 +47,7 @@ export class Checkbox extends React.PureComponent<Props, void> {
           classname="checkmark"
           disabled={disabled}
           checked={checked}
+          {...createE2EId(`${namespace}.checkbox`)}
         >
           {
             (checked && !disabled) ? (
@@ -62,7 +67,11 @@ export class Checkbox extends React.PureComponent<Props, void> {
           />
         </StyledCheckbox>
 
-        <LabelText className="label-text" disabled={disabled}>
+        <LabelText
+          {...createE2EId(`${namespace}.checkbox.label`)}
+          className="label-text"
+          disabled={disabled}
+        >
           {children}
         </LabelText>
 

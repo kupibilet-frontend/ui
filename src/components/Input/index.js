@@ -4,6 +4,7 @@ import ControlsGroup from 'components/ControlsGroup'
 
 /* eslint-disable  react/jsx-no-bind */
 
+import createE2EId from 'utils/createE2EId'
 import {
   Error,
   InnerInput,
@@ -34,6 +35,8 @@ type Props = {
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
   ref?: Function,
+  namespace?: string,
+  e2eParams?: Object<string>,
   children?: React$Element<*>[],
   isTextarea?: boolean,
 }
@@ -46,6 +49,8 @@ class InputControl extends PureComponent<Props, State> {
   static defaultProps = {
     name: 'input',
     size: 'normal',
+    namespace: undefined,
+    e2eParams: {},
   }
 
   constructor(props) {
@@ -91,6 +96,8 @@ class InputControl extends PureComponent<Props, State> {
       leftIcon,
       rightIcon,
       isTextarea,
+      namespace,
+      e2eParams,
       ...props
     } = this.props
 
@@ -109,6 +116,7 @@ class InputControl extends PureComponent<Props, State> {
         isTextarea={isTextarea}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
+        {...createE2EId(`${namespace}.input`, e2eParams)}
       />
     )
   }
@@ -127,6 +135,8 @@ class InputControl extends PureComponent<Props, State> {
       handleLeftIconPress,
       handleRightIconPress,
       isTextarea,
+      namespace,
+      e2eParams,
       ...props
     } = this.props
 
@@ -201,7 +211,7 @@ class InputControl extends PureComponent<Props, State> {
           active={active || this.state.isActive}
         />
         { error && !active && (
-          <Error>
+          <Error {...createE2EId(`${namespace}.error`)}>
             { error }
           </Error>
         )}

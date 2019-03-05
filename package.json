@@ -24,7 +24,7 @@
     "prepublishOnly": "yarn build"
   },
   "engines": {
-    "node": ">=10",
+    "node": ">=11",
     "npm": ">=6",
     "yarn": ">=1.10.1"
   },

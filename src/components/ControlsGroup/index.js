@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react'
 import { SwapContainer, SwapIcon, FlexContainer } from './styled'
+import createE2EId from '../../utils/createE2EId'
 
 type neighboringInGroup = null | 'right' | 'both' | 'left'
 export type controlsGroupProps = {
@@ -36,6 +37,7 @@ class Swap extends PureComponent<SwapProps, null> {
 
     return (
       <SwapContainer
+        {...createE2EId('site.search_form.swap')}
         onClick={onSwap}
       >
         <SwapIcon
