@@ -8,12 +8,13 @@ type Props = {
   day: moment$Moment,
   isCheap?: boolean,
   cost?: number,
+  namespace: string,
 }
 
 /* eslint-disable react/prop-types */
 export default class DayCell extends React.PureComponent<void, Props, void> {
   render() {
-    const { day, isCheap, cost } = this.props
+    const { day, isCheap, cost, namespace } = this.props
 
     return (
       <Day {...createTestId(`${namespace}.day`, {day: day.format('D'), cost: cost })}>
