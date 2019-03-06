@@ -6,8 +6,25 @@ import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } fro
 
 export { SuccessMessage }
 
+type Meta = {
+  active: null,
+  asyncValidating: false,
+  autofilled: false,
+  dirty: false,
+  dispatch: () => void,
+  form: null,
+  initial: null,
+  invalid: false,
+  pristine: true,
+  submitFailed: false,
+  submitting: false,
+  touched: false,
+  valid: false,
+  visited: false,
+  warning:null,
+}
+
 type Props = {
-  active?: boolean,
   error?: boolean | null | string,
   success?: boolean,
   disabled?: boolean,
@@ -22,8 +39,8 @@ type Props = {
   handleRightIconPress?: Function,
   innerRef?: Function,
   size?: string,
+  meta?: Meta,
 }
-
 
 type State = {
   isActive: boolean,
@@ -31,7 +48,6 @@ type State = {
 
 export class RoundInput extends PureComponent<Props, State> {
   static defaultProps = {
-    active: null,
     error: null,
     success: null,
     disabled: null,
@@ -46,6 +62,9 @@ export class RoundInput extends PureComponent<Props, State> {
     handleRightIconPress: null,
     innerRef: null,
     size: null,
+    meta: {
+      active: null,
+    },
   }
 
   state = {
@@ -107,7 +126,7 @@ export class RoundInput extends PureComponent<Props, State> {
 
   render() {
     const {
-      active,
+      meta: { active },
       disabled,
       leftIcon,
       rightIcon,
@@ -181,7 +200,7 @@ const RFRoundInput = (props: FieldProps) => {
   return (
     <RoundInput
       {...input}
-      {...meta}
+      meta={meta}
       {...props}
       error={meta.touched && meta.error}
       success={meta.touched && meta.valid}
