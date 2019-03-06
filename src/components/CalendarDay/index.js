@@ -17,7 +17,7 @@ export default class DayCell extends React.PureComponent<void, Props, void> {
     const { day, isCheap, cost, namespace } = this.props
     const valueDay = day.format('D')
     return (
-      <Day { ...createTestId(`${namespace}.day`, { day: valueDay, cost: cost })}>
+      <Day {...createTestId(`${namespace}.day`, { day: valueDay, cost })}>
         { day.format('D') }
         {
           cost ? (
