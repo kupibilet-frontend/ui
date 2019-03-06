@@ -1,28 +1,11 @@
 // @flow
 import React, { PureComponent } from 'react'
+import type { fieldMetaPropTypes } from 'redux-form'
 import { IconWrap } from 'components/Input'
 
 import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } from './styled'
 
 export { SuccessMessage }
-
-type Meta = {
-  active: null,
-  asyncValidating: false,
-  autofilled: false,
-  dirty: false,
-  dispatch: () => void,
-  form: null,
-  initial: null,
-  invalid: false,
-  pristine: true,
-  submitFailed: false,
-  submitting: false,
-  touched: false,
-  valid: false,
-  visited: false,
-  warning:null,
-}
 
 type Props = {
   error?: boolean | null | string,
@@ -39,7 +22,7 @@ type Props = {
   handleRightIconPress?: Function,
   innerRef?: Function,
   size?: string,
-  meta?: Meta,
+  meta?: fieldMetaPropTypes,
 }
 
 type State = {
