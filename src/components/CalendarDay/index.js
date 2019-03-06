@@ -2,6 +2,7 @@
 import React from 'react'
 import type moment$Moment from '@kupibilet/moment'
 import { Day, AvgCost } from './styled'
+import createTestId from '../../utils/createTestId'
 
 type Props = {
   day: moment$Moment,
@@ -15,7 +16,7 @@ export default class DayCell extends React.PureComponent<void, Props, void> {
     const { day, isCheap, cost } = this.props
 
     return (
-      <Day>
+      <Day {...createTestId(`${namespace}.day`, {day: day.format('D'), cost: cost })}>
         { day.format('D') }
         {
           cost ? (
