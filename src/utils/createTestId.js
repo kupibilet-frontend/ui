@@ -1,5 +1,5 @@
 const createTestId = (id, additionalParams = {}) => {
-  if (!id || id === undefined) return
+  if (/undefined/.test(id)) return
   const additionalKeys = Object.keys(additionalParams)
   const paramsArray = additionalKeys.length > 0 ?
     additionalKeys.map((item) => {
