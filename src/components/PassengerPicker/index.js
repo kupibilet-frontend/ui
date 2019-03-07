@@ -125,8 +125,8 @@ class PassengerPicker extends Component<{}, Props, State> {
             {description}
           </Description>
         </div>
-        <PassangerCount {...createTestId(`${namespace}.counter`, { value: counter })}>
-          <Current>
+        <PassangerCount>
+          <Current {...createTestId(`${namespace}.counter`, { value: counter })}>
             {counter}
           </Current>
           <CountControls>
