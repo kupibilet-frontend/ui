@@ -21,7 +21,7 @@
     "prepublishOnly": "yarn build"
   },
   "engines": {
-    "node": ">=10",
+    "node": ">=11",
     "npm": ">=6",
     "yarn": ">=1.10.1"
   },
@@ -59,7 +59,7 @@
     "@storybook/addons": "^3.4.11",
     "@storybook/react": "^3.4.11",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.4.0",
     "babel-plugin-flow-react-proptypes": "^24.1.2",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.8.0",
