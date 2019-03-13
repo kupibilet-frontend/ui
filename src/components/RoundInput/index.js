@@ -1,5 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react'
+import type { fieldMetaPropTypes } from 'redux-form'
 import { IconWrap } from 'components/Input'
 
 import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } from './styled'
@@ -7,7 +8,6 @@ import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } fro
 export { SuccessMessage }
 
 type Props = {
-  active?: boolean,
   error?: boolean | null | string,
   success?: boolean,
   disabled?: boolean,
@@ -22,8 +22,8 @@ type Props = {
   handleRightIconPress?: Function,
   innerRef?: Function,
   size?: string,
+  meta?: fieldMetaPropTypes,
 }
-
 
 type State = {
   isActive: boolean,
@@ -31,7 +31,6 @@ type State = {
 
 export class RoundInput extends PureComponent<Props, State> {
   static defaultProps = {
-    active: null,
     error: null,
     success: null,
     disabled: null,
@@ -46,6 +45,9 @@ export class RoundInput extends PureComponent<Props, State> {
     handleRightIconPress: null,
     innerRef: null,
     size: null,
+    meta: {
+      active: null,
+    },
   }
 
   state = {
@@ -107,7 +109,7 @@ export class RoundInput extends PureComponent<Props, State> {
 
   render() {
     const {
-      active,
+      meta: { active },
       disabled,
       leftIcon,
       rightIcon,
@@ -181,7 +183,7 @@ const RFRoundInput = (props: FieldProps) => {
   return (
     <RoundInput
       {...input}
-      {...meta}
+      meta={meta}
       {...props}
       error={meta.touched && meta.error}
       success={meta.touched && meta.valid}
