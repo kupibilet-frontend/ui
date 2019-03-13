@@ -82,12 +82,13 @@ const FakeInput = ({
       neighboringInGroup={neighboringInGroup}
       focused={focused}
       inModal={props.inModal}
-      onClick={onClick}
       hasError={invalid}
+      tabIndex={0}
+      onFocus={onFocus}
+      onBlur={onBlur}
     >
       <DateInput
         {...props}
-        onClick={onClick}
         value={inputDate}
         neighboringInGroup={neighboringInGroup}
       >
@@ -224,7 +225,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
   }
 
   handleClickOutside = (e) => {
-    if (this.dayPicker.current.contains(e.target) || this.props.isMobile) return
+    if (this.dayPicker.current.contains(e.relatedTarget || e.target) || this.props.isMobile) return
     this.setState({
       showCalendar: false,
       showFromCalendar: false,
@@ -283,6 +284,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
             <Button
               onClick={this.onReturnDateUnneeded}
               size="small"
+              onBlur={this.handleClickOutside}
             >
               Обратный билет не нужен
             </Button>}
@@ -294,6 +296,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onPreviousClick()
             }}
             icon="arrow-left"
+            tabIndex={-1}
           />
           <Button
             onClick={(e) => {
@@ -301,6 +304,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
               onNextClick()
             }}
             icon="arrow-right"
+            tabIndex={-1}
           />
         </NavbarButtons>
       </Navbar>
@@ -384,7 +388,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
         <FakeInput
           neighboringInGroup="right"
           focused={showFromCalendar}
-          onClick={this.handleFromClick}
+          onFocus={this.handleFromClick}
+          onBlur={this.handleClickOutside}
           inModal={inModal}
           value={departureDate}
           invalid={touched && hasError}
@@ -394,7 +399,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
         <FakeInput
           neighboringInGroup="left"
           focused={showToCalendar}
-          onClick={this.handleToClick}
+          onFocus={this.handleToClick}
+          onBlur={this.handleClickOutside}
           inModal={inModal}
           value={returnDate}
           placeholder="Обратно"
@@ -419,6 +425,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={captionElement}
           onDayClick={(day) => this.onDayChange(day, modifiers.disabled)}
+          tabIndex={-1}
         />
       </DayPickerWrapper>
     )
