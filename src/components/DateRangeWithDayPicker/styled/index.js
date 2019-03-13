@@ -362,6 +362,7 @@ export const StyledDayPicker = styled(DayPicker)`
 export const DateContainer = styled(Container)`
   width: 50%;
   min-width: 106px;
+  outline: none;
 `
 
 export const DateInput = styled(Input.withComponent('div'))`
@@ -383,6 +384,7 @@ export const DateInputWrap = styled.div`
   padding-bottom: 6px;
   z-index: 2;
   position: relative;
+  outline: none;
 
   ${({ inModal, theme }) => (inModal && `
     margin-top: 60px;
