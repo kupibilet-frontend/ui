@@ -197,11 +197,11 @@ class InputControl extends React.PureComponent<void, Props, State> {
           )
         }
         <StatusIndicator
-          error={error}
+          error={!active && error}
           success={success}
           active={active || this.state.isActive}
         />
-        { error && (
+        { error && !active && (
           <Error>
             { error }
           </Error>
