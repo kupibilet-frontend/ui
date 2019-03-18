@@ -2,6 +2,7 @@
 
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   # When versionize fails exit shell with versionize exit-code
+  yarn build
   yarn versionize || exit $?
 
   VERSION=$(node -e "process.stdout.write(require('./package.json').version)")
