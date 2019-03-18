@@ -7,7 +7,7 @@ import H4 from 'components/Typography/H4'
 import Button from 'components/Button'
 import { StyledIcon } from 'components/Modal/styled'
 import { withMedia } from 'utils/media-queries'
-import createTestId from '../../utils/createTestId'
+import createTestId from '../../utils/createE2EId'
 
 import MonthCaption from './parts/MonthCaption'
 import {
