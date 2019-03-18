@@ -11,7 +11,7 @@ import Autosuggest from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
 import type { controlsGroupProps } from 'components/ControlsGroup'
-import createTestId from '../../utils/createE2EId'
+import createTestId from '../../utils/createTestId'
 
 import style, { SuggestionsContainer } from './styled'
 

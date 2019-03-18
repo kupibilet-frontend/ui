@@ -2,7 +2,7 @@
 import React from 'react'
 import type moment$Moment from '@kupibilet/moment'
 import { Day, AvgCost } from './styled'
-import createTestId from '../../utils/createE2EId'
+import createTestId from '../../utils/createTestId'
 
 type Props = {
   day: moment$Moment,

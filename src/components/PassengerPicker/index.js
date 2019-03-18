@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
 import Button from 'components/Button'
-import createTestId from '../../utils/createE2EId'
+import createTestId from '../../utils/createTestId'
 
 const Passenger = styled.div`
   display: flex;

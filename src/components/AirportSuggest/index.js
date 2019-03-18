@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import createTestId from '../../utils/createE2EId'
+import createTestId from '../../utils/createTestId'
 import {
   AirportSuggestContainer,
   SuggestIcon,

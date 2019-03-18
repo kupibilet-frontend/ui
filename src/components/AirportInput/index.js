@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import createTestId from '../../utils/createE2EId'
+import createTestId from '../../utils/createTestId'
 import { Container, Input, Spell, Geo, Code, ValuePlaceholder, GeoLabel } from './styled'
 
 /* eslint-disable react/prop-types */
