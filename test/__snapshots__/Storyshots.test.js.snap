@@ -371,12 +371,9 @@ exports[`Storyshots Blocks FilterSection 1`] = `
       <div
         className="rc-collapse"
         role="tablist"
-        style={undefined}
       >
         <div
           className="rc-collapse-item c8 c9"
-          id={undefined}
-          style={undefined}
         >
           <div
             aria-expanded="false"
@@ -528,11 +525,8 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     className="rc-tabs rc-tabs-top"
     style={Object {}}
   >
-    <div
-      className={undefined}
-    >
+    <div>
       <span
-        aria-disabled={undefined}
         className="c1"
         onFocus={[Function]}
         role="tab"
@@ -541,7 +535,6 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
         1. Бронирование
       </span>
       <span
-        aria-disabled={undefined}
         className="c2"
         onFocus={[Function]}
         role="tab"
@@ -550,7 +543,6 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
         2. Оплата
       </span>
       <span
-        aria-disabled={undefined}
         className="c1"
         onFocus={[Function]}
         role="tab"
@@ -561,30 +553,23 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     </div>
     <div
       className="rc-tabs-content rc-tabs-content-no-animated"
-      style={undefined}
     >
       <div
         aria-hidden="true"
         className="rc-tabs-tabpane rc-tabs-tabpane-inactive"
-        id={undefined}
         role="tabpanel"
-        style={undefined}
       />
       <div
         aria-hidden="false"
         className="rc-tabs-tabpane rc-tabs-tabpane-active"
-        id={undefined}
         role="tabpanel"
-        style={undefined}
       >
         Second tab
       </div>
       <div
         aria-hidden="true"
         className="rc-tabs-tabpane rc-tabs-tabpane-inactive"
-        id={undefined}
         role="tabpanel"
-        style={undefined}
       />
     </div>
   </div>
@@ -703,12 +688,9 @@ exports[`Storyshots Blocks/Collapse Accordion 1`] = `
     <div
       className="rc-collapse"
       role="tablist"
-      style={undefined}
     >
       <div
         className="rc-collapse-item rc-collapse-item-active c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="true"
@@ -762,8 +744,6 @@ exports[`Storyshots Blocks/Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="false"
@@ -801,8 +781,6 @@ exports[`Storyshots Blocks/Collapse Accordion 1`] = `
       </div>
       <div
         className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="false"
@@ -943,12 +921,9 @@ exports[`Storyshots Blocks/Collapse Always open 1`] = `
     <div
       className="rc-collapse"
       role={null}
-      style={undefined}
     >
       <div
         className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="true"
@@ -1002,8 +977,6 @@ exports[`Storyshots Blocks/Collapse Always open 1`] = `
       </div>
       <div
         className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="true"
@@ -1057,8 +1030,6 @@ exports[`Storyshots Blocks/Collapse Always open 1`] = `
       </div>
       <div
         className="rc-collapse-item rc-collapse-item-active rc-collapse-item-disabled c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="true"
@@ -1227,12 +1198,9 @@ exports[`Storyshots Blocks/Collapse Default 1`] = `
     <div
       className="rc-collapse"
       role={null}
-      style={undefined}
     >
       <div
         className="rc-collapse-item rc-collapse-item-active c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="true"
@@ -1286,8 +1254,6 @@ exports[`Storyshots Blocks/Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="false"
@@ -1325,8 +1291,6 @@ exports[`Storyshots Blocks/Collapse Default 1`] = `
       </div>
       <div
         className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="false"
@@ -1442,12 +1406,9 @@ exports[`Storyshots Blocks/Collapse Render custom header and layout 1`] = `
     <div
       className="rc-collapse c2"
       role={null}
-      style={undefined}
     >
       <div
         className="rc-collapse-item rc-collapse-item-active c3"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="true"
@@ -1486,8 +1447,6 @@ exports[`Storyshots Blocks/Collapse Render custom header and layout 1`] = `
       </div>
       <div
         className="rc-collapse-item c3"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="false"
@@ -1625,12 +1584,9 @@ exports[`Storyshots Blocks/Collapse With paddings 1`] = `
     <div
       className="rc-collapse"
       role="tablist"
-      style={undefined}
     >
       <div
         className="rc-collapse-item rc-collapse-item-active c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="true"
@@ -1684,8 +1640,6 @@ exports[`Storyshots Blocks/Collapse With paddings 1`] = `
       </div>
       <div
         className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="false"
@@ -1723,8 +1677,6 @@ exports[`Storyshots Blocks/Collapse With paddings 1`] = `
       </div>
       <div
         className="rc-collapse-item c2"
-        id={undefined}
-        style={undefined}
       >
         <div
           aria-expanded="false"
@@ -2034,7 +1986,8 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   fill: #ffffff;
 }
 
-.c2:hover {
+.c2:hover,
+.c2:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2075,7 +2028,8 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   fill: #ffffff;
 }
 
-.c9:hover {
+.c9:hover,
+.c9:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2128,7 +2082,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
   >
     <button
       className="c2"
-      disabled={undefined}
       size="large"
     >
       <span
@@ -2172,7 +2125,6 @@ exports[`Storyshots Complex controls/ControlsGroup Different controls group 1`] 
     </div>
     <button
       className="c9"
-      disabled={undefined}
       size="large"
     >
       <span
@@ -2778,7 +2730,8 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
   fill: #ffffff;
 }
 
-.c3:hover {
+.c3:hover,
+.c3:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2823,7 +2776,6 @@ exports[`Storyshots Complex controls/Dropdown Defalut 1`] = `
         click to open  
         <button
           className="c3"
-          disabled={undefined}
           size="normal"
         >
           <span
@@ -2880,7 +2832,8 @@ exports[`Storyshots Complex controls/Modal Bottom on mobile 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2905,7 +2858,6 @@ exports[`Storyshots Complex controls/Modal Bottom on mobile 1`] = `
   <div>
     <button
       className="c1"
-      disabled={undefined}
       onClick={[Function]}
       size="normal"
     >
@@ -2961,7 +2913,8 @@ exports[`Storyshots Complex controls/Modal With sizes 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -2986,7 +2939,6 @@ exports[`Storyshots Complex controls/Modal With sizes 1`] = `
   <div>
     <button
       className="c1"
-      disabled={undefined}
       onClick={[Function]}
       size="normal"
     >
@@ -3086,7 +3038,8 @@ exports[`Storyshots Complex controls/PassengerPicker Defalut 1`] = `
   fill: #ffffff;
 }
 
-.c12:hover {
+.c12:hover,
+.c12:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -4686,7 +4639,6 @@ exports[`Storyshots Controls/Autocomplete Airport 1`] = `
           onKeyDown={[Function]}
           placeholder="Туда"
           rows="1"
-          size={undefined}
           type="text"
           value=""
           wrap="off"
@@ -4759,7 +4711,8 @@ exports[`Storyshots Controls/Buttons Button as <a href="" /> 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -4839,7 +4792,8 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -4934,7 +4888,8 @@ exports[`Storyshots Controls/Buttons Icon-only button (custom icon) 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5055,7 +5010,8 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5178,7 +5134,8 @@ exports[`Storyshots Controls/Buttons Loading button 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5301,7 +5258,8 @@ exports[`Storyshots Controls/Buttons With custom icons 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -5456,7 +5414,8 @@ exports[`Storyshots Controls/Buttons With left and right icons 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -6596,6 +6555,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
 .c3 {
   width: 50%;
   min-width: 106px;
+  outline: none;
 }
 
 .c5 {
@@ -6624,6 +6584,7 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
   padding-bottom: 6px;
   z-index: 2;
   position: relative;
+  outline: none;
 }
 
 .c1 {
@@ -6642,11 +6603,12 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
       >
         <div
           className="c3 c4"
-          onClick={[Function]}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          tabIndex={0}
         >
           <div
             className="c5 -div c6"
-            onClick={[Function]}
             placeholder="Туда"
             value={null}
           >
@@ -6659,11 +6621,12 @@ exports[`Storyshots Controls/DateRangeDayPicker DateRangeWithDayPicker 1`] = `
         </div>
         <div
           className="c3 c8"
-          onClick={[Function]}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          tabIndex={0}
         >
           <div
             className="c9 -div c10"
-            onClick={[Function]}
             placeholder="Обратно"
             value={null}
           >
@@ -7206,7 +7169,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 >
   <div
     className="c1"
-    disabled={undefined}
     size="large"
   >
     <div
@@ -7214,7 +7176,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
     >
       <input
         className="c3"
-        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="DD"
@@ -7223,7 +7184,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       />
       <input
         className="c4"
-        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="MM"
@@ -7232,7 +7192,6 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
       />
       <input
         className="c5"
-        name={undefined}
         onBlur={[Function]}
         onFocus={[Function]}
         placeholder="YYYY"
@@ -7673,12 +7632,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
   >
     <div
       className="c2"
-      disabled={undefined}
       size="large"
     >
       <input
         className="c3"
-        disabled={undefined}
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -7692,12 +7649,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
     </div>
     <div
       className="c5"
-      disabled={undefined}
       size="large"
     >
       <input
         className="c6"
-        disabled={undefined}
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -7711,12 +7666,10 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
     </div>
     <div
       className="c7"
-      disabled={undefined}
       size="large"
     >
       <input
         className="c8"
-        disabled={undefined}
         name="input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -7883,12 +7836,10 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
 >
   <div
     className="c1"
-    disabled={undefined}
     size="large"
   >
     <input
       className="c2"
-      disabled={undefined}
       form="Controls/Input"
       name="input"
       onBlur={[Function]}
@@ -9005,7 +8956,8 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -9041,7 +8993,6 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"
@@ -9183,7 +9134,8 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -9219,7 +9171,6 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"
@@ -9306,7 +9257,8 @@ exports[`Storyshots Controls/Popover default 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -9342,7 +9294,6 @@ exports[`Storyshots Controls/Popover default 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"
@@ -9780,7 +9731,8 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
   fill: #ffffff;
 }
 
-.c6:hover {
+.c6:hover,
+.c6:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -9984,7 +9936,6 @@ exports[`Storyshots Controls/RoundInput withButton 1`] = `
     </div>
     <button
       className="c6"
-      disabled={undefined}
       size="large"
     >
       <span
@@ -10271,7 +10222,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   >
     <div
       className="c2"
-      disabled={undefined}
       size="normal"
     >
       <input
@@ -10280,7 +10230,6 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         aria-controls="react-autowhatever-1"
         autoComplete="off"
         className="react-autosuggest__input c3"
-        disabled={undefined}
         form="Controls/Select"
         name="MadRabbitField"
         onBlur={[Function]}
@@ -11110,7 +11059,6 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={0}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -11131,7 +11079,6 @@ exports[`Storyshots Controls/Slider With date range 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -11650,7 +11597,6 @@ exports[`Storyshots Controls/Slider default 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={0}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -11671,7 +11617,6 @@ exports[`Storyshots Controls/Slider default 1`] = `
         backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
-        onClick={undefined}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
         onTouchStart={[Function]}
@@ -11756,7 +11701,8 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
   fill: #ffffff;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -11792,7 +11738,6 @@ exports[`Storyshots Controls/Tooltip default 1`] = `
 >
   <button
     className="c1"
-    disabled={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     size="normal"

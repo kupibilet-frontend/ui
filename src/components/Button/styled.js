@@ -135,7 +135,7 @@ export const StyledButton = styled.button`
     fill: ${getButtonColor};
   }
 
-  &:hover {
+  &:hover, &:focus {
     ${(props) => (!props.disabled ? `
       cursor: pointer;
       background: ${getButtonHoverBackground(props)};

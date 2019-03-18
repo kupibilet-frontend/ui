@@ -1,6 +1,6 @@
 {
   "name": "@kupibilet/ui",
-  "version": "4.5.0",
+  "version": "4.5.2",
   "description": "UI kit for kupibilet web app",
   "scripts": {
     "pretest": "yarn lint:js && yarn lint:css",
@@ -21,7 +21,7 @@
     "prepublishOnly": "yarn build"
   },
   "engines": {
-    "node": ">=10",
+    "node": ">=11",
     "npm": ">=6",
     "yarn": ">=1.10.1"
   },
@@ -59,7 +59,7 @@
     "@storybook/addons": "^3.4.11",
     "@storybook/react": "^3.4.11",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.4.0",
     "babel-plugin-flow-react-proptypes": "^24.1.2",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.8.0",
@@ -70,7 +70,7 @@
     "flow-bin": "^0.82.0",
     "glob": "^7.1.2",
     "husky": "^1.1.0",
-    "jest": "test",
+    "jest": "^24.5.0",
     "jest-styled-components": "^6.2.1",
     "lint-staged": "^7.2.0",
     "lodash": "^4.17.4",
