@@ -2,6 +2,7 @@
 
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   yarn build
+
   # When versionize fails exit shell with versionize exit-code
   yarn versionize || exit $?
 
