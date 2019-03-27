@@ -22,7 +22,7 @@ export type Coordinates = {
   height: number,
 }
 
-type GetCoordinates = (node : Element) => Coordinates
+type GetCoordinates = (node: Element) => Coordinates
 
 type PortalProps = {
   isOpen: boolean,
@@ -33,7 +33,7 @@ type PortalProps = {
   error: ?boolean,
 }
 
-const TooltipPortal = (props : PortalProps) => {
+const TooltipPortal = (props: PortalProps) => {
   const {
     isOpen,
     coords,
@@ -84,7 +84,7 @@ const TooltipPortal = (props : PortalProps) => {
 
 type TooltipProps = {
   children: Object | Element,
-  content: string | Element| any | null,
+  content: string | Element | any | null,
   placement: string,
   success: ?boolean,
   error: ?boolean,
@@ -124,7 +124,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     clearTimeout(this.hoverTimeout)
   }
   /* eslint-disable react/no-find-dom-node */
-  getCoordinates = (node) : GetCoordinates => {
+  getCoordinates = (node): GetCoordinates => {
     const availableNode = ReactDOM.findDOMNode(node)
     if (availableNode) {
       const rect = ReactDOM.findDOMNode(node).getBoundingClientRect()

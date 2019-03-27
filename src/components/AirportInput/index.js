@@ -15,7 +15,7 @@ type Props = {
   onBlur?: (SyntheticInputEvent) => void,
   onKeyDown?: (SyntheticKeyboardEvent) => void,
   neighboringInGroup: null | 'left' | 'right' | 'both',
-  meta?: {
+  meta: {
     error?: string,
     touched: boolean,
   }
@@ -32,7 +32,9 @@ export default class AirportInput extends React.PureComponent<{}, Props, State> 
     IATACode: '',
     onFocus: null,
     onBlur: null,
+    onKeyDown: null,
     neighboringInGroup: null,
+    meta: {},
   }
 
   input: Input = null

@@ -15,6 +15,7 @@ import {
 
 export { InnerInput, Error, InputWrapper, IconWrap }
 
+/* eslint-disable react/require-default-props */ // TODO fix unreported before default props
 type Props = {
   name: string,
   type?: string,

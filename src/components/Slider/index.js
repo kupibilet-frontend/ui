@@ -15,11 +15,11 @@ import {
 type SliderValues = Array<number>
 
 type SliderData = {
-  ['pitPoint' : number]: number,
+  ['pitPoint': number]: number,
 }
 
 type HeightData = {
-  ['pitPoint' : number]: number,
+  ['pitPoint': number]: number,
 }
 
 type State = {
@@ -51,24 +51,24 @@ type Props = {
 
 type GetPitWidth = (SliderData) => number | null
 
-const getPitWidth : GetPitWidth = ({ min, max, sliderData }) => (sliderData
+const getPitWidth: GetPitWidth = ({ min, max, sliderData }) => (sliderData
   ? (100 / (max - min))
   : null
 )
 
 type GetPitPoints = (SliderData) => Array<number> | undefined
 
-const getPitPoints : GetPitPoints = ({
+const getPitPoints: GetPitPoints = ({
   sliderData,
 }) => (sliderData
   ? Object.keys(sliderData)
-    .map((key : string) => Number(key))
+    .map((key: string) => Number(key))
   : undefined
 )
 
 type GetPitHeight = (SliderData) => HeightData
 
-const getPitHeight : GetPitHeight = ({
+const getPitHeight: GetPitHeight = ({
   sliderData,
 }) => {
   const maxHeight = Math.max(...Object.values(sliderData))
@@ -81,7 +81,7 @@ const getPitHeight : GetPitHeight = ({
 
 type GetInitialValues = (Props) => Array<number>
 
-const getInitialValues : GetInitialValues = (props : Props) => {
+const getInitialValues: GetInitialValues = (props: Props) => {
   const { min, max, values } = props
   return values || [min, max]
 }
@@ -127,7 +127,7 @@ export default class Slider extends React.Component<Props, State> {
     onChange: noop,
     onValuesUpdated: noop,
   }
-  constructor(props : Props) {
+  constructor(props: Props) {
     super(props)
     this.state = {
       values: getInitialValues(props),
@@ -139,7 +139,7 @@ export default class Slider extends React.Component<Props, State> {
   }
 
   // eslint-disable-next-line camelcase, react/sort-comp
-  UNSAFE_componentWillReceiveProps(nextProps : Props) {
+  UNSAFE_componentWillReceiveProps(nextProps: Props) {
     if (this.props.values) {
       const nextValues = nextProps.values
       const currentValues = this.props.values
@@ -154,17 +154,17 @@ export default class Slider extends React.Component<Props, State> {
     }
   }
 
-  onChange = (sliderState : SliderState) => {
+  onChange = (sliderState: SliderState) => {
     const { onChange } = this.props
     if (onChange) onChange(sliderState.values)
   }
 
   /* eslint-disable react/prop-types */
 
-  getPitComponent = (props : Props) => {
+  getPitComponent = (props: Props) => {
     const { values, touched } = this.state
     const { children } = props
-    const isHighlighted : boolean = touched && inRange(children, ...values)
+    const isHighlighted: boolean = touched && inRange(children, ...values)
 
     return (
       <PitComponent
@@ -179,7 +179,7 @@ export default class Slider extends React.Component<Props, State> {
 
   /* eslint-enable react/prop-types */
 
-  updateValues = (sliderState : SliderState) => {
+  updateValues = (sliderState: SliderState) => {
     const { onValuesUpdated } = this.props
     const { values } = sliderState
     this.setState({

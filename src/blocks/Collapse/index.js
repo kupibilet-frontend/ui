@@ -11,13 +11,14 @@ import Icon from 'components/Icon'
 import StyledCollapse from 'components/Collapse'
 
 type HeaderProps = {
-  withPadding: bool,
-  isActive: bool,
+  withPadding: boolean,
+  isActive: boolean,
   header: string,
 }
 
 type StyledCollapseProps = {
   renderHeader: (props: HeaderProps) => Node,
+  children: React.Element<*>,
 } & HeaderProps
 
 const PanelHeader = styled.div`

@@ -525,7 +525,9 @@ exports[`Storyshots Blocks Styled Tabs 1`] = `
     className="rc-tabs rc-tabs-top"
     style={Object {}}
   >
-    <div>
+    <div
+      className={null}
+    >
       <span
         className="c1"
         onFocus={[Function]}

@@ -28,7 +28,7 @@ type PortalProps = {
   size: string,
 }
 
-const PopoverPortal = (props : PortalProps) => {
+const PopoverPortal = (props: PortalProps) => {
   const {
     isOpen,
     coords,

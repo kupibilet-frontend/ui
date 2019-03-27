@@ -47,11 +47,11 @@ const StyledAutocomplete = Autocomplete.extend`
 
 
 type SectionObject = {
-  title? : string,
+  title?: string,
 }
 type SuggestionObject = {
-  key? : any,
-  value? : any,
+  key?: any,
+  value?: any,
 }
 type OnChange = (Event, { newValue: string, method: string }) => void
 
@@ -100,7 +100,7 @@ const defaultContainer = ({ containerProps, children }) => (
   </StyledContainer>
 )
 
-const defaultSectionTitle = (section : SectionObject) => (
+const defaultSectionTitle = (section: SectionObject) => (
   <SectionHeader>
     {section.title}
   </SectionHeader>
@@ -120,7 +120,7 @@ type Props = {
   shouldRenderSuggestions: () => boolean,
   getSuggestionValue: (Object) => any,
   getSuggestionKey: (Object) => string,
-  onSuggestionSelected? : (Event, {
+  onSuggestionSelected?: (Event, {
     suggestion: SuggestionObject,
     suggestionValue: string,
     suggestionIndex: number,
@@ -147,9 +147,9 @@ export class Select extends React.Component <Props, State> {
     renderSuggestionsContainer: defaultContainer,
     renderSectionTitle: defaultSectionTitle,
     shouldRenderSuggestions: () => true,
-    getSuggestionValue: (suggestion : SuggestionObject) => suggestion.value,
-    getSuggestionKey: (suggestion : SuggestionObject) => suggestion.key,
-    renderSuggestion: (suggestion : SuggestionObject, props) => (
+    getSuggestionValue: (suggestion: SuggestionObject) => suggestion.value,
+    getSuggestionKey: (suggestion: SuggestionObject) => suggestion.key,
+    renderSuggestion: (suggestion: SuggestionObject, props) => (
       <Suggestion suggestion={suggestion} {...props} />
     ),
     onSuggestionSelected: noop,

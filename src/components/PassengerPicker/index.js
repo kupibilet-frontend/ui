@@ -51,8 +51,8 @@ const CountControls = styled.div`
 `
 type Value = {
   counter: number,
-  isMax: bool,
-  isMin: bool,
+  isMax: boolean,
+  isMin: boolean,
 }
 
 type Props = {
