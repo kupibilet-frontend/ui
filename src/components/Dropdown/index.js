@@ -26,8 +26,8 @@ export const DropdownContent = styled.div`
 `
 
 type Props = {
-  isOpen: bool,
-  onToggle: (Event, bool) => void,
+  isOpen: boolean,
+  onToggle: (Event, boolean) => void,
   children: React.Element<*>,
   overlay: React.Element<*>,
 }

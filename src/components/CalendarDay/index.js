@@ -11,6 +11,11 @@ type Props = {
 
 /* eslint-disable react/prop-types */
 export default class DayCell extends React.PureComponent<void, Props, void> {
+  static defaultProps = {
+    isCheap: false,
+    cost: null,
+  }
+
   render() {
     const { day, isCheap, cost } = this.props
 

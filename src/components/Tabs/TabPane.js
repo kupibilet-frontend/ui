@@ -5,7 +5,7 @@ import { TabPane as RCTabPane } from 'rc-tabs'
 type Props = {
   children: React.Element<*>,
   tab: React.Element<*>,
-  active: ?bool,
+  active: ?boolean,
 }
 
 const TabPane = ({ tab, children, active, ...props }: Props) => (

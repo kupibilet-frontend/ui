@@ -63,6 +63,7 @@ const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
   )
 }
 
+/* eslint-disable react/prop-types */ // TODO add proptypes unreported before
 const FakeInput = ({
   children,
   onBlur,
@@ -99,6 +100,7 @@ const FakeInput = ({
     </DateContainer>
   )
 }
+/* eslint-disable react/prop-types */
 
 class ReactDayPicker extends PureComponent <Props, State> {
   static defaultProps = {
