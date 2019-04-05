@@ -24,7 +24,7 @@ type State = {
   focused: boolean,
 }
 
-export default class AirportInput extends React.PureComponent<{}, Props, State> {
+export default class AirportInput extends React.PureComponent<Props, State, null> {
   /* eslint-disable react/sort-comp */
   static defaultProps = {
     area: '',

@@ -3,7 +3,7 @@
 
 'no babel-plugin-flow-react-proptypes'
 
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -94,7 +94,7 @@ const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }
   })
 )
 
-class Autocomplete extends React.PureComponent<{}, Props, State> {
+class Autocomplete extends PureComponent<Props, State> {
   /* eslint-disable react/sort-comp */
   state = {
     suggestions: this.props.suggestions || [],

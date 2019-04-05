@@ -11533,42 +11533,6 @@ exports[`Storyshots Controls/Slider default 1`] = `
   z-index: 2;
 }
 
-.c3 {
-  background-color: #a9ddff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 1px;
-  position: absolute;
-  height: 6px;
-  top: 0;
-  z-index: 4;
-}
-
-.c2 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  background-color: #96a0b3;
-  -webkit-transition-property: background-color,box-shadow;
-  transition-property: background-color,box-shadow;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 18px;
-  width: 18px;
-  top: -6px;
-  z-index: 5;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.c2:hover,
-.c2:active {
-  background-color: #38afff;
-  box-shadow: 0 0 0 1px #38afff;
-}
-
 <div
   className="responsive c0"
 >
@@ -11590,55 +11554,6 @@ exports[`Storyshots Controls/Slider default 1`] = `
     >
       <div
         className="rheostat-background"
-      />
-      <span
-        aria-disabled={false}
-        aria-valuemax={1000}
-        aria-valuemin={1}
-        aria-valuenow={1}
-        backgroundcolor="#96a0b3"
-        className="rheostat-handle c2"
-        data-handle-key={0}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-        role="slider"
-        style={
-          Object {
-            "left": "0%",
-            "position": "absolute",
-          }
-        }
-        tabIndex={0}
-      />
-      <span
-        aria-disabled={false}
-        aria-valuemax={1000}
-        aria-valuemin={1}
-        aria-valuenow={1000}
-        backgroundcolor="#96a0b3"
-        className="rheostat-handle c2"
-        data-handle-key={1}
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-        role="slider"
-        style={
-          Object {
-            "left": "100%",
-            "position": "absolute",
-          }
-        }
-        tabIndex={0}
-      />
-      <span
-        className="rheostat-progress c3"
-        style={
-          Object {
-            "left": "0%",
-            "width": "100%",
-          }
-        }
       />
     </div>
   </div>

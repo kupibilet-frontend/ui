@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { SwapContainer, SwapIcon, FlexContainer } from './styled'
 
 type neighboringInGroup = null | 'right' | 'both' | 'left'
@@ -25,7 +25,7 @@ type SwapProps = {
 }
 
 /* eslint-disable react/prop-types */
-class Swap extends React.PureComponent<{}, SwapProps, void> {
+class Swap extends PureComponent<SwapProps, {}> {
   static defaultProps = {
     onSwap: null,
   }

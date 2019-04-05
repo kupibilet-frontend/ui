@@ -10,7 +10,7 @@ type Props = {
 }
 
 /* eslint-disable react/prop-types */
-class Tabs extends Component<{}, Props, void> {
+class Tabs extends Component<Props, void> {
   static defaultProps = {
     animatedTabContent: false,
     renderTabContent: () => <TabContent animated={false} />,

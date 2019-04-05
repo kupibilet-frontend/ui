@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import onClickOutside from 'react-onclickoutside'
 import { borderRadiusSmall } from 'utils/borderRadius'
@@ -33,7 +33,7 @@ type Props = {
 }
 
 /* eslint-disable react/prop-types */
-class Dropdown extends React.PureComponent<{}, Props, void> {
+class Dropdown extends PureComponent<Props, {}> {
   static defaultProps = {
     isOpen: false,
   }

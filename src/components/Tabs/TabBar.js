@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { PureComponent } from 'react'
 
 /* eslint-disable react/prop-types */
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   onTabChange: string => void,
 }
 
-class TabBar extends React.PureComponent<void, Props, void> {
+class TabBar extends PureComponent<Props, void> {
   static defaultProps = {
     className: null,
   }

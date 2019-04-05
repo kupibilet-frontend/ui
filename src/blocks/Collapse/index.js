@@ -11,13 +11,13 @@ import Icon from 'components/Icon'
 import StyledCollapse from 'components/Collapse'
 
 type HeaderProps = {
-  withPadding: boolean,
-  isActive: boolean,
-  header: string,
+  withPadding?: boolean,
+  isActive?: boolean,
+  header?: string,
 }
 
 type StyledCollapseProps = {
-  renderHeader: (props: HeaderProps) => Node,
+  renderHeader?: null | (props: HeaderProps) => Node,
   children: React.Element<*>,
 } & HeaderProps
 
@@ -62,6 +62,18 @@ export const StyledPanel = (props: StyledCollapseProps) => (
     </PanelContentWrapper>
   </StyledCollapse.Panel>
 )
+
+StyledPanel.defaultProps = {
+  renderHeader: null,
+  isActive: false,
+  withPadding: false,
+  header: '',
+}
+renderDefaultHeader.defaultProps = {
+  isActive: false,
+  withPadding: false,
+  header: '',
+}
 export const Panel = StyledPanel
 
 export default StyledCollapse

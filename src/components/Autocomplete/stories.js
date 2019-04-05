@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { storiesOf } from '@storybook/react'
 import { text, object } from '@storybook/addon-knobs'
 import 'whatwg-fetch'
@@ -10,7 +10,7 @@ import AirportSuggest from 'components/AirportSuggest'
 
 import updateKnob from 'storybook/updateKnob'
 
-class AutocompleteStatefulWrapper extends React.PureComponent {
+class AutocompleteStatefulWrapper extends PureComponent {
   static propTypes = Autocomplete.propTypes
   static defaultProps = Autocomplete.defaultProps
 

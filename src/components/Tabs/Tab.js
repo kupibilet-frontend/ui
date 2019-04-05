@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 
 /* eslint-disable react/prop-types */
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
   isActive: bool,
 }
 
-export default class Tab extends React.PureComponent<void, Props, void> {
+export default class Tab extends PureComponent<Props, void> {
   onFocus = (e: MouseEvent) => {
     const { tabKey, onTabChange } = this.props
     e.preventDefault()

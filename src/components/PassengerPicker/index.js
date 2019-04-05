@@ -66,7 +66,7 @@ type Props = {
 type State = {}
 
 /* eslint-disable react/prop-types */
-class PassengerPicker extends Component<{}, Props, State> {
+class PassengerPicker extends Component<Props, State, null> {
   /* eslint-disable react/sort-comp */
   state = {}
 

@@ -126,6 +126,8 @@ export default class Slider extends React.Component<Props, State> {
     disabled: false,
     onChange: noop,
     onValuesUpdated: noop,
+    values: [],
+    sliderData: {},
   }
   constructor(props: Props) {
     super(props)
