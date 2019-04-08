@@ -21,9 +21,9 @@ class Scrollfix extends Component<Props> {
   componentDidMount() {
     // eslint-disable-next-line react/no-find-dom-node
     this.element = ReactDOM.findDOMNode(this)
-    this.element.addEventListener('mousewheel', this.onWheel, true)
-    this.element.addEventListener('touchstart', this.getTouchStartCoord, true)
-    this.element.addEventListener('touchmove', this.onTouch, true)
+    this.element.addEventListener('mousewheel', this.onWheel, { passive: true })
+    this.element.addEventListener('touchstart', this.getTouchStartCoord, { passive: true })
+    this.element.addEventListener('touchmove', this.onTouch, { passive: true })
   }
 
   componentWillUnmount() {
