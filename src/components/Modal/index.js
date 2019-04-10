@@ -105,7 +105,7 @@ class Modal extends React.PureComponent<Props> {
     }
 
     return (
-      <Portal node={document && document.body}>
+      <Portal node={document && document.getElementsByTagName('header')[0]}>
         <GlobalStylesScope className="responsive">
           <Overlay
             closePortal={closeOnOutsideClick && this.closePortal}
