@@ -42,6 +42,7 @@ type Props = {
   closeOnEsc: boolean,
   showCloseButton: boolean,
   isOnBottom: boolean,
+  scrollFix?: boolean,
 }
 
 /* eslint-disable react/prop-types */
@@ -64,6 +65,7 @@ class Modal extends React.PureComponent<Props> {
     closeOnEsc: true,
     showCloseButton: true,
     isOnBottom: false,
+    scrollFix: true,
   }
 
   componentDidMount() {
@@ -98,6 +100,7 @@ class Modal extends React.PureComponent<Props> {
       closeOnOutsideClick,
       showCloseButton,
       isOnBottom,
+      scrollFix,
     } = this.props
 
     if (!isOpen) {
@@ -110,6 +113,7 @@ class Modal extends React.PureComponent<Props> {
           <Overlay
             closePortal={closeOnOutsideClick && this.closePortal}
             isOnBottom={isOnBottom}
+            scrollFix={scrollFix}
           >
             <ModalContent size={size}>
               { renderHeader({ ...this.props, children: heading }) }
