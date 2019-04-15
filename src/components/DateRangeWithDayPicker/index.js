@@ -30,8 +30,8 @@ import {
 } from './styled'
 
 type Props = {
-  fromDate: string,
-  toDate: string,
+  fromDate: string | Object,
+  toDate: string | Object,
   isTablet: boolean,
   isDesktop: boolean,
   isMobile: boolean,
