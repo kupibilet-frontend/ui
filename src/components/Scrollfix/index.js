@@ -27,9 +27,9 @@ class Scrollfix extends Component<Props> {
   }
 
   componentWillUnmount() {
-    this.element.removeEventListener('mousewheel', this.onWheel, true)
-    this.element.removeEventListener('touchstart', this.getTouchStartCoord, true)
-    this.element.removeEventListener('touchmove', this.onTouch, true)
+    this.element.removeEventListener('mousewheel', this.onWheel, { passive: true })
+    this.element.removeEventListener('touchstart', this.getTouchStartCoord, { passive: true })
+    this.element.removeEventListener('touchmove', this.onTouch, { passive: true })
   }
 
   onWheel = (event: Event) => {
