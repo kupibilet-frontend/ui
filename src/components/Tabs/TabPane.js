@@ -1,10 +1,10 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { TabPane as RCTabPane } from 'rc-tabs'
 
 type Props = {
-  children: React.Element<*>,
-  tab: React.Element<*>,
+  children: React.Node,
+  tab: React.Node,
   active: ?boolean,
 }
 
