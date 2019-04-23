@@ -1,16 +1,16 @@
 // @flow
-import React, { Component } from 'react'
+import * as React from 'react'
 import RCTabs, { TabContent } from 'rc-tabs'
 
 type Props = {
-  children: React.Element<*>,
+  children: React.Node,
   activeKey: string,
   renderTabBar: Function,
   renderTabContent?: Function,
 }
 
 /* eslint-disable react/prop-types */
-class Tabs extends Component<{}, Props, void> {
+class Tabs extends React.Component<Props> {
   static defaultProps = {
     animatedTabContent: false,
     renderTabContent: () => <TabContent animated={false} />,
