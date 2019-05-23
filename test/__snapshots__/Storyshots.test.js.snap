@@ -6663,7 +6663,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   box-sizing: border-box;
 }
 
-.c2 {
+.c3 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -6688,68 +6688,71 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   color: #333333;
   background-color: transparent;
   border-radius: 3px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-.c2::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c2::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c2:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c2::placeholder {
+.c3::placeholder {
   color: #96a0b3;
 }
 
-.c2::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c2::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c2:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c2:focus {
+.c3:focus {
   outline-style: none;
 }
 
-.c2:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::placeholder {
+.c3:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
+}
+
+.c2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .c1 {
@@ -6788,7 +6791,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
   height: 100%;
 }
 
-.c3 {
+.c4 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -6807,7 +6810,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
     size="large"
   >
     <textarea
-      className="c2"
+      className="c2 -textarea c3"
       disabled={false}
       name="input"
       onBlur={[Function]}
@@ -6817,7 +6820,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
       size="large"
     />
     <div
-      className="c3"
+      className="c4"
     />
     
   </div>
@@ -9969,7 +9972,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   box-sizing: border-box;
 }
 
-.c6 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -9981,14 +9984,56 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   opacity: 1;
 }
 
-.c5 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c3 {
+.c2 {
+  position: relative;
+}
+
+.c2 .react-autosuggest__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2 .react-autosuggest__input::-ms-clear,
+.c2 .react-autosuggest__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c2 .react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c2 .react-autosuggest__input--focused {
+  outline: none;
+}
+
+.c2 .react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.c2 .react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.c2 .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c2 .react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+.c4 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -10011,67 +10056,67 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   border-radius: 3px;
 }
 
-.c3::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::-moz-placeholder {
+.c4::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c3:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::placeholder {
+.c4::placeholder {
   color: #96a0b3;
 }
 
-.c3::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::-moz-placeholder {
+.c4::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c3:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c3:focus {
+.c4:focus {
   outline-style: none;
 }
 
-.c3:disabled::-webkit-input-placeholder {
+.c4:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-moz-placeholder {
+.c4:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled:-ms-input-placeholder {
+.c4:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::placeholder {
+.c4:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-webkit-input-placeholder {
+.c4:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-moz-placeholder {
+.c4:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled:-ms-input-placeholder {
+.c4:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10098,16 +10143,16 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   transition-property: border-color;
 }
 
-.c2:hover {
+.c3:hover {
   border-color: #38afff;
   z-index: 1;
 }
 
-.c2 .combined-inputs-group {
+.c3 .combined-inputs-group {
   height: 100%;
 }
 
-.c7 {
+.c8 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -10117,7 +10162,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   background-color: #e64926;
 }
 
-.c4 {
+.c5 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -10139,7 +10184,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c9 {
   margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
@@ -10153,60 +10198,18 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
   background: #ffffff;
 }
 
-.c1 {
-  position: relative;
-}
-
-.c1 .react-autosuggest__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c1 .react-autosuggest__input::-ms-clear,
-.c1 .react-autosuggest__input::-webkit-search-cancel-button {
-  display: none;
-}
-
-.c1 .react-autosuggest__input--open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.c1 .react-autosuggest__input--focused {
-  outline: none;
-}
-
-.c1 .react-autosuggest__suggestions-container {
-  display: none;
-}
-
-.c1 .react-autosuggest__suggestions-container--open {
-  display: block;
-}
-
-.c1 .react-autosuggest__suggestions-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 .react-autosuggest__suggestion {
-  cursor: pointer;
-}
-
 @media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    padding: 0;
-    top: initial;
+  .responsive .c2,
+  .responsive-booking .c2 {
+    position: static;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
+  .responsive .c9,
+  .responsive-booking .c9 {
+    padding: 0;
+    top: initial;
   }
 }
 
@@ -10224,11 +10227,11 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
     aria-expanded={false}
     aria-haspopup="listbox"
     aria-owns="react-autowhatever-1"
-    className="c1"
+    className="c1 c2"
     role="combobox"
   >
     <div
-      className="c2"
+      className="c3"
       size="normal"
     >
       <input
@@ -10236,7 +10239,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         aria-autocomplete="list"
         aria-controls="react-autowhatever-1"
         autoComplete="off"
-        className="react-autosuggest__input c3"
+        className="react-autosuggest__input c4"
         form="Controls/Select"
         name="MadRabbitField"
         onBlur={[Function]}
@@ -10252,15 +10255,15 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         value=""
       />
       <div
-        className="c4"
+        className="c5"
         onMouseDown={[Function]}
         size="normal"
       >
         <span
-          className="c5"
+          className="c6"
         >
           <svg
-            className="c6"
+            className="c7"
             fill="miscDark"
             name="angle"
             rotate=""
@@ -10273,11 +10276,11 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         </span>
       </div>
       <div
-        className="c7"
+        className="c8"
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8"
+      className="react-autosuggest__suggestions-container c9"
       id="react-autowhatever-1"
       role="listbox"
     />
@@ -10298,7 +10301,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   box-sizing: border-box;
 }
 
-.c6 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -10310,14 +10313,56 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   opacity: 1;
 }
 
-.c5 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c3 {
+.c2 {
+  position: relative;
+}
+
+.c2 .react-autosuggest__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2 .react-autosuggest__input::-ms-clear,
+.c2 .react-autosuggest__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c2 .react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c2 .react-autosuggest__input--focused {
+  outline: none;
+}
+
+.c2 .react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.c2 .react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.c2 .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c2 .react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+.c4 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -10340,67 +10385,67 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   border-radius: 3px;
 }
 
-.c3::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::-moz-placeholder {
+.c4::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c3:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::placeholder {
+.c4::placeholder {
   color: #96a0b3;
 }
 
-.c3::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::-moz-placeholder {
+.c4::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c3:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c3:focus {
+.c4:focus {
   outline-style: none;
 }
 
-.c3:disabled::-webkit-input-placeholder {
+.c4:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-moz-placeholder {
+.c4:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled:-ms-input-placeholder {
+.c4:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::placeholder {
+.c4:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-webkit-input-placeholder {
+.c4:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-moz-placeholder {
+.c4:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled:-ms-input-placeholder {
+.c4:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10427,16 +10472,16 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   transition-property: border-color;
 }
 
-.c2:hover {
+.c3:hover {
   border-color: #38afff;
   z-index: 1;
 }
 
-.c2 .combined-inputs-group {
+.c3 .combined-inputs-group {
   height: 100%;
 }
 
-.c7 {
+.c8 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -10446,7 +10491,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   background-color: #e64926;
 }
 
-.c4 {
+.c5 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -10468,7 +10513,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c9 {
   margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
@@ -10482,60 +10527,18 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
   background: #ffffff;
 }
 
-.c1 {
-  position: relative;
-}
-
-.c1 .react-autosuggest__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c1 .react-autosuggest__input::-ms-clear,
-.c1 .react-autosuggest__input::-webkit-search-cancel-button {
-  display: none;
-}
-
-.c1 .react-autosuggest__input--open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.c1 .react-autosuggest__input--focused {
-  outline: none;
-}
-
-.c1 .react-autosuggest__suggestions-container {
-  display: none;
-}
-
-.c1 .react-autosuggest__suggestions-container--open {
-  display: block;
-}
-
-.c1 .react-autosuggest__suggestions-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 .react-autosuggest__suggestion {
-  cursor: pointer;
-}
-
 @media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    padding: 0;
-    top: initial;
+  .responsive .c2,
+  .responsive-booking .c2 {
+    position: static;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
+  .responsive .c9,
+  .responsive-booking .c9 {
+    padding: 0;
+    top: initial;
   }
 }
 
@@ -10553,11 +10556,11 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
     aria-expanded={false}
     aria-haspopup="listbox"
     aria-owns="react-autowhatever-1"
-    className="c1"
+    className="c1 c2"
     role="combobox"
   >
     <div
-      className="c2"
+      className="c3"
       disabled={false}
       size="normal"
     >
@@ -10566,7 +10569,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
         aria-autocomplete="list"
         aria-controls="react-autowhatever-1"
         autoComplete="off"
-        className="react-autosuggest__input c3"
+        className="react-autosuggest__input c4"
         disabled={false}
         name="input"
         onBlur={[Function]}
@@ -10580,15 +10583,15 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
         value=""
       />
       <div
-        className="c4"
+        className="c5"
         onMouseDown={[Function]}
         size="normal"
       >
         <span
-          className="c5"
+          className="c6"
         >
           <svg
-            className="c6"
+            className="c7"
             fill="miscDark"
             name="angle"
             rotate=""
@@ -10601,11 +10604,11 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
         </span>
       </div>
       <div
-        className="c7"
+        className="c8"
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8"
+      className="react-autosuggest__suggestions-container c9"
       id="react-autowhatever-1"
       role="listbox"
     />
@@ -10626,7 +10629,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   box-sizing: border-box;
 }
 
-.c6 {
+.c7 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -10638,14 +10641,56 @@ exports[`Storyshots Controls/Select default 1`] = `
   opacity: 1;
 }
 
-.c5 {
+.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c3 {
+.c2 {
+  position: relative;
+}
+
+.c2 .react-autosuggest__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2 .react-autosuggest__input::-ms-clear,
+.c2 .react-autosuggest__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c2 .react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c2 .react-autosuggest__input--focused {
+  outline: none;
+}
+
+.c2 .react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.c2 .react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.c2 .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c2 .react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+.c4 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -10672,67 +10717,67 @@ exports[`Storyshots Controls/Select default 1`] = `
   border-radius: 3px;
 }
 
-.c3::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::-moz-placeholder {
+.c4::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c3:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::placeholder {
+.c4::placeholder {
   color: #96a0b3;
 }
 
-.c3::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c3::-moz-placeholder {
+.c4::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c3:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c3:focus {
+.c4:focus {
   outline-style: none;
 }
 
-.c3:disabled::-webkit-input-placeholder {
+.c4:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-moz-placeholder {
+.c4:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled:-ms-input-placeholder {
+.c4:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::placeholder {
+.c4:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-webkit-input-placeholder {
+.c4:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled::-moz-placeholder {
+.c4:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c3:disabled:-ms-input-placeholder {
+.c4:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10759,16 +10804,16 @@ exports[`Storyshots Controls/Select default 1`] = `
   transition-property: border-color;
 }
 
-.c2:hover {
+.c3:hover {
   border-color: #38afff;
   z-index: 1;
 }
 
-.c2 .combined-inputs-group {
+.c3 .combined-inputs-group {
   height: 100%;
 }
 
-.c7 {
+.c8 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -10778,7 +10823,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   background-color: #e64926;
 }
 
-.c4 {
+.c5 {
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -10800,7 +10845,7 @@ exports[`Storyshots Controls/Select default 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c9 {
   margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
@@ -10814,60 +10859,18 @@ exports[`Storyshots Controls/Select default 1`] = `
   background: #ffffff;
 }
 
-.c1 {
-  position: relative;
-}
-
-.c1 .react-autosuggest__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.c1 .react-autosuggest__input::-ms-clear,
-.c1 .react-autosuggest__input::-webkit-search-cancel-button {
-  display: none;
-}
-
-.c1 .react-autosuggest__input--open {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.c1 .react-autosuggest__input--focused {
-  outline: none;
-}
-
-.c1 .react-autosuggest__suggestions-container {
-  display: none;
-}
-
-.c1 .react-autosuggest__suggestions-container--open {
-  display: block;
-}
-
-.c1 .react-autosuggest__suggestions-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c1 .react-autosuggest__suggestion {
-  cursor: pointer;
-}
-
 @media screen and (max-width:599px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
-    padding: 0;
-    top: initial;
+  .responsive .c2,
+  .responsive-booking .c2 {
+    position: static;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    position: static;
+  .responsive .c9,
+  .responsive-booking .c9 {
+    padding: 0;
+    top: initial;
   }
 }
 
@@ -10885,11 +10888,11 @@ exports[`Storyshots Controls/Select default 1`] = `
     aria-expanded={false}
     aria-haspopup="listbox"
     aria-owns="react-autowhatever-1"
-    className="c1"
+    className="c1 c2"
     role="combobox"
   >
     <div
-      className="c2"
+      className="c3"
       disabled={false}
       size="large"
     >
@@ -10898,7 +10901,7 @@ exports[`Storyshots Controls/Select default 1`] = `
         aria-autocomplete="list"
         aria-controls="react-autowhatever-1"
         autoComplete="off"
-        className="react-autosuggest__input c3"
+        className="react-autosuggest__input c4"
         disabled={false}
         name="input"
         onBlur={[Function]}
@@ -10912,15 +10915,15 @@ exports[`Storyshots Controls/Select default 1`] = `
         value=""
       />
       <div
-        className="c4"
+        className="c5"
         onMouseDown={[Function]}
         size="large"
       >
         <span
-          className="c5"
+          className="c6"
         >
           <svg
-            className="c6"
+            className="c7"
             fill="miscDark"
             name="angle"
             rotate=""
@@ -10933,11 +10936,11 @@ exports[`Storyshots Controls/Select default 1`] = `
         </span>
       </div>
       <div
-        className="c7"
+        className="c8"
       />
     </div>
     <div
-      className="react-autosuggest__suggestions-container c8"
+      className="react-autosuggest__suggestions-container c9"
       id="react-autowhatever-1"
       role="listbox"
     />
@@ -12177,42 +12180,12 @@ exports[`Storyshots Layout/Header Header 1`] = `
 }
 
 .c4 {
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  color: #007acc;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition-property: color;
-  transition-property: color;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: block;
   height: 24px;
   width: 132px;
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjI0Ij48ZGVmcz48cGF0aCBpZD0iYSIgZD0iTS40OTkuNTFoMi41djIuNWgtMi41Vi41MXoiLz48cGF0aCBpZD0iYyIgZD0iTTUuODQzLjc1NFY3Ljg3SC41NTVWLjc1NGg1LjI4OHoiLz48cGF0aCBpZD0iZSIgZD0iTTAgMjMuNDkxaDEzMC44NDNWMUgweiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC4yNSAtLjI0KSI+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTExNC45OTkgMjIuMjRhMS4yNSAxLjI1IDAgMSAxLTIuNTAxIDAgMS4yNSAxLjI1IDAgMCAxIDIuNSAwem0wLTMuOTk4YTEuMjUgMS4yNSAwIDEgMC0yLjUwMS4wMDEgMS4yNSAxLjI1IDAgMCAwIDIuNSAwbTAtMy45OThhMS4yNSAxLjI1IDAgMSAwLTIuNSAwIDEuMjUgMS4yNSAwIDAgMCAyLjUgMG0wLTMuOTk5YTEuMjUgMS4yNSAwIDEgMC0yLjUuMDAxIDEuMjUgMS4yNSAwIDAgMCAyLjUgMG0wLTMuOTk5YTEuMjUgMS4yNSAwIDEgMC0yLjUuMDAxIDEuMjUgMS4yNSAwIDAgMCAyLjUgMCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExMiAuNDkpIj48bWFzayBpZD0iYiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjYSIvPjwvbWFzaz48cGF0aCBmaWxsPSIjMDA4QUU2IiBkPSJNMi45OTkgMS43NmExLjI1IDEuMjUgMCAxIDAtMi41MDEgMCAxLjI1IDEuMjUgMCAwIDAgMi41IDAiIG1hc2s9InVybCgjYikiLz48L2c+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTEyMi4wNjcgNy41MTljLjk1IDAgMS40NzQtLjQwNiAxLjQ3NC0xLjE5NyAwLS44MDEtLjUyNS0xLjA4LTEuNDc0LTEuMDhoLS45OTRWNy41MmguOTk0em0tMi4yMzMtMy4yN2gyLjM2YzEuNDUzIDAgMi41NjMuNTE0IDIuNTYzIDIuMDczIDAgMS4wNjgtLjU1NSAxLjcxLTEuMzg4IDEuOTk4bDEuNjY4IDIuOTE3aC0xLjM5bC0xLjUwNi0yLjczNWgtMS4wNjl2Mi43MzVoLTEuMjM5VjQuMjQ5eiIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNSAzLjQ5KSI+PG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2MiLz48L21hc2s+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTS41NTUgNC42NzVWLjc1NWgxLjI0VjQuNzdjMCAxLjUxOC41NjUgMi4wMiAxLjQxIDIuMDIuODU0IDAgMS40NTItLjUwMiAxLjQ1Mi0yLjAyVi43NTRoMS4xODZ2My45MjFjMCAyLjI5Ny0xLjAxNCAzLjE5NS0yLjYzOSAzLjE5NS0xLjYxMyAwLTIuNjQ5LS44OTgtMi42NDktMy4xOTUiIG1hc2s9InVybCgjZCkiLz48L2c+PHBhdGggZmlsbD0iIzAwOEFFNiIgZD0iTTkuNDg4IDIwLjI0MWwtNC40MzYtNy43MDYtMi40NDcgMi45OTd2NC43MDlIMFY0LjI0OWgyLjYwNXY3LjI3OGguMjQ5bDUuNzYtNy4yNzhoMi45NjFsLTQuODkzIDYuMjA5IDUuNzYyIDkuNzgzek0yMC4yODcgMjAuNDkzYy0xLjkyIDAtMy4zOC0uNTYzLTQuMzgtMS42NzMtMS4wOS0xLjIxLTEuNjIyLTMuMTA1LTEuNjIyLTUuNjNWNC4yNWgyLjYwNXY5LjE2MmMwIDMuMjA1IDEuMTA4IDQuNzYzIDMuMzY1IDQuNzYzIDIuMzIzIDAgMy40NjMtMS41NTggMy40NjMtNC43NjNWNC4yNWgyLjYwNXY4Ljk0MWMwIDIuNTMxLS41NTUgNC40MjUtMS42MzEgNS42My0uOTkxIDEuMTEtMi40OCAxLjY3My00LjQwNSAxLjY3M20xMi4yMzUtOC4zMzhoMi4xOGMyLjQ1NyAwIDMuNjUxLTEuMDAzIDMuNjUxLTMuMDQ0IDAtMS45NTItMS4xMjItMi43OTYtMy43NS0yLjc5NmgtMi4wODF2NS44NHptLTIuNjk1IDguMDg2VjQuMjQ5aDQuOTk5YzEuOTE0IDAgMy40MDIuMzM5IDQuNDIxIDEuMDUgMS4xNTcuODA4IDEuNzQ0IDIuMDY2IDEuNzQ0IDMuODAyIDAgMy4yMjYtMi4yNjcgNS4xMi02LjA2NiA1LjEyaC0yLjQwM3Y2LjAyaC0yLjY5NXoiLz48bWFzayBpZD0iZiIgZmlsbD0iI2ZmZiI+PHVzZSB4bGluazpocmVmPSIjZSIvPjwvbWFzaz48cGF0aCBmaWxsPSIjMDA4QUU2IiBtYXNrPSJ1cmwoI2YpIiBkPSJNNDQuMTExIDIwLjI0MWgyLjY5NVY0LjI1aC0yLjY5NXpNNTMuMzY1IDEwLjg5N2gyLjEwNWMyLjczIDAgMy4zMDQtMS4zMDcgMy4zMDQtMi4zODYgMC0xLjU2Ni0xLjAwNC0yLjI4Ni0zLjI1NS0yLjI4NmgtMi4xNTR2NC42NzJ6bTAgNy4yNzdoMi40NzZjMi40ODUgMCAzLjc5OC0uOTU2IDMuNzk4LTIuNzYgMC0xLjcwOS0xLjI0Mi0yLjU0LTMuNzk4LTIuNTRoLTIuNDc2djUuM3pNNTAuNjcgMjAuMjRWNC4yNWg1LjA0N2MzLjc4IDAgNS42OTYgMS4yODYgNS42OTYgMy44NjggMCAxLjU5LS44NiAyLjk1Ni0yLjE3IDMuNDE2bC0uMDM4LjAxdi4yMzRsLjA0OS4wMTZjMS45Mi40MjcgMy4wMSAxLjc5MiAzLjAxIDMuNzQ1IDAgMS41MjEtLjU4NyAyLjcyNS0xLjczNSAzLjUzNy0xLjA1OC43NDctMi41OCAxLjE2NC00LjM5MiAxLjE2NEg1MC42N3pNNjUuMzE0IDIwLjI0MWgyLjY5NVY0LjI1aC0yLjY5NXpNNzIuMzIxIDIwLjI0MVY0LjI0OWgyLjYwNXYxMy43NDZoNi43Mzh2Mi4yNDZ6TTg0LjE4IDIwLjI0MVY0LjI0OWg5LjYxM3YyLjE1N2gtNi45MTh2NC4zMTJoNS44NHYyLjI0NmgtNS44NHY1LjAzMWg3LjE4N3YyLjI0NnpNMTAxLjI1IDIwLjI0MVY2LjQwNmgtNC42NzJWNC4yNDloMTIuMDM5djIuMTU3aC00LjY3MnYxMy44MzV6Ii8+PC9nPjwvc3ZnPg==');
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-
-.c4 .icon-inherit-color {
-  fill: #007acc;
-}
-
-.c4:hover {
-  color: rgba(0,122,204,0.8);
-}
-
-.c4:hover .icon-inherit-color {
-  fill: rgba(0,122,204,0.8);
 }
 
 .c4:hover {
@@ -12255,7 +12228,7 @@ exports[`Storyshots Layout/Header Header 1`] = `
           className="c3"
         >
           <a
-            className="c4"
+            className="-a c4"
             href="https://www.kupibilet.ru"
           />
         </div>
@@ -12367,82 +12340,18 @@ exports[`Storyshots Utils Responsive only 1`] = `
 }
 
 .c4 {
-  width: 100vw;
-  height: 140px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: purple;
-  color: white;
   background: skyblue;
 }
 
 .c6 {
-  width: 100vw;
-  height: 140px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: purple;
-  color: white;
   background: greenyellow;
 }
 
 .c8 {
-  width: 100vw;
-  height: 140px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: purple;
-  color: white;
   background: dodgerblue;
 }
 
 .c10 {
-  width: 100vw;
-  height: 140px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: purple;
-  color: white;
   background: black;
 }
 
@@ -12512,7 +12421,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="c3"
     >
       <div
-        className="c4"
+        className="c4 c2"
       >
         Handheld
       </div>
@@ -12521,7 +12430,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="c5"
     >
       <div
-        className="c6"
+        className="c6 c2"
       >
         Tablet
       </div>
@@ -12530,7 +12439,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="c7"
     >
       <div
-        className="c8"
+        className="c8 c2"
       >
         Mobile
       </div>
@@ -12539,7 +12448,7 @@ exports[`Storyshots Utils Responsive only 1`] = `
       className="c9"
     >
       <div
-        className="c10"
+        className="c10 c2"
       >
         Not mobile
       </div>
