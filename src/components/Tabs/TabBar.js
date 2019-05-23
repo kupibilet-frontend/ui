@@ -3,14 +3,15 @@ import React, { PureComponent } from 'react'
 
 /* eslint-disable react/prop-types */
 type Props = {
-  children: React.Element<*>,
+  children: React.Node,
   className?: string,
   renderTab: Function,
   activeKey: string,
   onTabChange: string => void,
 }
 
-class TabBar extends PureComponent<Props, void> {
+
+class TabBar extends PureComponent<Props> {
   static defaultProps = {
     className: null,
   }
@@ -29,15 +30,21 @@ class TabBar extends PureComponent<Props, void> {
     return (
       <div className={className}>
         {
-          React.Children.map(children, (child) => renderTab({
-            role: 'tab',
-            isActive: activeKey === child.key,
-            'aria-disabled': child.props.disabled,
-            key: child.key,
-            tabKey: child.key,
-            onTabChange: this.onTabChange,
-            children: child.props.tab,
-          }))
+          React.Children.map(children, (child) => {
+            if (!child) {
+              return null
+            }
+
+            return renderTab({
+              role: 'tab',
+              isActive: activeKey === child.key,
+              'aria-disabled': child.props.disabled,
+              key: child.key,
+              tabKey: child.key,
+              onTabChange: this.onTabChange,
+              children: child.props.tab,
+            })
+          })
         }
       </div>
     )

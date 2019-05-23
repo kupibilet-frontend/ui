@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import RCTabs, { TabContent } from 'rc-tabs'
 
 type Props = {
-  children: React.Element<*>,
+  children: React.Node,
   activeKey: string,
   renderTabBar: Function,
   renderTabContent?: Function,
