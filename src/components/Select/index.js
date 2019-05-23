@@ -37,7 +37,7 @@ const SectionHeader = styled.div`
   color: ${({ theme }) => theme.color.miscDark};
 `
 
-const StyledAutocomplete = Autocomplete.extend`
+const StyledAutocomplete = styled(Autocomplete)`
   && {
     ${mq.mobile`
       position: relative;
