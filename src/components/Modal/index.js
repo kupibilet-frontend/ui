@@ -48,6 +48,11 @@ type Props = {
   closeButtonText?: string,
   shouldRenderCloseButton?: boolean,
   footer?: React.Element<*>,
+  onClose: Function,
+  heading: string,
+  renderHeader?: React.Element<*>,
+  renderContent?: React.Element<*>,
+  isOpen: boolean,
 }
 
 class Modal extends React.PureComponent<Props> {
