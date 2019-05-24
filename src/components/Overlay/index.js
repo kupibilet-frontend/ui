@@ -33,11 +33,11 @@ class Overlay extends Component<Props, void> {
       <GlobalStylesScope>
         <Scrollfix>
           <Wrapper
-            onClick={closePortal}
+            onMouseDown={closePortal}
             isOnBottom={isOnBottom}
           >
             <OverlayContentWrap isOnBottom={isOnBottom}>
-              <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
+              <OverlayContent onMouseDown={this.stopPropagation} isOnBottom={isOnBottom}>
                 {React.cloneElement(children, { closePortal })}
               </OverlayContent>
             </OverlayContentWrap>
