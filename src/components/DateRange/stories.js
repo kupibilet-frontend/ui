@@ -31,24 +31,28 @@ const onDatesChange = ({ startDate, endDate }) => {
 }
 
 storiesOf('Controls/DateRange', module)
-  .addWithInfo('DateRange', 'with custom calendar cells', () => {
-    const startDate = date('startDate', null)
-    const endDate = date('endDate', null)
+  .add(
+    'DateRange',
+    () => {
+      const startDate = date('startDate', null)
+      const endDate = date('endDate', null)
 
-    return (
-      <DateRange
-        startDate={startDate ? moment(startDate) : null}
-        endDate={endDate ? moment(endDate) : null}
-        focusedInput={getFocusedInput()}
-        onFocusChange={onFocusChange}
-        onDatesChange={onDatesChange}
-        renderDay={(day) => (
-          <CalendarDay
-            day={day}
-            isCheap={(Number(day.format('DDD')) % 9 === 0)}
-            cost={Math.floor(day.format('DDD') * 321 % 100) * 100}
-          />
-        )}
-      />
-    )
-  })
+      return (
+        <DateRange
+          startDate={startDate ? moment(startDate) : null}
+          endDate={endDate ? moment(endDate) : null}
+          focusedInput={getFocusedInput()}
+          onFocusChange={onFocusChange}
+          onDatesChange={onDatesChange}
+          renderDay={(day) => (
+            <CalendarDay
+              day={day}
+              isCheap={(Number(day.format('DDD')) % 9 === 0)}
+              cost={Math.floor(day.format('DDD') * 321 % 100) * 100}
+            />
+          )}
+        />
+      )
+    },
+    { info: 'with custom calendar cells' },
+  )

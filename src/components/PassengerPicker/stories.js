@@ -13,17 +13,8 @@ const defaults = {
 }
 
 storiesOf('Complex controls/PassengerPicker', module)
-  .addWithInfo(
-    'Defalut', `
-      redux-form совместимый компонент.\n
-      value в redux-form должно быть объектом вида
-
-      \tvalue: {
-        \tcounter: number,
-        \tisMin: bool,
-        \tisMax: bool,
-      \t}
-    `,
+  .add(
+    'Defalut',
     () => {
       const title = text('title', defaults.title)
       const description = text('description', defaults.description)
@@ -48,5 +39,17 @@ storiesOf('Complex controls/PassengerPicker', module)
           }}
         />
       )
+    },
+    {
+      info: `
+        redux-form совместимый компонент.\n
+        value в redux-form должно быть объектом вида
+  
+        \tvalue: {
+          \tcounter: number,
+          \tisMin: bool,
+          \tisMax: bool,
+        \t}
+      `,
     },
   )

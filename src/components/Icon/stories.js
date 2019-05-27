@@ -11,7 +11,7 @@ const iconSizes = _mapValues(sizes, (sizeUnits, sizeKey) => `${sizeKey}: ${sizeU
 const colorNames = [null, ...Object.keys(color)]
 
 storiesOf('Icon', module)
-  .addWithInfo('Default', () => (
+  .add('Default', () => (
     <Icon
       name={select('name', icons, 'checkbox')}
       size={select('size', iconSizes, 'large')}

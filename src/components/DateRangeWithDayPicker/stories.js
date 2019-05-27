@@ -5,8 +5,9 @@ import DateRangeDayPicker from 'components/DateRangeWithDayPicker'
 import CalendarDay from 'components/CalendarDay'
 
 storiesOf('Controls/DateRangeDayPicker', module)
-  .addWithInfo('DateRangeWithDayPicker', 'with custom calendar cells', () => {
-    return (
+  .add(
+    'DateRangeWithDayPicker',
+    () => (
       <DateRangeDayPicker
         renderDay={(day) => (
           <CalendarDay
@@ -16,5 +17,6 @@ storiesOf('Controls/DateRangeDayPicker', module)
           />
         )}
       />
-    )
-  })
+    ),
+    { info: 'with custom calendar cells' },
+  )

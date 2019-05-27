@@ -135,10 +135,8 @@ const STORY_DOC_PROPS = {
 }
 
 storiesOf('Controls/Autocomplete', module)
-  .addWithInfo(
+  .add(
     'Airport',
-    `Uses <AirportInput /> and <AirportSuggest />.
-    Can be used inside <ControlsGroup />`,
     () => {
       // Trigger fake knobs
       object('suggest', {})
@@ -150,5 +148,11 @@ storiesOf('Controls/Autocomplete', module)
           <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
         </div>
       )
+    },
+    {
+      info: `
+        Uses <AirportInput /> and <AirportSuggest />.
+        Can be used inside <ControlsGroup />
+      `,
     },
   )

@@ -10,7 +10,7 @@ import ControlsGroup from 'components/ControlsGroup'
 
 /* eslint-disable no-console */
 storiesOf('Complex controls/ControlsGroup', module)
-  .addWithInfo('Inputs group', () => (
+  .add('Inputs group', () => (
     <ControlsGroup onSwap={() => console.log('Swap it!')}>
       <AirportInput readOnly value="Шереметьево" city="Москва" IATACode="SVO" />
       <AirportInput
@@ -19,7 +19,7 @@ storiesOf('Complex controls/ControlsGroup', module)
       />
     </ControlsGroup>
   ))
-  .addWithInfo('Different controls group', () => (
+  .add('Different controls group', () => (
     <ControlsGroup>
       <Button size="large">
         Пойти
