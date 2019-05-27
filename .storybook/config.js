@@ -3,6 +3,7 @@ import centered from '@storybook/addon-centered'
 import { withKnobs } from '@storybook/addon-knobs'
 import infoAddon from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
+import { withInfo } from '@storybook/addon-info'
 
 import mockInfoAddon from 'storybook/addons/mockInfo'
 import withTheme from 'storybook/decorators/withTheme'
@@ -30,6 +31,7 @@ if (process.env.NODE_ENV === 'test') {
 addDecorator(withReduxContext)
 addDecorator(withTheme)
 addDecorator(withKnobs)
+addDecorator(withInfo)
 
 const req = require.context('../src', true, /stories.js$/)
 const loadStories = () => req.keys().forEach((filename) => req(filename))
