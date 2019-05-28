@@ -1800,6 +1800,22 @@
     react-syntax-highlighter "^8.0.1"
     regenerator-runtime "^0.12.1"
 
+"@storybook/addon-viewport@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-5.0.11.tgz#93b1d6db2c06b7a9282ee96a9a4d1dd2c4ba8849"
+  integrity sha512-dOq+L7Crxh8B3KrdkbKhCGX466k+0x1t5/VuZjztxfVQPpjIn8L7Zxo+nYouvlbXtHaKh7Xon4bq61HPksrJAw==
+  dependencies:
+    "@storybook/addons" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
+    "@storybook/components" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    "@storybook/theming" "5.0.11"
+    core-js "^2.6.5"
+    global "^4.3.2"
+    memoizerific "^1.11.3"
+    prop-types "^15.6.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/addons@5.0.11", "@storybook/addons@^5.0.11":
   version "5.0.11"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.11.tgz#86de70747e0a692d9dd8ea431daa1147d8785697"
