@@ -1,5 +1,5 @@
 import { configure, setAddon, addDecorator } from '@storybook/react'
-import centered from '@storybook/addon-centered'
+import centered from '@storybook/addon-centered/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import infoAddon from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
