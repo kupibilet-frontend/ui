@@ -31,7 +31,12 @@ if (process.env.NODE_ENV === 'test') {
 addDecorator(withReduxContext)
 addDecorator(withTheme)
 addDecorator(withKnobs)
-addDecorator(withInfo)
+
+/*
+ * @storybook/addon-storyshots adds info interface to snapshot (even if info not specified),
+ * so do not include `withInfo` decorator in tests
+ * */
+if (process.env.NODE_ENV !== 'test') addDecorator(withInfo)
 
 const req = require.context('../src', true, /stories.js$/)
 const loadStories = () => req.keys().forEach((filename) => req(filename))
