@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots FormItem default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <label
+      className="c2"
+      htmlFor="input"
+    >
+      Cake is a lie
+    </label>
+    <input
+      id="input"
+      type="text"
+    />
+  </div>
+</div>
+`;

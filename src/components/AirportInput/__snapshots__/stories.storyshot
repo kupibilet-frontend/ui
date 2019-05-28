@@ -1,0 +1,591 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 21px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 16px;
+}
+
+.c1:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c2 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2,
+.c2:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+.c3 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c3,
+.c3:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    style={
+      Object {
+        "width": 244,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "paddingBottom": "20px",
+        }
+      }
+    >
+      <div
+        className="c1"
+      >
+        <div
+          className="-div c2"
+          placeholder="Дата вылета"
+        >
+          Дата вылета
+        </div>
+      </div>
+    </div>
+    <div
+      className="c1"
+    >
+      <div
+        className="-div c3"
+        placeholder="Дата вылета"
+        value="1 апр"
+      >
+        1 апр
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls/AirportInput default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 21px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 16px;
+}
+
+.c1:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c2 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c2,
+.c2:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c2:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+.c3 {
+  -webkit-appearance: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c4 {
+  visibility: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-size: 14px;
+  color: #808080;
+  background: #ffffff;
+  padding: 1px 0 0px 10px;
+  margin: -1px 0;
+}
+
+.c5:empty {
+  display: none;
+}
+
+.c5::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    style={
+      Object {
+        "width": 244,
+      }
+    }
+  >
+    <div
+      className="c1"
+    >
+      <textarea
+        autoCapitalize="sentences"
+        autoComplete="off"
+        className="c2"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Дата вылета"
+        rows="1"
+        value="1 апр"
+        wrap="off"
+      />
+      <div
+        className="AirportInput__geo c3"
+      >
+        <div
+          className="c4"
+        >
+          1 апр
+        </div>
+        
+        
+      </div>
+      <div
+        className="c5"
+      >
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
