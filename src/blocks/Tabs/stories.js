@@ -35,7 +35,7 @@ storiesOf('Blocks', module)
         </Tabs>
       )
     }, {
-      info: `
+      notes: `
         \`\`\`
         const renderTab = (props) => (
           <Tab {...props} />
@@ -68,7 +68,7 @@ storiesOf('Blocks', module)
         </Tabs>
       )
     }, {
-      info: `
+      notes: `
         \`\`\`
         const renderTab = (props) => (
           <Tab {...props} />

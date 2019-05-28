@@ -150,7 +150,7 @@ storiesOf('Controls/Autocomplete', module)
       )
     },
     {
-      info: `
+      notes: `
         Uses <AirportInput /> and <AirportSuggest />.
         Can be used inside <ControlsGroup />
       `,
