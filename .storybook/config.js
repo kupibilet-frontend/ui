@@ -3,6 +3,7 @@ import centered from '@storybook/addon-centered/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import infoAddon from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
+import { setDefaults as setInfoAddonOptions } from '@storybook/addon-info'
 import { withInfo } from '@storybook/addon-info'
 
 import mockInfoAddon from 'storybook/addons/mockInfo'
@@ -17,6 +18,10 @@ setOptions({
   showSearchBox: true,
   downPanelInRight: false,
   sortStoriesByKind: true,
+})
+
+setInfoAddonOptions({
+  source: false, // Displays the source of story Component
 })
 
 
