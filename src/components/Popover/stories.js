@@ -48,7 +48,7 @@ const CarrotButton = (props) => (
   <Button icon={<Icon name="carrot_monochrome" inheritColor />} {...props} />
 )
 
-storiesOf('Controls/Popover', module)
+storiesOf('COMPONENTS|Controls/Popover', module)
   .add('default', () => {
     const content = getContent()
     const placement = getPlacement()

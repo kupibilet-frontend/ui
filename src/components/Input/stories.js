@@ -26,7 +26,7 @@ const sizesSelect = (defaultValue = 'large') => select(
 
 const isRequired = (value) => (value ? undefined : 'Поле должно быть заполнено')
 
-storiesOf('Controls/Input', module)
+storiesOf('COMPONENTS|Controls/Input', module)
   .add('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)

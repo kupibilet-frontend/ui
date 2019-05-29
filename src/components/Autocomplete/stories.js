@@ -134,7 +134,7 @@ const STORY_DOC_PROPS = {
   ),
 }
 
-storiesOf('Controls/Autocomplete', module)
+storiesOf('COMPONENTS|Controls/Autocomplete', module)
   .add(
     'Airport',
     () => {

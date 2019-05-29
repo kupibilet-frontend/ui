@@ -27,7 +27,7 @@ const footerContent = React.Children.toArray([
   </Button>,
 ])
 
-storiesOf('Complex controls/Modal', module)
+storiesOf('COMPONENTS|Complex controls/Modal', module)
   .add('With sizes', () => {
     const size = select('size', sizes, 'wide')
 

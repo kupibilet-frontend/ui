@@ -89,7 +89,7 @@ class Container extends React.Component {
   }
 }
 
-storiesOf('Controls/Slider', module)
+storiesOf('COMPONENTS|Controls/Slider', module)
   .add('default', () => (
     <div style={{ width: '252px' }}>
       <Slider
