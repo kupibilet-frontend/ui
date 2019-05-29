@@ -448,15 +448,18 @@ class ReactDayPicker extends PureComponent <Props, State> {
           <PortalWrapper>
             <StyledHeader>
               <H4>{showFromCalendar ? 'Дата туда' : 'Дата обратно'}</H4>
-            </StyledHeader>
 
-            <StyledCloseButton onClick={() => this.closeDayPicker()}>
-              <StyledIcon
-                name="cross"
-                fill="primaryDarkest"
-                size="normal"
+              <StyledCloseButton
+                onClick={() => this.closeDayPicker()}
+                icon={
+                  <StyledIcon
+                    name="cross"
+                    fill="primaryDarkest"
+                    size="normal"
+                  />
+                }
               />
-            </StyledCloseButton>
+            </StyledHeader>
 
             {dayPickers(true)}
 
@@ -486,7 +489,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
                 <StyledModal
                   isOpen={showCalendar}
                   onClose={this.closeDayPicker}
-                  showCloseButton={false}
+                  shouldRenderCloseIcon={false}
                 >
                   {mobileCalendarHeader}
                   {calendar}

@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components'
 import DayPicker from '@kupibilet/react-day-picker'
 import mq from 'utils/media-queries'
 import TextSmall from 'components/Typography/TextSmall'
-import { Header, CloseButton } from 'components/Modal/styled'
 import { Container, Input } from 'components/AirportInput/styled'
 import Modal from 'components/Modal'
+import { Header, CloseIcon } from '../../Modal/styled'
 import notMobileReactDayStyles from './not-mobile-react-day-styles'
 import mobileReactDayStyles from './mobile-react-day-styles'
 
@@ -493,7 +493,7 @@ export const PortalWrapper = styled.div`
   z-index: 10;
 `
 
-export const StyledCloseButton = styled(CloseButton)`
+export const StyledCloseButton = styled(CloseIcon)`
   ${mq.mobile`
     position: fixed;
   `}
