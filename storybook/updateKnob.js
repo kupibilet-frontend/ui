@@ -14,5 +14,5 @@ export default function updateKnob(name, type, value) {
     value = value.valueOf() // eslint-disable-line no-param-reassign
   }
 
-  channel.emit('addon:updateKnob:changed', { name, type, value })
+  channel.emit('storybooks/knobs/change', { name, type, value })
 }
