@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Controls/Buttons Button as <a href="" /> 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Buttons Button as <a href="" /> 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -81,7 +81,7 @@ exports[`Storyshots Controls/Buttons Button as <a href="" /> 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons Default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Buttons Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -160,7 +160,7 @@ exports[`Storyshots Controls/Buttons Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons Icon-only button (custom icon) 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button (custom icon) 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -282,7 +282,7 @@ exports[`Storyshots Controls/Buttons Icon-only button (custom icon) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -404,7 +404,7 @@ exports[`Storyshots Controls/Buttons Icon-only button 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons Loading button 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Buttons Loading button 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -528,7 +528,7 @@ exports[`Storyshots Controls/Buttons Loading button 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons With custom icons 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -684,7 +684,7 @@ exports[`Storyshots Controls/Buttons With custom icons 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Buttons With left and right icons 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Controls/Select With Redux Form 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Select With Redux Form 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -281,7 +281,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
         aria-controls="react-autowhatever-1"
         autoComplete="off"
         className="react-autosuggest__input c3"
-        form="Controls/Select"
+        form="COMPONENTS|Controls/Select"
         name="MadRabbitField"
         onBlur={[Function]}
         onChange={[Function]}
@@ -329,7 +329,7 @@ exports[`Storyshots Controls/Select With Redux Form 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Select With custom sections and keys 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -657,7 +657,7 @@ exports[`Storyshots Controls/Select With custom sections and keys 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Select default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Select default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
