@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Popover With \`align\` prop 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -123,7 +123,7 @@ exports[`Storyshots Controls/Popover With \`align\` prop 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Popover With \`dotCentering\` prop 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Popover With \`dotCentering\` prop 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -178,7 +178,7 @@ exports[`Storyshots Controls/Popover With \`dotCentering\` prop 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Popover With Header&Large 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Popover With Header&Large 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -301,7 +301,7 @@ exports[`Storyshots Controls/Popover With Header&Large 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Popover default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Popover default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

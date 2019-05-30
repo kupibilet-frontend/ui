@@ -36,8 +36,8 @@ const WithBorder = styled.div`
   }
 `
 
-storiesOf('Blocks', module)
-  .add('FilterSection', () => (
+storiesOf('BLOCKS|FilterSection', module)
+  .add('Defaultw', () => (
     <div style={{ width: 252 }}>
       <FilterSection
         headerLeft={<div>Пересадки</div>}

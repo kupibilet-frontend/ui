@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Blocks Conditional rendered Tabs 1`] = `
+exports[`Storyshots BLOCKS|Tabs Conditional rendered Tabs 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -90,7 +90,7 @@ exports[`Storyshots Blocks Conditional rendered Tabs 1`] = `
 </div>
 `;
 
-exports[`Storyshots Blocks Styled Tabs 1`] = `
+exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

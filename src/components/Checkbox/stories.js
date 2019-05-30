@@ -7,7 +7,7 @@ import { Field } from 'redux-form'
 
 import Checkbox from 'components/Checkbox'
 
-storiesOf('Controls/Checkbox', module)
+storiesOf('COMPONENTS|Controls/Checkbox', module)
   .addDecorator(withReduxForm)
   .add('ReduxForm-ready', () => {
     return (

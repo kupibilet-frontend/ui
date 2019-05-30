@@ -12,7 +12,7 @@ const defaults = {
   isMin: true,
 }
 
-storiesOf('Complex controls/PassengerPicker', module)
+storiesOf('COMPONENTS|Complex controls/PassengerPicker', module)
   .add(
     'Defalut',
     () => {

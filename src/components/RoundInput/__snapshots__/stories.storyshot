@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Controls/RoundInput default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/RoundInput default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -170,7 +170,7 @@ exports[`Storyshots Controls/RoundInput default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/RoundInput withButton 1`] = `
+exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

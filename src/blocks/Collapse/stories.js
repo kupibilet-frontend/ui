@@ -36,7 +36,7 @@ const CustomStyledCollapse = styled(StyledCollapse)`
   }
 `
 
-storiesOf('Blocks/Collapse', module)
+storiesOf('BLOCKS|Collapse', module)
   .add('Default', () => (
     <CollapseContainer>
       <StyledCollapse defaultActiveKey={['0']}>

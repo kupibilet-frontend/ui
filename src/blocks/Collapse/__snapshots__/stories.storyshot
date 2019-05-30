@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Blocks/Collapse Accordion 1`] = `
+exports[`Storyshots BLOCKS|Collapse Accordion 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -245,7 +245,7 @@ exports[`Storyshots Blocks/Collapse Accordion 1`] = `
 </div>
 `;
 
-exports[`Storyshots Blocks/Collapse Always open 1`] = `
+exports[`Storyshots BLOCKS|Collapse Always open 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -510,7 +510,7 @@ exports[`Storyshots Blocks/Collapse Always open 1`] = `
 </div>
 `;
 
-exports[`Storyshots Blocks/Collapse Default 1`] = `
+exports[`Storyshots BLOCKS|Collapse Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -755,7 +755,7 @@ exports[`Storyshots Blocks/Collapse Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Blocks/Collapse Render custom header and layout 1`] = `
+exports[`Storyshots BLOCKS|Collapse Render custom header and layout 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -896,7 +896,7 @@ exports[`Storyshots Blocks/Collapse Render custom header and layout 1`] = `
 </div>
 `;
 
-exports[`Storyshots Blocks/Collapse With paddings 1`] = `
+exports[`Storyshots BLOCKS|Collapse With paddings 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

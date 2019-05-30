@@ -7,7 +7,7 @@ import Icon from 'components/Icon'
 
 const placements = ['top', 'bottom', 'left', 'right']
 
-storiesOf('Controls/Tooltip', module)
+storiesOf('COMPONENTS|Controls/Tooltip', module)
   .add('default', () => {
     const content = text('content', 'Высококонверсионный заяц следит за длинной строкой.')
     const placement = select('placement', placements, 'bottom')

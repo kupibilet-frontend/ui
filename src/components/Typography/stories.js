@@ -52,7 +52,7 @@ const texts = (
   </div>
 )
 
-storiesOf('Utils', module)
+storiesOf('COMPONENTS|Utils', module)
   .add('Typography', () => (
     <div
       style={{
