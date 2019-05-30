@@ -9,7 +9,7 @@ const itemList = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 const onClick = (i) => updateKnob('activeKey', 'number', i)
 
 storiesOf('Controls/NavBar', module)
-  .addWithInfo('Default', () => {
+  .add('Default', () => {
     const activeKey = number('activeKey', 0)
 
     return (

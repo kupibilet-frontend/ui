@@ -1,0 +1,377 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Controls/Autocomplete Airport 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  color: #333333;
+  height: 42px;
+  width: 100%;
+  min-width: 142px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  border: 2px solid #77c8ff;
+  border-radius: 21px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 10px 16px;
+}
+
+.c2:hover {
+  border-color: #ff9100;
+  z-index: 2;
+}
+
+.c3 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  left: 16px;
+  right: 0;
+  top: 10px;
+  bottom: 0;
+  width: calc(100% - 32px);
+  height: 100%;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.c3,
+.c3:focus {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3::-moz-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:-ms-input-placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  color: #b3b3b3;
+  opacity: 1;
+}
+
+.c3:focus ~ .AirportInput__geo .AirportInput__spell {
+  display: block;
+}
+
+.c4 {
+  -webkit-appearance: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c5 {
+  visibility: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6 {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: inherit;
+  font-size: 14px;
+  color: #808080;
+  background: #ffffff;
+  padding: 1px 0 0px 10px;
+  margin: -1px 0;
+}
+
+.c6:empty {
+  display: none;
+}
+
+.c6::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
+}
+
+.c7 {
+  margin: 3px 0 0;
+  padding: 3px 0;
+  position: absolute;
+  top: 100%;
+  width: 300px;
+  box-shadow: 0 3px 9px 0 rgba(98,112,139,.7);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 10;
+  background: #ffffff;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .react-autosuggest__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 .react-autosuggest__input::-ms-clear,
+.c1 .react-autosuggest__input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c1 .react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c1 .react-autosuggest__input--focused {
+  outline: none;
+}
+
+.c1 .react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.c1 .react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.c1 .react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 .react-autosuggest__suggestion {
+  cursor: pointer;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    padding: 0;
+    top: initial;
+    margin: 12px auto 0;
+    box-shadow: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    position: static;
+  }
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    style={
+      Object {
+        "width": 244,
+      }
+    }
+  >
+    <div
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      aria-owns="react-autowhatever-1"
+      className="c1"
+      role="combobox"
+    >
+      <div
+        className="c2"
+      >
+        <textarea
+          aria-activedescendant={null}
+          aria-autocomplete="list"
+          aria-controls="react-autowhatever-1"
+          autoCapitalize="sentences"
+          autoComplete="off"
+          autoFocus={true}
+          className="react-autosuggest__input c3"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Туда"
+          rows="1"
+          type="text"
+          value=""
+          wrap="off"
+        />
+        <div
+          className="AirportInput__geo c4"
+        >
+          <div
+            className="c5"
+          >
+            
+          </div>
+          
+          
+        </div>
+        <div
+          className="c6"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="react-autosuggest__suggestions-container c7"
+        id="react-autowhatever-1"
+        role="listbox"
+      />
+    </div>
+  </div>
+</div>
+`;

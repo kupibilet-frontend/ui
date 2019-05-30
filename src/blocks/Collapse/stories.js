@@ -37,7 +37,7 @@ const CustomStyledCollapse = styled(StyledCollapse)`
 `
 
 storiesOf('Blocks/Collapse', module)
-  .addWithInfo('Default', () => (
+  .add('Default', () => (
     <CollapseContainer>
       <StyledCollapse defaultActiveKey={['0']}>
         <StyledPanel header="Close me">{text}</StyledPanel>
@@ -46,7 +46,7 @@ storiesOf('Blocks/Collapse', module)
       </StyledCollapse>
     </CollapseContainer>
   ))
-  .addWithInfo('Accordion', () => (
+  .add('Accordion', () => (
     <CollapseContainer>
       <StyledCollapse accordion defaultActiveKey={['0']}>
         <StyledPanel header="Close me">{text}</StyledPanel>
@@ -55,7 +55,7 @@ storiesOf('Blocks/Collapse', module)
       </StyledCollapse>
     </CollapseContainer>
   ))
-  .addWithInfo('With paddings', () => (
+  .add('With paddings', () => (
     <CollapseContainer>
       <StyledCollapse accordion defaultActiveKey={['0']}>
         <StyledPanel withPadding header="Close me">{text}</StyledPanel>
@@ -64,7 +64,7 @@ storiesOf('Blocks/Collapse', module)
       </StyledCollapse>
     </CollapseContainer>
   ))
-  .addWithInfo('Always open', () => (
+  .add('Always open', () => (
     <CollapseContainer>
       <StyledCollapse defaultActiveKey={['0', '1', '2']}>
         <StyledPanel disabled header="Close me">{text}</StyledPanel>
@@ -73,7 +73,7 @@ storiesOf('Blocks/Collapse', module)
       </StyledCollapse>
     </CollapseContainer>
   ))
-  .addWithInfo('Render custom header and layout', () => (
+  .add('Render custom header and layout', () => (
     <LargeCollapseContainer>
       <CustomStyledCollapse defaultActiveKey={['0']}>
         <StyledPanel

@@ -11,7 +11,7 @@ const onChange = (value) => {
 }
 
 storiesOf('Controls/Radio', module)
-  .addWithInfo('default', () => {
+  .add('default', () => {
     const selectedValue = text('selectedValue', 'base')
     const disabled = boolean('disabled', false)
 

@@ -28,7 +28,7 @@ const footerContent = React.Children.toArray([
 ])
 
 storiesOf('Complex controls/Modal', module)
-  .addWithInfo('With sizes', () => {
+  .add('With sizes', () => {
     const size = select('size', sizes, 'wide')
 
     return (
@@ -64,7 +64,7 @@ storiesOf('Complex controls/Modal', module)
     )
   })
 
-  .addWithInfo('Bottom on mobile', () => {
+  .add('Bottom on mobile', () => {
     return (
       <div>
         <Button onClick={onClick}>

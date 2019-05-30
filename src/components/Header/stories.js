@@ -10,7 +10,7 @@ const renderLogo = () => {
 }
 
 storiesOf('Layout/Header', module)
-  .addWithInfo('Header', () => (
+  .add('Header', () => (
     <div style={{ width: '100vw' }}>
       <Header
         renderLogo={renderLogo}

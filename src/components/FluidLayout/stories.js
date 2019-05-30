@@ -37,7 +37,7 @@ storiesOf('Layout/Fluid layout', module)
       { story() }
     </div>
   ))
-  .addWithInfo(
+  .add(
     'Two columns',
     () => (
       <FluidContainer>
@@ -50,7 +50,7 @@ storiesOf('Layout/Fluid layout', module)
       </FluidContainer>
     ),
   )
-  .addWithInfo(
+  .add(
     'Aside on top with beforeSection prop',
     () => (
       <FluidContainer>
@@ -63,7 +63,7 @@ storiesOf('Layout/Fluid layout', module)
       </FluidContainer>
     ),
   )
-  .addWithInfo('Single column', () => (
+  .add('Single column', () => (
     <SingleFluidSection>
       <MainContent />
     </SingleFluidSection>
