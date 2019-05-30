@@ -10,7 +10,7 @@ const onToggle = () => {
   updateKnob('rotate', 'boolean', !boolean('rotate', false))
 }
 
-storiesOf('Controls/Link', module)
+storiesOf('COMPONENTS|Controls/Link', module)
   .add('<span> link', () => (
     <Link
       onClick={onToggle}

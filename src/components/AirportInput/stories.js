@@ -20,7 +20,7 @@ const FakeInput = ({ chidlren, onBlur, onFocus, neighboringInGroup, focused, ...
   )
 }
 
-storiesOf('Controls/AirportInput', module)
+storiesOf('COMPONENTS|Controls/AirportInput', module)
   .add('default', () => {
     const placeholder = text('placeholder', 'Дата вылета')
     const value = text('value', '1 апр')

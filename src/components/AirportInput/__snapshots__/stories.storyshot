@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
+exports[`Storyshots COMPONENTS|Controls/AirportInput Fake input, based on div 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -306,7 +306,7 @@ exports[`Storyshots Controls/AirportInput Fake input, based on div 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/AirportInput default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/AirportInput default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

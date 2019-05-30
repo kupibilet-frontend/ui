@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Layout/Fluid layout Aside on top with beforeSection prop 1`] = `
+exports[`Storyshots COMPONENTS|Layout/Fluid layout Aside on top with beforeSection prop 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -132,7 +132,7 @@ exports[`Storyshots Layout/Fluid layout Aside on top with beforeSection prop 1`]
 </div>
 `;
 
-exports[`Storyshots Layout/Fluid layout Single column 1`] = `
+exports[`Storyshots COMPONENTS|Layout/Fluid layout Single column 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -194,7 +194,7 @@ exports[`Storyshots Layout/Fluid layout Single column 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layout/Fluid layout Two columns 1`] = `
+exports[`Storyshots COMPONENTS|Layout/Fluid layout Two columns 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;

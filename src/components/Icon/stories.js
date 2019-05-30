@@ -10,7 +10,7 @@ import { color } from 'components/ThemeProvider/theme'
 const iconSizes = _mapValues(sizes, (sizeUnits, sizeKey) => `${sizeKey}: ${sizeUnits}px`)
 const colorNames = [null, ...Object.keys(color)]
 
-storiesOf('Icon', module)
+storiesOf('COMPONENTS|Icon', module)
   .add('Default', () => (
     <Icon
       name={select('name', icons, 'checkbox')}

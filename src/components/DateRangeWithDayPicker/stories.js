@@ -4,7 +4,7 @@ import moment from '@kupibilet/moment'
 import DateRangeDayPicker from 'components/DateRangeWithDayPicker'
 import CalendarDay from 'components/CalendarDay'
 
-storiesOf('Controls/DateRangeDayPicker', module)
+storiesOf('COMPONENTS|Controls/DateRangeDayPicker', module)
   .add(
     'DateRangeWithDayPicker',
     () => (
@@ -18,5 +18,5 @@ storiesOf('Controls/DateRangeDayPicker', module)
         )}
       />
     ),
-    { info: 'with custom calendar cells' },
+    { notes: 'with custom calendar cells' },
   )

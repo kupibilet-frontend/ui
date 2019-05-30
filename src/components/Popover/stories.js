@@ -48,7 +48,7 @@ const CarrotButton = (props) => (
   <Button icon={<Icon name="carrot_monochrome" inheritColor />} {...props} />
 )
 
-storiesOf('Controls/Popover', module)
+storiesOf('COMPONENTS|Controls/Popover', module)
   .add('default', () => {
     const content = getContent()
     const placement = getPlacement()
@@ -97,7 +97,7 @@ storiesOf('Controls/Popover', module)
       )
     },
     {
-      info: `
+      notes: `
         >>> **Align just works like 'align-items' in flex-box and can't be in same direction with 'placement' prop**
       `,
     },
@@ -125,7 +125,7 @@ storiesOf('Controls/Popover', module)
       )
     },
     {
-      info: `
+      notes: `
         >>> I don't realy understand what this prop can do, but Selutin said very like this feature
       `,
     },

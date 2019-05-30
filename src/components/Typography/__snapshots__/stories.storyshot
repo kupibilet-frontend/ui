@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Utils List 1`] = `
+exports[`Storyshots COMPONENTS|Utils List 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -59,7 +59,7 @@ exports[`Storyshots Utils List 1`] = `
 </div>
 `;
 
-exports[`Storyshots Utils Typography 1`] = `
+exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
