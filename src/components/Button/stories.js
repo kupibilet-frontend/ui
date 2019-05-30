@@ -24,7 +24,7 @@ const variantsSelect = (defaultValue = 'primary') => select(
 )
 
 storiesOf('Controls/Buttons', module)
-  .addWithInfo('Default', () => (
+  .add('Default', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
@@ -33,7 +33,7 @@ storiesOf('Controls/Buttons', module)
       { text('text', 'Авиабилеты') }
     </Button>
   ))
-  .addWithInfo('With custom icons', () => (
+  .add('With custom icons', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
@@ -50,7 +50,7 @@ storiesOf('Controls/Buttons', module)
       }
     </Button>
   ))
-  .addWithInfo('With left and right icons', () => (
+  .add('With left and right icons', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}
@@ -63,7 +63,7 @@ storiesOf('Controls/Buttons', module)
       }
     </Button>
   ))
-  .addWithInfo('Icon-only button (custom icon)', () => (
+  .add('Icon-only button (custom icon)', () => (
     <Button
       size={sizesSelect('large')}
       disabled={boolean('disabled', false)}
@@ -73,7 +73,7 @@ storiesOf('Controls/Buttons', module)
       }
     />
   ))
-  .addWithInfo('Loading button', () => (
+  .add('Loading button', () => (
     <Button
       size={sizesSelect('large')}
       disabled={boolean('disabled', false)}
@@ -81,7 +81,7 @@ storiesOf('Controls/Buttons', module)
       icon="spinner"
     />
   ))
-  .addWithInfo('Icon-only button', () => (
+  .add('Icon-only button', () => (
     <Button
       size={sizesSelect('large')}
       disabled={boolean('disabled', false)}
@@ -89,7 +89,7 @@ storiesOf('Controls/Buttons', module)
       icon="carrot_monochrome"
     />
   ))
-  .addWithInfo('Button as <a href="" />', () => (
+  .add('Button as <a href="" />', () => (
     <Button
       size={sizesSelect()}
       disabled={boolean('disabled', false)}

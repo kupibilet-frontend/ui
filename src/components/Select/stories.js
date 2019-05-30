@@ -99,7 +99,7 @@ const sizesSelect = (defaultValue = 'large') => select(
 )
 
 storiesOf('Controls/Select', module)
-  .addWithInfo('default', () => {
+  .add('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -126,7 +126,7 @@ storiesOf('Controls/Select', module)
       />
     )
   })
-  .addWithInfo('With custom sections and keys', () => {
+  .add('With custom sections and keys', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -154,7 +154,7 @@ storiesOf('Controls/Select', module)
     )
   })
   .addDecorator(withReduxForm)
-  .addWithInfo('With Redux Form', () => {
+  .add('With Redux Form', () => {
     return (
       <Field
         suggestions={initialState.suggestions}
