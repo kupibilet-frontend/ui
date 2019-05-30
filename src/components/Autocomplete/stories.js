@@ -134,7 +134,7 @@ const STORY_DOC_PROPS = {
   ),
 }
 
-storiesOf('Controls/Autocomplete', module)
+storiesOf('COMPONENTS|Controls/Autocomplete', module)
   .add(
     'Airport',
     () => {
@@ -150,7 +150,7 @@ storiesOf('Controls/Autocomplete', module)
       )
     },
     {
-      info: `
+      notes: `
         Uses <AirportInput /> and <AirportSuggest />.
         Can be used inside <ControlsGroup />
       `,

@@ -30,7 +30,7 @@ const onDatesChange = ({ startDate, endDate }) => {
   updateKnob('endDate', 'date', endDate || null)
 }
 
-storiesOf('Controls/DateRange', module)
+storiesOf('COMPONENTS|Controls/DateRange', module)
   .add(
     'DateRange',
     () => {
@@ -54,5 +54,5 @@ storiesOf('Controls/DateRange', module)
         />
       )
     },
-    { info: 'with custom calendar cells' },
+    { notes: 'with custom calendar cells' },
   )

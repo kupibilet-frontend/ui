@@ -98,7 +98,7 @@ const sizesSelect = (defaultValue = 'large') => select(
   defaultValue,
 )
 
-storiesOf('Controls/Select', module)
+storiesOf('COMPONENTS|Controls/Select', module)
   .add('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)

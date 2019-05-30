@@ -13,7 +13,7 @@ const inputDefault = {
   error: 'Только латинские буквы',
 }
 
-storiesOf('Controls/RoundInput', module)
+storiesOf('COMPONENTS|Controls/RoundInput', module)
   .add('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)

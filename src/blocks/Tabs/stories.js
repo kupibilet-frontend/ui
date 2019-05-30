@@ -17,7 +17,7 @@ const onTabChange = (key) => {
   updateKnob('activeKey', 'text', key)
 }
 
-storiesOf('Blocks', module)
+storiesOf('BLOCKS|Tabs', module)
   .add(
     'Styled Tabs',
     () => {
@@ -35,7 +35,7 @@ storiesOf('Blocks', module)
         </Tabs>
       )
     }, {
-      info: `
+      notes: `
         \`\`\`
         const renderTab = (props) => (
           <Tab {...props} />
@@ -48,8 +48,6 @@ storiesOf('Blocks', module)
       `,
     },
   )
-
-storiesOf('Blocks', module)
   .add(
     'Conditional rendered Tabs',
     () => {
@@ -68,7 +66,7 @@ storiesOf('Blocks', module)
         </Tabs>
       )
     }, {
-      info: `
+      notes: `
         \`\`\`
         const renderTab = (props) => (
           <Tab {...props} />

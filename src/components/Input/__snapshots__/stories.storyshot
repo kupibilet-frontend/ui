@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Controls/Input As textarea 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -174,7 +174,7 @@ exports[`Storyshots Controls/Input As textarea 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Input Combined inputs group 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Input Combined inputs group 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -563,7 +563,7 @@ exports[`Storyshots Controls/Input Combined inputs group 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Input Separate inputs group 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Input Separate inputs group 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -1042,7 +1042,7 @@ exports[`Storyshots Controls/Input Separate inputs group 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Input With RF + validation 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Input With RF + validation 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -1197,7 +1197,7 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
   >
     <input
       className="c2"
-      form="Controls/Input"
+      form="COMPONENTS|Controls/Input"
       name="input"
       onBlur={[Function]}
       onChange={[Function]}
@@ -1215,7 +1215,7 @@ exports[`Storyshots Controls/Input With RF + validation 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Input With icon group 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Input With icon group 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -1463,7 +1463,7 @@ exports[`Storyshots Controls/Input With icon group 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Input With icons 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Input With icons 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -1739,7 +1739,7 @@ exports[`Storyshots Controls/Input With icons 1`] = `
 </div>
 `;
 
-exports[`Storyshots Controls/Input default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/Input default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
