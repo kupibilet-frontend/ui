@@ -18,5 +18,5 @@ storiesOf('Controls/DateRangeDayPicker', module)
         )}
       />
     ),
-    { info: 'with custom calendar cells' },
+    { notes: 'with custom calendar cells' },
   )
