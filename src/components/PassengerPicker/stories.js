@@ -41,7 +41,7 @@ storiesOf('Complex controls/PassengerPicker', module)
       )
     },
     {
-      info: `
+      notes: `
         redux-form совместимый компонент.\n
         value в redux-form должно быть объектом вида
   

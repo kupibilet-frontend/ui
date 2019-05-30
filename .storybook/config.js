@@ -1,11 +1,9 @@
 import { configure, setAddon, addDecorator } from '@storybook/react'
 import centered from '@storybook/addon-centered/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import infoAddon from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
-import { withInfo } from '@storybook/addon-info'
+import { setDefaults as setInfoAddonOptions } from '@storybook/addon-info'
 
-import mockInfoAddon from 'storybook/addons/mockInfo'
 import withTheme from 'storybook/decorators/withTheme'
 import withIcons from 'storybook/decorators/withIcons'
 import withReduxContext from 'storybook/decorators/withReduxContext'
@@ -19,11 +17,12 @@ setOptions({
   sortStoriesByKind: true,
 })
 
+setInfoAddonOptions({
+  source: false, // Displays the source of story Component
+})
 
-if (process.env.NODE_ENV === 'test') {
-  setAddon(mockInfoAddon)
-} else {
-  setAddon(infoAddon)
+
+if (process.env.NODE_ENV !== 'test') {
   addDecorator(centered)
   addDecorator(withIcons)
 }
@@ -31,12 +30,6 @@ if (process.env.NODE_ENV === 'test') {
 addDecorator(withReduxContext)
 addDecorator(withTheme)
 addDecorator(withKnobs)
-
-/*
- * @storybook/addon-storyshots adds info interface to snapshot (even if info not specified),
- * so do not include `withInfo` decorator in tests
- * */
-if (process.env.NODE_ENV !== 'test') addDecorator(withInfo)
 
 const req = require.context('../src', true, /stories.js$/)
 const loadStories = () => req.keys().forEach((filename) => req(filename))
