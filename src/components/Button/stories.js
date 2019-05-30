@@ -23,7 +23,7 @@ const variantsSelect = (defaultValue = 'primary') => select(
   defaultValue,
 )
 
-storiesOf('Controls/Buttons', module)
+storiesOf('COMPONENTS|Controls/Buttons', module)
   .add('Default', () => (
     <Button
       size={sizesSelect()}

@@ -26,7 +26,7 @@ const NotMobileStoryTip = StoryTip.extend`
   background: black;
 `
 
-storiesOf('Utils', module)
+storiesOf('COMPONENTS|Utils', module)
   .add('Responsive only', () => (
     <div>
       <DesktopOnly>
