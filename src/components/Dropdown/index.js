@@ -33,7 +33,7 @@ type Props = {
 }
 
 /* eslint-disable react/prop-types */
-class Dropdown extends React.PureComponent<{}, Props, void> {
+class Dropdown extends React.PureComponent<Props, void> {
   static defaultProps = {
     isOpen: false,
   }

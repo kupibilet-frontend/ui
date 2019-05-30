@@ -94,7 +94,7 @@ const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }
   })
 )
 
-class Autocomplete extends React.PureComponent<{}, Props, State> {
+class Autocomplete extends React.PureComponent<Props, State> {
   /* eslint-disable react/sort-comp */
   state = {
     suggestions: this.props.suggestions || [],
