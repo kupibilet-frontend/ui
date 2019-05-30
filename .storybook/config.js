@@ -2,7 +2,6 @@ import { configure, setAddon, addDecorator } from '@storybook/react'
 import centered from '@storybook/addon-centered/react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { setOptions } from '@storybook/addon-options'
-import { setDefaults as setInfoAddonOptions } from '@storybook/addon-info'
 
 import withTheme from 'storybook/decorators/withTheme'
 import withIcons from 'storybook/decorators/withIcons'
@@ -16,11 +15,6 @@ setOptions({
   downPanelInRight: false,
   sortStoriesByKind: true,
 })
-
-setInfoAddonOptions({
-  source: false, // Displays the source of story Component
-})
-
 
 if (process.env.NODE_ENV !== 'test') {
   addDecorator(centered)
