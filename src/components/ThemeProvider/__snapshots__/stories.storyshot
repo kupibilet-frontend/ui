@@ -14,7 +14,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c3 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #ffffff;
   padding: 10px;
@@ -22,7 +22,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c4 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #e64926;
   padding: 10px;
@@ -30,7 +30,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c5 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #23c256;
   padding: 10px;
@@ -38,7 +38,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c6 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #38afff;
   padding: 10px;
@@ -46,7 +46,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c7 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #0f99f5;
   padding: 10px;
@@ -54,7 +54,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c8 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #008ae6;
   padding: 10px;
@@ -62,7 +62,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c9 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #007acc;
   padding: 10px;
@@ -70,7 +70,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c10 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #77c8ff;
   padding: 10px;
@@ -78,7 +78,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c11 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #a9ddff;
   padding: 10px;
@@ -86,7 +86,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c12 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #e5f5ff;
   padding: 10px;
@@ -94,7 +94,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c13 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #ff9100;
   padding: 10px;
@@ -102,7 +102,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c14 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #ff7d03;
   padding: 10px;
@@ -110,7 +110,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c15 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #fc6100;
   padding: 10px;
@@ -118,7 +118,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c16 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #fa3a00;
   padding: 10px;
@@ -126,7 +126,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c17 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #ffb640;
   padding: 10px;
@@ -134,7 +134,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c18 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #ffd787;
   padding: 10px;
@@ -142,7 +142,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c19 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #fff0bf;
   padding: 10px;
@@ -150,7 +150,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c20 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #808080;
   padding: 10px;
@@ -158,7 +158,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c21 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #4d4d4d;
   padding: 10px;
@@ -166,7 +166,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c22 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #333333;
   padding: 10px;
@@ -174,7 +174,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c23 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #222222;
   padding: 10px;
@@ -182,7 +182,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c24 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #b3b3b3;
   padding: 10px;
@@ -190,7 +190,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c25 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #dedede;
   padding: 10px;
@@ -198,7 +198,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c26 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #f2f2f2;
   padding: 10px;
@@ -206,7 +206,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c27 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #b1bdcc;
   padding: 10px;
@@ -214,7 +214,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c28 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #96a0b3;
   padding: 10px;
@@ -222,7 +222,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c29 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #7d89a1;
   padding: 10px;
@@ -230,7 +230,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c30 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #62708b;
   padding: 10px;
@@ -238,7 +238,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c31 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #cad3de;
   padding: 10px;
@@ -246,7 +246,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c32 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #dde3eb;
   padding: 10px;
@@ -254,7 +254,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 .c33 {
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: #f0f5fa;
   padding: 10px;
@@ -288,7 +288,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 900px;
+  width: 1000px;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
