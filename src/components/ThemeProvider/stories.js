@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { color } from './theme'
 
 const ColorBox = styled.div`
-  width: 90px;
+  width: 100px;
   height: 50px;
   background-color: ${({ theme, pickedColor }) => theme.color[pickedColor]};
   padding: 10px;
@@ -20,7 +20,7 @@ const ColorCard = styled.div`
 `
 const ColorPanel = styled.div`
   display: flex;
-  width: 900px;
+  width: 1000px;
   flex-wrap: wrap;
 `
 const colors = Object.keys(color)

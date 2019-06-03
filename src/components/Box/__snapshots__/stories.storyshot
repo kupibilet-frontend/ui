@@ -31,3 +31,35 @@ exports[`Storyshots COMPONENTS|Box Default 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots COMPONENTS|Layout/Box Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 6px;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <p>
+      box content
+    </p>
+  </div>
+</div>
+`;

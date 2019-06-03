@@ -1,0 +1,677 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots COLORS Theme colors 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c3 {
+  width: 90px;
+  height: 50px;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c4 {
+  width: 90px;
+  height: 50px;
+  background-color: #e64926;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c5 {
+  width: 90px;
+  height: 50px;
+  background-color: #23c256;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c6 {
+  width: 90px;
+  height: 50px;
+  background-color: #38afff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c7 {
+  width: 90px;
+  height: 50px;
+  background-color: #0f99f5;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c8 {
+  width: 90px;
+  height: 50px;
+  background-color: #008ae6;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c9 {
+  width: 90px;
+  height: 50px;
+  background-color: #007acc;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c10 {
+  width: 90px;
+  height: 50px;
+  background-color: #77c8ff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c11 {
+  width: 90px;
+  height: 50px;
+  background-color: #a9ddff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c12 {
+  width: 90px;
+  height: 50px;
+  background-color: #e5f5ff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c13 {
+  width: 90px;
+  height: 50px;
+  background-color: #ff9100;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c14 {
+  width: 90px;
+  height: 50px;
+  background-color: #ff7d03;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c15 {
+  width: 90px;
+  height: 50px;
+  background-color: #fc6100;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c16 {
+  width: 90px;
+  height: 50px;
+  background-color: #fa3a00;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c17 {
+  width: 90px;
+  height: 50px;
+  background-color: #ffb640;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c18 {
+  width: 90px;
+  height: 50px;
+  background-color: #ffd787;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c19 {
+  width: 90px;
+  height: 50px;
+  background-color: #fff0bf;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c20 {
+  width: 90px;
+  height: 50px;
+  background-color: #808080;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c21 {
+  width: 90px;
+  height: 50px;
+  background-color: #4d4d4d;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c22 {
+  width: 90px;
+  height: 50px;
+  background-color: #333333;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c23 {
+  width: 90px;
+  height: 50px;
+  background-color: #222222;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c24 {
+  width: 90px;
+  height: 50px;
+  background-color: #b3b3b3;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c25 {
+  width: 90px;
+  height: 50px;
+  background-color: #dedede;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c26 {
+  width: 90px;
+  height: 50px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c27 {
+  width: 90px;
+  height: 50px;
+  background-color: #b1bdcc;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c28 {
+  width: 90px;
+  height: 50px;
+  background-color: #96a0b3;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c29 {
+  width: 90px;
+  height: 50px;
+  background-color: #7d89a1;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c30 {
+  width: 90px;
+  height: 50px;
+  background-color: #62708b;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c31 {
+  width: 90px;
+  height: 50px;
+  background-color: #cad3de;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c32 {
+  width: 90px;
+  height: 50px;
+  background-color: #dde3eb;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c33 {
+  width: 90px;
+  height: 50px;
+  background-color: #f0f5fa;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 900px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <span>
+        background
+         - 
+        #ffffff
+      </span>
+      <div
+        className="c3"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        fail
+         - 
+        #e64926
+      </span>
+      <div
+        className="c4"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        success
+         - 
+        #23c256
+      </span>
+      <div
+        className="c5"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        primary
+         - 
+        #38afff
+      </span>
+      <div
+        className="c6"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        primaryDark
+         - 
+        #0f99f5
+      </span>
+      <div
+        className="c7"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        primaryDarker
+         - 
+        #008ae6
+      </span>
+      <div
+        className="c8"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        primaryDarkest
+         - 
+        #007acc
+      </span>
+      <div
+        className="c9"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        primaryLight
+         - 
+        #77c8ff
+      </span>
+      <div
+        className="c10"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        primaryLighter
+         - 
+        #a9ddff
+      </span>
+      <div
+        className="c11"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        primaryLightest
+         - 
+        #e5f5ff
+      </span>
+      <div
+        className="c12"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        secondary
+         - 
+        #ff9100
+      </span>
+      <div
+        className="c13"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        secondaryDark
+         - 
+        #ff7d03
+      </span>
+      <div
+        className="c14"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        secondaryDarker
+         - 
+        #fc6100
+      </span>
+      <div
+        className="c15"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        secondaryDarkest
+         - 
+        #fa3a00
+      </span>
+      <div
+        className="c16"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        secondaryLight
+         - 
+        #ffb640
+      </span>
+      <div
+        className="c17"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        secondaryLighter
+         - 
+        #ffd787
+      </span>
+      <div
+        className="c18"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        secondaryLightest
+         - 
+        #fff0bf
+      </span>
+      <div
+        className="c19"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        text
+         - 
+        #808080
+      </span>
+      <div
+        className="c20"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        textDark
+         - 
+        #4d4d4d
+      </span>
+      <div
+        className="c21"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        textDarker
+         - 
+        #333333
+      </span>
+      <div
+        className="c22"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        textDarkest
+         - 
+        #222222
+      </span>
+      <div
+        className="c23"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        textLight
+         - 
+        #b3b3b3
+      </span>
+      <div
+        className="c24"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        textLighter
+         - 
+        #dedede
+      </span>
+      <div
+        className="c25"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        textLightest
+         - 
+        #f2f2f2
+      </span>
+      <div
+        className="c26"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        misc
+         - 
+        #b1bdcc
+      </span>
+      <div
+        className="c27"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        miscDark
+         - 
+        #96a0b3
+      </span>
+      <div
+        className="c28"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        miscDarker
+         - 
+        #7d89a1
+      </span>
+      <div
+        className="c29"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        miscDarkest
+         - 
+        #62708b
+      </span>
+      <div
+        className="c30"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        miscLight
+         - 
+        #cad3de
+      </span>
+      <div
+        className="c31"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        miscLighter
+         - 
+        #dde3eb
+      </span>
+      <div
+        className="c32"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <span>
+        miscLightest
+         - 
+        #f0f5fa
+      </span>
+      <div
+        className="c33"
+      />
+    </div>
+  </div>
+</div>
+`;
