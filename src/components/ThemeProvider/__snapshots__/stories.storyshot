@@ -281,17 +281,15 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 6px;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(7,140px);
   width: 1000px;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 <div
@@ -305,7 +303,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         background
-         - 
+      </span>
+      <span>
         #ffffff
       </span>
       <div
@@ -317,7 +316,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         fail
-         - 
+      </span>
+      <span>
         #e64926
       </span>
       <div
@@ -329,7 +329,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         success
-         - 
+      </span>
+      <span>
         #23c256
       </span>
       <div
@@ -341,7 +342,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         primary
-         - 
+      </span>
+      <span>
         #38afff
       </span>
       <div
@@ -353,7 +355,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         primaryDark
-         - 
+      </span>
+      <span>
         #0f99f5
       </span>
       <div
@@ -365,7 +368,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         primaryDarker
-         - 
+      </span>
+      <span>
         #008ae6
       </span>
       <div
@@ -377,7 +381,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         primaryDarkest
-         - 
+      </span>
+      <span>
         #007acc
       </span>
       <div
@@ -389,7 +394,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         primaryLight
-         - 
+      </span>
+      <span>
         #77c8ff
       </span>
       <div
@@ -401,7 +407,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         primaryLighter
-         - 
+      </span>
+      <span>
         #a9ddff
       </span>
       <div
@@ -413,7 +420,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         primaryLightest
-         - 
+      </span>
+      <span>
         #e5f5ff
       </span>
       <div
@@ -425,7 +433,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         secondary
-         - 
+      </span>
+      <span>
         #ff9100
       </span>
       <div
@@ -437,7 +446,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         secondaryDark
-         - 
+      </span>
+      <span>
         #ff7d03
       </span>
       <div
@@ -449,7 +459,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         secondaryDarker
-         - 
+      </span>
+      <span>
         #fc6100
       </span>
       <div
@@ -461,7 +472,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         secondaryDarkest
-         - 
+      </span>
+      <span>
         #fa3a00
       </span>
       <div
@@ -473,7 +485,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         secondaryLight
-         - 
+      </span>
+      <span>
         #ffb640
       </span>
       <div
@@ -485,7 +498,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         secondaryLighter
-         - 
+      </span>
+      <span>
         #ffd787
       </span>
       <div
@@ -497,7 +511,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         secondaryLightest
-         - 
+      </span>
+      <span>
         #fff0bf
       </span>
       <div
@@ -509,7 +524,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         text
-         - 
+      </span>
+      <span>
         #808080
       </span>
       <div
@@ -521,7 +537,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         textDark
-         - 
+      </span>
+      <span>
         #4d4d4d
       </span>
       <div
@@ -533,7 +550,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         textDarker
-         - 
+      </span>
+      <span>
         #333333
       </span>
       <div
@@ -545,7 +563,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         textDarkest
-         - 
+      </span>
+      <span>
         #222222
       </span>
       <div
@@ -557,7 +576,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         textLight
-         - 
+      </span>
+      <span>
         #b3b3b3
       </span>
       <div
@@ -569,7 +589,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         textLighter
-         - 
+      </span>
+      <span>
         #dedede
       </span>
       <div
@@ -581,7 +602,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         textLightest
-         - 
+      </span>
+      <span>
         #f2f2f2
       </span>
       <div
@@ -593,7 +615,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         misc
-         - 
+      </span>
+      <span>
         #b1bdcc
       </span>
       <div
@@ -605,7 +628,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         miscDark
-         - 
+      </span>
+      <span>
         #96a0b3
       </span>
       <div
@@ -617,7 +641,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         miscDarker
-         - 
+      </span>
+      <span>
         #7d89a1
       </span>
       <div
@@ -629,7 +654,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         miscDarkest
-         - 
+      </span>
+      <span>
         #62708b
       </span>
       <div
@@ -641,7 +667,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         miscLight
-         - 
+      </span>
+      <span>
         #cad3de
       </span>
       <div
@@ -653,7 +680,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         miscLighter
-         - 
+      </span>
+      <span>
         #dde3eb
       </span>
       <div
@@ -665,7 +693,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     >
       <span>
         miscLightest
-         - 
+      </span>
+      <span>
         #f0f5fa
       </span>
       <div
