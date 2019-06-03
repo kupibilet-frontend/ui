@@ -17,11 +17,14 @@ const ColorCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 6px;
 `
 const ColorPanel = styled.div`
-  display: flex;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(7, 140px);
   width: 1000px;
-  flex-wrap: wrap;
 `
 const colors = Object.keys(color)
 
@@ -30,7 +33,8 @@ storiesOf('COLORS', module)
     <ColorPanel>
       {colors.map((pickedColor) => (
         <ColorCard>
-          <span>{pickedColor} - {color[pickedColor]}</span>
+          <span>{pickedColor}</span>
+          <span>{color[pickedColor]}</span>
           <ColorBox pickedColor={pickedColor} />
         </ColorCard>
       ))}
