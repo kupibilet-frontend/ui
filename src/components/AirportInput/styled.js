@@ -13,14 +13,16 @@ const fontStyle = css`
   color: inherit;
 `
 
-const fadeGradient = ({ theme }) => (
+const fadeGradient = ({ theme, focused }) => {
+  const gradientColor = focused
+    ? theme.color.primaryLightest : theme.color.background
   /* eslint-disable prefer-template */
-  'linear-gradient(' +
+  return 'linear-gradient(' +
     '90deg, ' +
-    transparentize(1, theme.color.background) + ' 0%, ' +
-    theme.color.background + ' 100%' +
-  ')'
-)
+    transparentize(1, gradientColor) + ' 0%, ' +
+    gradientColor + ' 100%' +
+    ')'
+}
 
 export const Container = styled.div`
   color: ${({ theme }) => theme.color.textDarker};
@@ -39,26 +41,35 @@ export const Container = styled.div`
   border: 1px solid ${({ theme }) => theme.color.miscLight};
 
   ${({ neighboringInGroup }) => {
-    if (neighboringInGroup === 'right') {
-      return 'border-radius: 6px 0 0 6px;'
-    } else if (neighboringInGroup === 'left') {
-      return 'border-radius: 0 6px 6px 0;'
-    } else if (neighboringInGroup !== 'both') {
-      return 'border-radius: 6px;'
+    switch (neighboringInGroup) {
+      case 'right':
+        return 'border-radius: 6px 0 0 6px;'
+      case 'left':
+        return 'border-radius: 0 6px 6px 0;'
+      case 'up':
+        return 'border-radius: 0 0 6px 6px;'
+      case 'down':
+        return 'border-radius: 6px 6px 0 0;'
+      case 'both':
+        return ''
+      default:
+        return 'border-radius: 6px;'
     }
-
-    return ''
   }}
   overflow: hidden;
 
   z-index: 1;
-  ${({ neighboringInGroup }) => (
-    ['left', 'both'].includes(neighboringInGroup) ? (
-      'margin-left: -1px;'
-    ) : (
-      ''
-    )
-  )}
+  ${({ neighboringInGroup }) => {
+    switch (neighboringInGroup) {
+      case 'left':
+      case 'both':
+        return 'margin-left: -1px;'
+      case 'down':
+        return 'margin-bottom: -1px;'
+      default:
+        return ''
+    }
+  }}
 
   ${({ hasError, focused, theme }) => {
     if (focused) {
@@ -221,7 +232,8 @@ export const Code = styled.div`
   ${fontStyle}
   font-size: 14px;
   color: ${({ theme }) => theme.color.text};
-  background: ${({ theme }) => theme.color.background};
+  background: ${({ theme, focused }) => (focused ?
+    theme.color.primaryLightest : theme.color.background)};
   //fix protruding of GeoLabel
   padding: 1px 0 0px 10px;
   margin: -1px 0;

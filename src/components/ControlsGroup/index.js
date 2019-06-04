@@ -2,17 +2,17 @@
 import React from 'react'
 import { SwapContainer, SwapIcon, FlexContainer } from './styled'
 
-type neighboringInGroup = null | 'right' | 'both' | 'left'
+type neighboringInGroup = null | string
 export type controlsGroupProps = {
   neighboringInGroup: neighboringInGroup
 }
 
-const getNeighboringInGroup = (index, length): neighboringInGroup => {
+const getNeighboringInGroup = (index, length, column = false): neighboringInGroup => {
   if (index === 0) {
-    return 'right'
+    return column ? 'down' : 'right'
   }
   if (index === length - 1) {
-    return 'left'
+    return column ? 'up' : 'left'
   }
 
   return 'both'
@@ -54,7 +54,7 @@ type ControlsGroupProps = {
 }
 
 // eslint-disable-next-line no-shadow
-const ControlsGroup = ({ children, onSwap, ...props }: ControlsGroupProps) => {
+const ControlsGroup = ({ children, column = false, onSwap, ...props }: ControlsGroupProps) => {
   if (!children.length || children.length === 1) {
     return children
   }
@@ -69,11 +69,11 @@ const ControlsGroup = ({ children, onSwap, ...props }: ControlsGroupProps) => {
   }
 
   return (
-    <FlexContainer {...props}>
+    <FlexContainer column={column} {...props}>
       {
         React.Children.toArray(controls.map((child, index, { length }) => (
           React.cloneElement(child, {
-            neighboringInGroup: getNeighboringInGroup(index, length),
+            neighboringInGroup: getNeighboringInGroup(index, length, column),
           })
         )))
       }

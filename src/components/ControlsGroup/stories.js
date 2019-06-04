@@ -11,7 +11,7 @@ import ControlsGroup from 'components/ControlsGroup'
 /* eslint-disable no-console */
 storiesOf('COMPONENTS|Complex controls/ControlsGroup', module)
   .add('Inputs group', () => (
-    <ControlsGroup onSwap={() => console.log('Swap it!')}>
+    <ControlsGroup column onSwap={() => console.log('Swap it!')}>
       <AirportInput readOnly value="Шереметьево" city="Москва" IATACode="SVO" />
       <AirportInput
         value={text('value', 'Несуществующий город')}

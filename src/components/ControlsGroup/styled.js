@@ -48,7 +48,7 @@ export const SwapIcon = styled(Icon)`
 
 export const FlexContainer = styled.div`
   display: flex;
-
+  flex-direction: ${({ column }) => (column ? 'column' : 'row')};
   ${SwapIcon} {
     opacity: 0;
     ${switchTransition}

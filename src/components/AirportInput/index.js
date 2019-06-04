@@ -117,7 +117,11 @@ export default class AirportInput extends React.PureComponent<Props, State> {
           spellcheck="false"
           isIOS={this.props.isIOS}
         />
-        <Geo className="AirportInput__geo" neighboringInGroup={neighboringInGroup}>
+        <Geo
+          className="AirportInput__geo"
+          neighboringInGroup={neighboringInGroup}
+          focused={focused}
+        >
           <ValuePlaceholder>
             { value }
           </ValuePlaceholder>
@@ -132,7 +136,10 @@ export default class AirportInput extends React.PureComponent<Props, State> {
             </GeoLabel>
           }
         </Geo>
-        <Code neighboringInGroup={neighboringInGroup}>
+        <Code
+          focused={focused}
+          neighboringInGroup={neighboringInGroup}
+        >
           { IATACode }
         </Code>
 
