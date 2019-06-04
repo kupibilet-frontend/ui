@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { switchTransition } from 'utils/transitions'
 import { floatFromTop } from 'utils/animations'
@@ -24,10 +24,10 @@ export const CheckboxInput = styled.input`
   display: none;
 `
 
-export const fadeInDown = floatFromTop
+const fadeInDown = floatFromTop
 
 export const IconWrap = styled.span`
-  animation: ${(props) => (props.checked ? `${fadeInDown} 0.15s` : 'none')};
+  animation: ${(props) => (props.checked ? css`${fadeInDown} 0.15s` : 'none')};
   display: inline-block;
   height: 18px;
   width: 18px;
