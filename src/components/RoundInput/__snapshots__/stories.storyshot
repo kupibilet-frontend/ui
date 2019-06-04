@@ -191,13 +191,13 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 20px;
   line-height: 20px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 0 21px 21px 0;
+  border-radius: 0 8px 8px 0;
   padding: 11.0px;
   padding-right: 21px;
   padding-left: 13.1px;
@@ -214,14 +214,14 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
 .c6:hover,
 .c6:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c6:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -236,6 +236,9 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c1 .c8 {

@@ -40,13 +40,13 @@ exports[`Storyshots COMPONENTS|Controls/Popover With \`align\` prop 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 18px;
   line-height: 18px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -61,14 +61,14 @@ exports[`Storyshots COMPONENTS|Controls/Popover With \`align\` prop 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -218,13 +218,13 @@ exports[`Storyshots COMPONENTS|Controls/Popover With Header&Large 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 18px;
   line-height: 18px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -239,14 +239,14 @@ exports[`Storyshots COMPONENTS|Controls/Popover With Header&Large 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -341,13 +341,13 @@ exports[`Storyshots COMPONENTS|Controls/Popover default 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 18px;
   line-height: 18px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -362,14 +362,14 @@ exports[`Storyshots COMPONENTS|Controls/Popover default 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 

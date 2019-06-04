@@ -192,6 +192,9 @@ exports[`Storyshots COMPONENTS|Controls/Input Combined inputs group 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c2 .c7 {
@@ -581,6 +584,9 @@ exports[`Storyshots COMPONENTS|Controls/Input Separate inputs group 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c1 .c9 {

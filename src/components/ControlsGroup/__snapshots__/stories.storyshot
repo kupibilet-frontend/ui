@@ -30,10 +30,10 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  border: 2px solid #77c8ff;
+  border: 1px solid #cad3de;
   overflow: hidden;
   z-index: 1;
-  margin-left: -2px;
+  margin-left: -1px;
   padding: 10px 16px;
   padding: 10px;
 }
@@ -249,13 +249,13 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 20px;
   line-height: 20px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 21px 0 0 21px;
+  border-radius: 8px 0 0 8px;
   padding: 11.0px;
   padding-right: 13.1px;
   padding-left: 21px;
@@ -272,14 +272,14 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
 .c2:hover,
 .c2:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c2:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -291,13 +291,13 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 20px;
   line-height: 20px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 0 21px 21px 0;
+  border-radius: 0 8px 8px 0;
   padding: 11.0px;
   padding-right: 21px;
   padding-left: 13.1px;
@@ -314,14 +314,14 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
 .c9:hover,
 .c9:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c9:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -336,6 +336,9 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .c1 .c10 {
@@ -470,12 +473,12 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  border: 2px solid #77c8ff;
-  border-radius: 21px 0 0 21px;
+  border: 1px solid #cad3de;
+  border-radius: 6px 6px 0 0;
   overflow: hidden;
   z-index: 1;
+  margin-bottom: -1px;
   padding: 10px 16px;
-  padding-right: 10px;
 }
 
 .c2:hover {
@@ -500,13 +503,11 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  border: 2px solid #77c8ff;
-  border-radius: 0 21px 21px 0;
+  border: 1px solid #cad3de;
+  border-radius: 0 0 6px 6px;
   overflow: hidden;
   z-index: 1;
-  margin-left: -2px;
   padding: 10px 16px;
-  padding-left: 10px;
 }
 
 .c12:hover {
@@ -531,7 +532,6 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
   height: 100%;
   padding: 0;
   height: 20px;
-  width: calc(100% - 26px);
   background: transparent;
   font-family: inherit;
   font-size: 18px;
@@ -619,115 +619,6 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
 }
 
 .c3:focus ~ .AirportInput__geo .AirportInput__spell {
-  display: block;
-}
-
-.c13 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  left: 16px;
-  right: 0;
-  top: 10px;
-  bottom: 0;
-  width: calc(100% - 32px);
-  height: 100%;
-  padding: 0;
-  height: 20px;
-  width: calc(100% - 26px);
-  left: 10px;
-  background: transparent;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c13,
-.c13:focus {
-  border: none;
-  outline: none;
-  resize: none;
-}
-
-.c13::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c13::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c13:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c13::placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c13::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c13::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c13:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c13:focus ~ .AirportInput__geo .AirportInput__spell {
   display: block;
 }
 
@@ -857,6 +748,9 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .c1 .c9 {
@@ -942,7 +836,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
       <textarea
         autoCapitalize="sentences"
         autoComplete="off"
-        className="c13"
+        className="c3"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}

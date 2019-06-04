@@ -21,13 +21,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Button as <a href="" /> 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 18px;
   line-height: 18px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
@@ -44,14 +44,14 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Button as <a href="" /> 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -102,13 +102,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Default 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 18px;
   line-height: 18px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
@@ -125,14 +125,14 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Default 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -200,13 +200,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button (custom icon) 1
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 20px;
   line-height: 20px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 21px;
+  border-radius: 8px;
   padding: 11.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -221,14 +221,14 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button (custom icon) 1
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -322,13 +322,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 20px;
   line-height: 20px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 21px;
+  border-radius: 8px;
   padding: 11.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -343,14 +343,14 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -446,13 +446,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Loading button 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 20px;
   line-height: 20px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 21px;
+  border-radius: 8px;
   padding: 11.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -467,14 +467,14 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Loading button 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -568,13 +568,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 18px;
   line-height: 18px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 9.4px;
   padding-left: 9.4px;
@@ -591,14 +591,14 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 
@@ -724,13 +724,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = 
   margin: 0;
   display: inline-block;
   color: #ffffff;
-  background: #38afff;
+  background: #ff7d03;
   font-size: 18px;
   line-height: 18px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 9.4px;
   padding-left: 9.4px;
@@ -747,14 +747,14 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = 
 .c1:hover,
 .c1:focus {
   cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
+  background: #fc6100;
+  box-shadow: 0 0 0 1px #fc6100;
   -webkit-transition: none;
   transition: none;
 }
 
 .c1:active {
-  background: #008ae6;
+  background: #fa3a00;
   box-shadow: none;
 }
 

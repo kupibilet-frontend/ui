@@ -30,8 +30,8 @@ exports[`Storyshots COMPONENTS|Controls/DateRangeDayPicker DateRangeWithDayPicke
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  border: 2px solid #77c8ff;
-  border-radius: 21px 0 0 21px;
+  border: 1px solid #cad3de;
+  border-radius: 6px 0 0 6px;
   overflow: hidden;
   z-index: 1;
   padding: 10px 16px;
@@ -60,11 +60,11 @@ exports[`Storyshots COMPONENTS|Controls/DateRangeDayPicker DateRangeWithDayPicke
   box-sizing: border-box;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
-  border: 2px solid #77c8ff;
-  border-radius: 0 21px 21px 0;
+  border: 1px solid #cad3de;
+  border-radius: 0 6px 6px 0;
   overflow: hidden;
   z-index: 1;
-  margin-left: -2px;
+  margin-left: -1px;
   padding: 10px 16px;
   padding-left: 10px;
 }
