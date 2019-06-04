@@ -72,7 +72,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Button as <a href="" /> 1`] = `
   className="responsive c0"
 >
   <a
-    className="-a c1"
+    className="c1"
     disabled={false}
     href="/"
     size="normal"
