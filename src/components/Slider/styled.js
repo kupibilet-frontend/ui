@@ -25,15 +25,12 @@ const StyledProgressBar = styled.span`
   z-index: 4;
 `
 
-const StyledHandle = styled.span.attrs({
-  backgroundcolor: (props) => ((
-    props['aria-valuenow'] === props['aria-valuemin']
-    || props['aria-valuenow'] === props['aria-valuemax']
-  )
-    ? props.theme.color.miscDark
-    : props.theme.color.primary
-  ),
-})`
+const StyledHandle = styled.span.attrs((props) => ({
+  backgroundcolor: (
+    props['aria-valuenow'] === props['aria-valuemin'] ||
+    props['aria-valuenow'] === props['aria-valuemax']
+  ) ? props.theme.color.miscDark : props.theme.color.primary,
+}))`
   ${switchTransition}
   background-color: ${({ backgroundcolor }) => backgroundcolor};
   transition-property: background-color, box-shadow;
