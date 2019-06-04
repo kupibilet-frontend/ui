@@ -60,11 +60,13 @@ const ControlsGroup = ({ children, column = false, onSwap, ...props }: ControlsG
   }
 
   let controls = children
-  if (children.length === 2 && onSwap) {
+  const [first, second, ...tail] = children
+  if (children.length >= 2 && onSwap) {
     controls = [
-      children[0],
+      first,
       <Swap onSwap={onSwap} />,
-      children[1],
+      second,
+      ...tail,
     ]
   }
 
