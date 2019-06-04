@@ -99,13 +99,6 @@ exports[`Storyshots COMPONENTS|Controls/DateRangeDayPicker DateRangeWithDayPicke
   line-height: 18px;
   color: inherit;
   font-weight: 600;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
 }
 
 .c6,
@@ -215,13 +208,6 @@ exports[`Storyshots COMPONENTS|Controls/DateRangeDayPicker DateRangeWithDayPicke
   line-height: 18px;
   color: inherit;
   font-weight: 600;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
 }
 
 .c10,
