@@ -41,12 +41,12 @@ exports[`Storyshots COMPONENTS|Icon Default 1`] = `
     <svg
       className="c2"
       fill="primary"
-      name="checkbox"
+      name="airport-change"
       rotate=""
       size="large"
     >
       <use
-        xlinkHref="#kb_checkbox"
+        xlinkHref="#kb_airport-change"
       />
     </svg>
   </span>

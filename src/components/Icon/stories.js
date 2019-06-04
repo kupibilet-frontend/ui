@@ -13,7 +13,7 @@ const colorNames = [null, ...Object.keys(color)]
 storiesOf('COMPONENTS|Icon', module)
   .add('Default', () => (
     <Icon
-      name={select('name', icons, 'checkbox')}
+      name={select('name', icons, 'airport-change')}
       size={select('size', iconSizes, 'large')}
       fill={select('fill', colorNames, 'primary')}
       striked={boolean('striked', false)}
