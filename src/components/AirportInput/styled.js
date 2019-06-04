@@ -36,15 +36,15 @@ export const Container = styled.div`
 
   box-sizing: border-box;
   ${switchTransition}
-  border: 2px solid ${({ theme }) => theme.color.primaryLight};
+  border: 1px solid ${({ theme }) => theme.color.miscLight};
 
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
-      return 'border-radius: 21px 0 0 21px;'
+      return 'border-radius: 6px 0 0 6px;'
     } else if (neighboringInGroup === 'left') {
-      return 'border-radius: 0 21px 21px 0;'
+      return 'border-radius: 0 6px 6px 0;'
     } else if (neighboringInGroup !== 'both') {
-      return 'border-radius: 21px;'
+      return 'border-radius: 6px;'
     }
 
     return ''
@@ -54,7 +54,7 @@ export const Container = styled.div`
   z-index: 1;
   ${({ neighboringInGroup }) => (
     ['left', 'both'].includes(neighboringInGroup) ? (
-      'margin-left: -2px;'
+      'margin-left: -1px;'
     ) : (
       ''
     )
@@ -64,11 +64,11 @@ export const Container = styled.div`
     if (focused) {
       return `
         z-index: 2;
-        border-color: ${theme.color.secondary};
+        background-color: ${theme.color.primaryLightest};
       `
     } else if (hasError) {
       return `
-        border-color: ${theme.color.fail};
+        background-color: ${theme.color.fail};
       `
     }
 

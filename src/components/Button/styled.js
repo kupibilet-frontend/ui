@@ -9,6 +9,11 @@ export const SIZES = {
   normal: 15,
   large: 21,
 }
+export const RADIUS_SIZES = {
+  small: 5,
+  normal: 6,
+  large: 8,
+}
 
 const TYPOGRAPHY = {
   small: 16,
@@ -54,12 +59,12 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
   if (neighboringInGroup === 'both') {
     return ''
   } else if (neighboringInGroup === 'left') {
-    return `border-radius: 0 ${SIZES[size]}px ${SIZES[size]}px 0;`
+    return `border-radius: 0 ${RADIUS_SIZES[size]}px ${RADIUS_SIZES[size]}px 0;`
   } else if (neighboringInGroup === 'right') {
-    return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px;`
+    return `border-radius: ${RADIUS_SIZES[size]}px 0 0 ${RADIUS_SIZES[size]}px;`
   }
 
-  return `border-radius: ${SIZES[size]}px;`
+  return `border-radius: ${RADIUS_SIZES[size]}px;`
 }
 const getButtonColor = (props) => {
   const { theme, variant } = props
@@ -78,7 +83,7 @@ const getButtonHoverColor = (props) => {
 }
 const getButtonBackground = ({ theme, variant }) => {
   if (variant === 'primary') {
-    return theme.color.primary
+    return theme.color.secondaryDark
   } else if (variant === 'secondary') {
     return theme.color.miscLightest
   } if (variant === 'link') {
@@ -87,7 +92,7 @@ const getButtonBackground = ({ theme, variant }) => {
 }
 const getButtonHoverBackground = ({ theme, variant }) => {
   if (variant === 'primary') {
-    return theme.color.primaryDark
+    return theme.color.secondaryDarker
   } else if (variant === 'secondary') {
     return theme.color.miscLighter
   } if (variant === 'link') {
@@ -96,7 +101,7 @@ const getButtonHoverBackground = ({ theme, variant }) => {
 }
 const getButtonActiveBackground = ({ theme, variant }) => {
   if (variant === 'primary') {
-    return theme.color.primaryDarker
+    return theme.color.secondaryDarkest
   } else if (variant === 'secondary') {
     return theme.color.miscLight
   } if (variant === 'link') {
@@ -127,8 +132,8 @@ export const StyledButton = styled.button`
   ${switchTransition}
   transition-property: opacity, box-shadow;
 
-  ${({ disabled }) => (disabled ?
-    'opacity: .2;'
+  ${({ disabled, theme }) => (disabled ?
+    `background-color: ${theme.color.miscDark};`
     : '')}
 
   .icon-inherit-color {
