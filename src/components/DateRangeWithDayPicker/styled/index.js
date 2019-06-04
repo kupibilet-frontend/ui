@@ -365,7 +365,7 @@ export const DateContainer = styled(Container)`
   outline: none;
 `
 
-export const DateInput = styled(Input.withComponent('div'))`
+export const DateInput = styled(Input)`
   width: calc(100% - 26px);
   ${({ neighboringInGroup }) => neighboringInGroup === 'left' && 'left: 10px;'}
 `

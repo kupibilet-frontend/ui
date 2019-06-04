@@ -95,6 +95,7 @@ const FakeInput = ({
         {...props}
         value={inputDate}
         neighboringInGroup={neighboringInGroup}
+        as="div"
       >
         {value ? (
           <div>

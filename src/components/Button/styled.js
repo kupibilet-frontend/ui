@@ -169,7 +169,6 @@ export const StyledButton = styled.button`
   )}
   }
 `
-export const StyledButtonLink = StyledButton.withComponent('a')
 
 export const StyledButtonText = styled.span`
   display: inline-block;

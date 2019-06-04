@@ -4,8 +4,6 @@ import { text } from '@storybook/addon-knobs'
 import { Container, Input } from './styled'
 import AirportInput from './index'
 
-const DateInput = Input.withComponent('div')
-
 /* eslint-disable react/prop-types */
 const FakeInput = ({ chidlren, onBlur, onFocus, neighboringInGroup, focused, ...props }) => {
   return (
@@ -13,9 +11,9 @@ const FakeInput = ({ chidlren, onBlur, onFocus, neighboringInGroup, focused, ...
       neighboringInGroup={neighboringInGroup}
       focused={focused}
     >
-      <DateInput {...props}>
+      <Input as="div" {...props}>
         {props.value || props.placeholder}
-      </DateInput>
+      </Input>
     </Container>
   )
 }

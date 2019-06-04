@@ -5,8 +5,8 @@ import DefaultHeaderLogo from 'components/Header/DefaultHeaderLogo'
 
 // This is an example how we can overwrite the default header
 const renderLogo = () => {
-  const Logo = DefaultHeaderLogo.withComponent('a') // In real life, here will be `Link` from React Router
-  return <Logo href="https://www.kupibilet.ru" />
+  // In real life, here will be `Link` from React Router
+  return <DefaultHeaderLogo as="a" href="https://www.kupibilet.ru" />
 }
 
 storiesOf('COMPONENTS|Layout/Header', module)

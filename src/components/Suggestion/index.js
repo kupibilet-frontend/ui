@@ -35,7 +35,7 @@ const Suggestion = (props: Props) => {
           && <Icon name="checkmark" fill="primaryLight" />
         }
       </SuggestionIcon>
-      <SuggestionText>
+      <SuggestionText as="div">
         {getSuggestionValue(suggestion)}
       </SuggestionText>
     </SuggestionContainer>

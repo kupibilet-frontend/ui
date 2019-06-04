@@ -91,7 +91,7 @@ class MonthCaption extends React.PureComponent<Props, State> {
       >
         <Caption
           className="DayPicker-Caption"
-          innerRef={(element) => { this.selectedMonth = element }}
+          ref={(element) => { this.selectedMonth = element }}
           isFromSelected={isFromSelectedMonth}
           isToSelected={isToSelectedMonth || isEmptyReturnDate}
         >

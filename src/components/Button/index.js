@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Icon from 'components/Icon'
-import { StyledButton, StyledButtonLink, StyledButtonText, IconWrap, SIZES } from './styled'
+import { StyledButton, StyledButtonText, IconWrap, SIZES } from './styled'
 
 const BUTTON_SIZE_TO_ICON_MAP = {
   small: 'xxsmall',
@@ -26,9 +26,9 @@ const cloneIconWithSize = (icon, size) => {
 }
 
 const RenderedComponent = ({ children, href, ...props }) => (href ? (
-  <StyledButtonLink href={href} {...props}>
+  <StyledButton as="a" href={href} {...props}>
     {children}
-  </StyledButtonLink>
+  </StyledButton>
 ) : (
   <StyledButton {...props}>
     {children}
