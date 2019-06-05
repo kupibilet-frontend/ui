@@ -6,7 +6,7 @@
  */
 
 /*
- * rc-tabs v9.3.1 - v9.3.3 has bug
+ * rc-tabs v9.3.1 - v9.3.3 has bugs
  * that blurs anyting on page
  * See https://github.com/react-component/tabs/issues/133
  * and DO NOT UPGRADE rc-tabs
