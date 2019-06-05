@@ -16,6 +16,10 @@
         }],
         ["styled-components", {
           "minify": false,
+        }],
+        ["import", {
+          "libraryName": "@kupibilet/ui",
+          "libraryDirectory": "./components"
         }]
       ],
       "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-flow"]
@@ -35,6 +39,10 @@
         }],
         ["styled-components", {
           "ssr": true
+        }],
+        ["import", {
+          "libraryName": "@kupibilet/ui",
+          "libraryDirectory": "./components"
         }]
       ],
       "presets": [
