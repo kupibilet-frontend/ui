@@ -13,6 +13,7 @@ const BASE_PLUGINS = [
   }],
   ['import', {
     libraryName: '@kupibilet/ui/components',
+    libraryDirectory: '',
   }],
 ]
 
