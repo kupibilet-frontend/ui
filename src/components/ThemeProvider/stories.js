@@ -32,7 +32,9 @@ storiesOf('COLORS', module)
   .add('Theme colors', () => (
     <ColorPanel>
       {colors.map((pickedColor) => (
-        <ColorCard>
+        <ColorCard
+          key={pickedColor}
+        >
           <span>{pickedColor}</span>
           <span>{color[pickedColor]}</span>
           <ColorBox pickedColor={pickedColor} />
