@@ -93,8 +93,18 @@ const FakeInput = ({
         value={inputDate}
         neighboringInGroup={neighboringInGroup}
       >
-        {inputDate || <FakeInputPlaceholder>{props.placeholder}</FakeInputPlaceholder>}
-        {weekDay && <FakeInputWeekDay>{weekDay}</FakeInputWeekDay>}
+        {value ? (
+          <div>
+            {inputDate}
+            <FakeInputWeekDay>
+              {weekDay}
+            </FakeInputWeekDay>
+          </div>
+        ) : (
+          <FakeInputPlaceholder>
+            {props.placeholder}
+          </FakeInputPlaceholder>
+        )}
       </DateInput>
 
     </DateContainer>
