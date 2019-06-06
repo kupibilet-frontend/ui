@@ -144,15 +144,6 @@ export const Input = styled.textarea`
     opacity: 1;
   `}
 
-  /* Styles for fake input, like div */
-  ${({ placeholder, value, children, theme }) => (
-    placeholder && !value && children && `
-      ${fontStyle}
-      color: ${theme.color.textLight};
-      opacity: 1;
-      `
-  )}
-
   &:focus ~ .AirportInput__geo .AirportInput__spell {
     display: block;
   }

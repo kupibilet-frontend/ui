@@ -66,13 +66,6 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput Fake input, based on div 1`
   line-height: 18px;
   color: inherit;
   font-weight: 600;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
 }
 
 .c2,
@@ -156,113 +149,6 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput Fake input, based on div 1`
   display: block;
 }
 
-.c3 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  left: 16px;
-  right: 0;
-  top: 10px;
-  bottom: 0;
-  width: calc(100% - 32px);
-  height: 100%;
-  padding: 0;
-  height: 20px;
-  background: transparent;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  font-weight: 600;
-}
-
-.c3,
-.c3:focus {
-  border: none;
-  outline: none;
-  resize: none;
-}
-
-.c3::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-webkit-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3::-moz-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:-ms-input-placeholder {
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  color: inherit;
-  color: #b3b3b3;
-  opacity: 1;
-}
-
-.c3:focus ~ .AirportInput__geo .AirportInput__spell {
-  display: block;
-}
-
 <div
   className="responsive c0"
 >
@@ -295,7 +181,7 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput Fake input, based on div 1`
       className="c1"
     >
       <div
-        className="-div c3"
+        className="-div c2"
         placeholder="Дата вылета"
         value="1 апр"
       >
