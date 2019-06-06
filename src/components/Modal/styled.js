@@ -42,7 +42,6 @@ export const Header = styled.div`
   align-items: center;
   display: flex;
   flex: 0 0 auto;
-  min-height: 60px;
   justify-content: space-between;
   padding: 30px 42px ${(props) => (isCompact(props.size) ? '18' : '30')}px;
   ${H4} {
