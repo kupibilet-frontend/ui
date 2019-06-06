@@ -20,7 +20,8 @@
     "watch": "yarn build --watch",
     "//": "---        NPM hooks section        ---",
     "postinstall": "move-bin; true",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "snyk": "snyk test --dev --severity-threshold=medium"
   },
   "engines": {
     "node": ">=10",
@@ -35,7 +36,8 @@
   "license": "MIT",
   "//": "Still have no activity… https://github.com/react-component/tabs/issues/133",
   "resolutions": {
-    "rc-tabs": "9.3.0"
+    "rc-tabs": "9.3.0",
+    "js-yaml": "3.13.1"
   },
   "greenkeeper": {
     "lockfiles": {
@@ -98,6 +100,7 @@
     "redux-form": "^7.0.4",
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
+    "snyk": "^1.173.1",
     "styled-components": "^3.2.5",
     "versionize": "^1.0.6",
     "whatwg-fetch": "^3.0.0"
