@@ -18,10 +18,10 @@
     "build:es": "BABEL_ENV=esmodules NODE_ENV=production babel src/ -d ./ --ignore stories,test",
     "build:flow": "flow-copy-source -v src ./",
     "watch": "yarn build --watch",
+    "snyk": "snyk test --dev --severity-threshold=medium",
     "//": "---        NPM hooks section        ---",
     "postinstall": "move-bin; true",
-    "prepublishOnly": "yarn build",
-    "snyk": "snyk test --dev --severity-threshold=medium"
+    "prepublishOnly": "yarn build"
   },
   "engines": {
     "node": ">=10",
