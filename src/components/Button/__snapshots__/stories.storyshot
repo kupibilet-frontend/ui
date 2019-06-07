@@ -61,6 +61,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Button as <a href="" /> 1`] = `
   padding: 0 0px 0 0px;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
+}
+
 <div
   className="responsive c0"
 >
@@ -140,6 +147,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Default 1`] = `
   display: inline-block;
   vertical-align: top;
   padding: 0 0px 0 0px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
 }
 
 <div
@@ -248,6 +262,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button (custom icon) 1
   align-items: center;
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
 }
 
 <div
@@ -372,6 +393,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button 1`] = `
   height: 20px;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
+}
+
 <div
   className="responsive c0"
 >
@@ -494,6 +522,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Loading button 1`] = `
   align-items: center;
   width: 20px;
   height: 20px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
 }
 
 <div
@@ -624,6 +659,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
   align-items: center;
   width: 18px;
   height: 18px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
 }
 
 <div
@@ -780,6 +822,13 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = 
   align-items: center;
   width: 18px;
   height: 18px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
 }
 
 <div

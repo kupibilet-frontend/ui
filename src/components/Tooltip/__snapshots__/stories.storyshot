@@ -90,6 +90,13 @@ exports[`Storyshots COMPONENTS|Controls/Tooltip default 1`] = `
   height: 18px;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
+}
+
 <div
   className="responsive c0"
 >
