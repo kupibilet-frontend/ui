@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
 import Tooltip from 'components/Tooltip'
@@ -153,9 +153,12 @@ class Popover extends Tooltip<PopoverProps, PopoverState> {
   }
 }
 
+type PopoverChildrenProxyProps = {
+  children: React.Node,
+}
 
 // Proxy for possibility to transfer ref to any children
-class PopoverChildrenProxy extends React.Component<void, void> {
+class PopoverChildrenProxy extends React.Component<PopoverChildrenProxyProps> {
   render() {
     const { children, ...props } = this.props
     return React.cloneElement(React.Children.only(children), props)
