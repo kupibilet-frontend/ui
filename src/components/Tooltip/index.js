@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react'
+import * as React from 'react'
 import ReactDOM from 'react-dom'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
@@ -22,13 +22,13 @@ export type Coordinates = {
   height: number,
 }
 
-type GetCoordinates = (node: Element) => Coordinates
+type GetCoordinates = (node: React.Node) => Coordinates
 
 type PortalProps = {
   isOpen: boolean,
   coords: Coordinates | null,
   placement: string,
-  content: string | Element | any | null,
+  content: string | React.Node | any | null,
   success: ?boolean,
   error: ?boolean,
 }
@@ -83,8 +83,8 @@ const TooltipPortal = (props: PortalProps) => {
 }
 
 type TooltipProps = {
-  children: Object | Element,
-  content: string | Element | any | null,
+  children: Object | React.Node,
+  content: string | React.Node | any | null,
   placement: string,
   success: ?boolean,
   error: ?boolean,
@@ -189,8 +189,12 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   }
 }
 
+type TooltipChildrenProxyProps = {
+  children: React.Node,
+}
+
 // Proxy for possibility to transfer ref to any children
-class TooltipChildrenProxy extends React.Component <void, void> {
+class TooltipChildrenProxy extends React.Component <TooltipChildrenProxyProps> {
   render() {
     const { children, ...props } = this.props
     return React.cloneElement(React.Children.only(children), props)
