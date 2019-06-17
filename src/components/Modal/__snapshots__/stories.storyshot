@@ -115,7 +115,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With default footer 1`] = 
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
@@ -203,7 +203,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With no cancel button 1`] 
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
@@ -379,7 +379,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With sizes & custom footer
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
