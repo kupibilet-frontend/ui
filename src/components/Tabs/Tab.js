@@ -1,12 +1,15 @@
-import React from 'react'
+// @flow
+import * as React from 'react'
 
 /* eslint-disable react/prop-types */
 type Props = {
   onTabChange: (string) => void,
-  isActive: bool,
+  tabKey: string,
+  isActive: boolean,
+  children: React.Node,
 }
 
-export default class Tab extends React.PureComponent<void, Props, void> {
+export default class Tab extends React.PureComponent<Props> {
   onFocus = (e: MouseEvent) => {
     const { tabKey, onTabChange } = this.props
     e.preventDefault()
