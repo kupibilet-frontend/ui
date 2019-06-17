@@ -27,7 +27,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal Bottom on mobile 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
@@ -108,7 +108,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With sizes 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;

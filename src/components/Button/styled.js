@@ -59,7 +59,7 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
     return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px;`
   }
 
-  return `border-radius: ${SIZES[size]}px;`
+  return `border-radius: 6px;`
 }
 const getButtonColor = (props) => {
   const { theme, variant } = props
