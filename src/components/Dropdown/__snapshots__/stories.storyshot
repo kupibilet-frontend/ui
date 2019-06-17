@@ -74,6 +74,13 @@ exports[`Storyshots COMPONENTS|Complex controls/Dropdown Defalut 1`] = `
   width: 300px;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    max-width: 340px;
+  }
+}
+
 <div
   className="responsive c0"
 >
