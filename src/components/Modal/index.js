@@ -1,7 +1,6 @@
 // @flow
 import React from 'react'
 import { Portal } from 'react-portal'
-import H1 from 'components/Typography/H1'
 import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
@@ -12,12 +11,14 @@ import {
   ModalContent,
   Header,
   Content,
-  StyledIcon,
-  CloseButton,
+  CloseIcon,
   Footer,
+  CloseButton,
+  SubmitButton,
+  StyledIcon,
 } from './styled'
 
-const getCloseButtonSize = ({ isHandheld, size }) => {
+const getCloseIconSize = ({ isHandheld, size }) => {
   if (isHandheld) {
     return 'normal'
   } else if (isCompact(size)) {
@@ -26,7 +27,7 @@ const getCloseButtonSize = ({ isHandheld, size }) => {
   return 'medium'
 }
 
-const getCloseButtonColor = ({ isHandheld, size }) => {
+const getCloseIconColor = ({ isHandheld, size }) => {
   if (isHandheld) {
     return 'primaryDarkest'
   } else if (isCompact(size)) {
@@ -36,36 +37,43 @@ const getCloseButtonColor = ({ isHandheld, size }) => {
 }
 
 type Props = {
-  footer?: React.Element<*>,
   size: 'wide' | 'compact' | 'thin',
   closeOnOutsideClick: boolean,
   closeOnEsc: boolean,
-  showCloseButton: boolean,
+  shouldRenderCloseIcon: boolean,
   isOnBottom: boolean,
   scrollFix?: boolean,
+  onSubmitClick?: Function,
+  submitText?: string,
+  closeButtonText?: string,
+  shouldRenderCloseButton?: boolean,
+  footer?: React.Element<*>,
+  onClose: Function,
+  heading: string,
+  renderHeader?: React.Element<*>,
+  renderContent?: React.Element<*>,
+  isOpen: boolean,
 }
 
-/* eslint-disable react/prop-types */
 class Modal extends React.PureComponent<Props> {
   static defaultProps = {
-    renderHeader: ({ heading, size, isHandheld }) => (heading &&
+    renderHeader: ({ heading, size }) => (heading &&
       <Header size={size}>
-        {(isCompact(size) || isHandheld)
-          ? <H4>{heading}</H4>
-          : <H1>{heading}</H1>
-        }
+        <H4>{heading}</H4>
       </Header>
     ),
     renderContent: (props) => <Content {...props} />,
-    renderFooter: (props) => props.footer && <Footer {...props} />,
-
     footer: null,
     size: 'wide',
     closeOnOutsideClick: true,
     closeOnEsc: true,
-    showCloseButton: true,
+    shouldRenderCloseIcon: true,
     isOnBottom: false,
     scrollFix: true,
+    onSubmitClick: null,
+    submitText: 'Продолжить',
+    closeButtonText: 'Отменить',
+    shouldRenderCloseButton: true,
   }
 
   componentDidMount() {
@@ -92,15 +100,19 @@ class Modal extends React.PureComponent<Props> {
     const {
       size,
       heading,
-      footer,
       renderHeader,
       renderContent,
-      renderFooter,
+      footer,
       isOpen,
       closeOnOutsideClick,
-      showCloseButton,
+      shouldRenderCloseIcon,
       isOnBottom,
       scrollFix,
+      onSubmitClick,
+      submitText,
+      closeButtonText,
+      shouldRenderCloseButton,
+      onClose,
     } = this.props
 
     if (!isOpen) {
@@ -117,19 +129,39 @@ class Modal extends React.PureComponent<Props> {
           >
             <ModalContent size={size}>
               { renderHeader({ ...this.props, children: heading }) }
-              {showCloseButton &&
-                <CloseButton size={size} isOnBottom={isOnBottom}>
-                  <StyledIcon
+              {shouldRenderCloseIcon &&
+                <CloseIcon
+                  modalSize={size}
+                  isOnBottom={isOnBottom}
+                  icon={<StyledIcon
                     name="cross"
-                    fill={getCloseButtonColor(this.props)}
+                    fill={getCloseIconColor(this.props)}
                     onClick={this.closePortal}
-                    size={getCloseButtonSize(this.props)}
-                  />
-                </CloseButton>
+                    size={getCloseIconSize(this.props)}
+                  />}
+                />
               }
               { renderContent(this.props) }
-              { renderFooter({ ...this.props, children: footer }) }
-
+              { footer || (!isOnBottom &&
+              <Footer>
+                {onSubmitClick &&
+                  <SubmitButton
+                    size="large"
+                    onClick={onSubmitClick}
+                  >
+                    {submitText}
+                  </SubmitButton>
+                }
+                {shouldRenderCloseButton &&
+                  <CloseButton
+                    onClick={onClose}
+                    size="large"
+                    variant="secondary"
+                  >
+                    {onSubmitClick ? closeButtonText : 'Закрыть'}
+                  </CloseButton>
+                }
+              </Footer>)}
             </ModalContent>
           </Overlay>
         </GlobalStylesScope>

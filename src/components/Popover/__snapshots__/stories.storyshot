@@ -90,6 +90,13 @@ exports[`Storyshots COMPONENTS|Controls/Popover With \`align\` prop 1`] = `
   height: 18px;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
+}
+
 <div
   className="responsive c0"
 >
@@ -268,6 +275,13 @@ exports[`Storyshots COMPONENTS|Controls/Popover With Header&Large 1`] = `
   height: 18px;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
+}
+
 <div
   className="responsive c0"
 >
@@ -389,6 +403,13 @@ exports[`Storyshots COMPONENTS|Controls/Popover default 1`] = `
   align-items: center;
   width: 18px;
   height: 18px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    max-width: 340px;
+  }
 }
 
 <div

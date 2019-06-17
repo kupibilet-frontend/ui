@@ -186,6 +186,20 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   align-items: center;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    max-width: 340px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c12,
+  .responsive-booking .c12 {
+    max-width: 340px;
+  }
+}
+
 <div
   className="responsive c0"
 >
