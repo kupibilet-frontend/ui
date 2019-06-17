@@ -46,7 +46,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -73,7 +73,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;

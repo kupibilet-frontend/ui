@@ -27,7 +27,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Button as <a href="" /> 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
@@ -108,7 +108,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Default 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 15px;
   padding-left: 15px;
@@ -206,7 +206,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button (custom icon) 1
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 21px;
+  border-radius: 6px;
   padding: 11.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -328,7 +328,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 21px;
+  border-radius: 6px;
   padding: 11.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -452,7 +452,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Loading button 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 21px;
+  border-radius: 6px;
   padding: 11.0px;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
@@ -574,7 +574,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 9.4px;
   padding-left: 9.4px;
@@ -730,7 +730,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = 
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  border-radius: 15px;
+  border-radius: 6px;
   padding: 6.0px;
   padding-right: 9.4px;
   padding-left: 9.4px;
