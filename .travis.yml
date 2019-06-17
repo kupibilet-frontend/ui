@@ -46,3 +46,16 @@ deploy:
     on:
       branch: master
       tags: false
+
+after_script:
+  - echo $TRAVIS_BRANCH
+  - echo $TRAVIS_PULL_REQUEST
+  - echo ${#TRAVIS_PULL_REQUEST}
+    # the command terminates with an error code, even if it does not find vulnerabilities of the specified level.
+    # For the behavior we need, we set a condition under which the command terminates with an error code
+    # only if there is a vulnerability of this level in its output
+    # https://github.com/yarnpkg/yarn/issues/7260
+  - bash -c 'output=`yarn audit --level=high`; ret_code=$?; echo "$output"; [[ $output =~ "high" ]]
+    && exit $ret_code || exit 0'
+  - '[ $TRAVIS_PULL_REQUEST != "false" ] && exit 0 || [[ $TRAVIS_BRANCH =~ "master" ]] && yarn run
+  snyk'
