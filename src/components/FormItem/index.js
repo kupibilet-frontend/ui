@@ -18,7 +18,7 @@ export const Label = styled.label`
 type Props = {
   label: string,
   children: React.Element<*>,
-  htmlFor: string,
+  htmlFor?: string,
 }
 
 const FormItem = ({ children, label, htmlFor, ...props }: Props) => (
@@ -32,5 +32,9 @@ const FormItem = ({ children, label, htmlFor, ...props }: Props) => (
     {children}
   </LabelWrapper>
 )
+
+FormItem.defaultProps = {
+  htmlFor: 'null',
+}
 
 export default FormItem
