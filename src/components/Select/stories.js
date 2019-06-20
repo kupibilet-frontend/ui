@@ -8,6 +8,7 @@ import withReduxForm from 'storybook/decorators/withReduxForm'
 import { Field } from 'redux-form'
 
 import RFSelect, { Select } from 'components/Select'
+import Suggestion from 'components/Suggestion'
 
 
 const inputDefault = {
@@ -47,6 +48,25 @@ const allRabbits = [
   },
 ]
 
+const allRabbitsMulti = [
+  {
+    key: 'some custom value',
+    value: 'Супер-заяц купи билет',
+  },
+  {
+    key: 'some custom value2',
+    value: 'Кролик-убийца',
+  },
+  {
+    key: 'some custom value3',
+    value: 'Высококонверсионный заяц',
+  },
+  {
+    key: 'some custom value4',
+    value: 'Заяц с главной',
+  },
+]
+
 const defaultSuggestions = [
   {
     value: 'Самые дешевые',
@@ -75,11 +95,20 @@ const initialStateSections = {
 
 const initialState = {
   suggestions: defaultSuggestions,
+  suggestionsFilter: [],
   value: '',
 }
 
 const onSuggestionSelected = (event, { suggestion }) => {
   updateKnob('value', 'object', suggestion || { value: '' })
+}
+
+const onSuggestionMultiSelected = (event, { suggestion: { value } }) => {
+  const nextSuggestionsFilter = object('suggestionsFilter', []).includes(value)
+    ? object('suggestionsFilter', []).filter((item) => item !== value)
+    : [...object('suggestionsFilter', []), value]
+
+  updateKnob('suggestionsFilter', 'array', nextSuggestionsFilter || [])
 }
 
 
@@ -123,6 +152,44 @@ storiesOf('COMPONENTS|Controls/Select', module)
         error={error}
         success={success}
         size={sizesSelect()}
+      />
+    )
+  })
+  .add('With multiply select', () => {
+    const placeholder = text('placeholder', `${object('suggestionsFilter', []).length} rabbits selected`)
+    const disabled = boolean('disabled', false)
+    const success = boolean('success', false)
+    const error = text('error', '')
+    const selectedSuggestion = object('value', { value: '' })
+    const defaultInputProps = { placeholder, disabled }
+    const suggestions = [
+      ...allRabbitsMulti.filter(({ value }) => object('suggestionsFilter', []).includes(value)),
+      ...allRabbitsMulti.filter(({ value }) => !object('suggestionsFilter', []).includes(value))]
+    return (
+      <Select
+        suggestions={suggestions}
+        onSuggestionSelected={onSuggestionMultiSelected}
+        selectedSuggestion={selectedSuggestion}
+        alwaysRenderSuggestions
+        inputProps={{
+          ...defaultInputProps,
+          value: object('value', { value: '' }),
+          meta: {
+            active: true,
+          },
+        }}
+        renderSuggestion={(suggestion) => {
+          if (object('suggestionsFilter', []).includes(suggestion.value)) {
+            // Suggestion was not designed to support multi selections,
+            // so just pass selectedKey equal to current suggestion key
+            return <Suggestion suggestion={suggestion} selectedKey={suggestion.key} />
+          }
+
+          return <Suggestion suggestion={suggestion} />
+        }}
+
+        error={error}
+        success={success}
       />
     )
   })
