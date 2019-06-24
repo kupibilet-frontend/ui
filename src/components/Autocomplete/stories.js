@@ -1,11 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { text, object } from '@storybook/addon-knobs'
 import 'whatwg-fetch'
 import _throttle from 'lodash/throttle'
 
 import Autocomplete from 'components/Autocomplete'
 import AirportInput from 'components/AirportInput'
 import AirportSuggest from 'components/AirportSuggest'
+import Suggestion from 'components/Suggestion'
+import { Input } from 'components/Input'
 
 class AutocompleteStatefulWrapper extends React.PureComponent {
   static propTypes = Autocomplete.propTypes

@@ -50,19 +50,19 @@ const allRabbits = [
 
 const allRabbitsMulti = [
   {
-    key: 'some custom value',
+    key: 'Супер-заяц купи билет',
     value: 'Супер-заяц купи билет',
   },
   {
-    key: 'some custom value2',
+    key: 'Кролик-убийца',
     value: 'Кролик-убийца',
   },
   {
-    key: 'some custom value3',
+    key: 'Высококонверсионный заяц',
     value: 'Высококонверсионный заяц',
   },
   {
-    key: 'some custom value4',
+    key: 'Заяц с главной',
     value: 'Заяц с главной',
   },
 ]
@@ -104,9 +104,10 @@ const onSuggestionSelected = (event, { suggestion }) => {
 }
 
 const onSuggestionMultiSelected = (event, { suggestion: { value } }) => {
-  const nextSuggestionsFilter = object('suggestionsFilter', []).includes(value)
-    ? object('suggestionsFilter', []).filter((item) => item !== value)
-    : [...object('suggestionsFilter', []), value]
+  const suggestionsFilter = object('suggestionsFilter', [])
+  const nextSuggestionsFilter = suggestionsFilter.includes(value)
+    ? suggestionsFilter.filter((item) => item !== value)
+    : [...suggestionsFilter, value]
 
   updateKnob('suggestionsFilter', 'array', nextSuggestionsFilter || [])
 }
@@ -156,15 +157,16 @@ storiesOf('COMPONENTS|Controls/Select', module)
     )
   })
   .add('With multiply select', () => {
-    const placeholder = text('placeholder', `${object('suggestionsFilter', []).length} rabbits selected`)
+    const suggestionsFilter = object('suggestionsFilter', [])
+    const placeholder = text('placeholder', `${suggestionsFilter.length} rabbits selected`)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
     const error = text('error', '')
     const selectedSuggestion = object('value', { value: '' })
     const defaultInputProps = { placeholder, disabled }
     const suggestions = [
-      ...allRabbitsMulti.filter(({ value }) => object('suggestionsFilter', []).includes(value)),
-      ...allRabbitsMulti.filter(({ value }) => !object('suggestionsFilter', []).includes(value))]
+      ...allRabbitsMulti.filter(({ value }) => suggestionsFilter.includes(value)),
+      ...allRabbitsMulti.filter(({ value }) => !suggestionsFilter.includes(value))]
     return (
       <Select
         suggestions={suggestions}
@@ -179,7 +181,7 @@ storiesOf('COMPONENTS|Controls/Select', module)
           },
         }}
         renderSuggestion={(suggestion) => {
-          if (object('suggestionsFilter', []).includes(suggestion.value)) {
+          if (suggestionsFilter.includes(suggestion.value)) {
             // Suggestion was not designed to support multi selections,
             // so just pass selectedKey equal to current suggestion key
             return <Suggestion suggestion={suggestion} selectedKey={suggestion.key} />
