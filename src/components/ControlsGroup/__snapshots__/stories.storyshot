@@ -241,6 +241,25 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
   background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#ffffff 100%);
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .c10 {
+  opacity: 0;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .c10 {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
 .c2 {
   font-family: inherit;
   border: none;
@@ -329,25 +348,6 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
   display: inline-block;
   vertical-align: top;
   padding: 0 0px 0 0px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c1 .c10 {
-  opacity: 0;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-}
-
-.c1:hover .c10 {
-  opacity: 1;
-  -webkit-transition-delay: .15s;
-  transition-delay: .15s;
 }
 
 @media screen and (max-width:1199px) {
