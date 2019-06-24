@@ -44,7 +44,7 @@ export const Header = styled.div`
   flex: 0 0 auto;
   min-height: 60px;
   justify-content: space-between;
-  padding: 30px 42px ${(props) => (isCompact(props.size) ? '18' : '30')}px;
+  padding: 42px 42px ${(props) => (isCompact(props.size) ? '18' : '30')}px;
   ${H4} {
     font-weight: 700;
   }
@@ -54,7 +54,7 @@ export const Header = styled.div`
   `}
 
   ${mq.tablet`
-    padding: 24px 102px 24px 18px;
+    padding: 42px 102px 24px 18px;
   `}
 
   ${mq.mobile`
@@ -88,14 +88,14 @@ export const StyledIcon = styled(Icon)`
 `
 
 export const CloseIcon = styled(Button)`
-  background: none;
+  background: ${({ theme }) => theme.color.miscLightest};
   position: ${(props) => (isCompact(props.modalSize) ? 'absolute' : 'fixed')};
-  right: ${(props) => (isCompact(props.modalSize) ? '0' : '4')}px;
-  top: ${(props) => (isCompact(props.modalSize) ? '0' : '5')}px;
+  right: ${(props) => (isCompact(props.modalSize) ? '12' : '4')}px;
+  top: ${(props) => (isCompact(props.modalSize) ? '12' : '5')}px;
 
   ${mq.desktop`
     &:hover {
-      background: none;
+      background: ${({ theme }) => theme.color.miscLightest};
       box-shadow: none;
 
       ${StyledIcon} {
@@ -104,7 +104,6 @@ export const CloseIcon = styled(Button)`
     }
   `}
   ${mq.handheld`
-    background: ${({ theme }) => theme.color.miscLightest};
     margin-left: 32px;
     position: absolute;
     right: 18px;
