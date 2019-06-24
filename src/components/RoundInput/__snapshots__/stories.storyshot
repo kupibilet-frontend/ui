@@ -382,16 +382,16 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c6,
-  .responsive-booking .c6 {
-    max-width: 340px;
+  .responsive .c1 .c8,
+  .responsive-booking .c1 .c8 {
+    opacity: 1;
   }
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c1 .c8,
-  .responsive-booking .c1 .c8 {
-    opacity: 1;
+  .responsive .c6,
+  .responsive-booking .c6 {
+    max-width: 340px;
   }
 }
 

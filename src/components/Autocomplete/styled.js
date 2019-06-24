@@ -57,7 +57,9 @@ export const SuggestionsContainer = styled.div`
   width: 300px;
   ${shadowSmall}
   ${borderRadiusSmall.all}
-  overflow: hidden;
+  max-height: 360px;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 10;
   background: ${({ theme }) => theme.color.background};
 

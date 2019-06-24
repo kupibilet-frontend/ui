@@ -95,6 +95,13 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   margin: 0;
 }
 
+.c13 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #fc6100;
+}
+
 .c1 {
   font-size: 44px;
   font-weight: 700;
@@ -104,13 +111,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   -ms-letter-spacing: -1.2px;
   letter-spacing: -1.2px;
   margin: 0;
-}
-
-.c13 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  color: #fc6100;
 }
 
 .c2 {
@@ -369,7 +369,7 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
         </h1>
       </div>
       <div>
-        Price:
+        Price: 
         <span
           className="c13"
         >

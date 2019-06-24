@@ -351,6 +351,13 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
 }
 
 @media screen and (max-width:1199px) {
+  .responsive .c1 .c10,
+  .responsive-booking .c1 .c10 {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:1199px) {
   .responsive .c2,
   .responsive-booking .c2 {
     max-width: 340px;
@@ -361,13 +368,6 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
   .responsive .c9,
   .responsive-booking .c9 {
     max-width: 340px;
-  }
-}
-
-@media screen and (max-width:1199px) {
-  .responsive .c1 .c10,
-  .responsive-booking .c1 .c10 {
-    opacity: 1;
   }
 }
 
