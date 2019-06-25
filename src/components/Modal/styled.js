@@ -54,13 +54,13 @@ export const Header = styled.div`
   `}
 
   ${mq.tablet`
-    padding: 42px 102px 24px 18px;
+    padding: 42px 102px 24px 42px;
   `}
 
   ${mq.mobile`
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 18px 62px 18px 18px;
+    padding: 30px 30px 18px 30px;
   `}
 `
 
@@ -68,15 +68,16 @@ export const Content = styled.div`
   align-items: flex-start;
   display: flex;
   flex-grow: 1;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   padding: 0 42px;
 
   ${mq.handheld`
-    padding: 0 18px;
+    padding: 0 30px;
   `}
 
   ${mq.tablet`
-    margin-bottom: 24px;
+    padding: 0 42px;
+    margin-bottom: 0;
   `}
   ${mq.mobile`
     margin-bottom: 18px;
@@ -118,16 +119,16 @@ export const CloseIcon = styled(Button)`
 
 export const Footer = styled.div`
   display: flex;
-  padding: ${(props) => (isCompact(props.size) ? '18' : '30')}px 42px;
+  padding: ${(props) => (isCompact(props.size) ? '18' : '42')}px 42px;
 
   ${mq.handheld`
-    padding: 24px 18px;
+    padding: 42px;
   `}
 
   ${mq.mobile`
     align-items: center;
     flex-direction: column;
-    padding: 18px;
+    padding: 30px;
   `}
 `
 
