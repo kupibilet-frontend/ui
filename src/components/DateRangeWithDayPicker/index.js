@@ -40,6 +40,8 @@ type Props = {
   changeFromDate: () => void,
   changeToDate: () => void,
   onOnewayOnlySelected: () => void,
+  startDatePlaceholderText?: string,
+  endDatePlaceholderText?: string,
   meta: {},
 }
 
@@ -124,6 +126,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
     onMonthVisibilityChange: () => {},
     changeDateInputFocus: () => {},
     onOnewayOnlySelected: () => {},
+    startDatePlaceholderText: 'Туда',
+    endDatePlaceholderText: 'Обратно',
     meta: {},
   }
 
@@ -357,6 +361,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
       isMobile,
       onMonthVisibilityChange,
       meta,
+      startDatePlaceholderText,
+      endDatePlaceholderText,
     } = this.props
     const numberOfMonths = this.getNumberOfMonths()
 
@@ -406,7 +412,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           inModal={inModal}
           value={departureDate}
           invalid={touched && hasError}
-          placeholder="Туда"
+          placeholder={startDatePlaceholderText}
         />
 
         <FakeInput
@@ -416,7 +422,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           onBlur={this.handleClickOutside}
           inModal={inModal}
           value={returnDate}
-          placeholder="Обратно"
+          placeholder={endDatePlaceholderText}
         />
       </DateInputWrap>
     )
