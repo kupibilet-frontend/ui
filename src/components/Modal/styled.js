@@ -32,6 +32,11 @@ export const ModalContent = styled.div`
   z-index: 11;
   width: ${(props) => getWidth(props.size)}px;
 
+   ${({ size }) => !isCompact(size) && `
+    border-radius: 0;
+    width: 100%;
+   `}
+
   ${mq.mobile`
     border-radius: 0;
     width: 100%;
@@ -77,7 +82,7 @@ export const Content = styled.div`
 
   ${mq.tablet`
     padding: 0 42px;
-    margin-bottom: 0;
+    margin-bottom: 18px;
   `}
   ${mq.mobile`
     margin-bottom: 18px;
@@ -89,14 +94,23 @@ export const StyledIcon = styled(Icon)`
 `
 
 export const CloseIcon = styled(Button)`
-  background: ${({ theme }) => theme.color.miscLightest};
+  background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLightest : 'none')};
   position: ${(props) => (isCompact(props.modalSize) ? 'absolute' : 'fixed')};
   right: ${(props) => (isCompact(props.modalSize) ? '12' : '4')}px;
   top: ${(props) => (isCompact(props.modalSize) ? '12' : '5')}px;
 
   ${mq.desktop`
     &:hover {
-      background: ${({ theme }) => theme.color.miscLightest};
+      background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLighter : 'none')};
+      box-shadow: none;
+
+      ${StyledIcon} {
+        fill: ${(props) => (isCompact(props.modalSize) ? 'miscLight' : 'white')};
+      }
+    }
+
+    &:focus {
+      background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLightest : 'none')};
       box-shadow: none;
 
       ${StyledIcon} {
