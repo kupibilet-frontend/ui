@@ -32,9 +32,11 @@ export const ModalContent = styled.div`
   z-index: 11;
   width: ${(props) => getWidth(props.size)}px;
 
-   ${({ size }) => !isCompact(size) && `
-    border-radius: 0;
-    width: 100%;
+   ${mq.tablet`
+      ${({ size }) => !isCompact(size) && `
+        border-radius: 0;
+        width: 100%;
+      `}
    `}
 
   ${mq.mobile`
