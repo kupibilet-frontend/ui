@@ -27,9 +27,11 @@ const StyledProgressBar = styled.span`
 
 const StyledHandle = styled.span.attrs({
   backgroundcolor: (props) => ((
-    props['aria-valuenow'] === props['aria-valuemin'] ||
-    props['aria-valuenow'] === props['aria-valuemax']
-  ) ? props.theme.color.miscDark : props.theme.color.primary
+    props['aria-valuenow'] === props['aria-valuemin']
+    || props['aria-valuenow'] === props['aria-valuemax']
+  )
+    ? props.theme.color.miscDark
+    : props.theme.color.primary
   ),
 })`
   ${switchTransition}

@@ -57,8 +57,8 @@ class MonthCaption extends React.PureComponent<Props, State> {
   componentDidMount() {
     const { isFromSelectedMonth, isToSelectedMonth, isEmptyReturnDate } = this.state
 
-    if ((isFromSelectedMonth || isToSelectedMonth || isEmptyReturnDate) &&
-        this.selectedMonth && this.props.isMobile) {
+    if ((isFromSelectedMonth || isToSelectedMonth || isEmptyReturnDate)
+        && this.selectedMonth && this.props.isMobile) {
       this.selectedMonth.scrollIntoView()
     }
   }

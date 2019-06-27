@@ -125,8 +125,8 @@ class DateRangePickerWrapper extends React.PureComponent {
       }
 
       if (
-        (focusedInput === consts.START_DATE && isStartDateInput) ||
-        (focusedInput === consts.END_DATE && !isStartDateInput)
+        (focusedInput === consts.START_DATE && isStartDateInput)
+        || (focusedInput === consts.END_DATE && !isStartDateInput)
       ) {
         return renderHoverPlaceholder(hoveredDate, format)
       }
@@ -141,8 +141,8 @@ class DateRangePickerWrapper extends React.PureComponent {
     const { touched, error } = meta
 
     const hoveredStartDate = hoveredDate && (
-      (focusedInput === consts.START_DATE) ||
-      (focusedInput === consts.END_DATE && hoveredDate.isBefore(startDate, 'day'))
+      (focusedInput === consts.START_DATE)
+      || (focusedInput === consts.END_DATE && hoveredDate.isBefore(startDate, 'day'))
     )
     const hoveredEndDate = hoveredDate && !hoveredStartDate
 

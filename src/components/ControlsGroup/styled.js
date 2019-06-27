@@ -6,13 +6,13 @@ import mq from 'utils/media-queries'
 
 const fadeGradient = ({ theme }) => (
   /* eslint-disable prefer-template */
-  'linear-gradient(' +
-    '180deg, ' +
-    transparentize(1, theme.color.background) + ' 0%, ' +
-    theme.color.background + ' 15%, ' +
-    theme.color.background + ' 85%, ' +
-    transparentize(1, theme.color.background) + ' 100%' +
-  ')'
+  'linear-gradient('
+    + '180deg, '
+    + transparentize(1, theme.color.background) + ' 0%, '
+    + theme.color.background + ' 15%, '
+    + theme.color.background + ' 85%, '
+    + transparentize(1, theme.color.background) + ' 100%'
+  + ')'
 )
 
 export const SwapContainer = styled.div`

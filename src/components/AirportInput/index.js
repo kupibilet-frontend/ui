@@ -121,16 +121,16 @@ export default class AirportInput extends React.PureComponent<Props, State> {
           <ValuePlaceholder>
             { value }
           </ValuePlaceholder>
-          { value && spell &&
+          { (value && spell) ? (
             <Spell className="AirportInput__spell">
               { spell }
             </Spell>
-          }
-          { area &&
+          ) : null}
+          { area ? (
             <GeoLabel>
               {`, ${area}`}
             </GeoLabel>
-          }
+          ) : null}
         </Geo>
         <Code neighboringInGroup={neighboringInGroup}>
           { IATACode }

@@ -57,11 +57,11 @@ type Props = {
 
 class Modal extends React.PureComponent<Props> {
   static defaultProps = {
-    renderHeader: ({ heading, size }) => (heading &&
+    renderHeader: ({ heading, size }) => (heading ? (
       <Header size={size}>
         <H4>{heading}</H4>
       </Header>
-    ),
+    ) : null),
     renderContent: (props) => <Content {...props} />,
     footer: null,
     size: 'wide',
@@ -115,6 +115,28 @@ class Modal extends React.PureComponent<Props> {
       onClose,
     } = this.props
 
+    const defaultFooter = !isOnBottom ? (
+      <Footer>
+        {onSubmitClick ? (
+          <SubmitButton
+            size="large"
+            onClick={onSubmitClick}
+          >
+            {submitText}
+          </SubmitButton>
+        ) : null}
+        {shouldRenderCloseButton ? (
+          <CloseButton
+            onClick={onClose}
+            size="large"
+            variant="secondary"
+          >
+            {onSubmitClick ? closeButtonText : 'Закрыть'}
+          </CloseButton>
+        ) : null}
+      </Footer>
+    ) : null
+
     if (!isOpen) {
       return null
     }
@@ -129,7 +151,7 @@ class Modal extends React.PureComponent<Props> {
           >
             <ModalContent size={size}>
               { renderHeader({ ...this.props, children: heading }) }
-              {shouldRenderCloseIcon &&
+              {shouldRenderCloseIcon ? (
                 <CloseIcon
                   modalSize={size}
                   isOnBottom={isOnBottom}
@@ -140,28 +162,9 @@ class Modal extends React.PureComponent<Props> {
                     size={getCloseIconSize(this.props)}
                   />}
                 />
-              }
+              ) : null}
               { renderContent(this.props) }
-              { footer || (!isOnBottom &&
-              <Footer>
-                {onSubmitClick &&
-                  <SubmitButton
-                    size="large"
-                    onClick={onSubmitClick}
-                  >
-                    {submitText}
-                  </SubmitButton>
-                }
-                {shouldRenderCloseButton &&
-                  <CloseButton
-                    onClick={onClose}
-                    size="large"
-                    variant="secondary"
-                  >
-                    {onSubmitClick ? closeButtonText : 'Закрыть'}
-                  </CloseButton>
-                }
-              </Footer>)}
+              { footer || defaultFooter }
             </ModalContent>
           </Overlay>
         </GlobalStylesScope>

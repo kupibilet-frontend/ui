@@ -49,10 +49,11 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     }
   }
 
-  fetchSuggestions = _throttle(({ value }) => {
-    fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
-      .then((data) => data.json())
-      .then(({ data }) => data.map((suggest) => {
+  fetchSuggestions = _throttle(async ({ value }) => {
+    try {
+      const result = await fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
+      const data = result.json()
+      const suggestions = data.map((suggest) => {
         const isCity = !suggest.city_code
         const city = (suggest.city_name || suggest.name).ru
         const country = suggest.country_name && suggest.country_name.ru
@@ -65,12 +66,14 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
           IATACode: suggest.code,
           isGeoSuggest: false,
         }
-      }))
-      .then((suggestions) => {
-        if (value === this.state.value) {
-          this.setState({ suggestions })
-        }
       })
+
+      if (value === this.state.value) {
+        this.setState({ suggestions })
+      }
+    } catch (e) {
+      console.error(e)
+    }
   }, 300)
 
   clearSuggestions = () => {

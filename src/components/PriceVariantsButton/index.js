@@ -101,19 +101,19 @@ const PriceVariantsButton = (props: Props) => {
       >
         <Content>
           <Title active={active}>{title}</Title>
-          {hasIcons && iconsPosition === 'top' &&
+          {hasIcons && iconsPosition === 'top' && (
             <Icons>
               {icons}
             </Icons>
-          }
+          )}
         </Content>
         <Content>
           <Price>{price}</Price>
-          {hasIcons && iconsPosition === 'bottom' &&
+          {hasIcons && iconsPosition === 'bottom' && (
             <Icons>
               {icons}
             </Icons>
-          }
+          )}
         </Content>
       </Button>
       {description && <Description>{description}</Description>}

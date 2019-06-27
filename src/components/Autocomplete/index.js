@@ -90,10 +90,9 @@ const getFirstSuggestion = ({ suggestions, multiSection }: Props) => {
 const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }: Props) => (
   createSectionIterator({
     multiSection,
-    data: multiSection ?
-      suggestions.map((section) => getSectionSuggestions(section).length)
-      :
-      suggestions.length,
+    data: multiSection
+      ? suggestions.map((section) => getSectionSuggestions(section).length)
+      : suggestions.length,
   })
 )
 
@@ -125,8 +124,8 @@ class Autocomplete extends React.PureComponent<Props, State> {
     ),
     isSuggestAlreadySelected: (props) => Boolean(props.inputProps.IATACode),
     isValueEqualWithFirstSuggest: (value, suggestions) => (
-      isValuesEqual(value, _get(suggestions, '0.value')) ||
-      isValuesEqual(value, _get(suggestions, '0.IATACode'))
+      isValuesEqual(value, _get(suggestions, '0.value'))
+      || isValuesEqual(value, _get(suggestions, '0.IATACode'))
     ),
   }
   /* eslint-enable react/sort-comp */
@@ -169,8 +168,10 @@ class Autocomplete extends React.PureComponent<Props, State> {
     let suggestion = null
     if (['down', 'up'].includes(payload.method)) {
       const iterate = this.sectionIterator[payload.method === 'down' ? 'next' : 'prev']
-      const [sectionIndex, suggestIndex] =
-        iterate([highlightedSectionIndex, highlightedSuggestionIndex])
+      const [sectionIndex, suggestIndex] = iterate([
+        highlightedSectionIndex,
+        highlightedSuggestionIndex,
+      ])
       suggestion = this.autosuggestInstance.getSuggestion(sectionIndex, suggestIndex)
     }
 

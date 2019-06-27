@@ -15,11 +15,11 @@ const fontStyle = css`
 
 const fadeGradient = ({ theme }) => (
   /* eslint-disable prefer-template */
-  'linear-gradient(' +
-    '90deg, ' +
-    transparentize(1, theme.color.background) + ' 0%, ' +
-    theme.color.background + ' 100%' +
-  ')'
+  'linear-gradient('
+    + '90deg, '
+    + transparentize(1, theme.color.background) + ' 0%, '
+    + theme.color.background + ' 100%'
+  + ')'
 )
 
 export const Container = styled.div`
