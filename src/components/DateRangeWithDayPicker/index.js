@@ -292,14 +292,15 @@ class ReactDayPicker extends PureComponent <Props, State> {
     return (
       <Navbar>
         <NavbarInfo>
-          {showToCalendar &&
+          {showToCalendar ? (
             <Button
               onClick={this.onReturnDateUnneeded}
               size="small"
               onBlur={this.handleClickOutside}
             >
               Обратный билет не нужен
-            </Button>}
+            </Button>
+          ) : null}
         </NavbarInfo>
         <NavbarButtons>
           <Button
@@ -463,7 +464,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
             {dayPickers(true)}
 
-            {showToCalendar &&
+            {showToCalendar ? (
               <ButtonWrapper>
                 <Button
                   onClick={this.onReturnDateUnneeded}
@@ -471,7 +472,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
                   Обратный билет не нужен
                 </Button>
               </ButtonWrapper>
-            }
+            ) : null}
 
             <WeekdaysRow showToCalendar={showToCalendar} />
           </PortalWrapper>
@@ -479,26 +480,25 @@ class ReactDayPicker extends PureComponent <Props, State> {
       </Portal>
     )
 
+    const calendarToRender = isMobile ? (
+      <StyledModal
+        isOpen={showCalendar}
+        onClose={this.closeDayPicker}
+        shouldRenderCloseIcon={false}
+        footer={() => null}
+      >
+        {mobileCalendarHeader}
+        {calendar}
+      </StyledModal>
+    ) : calendar
+
     return (
       <div ref={this.dayPicker}>
         <MainWrapper>
           {dayPickers()}
-          {showCalendar && (showToCalendar || showFromCalendar) &&
-            (
-              isMobile ?
-                <StyledModal
-                  isOpen={showCalendar}
-                  onClose={this.closeDayPicker}
-                  shouldRenderCloseIcon={false}
-                  footer={() => null}
-                >
-                  {mobileCalendarHeader}
-                  {calendar}
-                </StyledModal>
-                :
-                calendar
-            )
-          }
+          {showCalendar && (showToCalendar || showFromCalendar) ? (
+            calendarToRender
+          ) : null}
         </MainWrapper>
       </div>
     )

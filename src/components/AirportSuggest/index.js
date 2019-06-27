@@ -43,7 +43,7 @@ export default class AirportSuggest extends React.PureComponent {
 
     return (
       <AirportSuggestContainer>
-        { isGeoCity || isNested &&
+        { (isGeoCity || isNested) ? (
           <SuggestIcon>
             <StyledIcon
               size="normal"
@@ -52,7 +52,7 @@ export default class AirportSuggest extends React.PureComponent {
               isGeoCity
             />
           </SuggestIcon>
-        }
+        ) : null}
 
         <Geo>
           <Value>

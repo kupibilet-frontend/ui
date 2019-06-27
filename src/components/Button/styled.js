@@ -132,8 +132,8 @@ export const StyledButton = styled.button`
   ${switchTransition}
   transition-property: opacity, box-shadow;
 
-  ${({ disabled }) => (disabled ?
-    'opacity: .2;'
+  ${({ disabled }) => (disabled
+    ? 'opacity: .2;'
     : '')}
 
   .icon-inherit-color {
@@ -141,24 +141,32 @@ export const StyledButton = styled.button`
   }
 
   &:hover, &:focus {
-    ${(props) => (!props.disabled ? `
-      cursor: pointer;
-      background: ${getButtonHoverBackground(props)};
-      box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
+    ${(props) => (
+    !props.disabled
+      ? `
+        cursor: pointer;
+        background: ${getButtonHoverBackground(props)};
+        box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
 
-      // Immediately change visual state on hover, mousedown and mouseup
-      // Transition only for mouseleave
-      transition: none;
-    ` : '')}
+        // Immediately change visual state on hover, mousedown and mouseup
+        // Transition only for mouseleave
+        transition: none;
+      `
+      : ''
+  )}
 
     ${(props) => ((!props.disabled && props.variant === 'link') && `color: ${getButtonHoverColor(props)};`)}
   }
 
   &:active {
-    ${(props) => (!props.disabled ? `
-      background: ${getButtonActiveBackground(props)};
-      box-shadow: none;
-    ` : '')}
+    ${(props) => (
+    !props.disabled
+      ? `
+        background: ${getButtonActiveBackground(props)};
+        box-shadow: none;
+      `
+      : ''
+  )}
   }
 `
 export const StyledButtonLink = StyledButton.withComponent('a')

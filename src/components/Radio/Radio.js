@@ -64,8 +64,8 @@ export const LabelText = styled.span`
   transition-property: color;
   margin-left: 6px;
   width: 100%;
-  ${({ disabled, theme }) => (disabled &&
-    `color: ${theme.color.textLight};`
+  ${({ disabled, theme }) => (disabled
+    && `color: ${theme.color.textLight};`
   )}
 `
 

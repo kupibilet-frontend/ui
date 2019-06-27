@@ -64,11 +64,11 @@ class Dropdown extends React.PureComponent<Props, void> {
         {...this.props}
       >
         {dropdownButton}
-        { isOpen &&
+        { isOpen ? (
           <DropdownContent>
             {overlay}
           </DropdownContent>
-        }
+        ) : null}
       </DropdownWrapper>
     )
   }

@@ -43,7 +43,7 @@ const TooltipPortal = (props: PortalProps) => {
     error,
   } = props
 
-  return ((content && isOpen && coords) ?
+  return ((content && isOpen && coords) ? (
     <Portal>
       <GlobalStylesScope>
         <TooltipContainer
@@ -78,7 +78,7 @@ const TooltipPortal = (props: PortalProps) => {
         </TooltipContainer>
       </GlobalStylesScope>
     </Portal>
-    : null
+  ) : null
   )
 }
 

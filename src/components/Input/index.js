@@ -34,7 +34,6 @@ type Props = {
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
   innerRef?: Function,
-  /* global React$Element */
   children?: React$Element<*>[],
   isTextarea?: boolean,
 }

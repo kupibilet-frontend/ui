@@ -39,7 +39,7 @@ const PopoverPortal = (props: PortalProps) => {
     dotCentering,
     size,
   } = props
-  return ((content && isOpen && coords) ?
+  return (content && isOpen && coords) ? (
     <Portal>
       <GlobalStylesScope>
         <PopoverContainer
@@ -68,13 +68,13 @@ const PopoverPortal = (props: PortalProps) => {
                 <PopoverBackground
                   size={size}
                 >
-                  {header &&
+                  {header ? (
                     <Header>
                       <HeaderText>
                         {header}
                       </HeaderText>
                     </Header>
-                  }
+                  ) : null}
                   <TextSmall>
                     { content }
                   </TextSmall>
@@ -85,8 +85,7 @@ const PopoverPortal = (props: PortalProps) => {
         </PopoverContainer>
       </GlobalStylesScope>
     </Portal>
-    : null
-  )
+  ) : null
 }
 
 type PopoverProps = {
