@@ -28,6 +28,7 @@ const SloganTitle = styled.p`
   line-height: 26px;
   width: 192px;
   flex-basis: 192px;
+  margin-bottom: 0;
 
   ${mq.handheld`
     margin-top: 18px;
@@ -57,7 +58,7 @@ const SloganCard = styled.div`
 
   ${mq.mobile`
     flex-direction: row;
-    margin: 0 auto 30px;
+    margin: 0 0 30px;
     max-width: 360px;
     &:last-child ${SloganTitle} {
       width: 70%;

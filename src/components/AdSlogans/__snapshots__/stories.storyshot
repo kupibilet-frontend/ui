@@ -37,6 +37,7 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   -webkit-flex-basis: 192px;
   -ms-flex-preferred-size: 192px;
   flex-basis: 192px;
+  margin-bottom: 0;
 }
 
 .c2 {
@@ -141,7 +142,7 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin: 0 auto 30px;
+    margin: 0 0 30px;
     max-width: 360px;
   }
 
