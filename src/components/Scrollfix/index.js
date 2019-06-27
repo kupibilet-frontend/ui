@@ -1,7 +1,7 @@
 // @flow
 
 import { Component } from 'react'
-import { get } from 'lodash'
+import _get from 'lodash/get'
 import ReactDOM from 'react-dom'
 import type { Element } from 'react'
 
@@ -46,7 +46,7 @@ class Scrollfix extends Component<Props> {
 
   onScroll = (event: Event, deltaY: number) => {
     const { scrollTop } = this.element
-    const touchesLength = get(event, 'touches.length', 0)
+    const touchesLength = _get(event, 'touches.length', 0)
     if (scrollTop <= 1 && deltaY < 0 && touchesLength < 2) {
       event.preventDefault()
     } else if (
