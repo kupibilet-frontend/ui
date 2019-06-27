@@ -34,7 +34,6 @@ export const ModalContent = styled.div`
 
    ${mq.tablet`
       ${({ size }) => !isCompact(size) && `
-        border-radius: 0;
         width: 100%;
       `}
    `}
@@ -130,6 +129,13 @@ export const CloseIcon = styled(Button)`
     &:hover {
       box-shadow: none;
     }
+  `}
+
+  ${mq.tablet`
+    ${({ size }) => !isCompact(size) && `
+    right: 4px;
+    top: 5px;
+    `}
   `}
 `
 
