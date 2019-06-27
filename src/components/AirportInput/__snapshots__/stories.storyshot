@@ -463,8 +463,6 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput default 1`] = `
         >
           1 апр
         </div>
-        
-        
       </div>
       <div
         className="c5"

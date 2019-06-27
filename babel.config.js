@@ -11,6 +11,9 @@ const BASE_PLUGINS = [
       "storybook": "./storybook"
     }
   }],
+  ['@babel/plugin-transform-runtime', {
+    regenerator: true,
+  }]
 ]
 
 const BASE_PRESETS = ["@babel/preset-env", "@babel/preset-react", "@babel/preset-flow"]
@@ -49,4 +52,3 @@ module.exports = {
     }
   }
 }
-
