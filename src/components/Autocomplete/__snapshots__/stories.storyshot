@@ -357,8 +357,6 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport 1`] = `
           >
             
           </div>
-          
-          
         </div>
         <div
           className="c6"

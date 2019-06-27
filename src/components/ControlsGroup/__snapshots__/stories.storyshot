@@ -411,8 +411,6 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
         >
           Шереметьево
         </div>
-        
-        
       </div>
       <div
         className="c8"
@@ -921,8 +919,6 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
         >
           Шереметьево
         </div>
-        
-        
       </div>
       <div
         className="c6"
@@ -973,8 +969,6 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
         >
           Несуществующий город
         </div>
-        
-        
       </div>
       <div
         className="c6"
