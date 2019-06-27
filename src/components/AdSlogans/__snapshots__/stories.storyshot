@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin: 0 auto;
+  max-width: 966px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-top: 120px;
+}
+
+.c5 {
+  font-size: 18px;
+  line-height: 26px;
+  width: 192px;
+  -webkit-flex-basis: 192px;
+  -ms-flex-preferred-size: 192px;
+  flex-basis: 192px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2:last-child .c4 {
+  width: 160px;
+}
+
+.c3 {
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  min-width: 86px;
+  min-height: 86px;
+  margin-right: 18px;
+  -webkit-flex-basis: 86px;
+  -ms-flex-preferred-size: 86px;
+  flex-basis: 86px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin: 0 18px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c1.c1 {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin-top: 60px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 18px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    margin-top: 18px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    line-height: 22px;
+    margin-top: 0;
+    text-align: left;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto 30px;
+    max-width: 360px;
+  }
+
+  .responsive .c2:last-child .c4,
+  .responsive-booking .c2:last-child .c4 {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    height: 48px;
+    width: 48px;
+    min-height: 48px;
+    min-width: 48px;
+    -webkit-flex-basis: 48px;
+    -ms-flex-preferred-size: 48px;
+    flex-basis: 48px;
+  }
+}
+
+<div
+  className="responsive c0"
+>
+  <section
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <img
+        className="c3"
+        name="smart"
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA=="
+      />
+      <p
+        className="no-global c4 c5"
+      >
+        По-умному стыкуем разные билеты в один
+      </p>
+    </div>
+    <div
+      className="c2"
+    >
+      <img
+        className="c3"
+        name="flights"
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA=="
+      />
+      <p
+        className="no-global c4 c5"
+      >
+        Уже более 10 000 человек летает с нами каждый день
+      </p>
+    </div>
+    <div
+      className="c2"
+    >
+      <img
+        className="c3"
+        name="support"
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA=="
+      />
+      <p
+        className="no-global c4 c5"
+      >
+        Оперативная связь со службой заботы о клиентах 24/7
+      </p>
+    </div>
+  </section>
+</div>
+`;
