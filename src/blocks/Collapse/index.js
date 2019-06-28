@@ -13,11 +13,11 @@ import StyledCollapse from 'components/Collapse'
 type HeaderProps = {
   withPadding: boolean,
   isActive: boolean,
-  header: string,
+  header: Node,
 }
 
 type StyledCollapseProps = {
-  renderHeader: (props: HeaderProps) => Node,
+  renderHeader?: (props: HeaderProps) => Node,
   children: React.Element<*>,
 } & HeaderProps
 
