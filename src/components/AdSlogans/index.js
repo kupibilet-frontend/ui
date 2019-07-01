@@ -29,7 +29,7 @@ class AdSlogans extends PureComponent<Props> {
   render() {
     const { slogans } = this.props
     return (
-      <StyledSlogans>
+      <StyledSlogans {...this.props}>
         {slogans.map(this.renderSloganCard)}
       </StyledSlogans>
     )

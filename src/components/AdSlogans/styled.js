@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import { SingleFluidSection } from 'components/FluidLayout'
 import mq from 'utils/media-queries'
 
-const SlogansSection = SingleFluidSection.withComponent('section').extend`
+const SlogansSection = styled(SingleFluidSection.withComponent('section'))`
   ${mq.desktop`
     width: 100%;
   `}
 `
 
-const StyledSlogans = SlogansSection.extend`
+const StyledSlogans = styled(SlogansSection)`
   display: flex;
   justify-content: space-between;
   align-self: center;

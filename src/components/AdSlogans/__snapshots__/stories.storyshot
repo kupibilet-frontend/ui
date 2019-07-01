@@ -13,9 +13,12 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c3 {
   margin: 0 auto;
   max-width: 966px;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,7 +33,7 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   margin-top: 120px;
 }
 
-.c5 {
+.c7 {
   font-size: 18px;
   line-height: 26px;
   width: 192px;
@@ -40,7 +43,7 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   margin-bottom: 0;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,11 +54,11 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   align-items: center;
 }
 
-.c2:last-child .c4 {
+.c4:last-child .c6 {
   width: 160px;
 }
 
-.c3 {
+.c5 {
   display: inline-block;
   width: 86px;
   height: 86px;
@@ -68,21 +71,21 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
+  .responsive .c3,
+  .responsive-booking .c3 {
     margin: 0 18px;
   }
 }
 
 @media screen and (min-width:1000px) {
-  .c1.c1 {
+  .c3.c3 {
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width:1200px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
+  .responsive .c2,
+  .responsive-booking .c2 {
     width: 100%;
   }
 }
@@ -106,16 +109,16 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c5,
-  .responsive-booking .c5 {
+  .responsive .c7,
+  .responsive-booking .c7 {
     margin-top: 18px;
     text-align: center;
   }
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c5,
-  .responsive-booking .c5 {
+  .responsive .c7,
+  .responsive-booking .c7 {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -128,8 +131,8 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
+  .responsive .c4,
+  .responsive-booking .c4 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -137,8 +140,8 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
+  .responsive .c4,
+  .responsive-booking .c4 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -146,15 +149,15 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
     max-width: 360px;
   }
 
-  .responsive .c2:last-child .c4,
-  .responsive-booking .c2:last-child .c4 {
+  .responsive .c4:last-child .c6,
+  .responsive-booking .c4:last-child .c6 {
     width: 70%;
   }
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c3,
-  .responsive-booking .c3 {
+  .responsive .c5,
+  .responsive-booking .c5 {
     height: 48px;
     width: 48px;
     min-height: 48px;
@@ -169,46 +172,46 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   className="responsive c0"
 >
   <section
-    className="c1"
+    className="c1 c2 -section c3"
   >
     <div
-      className="c2"
+      className="c4"
     >
       <img
-        className="c3"
+        className="c5"
         name="smart"
-        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA=="
+        src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
       />
       <p
-        className="no-global c4 c5"
+        className="no-global c6 c7"
       >
         По-умному стыкуем разные билеты в один
       </p>
     </div>
     <div
-      className="c2"
+      className="c4"
     >
       <img
-        className="c3"
+        className="c5"
         name="flights"
-        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA=="
+        src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
       />
       <p
-        className="no-global c4 c5"
+        className="no-global c6 c7"
       >
         Уже более 10 000 человек летает с нами каждый день
       </p>
     </div>
     <div
-      className="c2"
+      className="c4"
     >
       <img
-        className="c3"
+        className="c5"
         name="support"
-        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA=="
+        src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
       />
       <p
-        className="no-global c4 c5"
+        className="no-global c6 c7"
       >
         Оперативная связь со службой заботы о клиентах 24/7
       </p>

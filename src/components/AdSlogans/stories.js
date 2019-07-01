@@ -3,27 +3,29 @@ import { storiesOf } from '@storybook/react'
 
 import AdSlogans from 'components/AdSlogans'
 
-const texts = [
+const IMG = 'data:image/svg+xml,%3C%3Fxml version=\'1.0\' encoding=\'UTF-8\'%3F%3E%3Csvg version=\'1.1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 200 200\' preserveAspectRatio=\'xMinYMin meet\' %3E%3Crect x=\'0\' y=\'50\' width=\'200\' height=\'109\' fill=\'%23dedede\' /%3E%3Cline x1=\'0\' y1=\'50\' x2=\'200\' y2=\'160\' stroke=\'%23b3b3b3\' stroke-width=\'2\' /%3E%3Cline x1=\'0\' y1=\'160\' x2=\'290\' y2=\'0\' stroke=\'%23b3b3b3\' stroke-width=\'2\' /%3E%3C/svg%3E'
+
+const TEXTS = [
   {
     name: 'smart',
     text: 'По-умному стыкуем разные билеты в один',
-    src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA==',
+    src: IMG,
   },
   {
     name: 'flights',
     text: 'Уже более 10 000 человек летает с нами каждый день',
-    src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA==',
+    src: IMG,
   },
   {
     name: 'support',
     text: 'Оперативная связь со службой заботы о клиентах 24/7',
-    src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICAgICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWluWU1pbiBtZWV0IiA+ICAKIDxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwOSIgZmlsbD0iI2Q3ZDdkNyIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSIyMDAiIHkyPSIxNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgLz4KIDxsaW5lIHgxPSIwIiB5MT0iMTYwIiB4Mj0iMjkwIiB5Mj0iMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiAvPgo8L3N2Zz4gIA==',
+    src: IMG,
   },
 ]
 
 storiesOf('COMPONENTS|Controls/AdSlogans', module)
   .add('Default', () => (
     <AdSlogans
-      slogans={texts}
+      slogans={TEXTS}
     />
   ))
