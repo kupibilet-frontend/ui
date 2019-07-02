@@ -1,14 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { text, object } from '@storybook/addon-knobs'
 import 'whatwg-fetch'
 import _throttle from 'lodash/throttle'
 
 import Autocomplete from 'components/Autocomplete'
 import AirportInput from 'components/AirportInput'
 import AirportSuggest from 'components/AirportSuggest'
-
-import updateKnob from 'storybook/updateKnob'
 
 class AutocompleteStatefulWrapper extends React.PureComponent {
   static propTypes = Autocomplete.propTypes
@@ -20,39 +17,10 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
     suggestions: [],
   }
 
-  // eslint-disable-next-line camelcase, react/sort-comp, class-methods-use-this
-  UNSAFE_componentWillUpdate(nextProps, nextState) {
-    const { value, suggest, suggestions } = nextState
-
-    updateKnob('suggest', 'object', suggest || {})
-    updateKnob('suggestions', 'object', suggestions || [])
-    updateKnob('value', 'text', value || '')
-  }
-
-  // TODO airbnb config for `react/sort-comp` are missing UNSAFE_ lifecycles
-  // eslint-disable-next-line react/sort-comp
-  onSuggestionSelected = (event, { suggestion, suggestionValue }) => {
-    this.setState({
-      suggest: suggestion,
-      value: suggestionValue,
-    })
-  }
-
-  onChange = (event, { newValue, suggestion, method }) => {
-    const { suggest } = this.state
-
-    if (method !== 'blur' || !suggest) {
-      this.setState({
-        suggest: newValue && suggestion || null,
-        value: newValue || '',
-      })
-    }
-  }
-
   fetchSuggestions = _throttle(async ({ value }) => {
     try {
       const result = await fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
-      const data = result.json()
+      const { data } = await result.json()
       const suggestions = data.map((suggest) => {
         const isCity = !suggest.city_code
         const city = (suggest.city_name || suggest.name).ru
@@ -75,6 +43,24 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
       console.error(e)
     }
   }, 300)
+
+  onChange = (event, { newValue, suggestion, method }) => {
+    const { suggest } = this.state
+
+    if (method !== 'blur' || !suggest) {
+      this.setState({
+        suggest: newValue && suggestion || null,
+        value: newValue || '',
+      })
+    }
+  }
+
+  onSuggestionSelected = (event, { suggestion, suggestionValue }) => {
+    this.setState({
+      suggest: suggestion,
+      value: suggestionValue,
+    })
+  }
 
   clearSuggestions = () => {
     this.setState({
@@ -140,18 +126,11 @@ const STORY_DOC_PROPS = {
 storiesOf('COMPONENTS|Controls/Autocomplete', module)
   .add(
     'Airport',
-    () => {
-      // Trigger fake knobs
-      object('suggest', {})
-      object('suggestions', [])
-      text('value', '')
-
-      return (
-        <div style={{ width: 244 }}>
-          <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
-        </div>
-      )
-    },
+    () => (
+      <div style={{ width: 244 }}>
+        <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
+      </div>
+    ),
     {
       notes: `
         Uses <AirportInput /> and <AirportSuggest />.
