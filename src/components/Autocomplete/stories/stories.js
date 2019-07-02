@@ -1,6 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
+import { Input } from 'components/Input'
+import Icon from 'components/Icon'
 import AutocompleteStateful from './AutocompleteStateful'
 import AutocompleteMultiSelect from './AutocompleteMultiSelect'
 
@@ -41,6 +43,20 @@ storiesOf('COMPONENTS|Controls/Autocomplete', module)
         <AutocompleteStateful
           multiSection
           renderSectionTitle={renderSectionTitle}
+        />
+      </div>
+    ),
+  )
+  .add(
+    'Autocomplete with custom input',
+    () => (
+      <div style={{ width: 244 }}>
+        <AutocompleteStateful
+          renderInputComponent={
+            (props) => (<Input
+              leftIcon={<Icon name="man" fill="miscDark" />}
+              {...props}
+            />)}
         />
       </div>
     ),

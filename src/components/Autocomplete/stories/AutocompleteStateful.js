@@ -57,15 +57,12 @@ class AutocompleteStateful extends PureComponent {
           isGeoSuggest: false,
         }
       })
+      const suggestions = multiSection
+        ? getMultiSectionSuggestions(formatSuggestions)
+        : formatSuggestions
 
       if (value === this.state.value) {
-        if (multiSection) {
-          const multiSectionSuggestion = getMultiSectionSuggestions(formatSuggestions)
-
-          this.setState({ suggestions: multiSectionSuggestion })
-        } else {
-          this.setState({ suggestions: formatSuggestions })
-        }
+        this.setState({ suggestions })
       }
     } catch (e) {
       console.error(e)
