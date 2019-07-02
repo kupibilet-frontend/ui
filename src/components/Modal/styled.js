@@ -100,41 +100,36 @@ export const CloseIcon = styled(Button)`
   right: ${(props) => (isCompact(props.modalSize) ? '12' : '4')}px;
   top: ${(props) => (isCompact(props.modalSize) ? '12' : '5')}px;
 
-  ${mq.desktop`
-    &:hover {
-      background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLighter : 'none')};
-      box-shadow: none;
+  &:hover {
+    background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLighter : 'none')};
+    box-shadow: none;
+  }
 
-      ${StyledIcon} {
-        fill: ${(props) => (isCompact(props.modalSize) ? 'miscLight' : 'white')};
-      }
-    }
+  &:focus {
+    background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLightest : 'none')};
+    box-shadow: none;
+  }
 
-    &:focus {
-      background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLightest : 'none')};
-      box-shadow: none;
-
-      ${StyledIcon} {
-        fill: ${(props) => (isCompact(props.modalSize) ? 'miscLight' : 'white')};
-      }
-    }
-  `}
   ${mq.handheld`
     margin-left: 32px;
     position: absolute;
-    right: 18px;
-    top: 18px;
+    right: 12px;
+    top: 12px;
     z-index: 2;
 
     &:hover {
       box-shadow: none;
     }
+
+    ${StyledIcon} {
+      fill: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscDarkest : theme.color.primaryDarkest)};
+    }
   `}
 
   ${mq.tablet`
-    ${({ size }) => !isCompact(size) && `
-    right: 4px;
-    top: 5px;
+    ${({ modalSize }) => !isCompact(modalSize) && `
+      right: 4px;
+      top: 5px;
     `}
   `}
 `

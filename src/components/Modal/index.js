@@ -27,10 +27,8 @@ const getCloseIconSize = ({ isHandheld, size }) => {
   return 'medium'
 }
 
-const getCloseIconColor = ({ isHandheld, size }) => {
-  if (isHandheld) {
-    return 'primaryDarkest'
-  } else if (isCompact(size)) {
+const getCloseIconColor = ({ size }) => {
+  if (isCompact(size)) {
     return 'miscDarkest'
   }
   return 'textLight'
