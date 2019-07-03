@@ -111,6 +111,7 @@ export const CloseIcon = styled(Button)`
   }
 
   ${mq.handheld`
+    background: ${({ theme }) => theme.color.miscLightest}; 
     margin-left: 32px;
     position: absolute;
     right: 12px;
@@ -124,13 +125,6 @@ export const CloseIcon = styled(Button)`
     ${StyledIcon} {
       fill: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscDarkest : theme.color.primaryDarkest)};
     }
-  `}
-
-  ${mq.tablet`
-    ${({ modalSize }) => !isCompact(modalSize) && `
-      right: 4px;
-      top: 5px;
-    `}
   `}
 `
 
