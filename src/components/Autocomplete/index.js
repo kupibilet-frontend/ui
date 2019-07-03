@@ -246,6 +246,7 @@ class Autocomplete extends React.PureComponent<Props, State> {
     } else if (!suggestion) {
       this.autosuggestInstance.maybeCallOnChange(event, '', method)
     }
+    this.autosuggestInstance.closeSuggestions()
   }
 
   render() {
