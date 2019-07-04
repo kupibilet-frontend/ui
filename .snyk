@@ -9,4 +9,10 @@ ignore:
     - '@storybook/react > @storybook/core > shelljs':
         reason: No patches for upgrade.
         expires: '2019-12-31T00:00:00.000Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - '@kupibilet/react-dates > lodash':
+        patched: '2019-07-04T07:28:47.048Z'
+    - rc-tabs > lodash:
+        patched: '2019-07-04T07:28:47.048Z'

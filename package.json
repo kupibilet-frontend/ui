@@ -21,7 +21,9 @@
     "snyk": "snyk test --dev --severity-threshold=medium",
     "//": "---        NPM hooks section        ---",
     "postinstall": "move-bin; true",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=10",
@@ -101,7 +103,6 @@
     "redux-form": "^7.0.4",
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
-    "snyk": "^1.173.1",
     "styled-components": "^3.2.5",
     "versionize": "^1.0.6",
     "whatwg-fetch": "^3.0.0"
@@ -117,7 +118,8 @@
     "react-portal": "^4.1.4",
     "react-visibility-sensor": "^4.1.1",
     "rheostat": "^2.1.3",
-    "section-iterator": "^2.0.0"
+    "section-iterator": "^2.0.0",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "@kupibilet/icons": "~5.1.0",
@@ -131,5 +133,6 @@
     "react-dom": "^15.5.0 || ^16.3.0",
     "react-onclickoutside": "^6.4.0",
     "styled-components": "^3.2.5"
-  }
+  },
+  "snyk": true
 }
