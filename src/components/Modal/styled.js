@@ -32,7 +32,13 @@ export const ModalContent = styled.div`
   z-index: 11;
   width: ${(props) => getWidth(props.size)}px;
 
-  ${mq.handheld`
+   ${mq.tablet`
+      ${({ size }) => !isCompact(size) && `
+        width: 100%;
+      `}
+   `}
+
+  ${mq.mobile`
     border-radius: 0;
     width: 100%;
   `}
@@ -44,7 +50,7 @@ export const Header = styled.div`
   flex: 0 0 auto;
   min-height: 60px;
   justify-content: space-between;
-  padding: 30px 42px ${(props) => (isCompact(props.size) ? '18' : '30')}px;
+  padding: 42px 42px ${(props) => (isCompact(props.size) ? '18' : '30')}px;
   ${H4} {
     font-weight: 700;
   }
@@ -54,13 +60,13 @@ export const Header = styled.div`
   `}
 
   ${mq.tablet`
-    padding: 24px 102px 24px 18px;
+    padding: 42px 102px 24px 42px;
   `}
 
   ${mq.mobile`
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 18px 62px 18px 18px;
+    padding: 30px 30px 18px 30px;
   `}
 `
 
@@ -68,18 +74,11 @@ export const Content = styled.div`
   align-items: flex-start;
   display: flex;
   flex-grow: 1;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   padding: 0 42px;
 
-  ${mq.handheld`
-    padding: 0 18px;
-  `}
-
-  ${mq.tablet`
-    margin-bottom: 24px;
-  `}
   ${mq.mobile`
-    margin-bottom: 18px;
+    padding: 0 30px;
   `}
 `
 
@@ -88,47 +87,51 @@ export const StyledIcon = styled(Icon)`
 `
 
 export const CloseIcon = styled(Button)`
-  background: none;
+  background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLightest : 'none')};
   position: ${(props) => (isCompact(props.modalSize) ? 'absolute' : 'fixed')};
-  right: ${(props) => (isCompact(props.modalSize) ? '0' : '4')}px;
-  top: ${(props) => (isCompact(props.modalSize) ? '0' : '5')}px;
+  right: ${(props) => (isCompact(props.modalSize) ? '12' : '4')}px;
+  top: ${(props) => (isCompact(props.modalSize) ? '12' : '5')}px;
 
-  ${mq.desktop`
-    &:hover {
-      background: none;
-      box-shadow: none;
+  &:hover {
+    background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLighter : 'none')};
+    box-shadow: none;
+  }
 
-      ${StyledIcon} {
-        fill: ${(props) => (isCompact(props.modalSize) ? 'miscLight' : 'white')};
-      }
-    }
-  `}
+  &:focus {
+    background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscLightest : 'none')};
+    box-shadow: none;
+  }
+
   ${mq.handheld`
-    background: ${({ theme }) => theme.color.miscLightest};
+    background: ${({ theme }) => theme.color.miscLightest}; 
     margin-left: 32px;
     position: absolute;
-    right: 18px;
-    top: 18px;
+    right: 12px;
+    top: 12px;
     z-index: 2;
 
     &:hover {
       box-shadow: none;
+    }
+
+    ${StyledIcon} {
+      fill: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscDarkest : theme.color.primaryDarkest)};
     }
   `}
 `
 
 export const Footer = styled.div`
   display: flex;
-  padding: ${(props) => (isCompact(props.size) ? '18' : '30')}px 42px;
+  padding: ${(props) => (isCompact(props.size) ? '18' : '42')}px 42px;
 
-  ${mq.handheld`
-    padding: 24px 18px;
+  ${mq.tablet`
+    padding: 42px;
   `}
 
   ${mq.mobile`
     align-items: center;
     flex-direction: column;
-    padding: 18px;
+    padding: 30px;
   `}
 `
 
