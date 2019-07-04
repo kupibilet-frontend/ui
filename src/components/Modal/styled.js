@@ -77,16 +77,8 @@ export const Content = styled.div`
   margin-bottom: 18px;
   padding: 0 42px;
 
-  ${mq.handheld`
-    padding: 0 30px;
-  `}
-
-  ${mq.tablet`
-    padding: 0 42px;
-    margin-bottom: 18px;
-  `}
   ${mq.mobile`
-    margin-bottom: 18px;
+    padding: 0 30px;
   `}
 `
 
@@ -132,7 +124,7 @@ export const Footer = styled.div`
   display: flex;
   padding: ${(props) => (isCompact(props.size) ? '18' : '42')}px 42px;
 
-  ${mq.handheld`
+  ${mq.tablet`
     padding: 42px;
   `}
 
