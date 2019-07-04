@@ -45,7 +45,7 @@ export const Wrapper = styled.div`
     animation-name: ${fade};
     animation-duration: 0.35s;
   `}
-  ${mq.handheld`
+  ${mq.mobile`
     ${(props) => (props.isOnBottom ? '' : 'background: white;')}
   `}
 `
@@ -61,7 +61,7 @@ export const OverlayContentWrap = styled.div`
     animation-duration: 0.35s;
     padding: 24px 0;
   `}
-  ${mq.handheld`
+  ${mq.mobile`
     height: 100%;
     ${(props) => (props.isOnBottom ? '' : 'background: white;')}
   `}
@@ -80,7 +80,7 @@ export const OverlayContent = styled.div`
   vertical-align: middle;
   text-align: left;
   cursor: auto;
-  ${mq.handheld`
+  ${mq.mobile`
     width: 100%;
     ${(props) => (props.isOnBottom ? '' : 'min-height: 100%;')}
     vertical-align: ${(props) => (props.isOnBottom ? 'bottom' : 'top')};
