@@ -1,34 +1,13 @@
 import styled from 'styled-components'
-import { SingleFluidSection } from 'components/FluidLayout'
 import mq from 'utils/media-queries'
-
-const SlogansSection = styled(SingleFluidSection.withComponent('section'))`
-  ${mq.desktop`
-    width: 100%;
-  `}
-`
-
-const StyledSlogans = styled(SlogansSection)`
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  margin-top: 120px;
-  ${mq.tablet`
-    margin-top: 90px;
-  `}
-  ${mq.mobile`
-    margin-top: 60px;
-    flex-wrap: wrap;
-    margin: 0 18px;
-  `}
-`
 
 const SloganTitle = styled.p`
   font-size: 18px;
   line-height: 26px;
   width: 192px;
   flex-basis: 192px;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 
   ${mq.handheld`
     margin-top: 18px;
@@ -87,7 +66,6 @@ const SloganImg = styled.img.attrs({
 `
 
 export {
-  StyledSlogans,
   SloganImg,
   SloganCard,
   SloganTitle,

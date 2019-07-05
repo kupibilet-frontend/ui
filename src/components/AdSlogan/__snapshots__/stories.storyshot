@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
+exports[`Storyshots Components/Layout|/AdCard Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -13,26 +13,6 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   box-sizing: border-box;
 }
 
-.c3 {
-  margin: 0 auto;
-  max-width: 966px;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin-top: 120px;
-}
-
 .c7 {
   font-size: 18px;
   line-height: 26px;
@@ -40,7 +20,8 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   -webkit-flex-basis: 192px;
   -ms-flex-preferred-size: 192px;
   flex-basis: 192px;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .c4 {
@@ -70,42 +51,24 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   flex-basis: 86px;
 }
 
-@media screen and (max-width:1199px) {
-  .responsive .c3,
-  .responsive-booking .c3 {
-    margin: 0 18px;
-  }
+.c3 {
+  margin: 0 auto;
+  max-width: 966px;
 }
 
-@media screen and (min-width:1000px) {
-  .c3.c3 {
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width:1200px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width:600px) and (max-width:1199px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    margin-top: 90px;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c1,
-  .responsive-booking .c1 {
-    margin-top: 60px;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0 18px;
-  }
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-top: 120px;
 }
 
 @media screen and (max-width:1199px) {
@@ -168,6 +131,44 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
   }
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    margin: 0 18px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c3.c3 {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin-top: 60px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 18px;
+  }
+}
+
 <div
   className="responsive c0"
 >
@@ -183,7 +184,7 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
         src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
       />
       <p
-        className="no-global c6 c7"
+        className="c6 c7"
       >
         По-умному стыкуем разные билеты в один
       </p>
@@ -197,7 +198,7 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
         src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
       />
       <p
-        className="no-global c6 c7"
+        className="c6 c7"
       >
         Уже более 10 000 человек летает с нами каждый день
       </p>
@@ -211,7 +212,7 @@ exports[`Storyshots COMPONENTS|Controls/AdSlogans Default 1`] = `
         src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
       />
       <p
-        className="no-global c6 c7"
+        className="c6 c7"
       >
         Оперативная связь со службой заботы о клиентах 24/7
       </p>

@@ -7,7 +7,7 @@ const Separator = styled.div`
   height: 188px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: ${({ image }) => `url(${image})`};
+  background-image: ${({ image }) => `url("${image}")`};
   background-position: center center;
   ${mq.mobile`
    background-position: 79% 50%;

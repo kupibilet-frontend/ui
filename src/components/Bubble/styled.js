@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import mq from 'utils/media-queries'
 import TextLarge from 'components/Typography/TextLarge'
 import Text from 'components/Typography/Text'
-import Link from 'components/Link'
 
 const createColor = (orderNumber, theme) => {
   const modulo = orderNumber % 3
@@ -18,12 +17,12 @@ const createColor = (orderNumber, theme) => {
   }
 }
 
-export const Bubble = styled.div`
+const StyledBubble = styled.div`
   border-radius: 24px;
   padding: 24px 30px;
   background-color: ${({ theme, orderNumber }) => createColor(orderNumber, theme)};
   position: relative;
-  ${({ reply }) => reply && 'display: inline-block;'}
+  ${({ reply }) => reply && 'display: inline-block'};
   min-width: 294px;
   &::after{
     content: '';
@@ -40,32 +39,33 @@ export const Bubble = styled.div`
     display: block;
   `}
 `
-export const CommentWrapper = styled.div`
+const CommentWrapper = styled.div`
   max-width: 756px;
   margin: 0 auto 6px;
 `
-export const CommentBlock = styled.div`
+
+const CommentBlock = styled.div`
   margin-bottom: 36px;
   ${mq.mobile`
     margin: 0 -18px 24px;
   `}
 `
 
-export const Author = styled(Text.withComponent('p'))`
+const Author = styled(Text.withComponent('p'))`
   color: ${({ theme }) => theme.color.text};
   text-align: ${({ reply }) => (reply ? 'left' : 'right')};
   ${({ reply }) => (reply ? 'padding-left' : 'padding-right')}: 100px;
   margin-top: 2px;
 `
-export const CommentText = TextLarge.withComponent('p').extend`
+
+const CommentText = styled(TextLarge.withComponent('p'))`
   white-space: pre-line;
 `
 
-export const MoreButton = styled(Link)`
-  display: block;
-  text-align: center;
-
-  ${mq.mobile`
-    text-align: left;
-  `}
-`
+export {
+  StyledBubble,
+  CommentWrapper,
+  CommentBlock,
+  Author,
+  CommentText,
+}
