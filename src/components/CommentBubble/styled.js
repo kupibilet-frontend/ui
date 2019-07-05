@@ -17,7 +17,7 @@ const createColor = (orderNumber, theme) => {
   }
 }
 
-const StyledBubble = styled.div`
+const Bubble = styled.div`
   border-radius: 24px;
   padding: 24px 30px;
   background-color: ${({ theme, orderNumber }) => createColor(orderNumber, theme)};
@@ -63,7 +63,7 @@ const CommentText = styled(TextLarge.withComponent('p'))`
 `
 
 export {
-  StyledBubble,
+  Bubble,
   CommentWrapper,
   CommentBlock,
   Author,

@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import moment from '@kupibilet/moment'
 
 import {
-  StyledBubble,
+  Bubble,
   CommentWrapper,
   Author,
   CommentText,
@@ -19,7 +19,7 @@ type Props = {
   createdAt?: string,
 }
 
-class Bubble extends PureComponent<Props> {
+class CommentBubble extends PureComponent<Props> {
   static defaultProps = {
     reply: false,
     createdAt: null,
@@ -36,11 +36,11 @@ class Bubble extends PureComponent<Props> {
     return (
       <CommentBlock>
         <CommentWrapper>
-          <StyledBubble orderNumber={index} reply={reply}>
+          <Bubble orderNumber={index} reply={reply}>
             <CommentText>
               {text}
             </CommentText>
-          </StyledBubble>
+          </Bubble>
           <Author reply={reply}>
             { name }
             { name && createdAt
@@ -54,4 +54,4 @@ class Bubble extends PureComponent<Props> {
   }
 }
 
-export default Bubble
+export default CommentBubble

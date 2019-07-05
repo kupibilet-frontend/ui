@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import H3 from 'components/Typography/H2'
 import { SingleFluidSection } from 'components/FluidLayout'
-import Bubble from 'components/Bubble'
+import CommentBubble from 'components/CommentBubble'
 import mq from 'utils/media-queries'
 
 const TEXTS = [
@@ -41,7 +41,7 @@ storiesOf('COMPONENTS|Controls/Bubble', module)
         Отзывы
       </Title>
       { Object.entries(TEXTS).map(([key, value]) => (
-        <Bubble key={key} index={key} {...value} />
+        <CommentBubble key={key} index={key} {...value} />
       ))
       }
     </StyledSingleFluidSection>
