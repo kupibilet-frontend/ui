@@ -177,6 +177,8 @@ exports[`Storyshots Components/Layout|/AdCard Default 1`] = `
   >
     <div
       className="c4"
+      name="smart"
+      src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
     >
       <img
         className="c5"
@@ -191,6 +193,8 @@ exports[`Storyshots Components/Layout|/AdCard Default 1`] = `
     </div>
     <div
       className="c4"
+      name="flights"
+      src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
     >
       <img
         className="c5"
@@ -205,6 +209,8 @@ exports[`Storyshots Components/Layout|/AdCard Default 1`] = `
     </div>
     <div
       className="c4"
+      name="support"
+      src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25' viewBox='0 0 200 200' preserveAspectRatio='xMinYMin meet' %3E%3Crect x='0' y='50' width='200' height='109' fill='%23dedede' /%3E%3Cline x1='0' y1='50' x2='200' y2='160' stroke='%23b3b3b3' stroke-width='2' /%3E%3Cline x1='0' y1='160' x2='290' y2='0' stroke='%23b3b3b3' stroke-width='2' /%3E%3C/svg%3E"
     >
       <img
         className="c5"

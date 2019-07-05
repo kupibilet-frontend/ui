@@ -218,6 +218,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
     </h2>
     <div
       className="c5"
+      name="Мартин Голдинг"
     >
       <div
         className="c6"
@@ -241,6 +242,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
     </div>
     <div
       className="c5"
+      name="Тест Тестов"
     >
       <div
         className="c6"
@@ -265,6 +267,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
     </div>
     <div
       className="c5"
+      name={null}
     >
       <div
         className="c6"

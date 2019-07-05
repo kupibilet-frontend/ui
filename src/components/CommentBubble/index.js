@@ -34,7 +34,7 @@ class CommentBubble extends PureComponent<Props> {
       createdAt,
     } = this.props
     return (
-      <CommentBlock>
+      <CommentBlock {...this.props}>
         <CommentWrapper>
           <Bubble orderNumber={index} reply={reply}>
             <CommentText>

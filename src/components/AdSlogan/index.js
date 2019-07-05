@@ -16,7 +16,7 @@ class AdSlogan extends PureComponent<Props> {
   render() {
     const { name, text, src } = this.props
     return (
-      <SloganCard key={`${name}`}>
+      <SloganCard key={`${name}`} {...this.props}>
         <SloganImg name={name} src={src} />
         <SloganTitle>
           {text}
