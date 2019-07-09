@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react'
 import moment from '@kupibilet/moment'
-
+import type { Node } from 'react'
 import {
   Bubble,
   CommentWrapper,
@@ -17,6 +17,7 @@ type Props = {
   name?: string,
   text: string,
   createdAt?: string,
+  children: Node,
 }
 
 class CommentBubble extends PureComponent<Props> {
@@ -32,14 +33,23 @@ class CommentBubble extends PureComponent<Props> {
       text,
       name,
       createdAt,
+      children,
     } = this.props
     return (
-      <CommentBlock {...this.props}>
+      <CommentBlock>
         <CommentWrapper>
-          <Bubble orderNumber={index} reply={reply}>
-            <CommentText>
-              {text}
-            </CommentText>
+          <Bubble
+            orderNumber={index}
+            reply={reply}
+          >
+            { text
+              ? (
+                <CommentText>
+                  {text}
+                </CommentText>
+              )
+              : children
+            }
           </Bubble>
           <Author reply={reply}>
             { name }

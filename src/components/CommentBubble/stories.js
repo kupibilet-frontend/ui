@@ -42,7 +42,6 @@ storiesOf('COMPONENTS|Controls/Bubble', module)
       </Title>
       { Object.entries(TEXTS).map(([key, value]) => (
         <CommentBubble key={key} index={key} {...value} />
-      ))
-      }
+      ))}
     </StyledSingleFluidSection>
   ))
