@@ -51,6 +51,7 @@ type Props = {
   renderHeader?: React.Element<*>,
   renderContent?: React.Element<*>,
   isOpen: boolean,
+  isFullWidth: boolean,
 }
 
 class Modal extends React.PureComponent<Props> {
@@ -111,6 +112,7 @@ class Modal extends React.PureComponent<Props> {
       closeButtonText,
       shouldRenderCloseButton,
       onClose,
+      isFullWidth,
     } = this.props
 
     const defaultFooter = !isOnBottom ? (
@@ -147,7 +149,10 @@ class Modal extends React.PureComponent<Props> {
             isOnBottom={isOnBottom}
             scrollFix={scrollFix}
           >
-            <ModalContent size={size}>
+            <ModalContent
+              size={size}
+              isFullWidth={isFullWidth}
+            >
               { renderHeader({ ...this.props, children: heading }) }
               {shouldRenderCloseIcon ? (
                 <CloseIcon
