@@ -51,7 +51,7 @@ type Props = {
   renderHeader?: React.Element<*>,
   renderContent?: React.Element<*>,
   isOpen: boolean,
-  isFullWidth: boolean,
+  isFullWidth?: boolean,
 }
 
 class Modal extends React.PureComponent<Props> {
@@ -73,6 +73,7 @@ class Modal extends React.PureComponent<Props> {
     submitText: 'Продолжить',
     closeButtonText: 'Отменить',
     shouldRenderCloseButton: true,
+    isFullWidth: false,
   }
 
   componentDidMount() {
