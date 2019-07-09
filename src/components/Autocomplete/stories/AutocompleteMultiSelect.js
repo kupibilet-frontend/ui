@@ -25,21 +25,36 @@ class AutocompleteMultiSelect extends PureComponent {
     citiesListFilter: [],
   }
 
-  fetchSuggestions = ({ value }) => {
+  fetchSuggestions = ({ value, reason }) => {
     const { citiesListFilter } = this.state
     const { citiesList } = this.props
-    const normalizedValue = value.trim().toLowerCase()
 
-    const filteredCities = citiesList.filter((city) => {
-      if (citiesListFilter.includes(city)) return false
-      return city.toLowerCase().startsWith(normalizedValue)
-    })
-    const selectedCities = citiesListFilter
-      .filter((city) => city.toLowerCase().startsWith(normalizedValue))
+    const normalizedValue = value.trim().toLowerCase()
+    const isSuggestSelection = reason === 'suggestion-selected'
+
+    const nextFilteredCities = isSuggestSelection
+      ? getNextCitiesFilter({ citiesListFilter, value })
+      : citiesListFilter
+
+    const filteredAgentCodes = citiesList
+      .filter((city) => {
+        if (nextFilteredCities.includes(city)) return false
+        if (isSuggestSelection) return true
+
+        return city.toLowerCase().startsWith(normalizedValue)
+      })
+
+
+    const selectedCities = nextFilteredCities
+      .filter((city) => {
+        if (isSuggestSelection) return true
+        return city.toLowerCase().startsWith(normalizedValue)
+      })
 
     this.setState({
-      filterValue: value,
-      suggestions: [...selectedCities, ...filteredCities],
+      filterValue: isSuggestSelection ? '' : value,
+      citiesListFilter: nextFilteredCities,
+      suggestions: [...selectedCities, ...filteredAgentCodes],
     })
   }
 
@@ -49,15 +64,10 @@ class AutocompleteMultiSelect extends PureComponent {
     })
   }
 
-  onSuggestionSelected = (event, { suggestion: { value } }) => {
-    const { citiesListFilter } = this.state
-    const nextSuggestionsFilter = getNextCitiesFilter({ citiesListFilter, value })
-
-    this.setState({
-      citiesListFilter: nextSuggestionsFilter,
-      filterValue: '',
-    })
+  onSuggestionsClearRequested = () => {
+    this.setState({ suggestions: [] })
   }
+
 
   render() {
     const { filterValue, suggestions, citiesListFilter } = this.state
@@ -72,13 +82,12 @@ class AutocompleteMultiSelect extends PureComponent {
           autoFocus: true,
           ...inputProps,
         }}
+        alwaysRenderSuggestions
         forceSuggestedValue={false}
-        focusInputOnSuggestionClick={false}
-        onSuggestionSelected={this.onSuggestionSelected}
         suggestions={normalizeSuggestions(suggestions)}
         onSuggestionsFetchRequested={this.fetchSuggestions}
-        onSuggestionsClearRequested={() => {}}
-        renderInputComponent={(props) => <Input {...props} />}
+        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        renderInputComponent={({ ref, ...props }) => <Input innerRef={ref} {...props} />}
         renderSuggestion={(suggestion) => {
           if (citiesListFilter.includes(suggestion.value)) {
             // Suggestion was not designed to support multi selections,
