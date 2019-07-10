@@ -233,7 +233,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PriceVariantsButton default 1`] 
             <span
               className="c5"
             >
-              Банковской картой он-лайн
+              
             </span>
             <span
               className="c6"
@@ -291,7 +291,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PriceVariantsButton default 1`] 
             <span
               className="c12"
             >
-              Эконом Базовый
+              
             </span>
           </div>
           <div
@@ -391,7 +391,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PriceVariantsButton default 1`] 
             <span
               className="c12"
             >
-              Эконом
+              
             </span>
           </div>
           <div
