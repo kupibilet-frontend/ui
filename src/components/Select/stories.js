@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { select, text, boolean, object } from '@storybook/addon-knobs'
+import { select, text, boolean, object, array } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 
 import withReduxForm from 'storybook/decorators/withReduxForm'
@@ -48,25 +48,6 @@ const allRabbits = [
   },
 ]
 
-const allRabbitsMulti = [
-  {
-    key: 'Супер-заяц купи билет',
-    value: 'Супер-заяц купи билет',
-  },
-  {
-    key: 'Кролик-убийца',
-    value: 'Кролик-убийца',
-  },
-  {
-    key: 'Высококонверсионный заяц',
-    value: 'Высококонверсионный заяц',
-  },
-  {
-    key: 'Заяц с главной',
-    value: 'Заяц с главной',
-  },
-]
-
 const defaultSuggestions = [
   {
     value: 'Самые дешевые',
@@ -100,23 +81,26 @@ const initialState = {
 }
 
 const onSuggestionSelected = (event, { suggestion }) => {
-  updateKnob('value', 'object', suggestion || { value: '' })
+  updateKnob('value', 'object', suggestion)
 }
 
 const onSuggestionMultiSelected = (event, { suggestion: { value } }) => {
-  const suggestionsFilter = object('suggestionsFilter', [])
+  const suggestionsFilter = array('suggestionsFilter', [])
   const nextSuggestionsFilter = suggestionsFilter.includes(value)
     ? suggestionsFilter.filter((item) => item !== value)
     : [...suggestionsFilter, value]
 
-  updateKnob('suggestionsFilter', 'array', nextSuggestionsFilter || [])
+  updateKnob('suggestionsFilter', 'array', nextSuggestionsFilter)
 }
-
 
 const getSimpleKey = (suggestion) => suggestion.value
 
 const getSectionSuggestionKey = (suggestion) => suggestion.customKey
 const getSectionSuggestionValue = (suggestion) => suggestion.customValue
+
+const normalizeSuggestions = (suggestions) => (
+  suggestions.map(({ value }) => ({ key: value, value }))
+)
 
 const sizesSelect = (defaultValue = 'large') => select(
   'size',
@@ -157,22 +141,22 @@ storiesOf('COMPONENTS|Controls/Select', module)
     )
   })
   .add('With multiply select', () => {
-    const suggestionsFilter = object('suggestionsFilter', [])
-    const placeholder = text('placeholder', `${suggestionsFilter.length} rabbits selected`)
+    const suggestionsFilter = array('suggestionsFilter', [])
+    const placeholder = text('placeholder', `${suggestionsFilter.length} suggestions selected`)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
     const error = text('error', '')
     const selectedSuggestion = object('value', { value: '' })
     const defaultInputProps = { placeholder, disabled }
     const suggestions = [
-      ...allRabbitsMulti.filter(({ value }) => suggestionsFilter.includes(value)),
-      ...allRabbitsMulti.filter(({ value }) => !suggestionsFilter.includes(value))]
+      ...defaultSuggestions.filter(({ value }) => suggestionsFilter.includes(value)),
+      ...defaultSuggestions.filter(({ value }) => !suggestionsFilter.includes(value))]
+
     return (
       <Select
-        suggestions={suggestions}
+        suggestions={normalizeSuggestions(suggestions)}
         onSuggestionSelected={onSuggestionMultiSelected}
         selectedSuggestion={selectedSuggestion}
-        alwaysRenderSuggestions
         inputProps={{
           ...defaultInputProps,
           value: object('value', { value: '' }),
@@ -222,7 +206,6 @@ storiesOf('COMPONENTS|Controls/Select', module)
       />
     )
   })
-  .addDecorator(withReduxForm)
   .add('With Redux Form', () => {
     return (
       <Field
@@ -234,4 +217,5 @@ storiesOf('COMPONENTS|Controls/Select', module)
       />
 
     )
-  })
+  },
+  { decorators: [withReduxForm] })

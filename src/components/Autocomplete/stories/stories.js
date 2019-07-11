@@ -15,6 +15,10 @@ const SectionHeader = styled.div`
   color: ${({ theme }) => theme.color.miscDark};
 `
 
+const Container = styled.div`
+  width: 244px;
+`
+
 const renderSectionTitle = (section) => (
   <SectionHeader>
     {section.title}
@@ -25,9 +29,9 @@ storiesOf('COMPONENTS|Controls/Autocomplete', module)
   .add(
     'Airport',
     () => (
-      <div style={{ width: 244 }}>
+      <Container>
         <AutocompleteStateful />
-      </div>
+      </Container>
     ),
     {
       notes: `
@@ -39,18 +43,18 @@ storiesOf('COMPONENTS|Controls/Autocomplete', module)
   .add(
     'Airport with multiply sections',
     () => (
-      <div style={{ width: 244 }}>
+      <Container>
         <AutocompleteStateful
           multiSection
           renderSectionTitle={renderSectionTitle}
         />
-      </div>
+      </Container>
     ),
   )
   .add(
     'Autocomplete with custom input',
     () => (
-      <div style={{ width: 244 }}>
+      <Container>
         <AutocompleteStateful
           renderInputComponent={
             (props) => (<Input
@@ -58,18 +62,18 @@ storiesOf('COMPONENTS|Controls/Autocomplete', module)
               {...props}
             />)}
         />
-      </div>
+      </Container>
     ),
   )
   .add(
     'Autocomplete with multiply select',
     () => {
       return (
-        <div style={{ width: 244 }}>
+        <Container>
           <AutocompleteMultiSelect
             citiesList={cities}
           />
-        </div>
+        </Container>
       )
     },
   )

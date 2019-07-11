@@ -6,7 +6,7 @@ import Suggestion from 'components/Suggestion'
 import { Input } from 'components/Input'
 
 const normalizeSuggestions = (suggestions) => (
-  suggestions.map((agentCode) => ({ key: agentCode, value: agentCode }))
+  suggestions.map((suggestion) => ({ key: suggestion, value: suggestion }))
 )
 
 const getNextCitiesFilter = ({ value, citiesListFilter }) => (

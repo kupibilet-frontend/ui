@@ -9,23 +9,15 @@ import AirportInput from 'components/AirportInput'
 import AirportSuggest from 'components/AirportSuggest'
 
 const getMultiSectionSuggestions = (suggestions) => {
-  let multiSectionSuggestion = []
   const suggestsGroupByCountry = Object.entries(
     groupBy(suggestions,
       (suggest) => get(suggest, 'country', 'Нет страны')),
   )
 
-  for (const [country, cities] of suggestsGroupByCountry) {
-    multiSectionSuggestion = [
-      ...multiSectionSuggestion,
-      {
-        title: country,
-        values: cities,
-      },
-    ]
-  }
-
-  return multiSectionSuggestion
+  return suggestsGroupByCountry.map(([country, cities]) => ({
+    title: country,
+    values: cities,
+  }))
 }
 
 class AutocompleteStateful extends PureComponent {
@@ -43,7 +35,7 @@ class AutocompleteStateful extends PureComponent {
       const { multiSection } = this.props
       const result = await fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
       const { data } = await result.json()
-      const formatSuggestions = data.map((suggest) => {
+      const formattedSuggestions = data.map((suggest) => {
         const isCity = !suggest.city_code
         const city = (suggest.city_name || suggest.name).ru
         const country = suggest.country_name && suggest.country_name.ru
@@ -58,8 +50,8 @@ class AutocompleteStateful extends PureComponent {
         }
       })
       const suggestions = multiSection
-        ? getMultiSectionSuggestions(formatSuggestions)
-        : formatSuggestions
+        ? getMultiSectionSuggestions(formattedSuggestions)
+        : formattedSuggestions
 
       if (value === this.state.value) {
         this.setState({ suggestions })
