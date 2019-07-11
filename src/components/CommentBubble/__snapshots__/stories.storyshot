@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  margin: 0 auto;
+  max-width: 966px;
+}
+
+.c4 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 38px;
+  -webkit-letter-spacing: -1px;
+  -moz-letter-spacing: -1px;
+  -ms-letter-spacing: -1px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.c7 {
+  border-radius: 24px;
+  padding: 24px 30px;
+  background-color: #FFF2FE;
+  position: relative;
+  min-width: 294px;
+}
+
+.c7::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  right: 48px;
+  border: 12px solid transparent;
+  border-left: 16px solid #FFF2FE;
+}
+
+.c12 {
+  border-radius: 24px;
+  padding: 24px 30px;
+  background-color: #E8F7FF;
+  position: relative;
+  min-width: 294px;
+}
+
+.c12::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  right: 48px;
+  border: 12px solid transparent;
+  border-left: 16px solid #E8F7FF;
+}
+
+.c13 {
+  border-radius: 24px;
+  padding: 24px 30px;
+  background-color: #E6FFEE;
+  position: relative;
+  min-width: 294px;
+}
+
+.c13::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  right: 48px;
+  border: 12px solid transparent;
+  border-left: 16px solid #E6FFEE;
+}
+
+.c6 {
+  max-width: 756px;
+  margin: 0 auto 6px;
+}
+
+.c5 {
+  margin-bottom: 36px;
+}
+
+.c11 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.c10 {
+  color: #808080;
+  text-align: right;
+  padding-right: 100px;
+  margin-top: 2px;
+}
+
+.c9 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.c8 {
+  white-space: pre-line;
+}
+
+.c3 {
+  margin: 0 auto 9px;
+  text-align: center;
+  max-width: 425px;
+}
+
+.c1 {
+  padding-top: 60px;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    margin: 0 18px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c2.c2 {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    border-radius: 0;
+    padding: 12px 18px 18px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c12,
+  .responsive-booking .c12 {
+    border-radius: 0;
+    padding: 12px 18px 18px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c13,
+  .responsive-booking .c13 {
+    border-radius: 0;
+    padding: 12px 18px 18px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    margin: 0 -18px 24px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c9,
+  .responsive-booking .c9 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    margin-bottom: 12px;
+  }
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1 c2"
+  >
+    <h2
+      className="c3 c4"
+    >
+      Отзывы
+    </h2>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <p
+            className="c8 -p c9"
+          >
+            Пишите код, исходя из того, что все программисты, которые будут сопровождать вашу программу, — склонные к насилию психопаты, знающие, где вы живёте
+          </p>
+        </div>
+        <p
+          className="c10 -p c11"
+        >
+          Мартин Голдинг
+          
+        </p>
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c12"
+        >
+          <p
+            className="c8 -p c9"
+          >
+            Здесь будет ваша реклама
+          </p>
+        </div>
+        <p
+          className="c10 -p c11"
+        >
+          Тест Тестов
+          , 
+          8 сен 2014 г.
+        </p>
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c13"
+        >
+          <p
+            className="c8 -p c9"
+          >
+            А тут пусто
+          </p>
+        </div>
+        <p
+          className="c10 -p c11"
+        >
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
