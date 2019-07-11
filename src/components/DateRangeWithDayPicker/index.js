@@ -40,6 +40,9 @@ type Props = {
   changeFromDate: () => void,
   changeToDate: () => void,
   onOnewayOnlySelected: () => void,
+  startDatePlaceholderText?: string,
+  endDatePlaceholderText?: string,
+  alwaysNeedDateTo?: boolean,
   meta: {},
 }
 
@@ -124,6 +127,9 @@ class ReactDayPicker extends PureComponent <Props, State> {
     onMonthVisibilityChange: () => {},
     changeDateInputFocus: () => {},
     onOnewayOnlySelected: () => {},
+    startDatePlaceholderText: 'Туда',
+    endDatePlaceholderText: 'Обратно',
+    alwaysNeedDateTo: false,
     meta: {},
   }
 
@@ -289,10 +295,12 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
   renderNavbar = ({ onPreviousClick, onNextClick }) => {
     const { showToCalendar } = this.state
+    const { alwaysNeedDateTo } = this.props
+
     return (
       <Navbar>
         <NavbarInfo>
-          {showToCalendar ? (
+          {showToCalendar && !alwaysNeedDateTo && (
             <Button
               onClick={this.onReturnDateUnneeded}
               size="small"
@@ -300,7 +308,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
             >
               Обратный билет не нужен
             </Button>
-          ) : null}
+          )}
         </NavbarInfo>
         <NavbarButtons>
           <Button
@@ -357,6 +365,9 @@ class ReactDayPicker extends PureComponent <Props, State> {
       isMobile,
       onMonthVisibilityChange,
       meta,
+      startDatePlaceholderText,
+      endDatePlaceholderText,
+      alwaysNeedDateTo,
     } = this.props
     const numberOfMonths = this.getNumberOfMonths()
 
@@ -406,7 +417,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           inModal={inModal}
           value={departureDate}
           invalid={touched && hasError}
-          placeholder="Туда"
+          placeholder={startDatePlaceholderText}
         />
 
         <FakeInput
@@ -416,7 +427,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           onBlur={this.handleClickOutside}
           inModal={inModal}
           value={returnDate}
-          placeholder="Обратно"
+          placeholder={endDatePlaceholderText}
         />
       </DateInputWrap>
     )
@@ -464,7 +475,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
             {dayPickers(true)}
 
-            {showToCalendar ? (
+            {showToCalendar && !alwaysNeedDateTo && (
               <ButtonWrapper>
                 <Button
                   onClick={this.onReturnDateUnneeded}
@@ -472,7 +483,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
                   Обратный билет не нужен
                 </Button>
               </ButtonWrapper>
-            ) : null}
+            )}
 
             <WeekdaysRow showToCalendar={showToCalendar} />
           </PortalWrapper>
