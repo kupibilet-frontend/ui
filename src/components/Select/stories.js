@@ -91,6 +91,7 @@ const onSuggestionMultiSelected = (event, { suggestion: { value } }) => {
     : [...suggestionsFilter, value]
 
   updateKnob('suggestionsFilter', 'array', nextSuggestionsFilter)
+  updateKnob('placeholder', 'text', `${nextSuggestionsFilter.length} suggestions selected`)
 }
 
 const getSimpleKey = (suggestion) => suggestion.value
@@ -142,7 +143,7 @@ storiesOf('COMPONENTS|Controls/Select', module)
   })
   .add('With multiply select', () => {
     const suggestionsFilter = array('suggestionsFilter', [])
-    const placeholder = text('placeholder', `${suggestionsFilter.length} suggestions selected`)
+    const placeholder = text('placeholder', `0 suggestions selected`)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
     const error = text('error', '')
