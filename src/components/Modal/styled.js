@@ -34,7 +34,7 @@ export const ModalContent = styled.div`
 
    ${mq.tablet`
       ${({ size }) => !isCompact(size) && `
-        width: 100%;
+        width: 80vw;
       `}
    `}
 
