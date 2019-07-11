@@ -78,6 +78,29 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   line-height: 18px;
 }
 
+.c2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 38px;
+  -webkit-letter-spacing: -1px;
+  -moz-letter-spacing: -1px;
+  -ms-letter-spacing: -1px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.c7 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.c8 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 .c4 {
   font-size: 24px;
   font-weight: 600;
@@ -87,12 +110,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   -ms-letter-spacing: -.4px;
   letter-spacing: -.4px;
   margin: 0;
-}
-
-.c8 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
 }
 
 .c13 {
@@ -110,17 +127,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   -moz-letter-spacing: -1.2px;
   -ms-letter-spacing: -1.2px;
   letter-spacing: -1.2px;
-  margin: 0;
-}
-
-.c2 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 38px;
-  -webkit-letter-spacing: -1px;
-  -moz-letter-spacing: -1px;
-  -ms-letter-spacing: -1px;
-  letter-spacing: -1px;
   margin: 0;
 }
 
@@ -157,12 +163,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   margin: 0;
 }
 
-.c7 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
 .c11 {
   font-size: 20px;
   font-weight: 600;
@@ -196,6 +196,26 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    font-size: 24px;
+    line-height: 28px;
+    -webkit-letter-spacing: -.4px;
+    -moz-letter-spacing: -.4px;
+    -ms-letter-spacing: -.4px;
+    letter-spacing: -.4px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width:1199px) {
@@ -235,18 +255,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
-    font-size: 24px;
-    line-height: 28px;
-    -webkit-letter-spacing: -.4px;
-    -moz-letter-spacing: -.4px;
-    -ms-letter-spacing: -.4px;
-    letter-spacing: -.4px;
-  }
-}
-
-@media screen and (max-width:1199px) {
   .responsive .c3,
   .responsive-booking .c3 {
     font-size: 24px;
@@ -267,14 +275,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
     -moz-letter-spacing: -.1px;
     -ms-letter-spacing: -.1px;
     letter-spacing: -.1px;
-  }
-}
-
-@media screen and (max-width:1199px) {
-  .responsive .c7,
-  .responsive-booking .c7 {
-    font-size: 16px;
-    line-height: 20px;
   }
 }
 
