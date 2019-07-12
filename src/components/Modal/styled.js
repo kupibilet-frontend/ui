@@ -4,7 +4,7 @@ import mq from 'utils/media-queries'
 import Button from 'components/Button'
 import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
-import isCompact from './utils'
+import { isCompact, isSetSize } from './utils'
 
 const getWidth = (size) => {
   switch (size) {
@@ -33,7 +33,7 @@ export const ModalContent = styled.div`
   width: ${(props) => getWidth(props.size)}px;
 
    ${mq.tablet`
-      ${({ size }) => !isCompact(size) && `
+      ${({ size }) => !isSetSize(size) && `
         width: 80vw;
       `}
    `}

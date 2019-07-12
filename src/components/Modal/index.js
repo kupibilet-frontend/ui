@@ -5,7 +5,7 @@ import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
-import isCompact from './utils'
+import { isCompact } from './utils'
 
 import {
   ModalContent,
