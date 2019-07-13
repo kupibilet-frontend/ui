@@ -34,10 +34,13 @@
   },
   "author": "Kupibilet.ru Frontend Team",
   "license": "MIT",
-  "//": "Still have no activity… https://github.com/react-component/tabs/issues/133",
   "resolutions": {
+    "// Still have no activity… https://github.com/react-component/tabs/issues/133": "",
     "rc-tabs": "9.3.0",
-    "js-yaml": "3.13.1"
+    "// Sequrity patches": "",
+    "js-yaml": "3.13.1",
+    "lodash": "^4.17.14",
+    "lodash-es": "^4.17.14"
   },
   "greenkeeper": {
     "lockfiles": {
