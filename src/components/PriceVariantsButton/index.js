@@ -66,7 +66,7 @@ const Title = styled.span`
 type Props = {
   active: boolean,
   onChange?: (Event) => void,
-  buttonTitle: string | Element,
+  buttonTitle: FormattedMessage,
   price: string | Element<*>,
   icons: Array<Element<*>>,
   iconsPosition?: string,
