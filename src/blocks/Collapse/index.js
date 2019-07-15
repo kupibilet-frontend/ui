@@ -13,7 +13,7 @@ import StyledCollapse from 'components/Collapse'
 type HeaderProps = {
   withPadding: boolean,
   isActive: boolean,
-  header: Node,
+  header: string | FormattedMessage,
 }
 
 type StyledCollapseProps = {
