@@ -66,7 +66,7 @@ const Title = styled.span`
 type Props = {
   active: boolean,
   onChange?: (Event) => void,
-  title: string,
+  buttonTitle: string | FormattedMessage,
   price: string | Element<*>,
   icons: Array<Element<*>>,
   iconsPosition?: string,
@@ -76,7 +76,7 @@ type Props = {
 const PriceVariantsButton = (props: Props) => {
   const {
     active,
-    title,
+    buttonTitle,
     price,
     iconsPosition,
     icons,
@@ -100,7 +100,7 @@ const PriceVariantsButton = (props: Props) => {
         onClick={onClick}
       >
         <Content>
-          <Title active={active}>{title}</Title>
+          <Title active={active}>{buttonTitle}</Title>
           {hasIcons && iconsPosition === 'top' && (
             <Icons>
               {icons}
@@ -122,7 +122,7 @@ const PriceVariantsButton = (props: Props) => {
 }
 
 PriceVariantsButton.defaultProps = {
-  title: '',
+  buttonTitle: '',
   price: '',
   icons: [],
   iconsPosition: 'bottom',
