@@ -8,9 +8,9 @@ import Icon from 'components/Icon'
 const sizesSelect = (defaultValue = 'normal') => select(
   'size',
   {
-    small: 'Small',
-    normal: 'Normal',
-    large: 'Large',
+    small: 'small',
+    normal: 'normal',
+    large: 'large',
   },
   defaultValue,
 )
