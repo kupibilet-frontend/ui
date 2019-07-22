@@ -27,7 +27,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
 }
 
 .c3 {
-  background-color: #a9ddff;
+  background-color: #38afff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -58,8 +58,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
 
 .c2:hover,
 .c2:active {
-  background-color: #38afff;
-  box-shadow: 0 0 0 1px #38afff;
+  box-shadow: 0px 2px 4px rgba(98,112,139,0.6);
 }
 
 .c4 {
@@ -118,7 +117,6 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
         aria-valuemax={1648128}
         aria-valuemin={1648032}
         aria-valuenow={1648032}
-        backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={0}
         onKeyDown={[Function]}
@@ -138,7 +136,6 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
         aria-valuemax={1648128}
         aria-valuemin={1648032}
         aria-valuenow={1648128}
-        backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
         onKeyDown={[Function]}
@@ -594,7 +591,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider default 1`] = `
 }
 
 .c3 {
-  background-color: #a9ddff;
+  background-color: #38afff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -625,8 +622,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider default 1`] = `
 
 .c2:hover,
 .c2:active {
-  background-color: #38afff;
-  box-shadow: 0 0 0 1px #38afff;
+  box-shadow: 0px 2px 4px rgba(98,112,139,0.6);
 }
 
 <div
@@ -656,7 +652,6 @@ exports[`Storyshots COMPONENTS|Controls/Slider default 1`] = `
         aria-valuemax={1000}
         aria-valuemin={1}
         aria-valuenow={1}
-        backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={0}
         onKeyDown={[Function]}
@@ -676,7 +671,6 @@ exports[`Storyshots COMPONENTS|Controls/Slider default 1`] = `
         aria-valuemax={1000}
         aria-valuemin={1}
         aria-valuenow={1000}
-        backgroundcolor="#96a0b3"
         className="rheostat-handle c2"
         data-handle-key={1}
         onKeyDown={[Function]}
