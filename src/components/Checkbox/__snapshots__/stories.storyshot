@@ -64,7 +64,7 @@ exports[`Storyshots COMPONENTS|Controls/Checkbox ReduxForm-ready 1`] = `
 }
 
 .c1:hover .checkbox {
-  border-color: #38afff;
+  border-color: #007acc;
 }
 
 .c1:hover .label-text {
