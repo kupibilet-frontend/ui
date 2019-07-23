@@ -39,7 +39,7 @@ export class Checkbox extends React.PureComponent<Props, void> {
           checked={checked}
         >
           {
-            checked ? (
+            (checked && !disabled) ? (
               <IconWrap checked={checked}>
                 <Icon name="checkmark" fill="background" />
               </IconWrap>
