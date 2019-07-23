@@ -4,7 +4,8 @@ import TextLarge from 'components/Typography/TextLarge'
 import Text from 'components/Typography/Text'
 
 const createColor = (orderNumber, theme) => {
-  const modulo = orderNumber % 3
+  const modulo = orderNumber !== null ? orderNumber % 3 : null
+
   switch (modulo) {
     case 0:
       return '#FFF2FE'
