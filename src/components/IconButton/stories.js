@@ -20,16 +20,13 @@ const iconNameSelect = (defaultValue = 'cross') => select(
   defaultValue,
 )
 
-const colorSelect = (defaultValue = 'fail') => text(
-  'color',
-  defaultValue,
-)
-
 storiesOf('COMPONENTS|Controls/IconButton', module)
   .add('Default', () => (
     <IconButton
       withTooltip={withTooltipSelect()}
       iconName={iconNameSelect()}
-      color={colorSelect()}
-    />
+      color={text('color', 'fail')}
+    >
+      {text('tooltip', 'Сбросить')}
+    </IconButton>
   ))

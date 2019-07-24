@@ -1,13 +1,15 @@
 // @flow
 
 import React from 'react'
+import type { Node } from 'react'
 import Icon from 'components/Icon'
 
-import { StyledIconButton } from './styled'
+import { StyledIconButton, StyledTooltip } from './styled'
 
 type Props = {
   onClick: Function,
   withTooltip?: boolean,
+  children: Node,
   iconName?: string,
   color?: string,
 }
@@ -18,7 +20,13 @@ const defaultProps = {
   color: 'fail',
 }
 
-const IconButton = ({ withTooltip, iconName, color, onClick }: Props) => {
+const IconButton = ({
+  children,
+  withTooltip,
+  iconName,
+  color,
+  onClick,
+}: Props) => {
   return (
     <StyledIconButton
       onClick={onClick}
@@ -26,6 +34,13 @@ const IconButton = ({ withTooltip, iconName, color, onClick }: Props) => {
       iconName={iconName}
       color={color}
     >
+      {
+        withTooltip && (
+          <StyledTooltip>
+            {children}
+          </StyledTooltip>
+        )
+      }
       <Icon size="xxsmall" name={iconName} fill={color} />
     </StyledIconButton>
   )
