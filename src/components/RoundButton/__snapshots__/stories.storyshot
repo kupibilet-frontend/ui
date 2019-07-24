@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots COMPONENTS|Controls/IconButton Default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -33,9 +33,6 @@ exports[`Storyshots COMPONENTS|Controls/IconButton Default 1`] = `
 }
 
 .c3 {
-  -webkit-transform: translate(-0%);
-  -ms-transform: translate(-0%);
-  transform: translate(-0%);
   -webkit-animation: 0.3s ease-in-out iOVxKt;
   animation: 0.3s ease-in-out iOVxKt;
   position: absolute;
@@ -91,7 +88,6 @@ exports[`Storyshots COMPONENTS|Controls/IconButton Default 1`] = `
 >
   <button
     className="c1"
-    color="fail"
   >
     <span
       className="c2 c3"

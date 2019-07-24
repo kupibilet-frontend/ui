@@ -6,7 +6,6 @@ const fadeIn = keyframes`
 `
 
 export const StyledTooltip = styled.span`
-  transform: translate(-0%);
   animation: 0.3s ease-in-out ${fadeIn};
   position: absolute;
   display: none;
@@ -19,7 +18,7 @@ export const StyledTooltip = styled.span`
   border-radius: 6px;
 `
 
-export const StyledIconButton = styled.button`
+export const StyledRoundButton = styled.button`
   position: relative;
   font-family: inherit;
   display: flex;
@@ -29,7 +28,7 @@ export const StyledIconButton = styled.button`
   height: 23px;
   outline: none;
   cursor: pointer;
-  border: ${({ theme, color }) => `1px solid ${theme.color[color]}`};
+  border: ${({ theme, buttonColor }) => `1px solid ${theme.color[buttonColor]}`};
   border-radius: 50px;
   transition: .3s;
 
@@ -37,11 +36,11 @@ export const StyledIconButton = styled.button`
     box-shadow: 0px 2px 16px rgba(98, 112, 139, 0.5);
 
     ${StyledTooltip} {
-      display: ${({ withTooltip }) => (withTooltip ? 'inline' : 'none')};
+      display: ${({ shouldRenderTooltip }) => (shouldRenderTooltip ? 'inline' : 'none')};
     }
   }
 
   &:active {
-    box-shadow: ${({ theme, color }) => `0px 2px 16px rgba(98, 112, 139, 0.5), inset 0px 0px 0px 1px ${theme.color[color]}`};
+    box-shadow: ${({ theme, buttonColor }) => `0px 2px 16px rgba(98, 112, 139, 0.5), inset 0px 0px 0px 1px ${theme.color[buttonColor]}`};
   }
 `

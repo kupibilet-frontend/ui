@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { select, text } from '@storybook/addon-knobs'
 import icons from '@kupibilet/icons/dist/sprite.json'
 
-import IconButton from 'components/IconButton'
+import RoundButton from 'components/RoundButton'
 
-const withTooltipSelect = (defaultValue = true) => select(
-  'withTooltip',
+const shouldRenderTooltipSelect = (defaultValue = true) => select(
+  'shouldRenderTooltip',
   {
     true: true,
     false: false,
@@ -20,13 +20,13 @@ const iconNameSelect = (defaultValue = 'cross') => select(
   defaultValue,
 )
 
-storiesOf('COMPONENTS|Controls/IconButton', module)
+storiesOf('COMPONENTS|Controls/RoundButton', module)
   .add('Default', () => (
-    <IconButton
-      withTooltip={withTooltipSelect()}
+    <RoundButton
+      shouldRenderTooltip={shouldRenderTooltipSelect()}
       iconName={iconNameSelect()}
-      color={text('color', 'fail')}
+      buttonColor={text('color', 'fail')}
     >
       {text('tooltip', 'Сбросить')}
-    </IconButton>
+    </RoundButton>
   ))

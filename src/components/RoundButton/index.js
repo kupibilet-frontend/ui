@@ -4,45 +4,45 @@ import React from 'react'
 import type { Node } from 'react'
 import Icon from 'components/Icon'
 
-import { StyledIconButton, StyledTooltip } from './styled'
+import { StyledRoundButton, StyledTooltip } from './styled'
 
 type Props = {
-  onClick: Function,
-  withTooltip?: boolean,
+  onClick: () => null,
+  shouldRenderTooltip?: boolean,
   children: Node,
   iconName?: string,
-  color?: string,
+  buttonColor?: string,
 }
 
 const defaultProps = {
-  withTooltip: true,
+  shouldRenderTooltip: true,
   iconName: 'cross',
-  color: 'fail',
+  buttonColor: 'fail',
 }
 
 const IconButton = ({
   children,
-  withTooltip,
+  shouldRenderTooltip,
   iconName,
-  color,
+  buttonColor,
   onClick,
 }: Props) => {
   return (
-    <StyledIconButton
+    <StyledRoundButton
       onClick={onClick}
-      withTooltip={withTooltip}
+      shouldRenderTooltip={shouldRenderTooltip}
       iconName={iconName}
-      color={color}
+      buttonColor={buttonColor}
     >
       {
-        withTooltip && (
+        shouldRenderTooltip && (
           <StyledTooltip>
             {children}
           </StyledTooltip>
         )
       }
-      <Icon size="xxsmall" name={iconName} fill={color} />
-    </StyledIconButton>
+      <Icon size="xxsmall" name={iconName} fill={buttonColor} />
+    </StyledRoundButton>
   )
 }
 
