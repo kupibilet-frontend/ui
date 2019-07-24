@@ -25,11 +25,11 @@ export const StyledCheckbox = styled.span`
   height: 18px;
   width: 18px;
   line-height: 16px;
-  box-shadow: ${(props) => `inset 0 0 0 1px ${getCheckboxShadow(props, props.theme)}`};
+  box-shadow: ${({ disabled, checked, theme }) => `inset 0 0 0 1px ${getCheckboxShadow(disabled, checked, theme)}`};
 
   ${switchTransition};
   transition-property: background, border;
-  background: ${(props) => getCheckboxBackground(props, props.theme)};
+  background: ${({ disabled, checked, theme }) => getCheckboxBackground(disabled, checked, theme)};
   ${borderRadiusSmall.all}
 `
 
