@@ -20,7 +20,7 @@ const defaultProps = {
   buttonColor: 'fail',
 }
 
-const IconButton = ({
+const RoundButton = ({
   children,
   shouldRenderTooltip,
   iconName,
@@ -46,6 +46,6 @@ const IconButton = ({
   )
 }
 
-IconButton.defaultProps = defaultProps
+RoundButton.defaultProps = defaultProps
 
-export default IconButton
+export default RoundButton
