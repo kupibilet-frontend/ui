@@ -9,7 +9,8 @@ export const StyledTooltip = styled.span`
   animation: 0.3s ease-in-out ${fadeIn};
   position: absolute;
   display: none;
-  bottom: 28px;
+  bottom: 100%;
+  margin: 0 0 5px 0;
   white-space: nowrap;
   padding: 12px 18px;
   background-color: ${({ theme }) => theme.color.textDark};

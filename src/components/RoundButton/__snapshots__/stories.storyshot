@@ -37,7 +37,8 @@ exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
   animation: 0.3s ease-in-out iOVxKt;
   position: absolute;
   display: none;
-  bottom: 28px;
+  bottom: 100%;
+  margin: 0 0 5px 0;
   white-space: nowrap;
   padding: 12px 18px;
   background-color: #4d4d4d;
