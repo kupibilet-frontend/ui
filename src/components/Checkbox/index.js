@@ -1,7 +1,13 @@
 // @flow
 import React from 'react'
 import Icon from 'components/Icon'
-import { CheckboxLabel, StyledCheckbox, IconWrap, CheckboxInput, LabelText } from './styled'
+import {
+  CheckboxLabel,
+  StyledCheckbox,
+  IconWrap,
+  CheckboxInput,
+  LabelText,
+} from './styled'
 
 type Props = {
   onChange?: (InputEvent) => *,

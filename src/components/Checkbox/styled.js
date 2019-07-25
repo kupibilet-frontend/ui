@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { floatFromTop } from 'utils/animations'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import { getCheckboxBackground, getCheckboxShadow } from './helpers'
+import { getBackgroundColor, getShadowColor } from './helpers'
 
 export const CheckboxInput = styled.input`
   display: none;
@@ -25,11 +25,11 @@ export const StyledCheckbox = styled.span`
   height: 18px;
   width: 18px;
   line-height: 16px;
-  box-shadow: ${({ disabled, checked, theme }) => `inset 0 0 0 1px ${getCheckboxShadow(disabled, checked, theme)}`};
+  box-shadow: ${({ disabled, checked, theme }) => `inset 0 0 0 1px ${getShadowColor(disabled, checked, theme)}`};
 
   ${switchTransition};
   transition-property: background, border;
-  background: ${({ disabled, checked, theme }) => getCheckboxBackground(disabled, checked, theme)};
+  background: ${({ disabled, checked, theme }) => getBackgroundColor(disabled, checked, theme)};
   ${borderRadiusSmall.all}
 `
 
