@@ -204,7 +204,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
 }
 
 .c4:hover .checkbox {
-  border-color: #38afff;
+  border-color: #007acc;
 }
 
 .c4:hover .label-text {
