@@ -1,4 +1,5 @@
 import addons from '@storybook/addons'
+import { CHANGE } from '@storybook/addon-knobs'
 
 /**
  * You must provide in:
@@ -14,5 +15,8 @@ export default function updateKnob(name, type, value) {
     value = value.valueOf() // eslint-disable-line no-param-reassign
   }
 
-  channel.emit('storybooks/knobs/change', { name, type, value })
+  channel.emit(CHANGE || 'storybookjs/knobs/change', { name, type, value })
+  if (!CHANGE) {
+    channel.emit('storybook/knobs/change', { name, type, value })
+  }
 }

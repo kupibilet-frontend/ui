@@ -1,13 +1,26 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React, { PureComponent } from 'react'
 import 'whatwg-fetch'
 import _throttle from 'lodash/throttle'
+import get from 'lodash/get'
+import groupBy from 'lodash/groupBy'
 
 import Autocomplete from 'components/Autocomplete'
 import AirportInput from 'components/AirportInput'
 import AirportSuggest from 'components/AirportSuggest'
 
-class AutocompleteStatefulWrapper extends React.PureComponent {
+const getMultiSectionSuggestions = (suggestions) => {
+  const suggestsGroupByCountry = Object.entries(
+    groupBy(suggestions,
+      (suggest) => get(suggest, 'country', 'Нет страны')),
+  )
+
+  return suggestsGroupByCountry.map(([country, cities]) => ({
+    title: country,
+    values: cities,
+  }))
+}
+
+class AutocompleteStateful extends PureComponent {
   static propTypes = Autocomplete.propTypes
   static defaultProps = Autocomplete.defaultProps
 
@@ -19,9 +32,10 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
 
   fetchSuggestions = _throttle(async ({ value }) => {
     try {
+      const { multiSection } = this.props
       const result = await fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
       const { data } = await result.json()
-      const suggestions = data.map((suggest) => {
+      const formattedSuggestions = data.map((suggest) => {
         const isCity = !suggest.city_code
         const city = (suggest.city_name || suggest.name).ru
         const country = suggest.country_name && suggest.country_name.ru
@@ -35,6 +49,9 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
           isGeoSuggest: false,
         }
       })
+      const suggestions = multiSection
+        ? getMultiSectionSuggestions(formattedSuggestions)
+        : formattedSuggestions
 
       if (value === this.state.value) {
         this.setState({ suggestions })
@@ -76,6 +93,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
 
   render() {
     const { value, suggest, suggestions } = this.state
+    const { inputProps, ...restProps } = this.props
 
     return (
       <Autocomplete
@@ -86,6 +104,7 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
           type: 'text',
           autoFocus: true,
           ...suggest,
+          ...inputProps,
         }}
         highlightFirstSuggestion
         suggestions={suggestions}
@@ -99,42 +118,10 @@ class AutocompleteStatefulWrapper extends React.PureComponent {
           <AirportInput {...props} />
         )}
         shouldRenderSuggestions={this.shouldRenderSuggestions}
+        {...restProps}
       />
     )
   }
 }
 
-// Dummy props for storybook doc
-const STORY_DOC_PROPS = {
-  inputProps: {
-    value: '',
-    onChange: () => {},
-  },
-  highlightFirstSuggestion: true,
-  suggestions: [],
-  onSuggestionsFetchRequested: () => {},
-  onSuggestionsClearRequested: () => {},
-  onSuggestionSelected: () => {},
-  renderSuggestion: (suggestion) => (
-    <AirportSuggest {...suggestion} />
-  ),
-  renderInputComponent: (props) => (
-    <AirportInput {...props} />
-  ),
-}
-
-storiesOf('COMPONENTS|Controls/Autocomplete', module)
-  .add(
-    'Airport',
-    () => (
-      <div style={{ width: 244 }}>
-        <AutocompleteStatefulWrapper {...STORY_DOC_PROPS} />
-      </div>
-    ),
-    {
-      notes: `
-        Uses <AirportInput /> and <AirportSuggest />.
-        Can be used inside <ControlsGroup />
-      `,
-    },
-  )
+export default AutocompleteStateful

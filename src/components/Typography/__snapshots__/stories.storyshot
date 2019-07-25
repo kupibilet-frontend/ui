@@ -78,6 +78,12 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   line-height: 18px;
 }
 
+.c8 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 .c2 {
   font-size: 38px;
   font-weight: 600;
@@ -93,12 +99,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-}
-
-.c8 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
 }
 
 .c4 {
