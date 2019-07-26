@@ -98,7 +98,7 @@ export class RoundInput extends PureComponent<Props, State> {
         success={success}
         onFocus={() => this.handleFocus()}
         onBlur={() => this.handleBlur()}
-        innerRef={(el) => this.innerRef(el)}
+        ref={(el) => this.innerRef(el)}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         placeholder={placeholder}
