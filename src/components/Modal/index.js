@@ -48,8 +48,8 @@ type Props = {
   footer?: React.Element<*>,
   onClose: Function,
   heading: string,
-  renderHeader?: React.Element<*>,
-  renderContent?: React.Element<*>,
+  renderHeader?: React.Element<*> | () => node,
+  renderContent?: React.Element<*> | () => node,
   isOpen: boolean,
 }
 
