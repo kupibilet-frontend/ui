@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { PureComponent } from 'react'
 import ControlsGroup from 'components/ControlsGroup'
 
 /* eslint-disable  react/jsx-no-bind */
@@ -42,7 +42,7 @@ type State = {
   isActive: boolean,
 }
 
-class InputControl extends React.PureComponent<Props, State> {
+class InputControl extends PureComponent<Props, State> {
   static defaultProps = {
     name: 'input',
     size: 'normal',

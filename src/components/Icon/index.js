@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { withTheme, keyframes } from 'styled-components'
+import styled, { withTheme, keyframes, css } from 'styled-components'
 import cn from 'classnames'
 
 import { switchTransition } from 'utils/transitions'
@@ -53,9 +53,7 @@ const IconSvg = styled.svg`
     }
   }}
 
-  ${({ name }) => name === 'spinner' && `
-    animation: ${preloader} 3s infinite ease-in-out;
-  `}
+  animation: ${({ name }) => (name === 'spinner' ? css`${preloader} 3s infinite ease-in-out;` : '')}
 `
 
 export const IconWrapper = styled.span`

@@ -343,6 +343,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport 1`] = `
           className="react-autosuggest__input c4"
           onBlur={[Function]}
           onChange={[Function]}
+          onClick={null}
           onFocus={[Function]}
           onKeyDown={[Function]}
           placeholder="Туда"
@@ -719,6 +720,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport with multiply secti
           className="react-autosuggest__input c4"
           onBlur={[Function]}
           onChange={[Function]}
+          onClick={null}
           onFocus={[Function]}
           onKeyDown={[Function]}
           placeholder="Туда"

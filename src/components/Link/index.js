@@ -24,7 +24,7 @@ const cloneIconWithSize = (iconNode) => (
 )
 
 type Props = {
-  children: Element<*>,
+  children: Element<*> | string,
   leftIcon?: Element<*>,
   rightIcon?: Element<*>,
   href?: string,

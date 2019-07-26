@@ -105,9 +105,9 @@ const FilterSection = (props) => (
 )
 
 FilterSection.propTypes = {
-  headerLeft: PropTypes.node.isRequired,
-  headerRight: PropTypes.node.isRequired,
-  content: PropTypes.node.isRequired,
+  headerLeft: PropTypes.node,
+  headerRight: PropTypes.node,
+  content: PropTypes.node,
   collapse: PropTypes.node,
   className: PropTypes.string,
 }
@@ -115,6 +115,9 @@ FilterSection.propTypes = {
 FilterSection.defaultProps = {
   collapse: null,
   className: '',
+  headerLeft: undefined,
+  headerRight: undefined,
+  content: undefined,
 }
 
 FilterSection.Collapse = Collapse

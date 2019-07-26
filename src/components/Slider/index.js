@@ -40,8 +40,8 @@ type Props = {
   max: number,
   values: SliderValues,
   disabled: boolean,
-  snap: boolean,
-  snapPoints: Array<number>,
+  snap?: boolean,
+  snapPoints?: Array<number>,
   sliderData: SliderData,
   progressBar: () => Element,
   handle: () => Element,
@@ -126,6 +126,10 @@ export default class Slider extends React.Component<Props, State> {
     disabled: false,
     onChange: noop,
     onValuesUpdated: noop,
+    values: [],
+    sliderData: {},
+    snap: undefined,
+    snapPoints: undefined,
   }
   constructor(props: Props) {
     super(props)

@@ -1,6 +1,7 @@
+import styled from 'styled-components'
 import Link from 'components/Link'
 
-const DefaultHeaderLogo = Link.extend`
+const DefaultHeaderLogo = styled(Link)`
   display: block;
   height: 24px;
   width: 132px;

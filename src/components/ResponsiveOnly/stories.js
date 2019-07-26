@@ -13,16 +13,16 @@ const StoryTip = styled.div`
   background: purple;
   color: white;
 `
-const HandheldStoryTip = StoryTip.extend`
+const HandheldStoryTip = styled(StoryTip)`
   background: skyblue;
 `
-const TabletStoryTip = StoryTip.extend`
+const TabletStoryTip = styled(StoryTip)`
   background: greenyellow;
 `
-const MobileStoryTip = StoryTip.extend`
+const MobileStoryTip = styled(StoryTip)`
   background: dodgerblue;
 `
-const NotMobileStoryTip = StoryTip.extend`
+const NotMobileStoryTip = styled(StoryTip)`
   background: black;
 `
 

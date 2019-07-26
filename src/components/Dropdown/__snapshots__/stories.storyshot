@@ -87,6 +87,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Dropdown Defalut 1`] = `
   <onClickOutside-Mock-Decorator>
     <div
       className="c1 c2"
+      onToggle={[Function]}
     >
       <div
         onClick={[Function]}

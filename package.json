@@ -105,7 +105,7 @@
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
     "snyk": "^1.173.1",
-    "styled-components": "^3.2.5",
+    "styled-components": "^4.2.0",
     "versionize": "^1.0.6",
     "whatwg-fetch": "^3.0.0"
   },
@@ -133,6 +133,6 @@
     "react-addons-shallow-compare": "~15.5.2",
     "react-dom": "^15.5.0 || ^16.3.0",
     "react-onclickoutside": "^6.4.0",
-    "styled-components": "^3.2.5"
+    "styled-components": "^4.2.0"
   }
 }
