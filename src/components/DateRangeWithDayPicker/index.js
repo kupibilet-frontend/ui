@@ -496,7 +496,6 @@ class ReactDayPicker extends PureComponent <Props, State> {
         isOpen={showCalendar}
         onClose={this.closeDayPicker}
         shouldRenderCloseIcon={false}
-        footer={() => null}
       >
         {mobileCalendarHeader}
         {calendar}
