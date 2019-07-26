@@ -33,7 +33,7 @@ type Props = {
   rightIcon?: React$Element<*>,
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
-  innerRef?: Function,
+  ref?: Function,
   children?: React$Element<*>[],
   isTextarea?: boolean,
 }
@@ -76,10 +76,10 @@ class InputControl extends PureComponent<Props, State> {
   }
 
   innerRef(node) {
-    const { innerRef } = this.props
+    const { ref } = this.props
     this.innerInput = node
-    if (innerRef) {
-      this.props.innerRef(node)
+    if (ref) {
+      this.props.ref(node)
     }
   }
 
