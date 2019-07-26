@@ -448,6 +448,7 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput default 1`] = `
         autoComplete="off"
         className="c2"
         onBlur={[Function]}
+        onClick={null}
         onFocus={[Function]}
         onKeyDown={[Function]}
         placeholder="Дата вылета"

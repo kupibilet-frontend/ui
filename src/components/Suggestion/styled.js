@@ -45,7 +45,7 @@ export const SuggestionIcon = styled.div`
   align-items: center;
   justify-content: center;
 `
-export const SuggestionText = Text.withComponent('div').extend`
+export const SuggestionText = styled(Text.withComponent('div'))`
   flex-grow: 1;
   white-space: nowrap;
 `

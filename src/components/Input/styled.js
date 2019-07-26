@@ -154,7 +154,7 @@ const InnerInput = styled.input`
   }
   `
 
-const InnerTextarea = InnerInput.withComponent('textarea').extend`
+const InnerTextarea = styled(InnerInput.withComponent('textarea'))`
   ${({ size }) => (`
       padding-top: ${TEXTAREA_PADDINGS[size]}px;
       padding-bottom: ${TEXTAREA_PADDINGS[size]}px;

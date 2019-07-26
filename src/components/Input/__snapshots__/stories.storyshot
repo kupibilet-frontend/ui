@@ -157,7 +157,7 @@ exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
     size="large"
   >
     <textarea
-      className="c2"
+      className="-textarea c2"
       disabled={false}
       name="input"
       onBlur={[Function]}

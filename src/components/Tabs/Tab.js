@@ -1,5 +1,4 @@
-// @flow
-import * as React from 'react'
+import React, { PureComponent } from 'react'
 
 /* eslint-disable react/prop-types */
 type Props = {
@@ -9,7 +8,7 @@ type Props = {
   children: React.Node,
 }
 
-export default class Tab extends React.PureComponent<Props> {
+export default class Tab extends PureComponent<Props, void> {
   onFocus = (e: MouseEvent) => {
     const { tabKey, onTabChange } = this.props
     e.preventDefault()

@@ -11,6 +11,7 @@ type Props = {
   area: string,
   spell: string,
   IATACode: string,
+  onClick?: (SyntheticInputEvent) => void,
   onFocus?: (SyntheticInputEvent) => void,
   onBlur?: (SyntheticInputEvent) => void,
   onKeyDown?: (SyntheticKeyboardEvent) => void,
@@ -24,7 +25,7 @@ type State = {
   focused: boolean,
 }
 
-export default class AirportInput extends React.PureComponent<Props, State> {
+export default class AirportInput extends React.PureComponent<Props, State, null> {
   /* eslint-disable react/sort-comp */
   static defaultProps = {
     area: '',
@@ -35,6 +36,7 @@ export default class AirportInput extends React.PureComponent<Props, State> {
     onKeyDown: null,
     neighboringInGroup: null,
     meta: {},
+    onClick: null,
   }
 
   input: Input = null

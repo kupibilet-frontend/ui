@@ -4,6 +4,32 @@ import PropTypes from 'prop-types'
 // when flow and prop-types used together
 
 class RadioGroup extends Component {
+  static propTypes = {
+    selectedValue: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool,
+    ]),
+    onChange: PropTypes.func.isRequired,
+    children: PropTypes.oneOf([
+      PropTypes.arrayOf(PropTypes.element),
+      PropTypes.element,
+    ]).isRequired,
+  }
+
+  static childContextTypes = {
+    selectedValue: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool,
+    ]),
+    onChange: PropTypes.func,
+  }
+
+  static defaultProps = {
+    selectedValue: '',
+  }
+
   getChildContext() {
     const { selectedValue, onChange } = this.props
 
@@ -22,29 +48,6 @@ class RadioGroup extends Component {
       </div>
     )
   }
-}
-
-RadioGroup.propTypes = {
-  selectedValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]),
-  onChange: PropTypes.func.isRequired,
-  children: PropTypes.element.isRequired,
-}
-
-RadioGroup.defaultProps = {
-  selectedValue: '',
-}
-
-RadioGroup.childContextTypes = {
-  selectedValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]),
-  onChange: PropTypes.func,
 }
 
 export default RadioGroup

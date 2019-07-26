@@ -13,23 +13,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   box-sizing: border-box;
 }
 
-.c2 {
-  margin: 0 auto;
-  max-width: 966px;
-}
-
-.c4 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 38px;
-  -webkit-letter-spacing: -1px;
-  -moz-letter-spacing: -1px;
-  -ms-letter-spacing: -1px;
-  letter-spacing: -1px;
-  margin: 0;
-}
-
-.c7 {
+.c5 {
   border-radius: 24px;
   padding: 24px 30px;
   background-color: #FFF2FE;
@@ -37,7 +21,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   min-width: 294px;
 }
 
-.c7::after {
+.c5::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -49,7 +33,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   border-left: 16px solid #FFF2FE;
 }
 
-.c12 {
+.c8 {
   border-radius: 24px;
   padding: 24px 30px;
   background-color: #E8F7FF;
@@ -57,7 +41,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   min-width: 294px;
 }
 
-.c12::after {
+.c8::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -69,7 +53,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   border-left: 16px solid #E8F7FF;
 }
 
-.c13 {
+.c9 {
   border-radius: 24px;
   padding: 24px 30px;
   background-color: #E6FFEE;
@@ -77,7 +61,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   min-width: 294px;
 }
 
-.c13::after {
+.c9::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -89,64 +73,97 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   border-left: 16px solid #E6FFEE;
 }
 
-.c6 {
+.c4 {
   max-width: 756px;
   margin: 0 auto 6px;
 }
 
-.c5 {
+.c3 {
   margin-bottom: 36px;
 }
 
-.c11 {
+.c7 {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-}
-
-.c10 {
   color: #808080;
   text-align: right;
   padding-right: 100px;
   margin-top: 2px;
 }
 
-.c9 {
+.c6 {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-}
-
-.c8 {
   white-space: pre-line;
 }
 
-.c3 {
+.c2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 38px;
+  -webkit-letter-spacing: -1px;
+  -moz-letter-spacing: -1px;
+  -ms-letter-spacing: -1px;
+  letter-spacing: -1px;
+  margin: 0;
   margin: 0 auto 9px;
   text-align: center;
   max-width: 425px;
 }
 
 .c1 {
+  margin: 0 auto;
+  max-width: 966px;
   padding-top: 60px;
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    border-radius: 0;
+    padding: 12px 18px 18px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c8,
+  .responsive-booking .c8 {
+    border-radius: 0;
+    padding: 12px 18px 18px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c9,
+  .responsive-booking .c9 {
+    border-radius: 0;
+    padding: 12px 18px 18px;
+    display: block;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    margin: 0 -18px 24px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c6,
+  .responsive-booking .c6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width:1199px) {
   .responsive .c2,
   .responsive-booking .c2 {
-    margin: 0 18px;
-  }
-}
-
-@media screen and (min-width:1000px) {
-  .c2.c2 {
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width:1199px) {
-  .responsive .c4,
-  .responsive-booking .c4 {
     font-size: 24px;
     line-height: 28px;
     -webkit-letter-spacing: -.4px;
@@ -157,51 +174,22 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
 }
 
 @media screen and (max-width:599px) {
-  .responsive .c7,
-  .responsive-booking .c7 {
-    border-radius: 0;
-    padding: 12px 18px 18px;
-    display: block;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c12,
-  .responsive-booking .c12 {
-    border-radius: 0;
-    padding: 12px 18px 18px;
-    display: block;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c13,
-  .responsive-booking .c13 {
-    border-radius: 0;
-    padding: 12px 18px 18px;
-    display: block;
-  }
-}
-
-@media screen and (max-width:599px) {
-  .responsive .c5,
-  .responsive-booking .c5 {
-    margin: 0 -18px 24px;
+  .responsive .c2,
+  .responsive-booking .c2 {
+    margin-bottom: 12px;
   }
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c9,
-  .responsive-booking .c9 {
-    font-size: 16px;
-    line-height: 20px;
+  .responsive .c1,
+  .responsive-booking .c1 {
+    margin: 0 18px;
   }
 }
 
-@media screen and (max-width:599px) {
-  .responsive .c3,
-  .responsive-booking .c3 {
-    margin-bottom: 12px;
+@media screen and (min-width:1000px) {
+  .c1.c1 {
+    margin: 0 auto;
   }
 }
 
@@ -209,30 +197,30 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
   className="responsive c0"
 >
   <div
-    className="c1 c2"
+    className="c1"
   >
     <h2
-      className="c3 c4"
+      className="c2"
     >
       Отзывы
     </h2>
     <div
-      className="c5"
+      className="c3"
     >
       <div
-        className="c6"
+        className="c4"
       >
         <div
-          className="c7"
+          className="c5"
         >
           <p
-            className="c8 -p c9"
+            className="-p c6"
           >
             Пишите код, исходя из того, что все программисты, которые будут сопровождать вашу программу, — склонные к насилию психопаты, знающие, где вы живёте
           </p>
         </div>
         <p
-          className="c10 -p c11"
+          className="-p c7"
         >
           Мартин Голдинг
           
@@ -240,22 +228,22 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="c3"
     >
       <div
-        className="c6"
+        className="c4"
       >
         <div
-          className="c12"
+          className="c8"
         >
           <p
-            className="c8 -p c9"
+            className="-p c6"
           >
             Здесь будет ваша реклама
           </p>
         </div>
         <p
-          className="c10 -p c11"
+          className="-p c7"
         >
           Тест Тестов
           , 
@@ -264,22 +252,22 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
       </div>
     </div>
     <div
-      className="c5"
+      className="c3"
     >
       <div
-        className="c6"
+        className="c4"
       >
         <div
-          className="c13"
+          className="c9"
         >
           <p
-            className="c8 -p c9"
+            className="-p c6"
           >
             А тут пусто
           </p>
         </div>
         <p
-          className="c10 -p c11"
+          className="-p c7"
         >
           
         </p>

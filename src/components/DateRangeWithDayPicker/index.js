@@ -30,8 +30,8 @@ import {
 } from './styled'
 
 type Props = {
-  fromDate: {},
-  toDate: {},
+  fromDate: string | Object,
+  toDate: string | Object,
   isTablet: boolean,
   isDesktop: boolean,
   isMobile: boolean,
@@ -119,8 +119,8 @@ class ReactDayPicker extends PureComponent <Props, State> {
   static defaultProps = {
     changeFromDate: () => {},
     changeToDate: () => {},
-    fromDate: null,
-    toDate: null,
+    fromDate: '',
+    toDate: '',
     isTablet: false,
     isDesktop: true,
     isMobile: false,
