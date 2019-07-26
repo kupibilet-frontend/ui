@@ -55,7 +55,7 @@ export const renderDefaultHeader = (props: HeaderProps) => (
 export const StyledPanel = (props: StyledCollapseProps) => (
   <StyledCollapse.Panel
     {...props}
-    header={props.renderHeader(props)}
+    header={props.renderHeader ? props.renderHeader(props) : renderDefaultHeader(props)}
   >
     <PanelContentWrapper withPadding={props.withPadding}>
       {props.children}
