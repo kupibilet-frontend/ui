@@ -26,8 +26,8 @@ const sizesSelect = (defaultValue = 'large') => select(
 
 const isRequired = (value) => (value ? undefined : 'Поле должно быть заполнено')
 
-storiesOf('Controls/Input', module)
-  .addWithInfo('default', () => {
+storiesOf('COMPONENTS|Controls/Input', module)
+  .add('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -44,7 +44,7 @@ storiesOf('Controls/Input', module)
       />
     )
   })
-  .addWithInfo('Separate inputs group', () => {
+  .add('Separate inputs group', () => {
     return (
       <ControlsGroup>
         <Input
@@ -65,7 +65,7 @@ storiesOf('Controls/Input', module)
       </ControlsGroup>
     )
   })
-  .addWithInfo('Combined inputs group', () => {
+  .add('Combined inputs group', () => {
     return (
       <Input
         size={sizesSelect()}
@@ -85,7 +85,7 @@ storiesOf('Controls/Input', module)
       </Input>
     )
   })
-  .addWithInfo('With icons', () => {
+  .add('With icons', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -104,7 +104,7 @@ storiesOf('Controls/Input', module)
       />
     )
   })
-  .addWithInfo('With icon group', () => {
+  .add('With icon group', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -126,7 +126,7 @@ storiesOf('Controls/Input', module)
     )
   })
   .addDecorator(withReduxForm)
-  .addWithInfo('With RF + validation', () => {
+  .add('With RF + validation', () => {
     return (
       <Field
         component={RFInput}
@@ -137,7 +137,7 @@ storiesOf('Controls/Input', module)
       />
     )
   })
-  .addWithInfo('As textarea', () => {
+  .add('As textarea', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)

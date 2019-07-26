@@ -3,7 +3,9 @@ import React, { PureComponent } from 'react'
 /* eslint-disable react/prop-types */
 type Props = {
   onTabChange: (string) => void,
-  isActive: bool,
+  tabKey: string,
+  isActive: boolean,
+  children: React.Node,
 }
 
 export default class Tab extends PureComponent<Props, void> {

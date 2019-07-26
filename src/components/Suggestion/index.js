@@ -31,8 +31,8 @@ const Suggestion = (props: Props) => {
   return (
     <SuggestionContainer isHighlighted={isHighlighted} title={getSuggestionValue(suggestion)}>
       <SuggestionIcon>
-        {selectedKey === getSuggestionKey(suggestion) &&
-          <Icon name="checkmark" fill="primaryLight" />
+        {selectedKey === getSuggestionKey(suggestion)
+          && <Icon name="checkmark" fill="primaryLight" />
         }
       </SuggestionIcon>
       <SuggestionText>

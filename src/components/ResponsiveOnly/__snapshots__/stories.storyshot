@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots COMPONENTS|Utils Responsive only 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+}
+
+.c4 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: skyblue;
+}
+
+.c6 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: greenyellow;
+}
+
+.c8 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: dodgerblue;
+}
+
+.c10 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
+  background: black;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:600px) and (max-width:1199px) {
+  .responsive .c7,
+  .responsive-booking .c7 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c5,
+  .responsive-booking .c5 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .responsive .c9,
+  .responsive-booking .c9 {
+    display: none;
+  }
+}
+
+<div
+  className="responsive c0"
+>
+  <div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        Desktop
+      </div>
+    </div>
+    <div
+      className="c3"
+    >
+      <div
+        className="c4"
+      >
+        Handheld
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        Tablet
+      </div>
+    </div>
+    <div
+      className="c7"
+    >
+      <div
+        className="c8"
+      >
+        Mobile
+      </div>
+    </div>
+    <div
+      className="c9"
+    >
+      <div
+        className="c10"
+      >
+        Not mobile
+      </div>
+    </div>
+  </div>
+</div>
+`;

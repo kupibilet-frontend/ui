@@ -31,13 +31,13 @@ const AsideContent = () => (
   </div>
 )
 
-storiesOf('Layout/Fluid layout', module)
+storiesOf('COMPONENTS|Layout/Fluid layout', module)
   .addDecorator((story) => (
     <div style={{ width: '100vw' }}>
       { story() }
     </div>
   ))
-  .addWithInfo(
+  .add(
     'Two columns',
     () => (
       <FluidContainer>
@@ -50,7 +50,7 @@ storiesOf('Layout/Fluid layout', module)
       </FluidContainer>
     ),
   )
-  .addWithInfo(
+  .add(
     'Aside on top with beforeSection prop',
     () => (
       <FluidContainer>
@@ -63,7 +63,7 @@ storiesOf('Layout/Fluid layout', module)
       </FluidContainer>
     ),
   )
-  .addWithInfo('Single column', () => (
+  .add('Single column', () => (
     <SingleFluidSection>
       <MainContent />
     </SingleFluidSection>

@@ -67,6 +67,9 @@ type Props = controlsGroupProps & {
   highlightFirstSuggestion: boolean,
   theme: ?Object,
   id: ?string,
+
+  isSuggestAlreadySelected?: (props: Props) => boolean,
+  isValueEqualWithFirstSugget?: (string, Suggestion[]) => boolean,
 }
 
 type State = {
@@ -87,10 +90,9 @@ const getFirstSuggestion = ({ suggestions, multiSection }: Props) => {
 const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }: Props) => (
   createSectionIterator({
     multiSection,
-    data: multiSection ?
-      suggestions.map((section) => getSectionSuggestions(section).length)
-      :
-      suggestions.length,
+    data: multiSection
+      ? suggestions.map((section) => getSectionSuggestions(section).length)
+      : suggestions.length,
   })
 )
 
@@ -120,21 +122,31 @@ class Autocomplete extends PureComponent<Props, State> {
         {children}
       </SuggestionsContainer>
     ),
+    isSuggestAlreadySelected: (props) => Boolean(props.inputProps.IATACode),
+    isValueEqualWithFirstSuggest: (value, suggestions) => (
+      isValuesEqual(value, _get(suggestions, '0.value'))
+      || isValuesEqual(value, _get(suggestions, '0.IATACode'))
+    ),
   }
   /* eslint-enable react/sort-comp */
 
   // TODO airbnb config for `react/sort-comp` are missing UNSAFE_ lifecycles
   // eslint-disable-next-line camelcase, react/sort-comp
   UNSAFE_componentWillReceiveProps(nextProps: Props) {
-    const { suggestions, multiSection, inputProps, forceSuggestedValue } = nextProps
-    const { value, IATACode, meta } = inputProps
+    const {
+      suggestions,
+      multiSection,
+      inputProps,
+      forceSuggestedValue,
+      isSuggestAlreadySelected,
+      isValueEqualWithFirstSuggest,
+    } = nextProps
+    const { value, meta } = inputProps
 
-    // TODO extract IATA related and 'autoSuggest'
-    const isSuggestAlreadySelected = Boolean(IATACode)
-    const valueEqualsWithSuggest = isValuesEqual(value, _get(suggestions, '0.value')) ||
-      isValuesEqual(value, _get(suggestions, '0.IATACode'))
+    const valueIsEqualWithFirstSuggest = isValueEqualWithFirstSuggest(value, suggestions)
+    const suggestIsAlreadySelected = isSuggestAlreadySelected(nextProps)
 
-    if (valueEqualsWithSuggest && !isSuggestAlreadySelected && suggestions.length === 1) {
+    if (valueIsEqualWithFirstSuggest && !suggestIsAlreadySelected && suggestions.length === 1) {
       this.selectFirstSuggest(null, nextProps, 'autoSuggest')
       this.setState({ suggestions: [] })
     } else if (forceSuggestedValue && suggestions.length && meta && !meta.active) {
@@ -156,8 +168,10 @@ class Autocomplete extends PureComponent<Props, State> {
     let suggestion = null
     if (['down', 'up'].includes(payload.method)) {
       const iterate = this.sectionIterator[payload.method === 'down' ? 'next' : 'prev']
-      const [sectionIndex, suggestIndex] =
-        iterate([highlightedSectionIndex, highlightedSuggestionIndex])
+      const [sectionIndex, suggestIndex] = iterate([
+        highlightedSectionIndex,
+        highlightedSuggestionIndex,
+      ])
       suggestion = this.autosuggestInstance.getSuggestion(sectionIndex, suggestIndex)
     }
 

@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import Rheostat from 'rheostat'
 import { switchTransition } from '../../utils/transitions'
 
+// helpers
+import { getHandleBgColor, getBarColor } from './helpers'
+
 const StyledSlider = styled(Rheostat)`
   width: 100%;
   height: 100%;
@@ -13,10 +16,10 @@ const StyledSlider = styled(Rheostat)`
     width: 100%;
     z-index: 2;
   }
-  `
+`
 
 const StyledProgressBar = styled.span`
-  background-color: ${({ theme }) => theme.color.primaryLighter};
+  background-color: ${({ theme }) => theme.color.primary};
   display: flex;
   margin-left: 1px;
   position: absolute;
@@ -25,15 +28,9 @@ const StyledProgressBar = styled.span`
   z-index: 4;
 `
 
-const StyledHandle = styled.span.attrs({
-  backgroundcolor: (props) => ((
-    props['aria-valuenow'] === props['aria-valuemin'] ||
-    props['aria-valuenow'] === props['aria-valuemax']
-  ) ? props.theme.color.miscDark : props.theme.color.primary
-  ),
-})`
+const StyledHandle = styled.span`
   ${switchTransition}
-  background-color: ${({ backgroundcolor }) => backgroundcolor};
+  background-color: ${getHandleBgColor};
   transition-property: background-color, box-shadow;
   border-radius: 50%;
   cursor: pointer;
@@ -43,16 +40,11 @@ const StyledHandle = styled.span.attrs({
   z-index: 5;
   transform: translateX(-50%);
 
-   &:hover, &:active {
-     background-color: ${({ theme }) => theme.color.primary};
-     box-shadow: 0 0 0 1px ${({ theme }) => theme.color.primary};
-   }
-  `
+    &:hover, &:active {
+      box-shadow: 0px 2px 4px rgba(98, 112, 139, 0.6);
+    }
+`
 
-const getBarColor = ({ isHighlighted, theme }) => (isHighlighted
-  ? theme.color.secondaryLight
-  : theme.color.miscLighter
-)
 const StyledPitComponent = styled.span`
   background-color: ${getBarColor};
   font-size: 0;

@@ -10,8 +10,8 @@ const onToggle = () => {
   updateKnob('rotate', 'boolean', !boolean('rotate', false))
 }
 
-storiesOf('Controls/Link', module)
-  .addWithInfo('<span> link', () => (
+storiesOf('COMPONENTS|Controls/Link', module)
+  .add('<span> link', () => (
     <Link
       onClick={onToggle}
       rightIcon={
@@ -21,7 +21,7 @@ storiesOf('Controls/Link', module)
       Dropdown link
     </Link>
   ))
-  .addWithInfo('<a> link', () => (
+  .add('<a> link', () => (
     // eslint-disable-next-line no-script-url
     <Link href="javascript:void(0)">
       I will click you

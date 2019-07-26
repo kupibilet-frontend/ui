@@ -1,7 +1,13 @@
 // @flow
 import React from 'react'
 import Icon from 'components/Icon'
-import { CheckboxLabel, StyledCheckbox, IconWrap, CheckboxInput, LabelText } from './styled'
+import {
+  CheckboxLabel,
+  StyledCheckbox,
+  IconWrap,
+  CheckboxInput,
+  LabelText,
+} from './styled'
 
 type Props = {
   onChange?: (InputEvent) => *,
@@ -39,7 +45,7 @@ export class Checkbox extends React.PureComponent<Props, void> {
           checked={checked}
         >
           {
-            checked ? (
+            (checked && !disabled) ? (
               <IconWrap checked={checked}>
                 <Icon name="checkmark" fill="background" />
               </IconWrap>

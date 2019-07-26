@@ -20,8 +20,8 @@ const FakeInput = ({ chidlren, onBlur, onFocus, neighboringInGroup, focused, ...
   )
 }
 
-storiesOf('Controls/AirportInput', module)
-  .addWithInfo('default', () => {
+storiesOf('COMPONENTS|Controls/AirportInput', module)
+  .add('default', () => {
     const placeholder = text('placeholder', 'Дата вылета')
     const value = text('value', '1 апр')
 
@@ -34,7 +34,7 @@ storiesOf('Controls/AirportInput', module)
       </div>
     )
   })
-  .addWithInfo('Fake input, based on div', () => {
+  .add('Fake input, based on div', () => {
     const placeholder = text('placeholder', 'Дата вылета')
     const value = text('value', '1 апр')
 

@@ -52,8 +52,8 @@ const texts = (
   </div>
 )
 
-storiesOf('Utils', module)
-  .addWithInfo('Typography', () => (
+storiesOf('COMPONENTS|Utils', module)
+  .add('Typography', () => (
     <div
       style={{
         display: 'flex',
@@ -66,7 +66,7 @@ storiesOf('Utils', module)
       { texts }
     </div>
   ))
-  .addWithInfo('List', () => (
+  .add('List', () => (
     <List style={{ width: '284px' }}>
       <ListItem>Мы рады всем карточкам и банкам</ListItem>
       <ListItem>Гарантируем быстрый возврат средств</ListItem>

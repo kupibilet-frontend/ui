@@ -9,8 +9,8 @@ const getContent = () => (
   <div>
     { text(
       'content',
-      'Премия в области научно-популярной литературы «Просветитель» \n' +
-      'была учреждена основателем и почетным президентом.',
+      'Премия в области научно-популярной литературы «Просветитель» \n'
+      + 'была учреждена основателем и почетным президентом.',
     ) }
   </div>
 )
@@ -48,8 +48,8 @@ const CarrotButton = (props) => (
   <Button icon={<Icon name="carrot_monochrome" inheritColor />} {...props} />
 )
 
-storiesOf('Controls/Popover', module)
-  .addWithInfo('default', () => {
+storiesOf('COMPONENTS|Controls/Popover', module)
+  .add('default', () => {
     const content = getContent()
     const placement = getPlacement()
 
@@ -62,7 +62,7 @@ storiesOf('Controls/Popover', module)
       </Popover>
     )
   })
-  .addWithInfo('With Header&Large', () => {
+  .add('With Header&Large', () => {
     const header = text('header', 'Красивый зайчик в шоке')
     const content = getContent()
     const placement = getPlacement()
@@ -79,11 +79,8 @@ storiesOf('Controls/Popover', module)
     )
   })
 
-  .addWithInfo(
+  .add(
     'With `align` prop',
-    `
-      >>> **Align just works like 'align-items' in flex-box and can't be in same direction with 'placement' prop**
-    `,
     () => {
       const content = getContent()
       const placement = getPlacement()
@@ -99,12 +96,14 @@ storiesOf('Controls/Popover', module)
         </Popover>
       )
     },
+    {
+      notes: `
+        >>> **Align just works like 'align-items' in flex-box and can't be in same direction with 'placement' prop**
+      `,
+    },
   )
-  .addWithInfo(
+  .add(
     'With `dotCentering` prop',
-    `
-      >>> I don't realy understand what this prop can do, but Selutin said very like this feature
-    `,
     () => {
       const content = getContent()
       const placement = getPlacement()
@@ -124,5 +123,10 @@ storiesOf('Controls/Popover', module)
           />
         </Popover>
       )
+    },
+    {
+      notes: `
+        >>> I don't realy understand what this prop can do, but Selutin said very like this feature
+      `,
     },
   )

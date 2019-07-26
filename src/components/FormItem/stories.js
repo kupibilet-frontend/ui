@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
 import FormItem from 'components/FormItem'
 
-storiesOf('FormItem', module)
-  .addWithInfo('default', () => {
+storiesOf('COMPONENTS|FormItem', module)
+  .add('default', () => {
     const label = text('text', 'Cake is a lie')
 
     return (

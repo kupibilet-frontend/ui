@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react'
+import * as React from 'react'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
 import Tooltip from 'components/Tooltip'
@@ -39,7 +39,7 @@ const PopoverPortal = (props: PortalProps) => {
     dotCentering,
     size,
   } = props
-  return ((content && isOpen && coords) ?
+  return (content && isOpen && coords) ? (
     <Portal>
       <GlobalStylesScope>
         <PopoverContainer
@@ -68,13 +68,13 @@ const PopoverPortal = (props: PortalProps) => {
                 <PopoverBackground
                   size={size}
                 >
-                  {header &&
+                  {header ? (
                     <Header>
                       <HeaderText>
                         {header}
                       </HeaderText>
                     </Header>
-                  }
+                  ) : null}
                   <TextSmall>
                     { content }
                   </TextSmall>
@@ -85,8 +85,7 @@ const PopoverPortal = (props: PortalProps) => {
         </PopoverContainer>
       </GlobalStylesScope>
     </Portal>
-    : null
-  )
+  ) : null
 }
 
 type PopoverProps = {
@@ -153,9 +152,12 @@ class Popover extends Tooltip<PopoverProps, PopoverState> {
   }
 }
 
+type PopoverChildrenProxyProps = {
+  children: React.Node,
+}
 
 // Proxy for possibility to transfer ref to any children
-class PopoverChildrenProxy extends Component<void, void> {
+class PopoverChildrenProxy extends React.Component<PopoverChildrenProxyProps> {
   render() {
     const { children, ...props } = this.props
     return React.cloneElement(React.Children.only(children), props)

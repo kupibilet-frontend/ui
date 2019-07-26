@@ -26,8 +26,8 @@ const NotMobileStoryTip = styled(StoryTip)`
   background: black;
 `
 
-storiesOf('Utils', module)
-  .addWithInfo('Responsive only', () => (
+storiesOf('COMPONENTS|Utils', module)
+  .add('Responsive only', () => (
     <div>
       <DesktopOnly>
         <StoryTip>Desktop</StoryTip>

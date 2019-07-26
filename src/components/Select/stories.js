@@ -1,13 +1,14 @@
 // @flow
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { select, text, boolean, object } from '@storybook/addon-knobs'
+import { select, text, boolean, object, array } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 
 import withReduxForm from 'storybook/decorators/withReduxForm'
 import { Field } from 'redux-form'
 
 import RFSelect, { Select } from 'components/Select'
+import Suggestion from 'components/Suggestion'
 
 
 const inputDefault = {
@@ -75,18 +76,32 @@ const initialStateSections = {
 
 const initialState = {
   suggestions: defaultSuggestions,
+  suggestionsFilter: [],
   value: '',
 }
 
 const onSuggestionSelected = (event, { suggestion }) => {
-  updateKnob('value', 'object', suggestion || { value: '' })
+  updateKnob('value', 'object', suggestion)
 }
 
+const onSuggestionMultiSelected = (event, { suggestion: { value } }) => {
+  const suggestionsFilter = array('suggestionsFilter', [])
+  const nextSuggestionsFilter = suggestionsFilter.includes(value)
+    ? suggestionsFilter.filter((item) => item !== value)
+    : [...suggestionsFilter, value]
+
+  updateKnob('suggestionsFilter', 'array', nextSuggestionsFilter)
+  updateKnob('placeholder', 'text', `${nextSuggestionsFilter.length} suggestions selected`)
+}
 
 const getSimpleKey = (suggestion) => suggestion.value
 
 const getSectionSuggestionKey = (suggestion) => suggestion.customKey
 const getSectionSuggestionValue = (suggestion) => suggestion.customValue
+
+const normalizeSuggestions = (suggestions) => (
+  suggestions.map(({ value }) => ({ key: value, value }))
+)
 
 const sizesSelect = (defaultValue = 'large') => select(
   'size',
@@ -98,8 +113,8 @@ const sizesSelect = (defaultValue = 'large') => select(
   defaultValue,
 )
 
-storiesOf('Controls/Select', module)
-  .addWithInfo('default', () => {
+storiesOf('COMPONENTS|Controls/Select', module)
+  .add('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -126,7 +141,46 @@ storiesOf('Controls/Select', module)
       />
     )
   })
-  .addWithInfo('With custom sections and keys', () => {
+  .add('With multiply select', () => {
+    const suggestionsFilter = array('suggestionsFilter', [])
+    const placeholder = text('placeholder', `0 suggestions selected`)
+    const disabled = boolean('disabled', false)
+    const success = boolean('success', false)
+    const error = text('error', '')
+    const selectedSuggestion = object('value', { value: '' })
+    const defaultInputProps = { placeholder, disabled }
+    const suggestions = [
+      ...defaultSuggestions.filter(({ value }) => suggestionsFilter.includes(value)),
+      ...defaultSuggestions.filter(({ value }) => !suggestionsFilter.includes(value))]
+
+    return (
+      <Select
+        suggestions={normalizeSuggestions(suggestions)}
+        onSuggestionSelected={onSuggestionMultiSelected}
+        selectedSuggestion={selectedSuggestion}
+        inputProps={{
+          ...defaultInputProps,
+          value: object('value', { value: '' }),
+          meta: {
+            active: true,
+          },
+        }}
+        renderSuggestion={(suggestion) => {
+          if (suggestionsFilter.includes(suggestion.value)) {
+            // Suggestion was not designed to support multi selections,
+            // so just pass selectedKey equal to current suggestion key
+            return <Suggestion suggestion={suggestion} selectedKey={suggestion.key} />
+          }
+
+          return <Suggestion suggestion={suggestion} />
+        }}
+
+        error={error}
+        success={success}
+      />
+    )
+  })
+  .add('With custom sections and keys', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const success = boolean('success', false)
@@ -153,8 +207,7 @@ storiesOf('Controls/Select', module)
       />
     )
   })
-  .addDecorator(withReduxForm)
-  .addWithInfo('With Redux Form', () => {
+  .add('With Redux Form', () => {
     return (
       <Field
         suggestions={initialState.suggestions}
@@ -165,4 +218,5 @@ storiesOf('Controls/Select', module)
       />
 
     )
-  })
+  },
+  { decorators: [withReduxForm] })

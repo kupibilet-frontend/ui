@@ -13,7 +13,7 @@ import StyledCollapse from 'components/Collapse'
 type HeaderProps = {
   withPadding?: boolean,
   isActive?: boolean,
-  header?: string,
+  header?: string | FormattedMessage,
 }
 
 type StyledCollapseProps = {
@@ -55,7 +55,7 @@ export const renderDefaultHeader = (props: HeaderProps) => (
 export const StyledPanel = (props: StyledCollapseProps) => (
   <StyledCollapse.Panel
     {...props}
-    header={props.renderHeader ? props.renderHeader(props) : renderDefaultHeader(props)}
+    header={props.renderHeader(props)}
   >
     <PanelContentWrapper withPadding={props.withPadding}>
       {props.children}
@@ -64,7 +64,7 @@ export const StyledPanel = (props: StyledCollapseProps) => (
 )
 
 StyledPanel.defaultProps = {
-  renderHeader: null,
+  renderHeader: renderDefaultHeader,
   isActive: false,
   withPadding: false,
   header: '',
@@ -74,6 +74,7 @@ renderDefaultHeader.defaultProps = {
   withPadding: false,
   header: '',
 }
+
 export const Panel = StyledPanel
 
 export default StyledCollapse

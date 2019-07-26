@@ -95,11 +95,11 @@ const FilterSection = (props) => (
       {props.headerLeft}
       {props.headerRight}
     </Header>
-    {Boolean(props.content) &&
+    {props.content ? (
       <Content>
         {props.content}
       </Content>
-    }
+    ) : null}
     {props.collapse}
   </Section>
 )

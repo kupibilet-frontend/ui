@@ -1,10 +1,8 @@
 import { configure, setAddon, addDecorator } from '@storybook/react'
-import centered from '@storybook/addon-centered'
+import centered from '@storybook/addon-centered/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import infoAddon from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
 
-import mockInfoAddon from 'storybook/addons/mockInfo'
 import withTheme from 'storybook/decorators/withTheme'
 import withIcons from 'storybook/decorators/withIcons'
 import withReduxContext from 'storybook/decorators/withReduxContext'
@@ -18,11 +16,7 @@ setOptions({
   sortStoriesByKind: true,
 })
 
-
-if (process.env.NODE_ENV === 'test') {
-  setAddon(mockInfoAddon)
-} else {
-  setAddon(infoAddon)
+if (process.env.NODE_ENV !== 'test') {
   addDecorator(centered)
   addDecorator(withIcons)
 }

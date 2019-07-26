@@ -15,11 +15,11 @@ const fontStyle = css`
 
 const fadeGradient = ({ theme }) => (
   /* eslint-disable prefer-template */
-  'linear-gradient(' +
-    '90deg, ' +
-    transparentize(1, theme.color.background) + ' 0%, ' +
-    theme.color.background + ' 100%' +
-  ')'
+  'linear-gradient('
+    + '90deg, '
+    + transparentize(1, theme.color.background) + ' 0%, '
+    + theme.color.background + ' 100%'
+  + ')'
 )
 
 export const Container = styled.div`
@@ -143,15 +143,6 @@ export const Input = styled.textarea`
     color: ${({ theme }) => theme.color.textLight};
     opacity: 1;
   `}
-
-  /* Styles for fake input, like div */
-  ${({ placeholder, value, children, theme }) => (
-    placeholder && !value && children && `
-      ${fontStyle}
-      color: ${theme.color.textLight};
-      opacity: 1;
-      `
-  )}
 
   &:focus ~ .AirportInput__geo .AirportInput__spell {
     display: block;

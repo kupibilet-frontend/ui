@@ -58,8 +58,8 @@ const renderBottomIcons = () => defaultValues.bottomIcons.map((icon) => (
 ))
 
 /* eslint-disable react/jsx-no-bind */
-storiesOf('Complex controls/PriceVariantsButton', module)
-  .addWithInfo('default', () => {
+storiesOf('COMPONENTS|Complex controls/PriceVariantsButton', module)
+  .add('default', () => {
     const title = text('title', defaultValues.title)
     const description = text('description', defaultValues.description)
     const price = text('price', defaultValues.price)

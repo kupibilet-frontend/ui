@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
 import { getLinkColor, getLinkHoverColor } from 'utils/link'
+import mq from 'utils/media-queries'
 
 export const SIZES = {
   small: 12,
@@ -59,7 +60,7 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
     return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px;`
   }
 
-  return `border-radius: ${SIZES[size]}px;`
+  return `border-radius: 6px;`
 }
 const getButtonColor = (props) => {
   const { theme, variant } = props
@@ -113,6 +114,10 @@ export const StyledButton = styled.button`
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: ${({ size }) => TYPOGRAPHY[size]}px;
 
+  ${mq.handheld`
+    max-width: 340px;
+  `}
+
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
 
@@ -127,8 +132,8 @@ export const StyledButton = styled.button`
   ${switchTransition}
   transition-property: opacity, box-shadow;
 
-  ${({ disabled }) => (disabled ?
-    'opacity: .2;'
+  ${({ disabled }) => (disabled
+    ? 'opacity: .2;'
     : '')}
 
   .icon-inherit-color {
@@ -136,24 +141,32 @@ export const StyledButton = styled.button`
   }
 
   &:hover, &:focus {
-    ${(props) => (!props.disabled ? `
-      cursor: pointer;
-      background: ${getButtonHoverBackground(props)};
-      box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
+    ${(props) => (
+    !props.disabled
+      ? `
+        cursor: pointer;
+        background: ${getButtonHoverBackground(props)};
+        box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
 
-      // Immediately change visual state on hover, mousedown and mouseup
-      // Transition only for mouseleave
-      transition: none;
-    ` : '')}
+        // Immediately change visual state on hover, mousedown and mouseup
+        // Transition only for mouseleave
+        transition: none;
+      `
+      : ''
+  )}
 
     ${(props) => ((!props.disabled && props.variant === 'link') && `color: ${getButtonHoverColor(props)};`)}
   }
 
   &:active {
-    ${(props) => (!props.disabled ? `
-      background: ${getButtonActiveBackground(props)};
-      box-shadow: none;
-    ` : '')}
+    ${(props) => (
+    !props.disabled
+      ? `
+        background: ${getButtonActiveBackground(props)};
+        box-shadow: none;
+      `
+      : ''
+  )}
   }
 `
 export const StyledButtonLink = StyledButton.withComponent('a')

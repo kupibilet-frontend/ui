@@ -13,8 +13,8 @@ const inputDefault = {
   error: 'Только латинские буквы',
 }
 
-storiesOf('Controls/RoundInput', module)
-  .addWithInfo('default', () => {
+storiesOf('COMPONENTS|Controls/RoundInput', module)
+  .add('default', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const error = text('error', '')
@@ -32,7 +32,7 @@ storiesOf('Controls/RoundInput', module)
       />
     )
   })
-  .addWithInfo('withButton', () => {
+  .add('withButton', () => {
     const placeholder = text('placeholder', inputDefault.placeholder)
     const disabled = boolean('disabled', false)
     const error = text('error', '')

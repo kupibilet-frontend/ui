@@ -1,0 +1,477 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots COMPONENTS|Complex controls/PriceVariantsButton default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c8 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 1;
+}
+
+.c15 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #96a0b3;
+  opacity: 0.6;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c14 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+}
+
+.c14:after {
+  content: '';
+  position: absolute;
+  border-left: 1px solid #fa3a00;
+  width: 1px;
+  height: 150%;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: -25%;
+  left: 50%;
+}
+
+.c9 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #fc6100;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 9px 12px 3px;
+  min-height: 66px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #38afff;
+  box-shadow: 0 0 0 1px #38afff;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  cursor: default;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  width: 180px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c3:hover {
+  border-color: #38afff;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 9px 12px 3px;
+  min-height: 66px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b1bdcc;
+  box-shadow: 0 0 0 1px transparent;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color,box-shadow;
+  transition-property: border-color,box-shadow;
+  width: 180px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c11:hover {
+  border-color: #38afff;
+}
+
+.c10 {
+  display: block;
+  padding: 6px 0;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #7d89a1;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.c5 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #333333;
+  font-weight: 600;
+}
+
+.c12 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #333333;
+  font-weight: 400;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 12px;
+}
+
+.c13 {
+  margin-left: 6px;
+}
+
+<div
+  className="responsive c0"
+>
+  <div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onClick={[Function]}
+          title="Банковской картой он-лайн"
+        >
+          <div
+            className="c4"
+          >
+            <span
+              className="c5"
+            >
+              
+            </span>
+            <span
+              className="c6"
+            >
+              <span
+                className="c7"
+              >
+                <svg
+                  className="c8"
+                  fill="miscDark"
+                  name="plane"
+                  rotate=""
+                  size="normal"
+                >
+                  <use
+                    xlinkHref="#kb_plane"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <div
+            className="c4"
+          >
+            <span
+              className="c9"
+            >
+              12 234
+            </span>
+          </div>
+        </div>
+        <span
+          className="c10"
+        >
+          Описание
+        </span>
+      </div>
+    </div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c11"
+          disabled={false}
+          onChange={[Function]}
+          onClick={[Function]}
+          title="Эконом Базовый"
+        >
+          <div
+            className="c4"
+          >
+            <span
+              className="c12"
+            >
+              
+            </span>
+          </div>
+          <div
+            className="c4"
+          >
+            <span
+              className="c9"
+            >
+              12 234
+            </span>
+            <span
+              className="c6"
+            >
+              <span
+                className="c13"
+              >
+                <span
+                  className="c7"
+                >
+                  <svg
+                    className="c8"
+                    fill="miscDark"
+                    name="hand-baggage"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_hand-baggage"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="c13"
+              >
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    name="exchange"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_exchange"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="c13"
+              >
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    name="return"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_return"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <span
+          className="c10"
+        >
+          Описание
+        </span>
+      </div>
+    </div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c11"
+          disabled={false}
+          onChange={[Function]}
+          onClick={[Function]}
+          title="Эконом"
+        >
+          <div
+            className="c4"
+          >
+            <span
+              className="c12"
+            >
+              
+            </span>
+          </div>
+          <div
+            className="c4"
+          >
+            <span
+              className="c9"
+            >
+              12 234
+            </span>
+            <span
+              className="c6"
+            >
+              <span
+                className="c13"
+              >
+                <span
+                  className="c7"
+                >
+                  <svg
+                    className="c8"
+                    fill="miscDark"
+                    name="hand-baggage"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_hand-baggage"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="c13"
+              >
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    name="exchange"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_exchange"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                className="c13"
+              >
+                <span
+                  className="c14"
+                >
+                  <svg
+                    className="c15"
+                    fill="miscDark"
+                    name="return"
+                    rotate=""
+                    size="normal"
+                  >
+                    <use
+                      xlinkHref="#kb_return"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+        <span
+          className="c10"
+        >
+          Описание
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

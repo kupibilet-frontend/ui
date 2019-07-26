@@ -15,14 +15,19 @@ type Props = {
   closePortal: (Event) => void,
   isOnBottom: boolean,
   children: Element<*>,
+  scrollFix?: boolean,
 }
 
 class Overlay extends Component<Props, void> {
+  static defaultProps = {
+    scrollFix: true,
+  }
+
   stopPropagation = (e) => {
     e.stopPropagation()
   }
 
-  render() {
+  renderOverlay = () => {
     const {
       closePortal,
       isOnBottom,
@@ -30,18 +35,34 @@ class Overlay extends Component<Props, void> {
     } = this.props
 
     return (
+      <Wrapper
+        onMouseDown={closePortal}
+        isOnBottom={isOnBottom}
+      >
+        <OverlayContentWrap isOnBottom={isOnBottom}>
+          <OverlayContent onMouseDown={this.stopPropagation} isOnBottom={isOnBottom}>
+            {React.cloneElement(children, { closePortal })}
+          </OverlayContent>
+        </OverlayContentWrap>
+      </Wrapper>
+    )
+  }
+
+  render() {
+    const { scrollFix } = this.props
+
+    if (!scrollFix) {
+      return (
+        <GlobalStylesScope>
+          {this.renderOverlay()}
+        </GlobalStylesScope>
+      )
+    }
+
+    return (
       <GlobalStylesScope>
         <Scrollfix>
-          <Wrapper
-            onClick={closePortal}
-            isOnBottom={isOnBottom}
-          >
-            <OverlayContentWrap isOnBottom={isOnBottom}>
-              <OverlayContent onClick={this.stopPropagation} isOnBottom={isOnBottom}>
-                {React.cloneElement(children, { closePortal })}
-              </OverlayContent>
-            </OverlayContentWrap>
-          </Wrapper>
+          {this.renderOverlay()}
         </Scrollfix>
       </GlobalStylesScope>
     )

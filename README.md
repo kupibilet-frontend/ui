@@ -3,6 +3,7 @@
 [![NPM version][npm-img]][npm-url]
 [![Build Status][travis-img]][travis-url]
 [![Greenkeeper Status][greenkeeper-img]][greenkeeper-url]
+[![Known Vulnerabilities](https://snyk.io/test/github/kupibilet-frontend/ui/badge.svg?targetFile=package.json)](https://snyk.io/test/github/kupibilet-frontend/ui?targetFile=package.json)
 
 ## How to start locally:
 

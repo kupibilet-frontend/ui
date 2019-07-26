@@ -89,8 +89,8 @@ class Container extends React.Component {
   }
 }
 
-storiesOf('Controls/Slider', module)
-  .addWithInfo('default', () => (
+storiesOf('COMPONENTS|Controls/Slider', module)
+  .add('default', () => (
     <div style={{ width: '252px' }}>
       <Slider
         min={1}
@@ -99,6 +99,6 @@ storiesOf('Controls/Slider', module)
       />
     </div>
   ))
-  .addWithInfo('With date range', () => (
+  .add('With date range', () => (
     <Container />
   ))
