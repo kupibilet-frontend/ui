@@ -13,7 +13,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput default 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
+.c2 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -38,69 +38,70 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput default 1`] = `
   color: #333333;
   background-color: transparent;
   border-radius: 3px;
+  border-radius: 21px;
 }
 
-.c4::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c2::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::placeholder {
+.c2::placeholder {
   color: #96a0b3;
 }
 
-.c4::-webkit-input-placeholder {
+.c2::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c4::-moz-placeholder {
+.c2::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c4:-ms-input-placeholder {
+.c2:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c4:focus {
+.c2:focus {
   outline-style: none;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c2:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c2:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c2:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::placeholder {
+.c2:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c2:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled::-moz-placeholder {
+.c2:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c2:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2 {
+.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -125,30 +126,23 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput default 1`] = `
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color;
   transition-property: border-color;
+  border-radius: 21px;
 }
 
-.c2:hover {
+.c1:hover {
   border-color: #38afff;
   z-index: 1;
 }
 
-.c2 .combined-inputs-group {
+.c1 .combined-inputs-group {
   height: 100%;
-}
-
-.c3 {
-  border-radius: 21px;
-}
-
-.c1 {
-  border-radius: 21px;
 }
 
 <div
   className="responsive c0"
 >
   <div
-    className="c1 c2"
+    className="c1"
     disabled={false}
     onBlur={null}
     onFocus={null}
@@ -157,7 +151,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput default 1`] = `
     value={null}
   >
     <input
-      className="c3 c4"
+      className="c2"
       disabled={false}
       onBlur={null}
       onFocus={null}
@@ -190,19 +184,67 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
   display: flex;
 }
 
-.c1 .c8 {
+.c1 .c6 {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .c8 {
+.c1:hover .c6 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
 }
 
+.c4 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 0 21px 21px 0;
+  padding: 11.0px;
+  padding-right: 21px;
+  padding-left: 13.1px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c4 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c4:hover,
+.c4:focus {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c4:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
 .c5 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+.c3 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -227,69 +269,70 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
   color: #333333;
   background-color: transparent;
   border-radius: 3px 0 0 3px;
+  border-radius: 21px 0 0 21px;
 }
 
-.c5::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c5::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c5:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c5::placeholder {
+.c3::placeholder {
   color: #96a0b3;
 }
 
-.c5::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c5::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c5:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c5:focus {
+.c3:focus {
   outline-style: none;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c5:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c5:disabled::placeholder {
+.c3:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c5:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c3 {
+.c2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -314,83 +357,28 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color;
   transition-property: border-color;
+  border-radius: 21px 0 0 21px;
 }
 
-.c3:hover {
+.c2:hover {
   border-color: #38afff;
   z-index: 1;
 }
 
-.c3 .combined-inputs-group {
+.c2 .combined-inputs-group {
   height: 100%;
 }
 
-.c6 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  color: #ffffff;
-  background: #38afff;
-  font-size: 20px;
-  line-height: 20px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: 0 21px 21px 0;
-  padding: 11.0px;
-  padding-right: 21px;
-  padding-left: 13.1px;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
-}
-
-.c6 .icon-inherit-color {
-  fill: #ffffff;
-}
-
-.c6:hover,
-.c6:focus {
-  cursor: pointer;
-  background: #0f99f5;
-  box-shadow: 0 0 0 1px #0f99f5;
-  -webkit-transition: none;
-  transition: none;
-}
-
-.c6:active {
-  background: #008ae6;
-  box-shadow: none;
-}
-
-.c7 {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 0px 0 0px;
-}
-
-.c4 {
-  border-radius: 21px 0 0 21px;
-}
-
-.c2 {
-  border-radius: 21px 0 0 21px;
-}
-
 @media screen and (max-width:1199px) {
-  .responsive .c1 .c8,
-  .responsive-booking .c1 .c8 {
+  .responsive .c1 .c6,
+  .responsive-booking .c1 .c6 {
     opacity: 1;
   }
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c6,
-  .responsive-booking .c6 {
+  .responsive .c4,
+  .responsive-booking .c4 {
     max-width: 340px;
   }
 }
@@ -402,7 +390,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
     className="c1"
   >
     <div
-      className="c2 c3"
+      className="c2"
       disabled={false}
       onBlur={null}
       onFocus={null}
@@ -411,7 +399,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
       value={null}
     >
       <input
-        className="c4 c5"
+        className="c3"
         disabled={false}
         onBlur={null}
         onFocus={null}
@@ -422,11 +410,11 @@ exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
       
     </div>
     <button
-      className="c6"
+      className="c4"
       size="large"
     >
       <span
-        className="c7"
+        className="c5"
         size="large"
       >
         Отправить
