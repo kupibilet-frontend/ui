@@ -40,6 +40,9 @@ storiesOf('COMPONENTS|Controls/Bubble', module)
       <Title>
         Отзывы
       </Title>
+      <CommentBubble name="Купибилет" reply>
+        Спасибо, мы получили ваш отзыв! Он появится после проверки модератором.
+      </CommentBubble>
       { Object.entries(TEXTS).map(([key, value]) => (
         <CommentBubble key={key} index={key} {...value} />
       ))}
