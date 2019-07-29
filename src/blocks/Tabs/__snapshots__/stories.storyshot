@@ -61,6 +61,7 @@ exports[`Storyshots BLOCKS|Tabs Conditional rendered Tabs 1`] = `
 >
   <div
     className="rc-tabs rc-tabs-top"
+    onScroll={[Function]}
     style={Object {}}
   >
     <div
@@ -76,6 +77,19 @@ exports[`Storyshots BLOCKS|Tabs Conditional rendered Tabs 1`] = `
       </span>
     </div>
     <div
+      onKeyDown={[Function]}
+      role="presentation"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "width": 0,
+        }
+      }
+      tabIndex={0}
+    />
+    <div
       className="rc-tabs-content rc-tabs-content-no-animated"
     >
       <div
@@ -83,9 +97,48 @@ exports[`Storyshots BLOCKS|Tabs Conditional rendered Tabs 1`] = `
         className="rc-tabs-tabpane rc-tabs-tabpane-active"
         role="tabpanel"
       >
+        <div
+          onKeyDown={[Function]}
+          role="presentation"
+          style={
+            Object {
+              "height": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 0,
+            }
+          }
+          tabIndex={0}
+        />
         First tab
+        <div
+          onKeyDown={[Function]}
+          role="presentation"
+          style={
+            Object {
+              "height": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 0,
+            }
+          }
+          tabIndex={0}
+        />
       </div>
     </div>
+    <div
+      onKeyDown={[Function]}
+      role="presentation"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "width": 0,
+        }
+      }
+      tabIndex={0}
+    />
   </div>
 </div>
 `;
@@ -189,6 +242,7 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
 >
   <div
     className="rc-tabs rc-tabs-top"
+    onScroll={[Function]}
     style={Object {}}
   >
     <div
@@ -220,6 +274,19 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
       </span>
     </div>
     <div
+      onKeyDown={[Function]}
+      role="presentation"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "width": 0,
+        }
+      }
+      tabIndex={0}
+    />
+    <div
       className="rc-tabs-content rc-tabs-content-no-animated"
     >
       <div
@@ -232,7 +299,33 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
         className="rc-tabs-tabpane rc-tabs-tabpane-active"
         role="tabpanel"
       >
+        <div
+          onKeyDown={[Function]}
+          role="presentation"
+          style={
+            Object {
+              "height": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 0,
+            }
+          }
+          tabIndex={0}
+        />
         Second tab
+        <div
+          onKeyDown={[Function]}
+          role="presentation"
+          style={
+            Object {
+              "height": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 0,
+            }
+          }
+          tabIndex={0}
+        />
       </div>
       <div
         aria-hidden="true"
@@ -240,6 +333,19 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
         role="tabpanel"
       />
     </div>
+    <div
+      onKeyDown={[Function]}
+      role="presentation"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+          "width": 0,
+        }
+      }
+      tabIndex={0}
+    />
   </div>
 </div>
 `;
