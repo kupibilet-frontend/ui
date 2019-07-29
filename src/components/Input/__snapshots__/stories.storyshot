@@ -13,7 +13,7 @@ exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
   box-sizing: border-box;
 }
 
-.c2 {
+.c3 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -38,68 +38,71 @@ exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
   color: #333333;
   background-color: transparent;
   border-radius: 3px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-.c2::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c2::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c2:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c2::placeholder {
+.c3::placeholder {
   color: #96a0b3;
 }
 
-.c2::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: #96a0b3;
 }
 
-.c2::-moz-placeholder {
+.c3::-moz-placeholder {
   color: #96a0b3;
 }
 
-.c2:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: #96a0b3;
 }
 
-.c2:focus {
+.c3:focus {
   outline-style: none;
 }
 
-.c2:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::placeholder {
+.c3:disabled::placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::-webkit-input-placeholder {
+.c3:disabled::-webkit-input-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled::-moz-placeholder {
+.c3:disabled::-moz-placeholder {
   color: #b1bdcc;
 }
 
-.c2:disabled:-ms-input-placeholder {
+.c3:disabled:-ms-input-placeholder {
   color: #b1bdcc;
+}
+
+.c2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .c1 {
@@ -138,7 +141,7 @@ exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
   height: 100%;
 }
 
-.c3 {
+.c4 {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -157,7 +160,7 @@ exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
     size="large"
   >
     <textarea
-      className="-textarea c2"
+      className="c2 -textarea c3"
       disabled={false}
       name="input"
       onBlur={[Function]}
@@ -167,7 +170,7 @@ exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
       size="large"
     />
     <div
-      className="c3"
+      className="c4"
     />
     
   </div>
