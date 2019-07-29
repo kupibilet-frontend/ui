@@ -44,14 +44,6 @@ exports[`Storyshots COMPONENTS|Layout/SeparatorImage Default 1`] = `
   }
 }
 
-@media screen and (max-width:599px) {
-  .responsive .c3,
-  .responsive-booking .c3 {
-    background-position: 79% 50%;
-    background-size: cover;
-  }
-}
-
 <div
   className="responsive c0"
 >
