@@ -12,12 +12,12 @@ import {
 
 
 type Props = {
-  index: number | string,
+  index?: number | string,
   reply?: boolean,
   name?: string,
-  text: string,
+  text?: string,
   createdAt?: string,
-  children: Node,
+  children?: Node,
 }
 
 class CommentBubble extends PureComponent<Props> {
@@ -25,6 +25,9 @@ class CommentBubble extends PureComponent<Props> {
     reply: false,
     createdAt: null,
     name: null,
+    children: null,
+    text: '',
+    index: null,
   }
   render() {
     const {
@@ -42,13 +45,11 @@ class CommentBubble extends PureComponent<Props> {
             orderNumber={index}
             reply={reply}
           >
-            { text
-              ? (
-                <CommentText>
-                  {text}
-                </CommentText>
-              )
-              : children
+            { children || (
+            <CommentText>
+              {text}
+            </CommentText>
+            )
             }
           </Bubble>
           <Author reply={reply}>
