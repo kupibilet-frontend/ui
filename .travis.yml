@@ -36,7 +36,7 @@ deploy:
     api_key: $NPM_TOKEN
     on:
       tags: true
-      branch: master
+      branch: v5.4-backwards-compat
       repo: kupibilet-frontend/ui
 
   - provider: pages
