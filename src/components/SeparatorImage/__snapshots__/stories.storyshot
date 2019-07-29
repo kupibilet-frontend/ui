@@ -14,11 +14,6 @@ exports[`Storyshots COMPONENTS|Layout/SeparatorImage Default 1`] = `
 }
 
 .c2 {
-  margin: 0 auto;
-  max-width: 966px;
-}
-
-.c3 {
   width: 100%;
   height: 188px;
   background-size: contain;
@@ -28,18 +23,20 @@ exports[`Storyshots COMPONENTS|Layout/SeparatorImage Default 1`] = `
 }
 
 .c1 {
+  margin: 0 auto;
+  max-width: 966px;
   width: 966px;
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c2,
-  .responsive-booking .c2 {
+  .responsive .c1,
+  .responsive-booking .c1 {
     margin: 0 18px;
   }
 }
 
 @media screen and (min-width:1000px) {
-  .c2.c2 {
+  .c1.c1 {
     margin: 0 auto;
   }
 }
@@ -48,10 +45,10 @@ exports[`Storyshots COMPONENTS|Layout/SeparatorImage Default 1`] = `
   className="responsive c0"
 >
   <div
-    className="c1 c2"
+    className="c1"
   >
     <div
-      className="c3"
+      className="c2"
     />
   </div>
 </div>

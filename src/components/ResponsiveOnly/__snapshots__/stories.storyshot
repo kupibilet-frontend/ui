@@ -33,18 +33,82 @@ exports[`Storyshots COMPONENTS|Utils Responsive only 1`] = `
 }
 
 .c4 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
   background: skyblue;
 }
 
 .c6 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
   background: greenyellow;
 }
 
 .c8 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
   background: dodgerblue;
 }
 
 .c10 {
+  width: 100vw;
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: purple;
+  color: white;
   background: black;
 }
 
@@ -114,7 +178,7 @@ exports[`Storyshots COMPONENTS|Utils Responsive only 1`] = `
       className="c3"
     >
       <div
-        className="c4 c2"
+        className="c4"
       >
         Handheld
       </div>
@@ -123,7 +187,7 @@ exports[`Storyshots COMPONENTS|Utils Responsive only 1`] = `
       className="c5"
     >
       <div
-        className="c6 c2"
+        className="c6"
       >
         Tablet
       </div>
@@ -132,7 +196,7 @@ exports[`Storyshots COMPONENTS|Utils Responsive only 1`] = `
       className="c7"
     >
       <div
-        className="c8 c2"
+        className="c8"
       >
         Mobile
       </div>
@@ -141,7 +205,7 @@ exports[`Storyshots COMPONENTS|Utils Responsive only 1`] = `
       className="c9"
     >
       <div
-        className="c10 c2"
+        className="c10"
       >
         Not mobile
       </div>
