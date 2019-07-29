@@ -96,7 +96,6 @@ export class RoundInput extends PureComponent<Props, State> {
         disabled={disabled}
         error={error}
         success={success}
-        innerRef={undefined}
         onFocus={() => this.handleFocus()}
         onBlur={() => this.handleBlur()}
         ref={(el) => this.innerRef(el)}
