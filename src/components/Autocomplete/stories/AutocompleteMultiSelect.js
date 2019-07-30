@@ -87,7 +87,7 @@ class AutocompleteMultiSelect extends PureComponent {
         suggestions={normalizeSuggestions(suggestions)}
         onSuggestionsFetchRequested={this.fetchSuggestions}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        renderInputComponent={({ ref, ...props }) => <Input innerRef={ref} {...props} />}
+        renderInputComponent={({ ref, ...props }) => <Input ref={ref} {...props} />}
         renderSuggestion={(suggestion) => {
           if (citiesListFilter.includes(suggestion.value)) {
             // Suggestion was not designed to support multi selections,

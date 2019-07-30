@@ -33,7 +33,7 @@ type Props = {
   rightIcon?: React$Element<*>,
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
-  innerRef?: Function,
+  ref?: Function,
   children?: React$Element<*>[],
   isTextarea?: boolean,
 }
@@ -76,10 +76,10 @@ class InputControl extends PureComponent<Props, State> {
   }
 
   innerRef(node) {
-    const { innerRef } = this.props
+    const { ref } = this.props
     this.innerInput = node
-    if (innerRef) {
-      this.props.innerRef(node)
+    if (ref) {
+      this.props.ref(node)
     }
   }
 
@@ -106,7 +106,7 @@ class InputControl extends PureComponent<Props, State> {
         error={error}
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
-        innerRef={(el) => this.innerRef(el)}
+        ref={(el) => this.innerRef(el)}
         isTextarea={isTextarea}
         leftIcon={leftIcon}
         rightIcon={rightIcon}

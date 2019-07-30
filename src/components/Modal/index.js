@@ -47,7 +47,7 @@ type Props = {
   shouldRenderCloseButton?: boolean,
   footer?: React.Element<*>,
   onClose: Function,
-  heading: string,
+  heading?: string,
   renderHeader?: React.Element<*> | () => node,
   renderContent?: React.Element<*> | () => node,
   isOpen: boolean,
@@ -55,6 +55,7 @@ type Props = {
 
 class Modal extends React.PureComponent<Props> {
   static defaultProps = {
+    heading: '',
     renderHeader: ({ heading, size }) => (heading ? (
       <Header size={size}>
         <H4>{heading}</H4>
