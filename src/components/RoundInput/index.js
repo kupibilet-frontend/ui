@@ -20,7 +20,7 @@ type Props = {
   rightIcon?: React$Element<*>,
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
-  innerRef?: Function,
+  ref?: Function,
   size?: string,
   meta?: fieldMetaPropTypes,
 }
@@ -43,7 +43,7 @@ export class RoundInput extends PureComponent<Props, State> {
     rightIcon: null,
     handleLeftIconPress: null,
     handleRightIconPress: null,
-    innerRef: null,
+    ref: null,
     size: null,
     meta: {
       active: null,
@@ -71,10 +71,10 @@ export class RoundInput extends PureComponent<Props, State> {
   }
 
   innerRef(node) {
-    const { innerRef } = this.props
+    const { ref } = this.props
     this.innerInput = node
-    if (innerRef) {
-      this.props.innerRef(node)
+    if (ref) {
+      this.props.ref(node)
     }
   }
 
@@ -98,7 +98,7 @@ export class RoundInput extends PureComponent<Props, State> {
         success={success}
         onFocus={() => this.handleFocus()}
         onBlur={() => this.handleBlur()}
-        innerRef={(el) => this.innerRef(el)}
+        ref={(el) => this.innerRef(el)}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         placeholder={placeholder}
