@@ -32,13 +32,12 @@ export const StyledButtonWithBorder = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 12px;
+  padding: 8px 12px;
   background-color: #FFFFFF;
   cursor: pointer;
   box-shadow: ${({ theme, overshadowThemeColor, withOvershadow }) => createBoxShadow(boxShadow(theme), withOvershadow, theme, overshadowThemeColor)};
   border-radius: 6px;
   width: 252px;
-  height: 42px;
   transition: box-shadow .3s;
 
   &:hover {

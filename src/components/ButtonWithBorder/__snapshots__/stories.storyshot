@@ -49,13 +49,12 @@ exports[`Storyshots COMPONENTS|Controls/ButtonWithBorder Default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 12px;
+  padding: 8px 12px;
   background-color: #FFFFFF;
   cursor: pointer;
   box-shadow: 0px 2px 8px rgba(98,112,139,0.4);
   border-radius: 6px;
   width: 252px;
-  height: 42px;
   -webkit-transition: box-shadow .3s;
   transition: box-shadow .3s;
 }
