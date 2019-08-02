@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots COMPONENTS|Controls/ButtonWithBorder Default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c4 {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: fill,-webkit-transform;
+  -webkit-transition-property: fill,transform;
+  transition-property: fill,transform;
+  height: 18px;
+  width: 18px;
+  fill: #fa3a00;
+  opacity: 1;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
+  font-family: inherit;
+  outline: none;
+  font-size: 20px;
+  color: #fa3a00;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 12px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(98,112,139,0.4);
+  border-radius: 6px;
+  width: 252px;
+  height: 42px;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c1:hover {
+  box-shadow: 0px 2px 8px rgba(98,112,139,0.6);
+}
+
+.c1:active {
+  border: 2px solid rgba(250,58,0,0.8);
+}
+
+.c2 {
+  line-height: 22px;
+  -webkit-letter-spacing: -0.2px;
+  -moz-letter-spacing: -0.2px;
+  -ms-letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
+  margin-right: 8px;
+  padding-bottom: 2px;
+}
+
+<div
+  className="responsive c0"
+>
+  <button
+    className="c1"
+    onClick={[Function]}
+  >
+    <span
+      className="c2"
+    >
+      Сбросить все фильтры
+    </span>
+    <span
+      className="c3"
+    >
+      <svg
+        className="c4"
+        fill="secondaryDarkest"
+        name="cross"
+        rotate=""
+        size="normal"
+      >
+        <use
+          xlinkHref="#kb_cross"
+        />
+      </svg>
+    </span>
+  </button>
+</div>
+`;
