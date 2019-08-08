@@ -45,6 +45,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
   font-size: 16px;
   color: #ffffff;
   border-radius: 6px;
+  z-index: 10;
 }
 
 .c1 {
@@ -89,6 +90,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
 >
   <button
     className="c1"
+    onClick={[Function]}
   >
     <span
       className="c2 c3"

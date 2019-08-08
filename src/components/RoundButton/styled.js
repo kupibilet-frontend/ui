@@ -17,6 +17,7 @@ export const StyledTooltip = styled.span`
   font-size: 16px;
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
+  z-index: 10;
 `
 
 export const StyledRoundButton = styled.button`
@@ -29,7 +30,7 @@ export const StyledRoundButton = styled.button`
   height: 23px;
   outline: none;
   cursor: pointer;
-  border: ${({ theme, buttonColor }) => `1px solid ${theme.color[buttonColor]}`};
+  border: ${({ theme, themeColor }) => `1px solid ${theme.color[themeColor]}`};
   border-radius: 50px;
   transition: .3s;
 
@@ -42,6 +43,6 @@ export const StyledRoundButton = styled.button`
   }
 
   &:active {
-    box-shadow: ${({ theme, buttonColor }) => `0px 2px 16px rgba(98, 112, 139, 0.5), inset 0px 0px 0px 1px ${theme.color[buttonColor]}`};
+    box-shadow: ${({ theme, themeColor }) => `0px 2px 16px rgba(98, 112, 139, 0.5), inset 0px 0px 0px 1px ${theme.color[themeColor]}`};
   }
 `

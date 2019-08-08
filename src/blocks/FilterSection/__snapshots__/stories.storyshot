@@ -13,43 +13,43 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
   box-sizing: border-box;
 }
 
-.c15 {
+.c14 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
   -webkit-transition-property: fill,transform;
   transition-property: fill,transform;
-  height: 18px;
-  width: 18px;
+  height: 15px;
+  width: 15px;
   fill: transparent;
   opacity: 1;
 }
 
-.c14 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c9 .rc-collapse-anim {
+.c8 .rc-collapse-anim {
   overflow: hidden;
 }
 
-.c9 .rc-collapse-content {
+.c8 .rc-collapse-content {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c9 .rc-collapse-content.rc-collapse-content-inactive {
+.c8 .rc-collapse-content.rc-collapse-content-inactive {
   display: none;
 }
 
-.c9 .rc-collapse-header:focus {
+.c8 .rc-collapse-header:focus {
   outline: none;
 }
 
-.c13 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -103,16 +103,19 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
 }
 
 .c1 {
-  background: #ffffff;
-  border: 1px solid #dde3eb;
-  border-radius: 6px;
+  background-color: #f0f5fa;
+}
+
+.c1:not(:first-of-type) {
+  padding-top: 18px;
+}
+
+.c1:not(:last-of-type) {
+  border-bottom: 1px solid #cad3de;
 }
 
 .c2 {
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-bottom: 13px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -121,21 +124,17 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c3 {
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
 }
 
-.c10 {
-  padding-left: 18px;
-  padding-right: 18px;
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -145,12 +144,10 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
   display: -ms-flexbox;
   display: flex;
   padding-top: 12px;
-  padding-bottom: 12px;
 }
 
-.c8 {
-  margin: 0 -1px;
-  border-top: 1px solid #dde3eb;
+.c9 .c10 {
+  font-size: 14px;
 }
 
 .c6 {
@@ -211,19 +208,27 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
   color: #007acc;
 }
 
-.c12 {
-  position: relative;
+@media screen and (max-width:1199px) {
+  .responsive .c1,
+  .responsive-booking .c1 {
+    background-color: #ffffff;
+  }
 }
 
-.c12:before {
-  display: block;
-  position: absolute;
-  top: -5px;
-  bottom: -5px;
-  left: -18px;
-  content: '';
-  width: 2px;
-  background: red;
+@media screen and (max-width:1199px) {
+  .responsive .c2,
+  .responsive-booking .c2 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c3,
+  .responsive-booking .c3 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 <div
@@ -341,7 +346,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
         role="tablist"
       >
         <div
-          className="rc-collapse-item c8 c9"
+          className="rc-collapse-item c8"
         >
           <div
             aria-expanded="false"
@@ -352,29 +357,25 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
             tabIndex={0}
           >
             <div
-              className="c10"
+              className="c9"
             >
               <span
-                className="c11"
+                className="c10 c11"
                 href={null}
               >
-                <div
+                Пересадки
+                <span
                   className="c12"
                 >
-                  Пересадки
-                </div>
-                <span
-                  className="c13"
-                >
                   <span
-                    className="c14"
+                    className="c13"
                   >
                     <svg
-                      className="icon-inherit-color c15"
+                      className="icon-inherit-color c14"
                       fill={null}
                       name="angle"
                       rotate=""
-                      size="normal"
+                      size="xxsmall"
                     >
                       <use
                         xlinkHref="#kb_angle"
