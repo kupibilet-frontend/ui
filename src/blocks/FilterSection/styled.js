@@ -20,7 +20,7 @@ export const Section = styled.section`
 `
 
 export const Header = styled.header`
-  padding-bottom: 13px;
+  padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;

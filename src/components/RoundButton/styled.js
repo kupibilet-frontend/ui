@@ -17,7 +17,7 @@ export const StyledTooltip = styled.span`
   font-size: 16px;
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
-  z-index: 10;
+  z-index: 9;
 `
 
 export const StyledRoundButton = styled.button`
