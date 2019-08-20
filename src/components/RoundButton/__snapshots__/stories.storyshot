@@ -45,7 +45,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
   font-size: 16px;
   color: #ffffff;
   border-radius: 6px;
-  z-index: 10;
+  z-index: 9;
 }
 
 .c1 {

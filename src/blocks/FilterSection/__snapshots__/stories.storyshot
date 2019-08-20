@@ -115,7 +115,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
 }
 
 .c2 {
-  padding-bottom: 13px;
+  padding-bottom: 12px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

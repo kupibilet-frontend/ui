@@ -27,7 +27,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
 }
 
 .c3 {
-  background-color: #38afff;
+  background-color: #007acc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
