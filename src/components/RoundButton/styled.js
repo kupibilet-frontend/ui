@@ -22,6 +22,7 @@ export const StyledTooltip = styled.span`
 
 export const StyledRoundButton = styled.button`
   position: relative;
+  background-color: ${({ theme }) => theme.color.background};
   font-family: inherit;
   display: flex;
   align-items: center;
