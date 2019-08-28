@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import mq from 'utils/media-queries'
 
 const fadeIn = keyframes`
   from { opacity: 0 }
@@ -40,6 +41,10 @@ export const StyledRoundButton = styled.button`
 
     ${StyledTooltip} {
       display: ${({ shouldRenderTooltip }) => (shouldRenderTooltip ? 'inline' : 'none')};
+
+      ${mq.handheld`
+        display: none;
+      `}
     }
   }
 
