@@ -13,6 +13,7 @@ type Props = {
   withOvershadow?: boolean,
   themeColor?: string,
   overshadowThemeColor?: string,
+  className?: string,
 }
 
 const defaultProps = {
@@ -21,6 +22,7 @@ const defaultProps = {
   themeColor: 'secondaryDarkest',
   withOvershadow: false,
   overshadowThemeColor: 'miscLightest',
+  className: null,
 }
 
 const ButtonWithBorder = ({
@@ -30,6 +32,7 @@ const ButtonWithBorder = ({
   onClick,
   iconName,
   overshadowThemeColor,
+  className,
 }: Props) => {
   return (
     <StyledButtonWithBorder
@@ -37,6 +40,7 @@ const ButtonWithBorder = ({
       themeColor={themeColor}
       withOvershadow={withOvershadow}
       overshadowThemeColor={overshadowThemeColor}
+      className={className}
     >
       <ButtonText>
         {children}

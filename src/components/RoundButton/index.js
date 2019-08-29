@@ -7,24 +7,25 @@ import Icon from 'components/Icon'
 import { StyledRoundButton, StyledTooltip } from './styled'
 
 type Props = {
-  onClick: () => null,
+  onClick?: () => null,
   shouldRenderTooltip?: boolean,
   children: Node,
   iconName?: string,
-  buttonColor?: string,
+  themeColor?: string,
 }
 
 const defaultProps = {
+  onClick: () => null,
   shouldRenderTooltip: true,
   iconName: 'cross',
-  buttonColor: 'fail',
+  themeColor: 'fail',
 }
 
 const RoundButton = ({
   children,
   shouldRenderTooltip,
   iconName,
-  buttonColor,
+  themeColor,
   onClick,
 }: Props) => {
   return (
@@ -32,7 +33,7 @@ const RoundButton = ({
       onClick={onClick}
       shouldRenderTooltip={shouldRenderTooltip}
       iconName={iconName}
-      buttonColor={buttonColor}
+      themeColor={themeColor}
     >
       {
         shouldRenderTooltip && (
@@ -41,7 +42,7 @@ const RoundButton = ({
           </StyledTooltip>
         )
       }
-      <Icon size="xxsmall" name={iconName} fill={buttonColor} />
+      <Icon size="xxsmall" name={iconName} fill={themeColor} />
     </StyledRoundButton>
   )
 }

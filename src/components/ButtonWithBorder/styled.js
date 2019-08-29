@@ -25,6 +25,7 @@ const createBoxShadow = (baseShadow, withOvershadow, theme, overshadowThemeColor
 )
 
 export const StyledButtonWithBorder = styled.button`
+  border: ${({ theme }) => `2px solid ${theme.color.background}`};
   font-family: inherit;
   outline: none;
   font-size: 20px;
@@ -32,8 +33,8 @@ export const StyledButtonWithBorder = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 12px;
-  background-color: #FFFFFF;
+  padding: 7px 12px;
+  background-color: ${({ theme }) => theme.color.background};
   cursor: pointer;
   box-shadow: ${({ theme, overshadowThemeColor, withOvershadow }) => createBoxShadow(boxShadow(theme), withOvershadow, theme, overshadowThemeColor)};
   border-radius: 6px;
