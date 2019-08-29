@@ -2,51 +2,18 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-import { styles as boxStyles } from 'components/Box'
 import Collapse from 'components/Collapse'
 import Icon from 'components/Icon'
 import Link from 'components/Link'
 
-
-const Section = styled.section`
-  ${boxStyles}
-`
-
-const horizontalPadding = css`
-  padding-left: 18px;
-  padding-right: 18px;
-`
-
-const Header = styled.header`
-  ${horizontalPadding}
-  padding-top: 18px;
-  padding-bottom: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-`
-const Content = styled.div`
-  ${horizontalPadding}
-  padding-bottom: 24px;
-`
-
-const PanelContent = styled(Content)`
-  padding-left: 19px;
-`
-
-const PanelHeader = styled.div`
-  ${horizontalPadding}
-  align-items: center;
-  display: flex;
-  padding-top: 12px;
-  padding-bottom: 12px;
-`
-
-const PanelWrapper = styled(Collapse.Panel)`
-  margin: 0 -1px;
-  border-top: 1px solid ${({ theme }) => (theme.color.miscLighter)};
-`
+import {
+  Section,
+  Header,
+  Content,
+  PanelContent,
+  PanelHeader,
+  PanelWrapper,
+} from './styled'
 
 const Panel = (props) => {
   return (
@@ -66,15 +33,19 @@ Panel.propTypes = {
   title: PropTypes.node.isRequired,
 }
 
-
-const PanelHeaderWrapper = (props) => (
+const PanelHeaderWrapper = ({ children, isActive }) => (
   <PanelHeader>
     <Link
       rightIcon={
-        <Icon name="angle" rotate={props.isActive} inheritColor />
+        <Icon
+          size="xxsmall"
+          name="angle"
+          rotate={isActive}
+          inheritColor
+        />
       }
     >
-      {props.children}
+      {children}
     </Link>
   </PanelHeader>
 )
@@ -88,19 +59,24 @@ PanelHeaderWrapper.defaultProps = {
   isActive: false,
 }
 
-
-const FilterSection = (props) => (
-  <Section className={props.className}>
+const FilterSection = ({
+  content,
+  collapse,
+  headerLeft,
+  headerRight,
+  className,
+}) => (
+  <Section className={className}>
     <Header>
-      {props.headerLeft}
-      {props.headerRight}
+      {headerLeft}
+      {headerRight}
     </Header>
-    {props.content ? (
+    {content ? (
       <Content>
-        {props.content}
+        {content}
       </Content>
     ) : null}
-    {props.collapse}
+    {collapse}
   </Section>
 )
 

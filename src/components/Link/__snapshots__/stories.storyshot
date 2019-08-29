@@ -13,7 +13,7 @@ exports[`Storyshots COMPONENTS|Controls/Link <a> link 1`] = `
   box-sizing: border-box;
 }
 
-.c1 {
+.c2 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   color: #007acc;
@@ -34,23 +34,27 @@ exports[`Storyshots COMPONENTS|Controls/Link <a> link 1`] = `
   align-items: center;
 }
 
-.c1 .icon-inherit-color {
+.c2 .icon-inherit-color {
   fill: #007acc;
 }
 
-.c1:hover {
+.c2:hover {
   color: rgba(0,122,204,0.8);
 }
 
-.c1:hover .icon-inherit-color {
+.c2:hover .icon-inherit-color {
   fill: rgba(0,122,204,0.8);
+}
+
+.c3 .c1 {
+  font-size: 14px;
 }
 
 <div
   className="responsive c0"
 >
   <a
-    className="c1"
+    className="c1 c2"
     href="javascript:void(0)"
   >
     I will click you
@@ -71,7 +75,7 @@ exports[`Storyshots COMPONENTS|Controls/Link <span> link 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
+.c5 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -83,14 +87,14 @@ exports[`Storyshots COMPONENTS|Controls/Link <span> link 1`] = `
   opacity: 1;
 }
 
-.c3 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.c2 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -110,7 +114,7 @@ exports[`Storyshots COMPONENTS|Controls/Link <span> link 1`] = `
   padding-left: 3px;
 }
 
-.c1 {
+.c2 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   color: #007acc;
@@ -131,35 +135,39 @@ exports[`Storyshots COMPONENTS|Controls/Link <span> link 1`] = `
   align-items: center;
 }
 
-.c1 .icon-inherit-color {
+.c2 .icon-inherit-color {
   fill: #007acc;
 }
 
-.c1:hover {
+.c2:hover {
   color: rgba(0,122,204,0.8);
 }
 
-.c1:hover .icon-inherit-color {
+.c2:hover .icon-inherit-color {
   fill: rgba(0,122,204,0.8);
+}
+
+.c6 .c1 {
+  font-size: 14px;
 }
 
 <div
   className="responsive c0"
 >
   <span
-    className="c1"
+    className="c1 c2"
     href={null}
     onClick={[Function]}
   >
     Dropdown link
     <span
-      className="c2"
+      className="c3"
     >
       <span
-        className="c3"
+        className="c4"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="icon-inherit-color c5"
           fill={null}
           name="angle"
           rotate=""

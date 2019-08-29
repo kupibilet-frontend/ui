@@ -45,10 +45,12 @@ exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
   font-size: 16px;
   color: #ffffff;
   border-radius: 6px;
+  z-index: 9;
 }
 
 .c1 {
   position: relative;
+  background-color: #ffffff;
   font-family: inherit;
   display: -webkit-box;
   display: -webkit-flex;
@@ -84,11 +86,19 @@ exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
   box-shadow: 0px 2px 16px rgba(98,112,139,0.5),inset 0px 0px 0px 1px #e64926;
 }
 
+@media screen and (max-width:1199px) {
+  .responsive .c1:hover .c2,
+  .responsive-booking .c1:hover .c2 {
+    display: none;
+  }
+}
+
 <div
   className="responsive c0"
 >
   <button
     className="c1"
+    onClick={[Function]}
   >
     <span
       className="c2 c3"

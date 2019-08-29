@@ -33,6 +33,7 @@ exports[`Storyshots COMPONENTS|Controls/ButtonWithBorder Default 1`] = `
 }
 
 .c1 {
+  border: 2px solid #ffffff;
   font-family: inherit;
   outline: none;
   font-size: 20px;
@@ -49,8 +50,8 @@ exports[`Storyshots COMPONENTS|Controls/ButtonWithBorder Default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
-  background-color: #FFFFFF;
+  padding: 7px 12px;
+  background-color: #ffffff;
   cursor: pointer;
   box-shadow: 0px 2px 8px rgba(98,112,139,0.4);
   border-radius: 6px;
