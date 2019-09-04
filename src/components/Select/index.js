@@ -172,9 +172,9 @@ export class Select extends React.Component <Props, State> {
     event.stopPropagation()
     const { isOpen } = this.state
     if (isOpen) {
-      inputNode.blur()
+      inputNode.current.blur()
     } else {
-      inputNode.focus()
+      inputNode.current.focus()
     }
   }
 
