@@ -48,14 +48,21 @@ class InputControl extends PureComponent<Props, State> {
     size: 'normal',
   }
 
-  state = {
-    isActive: false,
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isActive: false,
+    }
+
+    this.innerInput = React.createRef()
   }
 
   onIconPress = (e) => {
     if (!this.state.isActive) {
       e.preventDefault()
-      this.innerInput.focus()
+
+      this.innerInput.current.focus()
     }
   }
 
@@ -73,14 +80,6 @@ class InputControl extends PureComponent<Props, State> {
     this.setState({
       isActive: false,
     })
-  }
-
-  innerRef(node) {
-    const { ref } = this.props
-    this.innerInput = node
-    if (ref) {
-      this.props.ref(node)
-    }
   }
 
   renderInputElement = () => {
@@ -106,7 +105,7 @@ class InputControl extends PureComponent<Props, State> {
         error={error}
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
-        ref={(el) => this.innerRef(el)}
+        innerRef={this.innerInput}
         isTextarea={isTextarea}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
