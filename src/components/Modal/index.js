@@ -75,13 +75,13 @@ class Modal extends React.PureComponent<Props> {
   }
 
   componentDidMount() {
-    const addListener = document ? document.addEventListener('keydown', this.handleKeyDown) : () => null
-    addListener()
+    // eslint-disable-next-line no-unused-expressions
+    document && document.addEventListener('keydown', this.handleKeyDown)
   }
 
   componentWillUnmount() {
-    const removeListener = document ? document.removeEventListener('keydown', this.handleKeyDown) : () => null
-    removeListener()
+    // eslint-disable-next-line no-unused-expressions
+    document && document.removeEventListener('keydown', this.handleKeyDown)
   }
 
   closePortal = () => {
