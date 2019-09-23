@@ -1,13 +1,13 @@
 // @flow
 import React, { PureComponent } from 'react'
+import type { Node } from 'react'
 import createE2EId from '../../utils/createE2EId'
 
-/* eslint-disable react/prop-types */
 type Props = {
   onTabChange: (string) => void,
   tabKey: string,
   isActive: boolean,
-  children: React.Node,
+  children: Node,
 }
 
 export default class Tab extends PureComponent<Props, void> {

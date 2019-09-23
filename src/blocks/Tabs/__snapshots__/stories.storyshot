@@ -69,6 +69,7 @@ exports[`Storyshots BLOCKS|Tabs Conditional rendered Tabs 1`] = `
     >
       <span
         className="c1"
+        data-test-id="tabs.1. Бронирование"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -250,6 +251,7 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
     >
       <span
         className="c1"
+        data-test-id="tabs.1. Бронирование"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -258,6 +260,7 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
       </span>
       <span
         className="c2"
+        data-test-id="tabs.2. Оплата"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
@@ -266,6 +269,7 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
       </span>
       <span
         className="c1"
+        data-test-id="tabs.3. Получение билета"
         onFocus={[Function]}
         role="tab"
         tabIndex="0"
