@@ -521,6 +521,36 @@ exports[`Storyshots COMPONENTS|Controls/DateRange DateRange 1`] = `
   display: none;
 }
 
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-weight: 600;
+}
+
+.c4 {
+  color: #808080;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 1px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width:599px) {
   .responsive .c1 .DateRangePicker__picker,
   .responsive-booking .c1 .DateRangePicker__picker {
@@ -539,13 +569,13 @@ exports[`Storyshots COMPONENTS|Controls/DateRange DateRange 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
   >
     <div
-      className="DateInput--startDate--placeholder DateInput--endDate--placeholder"
+      className=""
     >
       <div
         className="DateRangePicker"
@@ -572,7 +602,7 @@ exports[`Storyshots COMPONENTS|Controls/DateRange DateRange 1`] = `
                 readOnly={true}
                 required={false}
                 type="text"
-                value=""
+                value="2019-09-24"
               />
               <p
                 className="screen-reader-only"
@@ -582,9 +612,22 @@ exports[`Storyshots COMPONENTS|Controls/DateRange DateRange 1`] = `
   select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
               </p>
               <div
-                className="DateInput__display-text"
+                className="DateInput__display-text DateInput__display-text--has-input"
               >
-                Туда
+                <div
+                  className="c2"
+                >
+                  <div
+                    className="c3"
+                  >
+                    24 сен
+                  </div>
+                  <div
+                    className="c4"
+                  >
+                    вт
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -612,7 +655,7 @@ exports[`Storyshots COMPONENTS|Controls/DateRange DateRange 1`] = `
                 readOnly={true}
                 required={false}
                 type="text"
-                value=""
+                value="2019-09-24"
               />
               <p
                 className="screen-reader-only"
@@ -622,9 +665,22 @@ exports[`Storyshots COMPONENTS|Controls/DateRange DateRange 1`] = `
   select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
               </p>
               <div
-                className="DateInput__display-text"
+                className="DateInput__display-text DateInput__display-text--has-input"
               >
-                Обратно
+                <div
+                  className="c2"
+                >
+                  <div
+                    className="c3"
+                  >
+                    24 сен
+                  </div>
+                  <div
+                    className="c4"
+                  >
+                    вт
+                  </div>
+                </div>
               </div>
             </div>
           </div>

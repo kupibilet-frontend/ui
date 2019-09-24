@@ -81,7 +81,7 @@ exports[`Storyshots COMPONENTS|Layout/Fluid layout Aside on top with beforeSecti
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={
@@ -164,7 +164,7 @@ exports[`Storyshots COMPONENTS|Layout/Fluid layout Single column 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={
@@ -272,7 +272,7 @@ exports[`Storyshots COMPONENTS|Layout/Fluid layout Two columns 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={

@@ -149,7 +149,7 @@ exports[`Storyshots COMPONENTS|Controls/Input As textarea 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -522,14 +522,14 @@ exports[`Storyshots COMPONENTS|Controls/Input Combined inputs group 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
     size="large"
   >
     <div
-      className="combined-inputs-group c2"
+      className="c2 combined-inputs-group"
     >
       <input
         className="c3"
@@ -982,7 +982,7 @@ exports[`Storyshots COMPONENTS|Controls/Input Separate inputs group 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -1189,7 +1189,7 @@ exports[`Storyshots COMPONENTS|Controls/Input With RF + validation 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -1403,7 +1403,7 @@ exports[`Storyshots COMPONENTS|Controls/Input With icon group 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -1673,7 +1673,7 @@ exports[`Storyshots COMPONENTS|Controls/Input With icons 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -1886,7 +1886,7 @@ exports[`Storyshots COMPONENTS|Controls/Input default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"

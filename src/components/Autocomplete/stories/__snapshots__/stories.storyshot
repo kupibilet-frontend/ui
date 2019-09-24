@@ -318,7 +318,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -340,7 +340,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport 1`] = `
           autoCapitalize="sentences"
           autoComplete="off"
           autoFocus={true}
-          className="react-autosuggest__input c4"
+          className="c4 react-autosuggest__input"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={null}
@@ -353,7 +353,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport 1`] = `
           wrap="off"
         />
         <div
-          className="AirportInput__geo c5"
+          className="c5 AirportInput__geo"
         >
           <div
             className="c6"
@@ -368,7 +368,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport 1`] = `
         </div>
       </div>
       <div
-        className="react-autosuggest__suggestions-container c8"
+        className="c8 react-autosuggest__suggestions-container"
         id="react-autowhatever-1"
         role="listbox"
       />
@@ -695,7 +695,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport with multiply secti
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -717,7 +717,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport with multiply secti
           autoCapitalize="sentences"
           autoComplete="off"
           autoFocus={true}
-          className="react-autosuggest__input c4"
+          className="c4 react-autosuggest__input"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={null}
@@ -730,7 +730,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport with multiply secti
           wrap="off"
         />
         <div
-          className="AirportInput__geo c5"
+          className="c5 AirportInput__geo"
         >
           <div
             className="c6"
@@ -745,7 +745,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Airport with multiply secti
         </div>
       </div>
       <div
-        className="react-autosuggest__suggestions-container c8"
+        className="c8 react-autosuggest__suggestions-container"
         id="react-autowhatever-1"
         role="listbox"
       />
@@ -1017,7 +1017,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Autocomplete with custom in
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -1060,7 +1060,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Autocomplete with custom in
           aria-controls="react-autowhatever-1"
           autoComplete="off"
           autoFocus={true}
-          className="react-autosuggest__input c7"
+          className="c7 react-autosuggest__input"
           name="input"
           onBlur={[Function]}
           onChange={[Function]}
@@ -1076,7 +1076,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Autocomplete with custom in
         />
       </div>
       <div
-        className="react-autosuggest__suggestions-container c9"
+        className="c9 react-autosuggest__suggestions-container"
         id="react-autowhatever-1"
         role="listbox"
       />
@@ -1307,7 +1307,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Autocomplete with multiply 
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -1329,7 +1329,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Autocomplete with multiply 
           aria-controls="react-autowhatever-1"
           autoComplete="off"
           autoFocus={true}
-          className="react-autosuggest__input c4"
+          className="c4 react-autosuggest__input"
           name="input"
           onBlur={[Function]}
           onChange={[Function]}
@@ -1345,7 +1345,7 @@ exports[`Storyshots COMPONENTS|Controls/Autocomplete Autocomplete with multiply 
         />
       </div>
       <div
-        className="react-autosuggest__suggestions-container c6"
+        className="c6 react-autosuggest__suggestions-container"
         id="react-autowhatever-1"
         role="listbox"
       />

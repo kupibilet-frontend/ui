@@ -162,7 +162,7 @@ exports[`Storyshots COMPONENTS|Utils Responsive only 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div>
     <div

@@ -20,7 +20,7 @@ exports[`Storyshots COMPONENTS|Layout/Box Default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"

@@ -94,7 +94,7 @@ exports[`Storyshots COMPONENTS|Controls/RoundButton Default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"

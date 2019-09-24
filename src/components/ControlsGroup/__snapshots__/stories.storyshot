@@ -372,7 +372,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -405,7 +405,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Different controls
         wrap="off"
       />
       <div
-        className="AirportInput__geo c6"
+        className="c6 AirportInput__geo"
       >
         <div
           className="c7"
@@ -447,7 +447,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
   box-sizing: border-box;
 }
 
-.c11 {
+.c9 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -850,7 +850,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
   fill: #38afff;
 }
 
-.c10 {
+.c11 {
   box-sizing: content-box;
   width: 15px;
   padding: 5px 0;
@@ -872,27 +872,27 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
   display: flex;
 }
 
-.c1 .c9 {
+.c1 .c10 {
   opacity: 0;
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
 }
 
-.c1:hover .c9 {
+.c1:hover .c10 {
   opacity: 1;
   -webkit-transition-delay: .15s;
   transition-delay: .15s;
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c1 .c9,
-  .responsive-booking .c1 .c9 {
+  .responsive .c1 .c10,
+  .responsive-booking .c1 .c10 {
     opacity: 1;
   }
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -914,7 +914,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
         wrap="off"
       />
       <div
-        className="AirportInput__geo c4"
+        className="c4 AirportInput__geo"
       >
         <div
           className="c5"
@@ -937,7 +937,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
         className="c8"
       >
         <svg
-          className="c9 c10 icon-inherit-color c11"
+          className="c9 c10 c11 icon-inherit-color"
           fill={null}
           name="left-right"
           rotate=""
@@ -966,7 +966,7 @@ exports[`Storyshots COMPONENTS|Complex controls/ControlsGroup Inputs group 1`] =
         wrap="off"
       />
       <div
-        className="AirportInput__geo c4"
+        className="c4 AirportInput__geo"
       >
         <div
           className="c5"

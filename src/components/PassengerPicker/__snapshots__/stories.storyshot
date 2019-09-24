@@ -32,7 +32,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   display: inline-flex;
 }
 
-.c8 {
+.c7 {
   font-family: inherit;
   border: none;
   outline: none;
@@ -55,7 +55,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   opacity: .2;
 }
 
-.c8 .icon-inherit-color {
+.c7 .icon-inherit-color {
   fill: #ffffff;
 }
 
@@ -164,7 +164,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   color: #333333;
 }
 
-.c7 {
+.c8 {
   margin-left: 6px;
 }
 
@@ -187,8 +187,8 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
 }
 
 @media screen and (max-width:1199px) {
-  .responsive .c8,
-  .responsive-booking .c8 {
+  .responsive .c7,
+  .responsive-booking .c7 {
     max-width: 340px;
   }
 }
@@ -201,7 +201,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -257,7 +257,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
           </span>
         </button>
         <button
-          className="c7 c12"
+          className="c12 c8"
           disabled={false}
           onClick={[Function]}
           size="normal"

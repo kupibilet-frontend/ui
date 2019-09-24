@@ -73,7 +73,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={
@@ -117,7 +117,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
         aria-valuemax={1648128}
         aria-valuemin={1648032}
         aria-valuenow={1648032}
-        className="rheostat-handle c2"
+        className="c2 rheostat-handle"
         data-handle-key={0}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
@@ -136,7 +136,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
         aria-valuemax={1648128}
         aria-valuemin={1648032}
         aria-valuenow={1648128}
-        className="rheostat-handle c2"
+        className="c2 rheostat-handle"
         data-handle-key={1}
         onKeyDown={[Function]}
         onMouseDown={[Function]}
@@ -151,7 +151,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider With date range 1`] = `
         tabIndex={0}
       />
       <span
-        className="rheostat-progress c3"
+        className="c3 rheostat-progress"
         style={
           Object {
             "left": "0%",
@@ -591,7 +591,7 @@ exports[`Storyshots COMPONENTS|Controls/Slider default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={

@@ -69,7 +69,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal Bottom on mobile 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div>
     <button
@@ -157,7 +157,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With default footer 1`] = 
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div>
     <button
@@ -245,7 +245,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With no cancel button 1`] 
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div>
     <button
@@ -333,7 +333,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With no footer 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div>
     <button
@@ -421,7 +421,7 @@ exports[`Storyshots COMPONENTS|Complex controls/Modal With sizes & custom footer
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div>
     <button

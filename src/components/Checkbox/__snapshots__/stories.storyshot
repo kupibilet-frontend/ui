@@ -72,7 +72,7 @@ exports[`Storyshots COMPONENTS|Controls/Checkbox ReduxForm-ready 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <label
     className="c1"
@@ -93,7 +93,7 @@ exports[`Storyshots COMPONENTS|Controls/Checkbox ReduxForm-ready 1`] = `
       />
     </span>
     <span
-      className="label-text c4"
+      className="c4 label-text"
       disabled={false}
     >
       Авиабилеты

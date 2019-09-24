@@ -14,10 +14,10 @@ initStoryshots({
 jest.mock('react-onclickoutside', () => {
   const React = require('react')
 
-  return Сomponent => (
+  return (Component) => (
     (props) => (
       <onClickOutside-Mock-Decorator>
-        <Сomponent {...props} />
+        <Component {...props} />
       </onClickOutside-Mock-Decorator>
     )
   )

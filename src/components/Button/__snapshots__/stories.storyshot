@@ -69,7 +69,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Button as <a href="" /> 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <a
     className="-a c1"
@@ -157,7 +157,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"
@@ -272,7 +272,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button (custom icon) 1
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"
@@ -287,7 +287,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button (custom icon) 1
         className="c3"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="c4 icon-inherit-color"
           fill={null}
           name="carrot_monochrome"
           rotate=""
@@ -401,7 +401,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"
@@ -416,7 +416,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Icon-only button 1`] = `
         className="c3"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="c4 icon-inherit-color"
           fill={null}
           name="carrot_monochrome"
           rotate=""
@@ -532,7 +532,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Loading button 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"
@@ -547,7 +547,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons Loading button 1`] = `
         className="c3"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="c4 icon-inherit-color"
           fill={null}
           name="spinner"
           rotate=""
@@ -669,7 +669,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"
@@ -684,7 +684,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
         className="c3"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="c4 icon-inherit-color"
           fill={null}
           name="plane"
           rotate=""
@@ -710,7 +710,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With custom icons 1`] = `
         className="c3"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="c4 icon-inherit-color"
           fill={null}
           name="hand-baggage"
           rotate=""
@@ -832,7 +832,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = 
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"
@@ -847,7 +847,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = 
         className="c3"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="c4 icon-inherit-color"
           fill={null}
           name="hand-baggage"
           rotate=""
@@ -873,7 +873,7 @@ exports[`Storyshots COMPONENTS|Controls/Buttons With left and right icons 1`] = 
         className="c3"
       >
         <svg
-          className="icon-inherit-color c4"
+          className="c4 icon-inherit-color"
           fill={null}
           name="plane"
           rotate=""

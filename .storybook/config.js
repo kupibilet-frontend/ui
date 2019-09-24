@@ -1,13 +1,13 @@
 import { configure, setAddon, addDecorator } from '@storybook/react'
 import centered from '@storybook/addon-centered/react'
 import { withKnobs } from '@storybook/addon-knobs'
-import { setOptions } from '@storybook/addon-options'
+import { withOptions } from '@storybook/addon-options'
 
 import withTheme from 'storybook/decorators/withTheme'
 import withIcons from 'storybook/decorators/withIcons'
 import withReduxContext from 'storybook/decorators/withReduxContext'
 
-setOptions({
+withOptions({
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,

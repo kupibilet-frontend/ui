@@ -13,7 +13,7 @@ exports[`Storyshots BLOCKS|Collapse Accordion 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c6 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -90,7 +90,7 @@ exports[`Storyshots BLOCKS|Collapse Accordion 1`] = `
   user-select: none;
 }
 
-.c6 {
+.c7 {
   fill: #7d89a1;
   display: block;
 }
@@ -104,7 +104,7 @@ exports[`Storyshots BLOCKS|Collapse Accordion 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -189,7 +189,7 @@ exports[`Storyshots BLOCKS|Collapse Accordion 1`] = `
               className="c5"
             >
               <svg
-                className="c6 c9"
+                className="c9 c7"
                 fill={null}
                 name="angle"
                 rotate=""
@@ -226,7 +226,7 @@ exports[`Storyshots BLOCKS|Collapse Accordion 1`] = `
               className="c5"
             >
               <svg
-                className="c6 c9"
+                className="c9 c7"
                 fill={null}
                 name="angle"
                 rotate=""
@@ -258,7 +258,7 @@ exports[`Storyshots BLOCKS|Collapse Always open 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c6 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -323,7 +323,7 @@ exports[`Storyshots BLOCKS|Collapse Always open 1`] = `
   user-select: none;
 }
 
-.c6 {
+.c7 {
   fill: #7d89a1;
   display: block;
 }
@@ -337,7 +337,7 @@ exports[`Storyshots BLOCKS|Collapse Always open 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -523,7 +523,7 @@ exports[`Storyshots BLOCKS|Collapse Default 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c6 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -600,7 +600,7 @@ exports[`Storyshots BLOCKS|Collapse Default 1`] = `
   user-select: none;
 }
 
-.c6 {
+.c7 {
   fill: #7d89a1;
   display: block;
 }
@@ -614,7 +614,7 @@ exports[`Storyshots BLOCKS|Collapse Default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -699,7 +699,7 @@ exports[`Storyshots BLOCKS|Collapse Default 1`] = `
               className="c5"
             >
               <svg
-                className="c6 c9"
+                className="c9 c7"
                 fill={null}
                 name="angle"
                 rotate=""
@@ -736,7 +736,7 @@ exports[`Storyshots BLOCKS|Collapse Default 1`] = `
               className="c5"
             >
               <svg
-                className="c6 c9"
+                className="c9 c7"
                 fill={null}
                 name="angle"
                 rotate=""
@@ -822,7 +822,7 @@ exports[`Storyshots BLOCKS|Collapse Render custom header and layout 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -909,7 +909,7 @@ exports[`Storyshots BLOCKS|Collapse With paddings 1`] = `
   box-sizing: border-box;
 }
 
-.c7 {
+.c6 {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
   -webkit-transition-property: fill,-webkit-transform;
@@ -986,7 +986,7 @@ exports[`Storyshots BLOCKS|Collapse With paddings 1`] = `
   user-select: none;
 }
 
-.c6 {
+.c7 {
   fill: #7d89a1;
   display: block;
 }
@@ -1000,7 +1000,7 @@ exports[`Storyshots BLOCKS|Collapse With paddings 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"
@@ -1085,7 +1085,7 @@ exports[`Storyshots BLOCKS|Collapse With paddings 1`] = `
               className="c5"
             >
               <svg
-                className="c6 c9"
+                className="c9 c7"
                 fill={null}
                 name="angle"
                 rotate=""
@@ -1122,7 +1122,7 @@ exports[`Storyshots BLOCKS|Collapse With paddings 1`] = `
               className="c5"
             >
               <svg
-                className="c6 c9"
+                className="c9 c7"
                 fill={null}
                 name="angle"
                 rotate=""

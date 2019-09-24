@@ -79,7 +79,7 @@ exports[`Storyshots COMPONENTS|Controls/ButtonWithBorder Default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <button
     className="c1"

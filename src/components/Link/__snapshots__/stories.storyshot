@@ -51,7 +51,7 @@ exports[`Storyshots COMPONENTS|Controls/Link <a> link 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <a
     className="c1 c2"
@@ -152,7 +152,7 @@ exports[`Storyshots COMPONENTS|Controls/Link <span> link 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <span
     className="c1 c2"
@@ -167,7 +167,7 @@ exports[`Storyshots COMPONENTS|Controls/Link <span> link 1`] = `
         className="c4"
       >
         <svg
-          className="icon-inherit-color c5"
+          className="c5 icon-inherit-color"
           fill={null}
           name="angle"
           rotate=""

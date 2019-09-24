@@ -150,7 +150,7 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput Fake input, based on div 1`
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={
@@ -431,7 +431,7 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={
@@ -457,7 +457,7 @@ exports[`Storyshots COMPONENTS|Controls/AirportInput default 1`] = `
         wrap="off"
       />
       <div
-        className="AirportInput__geo c3"
+        className="c3 AirportInput__geo"
       >
         <div
           className="c4"

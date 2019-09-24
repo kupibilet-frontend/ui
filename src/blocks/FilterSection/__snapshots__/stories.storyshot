@@ -232,7 +232,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     style={
@@ -278,7 +278,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
                 />
               </span>
               <span
-                className="label-text c7"
+                className="c7 label-text"
                 disabled={false}
               >
                 Без пересадок
@@ -305,7 +305,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
                 />
               </span>
               <span
-                className="label-text c7"
+                className="c7 label-text"
                 disabled={false}
               >
                 1 пересадка
@@ -332,7 +332,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
                 />
               </span>
               <span
-                className="label-text c7"
+                className="c7 label-text"
                 disabled={false}
               >
                 2 и более
@@ -346,7 +346,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
         role="tablist"
       >
         <div
-          className="rc-collapse-item c8"
+          className="rc-collapse-item c8 "
         >
           <div
             aria-expanded="false"
@@ -371,7 +371,7 @@ exports[`Storyshots BLOCKS|FilterSection Defaultw 1`] = `
                     className="c13"
                   >
                     <svg
-                      className="icon-inherit-color c14"
+                      className="c14 icon-inherit-color"
                       fill={null}
                       name="angle"
                       rotate=""

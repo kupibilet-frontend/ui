@@ -308,7 +308,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="c1"

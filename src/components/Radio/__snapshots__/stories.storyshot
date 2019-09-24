@@ -141,7 +141,7 @@ exports[`Storyshots COMPONENTS|Controls/Radio default 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div>
     <label

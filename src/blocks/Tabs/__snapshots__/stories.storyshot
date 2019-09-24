@@ -57,7 +57,7 @@ exports[`Storyshots BLOCKS|Tabs Conditional rendered Tabs 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="rc-tabs rc-tabs-top"
@@ -238,7 +238,7 @@ exports[`Storyshots BLOCKS|Tabs Styled Tabs 1`] = `
 }
 
 <div
-  className="responsive c0"
+  className="c0 responsive"
 >
   <div
     className="rc-tabs rc-tabs-top"
