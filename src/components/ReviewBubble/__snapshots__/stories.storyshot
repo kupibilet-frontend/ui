@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
+exports[`Storyshots COMPONENTS|Controls/ReviewBubble Default 1`] = `
 .c0 {
   font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
@@ -246,6 +246,7 @@ exports[`Storyshots COMPONENTS|Controls/Bubble Default 1`] = `
     </h2>
     <div
       className="c3"
+      data-test-id="test"
     >
       <div
         className="c4"

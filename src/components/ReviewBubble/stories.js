@@ -3,8 +3,9 @@ import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import H3 from 'components/Typography/H2'
 import { SingleFluidSection } from 'components/FluidLayout'
-import CommentBubble from 'components/CommentBubble'
+import ReviewBubble from 'components/ReviewBubble'
 import mq from 'utils/media-queries'
+import createE2EId from 'utils/createE2EId'
 
 const TEXTS = [
   {
@@ -34,17 +35,17 @@ const StyledSingleFluidSection = styled(SingleFluidSection)`
   padding-top: 60px;
 `
 
-storiesOf('COMPONENTS|Controls/Bubble', module)
+storiesOf('COMPONENTS|Controls/ReviewBubble', module)
   .add('Default', () => (
     <StyledSingleFluidSection>
       <Title>
         Отзывы
       </Title>
-      <CommentBubble name="Купибилет" reply>
+      <ReviewBubble name="Купибилет" reply {...createE2EId('test')}>
         Спасибо, мы получили ваш отзыв! Он появится после проверки модератором.
-      </CommentBubble>
+      </ReviewBubble>
       { Object.entries(TEXTS).map(([key, value]) => (
-        <CommentBubble key={key} index={key} {...value} />
+        <ReviewBubble key={key} index={key} {...value} />
       ))}
     </StyledSingleFluidSection>
   ))

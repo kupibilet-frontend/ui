@@ -40,12 +40,12 @@ const Bubble = styled.div`
     display: block;
   `}
 `
-const CommentWrapper = styled.div`
+const ReviewWrapper = styled.div`
   max-width: 756px;
   margin: 0 auto 6px;
 `
 
-const CommentBlock = styled.div`
+const ReviewBlock = styled.div`
   margin-bottom: 36px;
   ${mq.mobile`
     margin: 0 -18px 24px;
@@ -59,14 +59,14 @@ const Author = styled(Text.withComponent('p'))`
   margin-top: 2px;
 `
 
-const CommentText = styled(TextLarge.withComponent('p'))`
+const ReviewText = styled(TextLarge.withComponent('p'))`
   white-space: pre-line;
 `
 
 export {
   Bubble,
-  CommentWrapper,
-  CommentBlock,
+  ReviewWrapper,
+  ReviewBlock,
   Author,
-  CommentText,
+  ReviewText,
 }

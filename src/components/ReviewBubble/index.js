@@ -4,12 +4,11 @@ import moment from '@kupibilet/moment'
 import type { Node } from 'react'
 import {
   Bubble,
-  CommentWrapper,
+  ReviewWrapper,
   Author,
-  CommentText,
-  CommentBlock,
+  ReviewText,
+  ReviewBlock,
 } from './styled'
-
 
 type Props = {
   index?: number | string,
@@ -20,7 +19,7 @@ type Props = {
   children?: Node,
 }
 
-class CommentBubble extends PureComponent<Props> {
+class ReviewBubble extends PureComponent<Props> {
   static defaultProps = {
     reply: false,
     createdAt: null,
@@ -37,18 +36,21 @@ class CommentBubble extends PureComponent<Props> {
       name,
       createdAt,
       children,
+      ...props
     } = this.props
     return (
-      <CommentBlock>
-        <CommentWrapper>
+      <ReviewBlock
+        {...props}
+      >
+        <ReviewWrapper>
           <Bubble
             orderNumber={index}
             reply={reply}
           >
             { children || (
-            <CommentText>
+            <ReviewText>
               {text}
-            </CommentText>
+            </ReviewText>
             )
             }
           </Bubble>
@@ -59,10 +61,10 @@ class CommentBubble extends PureComponent<Props> {
               : '' }
             { createdAt && moment(createdAt).format('ll') }
           </Author>
-        </CommentWrapper>
-      </CommentBlock>
+        </ReviewWrapper>
+      </ReviewBlock>
     )
   }
 }
 
-export default CommentBubble
+export default ReviewBubble
