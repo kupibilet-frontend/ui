@@ -52,41 +52,14 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   transition: 0.15s ease-out;
   -webkit-transition-property: opacity,box-shadow;
   transition-property: opacity,box-shadow;
-  opacity: .2;
 }
 
 .c8 .icon-inherit-color {
   fill: #ffffff;
 }
 
-.c12 {
-  font-family: inherit;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  color: #ffffff;
-  background: #38afff;
-  font-size: 18px;
-  line-height: 18px;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: 6px;
-  padding: 6.0px;
-  -webkit-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: opacity,box-shadow;
-  transition-property: opacity,box-shadow;
-}
-
-.c12 .icon-inherit-color {
-  fill: #ffffff;
-}
-
-.c12:hover,
-.c12:focus {
+.c8:hover,
+.c8:focus {
   cursor: pointer;
   background: #0f99f5;
   box-shadow: 0 0 0 1px #0f99f5;
@@ -94,7 +67,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   transition: none;
 }
 
-.c12:active {
+.c8:active {
   background: #008ae6;
   box-shadow: none;
 }
@@ -193,13 +166,6 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
   }
 }
 
-@media screen and (max-width:1199px) {
-  .responsive .c12,
-  .responsive-booking .c12 {
-    max-width: 340px;
-  }
-}
-
 <div
   className="responsive c0"
 >
@@ -231,7 +197,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
       >
         <button
           className="c7 c8"
-          disabled={true}
+          disabled={false}
           onClick={[Function]}
           size="normal"
         >
@@ -257,7 +223,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PassengerPicker Defalut 1`] = `
           </span>
         </button>
         <button
-          className="c7 c12"
+          className="c7 c8"
           disabled={false}
           onClick={[Function]}
           size="normal"
