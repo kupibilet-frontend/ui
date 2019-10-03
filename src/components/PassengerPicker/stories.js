@@ -20,7 +20,7 @@ storiesOf('COMPONENTS|Complex controls/PassengerPicker', module)
       const description = text('description', defaults.description)
       const value = number('value', defaults.current)
       const isMax = boolean('isMax', defaults.isMax)
-      const isMin = boolean('isMin', defaults.isMin)
+      const isMin = value < 1
       const onChange = ({ counter }) => {
         updateKnob('value', 'number', counter)
       }
@@ -44,7 +44,7 @@ storiesOf('COMPONENTS|Complex controls/PassengerPicker', module)
       notes: `
         redux-form совместимый компонент.\n
         value в redux-form должно быть объектом вида
-  
+
         \tvalue: {
           \tcounter: number,
           \tisMin: bool,
