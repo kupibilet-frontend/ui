@@ -13,7 +13,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   box-sizing: border-box;
 }
 
-.c4 {
+.c3 {
   width: 100px;
   height: 50px;
   background-color: #ffffff;
@@ -21,7 +21,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c5 {
+.c4 {
   width: 100px;
   height: 50px;
   background-color: #e64926;
@@ -29,7 +29,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c6 {
+.c5 {
   width: 100px;
   height: 50px;
   background-color: #23c256;
@@ -37,7 +37,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c7 {
+.c6 {
   width: 100px;
   height: 50px;
   background-color: #38afff;
@@ -45,7 +45,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c8 {
+.c7 {
   width: 100px;
   height: 50px;
   background-color: #0f99f5;
@@ -53,7 +53,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c9 {
+.c8 {
   width: 100px;
   height: 50px;
   background-color: #008ae6;
@@ -61,7 +61,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c10 {
+.c9 {
   width: 100px;
   height: 50px;
   background-color: #007acc;
@@ -69,7 +69,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c11 {
+.c10 {
   width: 100px;
   height: 50px;
   background-color: #77c8ff;
@@ -77,7 +77,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c12 {
+.c11 {
   width: 100px;
   height: 50px;
   background-color: #a9ddff;
@@ -85,7 +85,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c13 {
+.c12 {
   width: 100px;
   height: 50px;
   background-color: #e5f5ff;
@@ -93,7 +93,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c14 {
+.c13 {
   width: 100px;
   height: 50px;
   background-color: #ff9100;
@@ -101,7 +101,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c15 {
+.c14 {
   width: 100px;
   height: 50px;
   background-color: #ff7d03;
@@ -109,7 +109,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c16 {
+.c15 {
   width: 100px;
   height: 50px;
   background-color: #fc6100;
@@ -117,7 +117,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c17 {
+.c16 {
   width: 100px;
   height: 50px;
   background-color: #fa3a00;
@@ -125,7 +125,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c18 {
+.c17 {
   width: 100px;
   height: 50px;
   background-color: #ffb640;
@@ -133,7 +133,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c19 {
+.c18 {
   width: 100px;
   height: 50px;
   background-color: #ffd787;
@@ -141,7 +141,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c20 {
+.c19 {
   width: 100px;
   height: 50px;
   background-color: #fff0bf;
@@ -149,7 +149,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c21 {
+.c20 {
   width: 100px;
   height: 50px;
   background-color: #808080;
@@ -157,7 +157,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c22 {
+.c21 {
   width: 100px;
   height: 50px;
   background-color: #4d4d4d;
@@ -165,7 +165,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c23 {
+.c22 {
   width: 100px;
   height: 50px;
   background-color: #333333;
@@ -173,7 +173,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c24 {
+.c23 {
   width: 100px;
   height: 50px;
   background-color: #222222;
@@ -181,7 +181,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c25 {
+.c24 {
   width: 100px;
   height: 50px;
   background-color: #b3b3b3;
@@ -189,7 +189,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c26 {
+.c25 {
   width: 100px;
   height: 50px;
   background-color: #dedede;
@@ -197,7 +197,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c27 {
+.c26 {
   width: 100px;
   height: 50px;
   background-color: #f2f2f2;
@@ -205,7 +205,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c28 {
+.c27 {
   width: 100px;
   height: 50px;
   background-color: #b1bdcc;
@@ -213,7 +213,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c29 {
+.c28 {
   width: 100px;
   height: 50px;
   background-color: #96a0b3;
@@ -221,7 +221,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c30 {
+.c29 {
   width: 100px;
   height: 50px;
   background-color: #7d89a1;
@@ -229,7 +229,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c31 {
+.c30 {
   width: 100px;
   height: 50px;
   background-color: #62708b;
@@ -237,7 +237,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c32 {
+.c31 {
   width: 100px;
   height: 50px;
   background-color: #cad3de;
@@ -245,7 +245,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c33 {
+.c32 {
   width: 100px;
   height: 50px;
   background-color: #dde3eb;
@@ -253,7 +253,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c34 {
+.c33 {
   width: 100px;
   height: 50px;
   background-color: #f0f5fa;
@@ -261,7 +261,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   margin: 5px;
 }
 
-.c3 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -289,17 +289,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   transition: all 0.125s ease-in-out;
 }
 
-.c3:hover {
+.c2:hover {
   box-shadow: 0 0 2px rgba(0,0,0,0.10);
 }
 
 .c1 {
-  width: 300px;
-  padding-top: 20px;
-  margin: 0 auto;
-}
-
-.c2 {
   display: grid;
   grid-gap: 12px;
   padding: 20px;
@@ -313,13 +307,8 @@ exports[`Storyshots COLORS Theme colors 1`] = `
   <div
     className="c1"
   >
-    click to copy
-  </div>
-  <div
-    className="c2"
-  >
     <div
-      className="c3"
+      className="c2"
       id="background"
       onClick={[Function]}
     >
@@ -330,11 +319,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #ffffff
       </span>
       <div
-        className="c4"
+        className="c3"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="fail"
       onClick={[Function]}
     >
@@ -345,11 +334,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #e64926
       </span>
       <div
-        className="c5"
+        className="c4"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="success"
       onClick={[Function]}
     >
@@ -360,11 +349,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #23c256
       </span>
       <div
-        className="c6"
+        className="c5"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="primary"
       onClick={[Function]}
     >
@@ -375,11 +364,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #38afff
       </span>
       <div
-        className="c7"
+        className="c6"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="primaryDark"
       onClick={[Function]}
     >
@@ -390,11 +379,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #0f99f5
       </span>
       <div
-        className="c8"
+        className="c7"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="primaryDarker"
       onClick={[Function]}
     >
@@ -405,11 +394,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #008ae6
       </span>
       <div
-        className="c9"
+        className="c8"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="primaryDarkest"
       onClick={[Function]}
     >
@@ -420,11 +409,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #007acc
       </span>
       <div
-        className="c10"
+        className="c9"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="primaryLight"
       onClick={[Function]}
     >
@@ -435,11 +424,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #77c8ff
       </span>
       <div
-        className="c11"
+        className="c10"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="primaryLighter"
       onClick={[Function]}
     >
@@ -450,11 +439,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #a9ddff
       </span>
       <div
-        className="c12"
+        className="c11"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="primaryLightest"
       onClick={[Function]}
     >
@@ -465,11 +454,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #e5f5ff
       </span>
       <div
-        className="c13"
+        className="c12"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="secondary"
       onClick={[Function]}
     >
@@ -480,11 +469,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #ff9100
       </span>
       <div
-        className="c14"
+        className="c13"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="secondaryDark"
       onClick={[Function]}
     >
@@ -495,11 +484,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #ff7d03
       </span>
       <div
-        className="c15"
+        className="c14"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="secondaryDarker"
       onClick={[Function]}
     >
@@ -510,11 +499,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #fc6100
       </span>
       <div
-        className="c16"
+        className="c15"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="secondaryDarkest"
       onClick={[Function]}
     >
@@ -525,11 +514,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #fa3a00
       </span>
       <div
-        className="c17"
+        className="c16"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="secondaryLight"
       onClick={[Function]}
     >
@@ -540,11 +529,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #ffb640
       </span>
       <div
-        className="c18"
+        className="c17"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="secondaryLighter"
       onClick={[Function]}
     >
@@ -555,11 +544,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #ffd787
       </span>
       <div
-        className="c19"
+        className="c18"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="secondaryLightest"
       onClick={[Function]}
     >
@@ -570,11 +559,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #fff0bf
       </span>
       <div
-        className="c20"
+        className="c19"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="text"
       onClick={[Function]}
     >
@@ -585,11 +574,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #808080
       </span>
       <div
-        className="c21"
+        className="c20"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="textDark"
       onClick={[Function]}
     >
@@ -600,11 +589,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #4d4d4d
       </span>
       <div
-        className="c22"
+        className="c21"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="textDarker"
       onClick={[Function]}
     >
@@ -615,11 +604,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #333333
       </span>
       <div
-        className="c23"
+        className="c22"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="textDarkest"
       onClick={[Function]}
     >
@@ -630,11 +619,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #222222
       </span>
       <div
-        className="c24"
+        className="c23"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="textLight"
       onClick={[Function]}
     >
@@ -645,11 +634,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #b3b3b3
       </span>
       <div
-        className="c25"
+        className="c24"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="textLighter"
       onClick={[Function]}
     >
@@ -660,11 +649,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #dedede
       </span>
       <div
-        className="c26"
+        className="c25"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="textLightest"
       onClick={[Function]}
     >
@@ -675,11 +664,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #f2f2f2
       </span>
       <div
-        className="c27"
+        className="c26"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="misc"
       onClick={[Function]}
     >
@@ -690,11 +679,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #b1bdcc
       </span>
       <div
-        className="c28"
+        className="c27"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="miscDark"
       onClick={[Function]}
     >
@@ -705,11 +694,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #96a0b3
       </span>
       <div
-        className="c29"
+        className="c28"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="miscDarker"
       onClick={[Function]}
     >
@@ -720,11 +709,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #7d89a1
       </span>
       <div
-        className="c30"
+        className="c29"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="miscDarkest"
       onClick={[Function]}
     >
@@ -735,11 +724,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #62708b
       </span>
       <div
-        className="c31"
+        className="c30"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="miscLight"
       onClick={[Function]}
     >
@@ -750,11 +739,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #cad3de
       </span>
       <div
-        className="c32"
+        className="c31"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="miscLighter"
       onClick={[Function]}
     >
@@ -765,11 +754,11 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #dde3eb
       </span>
       <div
-        className="c33"
+        className="c32"
       />
     </div>
     <div
-      className="c3"
+      className="c2"
       id="miscLightest"
       onClick={[Function]}
     >
@@ -780,7 +769,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #f0f5fa
       </span>
       <div
-        className="c34"
+        className="c33"
       />
     </div>
   </div>

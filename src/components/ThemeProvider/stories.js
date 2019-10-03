@@ -26,11 +26,6 @@ const ColorCard = styled.div`
     box-shadow: 0 0 2px rgba(0,0,0, 0.10);
   }
 `
-const Text = styled.div`
-  width: 300px;
-  padding-top: 20px;
-  margin: 0 auto;
-`
 const ColorPanel = styled.div`
   display: grid;
   grid-gap: 12px;
@@ -68,7 +63,6 @@ const copyToClipboard = (str) => {
 storiesOf('COLORS', module)
   .add('Theme colors', () => (
     <>
-      <Text>click to copy</Text>
       <ColorPanel>
         {colors.map((pickedColor) => (
           <ColorCard
