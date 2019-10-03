@@ -19,6 +19,7 @@ const variantsSelect = (defaultValue = 'primary') => select(
   [
     'primary',
     'secondary',
+    'link',
   ],
   defaultValue,
 )
