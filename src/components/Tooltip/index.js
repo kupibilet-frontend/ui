@@ -1,144 +1,64 @@
 // @flow
 
-import * as React from 'react'
-import ReactDOM from 'react-dom'
-import { Portal } from 'react-portal'
-import { GlobalStylesScope } from 'components/ThemeProvider'
-import TextSmall from 'components/Typography/TextSmall'
-import {
-  TooltipBackground,
-  TooltipContainer,
-  RelativeWrapper,
-  TooltipDot,
-  PositionWrapper,
-  PlacementWrapper,
-} from './styled'
-/* eslint-disable react/no-unused-prop-types */
+import React from 'react'
+import TooltipPortal from './parts/TooltipPortal'
 
-export type Coordinates = {
-  left: number,
-  top: number,
-  width: number,
-  height: number,
-}
-
-type GetCoordinates = (node: React.Node) => Coordinates
-
-type PortalProps = {
-  isOpen: boolean,
-  coords: Coordinates | null,
-  placement: string,
-  content: string | React.Node | any | null,
-  success: ?boolean,
-  error: ?boolean,
-}
-
-const TooltipPortal = (props: PortalProps) => {
-  const {
-    isOpen,
-    coords,
-    placement,
-    content,
-    success,
-    error,
-  } = props
-
-  return ((content && isOpen && coords) ? (
-    <Portal>
-      <GlobalStylesScope>
-        <TooltipContainer
-          top={coords.top}
-          left={coords.left}
-          width={coords.width}
-          height={coords.height}
-          placement={placement}
-        >
-          <PositionWrapper>
-            <PlacementWrapper placement={placement}>
-              <RelativeWrapper
-                placement={placement}
-                width={coords.width}
-                height={coords.height}
-              >
-                <TooltipDot
-                  success={success}
-                  error={error}
-                />
-                <TooltipBackground
-                  success={success}
-                  error={error}
-                >
-                  <TextSmall>
-                    { content }
-                  </TextSmall>
-                </TooltipBackground>
-              </RelativeWrapper>
-            </PlacementWrapper>
-          </PositionWrapper>
-        </TooltipContainer>
-      </GlobalStylesScope>
-    </Portal>
-  ) : null
-  )
-}
+import type { Coordinates } from './types'
 
 type TooltipProps = {
   children: Object | React.Node,
-  content: string | React.Node | any | null,
-  placement: string,
-  success: ?boolean,
-  error: ?boolean,
-  dotCentering: ?boolean,
-  header: ?string,
-  align: ?string,
+  content?: string | React.Node,
+  placement?: string,
+  header?: string,
+  align?: string,
 }
 
 type TooltipState = {
   isOpen: boolean,
 }
 
-/* eslint-disable react/prop-types */
 class Tooltip extends React.Component<TooltipProps, TooltipState> {
   static defaultProps = {
     placement: 'bottom',
-    success: false,
-    error: false,
-    dotCentering: false,
+    align: '',
+    content: null,
+    header: null,
   }
 
-  state = {
-    isOpen: false,
-  }
+  constructor(props: TooltipProps) {
+    super(props)
+    this.state = {
+      isOpen: false,
+    }
 
-  childRef = null
-  coords = null
-  hoverTimeout = null
+    this.coords = null
+    this.hoverTimeout = null
+  }
 
   componentDidMount() {
-    if (this.childRef !== null) {
-      this.coords = this.getCoordinates(this.childRef)
+    if (this.tooltipRef && this.tooltipRef.current) {
+      this.coords = this.getCoordinates()
     }
   }
 
   componentWillUnmount() {
     clearTimeout(this.hoverTimeout)
   }
-  /* eslint-disable react/no-find-dom-node */
-  getCoordinates = (node): GetCoordinates => {
-    const availableNode = ReactDOM.findDOMNode(node)
-    if (availableNode) {
-      const rect = ReactDOM.findDOMNode(node).getBoundingClientRect()
-      return {
-        width: rect.width,
-        height: rect.height,
-        left: rect.left + window.pageXOffset,
-        top: rect.top + window.pageYOffset,
-      }
+
+  getCoordinates = (): Coordinates => {
+    const rect = this.tooltipRef.getBoundingClientRect()
+
+    return {
+      width: rect.width,
+      height: rect.height,
+      left: rect.left + window.pageXOffset,
+      top: rect.top + window.pageYOffset,
     }
   }
 
   handleMouseLeave = () => {
     clearTimeout(this.hoverTimeout)
+
     this.hoverTimeout = null
 
     this.setState({
@@ -148,7 +68,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
 
   handleMouseEnter = () => {
     this.hoverTimeout = setTimeout(() => {
-      this.coords = this.getCoordinates(this.childRef)
+      this.coordinates = this.getCoordinates()
       this.setState({
         isOpen: Boolean(this.hoverTimeout),
       })
@@ -156,48 +76,28 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   }
 
   render() {
-    const {
-      children,
-      placement,
-      content,
-      success,
-      error,
-      shouldRender,
-    } = this.props
-    const { coords } = this
+    const { children, placement, content, header, align } = this.props
     const { isOpen } = this.state
-    return [
-      <TooltipChildrenProxy
-        key="tooltippedElement"
-        ref={(element) => { this.childRef = element }}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}
-      >
-        {children}
-      </TooltipChildrenProxy>,
-      <TooltipPortal
-        key="tooltipPortal"
-        coords={coords}
-        placement={placement}
-        isOpen={isOpen}
-        content={content}
-        success={success}
-        error={error}
-        shouldRender={shouldRender}
-      />,
-    ]
-  }
-}
 
-type TooltipChildrenProxyProps = {
-  children: React.Node,
-}
-
-// Proxy for possibility to transfer ref to any children
-class TooltipChildrenProxy extends React.Component <TooltipChildrenProxyProps> {
-  render() {
-    const { children, ...props } = this.props
-    return React.cloneElement(React.Children.only(children), props)
+    return (
+      <>
+        <div
+          ref={(node) => { this.tooltipRef = node }}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+        >
+          {children}
+        </div>
+        <TooltipPortal
+          coordinates={this.coordinates}
+          align={align}
+          placement={placement}
+          isOpen={isOpen}
+          content={content}
+          header={header}
+        />
+      </>
+    )
   }
 }
 
