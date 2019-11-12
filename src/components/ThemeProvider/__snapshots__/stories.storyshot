@@ -152,7 +152,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c21 {
   width: 100px;
   height: 50px;
-  background-color: #808080;
+  background-color: #fffbf0;
   padding: 10px;
   margin: 5px;
 }
@@ -160,7 +160,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c22 {
   width: 100px;
   height: 50px;
-  background-color: #4d4d4d;
+  background-color: #808080;
   padding: 10px;
   margin: 5px;
 }
@@ -168,7 +168,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c23 {
   width: 100px;
   height: 50px;
-  background-color: #333333;
+  background-color: #4d4d4d;
   padding: 10px;
   margin: 5px;
 }
@@ -176,7 +176,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c24 {
   width: 100px;
   height: 50px;
-  background-color: #222222;
+  background-color: #333333;
   padding: 10px;
   margin: 5px;
 }
@@ -184,7 +184,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c25 {
   width: 100px;
   height: 50px;
-  background-color: #b3b3b3;
+  background-color: #222222;
   padding: 10px;
   margin: 5px;
 }
@@ -192,7 +192,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c26 {
   width: 100px;
   height: 50px;
-  background-color: #dedede;
+  background-color: #b3b3b3;
   padding: 10px;
   margin: 5px;
 }
@@ -200,7 +200,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c27 {
   width: 100px;
   height: 50px;
-  background-color: #f2f2f2;
+  background-color: #dedede;
   padding: 10px;
   margin: 5px;
 }
@@ -208,7 +208,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c28 {
   width: 100px;
   height: 50px;
-  background-color: #b1bdcc;
+  background-color: #f6f6f8;
   padding: 10px;
   margin: 5px;
 }
@@ -216,7 +216,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c29 {
   width: 100px;
   height: 50px;
-  background-color: #96a0b3;
+  background-color: #b1bdcc;
   padding: 10px;
   margin: 5px;
 }
@@ -224,7 +224,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c30 {
   width: 100px;
   height: 50px;
-  background-color: #7d89a1;
+  background-color: #96a0b3;
   padding: 10px;
   margin: 5px;
 }
@@ -232,7 +232,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c31 {
   width: 100px;
   height: 50px;
-  background-color: #62708b;
+  background-color: #7d89a1;
   padding: 10px;
   margin: 5px;
 }
@@ -240,7 +240,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c32 {
   width: 100px;
   height: 50px;
-  background-color: #cad3de;
+  background-color: #62708b;
   padding: 10px;
   margin: 5px;
 }
@@ -248,12 +248,20 @@ exports[`Storyshots COLORS Theme colors 1`] = `
 .c33 {
   width: 100px;
   height: 50px;
-  background-color: #dde3eb;
+  background-color: #cad3de;
   padding: 10px;
   margin: 5px;
 }
 
 .c34 {
+  width: 100px;
+  height: 50px;
+  background-color: #dde3eb;
+  padding: 10px;
+  margin: 5px;
+}
+
+.c35 {
   width: 100px;
   height: 50px;
   background-color: #f0f5fa;
@@ -575,6 +583,21 @@ exports[`Storyshots COLORS Theme colors 1`] = `
     </div>
     <div
       className="c3"
+      id="secondarySoft"
+      onClick={[Function]}
+    >
+      <span>
+        secondarySoft
+      </span>
+      <span>
+        #fffbf0
+      </span>
+      <div
+        className="c21"
+      />
+    </div>
+    <div
+      className="c3"
       id="text"
       onClick={[Function]}
     >
@@ -585,7 +608,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #808080
       </span>
       <div
-        className="c21"
+        className="c22"
       />
     </div>
     <div
@@ -600,7 +623,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #4d4d4d
       </span>
       <div
-        className="c22"
+        className="c23"
       />
     </div>
     <div
@@ -615,7 +638,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #333333
       </span>
       <div
-        className="c23"
+        className="c24"
       />
     </div>
     <div
@@ -630,7 +653,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #222222
       </span>
       <div
-        className="c24"
+        className="c25"
       />
     </div>
     <div
@@ -645,7 +668,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #b3b3b3
       </span>
       <div
-        className="c25"
+        className="c26"
       />
     </div>
     <div
@@ -660,7 +683,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #dedede
       </span>
       <div
-        className="c26"
+        className="c27"
       />
     </div>
     <div
@@ -672,10 +695,10 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         textLightest
       </span>
       <span>
-        #f2f2f2
+        #f6f6f8
       </span>
       <div
-        className="c27"
+        className="c28"
       />
     </div>
     <div
@@ -690,7 +713,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #b1bdcc
       </span>
       <div
-        className="c28"
+        className="c29"
       />
     </div>
     <div
@@ -705,7 +728,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #96a0b3
       </span>
       <div
-        className="c29"
+        className="c30"
       />
     </div>
     <div
@@ -720,7 +743,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #7d89a1
       </span>
       <div
-        className="c30"
+        className="c31"
       />
     </div>
     <div
@@ -735,7 +758,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #62708b
       </span>
       <div
-        className="c31"
+        className="c32"
       />
     </div>
     <div
@@ -750,7 +773,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #cad3de
       </span>
       <div
-        className="c32"
+        className="c33"
       />
     </div>
     <div
@@ -765,7 +788,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #dde3eb
       </span>
       <div
-        className="c33"
+        className="c34"
       />
     </div>
     <div
@@ -780,7 +803,7 @@ exports[`Storyshots COLORS Theme colors 1`] = `
         #f0f5fa
       </span>
       <div
-        className="c34"
+        className="c35"
       />
     </div>
   </div>
