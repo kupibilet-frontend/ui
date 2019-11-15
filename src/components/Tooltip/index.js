@@ -11,6 +11,7 @@ type TooltipProps = {
   placement?: string,
   header?: string,
   align?: string,
+  maxWidth?: number,
 }
 
 type TooltipState = {
@@ -23,6 +24,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
     align: '',
     content: null,
     header: null,
+    maxWidth: null,
   }
 
   constructor(props: TooltipProps) {
@@ -76,7 +78,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
   }
 
   render() {
-    const { children, placement, content, header, align } = this.props
+    const { children, placement, content, header, align, maxWidth } = this.props
     const { isOpen } = this.state
 
     return (
@@ -89,6 +91,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
           {children}
         </div>
         <TooltipPortal
+          maxWidth={maxWidth}
           coordinates={this.coordinates}
           align={align}
           placement={placement}

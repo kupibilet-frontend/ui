@@ -22,6 +22,7 @@ type PortalProps = {
   content?: string | React.Node,
   header?: string | React.Node,
   align?: string,
+  maxWidth?: number,
 }
 
 function TooltipPortal({
@@ -31,6 +32,7 @@ function TooltipPortal({
   content,
   align,
   header,
+  maxWidth,
 }: PortalProps) {
   if (!content || !isOpen || !coordinates) return null
 
@@ -52,7 +54,7 @@ function TooltipPortal({
                 height={coordinates.height}
               >
                 <TooltipPointer placement={placement} />
-                <TooltipBackground align={align}>
+                <TooltipBackground align={align} maxWidth={maxWidth}>
                   {header && (
                     <Header>
                       <HeaderText>
@@ -78,6 +80,7 @@ TooltipPortal.defaultProps = {
   coordinates: null,
   align: '',
   header: null,
+  maxWidth: null,
 }
 
 export default TooltipPortal

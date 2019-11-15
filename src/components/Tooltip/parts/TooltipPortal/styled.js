@@ -102,7 +102,15 @@ const TooltipBackground = styled.div`
   color: ${({ theme }) => theme.color.background};
   
   border-radius: 4px;
-  white-space: nowrap;
+  
+  ${({ maxWidth }) => (maxWidth
+    ? `
+      width: ${maxWidth}px;
+    `
+    : `
+      white-space: nowrap;
+    `)
+}
 `
 
 const TooltipContainer = styled.div`
