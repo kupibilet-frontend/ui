@@ -33,14 +33,7 @@ class Tooltip extends React.Component<TooltipProps, TooltipState> {
       isOpen: false,
     }
 
-    this.coords = null
     this.hoverTimeout = null
-  }
-
-  componentDidMount() {
-    if (this.tooltipRef && this.tooltipRef.current) {
-      this.coords = this.getCoordinates()
-    }
   }
 
   componentWillUnmount() {
