@@ -11,7 +11,7 @@ const Story = styled.div`
   align-items: center;
 `
 
-const PLACEMENTS = ['', 'top', 'bottom']
+const PLACEMENTS = ['', 'top', 'bottom', 'left', 'right']
 const ALIGN_POSITIONS = ['', 'left', 'right']
 const LONG_TEXT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt eget nullam non nisi est sit amet facilisis. Cras sed felis eget velit aliquet. Ornare quam viverra orci sagittis. Donec ultrices tincidunt arcu non sodales neque sodales ut.'
 
