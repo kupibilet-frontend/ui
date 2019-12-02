@@ -9,14 +9,12 @@ const onToggle = () => {
   updateKnob('rotate', 'boolean', !boolean('rotate', false))
 }
 
-export const aLink = () => {
-  return (
-    // eslint-disable-next-line no-script-url
-    <Link href="javascript:void(0)">
-      I will click you
-    </Link>
-  )
-}
+export const aLink = () => (
+  // eslint-disable-next-line no-script-url
+  <Link href="javascript:void(0)">
+    I will click you
+  </Link>
+)
 
 aLink.story = {
   name: '<a> Link',
@@ -27,6 +25,7 @@ export const spanLink = () => (
     Span link
   </Link>
 )
+
 spanLink.story = {
   name: '<span> link',
 }
@@ -41,6 +40,7 @@ export const withIconLink = () => (
     Dropdown link
   </Link>
 )
+
 withIconLink.story = {
   name: 'Link with Icon',
 }
