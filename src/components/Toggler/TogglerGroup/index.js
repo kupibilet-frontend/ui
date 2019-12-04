@@ -1,11 +1,7 @@
 // @flow
 import React from 'react'
 import type { Node } from 'react'
-import styled from 'styled-components'
-
-const TogglerWrapper = styled.div`
-  display: flex;
-`
+import { TogglerWrapper } from './styled'
 
 type Props = {
   children: Node,
@@ -13,12 +9,17 @@ type Props = {
   currentValue: string,
 }
 
-export const TogglerContext = React.createContext()
+const DEFAULT_CONTEXT = {
+  onChange: () => null,
+  currentValue: '',
+}
+
+export const TogglerContext = React.createContext(DEFAULT_CONTEXT)
 
 const TogglerGroup = ({
   children,
   onChange,
-  currentValue = '',
+  currentValue,
 }: Props) => {
   return (
     <TogglerContext.Provider
