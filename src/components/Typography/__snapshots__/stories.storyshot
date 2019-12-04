@@ -72,6 +72,17 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   box-sizing: border-box;
 }
 
+.c2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 38px;
+  -webkit-letter-spacing: -1px;
+  -moz-letter-spacing: -1px;
+  -ms-letter-spacing: -1px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
 .c9 {
   font-size: 14px;
   font-weight: 400;
@@ -82,17 +93,6 @@ exports[`Storyshots COMPONENTS|Utils Typography 1`] = `
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-}
-
-.c2 {
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 38px;
-  -webkit-letter-spacing: -1px;
-  -moz-letter-spacing: -1px;
-  -ms-letter-spacing: -1px;
-  letter-spacing: -1px;
-  margin: 0;
 }
 
 .c7 {
