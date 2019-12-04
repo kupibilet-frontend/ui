@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
@@ -7,7 +8,7 @@ const onChange = (value) => {
   updateKnob('currentValue', 'text', value)
 }
 
-export const Toggler = () => {
+export const GenderToggler = () => {
   const currentValue = text('currentValue', '')
   const errorMessage = text('errorMessage', '')
 
@@ -20,9 +21,6 @@ export const Toggler = () => {
       <TogglerItem value="male">
         М
       </TogglerItem>
-      <TogglerItem value="hz">
-         ?
-      </TogglerItem>
       <TogglerItem value="female">
         Ж
       </TogglerItem>
@@ -30,14 +28,44 @@ export const Toggler = () => {
   )
 }
 
-Toggler.story = {
-  name: 'simple Toggler',
+GenderToggler.story = {
+  name: 'Gender Toggler',
+}
+
+export const ManyOptionsToggler = () => {
+  const currentValue = text('currentValue', '')
+  const errorMessage = text('errorMessage', '')
+
+  return (
+    <TogglerGroup
+      currentValue={currentValue}
+      onChange={onChange}
+      errorMessage={errorMessage}
+    >
+      <TogglerItem value="1">
+        1
+      </TogglerItem>
+      <TogglerItem value="2">
+         2
+      </TogglerItem>
+      <TogglerItem value="3">
+        3
+      </TogglerItem>
+      <TogglerItem value="4">
+        4
+      </TogglerItem>
+    </TogglerGroup>
+  )
+}
+
+ManyOptionsToggler.story = {
+  name: 'Toggler with many options',
 }
 
 export default {
   title: 'COMPONENTS|Controls/Toggler',
   parameters: {
-    component: Toggler,
-    componentSubtitle: `import { TogglerItem, TogglerGroup } '@kupibilet/ui/components/Toggler'`,
+    component: TogglerGroup,
+    componentSubtitle: `import { TogglerItem, TogglerGroup } from '@kupibilet/ui/components/Toggler'`,
   },
 }
