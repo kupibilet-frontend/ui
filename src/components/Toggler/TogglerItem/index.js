@@ -16,8 +16,12 @@ const TogglerItem = ({
   <TogglerContext.Consumer>
     {({ currentValue, onChange }) => {
       const isSelected = value === currentValue
+
       return (
-        <BorderedWrapper isSelected={isSelected} onClick={() => onChange(value)}>
+        <BorderedWrapper
+          isSelected={isSelected}
+          onClick={() => onChange(value)}
+        >
           <ColoredWrapper isSelected={isSelected}>
             {children}
           </ColoredWrapper>

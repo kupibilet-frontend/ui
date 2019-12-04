@@ -9,11 +9,13 @@ const onChange = (value) => {
 
 export const Toggler = () => {
   const currentValue = text('currentValue', '')
+  const errorMessage = text('errorMessage', '')
 
   return (
     <TogglerGroup
       currentValue={currentValue}
       onChange={onChange}
+      errorMessage={errorMessage}
     >
       <TogglerItem value="male">
         М
