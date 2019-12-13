@@ -91,7 +91,6 @@
     "raw-loader": "~0.5.1",
     "react": "^16.5.0",
     "react-addons-shallow-compare": "~15.6.2",
-    "react-docgen": "^4.1.1",
     "react-dom": "^16.5.0",
     "react-onclickoutside": "^6.6.0",
     "react-redux": "^5.0.6",
