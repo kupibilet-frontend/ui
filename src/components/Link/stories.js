@@ -1,5 +1,7 @@
 import React from 'react'
 import { boolean } from '@storybook/addon-knobs'
+import styled from 'styled-components'
+import { Link as RouterLink, BrowserRouter as Router } from 'react-router-dom'
 import updateKnob from 'storybook/updateKnob'
 
 import Icon from 'components/Icon'
@@ -27,7 +29,33 @@ export const spanLink = () => (
 )
 
 spanLink.story = {
-  name: '<span> link',
+  name: '<span> Link',
+}
+
+export const divLink = () => (
+  <Link as="div">
+    Div link
+  </Link>
+)
+
+divLink.story = {
+  name: '<div> Link',
+}
+
+const StyledLink = styled(Link)`
+  color: red;
+`
+
+export const routerLink = () => (
+  <Router>
+    <StyledLink as={RouterLink} to="/">
+      Router Link
+    </StyledLink>
+  </Router>
+)
+
+routerLink.story = {
+  name: 'Router Link',
 }
 
 export const withIconLink = () => (

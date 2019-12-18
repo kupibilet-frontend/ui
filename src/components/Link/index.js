@@ -42,20 +42,12 @@ type Props = {
   href?: string,
 }
 
-const StyledSpanLink = styled.span`
-  ${style}
-  display: inline-flex;
-  align-items: center;
-`
-
-const StyledALink = StyledSpanLink.withComponent('a')
-
 /**
  * Ссылки могут содержать текст и иконку рядом с текстом
  */
 
-const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
-  const LinkComponent = href ? StyledALink : StyledSpanLink
+const Link = styled(({ children, href, to, leftIcon, rightIcon, ...props }: Props) => {
+  const LinkComponent = href ? 'a' : 'span'
 
   return (
     <LinkComponent href={href} {...props}>
@@ -74,12 +66,17 @@ const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
       )}
     </LinkComponent>
   )
-}
+})`
+  ${style}
+  display: inline-flex;
+  align-items: center;
+`
 
 Link.defaultProps = {
   href: null,
   leftIcon: null,
   rightIcon: null,
+  to: null,
 }
 
 export default Link
