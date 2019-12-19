@@ -28,7 +28,7 @@ export const BorderedWrapper = styled.div`
 export const ColoredWrapper = styled(TextSmall)`
   background: ${({ isSelected, theme }) => (isSelected ? theme.color.primaryDarkest : theme.color.background)};
   color: ${({ theme }) => theme.color.textDarker};
-  padding: 8px 15px 10px;
+  padding: 7px 14px 9px;
   ${({ isSelected, theme }) => (isSelected && `
     color: ${theme.color.background};
     font-weight: 600;
