@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
 
 export const TogglerWrapper = styled.div`
@@ -8,7 +8,7 @@ export const TogglerWrapper = styled.div`
 export const ItemsWrapper = styled.div`
   display: inline-flex;
   position: relative;
-  ${({ hasError, theme }) => hasError && `
+  ${({ hasError, isFocused, theme }) => hasError && !isFocused && css`
     &::before{
       content: '';
       position: absolute;

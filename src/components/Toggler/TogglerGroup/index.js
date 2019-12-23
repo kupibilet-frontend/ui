@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import React, { useState } from 'react'
 import type { Node } from 'react'
 import { Error } from 'components/Input'
 import { TogglerWrapper, ItemsWrapper } from './styled'
@@ -21,12 +21,19 @@ type Props = {
   * Сообщение об ошибке, если она есть
   */
   errorMessage?: string,
+   /**
+  * Имя контрола
+  */
+  name: string,
 }
 
 const DEFAULT_CONTEXT = {
   onChange: () => null,
   currentValue: '',
   errorMessage: '',
+  name: '',
+  setFocus: () => null,
+  isFocused: false,
 }
 
 export const TogglerContext = React.createContext(DEFAULT_CONTEXT)
@@ -40,20 +47,25 @@ const TogglerGroup = ({
   onChange,
   currentValue,
   errorMessage,
+  name,
+  ...props
 }: Props) => {
+  const [isFocused, setFocus] = useState(false)
   return (
     <TogglerContext.Provider
       value={{
         onChange,
         currentValue,
-        errorMessage,
+        name,
+        setFocus,
+        isFocused,
       }}
     >
-      <TogglerWrapper>
-        <ItemsWrapper hasError={Boolean(errorMessage)}>
+      <TogglerWrapper {...props}>
+        <ItemsWrapper hasError={Boolean(errorMessage)} isFocused={isFocused}>
           {children}
         </ItemsWrapper>
-        {errorMessage && (
+        {errorMessage && !isFocused && (
           <Error>
             {errorMessage}
           </Error>

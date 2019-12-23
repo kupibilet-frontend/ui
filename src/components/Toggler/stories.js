@@ -17,6 +17,7 @@ export const GenderToggler = () => {
       currentValue={currentValue}
       onChange={onChange}
       errorMessage={errorMessage}
+      name="gender"
     >
       <TogglerItem value="male">
         М
@@ -41,6 +42,7 @@ export const ManyOptionsToggler = () => {
       currentValue={currentValue}
       onChange={onChange}
       errorMessage={errorMessage}
+      name="number"
     >
       <TogglerItem value="1">
         1

@@ -1,36 +1,100 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import TextSmall from 'components/Typography/TextSmall'
 
-export const BorderedWrapper = styled.div`
+
+export const StyledWrapper = styled(TextSmall)`
+  padding: 8px 14px 8px 14px;
   border: 1px solid ${({ theme }) => theme.color.misc};
   cursor: pointer;
-  overflow: hidden;
-  border-right: none;
-  &:first-child{
-    ${borderRadiusSmall.left}
+  border-right-width: 0;
+  background: theme.color.background;
+  &:hover{
+    ${({ isSelected, theme }) => !isSelected && css`
+      background: ${theme.color.miscLightest};
+      color: ${theme.color.primaryDarkest};
+      border-color: ${theme.color.primaryDark};
+      border-right-width: 1px;
+      border-left-width: 1px;
+    `}
   }
-  &:last-child{
-    ${borderRadiusSmall.right}
-    border-right: 1px solid ${({ isSelected, theme }) => (
-    isSelected ? theme.color.primaryDarkest : theme.color.misc
-  )};
-  }
-  ${({ isSelected, theme }) => (isSelected && `
+  ${({ isSelected, theme }) => (isSelected && css`
     border-color: ${theme.color.primaryDarkest};
-    & + div {
-     border-left: none; 
-     padding-left: 1px;
-    }
+    color: ${theme.color.background};
+    font-weight: 600;
+    background: ${theme.color.primaryDarkest};
+    border-right-width: 1px;
   `)}
 `
 
-export const ColoredWrapper = styled(TextSmall)`
-  background: ${({ isSelected, theme }) => (isSelected ? theme.color.primaryDarkest : theme.color.background)};
-  color: ${({ theme }) => theme.color.textDarker};
-  padding: 7px 14px 9px;
-  ${({ isSelected, theme }) => (isSelected && `
-    color: ${theme.color.background};
-    font-weight: 600;
-  `)}
-`.withComponent('div')
+export const HiddenRadio = styled.input.attrs({ type: 'radio' })`
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  &:focus {
+    & + ${StyledWrapper}::before{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: ${({ checked }) => (checked ? '100%' : 'calc(100% + 1px)')};
+      top: 0;
+      left: 0;
+      border: 2px solid ${({ theme }) => theme.color.primaryDark}; 
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+`
+
+// add external container for manage styles
+export const ItemWrapper = styled.div`
+  ${({ isFocused }) => isFocused && css`position: relative;`}
+  &:first-child{
+    ${StyledWrapper} {
+      ${borderRadiusSmall.left}
+    }
+    ${StyledWrapper}::before{
+      ${borderRadiusSmall.left}
+    }
+  }
+  &:last-child{
+    ${StyledWrapper}{
+      ${borderRadiusSmall.right}
+      border-right-width: 1px;
+    }
+    ${StyledWrapper}::before{
+      ${borderRadiusSmall.right}
+      width: 100%;
+    }
+  }
+  &:hover{
+    & + div {
+      ${StyledWrapper} {
+        border-left-width: 0;
+      }
+    }
+  }
+  ${({ isSelected, theme }) => isSelected && css`
+    & + div {
+      &:hover{
+        position: relative;
+        &:before{
+          content: '';
+          height: 100%;
+          position: absolute;
+          width: 1px;
+          top: 0;
+          left: -1px;
+          background: ${theme.color.primaryDark};
+          pointer-events: none;
+        }
+      }
+      ${StyledWrapper} {
+        border-left-width: 0;
+      }
+    }
+    ${StyledWrapper}::before{
+      width: 100%;
+    }
+  `}
+`

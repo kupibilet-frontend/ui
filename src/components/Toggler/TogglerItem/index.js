@@ -2,7 +2,7 @@
 import React from 'react'
 import type { Node } from 'react'
 import { TogglerContext } from '../TogglerGroup'
-import { BorderedWrapper, ColoredWrapper } from './styled'
+import { StyledWrapper, HiddenRadio, ItemWrapper } from './styled'
 
 type Props = {
   children: Node,
@@ -14,18 +14,35 @@ const TogglerItem = ({
   value,
 }: Props) => (
   <TogglerContext.Consumer>
-    {({ currentValue, onChange }) => {
+    {({
+      currentValue,
+      onChange,
+      name,
+      setFocus,
+      isFocused,
+    }) => {
+      const onRadioFocus = () => setFocus(true)
+      const onRadioBlur = () => setFocus(false)
       const isSelected = value === currentValue
-
       return (
-        <BorderedWrapper
-          isSelected={isSelected}
-          onClick={() => onChange(value)}
-        >
-          <ColoredWrapper isSelected={isSelected}>
+        <ItemWrapper isFocused={isFocused} isSelected={isSelected}>
+          <HiddenRadio
+            name={name}
+            value={value}
+            checked={isSelected}
+            onClick={(e) => e.stopPropagation()}
+            onFocus={onRadioFocus}
+            onKeyPress={() => onChange(value)}
+            onBlur={onRadioBlur}
+          />
+          <StyledWrapper
+            isSelected={isSelected}
+            as="div"
+            onClick={() => onChange(value)}
+          >
             {children}
-          </ColoredWrapper>
-        </BorderedWrapper>
+          </StyledWrapper>
+        </ItemWrapper>
       )
     }}
   </TogglerContext.Consumer>
