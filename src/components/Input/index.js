@@ -105,7 +105,7 @@ class InputControl extends PureComponent<Props, State> {
         error={error}
         onFocus={this.handleFocus.bind(null, null)}
         onBlur={this.handleBlur.bind(null, null)}
-        innerRef={this.innerInput}
+        ref={this.innerInput}
         isTextarea={isTextarea}
         leftIcon={leftIcon}
         rightIcon={rightIcon}
