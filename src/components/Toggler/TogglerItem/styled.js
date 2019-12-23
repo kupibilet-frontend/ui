@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import TextSmall from 'components/Typography/TextSmall'
+import Text from 'components/Typography/Text'
 
 
-export const StyledWrapper = styled(TextSmall)`
+export const StyledWrapper = styled(Text)`
   padding: 8px 14px 8px 14px;
   border: 1px solid ${({ theme }) => theme.color.misc};
   cursor: pointer;
