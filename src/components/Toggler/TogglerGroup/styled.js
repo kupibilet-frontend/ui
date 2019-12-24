@@ -18,6 +18,7 @@ export const ItemsWrapper = styled.div`
       ${borderRadiusSmall.all}
       border: 2px solid ${theme.color.fail};
       pointer-events: none;
+      z-index: 1;
     }
   `};
 `
