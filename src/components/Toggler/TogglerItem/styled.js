@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import Text from 'components/Typography/Text'
 
-
 export const StyledWrapper = styled(Text)`
   padding: 8px 14px 8px 14px;
   border: 1px solid ${({ theme }) => theme.color.misc};
@@ -14,8 +13,17 @@ export const StyledWrapper = styled(Text)`
       background: ${theme.color.miscLightest};
       color: ${theme.color.primaryDarkest};
       border-color: ${theme.color.primaryDark};
-      border-right-width: 1px;
-      border-left-width: 1px;
+      position: relative;
+      &::after{
+        content: '';
+        height: calc(100% + 2px);
+        position: absolute;
+        width: 1px;
+        top: -1px;
+        right: -1px;
+        background: ${theme.color.primaryDark};
+        pointer-events: none;
+      }
     `}
   }
   ${({ isSelected, theme }) => (isSelected && css`
@@ -32,6 +40,12 @@ export const HiddenRadio = styled.input.attrs({ type: 'radio' })`
   position: absolute;
   z-index: -1;
   &:focus {
+    & + ${StyledWrapper} {
+      position: static;
+    }
+    & + ${StyledWrapper}::after {
+      display: none;
+    }
     & + ${StyledWrapper}::before{
       content: '';
       position: absolute;
@@ -66,12 +80,8 @@ export const ItemWrapper = styled.div`
       ${borderRadiusSmall.right}
       width: 100%;
     }
-  }
-  &:hover{
-    & + div {
-      ${StyledWrapper} {
-        border-left-width: 0;
-      }
+    ${StyledWrapper}:hover::after{
+      display: none;
     }
   }
   ${({ isSelected, theme }) => isSelected && css`
