@@ -20,9 +20,13 @@ const TogglerItem = ({
       name,
       setFocus,
       isFocused,
+      onBlur,
     }) => {
       const onRadioFocus = () => setFocus(true)
-      const onRadioBlur = () => setFocus(false)
+      const onRadioBlur = () => {
+        setFocus(false)
+        onBlur()
+      }
       const isSelected = value === currentValue
       return (
         <ItemWrapper isFocused={isFocused} isSelected={isSelected}>

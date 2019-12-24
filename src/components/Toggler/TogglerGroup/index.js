@@ -13,6 +13,11 @@ type Props = {
   * Функция, срабатывающая при выборе опции. Принимает значение опции
   */
   onChange: (string) => void,
+  /**
+  * Функция, срабатывающая при смене фокуса на элементах.
+    Используется для правильного срабатывания ReduxForm touched props и корректной валидации
+  */
+  onBlur: (Event) => void,
    /**
   * Текущее значение компонента
   */
@@ -29,6 +34,7 @@ type Props = {
 
 const DEFAULT_CONTEXT = {
   onChange: () => null,
+  onBlur: () => null,
   currentValue: '',
   errorMessage: '',
   name: '',
@@ -45,6 +51,7 @@ export const TogglerContext = React.createContext(DEFAULT_CONTEXT)
 const TogglerGroup = ({
   children,
   onChange,
+  onBlur,
   currentValue,
   errorMessage,
   name,
@@ -59,6 +66,7 @@ const TogglerGroup = ({
         name,
         setFocus,
         isFocused,
+        onBlur,
       }}
     >
       <TogglerWrapper {...props}>
