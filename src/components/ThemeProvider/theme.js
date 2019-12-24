@@ -18,6 +18,7 @@ export const color = {
   secondaryLight: '#ffb640',
   secondaryLighter: '#ffd787',
   secondaryLightest: '#fff0bf',
+  secondarySoft: '#fffbf0',
 
   text: '#808080',
   textDark: '#4d4d4d',
@@ -25,7 +26,7 @@ export const color = {
   textDarkest: '#222222',
   textLight: '#b3b3b3',
   textLighter: '#dedede',
-  textLightest: '#f2f2f2',
+  textLightest: '#f6f6f8',
 
   misc: '#b1bdcc',
   miscDark: '#96a0b3',
