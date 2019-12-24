@@ -1,8 +1,7 @@
 // @flow
 import React, { useState } from 'react'
 import type { Node } from 'react'
-import { Error } from 'components/Input'
-import { TogglerWrapper, ItemsWrapper } from './styled'
+import { TogglerWrapper, ItemsWrapper, StyledError } from './styled'
 
 type Props = {
   /**
@@ -74,9 +73,9 @@ const TogglerGroup = ({
           {children}
         </ItemsWrapper>
         {errorMessage && !isFocused && (
-          <Error>
+          <StyledError>
             {errorMessage}
-          </Error>
+          </StyledError>
         )}
       </TogglerWrapper>
 

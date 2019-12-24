@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
+import { Error } from 'components/Input'
 
 export const TogglerWrapper = styled.div`
   position: relative;
@@ -19,4 +20,8 @@ export const ItemsWrapper = styled.div`
       pointer-events: none;
     }
   `};
+`
+
+export const StyledError = styled(Error)`
+  top: calc(100% + 1px);
 `
