@@ -107,7 +107,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PriceVariantsButton default 1`] 
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
   transition-property: border-color,box-shadow;
-  width: 180px;
+  min-width: 180px;
   opacity: 1;
   pointer-events: auto;
 }
@@ -141,7 +141,7 @@ exports[`Storyshots COMPONENTS|Complex controls/PriceVariantsButton default 1`] 
   transition: 0.15s ease-out;
   -webkit-transition-property: border-color,box-shadow;
   transition-property: border-color,box-shadow;
-  width: 180px;
+  min-width: 180px;
   opacity: 1;
   pointer-events: auto;
 }

@@ -26,7 +26,7 @@ const Button = styled.div`
   cursor: ${({ active, disabled }) => (active || disabled ? 'default' : 'pointer')};
   ${switchTransition};
   transition-property: border-color, box-shadow;
-  width: 180px;
+  min-width: 180px;
   opacity: ${({ active, disabled }) => (disabled && !active ? '0.5' : '1')};
   pointer-events: ${({ disabled }) => (disabled ? 'none' : 'auto')};
 
