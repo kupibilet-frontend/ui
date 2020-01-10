@@ -31,12 +31,16 @@ type Props = {
   name: string,
 }
 
-const DEFAULT_CONTEXT = {
+const DEFAULT_PROPS = {
+  name: '',
+  errorMessage: '',
   onChange: () => null,
   onBlur: () => null,
   currentValue: '',
-  errorMessage: '',
-  name: '',
+}
+
+const DEFAULT_CONTEXT = {
+  ...DEFAULT_PROPS,
   setFocus: () => null,
   isFocused: false,
 }
@@ -83,8 +87,6 @@ const TogglerGroup = ({
   )
 }
 
-TogglerGroup.defaultProps = {
-  errorMessage: '',
-}
+TogglerGroup.defaultProps = DEFAULT_PROPS
 
 export default TogglerGroup

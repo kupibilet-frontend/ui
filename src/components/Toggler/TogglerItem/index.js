@@ -9,6 +9,8 @@ type Props = {
   value: string,
 }
 
+const ENTER_KEY_CODE = 13
+
 const TogglerItem = ({
   children,
   value,
@@ -22,12 +24,18 @@ const TogglerItem = ({
       isFocused,
       onBlur,
     }) => {
-      const onRadioFocus = () => setFocus(true)
-      const onRadioBlur = () => {
+      const onFocusHendler = () => setFocus(true)
+      const onBlurHendler = () => {
         setFocus(false)
         onBlur()
       }
+      const onKeyDownHendler = (e) => {
+        if (e.keyCode === ENTER_KEY_CODE) {
+          onChange(value)
+        }
+      }
       const isSelected = value === currentValue
+
       return (
         <ItemWrapper isFocused={isFocused} isSelected={isSelected}>
           <HiddenRadio
@@ -35,9 +43,9 @@ const TogglerItem = ({
             value={value}
             checked={isSelected}
             onClick={(e) => e.stopPropagation()}
-            onFocus={onRadioFocus}
-            onKeyPress={() => onChange(value)}
-            onBlur={onRadioBlur}
+            onFocus={onFocusHendler}
+            onKeyDown={onKeyDownHendler}
+            onBlur={() => onBlurHendler()}
           />
           <StyledWrapper
             isSelected={isSelected}
