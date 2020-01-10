@@ -24,4 +24,6 @@ addDecorator(withReduxContext)
 addDecorator(withTheme)
 addDecorator(withKnobs)
 
-configure(require.context('../src', true, /stories.js$/), module);
+const req = require.context('../src', true, /stories.js$/)
+
+configure(req, module);

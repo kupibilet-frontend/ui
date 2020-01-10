@@ -46,7 +46,9 @@ type Props = {
  * Ссылки могут содержать текст и иконку рядом с текстом
  */
 
-const Link = styled(({ children, href, to, leftIcon, rightIcon, ...props }: Props) => {
+// TODO: make separate component - RouterLink.
+
+const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
   const LinkComponent = href ? 'a' : 'span'
 
   return (
@@ -66,11 +68,7 @@ const Link = styled(({ children, href, to, leftIcon, rightIcon, ...props }: Prop
       )}
     </LinkComponent>
   )
-})`
-  ${style}
-  display: inline-flex;
-  align-items: center;
-`
+}
 
 Link.defaultProps = {
   href: null,
@@ -79,4 +77,10 @@ Link.defaultProps = {
   to: null,
 }
 
-export default Link
+const StyledLink = styled(Link)`
+  ${style}
+  display: inline-flex;
+  align-items: center;
+`
+
+export default StyledLink
