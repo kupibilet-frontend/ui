@@ -8,6 +8,10 @@ const onChange = (value) => {
   updateKnob('currentValue', 'text', value)
 }
 
+const onSelectedTogglerChange = (value) => {
+  updateKnob('currentSelectedValue', 'text', value)
+}
+
 export const GenderToggler = () => {
   const currentValue = text('currentValue', '')
   const errorMessage = text('errorMessage', '')
@@ -62,6 +66,62 @@ export const ManyOptionsToggler = () => {
 
 ManyOptionsToggler.story = {
   name: 'Toggler with many options',
+}
+
+export const SelectedToggler = () => {
+  const currentValue = text('currentSelectedValue', '1')
+  const errorMessage = text('errorMessage', '')
+
+  return (
+    <TogglerGroup
+      currentValue={currentValue}
+      onChange={onSelectedTogglerChange}
+      errorMessage={errorMessage}
+      name="number"
+    >
+      <TogglerItem value="1">
+        1
+      </TogglerItem>
+      <TogglerItem value="2">
+         2
+      </TogglerItem>
+      <TogglerItem value="3">
+        3
+      </TogglerItem>
+    </TogglerGroup>
+  )
+}
+
+SelectedToggler.story = {
+  name: 'Toggler with selected option',
+}
+
+export const FailedToggler = () => {
+  const currentValue = text('currentValue', '')
+  const errorMessage = text('errorFailedMessage', 'Выберите значение')
+
+  return (
+    <TogglerGroup
+      currentValue={currentValue}
+      onChange={onChange}
+      errorMessage={errorMessage}
+      name="number"
+    >
+      <TogglerItem value="1">
+        1
+      </TogglerItem>
+      <TogglerItem value="2">
+         2
+      </TogglerItem>
+      <TogglerItem value="3">
+        3
+      </TogglerItem>
+    </TogglerGroup>
+  )
+}
+
+FailedToggler.story = {
+  name: 'Toggler with error',
 }
 
 export default {
