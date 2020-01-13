@@ -60,7 +60,7 @@ export const HiddenRadio = styled.input.attrs({ type: 'radio' })`
   }
 `
 
-// add external container for manage styles
+// add external container for managing styles
 export const ItemWrapper = styled.div`
   ${({ isFocused }) => isFocused && css`position: relative;`}
   &:first-child{
