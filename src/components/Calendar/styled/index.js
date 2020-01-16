@@ -356,17 +356,12 @@ export const StyledDayPicker = styled(DayPicker)`
 `
 
 export const DayPickerWrapper = styled.div`
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 2;
-  ${mq.tablet`
-    right: auto;
-    left: 0;
-  `}
-  ${mq.mobile`
-    top: 0;
-  `}
+  width: 680px;
+  overflow: scroll;
+  min-height: 275px;
+  // ${mq.handheld`
+  //   width: 100%;
+  // `}
 `
 
 export const Navbar = styled.div`
