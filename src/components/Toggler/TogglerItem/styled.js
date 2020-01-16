@@ -23,6 +23,7 @@ export const StyledWrapper = styled(Text)`
         right: -1px;
         background: ${theme.color.primaryDark};
         pointer-events: none;
+        z-index: 1;
       }
     `}
   }
@@ -62,7 +63,7 @@ export const HiddenRadio = styled.input.attrs({ type: 'radio' })`
 
 // add external container for managing styles
 export const ItemWrapper = styled.div`
-  ${({ isFocused }) => isFocused && css`position: relative;`}
+  position: relative;
   &:first-child{
     ${StyledWrapper} {
       ${borderRadiusSmall.left}

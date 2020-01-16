@@ -1,5 +1,5 @@
 // @flow
-import React, { useState } from 'react'
+import React from 'react'
 import type { Node } from 'react'
 import { TogglerWrapper, ItemsWrapper, StyledError } from './styled'
 
@@ -39,14 +39,6 @@ const DEFAULT_PROPS = {
   currentValue: '',
 }
 
-const DEFAULT_CONTEXT = {
-  ...DEFAULT_PROPS,
-  setFocus: () => null,
-  isFocused: false,
-}
-
-export const TogglerContext = React.createContext(DEFAULT_CONTEXT)
-
 /**
  * Компонент для выбора опции, например, пола
  */
@@ -60,30 +52,29 @@ const TogglerGroup = ({
   name,
   ...props
 }: Props) => {
-  const [isFocused, setFocus] = useState(false)
-  return (
-    <TogglerContext.Provider
-      value={{
-        onChange,
-        currentValue,
-        name,
-        setFocus,
-        isFocused,
-        onBlur,
-      }}
-    >
-      <TogglerWrapper {...props}>
-        <ItemsWrapper hasError={Boolean(errorMessage)} isFocused={isFocused}>
-          {children}
-        </ItemsWrapper>
-        {errorMessage && !isFocused && (
-          <StyledError>
-            {errorMessage}
-          </StyledError>
-        )}
-      </TogglerWrapper>
+  const [isFocused, setFocus] = React.useState(false)
 
-    </TogglerContext.Provider>
+  return (
+    <TogglerWrapper {...props}>
+      <ItemsWrapper hasError={Boolean(errorMessage)} isFocused={isFocused}>
+        {React.Children.map(children, (child) => (
+          React.cloneElement(child, {
+            onChange,
+            onBlur,
+            currentValue,
+            errorMessage,
+            name,
+            setFocus,
+            ...props,
+          })
+        ))}
+      </ItemsWrapper>
+      {errorMessage && !isFocused && (
+        <StyledError>
+          {errorMessage}
+        </StyledError>
+      )}
+    </TogglerWrapper>
   )
 }
 
