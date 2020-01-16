@@ -13,6 +13,15 @@ type Props = {
   onBlur: () => void,
 }
 
+const DEFAULT_PROPS = {
+  name: '',
+  onChange: () => null,
+  onBlur: () => null,
+  setFocus: () => null,
+  currentValue: '',
+  value: '',
+}
+
 const ENTER_KEY_CODE = 13
 
 class TogglerItem extends React.Component<Props> {
@@ -63,6 +72,8 @@ class TogglerItem extends React.Component<Props> {
           onFocus={onFocusHendler}
           onKeyDown={onKeyDownHendler}
           onBlur={() => onBlurHendler()}
+          // to remove react warning
+          onChange={() => null}
         />
         <StyledWrapper
           isSelected={isSelected}
@@ -75,5 +86,7 @@ class TogglerItem extends React.Component<Props> {
     )
   }
 }
+
+TogglerItem.defaultProps = DEFAULT_PROPS
 
 export default TogglerItem
