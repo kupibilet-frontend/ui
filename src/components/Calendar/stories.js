@@ -1,9 +1,11 @@
 // @flow
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import moment from '@kupibilet/moment'
 // import { text } from '@storybook/addon-knobs'
 // import updateKnob from 'storybook/updateKnob'
 import Calendar from 'components/Calendar'
+import CalendarDay from 'components/CalendarDay'
 
 // const onChange = (value) => {
 //   updateKnob('currentValue', 'text', value)
@@ -31,8 +33,15 @@ import Calendar from 'components/Calendar'
 //   },
 // }
 
+const renderDay = (day) => (
+  <CalendarDay
+    day={moment(day)}
+    isCheap={(Number(moment(day).format('DDD')) % 9 === 0)}
+    cost={Math.floor(moment(day).format('DDD') * 321 % 100) * 100}
+  />
+)
 
 storiesOf('COMPONENTS|Calendar', module)
   .add('Default', () => (
-    <Calendar />
+    <Calendar renderDay={renderDay} />
   ))

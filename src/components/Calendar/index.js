@@ -3,6 +3,7 @@ import React from 'react'
 import moment from '@kupibilet/moment'
 import { withMedia } from 'utils/media-queries'
 import Button from 'components/Button'
+import MonthCaption from './parts/MonthCaption'
 import {
   StyledDayPicker,
   DayPickerWrapper,
@@ -11,11 +12,13 @@ import {
 } from './styled'
 
 type Props = {
-  // selectedDays: Array<*>,
-  // onDaySelect: () => void,
+  selectedDays: Array<*>,
+  onDaySelect: (string, {}) => void,
+  onMonthVisibilityChange: () => void,
   isTablet: boolean,
   isDesktop: boolean,
   isMobile: boolean,
+  renderDay: (string) => void,
 }
 
 type State = {
@@ -79,7 +82,12 @@ class Calendar extends React.PureComponent<Props, State> {
     } = this.state
     const {
       isMobile,
+      selectedDays,
+      onDaySelect,
+      onMonthVisibilityChange,
+      renderDay,
     } = this.props
+
     const today = new Date()
     const lastDay = new Date()
     lastDay.setDate(lastDay.getDate() - 1)
@@ -98,23 +106,31 @@ class Calendar extends React.PureComponent<Props, State> {
       // end: toDate,
     }
 
+    const monthCaption = (
+      <MonthCaption
+        modifiers={modifiers}
+        onMonthVisibilityChange={onMonthVisibilityChange}
+        isMobile={isMobile}
+      />
+    )
+
     return (
       <DayPickerWrapper>
         <StyledDayPicker
           weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
           showWeekDays={!isMobile}
           modifiers={modifiers}
-          // month={!isMobile ? (fromDate || today) : today}
+          month={!isMobile ? (selectedDays[0] || today) : today}
           fromMonth={today}
           toMonth={this.getMaxVisibleMonth(today)}
           firstDayOfWeek={1}
           numberOfMonths={numberOfMonths}
           months={moment.months()}
           locale="ru"
-          // renderDay={(day) => this.props.renderDay(day, showToCalendar)}
+          renderDay={(day) => renderDay(day)}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
-          // captionElement={captionElement}
-          // onDayClick={(day) => this.onDayChange(day, modifiers.disabled)}
+          captionElement={monthCaption}
+          onDayClick={(day) => onDaySelect(day, modifiers.disabled)}
           tabIndex={-1}
         />
       </DayPickerWrapper>
