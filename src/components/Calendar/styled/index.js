@@ -356,7 +356,6 @@ export const StyledDayPicker = styled(DayPicker)`
 `
 
 export const DayPickerWrapper = styled.div`
-  width: 680px;
   overflow: scroll;
   // ${mq.handheld`
   //   width: 100%;

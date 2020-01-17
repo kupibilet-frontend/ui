@@ -15,7 +15,6 @@ export default css`
   padding-bottom: 1rem;
   flex-direction: row;
   outline: none;
-  padding-top: 200px;
 }
 
 .DayPicker-Months {

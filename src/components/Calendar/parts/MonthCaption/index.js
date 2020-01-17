@@ -52,8 +52,6 @@ class MonthCaption extends React.PureComponent<Props, State> {
   render() {
     const { date } = this.props
 
-    console.log('date', date)
-
     const formatDate = moment(date).format('MMMM YYYY')
     const month = formatDate[0].toUpperCase() + formatDate.substr(1)
 
