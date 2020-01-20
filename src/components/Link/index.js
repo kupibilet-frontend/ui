@@ -24,17 +24,35 @@ const cloneIconWithSize = (iconNode) => (
 )
 
 type Props = {
+  /**
+    Чаще всего текст ссылки
+  */
   children: Element<*> | string,
+  /**
+    Иконка слева от текста
+  */
   leftIcon?: Element<*>,
+  /**
+    Иконка справа от текста
+  */
   rightIcon?: Element<*>,
+  /**
+    Адрес ссылки. Если не передан, рендерится <span>
+  */
   href?: string,
 }
 
+/**
+ * Ссылки могут содержать текст и иконку рядом с текстом
+ */
+
+// TODO: make separate component - RouterLink.
+
 const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
-  const TagName = href ? 'a' : 'span'
+  const LinkComponent = href ? 'a' : 'span'
 
   return (
-    <TagName href={href} {...props}>
+    <LinkComponent href={href} {...props}>
       {leftIcon && (
         <PaddingWrap left>
           {cloneIconWithSize(leftIcon)}
@@ -48,7 +66,7 @@ const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
           {cloneIconWithSize(rightIcon)}
         </PaddingWrap>
       )}
-    </TagName>
+    </LinkComponent>
   )
 }
 
@@ -56,6 +74,7 @@ Link.defaultProps = {
   href: null,
   leftIcon: null,
   rightIcon: null,
+  to: null,
 }
 
 const StyledLink = styled(Link)`
