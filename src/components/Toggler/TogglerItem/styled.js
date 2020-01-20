@@ -36,7 +36,7 @@ export const StyledWrapper = styled(Text)`
   `)}
 `
 
-export const HiddenRadio = styled.input.attrs({ type: 'radio' })`
+export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
   opacity: 0;
   position: absolute;
   z-index: -1;
