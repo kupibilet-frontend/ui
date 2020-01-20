@@ -45,9 +45,7 @@ const SloganCard = styled.div`
   `}
 `
 
-const SloganImg = styled.img.attrs({
-  src: (props) => ([props.src]),
-})`
+const SloganImg = styled.img`
   display: inline-block;
   width: 86px;
   height: 86px;
