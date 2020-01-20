@@ -1,6 +1,5 @@
 {
   "hooks": {
     "pre-commit": "BABEL_ENV=default lint-staged",
-    "pre-push": "yarn run test",
   }
 }
