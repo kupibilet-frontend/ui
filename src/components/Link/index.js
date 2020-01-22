@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import type { Element } from 'react'
 import styled from 'styled-components'
 
@@ -27,7 +27,7 @@ type Props = {
   /**
     Чаще всего текст ссылки
   */
-  children: Element<*> | string,
+  children: React.Node,
   /**
     Иконка слева от текста
   */
