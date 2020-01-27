@@ -43,8 +43,8 @@ type Props = {
   snap?: boolean,
   snapPoints?: Array<number>,
   sliderData: SliderData,
-  progressBar: () => Element,
-  handle: () => Element,
+  progressBar?: () => Element,
+  handle?: () => Element,
   onChange?: (SliderValues) => void,
   onValuesUpdated?: (SliderValues) => void,
 }
@@ -119,8 +119,8 @@ class PitComponent extends React.PureComponent <PitProps, void> {
 export default class Slider extends React.Component<Props, State> {
   // TODO add an opportunity to pass custom PitComponent
   static defaultProps = {
-    handle: StyledHandle,
-    progressBar: StyledProgressBar,
+    handle: () => <StyledHandle />,
+    progressBar: () => <StyledProgressBar />,
     min: 1,
     max: 100,
     disabled: false,
