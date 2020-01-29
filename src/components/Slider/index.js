@@ -119,8 +119,8 @@ class PitComponent extends React.PureComponent <PitProps, void> {
 export default class Slider extends React.Component<Props, State> {
   // TODO add an opportunity to pass custom PitComponent
   static defaultProps = {
-    handle: () => <StyledHandle />,
-    progressBar: () => <StyledProgressBar />,
+    handle: ({ handleRef, ...props }) => <StyledHandle ref={handleRef} {...props} />,
+    progressBar: (props) => <StyledProgressBar {...props} />,
     min: 1,
     max: 100,
     disabled: false,
