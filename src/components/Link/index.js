@@ -44,7 +44,7 @@ type Props = {
 
 /**
  * Ссылки могут содержать текст и иконку рядом с текстом. Если вам нужно использовать Link
- из React Router, возьмите компонент RouterLink
+ * из React Router, возьмите компонент RouterLink
  */
 
 const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {

@@ -1,22 +1,7 @@
 // @flow
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import type { Element } from 'react'
-import styled from 'styled-components'
-
-import style from 'utils/link'
-
-const PaddingWrap = styled.span`
-  display: inline-flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-
-  padding-top: .1em;
-  ${({ left }) => (
-    left ? 'padding-right: 3px;' : 'padding-left: 3px;'
-  )}
-`
+import { PaddingWrap, StyledLink } from './styled'
 
 const cloneIconWithSize = (iconNode) => (
   React.cloneElement(iconNode, {
@@ -42,12 +27,6 @@ type Props = {
   */
   to: string,
 }
-
-const StyledLink = styled(Link)`
-  ${style}
-  display: inline-flex;
-  align-items: center;
-`
 
 /**
  * Стилизованный компонент Link из React Router, может содержать текст и иконку рядом с текстом

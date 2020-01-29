@@ -42,6 +42,7 @@ StyledRouterLink.story = {
 export const withIconLink = () => (
   <Router>
     <RouterLink
+      to="/"
       onClick={onToggle}
       rightIcon={
         <Icon name="angle" inheritColor rotate={boolean('rotate', false)} size="normal" />
