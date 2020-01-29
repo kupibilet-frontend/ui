@@ -43,10 +43,9 @@ type Props = {
 }
 
 /**
- * Ссылки могут содержать текст и иконку рядом с текстом
+ * Ссылки могут содержать текст и иконку рядом с текстом. Если вам нужно использовать Link
+ из React Router, возьмите компонент RouterLink
  */
-
-// TODO: make separate component - RouterLink.
 
 const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
   const LinkComponent = href ? 'a' : 'span'
@@ -74,7 +73,6 @@ Link.defaultProps = {
   href: null,
   leftIcon: null,
   rightIcon: null,
-  to: null,
 }
 
 const StyledLink = styled(Link)`

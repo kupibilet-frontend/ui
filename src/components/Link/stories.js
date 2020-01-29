@@ -55,7 +55,7 @@ export const routerLink = () => (
 )
 
 routerLink.story = {
-  name: 'Router Link',
+  name: 'Router Link(DEPRECATED)',
 }
 
 export const withIconLink = () => (
