@@ -1,11 +1,25 @@
 // @flow
 import * as React from 'react'
+import type { TValue } from './Radio'
 
 type TProps = {
-  selectedValue?: string | number | boolean,
-  onChange: () => void,
+  /**
+  * Для указания доступных опций используется компонент <TogglerItem />
+  */
   children: React.Node,
+  /**
+  * Текущее выбранное значение компонента
+  */
+  selectedValue?: TValue,
+  /**
+  * Функция, срабатывающая при выборе опции. Принимает значение опции
+  */
+  onChange: (TValue) => void,
 }
+
+/**
+ * Компонент для выбора опции
+ */
 
 const RadioGroup = ({
   selectedValue,

@@ -14,12 +14,14 @@ const DEFAULT_PROPS = {
   onChange: () => null,
 }
 
+export type TValue = string | number | boolean
+
 type TProps = {
-  value: string | number | boolean,
+  value: TValue,
   label: React.Node,
   disabled?: boolean,
   className?: string,
-  selectedValue?: string | number | boolean,
+  selectedValue?: TValue,
   onChange?: () => void,
 }
 
