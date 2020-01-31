@@ -4,7 +4,7 @@
 import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
-import { Radio, RadioGroup } from 'components/Radio'
+import Radio from 'components/Radio'
 
 const onChange = (value) => {
   updateKnob('selectedValue', 'text', value)
@@ -15,10 +15,21 @@ export const RadioGroupStory = () => {
   const disabled = boolean('disabled', false)
 
   return (
-    <RadioGroup selectedValue={selectedValue} onChange={onChange}>
-      <Radio disabled={disabled} label="Базовый" value="base" />
-      <Radio disabled={disabled} label="Трэвэл" value="travel" />
-    </RadioGroup>
+    <div>
+      <Radio
+        disabled={disabled}
+        label="Базовый"
+        value="base"
+        checked={selectedValue === 'base'}
+        onChange={onChange}
+      />
+      <Radio
+        label="Трэвэл"
+        value="travel"
+        checked={selectedValue === 'travel'}
+        onChange={onChange}
+      />
+    </div>
   )
 }
 
@@ -30,7 +41,7 @@ RadioGroupStory.story = {
 export default {
   title: 'COMPONENTS|Controls/Radio',
   parameters: {
-    component: RadioGroup,
+    component: Radio,
     componentSubtitle: `import { Radio, RadioGroup } from '@kupibilet/ui/components/Radio'`,
   },
 }
