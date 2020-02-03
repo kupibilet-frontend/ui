@@ -42,6 +42,6 @@ export default {
   title: 'COMPONENTS|Controls/Radio',
   parameters: {
     component: Radio,
-    componentSubtitle: `import { Radio, RadioGroup } from '@kupibilet/ui/components/Radio'`,
+    componentSubtitle: `import Radio from '@kupibilet/ui/components/Radio'`,
   },
 }
