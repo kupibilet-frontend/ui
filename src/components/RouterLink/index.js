@@ -1,13 +1,8 @@
 // @flow
 import * as React from 'react'
 import type { Element } from 'react'
-import { PaddingWrap, StyledLink } from './styled'
-
-const cloneIconWithSize = (iconNode) => (
-  React.cloneElement(iconNode, {
-    size: iconNode.props.size || 'normal',
-  })
-)
+import { renderIcon } from 'components/Link'
+import { StyledLink } from './styled'
 
 type Props = {
   /**
@@ -29,24 +24,14 @@ type Props = {
 }
 
 /**
- * Стилизованный компонент Link из React Router, может содержать текст и иконку рядом с текстом
+ * Стилизованный компонент Link из React Router, может содержать текст и иконки рядом с текстом
  */
 
 const RouterLink = ({ children, to, leftIcon, rightIcon, ...props }: Props) => (
   <StyledLink to={to} {...props}>
-    {leftIcon && (
-      <PaddingWrap left>
-        {cloneIconWithSize(leftIcon)}
-      </PaddingWrap>
-    )}
-
+    {renderIcon(leftIcon, true)}
     {children}
-
-    {rightIcon && (
-      <PaddingWrap>
-        {cloneIconWithSize(rightIcon)}
-      </PaddingWrap>
-    )}
+    {renderIcon(rightIcon)}
   </StyledLink>
 )
 
