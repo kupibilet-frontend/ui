@@ -32,7 +32,7 @@ type Props = {
 }
 
 export const renderIcon = (icon: Element<*> | null = null, isLeft: boolean = false) => {
-  if (!icon) return
+  if (!icon) return null
   return (
     <PaddingWrap isLeft={isLeft}>
       {cloneIconWithSize(icon)}
