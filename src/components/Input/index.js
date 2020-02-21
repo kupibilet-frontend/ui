@@ -33,7 +33,7 @@ type Props = {
   rightIcon?: React$Element<*>,
   handleLeftIconPress?: Function,
   handleRightIconPress?: Function,
-  ref?: Function,
+  innerRef?: Function,
   children?: React$Element<*>[],
   isTextarea?: boolean,
 }
@@ -46,16 +46,19 @@ class InputControl extends PureComponent<Props, State> {
   static defaultProps = {
     name: 'input',
     size: 'normal',
+    innerRef: null,
   }
 
   constructor(props) {
     super(props)
 
+    const { innerRef } = this.props
+
     this.state = {
       isActive: false,
     }
 
-    this.innerInput = React.createRef()
+    this.innerInput = innerRef || React.createRef()
   }
 
   onIconPress = (e) => {
