@@ -30,12 +30,17 @@ type Props = {
   onToggle: (Event, boolean) => void,
   children: React.Element<*>,
   overlay: React.Element<*>,
+  renderDropdownContainer?: (React.Element<*>) => React.Element<*>,
 }
 
-/* eslint-disable react/prop-types */
-class Dropdown extends PureComponent<Props, null> {
+class Dropdown extends PureComponent<Props> {
   static defaultProps = {
     isOpen: false,
+    renderDropdownContainer: (children) => (
+      <DropdownContent>
+        {children}
+      </DropdownContent>
+    ),
   }
 
   onToggle = (event: Event) => {
@@ -53,22 +58,22 @@ class Dropdown extends PureComponent<Props, null> {
   }
 
   render() {
-    const { children, overlay, isOpen } = this.props
+    const { children, overlay, isOpen, renderDropdownContainer } = this.props
 
-    const dropdownButton = React.cloneElement(children, {
-      onClick: this.onToggle,
-    })
+    if (!children) {
+      if (!isOpen) return null
+
+      return renderDropdownContainer(overlay)
+    }
+
+    const dropdownButton = React.cloneElement(children, { onClick: this.onToggle })
 
     return (
       <DropdownWrapper
         {...this.props}
       >
         {dropdownButton}
-        { isOpen ? (
-          <DropdownContent>
-            {overlay}
-          </DropdownContent>
-        ) : null}
+        {isOpen && renderDropdownContainer(overlay)}
       </DropdownWrapper>
     )
   }
