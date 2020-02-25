@@ -13,6 +13,16 @@ const StyledDropdown = styled(Dropdown)`
   }
 `
 
+const CustomDropdownContainer = styled.div`
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 150px;
+  border: 1px solid ${({ theme }) => theme.color.miscDark};
+  background-color: ${({ theme }) => theme.color.background};
+  padding: 10px;
+`
+
 storiesOf('COMPONENTS|Complex controls/Dropdown', module)
   .add('Defalut', () => {
     const isOpen = boolean('isOpen', false)
@@ -23,15 +33,33 @@ storiesOf('COMPONENTS|Complex controls/Dropdown', module)
 
     return (
       <StyledDropdown
-        overlay={<div><h2>Tethered</h2></div>}
+        overlay={<div>Dropdown content</div>}
         onToggle={onToggle}
         isOpen={isOpen}
       >
-        <div>
-          click to open
-          &nbsp;
-          <Button>click</Button>
-        </div>
+        <Button>Open Dropdown</Button>
+      </StyledDropdown>
+    )
+  })
+  .add('With custom Dropdown container', () => {
+    const isOpen = boolean('isOpen', false)
+    const onToggle = (event, value) => {
+      event.preventDefault()
+      updateKnob('isOpen', 'boolean', value)
+    }
+
+    return (
+      <StyledDropdown
+        overlay={<div>Dropdown content</div>}
+        onToggle={onToggle}
+        isOpen={isOpen}
+        renderDropdownContainer={(children) => (
+          <CustomDropdownContainer>
+            {children}
+          </CustomDropdownContainer>
+        )}
+      >
+        <Button>Click to open Dropdown</Button>
       </StyledDropdown>
     )
   })
