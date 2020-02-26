@@ -2,20 +2,9 @@
 import * as React from 'react'
 import type { Element } from 'react'
 import styled from 'styled-components'
-
 import style from 'utils/link'
 
-const PaddingWrap = styled.span`
-  display: inline-flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-
-  padding-top: .1em;
-  ${({ left }) => (
-    left ? 'padding-right: 3px;' : 'padding-left: 3px;'
-  )}
-`
+import { PaddingWrap } from './styled'
 
 const cloneIconWithSize = (iconNode) => (
   React.cloneElement(iconNode, {
@@ -42,30 +31,28 @@ type Props = {
   href?: string,
 }
 
-/**
- * Ссылки могут содержать текст и иконку рядом с текстом
- */
+export const renderIcon = (icon: Element<*> | null = null, isLeft: boolean = false) => {
+  if (!icon) return null
+  return (
+    <PaddingWrap isLeft={isLeft}>
+      {cloneIconWithSize(icon)}
+    </PaddingWrap>
+  )
+}
 
-// TODO: make separate component - RouterLink.
+/**
+ * Ссылки могут содержать текст и иконку рядом с текстом. Если вам нужно использовать Link
+ * из React Router, возьмите компонент RouterLink
+ */
 
 const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
   const LinkComponent = href ? 'a' : 'span'
 
   return (
     <LinkComponent href={href} {...props}>
-      {leftIcon && (
-        <PaddingWrap left>
-          {cloneIconWithSize(leftIcon)}
-        </PaddingWrap>
-      )}
-
+      {renderIcon(leftIcon, true)}
       {children}
-
-      {rightIcon && (
-        <PaddingWrap>
-          {cloneIconWithSize(rightIcon)}
-        </PaddingWrap>
-      )}
+      {renderIcon(rightIcon)}
     </LinkComponent>
   )
 }
@@ -74,7 +61,6 @@ Link.defaultProps = {
   href: null,
   leftIcon: null,
   rightIcon: null,
-  to: null,
 }
 
 const StyledLink = styled(Link)`
