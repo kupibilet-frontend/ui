@@ -3,9 +3,10 @@ import React from 'react'
 import moment from '@kupibilet/moment'
 import { withMedia } from 'utils/media-queries'
 import Button from 'components/Button'
+import CalendarDay from 'components/CalendarDay'
 import MonthCaption from './parts/MonthCaption'
 import WeekdaysRow from './parts/WeekdaysRow'
-import Day from './parts/Day'
+
 import {
   StyledDayPicker,
   DayPickerWrapper,
@@ -33,7 +34,7 @@ class Calendar extends React.PureComponent<Props, State> {
     onMonthVisibilityChange: () => null,
     selectedDays: [],
     numberOfMonths: 2,
-    renderDay: (day) => <Day day={moment(day)} />,
+    renderDay: (day) => <CalendarDay day={moment(day)} />,
   }
 
   getMaxVisibleMonth = (date: Date) => new Date(
