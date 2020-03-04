@@ -2,11 +2,18 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import moment from '@kupibilet/moment'
+import styled from 'styled-components'
 // import { text } from '@storybook/addon-knobs'
 // import updateKnob from 'storybook/updateKnob'
 import Calendar from 'components/Calendar'
 import CalendarDay from 'components/CalendarDay'
 
+
+const ContainerWithFixedSize = styled.div`
+  height: 365px;
+  max-width: 700px;
+  border: 1px solid #eee;
+`
 // const onChange = (value) => {
 //   updateKnob('currentValue', 'text', value)
 // }
@@ -43,5 +50,10 @@ const renderDay = (day) => (
 
 storiesOf('COMPONENTS|Calendar', module)
   .add('Default', () => (
-    <Calendar renderDay={renderDay} />
+    <ContainerWithFixedSize>
+      <Calendar
+        renderDay={renderDay}
+        selectedDays={[new Date(2020, 3, 19), new Date(2020, 3, 25)]}
+      />
+    </ContainerWithFixedSize>
   ))

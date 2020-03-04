@@ -137,11 +137,10 @@ export default css`
 .DayPicker-Day {
   color: ${({ theme }) => theme.color.textDarkest};
   box-sizing: border-box;
+  display: block;
   width: 4%;
-  height: 12vw;
-  min-height: 36px;
+  height: 45px;
   min-width: 42px;
-  max-height: 51px;
   max-width: 52px;
   display: table-cell;
   letter-spacing: -.21px;

@@ -4,6 +4,7 @@ import moment from '@kupibilet/moment'
 import { withMedia } from 'utils/media-queries'
 import Button from 'components/Button'
 import MonthCaption from './parts/MonthCaption'
+import WeekdaysRow from './parts/WeekdaysRow'
 import {
   StyledDayPicker,
   DayPickerWrapper,
@@ -12,44 +13,74 @@ import {
 } from './styled'
 
 type Props = {
-  selectedDays: Array<*>,
-  onDaySelect: (string, {}) => void,
-  onMonthVisibilityChange: () => void,
-  isTablet: boolean,
-  isDesktop: boolean,
+  onDayClick?: (string) => void,
+  onMonthVisibilityChange?: () => void,
+  selectedDays?: Array<string>,
   isMobile: boolean,
   renderDay: (string) => void,
+  numberOfMonths?: number,
 }
 
 type State = {
-  numberOfMonths: number,
+  isSelectedMonth: boolean,
 }
 
 const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
-// const WEEKDAYS_SHORT_FROM_MONDAY = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
 class Calendar extends React.PureComponent<Props, State> {
   static defaultProps = {
-    onDaySelect: () => null,
+    onDayClick: () => null,
+    onMonthVisibilityChange: () => null,
     selectedDays: [],
-  }
-  constructor(props) {
-    super(props)
-    this.state = {
-      numberOfMonths: this.getNumberOfMonths(),
-    }
+    numberOfMonths: 2,
   }
 
-  getNumberOfMonths = () => {
-    const { isTablet, isDesktop } = this.props
-    if (isDesktop) return 2
-    if (isTablet) return 1
-    return 13
+  getMaxVisibleMonth = (date: Date) => new Date(
+    date.getFullYear() + 1, date.getMonth(), date.getDate(),
+  )
+
+  getModifires = () => {
+    const {
+      selectedDays,
+    } = this.props
+
+    const today = new Date()
+    const lastDay = new Date()
+    lastDay.setDate(lastDay.getDate() - 1)
+    lastDay.setMonth(lastDay.getMonth() + 12)
+
+    const fromDate = selectedDays[0] && moment(selectedDays[0]).toDate()
+    const toDate = selectedDays[1] && moment(selectedDays[1]).toDate()
+
+    return ({
+      disabled: {
+        before: today,
+        after: lastDay,
+      },
+      selected: [
+        fromDate,
+        { from: fromDate, to: toDate },
+      ],
+      start: fromDate,
+      end: toDate,
+    })
   }
 
-   getMaxVisibleMonth = (date: Date) => new Date(
-     date.getFullYear() + 1, date.getMonth(), date.getDate(),
-   )
+  renderMonthCaption = (captionProps) => {
+    const {
+      onMonthVisibilityChange,
+      isMobile,
+    } = this.props
+
+    return (
+      <MonthCaption
+        modifiers={this.getModifires}
+        onMonthVisibilityChange={onMonthVisibilityChange}
+        isMobile={isMobile}
+        {...captionProps}
+      />
+    )
+  }
 
   renderNavbar = ({ onPreviousClick, onNextClick }) => {
     return (
@@ -78,48 +109,22 @@ class Calendar extends React.PureComponent<Props, State> {
 
   render() {
     const {
-      numberOfMonths,
-    } = this.state
-    const {
       isMobile,
       selectedDays,
-      onDaySelect,
-      onMonthVisibilityChange,
+      onDayClick,
       renderDay,
+      numberOfMonths,
     } = this.props
 
     const today = new Date()
-    const lastDay = new Date()
-    lastDay.setDate(lastDay.getDate() - 1)
-    lastDay.setMonth(lastDay.getMonth() + 12)
-
-    const modifiers = {
-      disabled: {
-        before: today,
-        after: lastDay,
-      },
-      // selected: [
-      //   fromDate,
-      //   { from: fromDate, to: toDate },
-      // ],
-      // start: fromDate,
-      // end: toDate,
-    }
-
-    const monthCaption = (
-      <MonthCaption
-        modifiers={modifiers}
-        onMonthVisibilityChange={onMonthVisibilityChange}
-        isMobile={isMobile}
-      />
-    )
 
     return (
       <DayPickerWrapper>
+        {isMobile && <WeekdaysRow />}
         <StyledDayPicker
           weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
           showWeekDays={!isMobile}
-          modifiers={modifiers}
+          modifiers={this.getModifires()}
           month={!isMobile ? (selectedDays[0] || today) : today}
           fromMonth={today}
           toMonth={this.getMaxVisibleMonth(today)}
@@ -129,8 +134,8 @@ class Calendar extends React.PureComponent<Props, State> {
           locale="ru"
           renderDay={(day) => renderDay(day)}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
-          captionElement={monthCaption}
-          onDayClick={(day) => onDaySelect(day, modifiers.disabled)}
+          captionElement={this.renderMonthCaption}
+          onDayClick={(day) => onDayClick(day)}
           tabIndex={-1}
         />
       </DayPickerWrapper>

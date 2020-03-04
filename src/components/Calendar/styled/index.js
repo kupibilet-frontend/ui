@@ -345,10 +345,10 @@ export const StyledDayPicker = styled(DayPicker)`
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 
-    // hack for scrolled padding
+    /* // hack for scrolled padding
     margin: 0 -18px 12px -18px;
-    padding: 0 18px;
-    outline: none;
+    padding: 0 18px; */
+    /* outline: none; */
 
     // hack for some native mobile browsers
     background: ${({ theme }) => theme.color.background};
@@ -357,9 +357,8 @@ export const StyledDayPicker = styled(DayPicker)`
 
 export const DayPickerWrapper = styled.div`
   overflow: scroll;
-  // ${mq.handheld`
-  //   width: 100%;
-  // `}
+  max-height: 100%;
+  position: relative;
 `
 
 export const Navbar = styled.div`
@@ -390,27 +389,6 @@ export const NavbarButtons = styled.div`
   width: 100%;
   padding: 0 1em;
   z-index: 2;
-`
-
-export const WeekdaysWrapper = styled.div`
-  background: ${({ theme }) => theme.color.background};
-  border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter};
-  display: flex;
-  justify-content: center;
-  margin: ${({ showToCalendar }) => (showToCalendar ? '155px' : '102px')}  0 0 -18px;
-  padding: 12px 36px 0;
-  position: fixed;
-  width: calc(100% + 36px);
-  z-index: 2;
-`
-
-export const Weekday = styled.div`
-  padding: 0.5rem 0;
-  text-align: center;
-  color: ${({ theme }) => theme.color.textLight};
-  min-width: 42px;
-  max-width: 52px;
-  width: 14.3%;
 `
 
 export const MainWrapper = styled.div`

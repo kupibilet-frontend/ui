@@ -1,38 +1,53 @@
 // @flow
 
 import React from 'react'
-import styled from 'styled-components'
 import moment from '@kupibilet/moment'
 import VisibilitySensor from 'react-visibility-sensor'
 
-const Caption = styled.div`
-
-`
-
 type Props = {
-  date: Date | null,
-  modifiers: {},
-  onMonthVisibilityChange: () => void,
-  // isMobile: boolean,
+  date?: Date,
+  modifiers: {
+    selected: Array<string | Object>,
+  },
+  onMonthVisibilityChange?: (Date) => void,
+  isMobile: boolean,
 }
 
 type State = {
-  scrollToDates: boolean,
+  isSelectedMonth: boolean,
 }
 
-/* eslint-disable react/prop-types */
 class MonthCaption extends React.PureComponent<Props, State> {
   static defaultProps = {
-    date: null,
     onMonthVisibilityChange: () => {},
+    date: new Date(),
   }
-  // constructor(props) {
-  //   super(props)
-  // }
+  constructor(props: Props) {
+    super(props)
+    const {
+      date,
+      modifiers: {
+        selected,
+      },
+    } = props
+
+    this.state = {
+      isSelectedMonth: selected[0] ? moment(date).isSame(selected[0], 'month') : false,
+    }
+  }
 
   componentDidMount() {
-    // if startDaySelected - scroll to this month and isMobile
-    // this.selectedMonth.scrollIntoView()
+    const {
+      isMobile,
+    } = this.props
+
+    const {
+      isSelectedMonth,
+    } = this.state
+
+    if (isMobile && isSelectedMonth) {
+      this.selectedMonth.scrollIntoView()
+    }
   }
 
   componentDidUpdate(prevProps: Props) {
@@ -60,12 +75,12 @@ class MonthCaption extends React.PureComponent<Props, State> {
         onChange={this.onChange}
         partialVisibility
       >
-        <Caption
+        <div
           className="DayPicker-Caption"
           ref={(element) => { this.selectedMonth = element }}
         >
           <div>{month}</div>
-        </Caption>
+        </div>
       </VisibilitySensor>
     )
   }
