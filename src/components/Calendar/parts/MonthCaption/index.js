@@ -5,11 +5,11 @@ import moment from '@kupibilet/moment'
 import VisibilitySensor from 'react-visibility-sensor'
 
 type Props = {
-  date?: Date,
+  date: Date,
   modifiers: {
     selected: Array<string | Object>,
   },
-  onMonthVisibilityChange?: (Date) => void,
+  onMonthVisibilityChange: (Date) => void,
   isMobile: boolean,
 }
 
@@ -18,10 +18,6 @@ type State = {
 }
 
 class MonthCaption extends React.PureComponent<Props, State> {
-  static defaultProps = {
-    onMonthVisibilityChange: () => {},
-    date: new Date(),
-  }
   constructor(props: Props) {
     super(props)
     const {

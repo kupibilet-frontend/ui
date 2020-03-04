@@ -13,7 +13,7 @@ import {
 } from './styled'
 
 type Props = {
-  onDayClick?: (string) => void,
+  onDayClick: (string) => void,
   onMonthVisibilityChange?: () => void,
   selectedDays?: Array<string>,
   isMobile: boolean,
@@ -29,7 +29,6 @@ const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'П�
 
 class Calendar extends React.PureComponent<Props, State> {
   static defaultProps = {
-    onDayClick: () => null,
     onMonthVisibilityChange: () => null,
     selectedDays: [],
     numberOfMonths: 2,
