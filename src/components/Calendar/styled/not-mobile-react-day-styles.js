@@ -40,5 +40,6 @@ export default css`
     max-width: 2.7em;
     padding-left: 0.2em;
     padding-right: 0.2em;
+    height: 2.7em;
   }
 `

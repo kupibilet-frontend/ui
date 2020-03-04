@@ -15,6 +15,7 @@ const ContainerWithFixedSize = styled.div`
   border: 1px solid #eee;
 `
 // const onChange = (value) => {
+//   if
 //   updateKnob('currentValue', 'text', value)
 // }
 

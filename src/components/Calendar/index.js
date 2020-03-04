@@ -5,6 +5,7 @@ import { withMedia } from 'utils/media-queries'
 import Button from 'components/Button'
 import MonthCaption from './parts/MonthCaption'
 import WeekdaysRow from './parts/WeekdaysRow'
+import Day from './parts/Day'
 import {
   StyledDayPicker,
   DayPickerWrapper,
@@ -17,7 +18,7 @@ type Props = {
   onMonthVisibilityChange?: () => void,
   selectedDays?: Array<string>,
   isMobile: boolean,
-  renderDay: (string) => void,
+  renderDay?: (string) => void,
   numberOfMonths?: number,
 }
 
@@ -32,6 +33,7 @@ class Calendar extends React.PureComponent<Props, State> {
     onMonthVisibilityChange: () => null,
     selectedDays: [],
     numberOfMonths: 2,
+    renderDay: (day) => <Day day={moment(day)} />,
   }
 
   getMaxVisibleMonth = (date: Date) => new Date(
@@ -73,7 +75,7 @@ class Calendar extends React.PureComponent<Props, State> {
 
     return (
       <MonthCaption
-        modifiers={this.getModifires}
+        modifiers={this.getModifires()}
         onMonthVisibilityChange={onMonthVisibilityChange}
         isMobile={isMobile}
         {...captionProps}
@@ -131,7 +133,7 @@ class Calendar extends React.PureComponent<Props, State> {
           numberOfMonths={numberOfMonths}
           months={moment.months()}
           locale="ru"
-          renderDay={(day) => renderDay(day)}
+          renderDay={renderDay}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={this.renderMonthCaption}
           onDayClick={(day) => onDayClick(day)}
