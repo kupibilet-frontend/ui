@@ -14,17 +14,39 @@ import {
   NavbarButtons,
 } from './styled'
 
-type Props = {
+type TProps = {
+  /**
+    Функция, срабатывающая при клике на день в кадендаре. Возвращает выбранный день
+  */
   onDayClick: (string) => void,
+  /**
+    Функция, срабатывающая попадении месяца в поле видимости.
+    Нужна для инициирования подгрузки календаря цен
+  */
   onMonthVisibilityChange?: () => void,
+  /**
+    Массив выбранных дней. Один или два дня в формате Timestamp
+  */
   selectedDays?: Array<string>,
   isMobile: boolean,
+  /**
+    Функция, рендерящая день, если нам нужно кастомное отображение дней.
+    Например, вместе с ценами для календаря цен
+  */
   renderDay?: (string) => void,
+  /**
+    Количество отображаемых месяцев
+  */
   numberOfMonths?: number,
 }
 
-type State = {
+type TState = {
   isSelectedMonth: boolean,
+}
+
+type TNavbarProps = {
+  onPreviousClick: () => void,
+  onNextClick: () => void,
 }
 
 const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
@@ -33,13 +55,12 @@ const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'П�
  * Кадендарь позволяет выбрать одну дату или диапазон дат
  */
 
-
-class Calendar extends React.PureComponent<Props, State> {
+class Calendar extends React.PureComponent<TProps, TState> {
   static defaultProps = {
     onMonthVisibilityChange: () => null,
     selectedDays: [],
     numberOfMonths: 2,
-    renderDay: (day) => <CalendarDay day={moment(day)} />,
+    renderDay: (day: string) => <CalendarDay day={moment(day)} />,
   }
 
   getMaxVisibleMonth = (date: Date) => new Date(
@@ -73,7 +94,7 @@ class Calendar extends React.PureComponent<Props, State> {
     })
   }
 
-  renderMonthCaption = (captionProps) => {
+  renderMonthCaption = (captionProps: Object) => {
     const {
       onMonthVisibilityChange,
       isMobile,
@@ -89,7 +110,7 @@ class Calendar extends React.PureComponent<Props, State> {
     )
   }
 
-  renderNavbar = ({ onPreviousClick, onNextClick }) => {
+  renderNavbar = ({ onPreviousClick, onNextClick }: TNavbarProps) => {
     return (
       <Navbar>
         <NavbarButtons>
@@ -150,5 +171,8 @@ class Calendar extends React.PureComponent<Props, State> {
     )
   }
 }
+
+// export is needed for generate right documentation
+export const DocGenCalendar = Calendar
 
 export default withMedia(Calendar)

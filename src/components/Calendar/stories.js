@@ -4,7 +4,7 @@ import moment from '@kupibilet/moment'
 import styled from 'styled-components'
 import { text } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
-import Calendar from 'components/Calendar'
+import Calendar, { DocGenCalendar } from 'components/Calendar'
 import CalendarDay from 'components/CalendarDay'
 
 
@@ -70,7 +70,7 @@ CalendarStory.story = {
 export default {
   title: 'COMPONENTS|Complex controls/Calendar',
   parameters: {
-    component: Calendar,
+    component: DocGenCalendar,
     componentSubtitle: `import Calendar from '@kupibilet/ui/components/Calendar'`,
   },
 }
