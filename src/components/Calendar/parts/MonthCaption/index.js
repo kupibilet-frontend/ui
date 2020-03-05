@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor'
 type Props = {
   date: Date,
   modifiers: {
-    selected: Array<string | Object>,
+    selected: Array<Date | Object>,
   },
   onMonthVisibilityChange: (Date) => void,
   isMobile: boolean,
@@ -28,7 +28,9 @@ class MonthCaption extends React.PureComponent<Props, State> {
     } = props
 
     this.state = {
-      isSelectedMonth: selected[0] ? moment(date).isSame(selected[0], 'month') : false,
+      isSelectedMonth: selected[0]
+        ? moment(date).isSame(moment(selected[0]), 'month')
+        : false,
     }
   }
 

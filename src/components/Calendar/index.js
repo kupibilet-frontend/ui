@@ -29,6 +29,11 @@ type State = {
 
 const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
 
+/**
+ * Кадендарь позволяет выбрать одну дату или диапазон дат
+ */
+
+
 class Calendar extends React.PureComponent<Props, State> {
   static defaultProps = {
     onMonthVisibilityChange: () => null,
@@ -119,6 +124,7 @@ class Calendar extends React.PureComponent<Props, State> {
     } = this.props
 
     const today = new Date()
+    const selectedDay = selectedDays[0] && new Date(selectedDays[0])
 
     return (
       <DayPickerWrapper>
@@ -127,7 +133,7 @@ class Calendar extends React.PureComponent<Props, State> {
           weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
           showWeekDays={!isMobile}
           modifiers={this.getModifires()}
-          month={!isMobile ? (selectedDays[0] || today) : today}
+          month={!isMobile ? (selectedDay || today) : today}
           fromMonth={today}
           toMonth={this.getMaxVisibleMonth(today)}
           firstDayOfWeek={1}
