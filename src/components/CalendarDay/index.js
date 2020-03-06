@@ -6,13 +6,13 @@ import { Day, AvgCost } from './styled'
 type Props = {
   day: moment$Moment,
   isCheap?: boolean,
-  cost?: number,
+  cost?: number | null,
 }
 
 export default class DayCell extends PureComponent<Props, void> {
   static defaultProps = {
     isCheap: false,
-    cost: 0,
+    cost: null,
   }
 
   render() {

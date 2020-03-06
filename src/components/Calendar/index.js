@@ -18,7 +18,7 @@ type TProps = {
   /**
     Функция, срабатывающая при клике на день в кадендаре. Возвращает выбранный день
   */
-  onDayClick: (string) => void,
+  onDayClick: (Date) => void,
   /**
     Функция, срабатывающая попадении месяца в поле видимости.
     Нужна для инициирования подгрузки календаря цен
@@ -27,13 +27,13 @@ type TProps = {
   /**
     Массив выбранных дней. Один или два дня в формате Timestamp
   */
-  selectedDays?: Array<string>,
+  selectedDays?: Array<number>,
   isMobile: boolean,
   /**
     Функция, рендерящая день, если нам нужно кастомное отображение дней.
     Например, вместе с ценами для календаря цен
   */
-  renderDay?: (string) => void,
+  renderDay?: (Date) => void,
   /**
     Количество отображаемых месяцев
   */
@@ -60,7 +60,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
     onMonthVisibilityChange: () => null,
     selectedDays: [],
     numberOfMonths: 2,
-    renderDay: (day: string) => <CalendarDay day={moment(day)} />,
+    renderDay: (day: Date) => <CalendarDay day={moment(day)} />,
   }
 
   getMaxVisibleMonth = (date: Date) => new Date(
@@ -164,7 +164,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
           renderDay={renderDay}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={this.renderMonthCaption}
-          onDayClick={(day) => onDayClick(day)}
+          onDayClick={onDayClick}
           tabIndex={-1}
         />
       </DayPickerWrapper>
