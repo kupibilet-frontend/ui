@@ -19,13 +19,13 @@ export default class AirportSuggest extends React.PureComponent {
     isCity: PropTypes.bool.isRequired,
     isGeoSuggest: PropTypes.bool.isRequired,
     isNested: PropTypes.bool.isRequired,
-    singleAirport: PropTypes.string,
+    geoLabel: PropTypes.string,
   }
 
   static defaultProps = {
     city: '',
     country: '',
-    singleAirport: '',
+    geoLabel: '',
   }
 
   render() {
@@ -37,7 +37,7 @@ export default class AirportSuggest extends React.PureComponent {
       IATACode,
       isGeoSuggest,
       isNested,
-      singleAirport,
+      geoLabel,
     } = this.props
     const isGeoCity = isCity && isGeoSuggest
 
@@ -61,9 +61,7 @@ export default class AirportSuggest extends React.PureComponent {
           <div>
             { isCity ? (
               <GeoLabel>
-                {singleAirport ? `аэропорт ${singleAirport}` : 'Все аэропорты'}
-                { country && ', ' }
-                {country}
+                {geoLabel}
               </GeoLabel>
             ) : (
               <GeoLabel>
