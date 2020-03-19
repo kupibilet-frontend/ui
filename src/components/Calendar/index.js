@@ -28,7 +28,6 @@ type TProps = {
     Массив выбранных дней. Один или два дня в формате Timestamp
   */
   selectedDays?: Array<number>,
-  isMobile: boolean,
   /**
     Функция, рендерящая день, если нам нужно кастомное отображение дней.
     Например, вместе с ценами для календаря цен
@@ -38,6 +37,7 @@ type TProps = {
     Количество отображаемых месяцев
   */
   numberOfMonths?: number,
+  isMobile: boolean,
 }
 
 type TState = {

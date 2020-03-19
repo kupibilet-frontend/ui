@@ -9,9 +9,9 @@ export default css`
 .DayPicker-wrapper {
   position: relative;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding-bottom: 1rem;
   flex-direction: row;
   outline: none;
@@ -41,9 +41,9 @@ export default css`
   border-collapse: collapse;
   border-spacing: 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   margin: 0 1rem;
   margin: 12px 0 0;
   margin-top: 1rem;
