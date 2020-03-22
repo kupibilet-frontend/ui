@@ -1,20 +1,28 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import MobileHorizontalScroll from './styled'
+// @flow
 
-export const NavBar = (props) => (
-  <MobileHorizontalScroll className={props.className}>
-    {props.children}
+import * as React from 'react'
+import { Wrap, Inner } from './styled'
+
+type TProps = {
+  className: string,
+  children: React.Node,
+}
+
+const MobileHorizontalScroll = ({ className, children }: TProps) => (
+  <Wrap className={className}>
+    <Inner>
+      {children}
+    </Inner>
+  </Wrap>
+)
+
+
+export const NavBar = ({ children, className }: TProps) => (
+  <MobileHorizontalScroll className={className}>
+    {children}
   </MobileHorizontalScroll>
 )
 
-NavBar.defaultProps = {
-  className: '',
-}
+export { NavItem } from './styled'
 
-NavBar.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.any.isRequired,
-}
-
-export { default as MobileHorizontalScroll, NavItem } from './styled'
+export default MobileHorizontalScroll
