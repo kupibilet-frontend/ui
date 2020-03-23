@@ -6,10 +6,9 @@ import { Day, AvgCost } from './styled'
 type Props = {
   day: moment$Moment,
   isCheap?: boolean,
-  cost?: number,
+  cost?: number | null,
 }
 
-/* eslint-disable react/prop-types */
 export default class DayCell extends PureComponent<Props, void> {
   static defaultProps = {
     isCheap: false,
@@ -22,15 +21,11 @@ export default class DayCell extends PureComponent<Props, void> {
     return (
       <Day>
         { day.format('D') }
-        {
-          cost ? (
-            <AvgCost isCheap={isCheap}>
-              { cost.toLocaleString(['ru', 'en-US']) }
-            </AvgCost>
-          ) : (
-            <AvgCost>&nbsp;</AvgCost>
-          )
-        }
+        {cost ? (
+          <AvgCost isCheap={isCheap}>
+            { cost.toLocaleString(['ru', 'en-US']) }
+          </AvgCost>
+        ) : null}
       </Day>
     )
   }

@@ -41,5 +41,4 @@ export const font = `
   font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: ${color.textDarker};
 `
