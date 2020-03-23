@@ -5,14 +5,25 @@ import {
   Weekday,
 } from './styled'
 
-const WEEKDAYS_SHORT_FROM_MONDAY = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+export type TWeekdays = {
+  MONDAY: string,
+  TUESDAY: string,
+  WEDNESDAY: string,
+  THURSDAY: string,
+  FRIDAY: string,
+  SATURDAY: string,
+  SUNDAY: string,
+}
 
-const WeekdaysRow = () => {
-  const weekdays = WEEKDAYS_SHORT_FROM_MONDAY
-    .map((day: string) => <Weekday key={day}>{day}</Weekday>)
+type TProps = {
+  weekdays: TWeekdays,
+}
 
+const WeekdaysRow = ({ weekdays }: TProps) => {
   return (
-    <WeekdaysWrapper>{weekdays}</WeekdaysWrapper>
+    <WeekdaysWrapper>
+      {Object.values(weekdays).map((day: string) => <Weekday key={day}>{day}</Weekday>)}
+    </WeekdaysWrapper>
   )
 }
 

@@ -5,7 +5,7 @@ import { withMedia } from 'utils/media-queries'
 import Button from 'components/Button'
 import CalendarDay from 'components/CalendarDay'
 import MonthCaption from './parts/MonthCaption'
-import WeekdaysRow from './parts/WeekdaysRow'
+import WeekdaysRow, { type TWeekdays } from './parts/WeekdaysRow'
 
 import {
   StyledDayPicker,
@@ -37,6 +37,11 @@ type TProps = {
     Количество отображаемых месяцев
   */
   numberOfMonths?: number,
+  /**
+    Объект с названиями дней недели в формате { MONDAY: string, TUESDAY: string, ... }.
+    Передаем сверху для локализации
+  */
+  weekdays?: TWeekdays,
   isMobile: boolean,
 }
 
@@ -49,7 +54,15 @@ type TNavbarProps = {
   onNextClick: () => void,
 }
 
-const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+const WEEKDAYS_DEFAULT = {
+  MONDAY: 'Пн',
+  TUESDAY: 'Вт',
+  WEDNESDAY: 'Ср',
+  THURSDAY: 'Чт',
+  FRIDAY: 'Пт',
+  SATURDAY: 'Сб',
+  SUNDAY: 'Вс',
+}
 
 /**
  * Кадендарь позволяет выбрать одну дату или диапазон дат
@@ -61,6 +74,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
     selectedDays: [],
     numberOfMonths: 2,
     renderDay: (day: Date) => <CalendarDay day={moment(day)} />,
+    weekdays: WEEKDAYS_DEFAULT,
   }
 
   getMaxVisibleMonth = (date: Date) => new Date(
@@ -142,16 +156,20 @@ class Calendar extends React.PureComponent<TProps, TState> {
       onDayClick,
       renderDay,
       numberOfMonths,
+      weekdays,
     } = this.props
 
     const today = new Date()
     const selectedDay = selectedDays[0] && new Date(selectedDays[0])
 
+    const { SUNDAY, ...restWeekdays } = weekdays
+    const weekdaysFromSunday = Object.values({ SUNDAY, ...restWeekdays })
+
     return (
       <DayPickerWrapper>
-        {isMobile && <WeekdaysRow />}
+        {isMobile && <WeekdaysRow weekdays={weekdays} />}
         <StyledDayPicker
-          weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
+          weekdaysShort={weekdaysFromSunday}
           showWeekDays={!isMobile}
           modifiers={this.getModifires()}
           month={!isMobile ? (selectedDay || today) : today}
@@ -160,7 +178,6 @@ class Calendar extends React.PureComponent<TProps, TState> {
           firstDayOfWeek={1}
           numberOfMonths={numberOfMonths}
           months={moment.months()}
-          locale="ru"
           renderDay={renderDay}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={this.renderMonthCaption}
