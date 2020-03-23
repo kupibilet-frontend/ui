@@ -3,12 +3,12 @@ import styled, { css } from 'styled-components'
 const fadeStyles = css`
   content: '';
   position: absolute;
-  height: calc(100% - 1px);
+  height: calc(100% - 2px);
   width: 18px;
   top: 0;
 `
-const rightGradient = 'linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)'
-const leftGradient = 'linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)'
+const rightGradient = 'linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0) 100%)'
+const leftGradient = 'linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0) 100%)'
 
 export const Wrap = styled.div`
   max-width: 100vw;
