@@ -20,6 +20,16 @@ export const Wrap = styled.div`
     right: 0;
     background: ${rightGradient};
   }
+  &:before{
+    content: '';
+    height: 1px;
+    bottom: 0;
+    left: 18px;
+    position: absolute;
+    display: block;
+    width: calc(100% - 36px);
+    background: ${({ theme }) => theme.color.textLighter};
+  }
 `
 
 export const Inner = styled.div`
