@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import mq from 'utils/media-queries'
 
 const fadeStyles = css`
   content: '';
@@ -54,6 +55,10 @@ export const NavItem = styled.span`
   text-decoration: none;
   cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.color.textLighter};
+
+  ${mq.mobile`
+    padding: 11px 9px;
+  `}
 
   &:first-child {
     padding-left: 0;
