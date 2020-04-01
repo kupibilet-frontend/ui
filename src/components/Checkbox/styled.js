@@ -25,7 +25,7 @@ export const StyledCheckbox = styled.span`
   height: 18px;
   width: 18px;
   line-height: 16px;
-  box-shadow: ${({ disabled, checked, theme }) => `inset 0 0 0 1px ${getShadowColor(disabled, checked, theme)}`};
+  box-shadow: ${({ disabled, checked, theme }) => css`inset 0 0 0 1px ${getShadowColor(disabled, checked, theme)}`};
 
   ${switchTransition};
   transition-property: background, border;
@@ -39,7 +39,7 @@ export const LabelText = styled.span`
   margin-left: 6px;
   width: 100%;
   ${({ disabled, theme }) => (disabled
-    && `color: ${theme.color.textLight};`
+    && css`color: ${theme.color.textLight};`
   )}
 `
 
