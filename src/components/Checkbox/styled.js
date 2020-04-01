@@ -58,6 +58,6 @@ export const CheckboxLabel = styled.label`
   };
 
   &:hover .label-text {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarker)};
+    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
   };
 `
