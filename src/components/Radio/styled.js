@@ -1,8 +1,4 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-// The output of "babel-plugin-flow-react-proptypes" is unpredictable
-// when flow and prop-types used together
+import styled, { css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 
 const getBorderColor = ({ theme, checked, disabled }) => {
@@ -65,7 +61,7 @@ export const LabelText = styled.span`
   margin-left: 6px;
   width: 100%;
   ${({ disabled, theme }) => (disabled
-    && `color: ${theme.color.textLight};`
+    && css`color: ${theme.color.textLight};`
   )}
 `
 
@@ -85,55 +81,3 @@ export const RadioLabel = styled.label`
     color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
   };
 `
-
-const Radio = (props, context) => {
-  const { value, label, disabled, className } = props
-  const { selectedValue, onChange } = context
-  const checked = value === selectedValue
-
-  return (
-    <RadioLabel disabled={disabled} className={className}>
-      <StyledRadio
-        disabled={disabled}
-        checked={checked}
-      />
-      <RadioInput
-        {...props}
-        type="radio"
-        checked={checked}
-        onChange={() => onChange(value)}
-      />
-      <LabelText disabled={disabled}>
-        {label}
-      </LabelText>
-    </RadioLabel>
-  )
-}
-
-Radio.propTypes = {
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]).isRequired,
-  label: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
-  className: PropTypes.string,
-}
-
-
-Radio.contextTypes = {
-  selectedValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]),
-  onChange: PropTypes.func.isRequired,
-}
-
-Radio.defaultProps = {
-  disabled: false,
-  className: '',
-}
-
-export default Radio
