@@ -19,7 +19,7 @@ const StyledSlider = styled(Rheostat)`
 `
 
 const StyledProgressBar = styled.span`
-  background-color: ${({ theme }) => theme.color.primaryDarkest};
+  background-color: ${({ theme }) => theme.color.primaryDarker};
   display: flex;
   margin-left: 1px;
   position: absolute;
