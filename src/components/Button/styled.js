@@ -79,7 +79,7 @@ const getButtonHoverColor = (props) => {
 }
 const getButtonBackground = ({ theme, variant }) => {
   if (variant === 'primary') {
-    return theme.color.primary
+    return theme.color.primaryDarker
   } else if (variant === 'secondary') {
     return theme.color.miscLightest
   } if (variant === 'link') {
@@ -88,7 +88,7 @@ const getButtonBackground = ({ theme, variant }) => {
 }
 const getButtonHoverBackground = ({ theme, variant }) => {
   if (variant === 'primary') {
-    return theme.color.primaryDark
+    return theme.color.primaryDarkest
   } else if (variant === 'secondary') {
     return theme.color.miscLighter
   } if (variant === 'link') {
@@ -97,7 +97,7 @@ const getButtonHoverBackground = ({ theme, variant }) => {
 }
 const getButtonActiveBackground = ({ theme, variant }) => {
   if (variant === 'primary') {
-    return theme.color.primaryDarker
+    return theme.color.primaryDarkest
   } else if (variant === 'secondary') {
     return theme.color.miscLight
   } if (variant === 'link') {
