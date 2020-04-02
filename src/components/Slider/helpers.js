@@ -6,7 +6,7 @@ export const getHandleBgColor = (props) => {
 
   return (value === min || value === max)
     ? theme.color.miscDark
-    : theme.color.primaryDarkest
+    : theme.color.primaryDark
 }
 
 export const getBarColor = ({ isHighlighted, theme }) => (
