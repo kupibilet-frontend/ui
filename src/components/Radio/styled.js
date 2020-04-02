@@ -3,7 +3,7 @@ import { switchTransition } from 'utils/transitions'
 
 const getBorderColor = ({ theme, checked, disabled }) => {
   if (checked) {
-    return theme.color.primary
+    return theme.color.primaryDark
   } else if (disabled) {
     return theme.color.textLighter
   }
@@ -15,7 +15,7 @@ const getBoxShadow = (props) => `box-shadow: inset 0 0 0 1px ${getBorderColor(pr
 
 const getRadioBackground = ({ theme, checked, disabled }) => {
   if (checked) {
-    return theme.color.primary
+    return theme.color.primaryDark
   } else if (disabled) {
     return theme.color.textLightest
   }
