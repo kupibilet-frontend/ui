@@ -54,7 +54,7 @@ export const CheckboxLabel = styled.label`
   width: 100%;
 
   &:hover .checkbox {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primaryDarker)};
+    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primaryDark)};
   };
 
   &:hover .label-text {
