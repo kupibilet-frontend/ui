@@ -196,7 +196,7 @@ const defaultReactDayStyles = css`
 }
 
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
-  background-color: #008ae6;
+  background-color: #0f99f5;
 }
 
 .DayPicker:not(.DayPicker--interactionDisabled)
