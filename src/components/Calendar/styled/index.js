@@ -196,7 +196,7 @@ const defaultReactDayStyles = css`
 }
 
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
-  background-color: #51A0FA;
+  background-color: #008ae6;
 }
 
 .DayPicker:not(.DayPicker--interactionDisabled)
@@ -239,10 +239,10 @@ const castomReactDayStyles = css`
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
   position: relative;
   color: #f0f8ff;
-  background: ${({ theme }) => theme.color.primary};
+  background: ${({ theme }) => theme.color.primaryDarker};
   border-radius: 4px 0 0 4px !important;
   &:hover{
-    background: ${({ theme }) => theme.color.primary};
+    background: ${({ theme }) => theme.color.primaryDarker};
   }
 }
 
@@ -267,7 +267,7 @@ const castomReactDayStyles = css`
   border: solid 4px transparent;
   content: " ";
   pointer-events: none;
-  border-left-color: #38afff;
+  border-left-color: #008ae6;
   border-left-width: 4px;
   margin-top: -4px;
   z-index: 1;
@@ -283,7 +283,7 @@ const castomReactDayStyles = css`
   border: solid 4px transparent;
   content: " ";
   pointer-events: none;
-  border-right-color: #38afff;
+  border-right-color: #008ae6;
   border-right-width: 4px;
   margin-top: -4px;
 }
