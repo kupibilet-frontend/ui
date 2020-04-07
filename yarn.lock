@@ -9686,7 +9686,7 @@ react-addons-shallow-compare@~15.6.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-autosuggest@10.0.0:
+react-autosuggest@^10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-10.0.0.tgz#49c69a5053d7b98b14f28716875883d11c95e945"
   integrity sha512-WFCeRuYv6YCY9Ch4BodXPASWJXDh32ehQQHA2eLNhOBhu3Xcank+5W4wcEN+oqdAX1fvKROZRQRF2fpNZaZaxA==
