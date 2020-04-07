@@ -232,20 +232,17 @@ class Autocomplete extends PureComponent<Props, State> {
         sectionIndex: multiSection ? 0 : null,
         method,
       })
-
-      this.autosuggestInstance.justSelectedSuggestion = true
-
-      // Autosuggest differentiates props updates
-      // caused by arrow-keys navigation from other updates
-      // https://github.com/moroshko/react-autosuggest/blob/master/src/Autosuggest.js#L366
-      setTimeout(() => {
-        if (this.autosuggestInstance) {
-          this.autosuggestInstance.justSelectedSuggestion = false
-        }
-      }, 0)
     } else if (!suggestion) {
       this.autosuggestInstance.maybeCallOnChange(event, '', method)
     }
+  }
+
+  onSuggestionSelected = (...args) => {
+    const { onSuggestionSelected } = this.props
+
+    onSuggestionSelected(...args)
+
+    this.autosuggestInstance.justSelectedSuggestion = false
   }
 
   render() {
@@ -266,6 +263,7 @@ class Autocomplete extends PureComponent<Props, State> {
           spell,
           size,
         }}
+        onSuggestionSelected={this.onSuggestionSelected}
         suggestions={suggestions}
         ref={(ref) => { this.autosuggestInstance = ref }}
         theme={{
