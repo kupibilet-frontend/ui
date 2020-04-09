@@ -128,6 +128,10 @@ class Autocomplete extends PureComponent<Props, State> {
       || isValuesEqual(value, _get(suggestions, '0.IATACode'))
     ),
   }
+
+  componentDidMount() {
+    window.addEventListener('mouseup', this.handleClickOutside)
+  }
   /* eslint-enable react/sort-comp */
 
   // TODO airbnb config for `react/sort-comp` are missing UNSAFE_ lifecycles
@@ -161,6 +165,20 @@ class Autocomplete extends PureComponent<Props, State> {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('mouseup', this.handleClickOutside)
+  }
+
+  handleClickOutside = (event) => {
+    const autosuggestNode = this.autosuggestInstance.suggestionsContainer.parentNode
+    const isClickOutside = !autosuggestNode.contains(event.relatedTarget || event.target)
+
+    // fix problem with not working onBlur when we touched suggession, but not chose it
+    if (isClickOutside && this.autosuggestInstance.justSelectedSuggestion) {
+      this.onBlur(event)
+    }
+  }
+
   onChange: onChange = (event, payload) => {
     const { highlightedSectionIndex, highlightedSuggestionIndex } = this.autosuggestInstance.state
     const userAreTyping = payload.newValue.length >= this.props.inputProps.value.length
@@ -188,10 +206,8 @@ class Autocomplete extends PureComponent<Props, State> {
       this.props.inputProps.onBlur(event)
     }
 
-    if (!this.autosuggestInstance || !this.autosuggestInstance.justSelectedSuggestion) {
-      if (this.props.forceSuggestedValue) {
-        this.selectFirstSuggest(event, this.props, 'blur')
-      }
+    if (this.props.forceSuggestedValue) {
+      this.selectFirstSuggest(event, this.props, 'blur')
     }
   }
 
