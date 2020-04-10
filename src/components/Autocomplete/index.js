@@ -170,8 +170,9 @@ class Autocomplete extends PureComponent<Props, State> {
   }
 
   handleClickOutside = (event) => {
-    const autosuggestNode = this.autosuggestInstance.suggestionsContainer.parentNode
-    const isClickOutside = !autosuggestNode.contains(event.relatedTarget || event.target)
+    const autosuggestNode = _get(this.autosuggestInstance, 'suggestionsContainer.parentNode')
+    const isClickOutside = autosuggestNode
+      && !autosuggestNode.contains(event.relatedTarget || event.target)
 
     // fix problem with not working onBlur when we touched suggession, but not chose it
     if (isClickOutside && this.autosuggestInstance.justSelectedSuggestion) {
