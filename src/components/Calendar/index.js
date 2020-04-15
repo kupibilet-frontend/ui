@@ -45,10 +45,6 @@ type TProps = {
   isMobile: boolean,
 }
 
-type TState = {
-  isSelectedMonth: boolean,
-}
-
 type TNavbarProps = {
   onPreviousClick: () => void,
   onNextClick: () => void,
@@ -68,7 +64,7 @@ const WEEKDAYS_DEFAULT = {
  * Кадендарь позволяет выбрать одну дату или диапазон дат
  */
 
-class Calendar extends React.PureComponent<TProps, TState> {
+class Calendar extends React.PureComponent<TProps> {
   static defaultProps = {
     onMonthVisibilityChange: () => null,
     selectedDays: [],
@@ -124,7 +120,12 @@ class Calendar extends React.PureComponent<TProps, TState> {
     )
   }
 
-  renderNavbar = ({ onPreviousClick, onNextClick }: TNavbarProps) => {
+  renderNavbar = ({ onPreviousClick, onNextClick, nextMonth, previousMonth }: TNavbarProps) => {
+    const today = new Date()
+    const maxVisibleMonth = this.getMaxVisibleMonth(today)
+    const isPreviousButtonDisabled = moment(previousMonth).isBefore(today, 'month')
+    const isNextButtonDisabled = moment(nextMonth).isAfter(maxVisibleMonth, 'month')
+
     return (
       <Navbar>
         <NavbarButtons>
@@ -133,6 +134,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
               e.preventDefault()
               onPreviousClick()
             }}
+            disabled={isPreviousButtonDisabled}
             icon="arrow-left"
             tabIndex={-1}
           />
@@ -141,6 +143,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
               e.preventDefault()
               onNextClick()
             }}
+            disabled={isNextButtonDisabled}
             icon="arrow-right"
             tabIndex={-1}
           />
@@ -160,6 +163,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
     } = this.props
 
     const today = new Date()
+    const maxVisibleMonth = this.getMaxVisibleMonth(today)
     const selectedDay = selectedDays[0] && new Date(selectedDays[0])
 
     const { SUNDAY, ...restWeekdays } = weekdays
@@ -174,7 +178,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
           modifiers={this.getModifires()}
           month={!isMobile ? (selectedDay || today) : today}
           fromMonth={today}
-          toMonth={this.getMaxVisibleMonth(today)}
+          toMonth={maxVisibleMonth}
           firstDayOfWeek={1}
           numberOfMonths={numberOfMonths}
           months={moment.months()}
