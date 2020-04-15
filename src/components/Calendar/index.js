@@ -46,7 +46,8 @@ type TProps = {
 }
 
 type TState = {
-  isSelectedMonth: boolean,
+  maxVisibleMonth: Date,
+  today: Date,
 }
 
 type TNavbarProps = {
@@ -77,16 +78,31 @@ class Calendar extends React.PureComponent<TProps, TState> {
     weekdays: WEEKDAYS_DEFAULT,
   }
 
-  getMaxVisibleMonth = (date: Date) => new Date(
-    date.getFullYear() + 1, date.getMonth(), date.getDate(),
-  )
+  constructor() {
+    super()
+
+    this.state = {
+      maxVisibleMonth: this.getMaxVisibleMonth(),
+      today: new Date(),
+    }
+  }
+
+  getMaxVisibleMonth = () => {
+    const today = new Date()
+    return new Date(
+      today.getFullYear() + 1, today.getMonth(), today.getDate(),
+    )
+  }
 
   getModifires = () => {
     const {
       selectedDays,
     } = this.props
 
-    const today = new Date()
+    const {
+      today,
+    } = this.state
+
     const lastDay = new Date()
     lastDay.setDate(lastDay.getDate() - 1)
     lastDay.setMonth(lastDay.getMonth() + 12)
@@ -124,7 +140,11 @@ class Calendar extends React.PureComponent<TProps, TState> {
     )
   }
 
-  renderNavbar = ({ onPreviousClick, onNextClick }: TNavbarProps) => {
+  renderNavbar = ({ onPreviousClick, onNextClick, nextMonth, previousMonth }: TNavbarProps) => {
+    const { maxVisibleMonth, today } = this.state
+    const isPreviousButtonDisabled = moment(previousMonth).isBefore(today, 'month')
+    const isNextButtonDisabled = moment(nextMonth).isAfter(maxVisibleMonth, 'month')
+
     return (
       <Navbar>
         <NavbarButtons>
@@ -133,6 +153,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
               e.preventDefault()
               onPreviousClick()
             }}
+            disabled={isPreviousButtonDisabled}
             icon="arrow-left"
             tabIndex={-1}
           />
@@ -141,6 +162,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
               e.preventDefault()
               onNextClick()
             }}
+            disabled={isNextButtonDisabled}
             icon="arrow-right"
             tabIndex={-1}
           />
@@ -159,7 +181,8 @@ class Calendar extends React.PureComponent<TProps, TState> {
       weekdays,
     } = this.props
 
-    const today = new Date()
+    const { maxVisibleMonth, today } = this.state
+
     const selectedDay = selectedDays[0] && new Date(selectedDays[0])
 
     const { SUNDAY, ...restWeekdays } = weekdays
@@ -174,7 +197,7 @@ class Calendar extends React.PureComponent<TProps, TState> {
           modifiers={this.getModifires()}
           month={!isMobile ? (selectedDay || today) : today}
           fromMonth={today}
-          toMonth={this.getMaxVisibleMonth(today)}
+          toMonth={maxVisibleMonth}
           firstDayOfWeek={1}
           numberOfMonths={numberOfMonths}
           months={moment.months()}
