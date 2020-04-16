@@ -5,6 +5,7 @@ import { text } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 
 import AirportInput from 'components/AirportInput'
+import { Input } from 'components/Input'
 import Button from 'components/Button'
 import ControlsGroup from 'components/ControlsGroup'
 
@@ -29,4 +30,15 @@ storiesOf('COMPONENTS|Complex controls/ControlsGroup', module)
         Найти
       </Button>
     </ControlsGroup>
+  ))
+
+  .add('With standart input', () => (
+    <>
+      <ControlsGroup>
+        <Input placeholder="Email" />
+        <Button size="large">
+          Подписаться
+        </Button>
+      </ControlsGroup>
+    </>
   ))
