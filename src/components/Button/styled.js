@@ -55,9 +55,9 @@ const calculateBorderRadius = (size, neighboringInGroup) => {
   if (neighboringInGroup === 'both') {
     return ''
   } else if (neighboringInGroup === 'left') {
-    return `border-radius: 0 ${SIZES[size]}px ${SIZES[size]}px 0;`
+    return `border-radius: 0 6px 6px 0;`
   } else if (neighboringInGroup === 'right') {
-    return `border-radius: ${SIZES[size]}px 0 0 ${SIZES[size]}px;`
+    return `border-radius: 6px 0 0 6px;`
   }
 
   return `border-radius: 6px;`
