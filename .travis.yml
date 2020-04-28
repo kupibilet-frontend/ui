@@ -30,7 +30,7 @@ before_deploy:
 
 deploy:
   - provider: npm
-    email: v7rulnik@gmail.com
+    email: tech@kupibilet.ru
     skip_cleanup: true
     api_key: $NPM_TOKEN
     on:
