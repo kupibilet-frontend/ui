@@ -58,7 +58,7 @@ const IconSvg = styled.svg`
 
 export const IconWrapper = styled.span`
   display: inline-flex;
-
+  position: relative;
   ${({ striked, theme }) => {
     if (striked) {
       return `
@@ -67,8 +67,9 @@ export const IconWrapper = styled.span`
         &:after {
           content: '';
           position: absolute;
-          border-left: 1px solid ${theme.color.secondaryDarkest};
-          width: 1px;
+          border-left: 2px solid ${theme.color.secondaryDarkest};
+          width: 2px;
+          border-radius: 50px;
           height: 150%;
           transform: rotate(-45deg);
           top: -25%;
@@ -79,8 +80,26 @@ export const IconWrapper = styled.span`
   }}
   `
 
+const PaidIcon = styled.span`
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik02IDEyQTYgNiAwIDEwNiAwYTYgNiAwIDAwMCAxMnoiIGZpbGw9IiNGQTNBMDAiLz4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTUuMjU1IDMuMDE1bDEuMTYuMDAzYzEuMjc3LjAyMiAxLjU0NS44ODIgMS41NDUgMS42IDAgLjcxOS0uMjY4IDEuNTgtMS41MzMgMS42MDFsLTEuMTcyLjAwNFYzLjAxNXpNNi40MjggNy4wNWMxLjU2Ni0uMDI4IDIuMy0xLjEwMyAyLjMtMi40MzIgMC0xLjMyOC0uNzM0LTIuNDAzLTIuMy0yLjQzbC0xLjk0LS4wMDZ2NC4wNDJIMy4yNzJ2LjgzaDEuMjE0di45ODFIMy4yNzN2LjgzaDEuMjE0di45NTNoLjc2OHYtLjk1MmgyLjU3NHYtLjgzSDUuMjU1di0uOTgybDEuMTczLS4wMDR6IiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPgo=');
+`
+
 // Scoped inside `colorKeys` because `fill` are valid HTML attrs
-const Icon = ({ prefix, name, striked, className, inheritColor, rotate, ...props }) => (
+const Icon = ({
+  prefix,
+  name,
+  striked,
+  className,
+  inheritColor,
+  rotate,
+  paid,
+  ...props
+}) => (
   <IconWrapper striked={striked}>
     <IconSvg
       {...props}
@@ -91,6 +110,7 @@ const Icon = ({ prefix, name, striked, className, inheritColor, rotate, ...props
     >
       <use xlinkHref={`#${prefix}_${name}`} />
     </IconSvg>
+    {!striked && paid && <PaidIcon />}
   </IconWrapper>
 )
 
@@ -102,6 +122,7 @@ Icon.defaultProps = {
   inheritColor: false,
   striked: false,
   rotate: false,
+  paid: false,
 }
 
 Icon.propTypes = {
@@ -112,6 +133,7 @@ Icon.propTypes = {
   className: PropTypes.string,
   inheritColor: PropTypes.bool,
   striked: PropTypes.bool,
+  paid: PropTypes.bool,
   rotate: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 }
 
