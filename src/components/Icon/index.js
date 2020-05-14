@@ -58,7 +58,10 @@ const IconSvg = styled.svg`
 
 export const IconWrapper = styled.span`
   display: inline-flex;
-  position: relative;
+  ${({ paid }) => paid && `
+    position: relative;
+  `}
+  
   ${({ striked, theme }) => {
     if (striked) {
       return `
@@ -100,7 +103,7 @@ const Icon = ({
   paid,
   ...props
 }) => (
-  <IconWrapper striked={striked}>
+  <IconWrapper striked={striked} paid={paid}>
     <IconSvg
       {...props}
       name={name}
