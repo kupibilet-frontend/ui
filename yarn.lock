@@ -1425,10 +1425,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@kupibilet/icons@~5.5.12":
-  version "5.5.12"
-  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.5.12.tgz#5c25da83ccf051879df537a56c217710b4bc5984"
-  integrity sha512-J6GywPGyzJDyOTYGcHd/c0kHbPkevJSX0YMjwxsuU0dYhdfPXk37fTSO0vLnpmKBXNJTRNrq+DQJswfSQFPzEQ==
+"@kupibilet/icons@~5.5.13":
+  version "5.5.13"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.5.13.tgz#4ae7694923a182b5f14b6a9b7b181b9694018da0"
+  integrity sha512-HTAqklCR4IJi/c0wMBw3mQ7ojt0z/pJyE5PRkGflJY8/pUbzQ9dd/EyYr4NxtnvZFnpaTnGwUQS3H2A/yYWoLQ==
 
 "@kupibilet/moment@^0.0.3":
   version "0.0.3"
