@@ -1,11 +1,15 @@
 // @flow
 import React from 'react'
+import { compose } from 'redux'
 import { Portal } from 'react-portal'
+import { injectIntl } from 'react-intl'
+import type { IntlShape } from 'react-intl'
 import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
 import { isCompact } from './utils'
+import messages from './messages'
 
 import {
   ModalContent,
@@ -51,6 +55,7 @@ type Props = {
   renderHeader?: React.Element<*> | () => node,
   renderContent?: React.Element<*> | () => node,
   isOpen: boolean,
+  intl: IntlShape,
 }
 
 class Modal extends React.PureComponent<Props> {
@@ -112,6 +117,7 @@ class Modal extends React.PureComponent<Props> {
       closeButtonText,
       shouldRenderCloseButton,
       onClose,
+      intl,
     } = this.props
 
     const defaultFooter = !isOnBottom ? (
@@ -140,6 +146,13 @@ class Modal extends React.PureComponent<Props> {
       return null
     }
 
+    return (
+      <div>
+        Message from injectIntl: {intl.formatMessage(messages.closeButton)}
+      </div>
+    )
+
+    /* eslint-disable */
     return (
       <Portal node={document && document.getElementById('portal')}>
         <GlobalStylesScope className="responsive">
@@ -172,4 +185,7 @@ class Modal extends React.PureComponent<Props> {
   }
 }
 
-export default withMedia(Modal)
+export default compose(
+  withMedia,
+  injectIntl,
+)(Modal)
