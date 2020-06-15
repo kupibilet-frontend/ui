@@ -43,7 +43,8 @@ type Props = {
   scrollFix?: boolean,
   onSubmitClick?: Function,
   submitText?: string,
-  closeButtonText?: string,
+  submitButtonCloseText?: string,
+  defaultButtonCloseText?: string,
   shouldRenderCloseButton?: boolean,
   footer?: React.Element<*>,
   onClose: Function,
@@ -71,7 +72,8 @@ class Modal extends React.PureComponent<Props> {
     scrollFix: true,
     onSubmitClick: null,
     submitText: 'Продолжить',
-    closeButtonText: 'Отменить',
+    submitButtonCloseText: 'Отменить',
+    defaultButtonCloseText: 'Закрыть',
     shouldRenderCloseButton: true,
   }
 
@@ -109,7 +111,8 @@ class Modal extends React.PureComponent<Props> {
       scrollFix,
       onSubmitClick,
       submitText,
-      closeButtonText,
+      submitButtonCloseText,
+      defaultButtonCloseText,
       shouldRenderCloseButton,
       onClose,
     } = this.props
@@ -130,7 +133,7 @@ class Modal extends React.PureComponent<Props> {
             size="large"
             variant="secondary"
           >
-            {onSubmitClick ? closeButtonText : 'Закрыть'}
+            {onSubmitClick ? submitButtonCloseText : defaultButtonCloseText}
           </CloseButton>
         ) : null}
       </Footer>
