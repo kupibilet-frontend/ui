@@ -17,7 +17,7 @@ const TYPOGRAPHY = {
   large: 20,
 }
 
-const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon, neighboringInGroup) => {
+const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon) => {
   const spacing = SIZES[size]
   const typographyRelatedPadding = ((spacing * 2 - TYPOGRAPHY[size]) / 2).toFixed(1)
   const iconVisualCenterShift = 5 / 4
@@ -26,15 +26,6 @@ const calculateButtonPadding = (size, icon, hasLeftIcon, hasRightIcon, neighbori
   // Symetric padding around icon-only button for circle effect
   if (icon) {
     return `padding: ${typographyRelatedPadding}px;`
-  }
-
-  /* eslint-disable no-param-reassign, no-multi-assign */
-  if (neighboringInGroup === 'both') {
-    hasLeftIcon = hasRightIcon = true
-  } else if (neighboringInGroup === 'left') {
-    hasLeftIcon = true
-  } else if (neighboringInGroup === 'right') {
-    hasRightIcon = true
   }
 
   return `
@@ -125,8 +116,8 @@ export const StyledButton = styled.button`
     calculateBorderRadius(size, neighboringInGroup)
   )};
 
-  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup, variant }) => (
-    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon, neighboringInGroup, variant)
+  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon }) => (
+    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon)
   )};
 
   ${switchTransition}
