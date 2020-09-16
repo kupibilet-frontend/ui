@@ -109,6 +109,7 @@
     "@kupibilet/react-dates": "^12.3.0",
     "@kupibilet/react-day-picker": "^7.2.5",
     "@kupibilet/react-media": "^1.5.1",
+    "lodash-es": "^4.17.14",
     "rc-collapse": "^1.9.0",
     "rc-tabs": "9.6.4",
     "react-autosuggest": "^10.0.0",
