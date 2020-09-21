@@ -5,12 +5,13 @@ import { StyledWrapper, HiddenRadio, ItemWrapper } from './styled'
 
 type Props = {
   children: Node,
-  value: string,
-  currentValue: string,
-  onChange: (string) => void,
-  name: string,
-  setFocus: () => void,
-  onBlur: () => void,
+  value?: string | number,
+  currentValue: string | number,
+  onChange?: (string) => void,
+  name?: string,
+  setFocus?: () => void,
+  onBlur?: () => void,
+  variant?: string,
 }
 
 const DEFAULT_PROPS = {
@@ -20,6 +21,7 @@ const DEFAULT_PROPS = {
   setFocus: () => null,
   currentValue: '',
   value: '',
+  variant: 'primary',
 }
 
 const ENTER_KEY_CODE = 13
@@ -34,9 +36,7 @@ class TogglerItem extends React.Component<Props> {
     const isSelected = value === currentValue
     const isSelectedNext = value === nextProps.currentValue
 
-    if (isSelected !== isSelectedNext) return true
-
-    return false
+    return isSelected !== isSelectedNext
   }
 
   render() {
@@ -48,6 +48,7 @@ class TogglerItem extends React.Component<Props> {
       name,
       setFocus,
       onBlur,
+      variant,
     } = this.props
 
     const onFocusHendler = () => setFocus(true)
@@ -79,6 +80,7 @@ class TogglerItem extends React.Component<Props> {
           isSelected={isSelected}
           as="div"
           onClick={() => onChange(value)}
+          variant={variant}
         >
           {children}
         </StyledWrapper>

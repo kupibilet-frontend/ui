@@ -4,15 +4,17 @@ import Text from 'components/Typography/Text'
 
 export const StyledWrapper = styled(Text)`
   padding: 8px 14px 8px 14px;
-  border: 1px solid ${({ theme }) => theme.color.misc};
+  box-shadow: inset 0 0 0 1px ${({ theme }) => theme.color.misc};
   cursor: pointer;
   border-right-width: 0;
-  background: theme.color.background;
-  &:hover{
+  background: ${({ theme }) => theme.color.background};
+  text-align: center;
+  height: 100%;
+  &:hover {
     ${({ isSelected, theme }) => !isSelected && css`
       background: ${theme.color.miscLightest};
       color: ${theme.color.primaryDarkest};
-      border-color: ${theme.color.primaryDark};
+      box-shadow: inset 0 0 0 1px ${theme.color.primaryDark};
       position: relative;
       &::after{
         content: '';
@@ -27,13 +29,44 @@ export const StyledWrapper = styled(Text)`
       }
     `}
   }
-  ${({ isSelected, theme }) => (isSelected && css`
-    border-color: ${theme.color.primaryDarkest};
-    color: ${theme.color.background};
-    font-weight: 600;
-    background: ${theme.color.primaryDarkest};
+  ${({ isSelected, theme, variant }) => (isSelected && css`
     border-right-width: 1px;
+    ${variant === 'primary' && css`
+      box-shadow: inset 0 0 0 1px ${theme.color.primaryDarkest};
+      color: ${theme.color.background};
+      font-weight: 600;
+      background: ${theme.color.primaryDarkest};
+    `}
+    ${variant === 'secondary' && css`
+      box-shadow: inset 0 0 0 2px ${theme.color.primaryDarkest};
+      color: ${theme.color.background};
+      background: ${theme.color.background};
+      color: ${theme.color.text};
+    `}
   `)}
+  
+  ${({ variant, theme }) => {
+    if (variant === 'secondary') {
+      return `
+        font-size: 14px;
+        color: ${theme.color.text};
+        line-height: 18px;
+        box-sizing: border-box;
+        
+        &:hover {
+          background: ${theme.color.background};
+          color: ${theme.color.text};
+          &:after {
+            display: none;
+          }
+        }
+        &:active {
+          background: ${theme.color.miscLightest};
+          box-shadow: inset 0 0 0 2px ${theme.color.primaryDarkest};
+        }
+      `
+    }
+  }}
 `
 
 export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
@@ -64,6 +97,8 @@ export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
 // add external container for managing styles
 export const ItemWrapper = styled.div`
   position: relative;
+  flex: 1 1 auto;
+  width: 0;
   &:first-child{
     ${StyledWrapper} {
       ${borderRadiusSmall.left}

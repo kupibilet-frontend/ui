@@ -11,16 +11,16 @@ type Props = {
   /**
   * Функция, срабатывающая при выборе опции. Принимает значение опции
   */
-  onChange: (string) => void,
+  onChange?: (string) => void,
   /**
   * Функция, срабатывающая при смене фокуса на элементах.
     Используется для правильного срабатывания ReduxForm touched props и корректной валидации
   */
-  onBlur: (Event) => void,
+  onBlur?: (Event) => void,
    /**
   * Текущее значение компонента
   */
-  currentValue: string,
+  currentValue: string | number,
    /**
   * Сообщение об ошибке, если она есть
   */
@@ -28,7 +28,11 @@ type Props = {
    /**
   * Имя контрола
   */
-  name: string,
+  name?: string,
+  /**
+   * Вариант контрола для стилизации
+   */
+  variant?: 'primary' | 'secondary',
 }
 
 const DEFAULT_PROPS = {
@@ -37,6 +41,7 @@ const DEFAULT_PROPS = {
   onChange: () => null,
   onBlur: () => null,
   currentValue: '',
+  variant: 'primary',
 }
 
 /**

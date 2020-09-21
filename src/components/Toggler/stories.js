@@ -124,6 +124,32 @@ FailedToggler.story = {
   name: 'Toggler with error',
 }
 
+export const SecondaryToggler = () => {
+  const currentValue = text('currentValue', 'none')
+  const errorMessage = text('errorMessage', '')
+
+  return (
+    <TogglerGroup
+      onChange={onChange}
+      currentValue={currentValue}
+      name="luggage"
+      errorMessage={errorMessage}
+      variant="secondary"
+    >
+      <TogglerItem value="none">
+        нет
+      </TogglerItem>
+      <TogglerItem value="withLuggage">
+        +&nbsp;2 390 ₽
+      </TogglerItem>
+    </TogglerGroup>
+  )
+}
+
+SecondaryToggler.story = {
+  name: 'Secondary toggler',
+}
+
 export default {
   title: 'COMPONENTS|Controls/Toggler',
   parameters: {

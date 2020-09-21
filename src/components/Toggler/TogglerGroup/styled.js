@@ -7,8 +7,10 @@ export const TogglerWrapper = styled.div`
 `
 
 export const ItemsWrapper = styled.div`
-  display: inline-flex;
+  display: flex;
   position: relative;
+  justify-content: stretch;
+  align-items: stretch;
   ${({ hasError, isFocused, theme }) => hasError && !isFocused && css`
     &::before{
       content: '';
