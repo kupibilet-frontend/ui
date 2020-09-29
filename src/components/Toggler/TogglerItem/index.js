@@ -17,7 +17,7 @@ type Props = {
   setFocus?: () => void,
   onBlur?: () => void,
   variant?: string,
-  tooltipContent: string | Node,
+  tooltipContent?: string | Node,
 }
 
 const DEFAULT_PROPS = {

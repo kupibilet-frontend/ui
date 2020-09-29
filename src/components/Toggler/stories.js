@@ -142,12 +142,53 @@ export const SecondaryToggler = () => {
       <TogglerItem value="withLuggage">
         +&nbsp;2 390 ₽
       </TogglerItem>
+      <TogglerItem value="withMoreLuggage">
+        +&nbsp;17 690 ₽
+      </TogglerItem>
     </TogglerGroup>
   )
 }
 
 SecondaryToggler.story = {
   name: 'Secondary toggler',
+}
+
+export const TooltipToggler = () => {
+  const currentValue = text('currentValue', 'none')
+  const errorMessage = text('errorMessage', '')
+
+  return (
+    <TogglerGroup
+      onChange={onChange}
+      currentValue={currentValue}
+      name="luggage"
+      errorMessage={errorMessage}
+      variant="secondary"
+    >
+      <TogglerItem
+        tooltipContent="Без багажа"
+        value="none"
+      >
+        нет
+      </TogglerItem>
+      <TogglerItem
+        tooltipContent="1 место багажа до 23 кг"
+        value="withLuggage"
+      >
+        +&nbsp;2 390 ₽
+      </TogglerItem>
+      <TogglerItem
+        tooltipContent="Безлимит багажа"
+        value="withMoreLuggage"
+      >
+        +&nbsp;17 690 ₽
+      </TogglerItem>
+    </TogglerGroup>
+  )
+}
+
+TooltipToggler.story = {
+  name: 'Toggler with tooltip',
 }
 
 export default {
