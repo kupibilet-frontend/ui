@@ -89,7 +89,6 @@ type TooltipProps = {
   success: ?boolean,
   error: ?boolean,
   dotCentering: ?boolean,
-  header: ?string,
   align: ?string,
 }
 

@@ -1,17 +1,23 @@
 // @flow
 import React from 'react'
 import type { Node } from 'react'
-import { StyledWrapper, HiddenRadio, ItemWrapper } from './styled'
+import Tooltip from 'components/Tooltip'
+import {
+  StyledWrapper,
+  HiddenRadio,
+  ItemWrapper,
+} from './styled'
 
 type Props = {
   children: Node,
   value?: string | number,
-  currentValue: string | number,
+  currentValue?: string | number,
   onChange?: (string) => void,
   name?: string,
   setFocus?: () => void,
   onBlur?: () => void,
   variant?: string,
+  tooltipContent: string | Node,
 }
 
 const DEFAULT_PROPS = {
@@ -22,6 +28,7 @@ const DEFAULT_PROPS = {
   currentValue: '',
   value: '',
   variant: 'primary',
+  tooltipContent: null,
 }
 
 const ENTER_KEY_CODE = 13
@@ -39,16 +46,38 @@ class TogglerItem extends React.Component<Props> {
     return isSelected !== isSelectedNext
   }
 
-  render() {
+  renderContent() {
     const {
       children,
+      value,
+      currentValue,
+      variant,
+      onChange,
+    } = this.props
+
+    const isSelected = value === currentValue
+
+    return (
+      <StyledWrapper
+        isSelected={isSelected}
+        as="div"
+        onClick={() => onChange(value)}
+        variant={variant}
+      >
+        {children}
+      </StyledWrapper>
+    )
+  }
+
+  render() {
+    const {
       value,
       currentValue,
       onChange,
       name,
       setFocus,
       onBlur,
-      variant,
+      tooltipContent,
     } = this.props
 
     const onFocusHendler = () => setFocus(true)
@@ -76,14 +105,11 @@ class TogglerItem extends React.Component<Props> {
           // to remove react warning
           onChange={() => null}
         />
-        <StyledWrapper
-          isSelected={isSelected}
-          as="div"
-          onClick={() => onChange(value)}
-          variant={variant}
-        >
-          {children}
-        </StyledWrapper>
+        {tooltipContent ? (
+          <Tooltip align="bottom" content={tooltipContent}>
+            {this.renderContent()}
+          </Tooltip>
+        ) : this.renderContent()}
       </ItemWrapper>
     )
   }
