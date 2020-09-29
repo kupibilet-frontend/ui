@@ -38,7 +38,7 @@ export const StyledWrapper = styled(Text)`
       background: ${theme.color.primaryDarkest};
     `}
     ${variant === 'secondary' && css`
-      box-shadow: inset 0 0 0 2px ${theme.color.primaryDarkest};
+      box-shadow: inset 0 0 0 2px ${theme.color.primaryDark};
       color: ${theme.color.background};
       background: ${theme.color.background};
       color: ${theme.color.text};
