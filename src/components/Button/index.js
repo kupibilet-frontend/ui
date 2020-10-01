@@ -26,10 +26,12 @@ const cloneIconWithSize = (icon, size) => {
 }
 
 const RenderedComponent = ({ children, href, ...props }) => (href ? (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <StyledButtonLink href={href} {...props}>
     {children}
   </StyledButtonLink>
 ) : (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <StyledButton {...props}>
     {children}
   </StyledButton>
@@ -43,15 +45,18 @@ const Button = ({
   icon,
   leftIcon,
   rightIcon,
+  isBlock,
   ...props
 }) => (
   <RenderedComponent
+    // eslint-disable-next-line react/jsx-props-no-spreading
     {...props}
     size={size}
     variant={variant}
     isIconOnly={Boolean(icon)}
     hasLeftIcon={Boolean(leftIcon)}
     hasRightIcon={Boolean(rightIcon)}
+    isBlock={Boolean(isBlock)}
     disabled={disabled}
   >
     {
@@ -59,9 +64,7 @@ const Button = ({
         <IconWrap size={size} left>
           { cloneIconWithSize(leftIcon, size) }
         </IconWrap>
-      ) : (
-        null
-      )
+      ) : null
     }
 
     {
@@ -85,9 +88,7 @@ const Button = ({
         <IconWrap size={size} right>
           { cloneIconWithSize(rightIcon, size) }
         </IconWrap>
-      ) : (
-        null
-      )
+      ) : null
     }
   </RenderedComponent>
 )
@@ -96,6 +97,7 @@ const Button = ({
 Button.defaultProps = {
   variant: 'primary',
   size: 'normal',
+  isBlock: false,
 }
 
 /* eslint-disable react/require-default-props */
@@ -117,6 +119,8 @@ Button.propTypes = {
     PropTypes.string,
     PropTypes.element,
   ]),
+  // для кнопки во всю ширину родителя
+  isBlock: PropTypes.bool,
 }
 
 RenderedComponent.propTypes = {

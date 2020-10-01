@@ -44,9 +44,10 @@ export const StyledWrapper = styled(Text)`
             color: ${theme.color.background};
             font-weight: 600;
             background: ${theme.color.primaryDarkest};
+            box-shadow: inset 0 0 0 1px ${theme.color.primaryDarkest} !important;
           ` : `
             &:hover {
-              box-shadow: inset 0 0 0 1px ${theme.color.primaryDark};
+              box-shadow: inset 0 0 0 1px ${theme.color.primaryDark} !important;
               background: ${theme.color.miscLightest};
               color: ${theme.color.primaryDarkest};
             }
