@@ -171,7 +171,6 @@ class Calendar extends React.PureComponent<TProps> {
 
     return (
       <DayPickerWrapper>
-        {isMobile && <WeekdaysRow weekdays={weekdays} />}
         <StyledDayPicker
           weekdaysShort={weekdaysFromSunday}
           showWeekDays={!isMobile}
@@ -194,6 +193,11 @@ class Calendar extends React.PureComponent<TProps> {
 }
 
 // export is needed for generate right documentation
-export const DocGenCalendar = Calendar
+const DocGenCalendar = Calendar
+
+export {
+  DocGenCalendar,
+  WeekdaysRow,
+}
 
 export default withMedia(Calendar)
