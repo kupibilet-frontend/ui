@@ -14,11 +14,24 @@ import {
   NavbarButtons,
 } from './styled'
 
+export type TCalendarModifiers = {
+  disabled: {
+    before: Date,
+    after: Date,
+  },
+  selected: [
+    Date,
+    { from: Date, to: Date },
+  ],
+  start: Date,
+  end: Date,
+}
+
 type TProps = {
   /**
     Функция, срабатывающая при клике на день в кадендаре. Возвращает выбранный день
   */
-  onDayClick: (Date) => void,
+  onDayClick: (Date, TCalendarModifiers) => void,
   /**
     Функция, срабатывающая попадении месяца в поле видимости.
     Нужна для инициирования подгрузки календаря цен
@@ -77,7 +90,7 @@ class Calendar extends React.PureComponent<TProps> {
     date.getFullYear() + 1, date.getMonth(), date.getDate(),
   )
 
-  getModifires = () => {
+  getModifires = (): TCalendarModifiers => {
     const {
       selectedDays,
     } = this.props
@@ -162,6 +175,8 @@ class Calendar extends React.PureComponent<TProps> {
       weekdays,
     } = this.props
 
+    const modifiers: TCalendarModifiers = this.getModifires()
+    
     const today = new Date()
     const maxVisibleMonth = this.getMaxVisibleMonth(today)
     const selectedDay = selectedDays[0] && new Date(selectedDays[0])
@@ -174,7 +189,7 @@ class Calendar extends React.PureComponent<TProps> {
         <StyledDayPicker
           weekdaysShort={weekdaysFromSunday}
           showWeekDays={!isMobile}
-          modifiers={this.getModifires()}
+          modifiers={modifiers}
           month={!isMobile ? (selectedDay || today) : today}
           fromMonth={today}
           toMonth={maxVisibleMonth}
@@ -184,7 +199,7 @@ class Calendar extends React.PureComponent<TProps> {
           renderDay={renderDay}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={this.renderMonthCaption}
-          onDayClick={onDayClick}
+          onDayClick={(day) => { onDayClick(day, modifiers) }}
           tabIndex={-1}
         />
       </DayPickerWrapper>
