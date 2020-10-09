@@ -28,6 +28,11 @@ const isValuesEqual = (a, b) => {
   return Boolean(_a && _a === _b)
 }
 
+export const AUTOSUGGEST_METHODS = {
+  SELECT_RIGHT_ARROW: 'AUTOSUGGEST_SELECT_RIGHT_ARROW',
+  SELECT_LAST_EQUAL_SUGGEST: 'AUTOSUGGEST_SELECT_LAST_EQUAL_SUGGEST',
+}
+
 const emptyArray = []
 
 type Section = {}
@@ -147,7 +152,7 @@ class Autocomplete extends PureComponent<Props, State> {
     const suggestIsAlreadySelected = isSuggestAlreadySelected(nextProps)
 
     if (valueIsEqualWithFirstSuggest && !suggestIsAlreadySelected && suggestions.length === 1) {
-      this.selectFirstSuggest(null, nextProps, 'autoSuggest')
+      this.selectFirstSuggest(null, nextProps, AUTOSUGGEST_METHODS.SELECT_LAST_EQUAL_SUGGEST)
       this.setState({ suggestions: [] })
     } else if (forceSuggestedValue && suggestions.length && meta && !meta.active) {
       this.selectFirstSuggest(null, nextProps, 'autoFill')
@@ -203,7 +208,7 @@ class Autocomplete extends PureComponent<Props, State> {
     }
 
     if (event.key === 'ArrowRight' && suggestions.length) {
-      this.selectFirstSuggest(null, this.props, 'autoSuggest')
+      this.selectFirstSuggest(null, this.props, AUTOSUGGEST_METHODS.SELECT_RIGHT_ARROW)
     }
   }
 
@@ -220,7 +225,14 @@ class Autocomplete extends PureComponent<Props, State> {
       this.autosuggestInstance.closeSuggestions()
     }
 
-    if (suggestion && (this.userAreTyping || ['blur', 'autoSuggest', 'autoFill'].includes(method))) {
+    const ALLOWED_METHODS = [
+      'blur',
+      AUTOSUGGEST_METHODS.SELECT_RIGHT_ARROW,
+      AUTOSUGGEST_METHODS.SELECT_LAST_EQUAL_SUGGEST,
+      'autoFill',
+    ]
+
+    if (suggestion && (this.userAreTyping || ALLOWED_METHODS.includes(method))) {
       const newValue = getSuggestionValue(suggestion)
 
       this.autosuggestInstance.maybeCallOnChange(event, newValue, method)
