@@ -4,6 +4,7 @@ import mq from 'utils/media-queries'
 import Button from 'components/Button'
 import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
+import { OVERLAY_Z_INDEX } from 'components/Overlay'
 import { isCompact, isSetSize } from './utils'
 
 const getWidth = (size) => {
@@ -29,7 +30,7 @@ export const ModalContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  z-index: 11;
+  z-index: ${OVERLAY_Z_INDEX + 1};
   width: ${(props) => getWidth(props.size)}px;
 
    ${mq.tablet`

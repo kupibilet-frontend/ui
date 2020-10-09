@@ -1,6 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 import mq from 'utils/media-queries'
 
+export const OVERLAY_Z_INDEX = 10
+
 const fade = keyframes`
   from {
     opacity: 0;
@@ -33,7 +35,7 @@ export const Wrapper = styled.div`
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: ${OVERLAY_Z_INDEX};
   top: 0;
   bottom: 0;
   left: 0;

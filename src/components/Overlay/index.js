@@ -11,6 +11,8 @@ import {
   OverlayContent,
 } from './styled'
 
+export { OVERLAY_Z_INDEX } from './styled'
+
 type Props = {
   closePortal: (Event) => void,
   isOnBottom: boolean,
