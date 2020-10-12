@@ -56,6 +56,10 @@ type TProps = {
   */
   weekdays?: TWeekdays,
   isMobile: boolean,
+  /**
+    Должен ли календарь скроллиться
+  */
+  hasScrolling: boolean,
 }
 
 type TNavbarProps = {
@@ -173,10 +177,11 @@ class Calendar extends React.PureComponent<TProps> {
       renderDay,
       numberOfMonths,
       weekdays,
+      hasScrolling,
     } = this.props
 
     const modifiers: TCalendarModifiers = this.getModifires()
-    
+
     const today = new Date()
     const maxVisibleMonth = this.getMaxVisibleMonth(today)
     const selectedDay = selectedDays[0] && new Date(selectedDays[0])
@@ -185,7 +190,7 @@ class Calendar extends React.PureComponent<TProps> {
     const weekdaysFromSunday = Object.values({ SUNDAY, ...restWeekdays })
 
     return (
-      <DayPickerWrapper>
+      <DayPickerWrapper hasScrolling={hasScrolling}>
         <StyledDayPicker
           weekdaysShort={weekdaysFromSunday}
           showWeekDays={!isMobile}

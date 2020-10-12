@@ -348,7 +348,12 @@ export const StyledDayPicker = styled(DayPicker)`
 `
 
 export const DayPickerWrapper = styled.div`
-  overflow: scroll;
+  ${({ hasScrolling }) => (hasScrolling ? `
+    overflow-y: scroll;
+    overflow-x: hidden;
+  ` : `
+    overflow: hidden;
+  `)}
   max-height: 100%;
   position: relative;
 `
