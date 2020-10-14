@@ -44,12 +44,16 @@ const Aside = styled.div`
 `
 Aside.displayName = 'Aside'
 
+const CONTAINER_MARGIN_HANDHELD = 18
+
 const SingleFluidSection = styled.div`
   margin: 0 auto;
   max-width: 966px;
+  width: 100%;
 
   ${media.handheld`
-    margin: 0 18px;
+    margin: 0 ${CONTAINER_MARGIN_HANDHELD}px;
+    width: calc(100% - ${2 * CONTAINER_MARGIN_HANDHELD}px);
   `}
 
   /*
@@ -64,6 +68,7 @@ const SingleFluidSection = styled.div`
    */
   && {
     @media screen and (min-width: 1000px) {
+      width: 100%;
       margin: 0 auto;
     }
   }
