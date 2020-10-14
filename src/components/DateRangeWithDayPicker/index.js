@@ -456,7 +456,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
 
     const mobileCalendarHeader = (
       <Portal>
-        <GlobalStylesScope className="responsive">
+        <GlobalStylesScope>
           <PortalWrapper>
             <StyledHeader>
               <H4>{showFromCalendar ? 'Дата туда' : 'Дата обратно'}</H4>

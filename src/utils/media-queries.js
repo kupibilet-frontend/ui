@@ -35,31 +35,23 @@ export const withMedia = (Component) => (
 
 const media = {
   mobile: (...args) => css`
-    .responsive &, .responsive-booking & {
-      @media ${queries.isMobile} {
-        ${css(...args)}
-      }
+    @media ${queries.isMobile} {
+      ${css(...args)}
     }
   `,
   tablet: (...args) => css`
-    .responsive &, .responsive-booking & {
-      @media ${queries.isTablet} {
-        ${css(...args)}
-      }
+    @media ${queries.isTablet} {
+      ${css(...args)}
     }
   `,
   handheld: (...args) => css`
-    .responsive &, .responsive-booking & {
-      @media ${queries.isHandheld} {
-        ${css(...args)}
-      }
+    @media ${queries.isHandheld} {
+      ${css(...args)}
     }
   `,
   desktop: (...args) => css`
-    .responsive &, .responsive-booking & {
-      @media ${queries.isDesktop} {
-        ${css(...args)}
-      }
+    @media ${queries.isDesktop} {
+      ${css(...args)}
     }
   `,
 }
