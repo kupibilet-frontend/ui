@@ -21,10 +21,6 @@ export default css`
       display: none;
     }
   }
-  .react-autosuggest__input--open {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
   .react-autosuggest__input--focused {
     outline: none;
   }
