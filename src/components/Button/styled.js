@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
@@ -104,9 +104,14 @@ export const StyledButton = styled.button`
 
   font-size: ${({ size }) => TYPOGRAPHY[size]}px;
   line-height: ${({ size }) => TYPOGRAPHY[size]}px;
+  ${({ isBlock }) => isBlock && css`
+    width: 100%;
+  `}
 
   ${mq.handheld`
-    max-width: 340px;
+    ${({ isBlock }) => !isBlock && css`
+      max-width: 340px;
+    `}
   `}
 
   // Fix circle-to-rect render bug in chrome

@@ -7,20 +7,20 @@ export const TogglerWrapper = styled.div`
 `
 
 export const ItemsWrapper = styled.div`
-  display: inline-flex;
+  display: flex;
   position: relative;
-  ${({ hasError, isFocused, theme }) => hasError && !isFocused && css`
-    &::before{
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      ${borderRadiusSmall.all}
-      border: 2px solid ${theme.color.fail};
-      pointer-events: none;
-      z-index: 1;
-    }
-  `};
+  justify-content: stretch;
+  align-items: stretch;
+  overflow: hidden;
+  ${borderRadiusSmall.all}
+  ${({ theme, hasError }) => css`
+    ${hasError ? `
+      box-shadow: inset 0 0 0 2px ${theme.color.fail};
+    ` : `
+      box-shadow: inset 0 0 0 1px ${theme.color.misc};
+    `}
+    background: ${theme.color.background};
+  `}
 `
 
 export const StyledError = styled(Error)`
