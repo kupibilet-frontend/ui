@@ -56,7 +56,7 @@ type SuggestionObject = {
 type OnChange = (Event, { newValue: string, method: string }) => void
 
 type Meta = {
-  error?: string,
+  error?: string | React.Element<*>,
   touched?: boolean,
 }
 type InputProps = {
