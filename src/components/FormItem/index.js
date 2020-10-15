@@ -16,7 +16,7 @@ export const Label = styled.label`
 `
 
 type Props = {
-  label: string,
+  label: string | React.Element<*>,
   children: React.Element<*>,
   htmlFor?: string,
 }
