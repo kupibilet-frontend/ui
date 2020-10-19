@@ -28,7 +28,7 @@ export const DropdownContent = styled.div`
 type Props = {
   isOpen: boolean,
   onToggle: (Event, boolean) => void,
-  children: React.Element<*>,
+  children?: React.Element<*>,
   overlay: React.Element<*>,
   renderDropdownContainer?: (React.Element<*>) => React.Element<*>,
 }
@@ -36,6 +36,7 @@ type Props = {
 class Dropdown extends PureComponent<Props> {
   static defaultProps = {
     isOpen: false,
+    children: null,
     renderDropdownContainer: (children) => (
       <DropdownContent>
         {children}
