@@ -56,3 +56,10 @@ export const ButtonText = styled.span`
   margin-right: 8px;
   padding-bottom: 2px;
 `
+
+export const IconWrap = styled.span`
+  display: inline-flex;
+  vertical-align: top;
+  justify-content: center;
+  align-items: center;
+`
