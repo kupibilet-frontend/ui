@@ -7,15 +7,6 @@ import { color } from 'components/ThemeProvider/theme'
 import ButtonWithBorder from 'components/ButtonWithBorder'
 import Icon from 'components/Icon'
 
-const withOvershadowSelect = (defaultValue = false) => select(
-  'withOvershadow',
-  {
-    true: true,
-    false: false,
-  },
-  defaultValue,
-)
-
 const iconNameSelect = (defaultValue = 'cross') => select(
   'iconName',
   icons,
@@ -31,6 +22,15 @@ const iconColorSelect = (defaultValue = 'secondaryDarkest') => select(
 const themeColorSelect = (defaultValue = 'secondaryDarkest') => select(
   'themeColor',
   Object.keys(color),
+  defaultValue,
+)
+
+const withOvershadowSelect = (defaultValue = false) => select(
+  'withOvershadow',
+  {
+    true: true,
+    false: false,
+  },
   defaultValue,
 )
 
