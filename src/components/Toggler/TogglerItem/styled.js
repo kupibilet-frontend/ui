@@ -3,7 +3,7 @@ import { borderRadiusSmall } from 'utils/borderRadius'
 import Text from 'components/Typography/Text'
 
 export const StyledWrapper = styled(Text)`
-  padding: 8px 14px 8px 14px;
+  padding: 9px 14px 9px 14px;
   cursor: pointer;
   text-align: center;
   height: 100%;
