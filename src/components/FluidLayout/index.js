@@ -10,7 +10,6 @@ const FluidContainer = styled.div`
   align-items: flex-start;
 
   ${media.handheld`
-    margin: 0;
     width: auto;
     flex-direction: column;
   `}
