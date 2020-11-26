@@ -10,6 +10,7 @@ const FluidContainer = styled.div`
   align-items: flex-start;
 
   ${media.handheld`
+    margin: 0;
     width: auto;
     flex-direction: column;
   `}
@@ -51,7 +52,6 @@ const SingleFluidSection = styled.div`
   width: 100%;
 
   ${media.handheld`
-    margin: 0 ${CONTAINER_MARGIN_HANDHELD}px;
     width: calc(100% - ${2 * CONTAINER_MARGIN_HANDHELD}px);
   `}
 
