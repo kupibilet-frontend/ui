@@ -58,7 +58,7 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@emotion/core": "^10.0.10",
-    "@kupibilet/icons": "~5.5.13",
+    "@kupibilet/icons": "~5.5.14",
     "@kupibilet/moment": "^0.0.3",
     "@storybook/addon-centered": "^5.2.6",
     "@storybook/addon-docs": "^5.2.6",
