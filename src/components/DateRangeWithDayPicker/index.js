@@ -56,13 +56,10 @@ type State = {
 
 const BACKSPACE_KEYCODE = 8
 const DELETE_KEYCODE = 46
-const WEEKDAYS_SHORT_FROM_SUNDAY = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
-const WEEKDAYS_SHORT_FROM_MONDAY = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
 const WeekdaysRow = ({ showToCalendar }: { showToCalendar: boolean}) => {
-  const weekdays = WEEKDAYS_SHORT_FROM_MONDAY.map((day) => <Weekday key={day}>{day}</Weekday>)
   return (
-    <WeekdaysWrapper showToCalendar={showToCalendar}>{weekdays}</WeekdaysWrapper>
+    <WeekdaysWrapper showToCalendar={showToCalendar}>{moment.weekdaysShort()}</WeekdaysWrapper>
   )
 }
 
@@ -435,7 +432,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
     const calendar = (
       <DayPickerWrapper>
         <StyledDayPicker
-          weekdaysShort={WEEKDAYS_SHORT_FROM_SUNDAY}
+          weekdaysShort={moment.weekdaysShort()}
           showWeekDays={!isMobile}
           modifiers={modifiers}
           month={!isMobile ? (fromDate || today) : today}
@@ -444,7 +441,7 @@ class ReactDayPicker extends PureComponent <Props, State> {
           firstDayOfWeek={1}
           numberOfMonths={numberOfMonths}
           months={moment.months()}
-          locale="ru"
+          locale={moment.locale()}
           renderDay={(day) => this.props.renderDay(day, showToCalendar)}
           navbarElement={!isMobile ? this.renderNavbar : undefined}
           captionElement={captionElement}
