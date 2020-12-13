@@ -5,7 +5,7 @@ import { withMedia } from 'utils/media-queries'
 import Button from 'components/Button'
 import CalendarDay from 'components/CalendarDay'
 import MonthCaption from './parts/MonthCaption'
-import WeekdaysRow, { type TWeekdays } from './parts/WeekdaysRow'
+import WeekdaysRow from './parts/WeekdaysRow'
 
 import {
   StyledDayPicker,
@@ -50,11 +50,6 @@ type TProps = {
     Количество отображаемых месяцев
   */
   numberOfMonths?: number,
-  /**
-    Объект с названиями дней недели в формате { MONDAY: string, TUESDAY: string, ... }.
-    Передаем сверху для локализации
-  */
-  weekdays?: TWeekdays,
   isMobile: boolean,
   /**
     Должен ли календарь скроллиться
@@ -67,16 +62,6 @@ type TNavbarProps = {
   onNextClick: () => void,
 }
 
-const WEEKDAYS_DEFAULT = {
-  MONDAY: 'Пн',
-  TUESDAY: 'Вт',
-  WEDNESDAY: 'Ср',
-  THURSDAY: 'Чт',
-  FRIDAY: 'Пт',
-  SATURDAY: 'Сб',
-  SUNDAY: 'Вс',
-}
-
 /**
  * Кадендарь позволяет выбрать одну дату или диапазон дат
  */
@@ -87,7 +72,6 @@ class Calendar extends React.PureComponent<TProps> {
     selectedDays: [],
     numberOfMonths: 2,
     renderDay: (day: Date) => <CalendarDay day={moment(day)} />,
-    weekdays: WEEKDAYS_DEFAULT,
   }
 
   getMaxVisibleMonth = (date: Date) => new Date(
@@ -176,7 +160,6 @@ class Calendar extends React.PureComponent<TProps> {
       onDayClick,
       renderDay,
       numberOfMonths,
-      weekdays,
       hasScrolling,
     } = this.props
 
@@ -186,13 +169,12 @@ class Calendar extends React.PureComponent<TProps> {
     const maxVisibleMonth = this.getMaxVisibleMonth(today)
     const selectedDay = selectedDays[0] && new Date(selectedDays[0])
 
-    const { SUNDAY, ...restWeekdays } = weekdays
-    const weekdaysFromSunday = Object.values({ SUNDAY, ...restWeekdays })
-
     return (
       <DayPickerWrapper hasScrolling={hasScrolling}>
         <StyledDayPicker
-          weekdaysShort={weekdaysFromSunday}
+          locale={moment.locale()}
+          weekdaysLong={moment.weekdays()}
+          weekdaysShort={moment.weekdaysShort()}
           showWeekDays={!isMobile}
           modifiers={modifiers}
           month={!isMobile ? (selectedDay || today) : today}
