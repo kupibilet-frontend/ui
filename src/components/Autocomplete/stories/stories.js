@@ -33,12 +33,6 @@ storiesOf('COMPONENTS|Controls/Autocomplete', module)
         <AutocompleteStateful />
       </Container>
     ),
-    {
-      notes: `
-        Uses <AirportInput /> and <AirportSuggest />.
-        Can be used inside <ControlsGroup />
-      `,
-    },
   )
   .add(
     'Airport with multiply sections',
