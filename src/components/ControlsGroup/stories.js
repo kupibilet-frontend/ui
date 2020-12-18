@@ -1,10 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { text } from '@storybook/addon-knobs'
-import updateKnob from 'storybook/updateKnob'
-
-import AirportInput from 'components/AirportInput'
 import { Input } from 'components/Input'
 import Button from 'components/Button'
 import ControlsGroup from 'components/ControlsGroup'
@@ -12,12 +8,10 @@ import ControlsGroup from 'components/ControlsGroup'
 /* eslint-disable no-console */
 storiesOf('COMPONENTS|Complex controls/ControlsGroup', module)
   .add('Inputs group', () => (
-    <ControlsGroup onSwap={() => console.log('Swap it!')}>
-      <AirportInput readOnly value="Шереметьево" city="Москва" IATACode="SVO" />
-      <AirportInput
-        value={text('value', 'Несуществующий город')}
-        onChange={({ target }) => updateKnob('value', 'text', target.value)}
-      />
+    <ControlsGroup>
+      <Input placeholder="First Name" />
+      <Input placeholder="Last Name" />
+      <Input type="number" placeholder="age" />
     </ControlsGroup>
   ))
   .add('Different controls group', () => (
@@ -25,7 +19,7 @@ storiesOf('COMPONENTS|Complex controls/ControlsGroup', module)
       <Button size="large">
         Пойти
       </Button>
-      <AirportInput readOnly value="Шереметьево" city="Москва" IATACode="SVO" />
+      <Input placeholder="Email" />
       <Button size="large">
         Найти
       </Button>
