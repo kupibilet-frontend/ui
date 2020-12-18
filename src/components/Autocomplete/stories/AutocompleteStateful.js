@@ -6,7 +6,6 @@ import groupBy from 'lodash/groupBy'
 
 import Autocomplete from 'components/Autocomplete'
 import AirportInput from 'components/AirportInput'
-import AirportSuggest from 'components/AirportSuggest'
 
 const getMultiSectionSuggestions = (suggestions) => {
   const suggestsGroupByCountry = Object.entries(
@@ -111,9 +110,6 @@ class AutocompleteStateful extends PureComponent {
         onSuggestionsFetchRequested={this.fetchSuggestions}
         onSuggestionsClearRequested={this.clearSuggestions}
         onSuggestionSelected={this.onSuggestionSelected}
-        renderSuggestion={(suggestion) => (
-          <AirportSuggest {...suggestion} />
-        )}
         renderInputComponent={(props) => (
           <AirportInput {...props} />
         )}
