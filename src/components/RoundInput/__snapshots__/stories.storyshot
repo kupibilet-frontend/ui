@@ -1,0 +1,425 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots COMPONENTS|Controls/RoundInput default 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c2 {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  min-height: 42px;
+  font-family: inherit;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: transparent;
+  border-radius: 3px;
+  border-radius: 21px;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::placeholder {
+  color: #96a0b3;
+}
+
+.c2::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c2:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c2:focus {
+  outline-style: none;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c2:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  border-radius: 21px;
+}
+
+.c1:hover {
+  border-color: #38afff;
+  z-index: 1;
+}
+
+.c1 .combined-inputs-group {
+  height: 100%;
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+    disabled={false}
+    onBlur={null}
+    onFocus={null}
+    placeholder="Ваш номер телефона"
+    size="large"
+    value={null}
+  >
+    <input
+      className="c2"
+      disabled={false}
+      onBlur={null}
+      onFocus={null}
+      placeholder="Ваш номер телефона"
+      size="large"
+      value={null}
+    />
+    
+  </div>
+</div>
+`
+
+exports[`Storyshots COMPONENTS|Controls/RoundInput withButton 1`] = `
+.c0 {
+  font: 400 16px / 20px 'KB Source Sans Pro','Source Sans Pro';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.c0 *,
+.c0 *:before,
+.c0 *:after {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 .c6 {
+  opacity: 0;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.c1:hover .c6 {
+  opacity: 1;
+  -webkit-transition-delay: .15s;
+  transition-delay: .15s;
+}
+
+.c4 {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  color: #ffffff;
+  background: #38afff;
+  font-size: 20px;
+  line-height: 20px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 0 21px 21px 0;
+  padding: 11.0px;
+  padding-right: 21px;
+  padding-left: 13.1px;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity,box-shadow;
+  transition-property: opacity,box-shadow;
+}
+
+.c4 .icon-inherit-color {
+  fill: #ffffff;
+}
+
+.c4:hover,
+.c4:focus {
+  cursor: pointer;
+  background: #0f99f5;
+  box-shadow: 0 0 0 1px #0f99f5;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.c4:active {
+  background: #008ae6;
+  box-shadow: none;
+}
+
+.c5 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0px 0 0px;
+}
+
+.c3 {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: 100%;
+  height: 100%;
+  line-height: normal;
+  border: none;
+  min-height: 42px;
+  font-family: inherit;
+  -webkit-letter-spacing: -0.1px;
+  -moz-letter-spacing: -0.1px;
+  -ms-letter-spacing: -0.1px;
+  letter-spacing: -0.1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #333333;
+  background-color: transparent;
+  border-radius: 3px 0 0 3px;
+  border-radius: 21px 0 0 21px;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::placeholder {
+  color: #96a0b3;
+}
+
+.c3::-webkit-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3::-moz-placeholder {
+  color: #96a0b3;
+}
+
+.c3:-ms-input-placeholder {
+  color: #96a0b3;
+}
+
+.c3:focus {
+  outline-style: none;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-webkit-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled::-moz-placeholder {
+  color: #b1bdcc;
+}
+
+.c3:disabled:-ms-input-placeholder {
+  color: #b1bdcc;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid #b1bdcc;
+  border-style: solid;
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  border-radius: 21px 0 0 21px;
+}
+
+.c2:hover {
+  border-color: #38afff;
+  z-index: 1;
+}
+
+.c2 .combined-inputs-group {
+  height: 100%;
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c1 .c6,
+  .responsive-booking .c1 .c6 {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .responsive .c4,
+  .responsive-booking .c4 {
+    max-width: 340px;
+  }
+}
+
+<div
+  className="responsive c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      disabled={false}
+      onBlur={null}
+      onFocus={null}
+      placeholder="Ваш номер телефона"
+      size="large"
+      value={null}
+    >
+      <input
+        className="c3"
+        disabled={false}
+        onBlur={null}
+        onFocus={null}
+        placeholder="Ваш номер телефона"
+        size="large"
+        value={null}
+      />
+      
+    </div>
+    <button
+      className="c4"
+      size="large"
+    >
+      <span
+        className="c5"
+        size="large"
+      >
+        Отправить
+      </span>
+    </button>
+  </div>
+</div>
+`
