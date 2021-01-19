@@ -1,31 +1,81 @@
-extends: kupibilet
-
-settings:
-  import/resolver:
-    babel-module:
-      empty: true
-
-rules:
-  no-else-return: off
-  object-curly-newline:
-    - error
-    -
-      minProperties: 8
-      multiline: true
-      consistent: true
-  import/no-named-as-default: off
-  react/no-multi-comp: off
-  # rules that impossible to implement in ui from airbnb config
-  lines-between-class-members: off # may be fixed with babel 7
-  react/require-default-props:
-    - error
-    - forbidDefaultForRequired: false
-  react/default-props-match-prop-types: off # dosn't work with `babel-plugin-flow-react-proptypes`
-  react/jsx-one-expression-per-line: off
-  react/destructuring-assignment: off
-  jsx-a11y/anchor-is-valid: off
-
-globals:
-  InputEvent: true
-  React$Element: true
-  FieldProps: true
+{
+  "extends": [
+    "kupibilet",
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "empty": true,
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "no-else-return": "off",
+    "object-curly-newline": [
+      "error",
+      {
+        "minProperties": 8,
+        "multiline": true,
+        "consistent": true
+      }
+    ],
+    "import/no-named-as-default": "off",
+    "react/no-multi-comp": "off",
+    "lines-between-class-members": "off",
+    "react/require-default-props": [
+      "error",
+      {
+        "forbidDefaultForRequired": false
+      }
+    ],
+    "react/default-props-match-prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/destructuring-assignment": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": [
+        "@typescript-eslint"
+      ],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "react/jsx-props-no-spreading": [0, {
+          "exclude": ["FormattedMessage"]
+        }],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/ban-ts-comment": "off"
+      }
+    }
+  ],
+  "globals": {
+    "InputEvent": true,
+    "React$Element": true,
+    "FieldProps": true
+  }
+}

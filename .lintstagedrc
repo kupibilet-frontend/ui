@@ -2,6 +2,10 @@ concurrent: true
 linters:
   src/**/*.js:
     - eslint
+  src/**/*.ts:
+    - eslint
+  src/**/*.tsx:
+    - eslint
   # TODO: Fix stylelint. kupibilet-frontend/ui#1
   # src/components/**/*.js:
   #   - stylelint
