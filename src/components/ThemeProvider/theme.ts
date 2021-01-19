@@ -1,4 +1,6 @@
-export const color = {
+import { TColor } from './types'
+
+export const color: TColor = {
   background: '#ffffff',
   fail: '#e64926',
   success: '#23c256',

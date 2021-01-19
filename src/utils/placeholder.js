@@ -7,15 +7,12 @@ export default function placeholder(...args) {
     &::placeholder {
       ${styles}
     }
-
     &::-webkit-input-placeholder {
       ${styles}
     }
-
     &::-moz-placeholder {
       ${styles}
     }
-
     &:-ms-input-placeholder {
       ${styles}
     }

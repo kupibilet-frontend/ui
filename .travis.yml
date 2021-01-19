@@ -56,5 +56,5 @@ after_script:
     # https://github.com/yarnpkg/yarn/issues/7260
   - bash -c 'output=`yarn audit --level=high`; ret_code=$?; echo "$output"; [[ $output =~ "high" ]]
     && exit $ret_code || exit 0'
-  - '[ $TRAVIS_PULL_REQUEST != "false" ] && exit 0 || [[ $TRAVIS_BRANCH =~ "master" ]] && yarn run
-  snyk'
+  - '[ $TRAVIS_PULL_REQUEST != "false" ] && exit 0 || [[ $TRAVIS_BRANCH =~ "master" ]] && yarn run snyk'
+  - '[ $TRAVIS_PULL_REQUEST != "false" ] && exit 0 || [[ $TRAVIS_BRANCH =~ "master" ]] && yarn run tsc'

@@ -1,11 +1,18 @@
-import { css } from 'styled-components'
+import { css, FlattenSimpleInterpolation } from 'styled-components'
+
+interface TArgs {
+  color?: string,
+  width?: number,
+  height?: number,
+  fromDirection?: 'left' | 'right'
+}
 
 export default function cssArrow({
   color = '#FFF',
   width = 4,
   height = 8,
   fromDirection = 'left',
-}) {
+}: TArgs): FlattenSimpleInterpolation {
   return css`
     &:after {
       ${fromDirection}: 100%;

@@ -1,13 +1,19 @@
 import { css } from 'styled-components'
 import { opacify } from 'polished'
 
+import { TTheme } from 'components/ThemeProvider/types'
 import { switchTransition } from 'utils/transitions'
 
-export function getLinkColor(props) {
+// TODO: move it somewhere
+interface TProps {
+  theme: TTheme,
+}
+
+export function getLinkColor(props: TProps): string {
   return props.theme.color.primaryDarkest
 }
 
-export function getLinkHoverColor(props) {
+export function getLinkHoverColor(props: TProps): string {
   return opacify(-0.2, getLinkColor(props))
 }
 

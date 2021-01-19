@@ -8,7 +8,11 @@ export const Day = styled.span`
   line-height: 20px;
 `
 
-export const AvgCost = styled.div`
+interface TAvgCostProps {
+  isCheap: boolean,
+}
+
+export const AvgCost = styled.div<TAvgCostProps>`
   font-size: 11px;
   color: ${({ isCheap, theme }) => (isCheap ? theme.color.success : theme.color.textLight)};
   letter-spacing: .5px;

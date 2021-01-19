@@ -14,7 +14,7 @@ export const borderRadiusSmall = {
   top: 'border-radius: 3px 3px 0 0;',
   bottom: 'border-radius: 0 0 3px 3px;',
   all: 'border-radius: 3px;',
-  toString: () => borderRadiusSmall.all,
+  toString: (): string => borderRadiusSmall.all,
 }
 
 export const borderRadiusLarge = {
@@ -23,7 +23,7 @@ export const borderRadiusLarge = {
   top: 'border-radius: 6px 6px 0 0;',
   bottom: 'border-radius: 0 0 6px 6px;',
   all: 'border-radius: 6px;',
-  toString: () => borderRadiusLarge.all,
+  toString: (): string => borderRadiusLarge.all,
 }
 
 export const borderRadiusCircle = {
@@ -32,5 +32,5 @@ export const borderRadiusCircle = {
   top: 'border-radius: 50% 50% 0 0;',
   bottom: 'border-radius: 0 0 50% 50%;',
   all: 'border-radius: 50%;',
-  toString: () => borderRadiusCircle.all,
+  toString: (): string => borderRadiusCircle.all,
 }
