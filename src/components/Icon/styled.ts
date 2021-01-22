@@ -1,21 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled, { withTheme, keyframes, css } from 'styled-components'
-import cn from 'classnames'
+
+import styled, { keyframes, css } from 'styled-components'
 
 import { switchTransition } from 'utils/transitions'
-import { getThemeColor, ThemingPropTypes } from 'utils/theme'
+import { getThemeColor } from 'utils/theme'
+import { TTheme, COLOR_NAMES } from 'components/ThemeProvider/types'
 
-export const sizes = {
-  normal: 18,
-  xxsmall: 15,
-  xsmall: 24,
-  small: 30,
-  medium: 36,
-  large: 42,
-  xlarge: 54,
-  xxlarge: 60,
-}
+
+import { sizes, ICON_SIZES } from './consts'
 
 const preloader = keyframes`
   0% { transform: rotate(0deg); }
@@ -37,7 +28,14 @@ const preloader = keyframes`
   100%  { transform: rotate(1800deg); }
 `
 
-const IconSvg = styled.svg`
+interface TIconSvgProps {
+  size: ICON_SIZES,
+  striked: boolean,
+  theme: TTheme,
+  fill: COLOR_NAMES,
+}
+
+const IconSvg = styled.svg<TIconSvgProps>`
   ${switchTransition};
   transition-property: fill, transform;
   height: ${({ size }) => sizes[size]}px;
@@ -56,7 +54,13 @@ const IconSvg = styled.svg`
   animation: ${({ name }) => (name === 'spinner' ? css`${preloader} 3s infinite ease-in-out;` : '')}
 `
 
-export const IconWrapper = styled.span`
+interface TIconWrapperProps {
+  paid: boolean,
+  striked: boolean,
+  theme: TTheme,
+}
+
+const IconWrapper = styled.span<TIconWrapperProps>`
   display: inline-flex;
   ${({ paid }) => paid && `
     position: relative;
@@ -83,7 +87,7 @@ export const IconWrapper = styled.span`
   }}
   `
 
-function getPaidIconImage(currency) {
+function getPaidIconImage(currency: string) {
   switch (currency) {
     case 'EUR':
       return 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMCAyMEMxNS41MjI4IDIwIDIwIDE1LjUyMjggMjAgMTBDMjAgNC40NzcxNSAxNS41MjI4IDAgMTAgMEM0LjQ3NzE1IDAgMCA0LjQ3NzE1IDAgMTBDMCAxNS41MjI4IDQuNDc3MTUgMjAgMTAgMjBaIiBmaWxsPSIjRkEzQTAwIi8+CjxwYXRoIGQ9Ik0xMC41NTM3IDE2LjYxNzZDMTIuMDMzNyAxNi42MTc2IDEzLjExMzcgMTUuODU3NiAxMy44MTM3IDE0LjU5NzZMMTIuODkzNyAxMy45Nzc2QzEyLjMxMzcgMTQuODc3NiAxMS42MTM3IDE1LjMxNzYgMTAuNjMzNyAxNS4zMTc2QzguOTczNzEgMTUuMzE3NiA3Ljg5MzcxIDEzLjk3NzYgNy41MzM3MSAxMS43NTc2SDExLjgxMzdWMTAuNzE3Nkg3LjQxMzcxQzcuMzkzNzEgMTAuNDc3NiA3LjM5MzcxIDEwLjIxNzYgNy4zOTM3MSA5Ljk1NzYyQzcuMzkzNzEgOS43NTc2MiA3LjM5MzcxIDkuNTU3NjIgNy40MTM3MSA5LjM1NzYySDEyLjYxMzdWOC4zMTc2Mkg3LjUxMzcxQzcuODUzNzEgNi4wNTc2MiA4Ljk1MzcxIDQuNjk3NjIgMTAuNjkzNyA0LjY5NzYyQzExLjU5MzcgNC42OTc2MiAxMi4yMzM3IDUuMDU3NjIgMTIuNzczNyA1Ljc3NzYyTDEzLjY3MzcgNS4wMzc2MkMxMy4wNzM3IDQuMDU3NjIgMTIuMDEzNyAzLjM3NzYyIDEwLjYzMzcgMy4zNzc2MkM4LjE3MzcxIDMuMzc3NjIgNi4zMzM3MSA1LjIxNzYyIDUuODMzNzEgOC4zMTc2Mkw0LjU1MzcxIDguNDE3NjJWOS4zNTc2Mkg1LjczMzcxQzUuNzEzNzEgOS41Nzc2MiA1LjcxMzcxIDkuNzk3NjIgNS43MTM3MSAxMC4wMTc2QzUuNzEzNzEgMTAuMjU3NiA1LjcxMzcxIDEwLjQ5NzYgNS43MzM3MSAxMC43Mzc2TDQuNTUzNzEgMTAuODE3NlYxMS43NTc2SDUuODMzNzFDNi4zMTM3MSAxNC44MTc2IDguMTEzNzEgMTYuNjE3NiAxMC41NTM3IDE2LjYxNzZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K'
@@ -93,7 +97,11 @@ function getPaidIconImage(currency) {
   }
 }
 
-const PaidIcon = styled.span`
+interface TPaidIconProps {
+  currency: string,
+}
+
+const PaidIcon = styled.span<TPaidIconProps>`
   position: absolute;
   top: -4px;
   right: -4px;
@@ -105,56 +113,8 @@ const PaidIcon = styled.span`
   background-size: cover;
 `
 
-// Scoped inside `colorKeys` because `fill` are valid HTML attrs
-const Icon = ({
-  prefix,
-  name,
-  striked,
-  className,
-  inheritColor,
-  rotate,
-  paid,
-  currency,
-  ...props
-}) => (
-  <IconWrapper striked={striked} paid={paid}>
-    <IconSvg
-      {...props}
-      name={name}
-      rotate={rotate ? 'true' : ''}
-      striked={striked}
-      className={cn(className, { 'icon-inherit-color': inheritColor })}
-    >
-      <use xlinkHref={`#${prefix}_${name}`} />
-    </IconSvg>
-    {!striked && paid && <PaidIcon currency={currency} />}
-  </IconWrapper>
-)
-
-Icon.defaultProps = {
-  prefix: 'kb',
-  size: 'normal',
-  fill: null,
-  className: null,
-  inheritColor: false,
-  striked: false,
-  rotate: false,
-  paid: false,
-  currency: 'RUB',
+export {
+  IconSvg,
+  IconWrapper,
+  PaidIcon,
 }
-
-Icon.propTypes = {
-  name: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(Object.keys(sizes)),
-  prefix: PropTypes.string,
-  fill: ThemingPropTypes.themeColor,
-  className: PropTypes.string,
-  inheritColor: PropTypes.bool,
-  striked: PropTypes.bool,
-  paid: PropTypes.bool,
-  rotate: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  currency: PropTypes.string,
-}
-
-
-export default withTheme(Icon)
