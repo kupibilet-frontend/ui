@@ -1,17 +1,16 @@
 {
   "extends": [
-    "kupibilet",
+    "kupibilet"
   ],
   "settings": {
     "import/resolver": {
-      "babel-module": {
-        "empty": true,
-        "extensions": [
-          ".ts",
-          ".tsx",
-          ".js",
-          ".jsx"
-        ]
+      "alias": {
+        "map": [
+          ["blocks", "./src/blocks"],
+          ["components", "./src/components"],
+          ["utils", "./src/utils"]
+        ],
+        "extensions": [".ts", ".tsx", ".js"]
       }
     }
   },

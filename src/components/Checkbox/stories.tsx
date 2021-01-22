@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { text, boolean } from '@storybook/addon-knobs'
-import withReduxForm from 'storybook/decorators/withReduxForm'
+import withReduxForm from 'redux-form-storybook'
 import { Field } from 'redux-form'
 
 import Checkbox from 'components/Checkbox'
