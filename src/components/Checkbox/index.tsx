@@ -87,4 +87,6 @@ const RFCheckbox = React.memo((props: TRFCheckboxProps) => {
   )
 })
 
+export { Checkbox }
+
 export default RFCheckbox
