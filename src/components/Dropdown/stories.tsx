@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
-import Dropdown, { DropdownContent } from 'components/Dropdown'
+import Dropdown from 'components/Dropdown'
+import { DropdownContent } from 'components/Dropdown/styled'
 import Button from 'components/Button'
 
 const StyledDropdown = styled(Dropdown)`
@@ -26,7 +27,7 @@ const CustomDropdownContainer = styled.div`
 storiesOf('COMPONENTS|Complex controls/Dropdown', module)
   .add('Defalut', () => {
     const isOpen = boolean('isOpen', false)
-    const onToggle = (event, value) => {
+    const onToggle = (event: Event, value: boolean) => {
       event.preventDefault()
       updateKnob('isOpen', 'boolean', value)
     }
@@ -43,7 +44,7 @@ storiesOf('COMPONENTS|Complex controls/Dropdown', module)
   })
   .add('With custom Dropdown container', () => {
     const isOpen = boolean('isOpen', false)
-    const onToggle = (event, value) => {
+    const onToggle = (event: Event, value: boolean) => {
       event.preventDefault()
       updateKnob('isOpen', 'boolean', value)
     }
