@@ -4,7 +4,6 @@ import { opacify } from 'polished'
 import { TTheme } from 'components/ThemeProvider/types'
 import { switchTransition } from 'utils/transitions'
 
-// TODO: move it somewhere
 interface TProps {
   theme: TTheme,
 }
