@@ -31,6 +31,7 @@ const Icon = ({
   paid = false,
   currency = 'RUB',
   fill = COLOR_NAMES.miscDarker,
+  ...restProps
 }: TIconProps): JSX.Element => (
   <IconWrapper striked={striked} paid={paid}>
     <IconSvg
@@ -40,6 +41,7 @@ const Icon = ({
       rotate={rotate ? 'true' : ''}
       striked={striked}
       className={cn(className, { 'icon-inherit-color': inheritColor })}
+      {...restProps}
     >
       <use xlinkHref={`#${prefix}_${name}`} />
     </IconSvg>
