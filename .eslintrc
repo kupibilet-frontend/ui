@@ -8,7 +8,8 @@
         "map": [
           ["blocks", "./src/blocks"],
           ["components", "./src/components"],
-          ["utils", "./src/utils"]
+          ["utils", "./src/utils"],
+          ["storybook", "./storybook"]
         ],
         "extensions": [".ts", ".tsx", ".js"]
       }

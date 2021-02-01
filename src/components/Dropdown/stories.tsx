@@ -2,10 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { boolean } from '@storybook/addon-knobs'
+
+// @ts-ignore, TODO: add storybook folder to typescript settings?
 import updateKnob from 'storybook/updateKnob'
 import Dropdown from 'components/Dropdown'
 import { DropdownContent } from 'components/Dropdown/styled'
 import Button from 'components/Button'
+
 
 const StyledDropdown = styled(Dropdown)`
   ${DropdownContent} {
