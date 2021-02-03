@@ -6,7 +6,7 @@ import FilterSection from 'blocks/FilterSection'
 import Checkbox from 'components/Checkbox'
 
 storiesOf('BLOCKS|FilterSection', module)
-  .add('Defaultw', () => (
+  .add('Default', () => (
     <div style={{ width: 252 }}>
       <FilterSection
         headerLeft={<div>Пересадки</div>}
@@ -25,7 +25,7 @@ storiesOf('BLOCKS|FilterSection', module)
           </div>
         }
         collapse={
-          <FilterSection.Collapse accordion>
+          <FilterSection.Collapse isAccordion>
             <FilterSection.Panel title="Пересадки" key="transfers">
               <div>
                 <Checkbox checked>Без ночных пересадок</Checkbox>

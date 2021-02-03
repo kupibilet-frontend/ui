@@ -126,7 +126,6 @@
     "@kupibilet/react-day-picker": "^7.2.5",
     "@kupibilet/react-media": "^1.5.1",
     "@types/classnames": "^2.2.11",
-    "rc-collapse": "^1.9.0",
     "rc-tabs": "9.6.4",
     "react-autosuggest": "^10.0.0",
     "react-portal": "^4.1.4",
