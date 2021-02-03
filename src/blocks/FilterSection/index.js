@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import Collapse from 'components/Collapse'
+import { Collapse } from 'components/Collapse'
 import Icon from 'components/Icon'
 import Link from 'components/Link'
 
@@ -19,9 +19,10 @@ const Panel = (props) => {
   return (
     <PanelWrapper
       {...props}
-      header={<PanelHeaderWrapper>{props.title}</PanelHeaderWrapper>}
+      renderHeader={() => <PanelHeaderWrapper>{props.title}</PanelHeaderWrapper>}
     >
       <PanelContent>
+        {/* eslint-disable-next-line */}
         {props.children}
       </PanelContent>
     </PanelWrapper>
@@ -29,7 +30,6 @@ const Panel = (props) => {
 }
 
 Panel.propTypes = {
-  ...Collapse.Panel.PropTypes,
   title: PropTypes.node.isRequired,
 }
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Collapse from 'components/Collapse'
+import { CollapsePanel } from 'components/Collapse'
 import Link from 'components/Link'
 import mq from 'utils/media-queries'
 
@@ -54,4 +54,4 @@ export const PanelHeader = styled.div`
   }
 `
 
-export const PanelWrapper = styled(Collapse.Panel)``
+export const PanelWrapper = styled(CollapsePanel)``
