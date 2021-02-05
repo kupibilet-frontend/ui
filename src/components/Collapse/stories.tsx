@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react'
 import { array } from '@storybook/addon-knobs'
 // TODO: add it to ts-config (in eslint will be added in !458)
 // @ts-ignore
-// eslint-disable-next-line
 import updateKnob from 'storybook/updateKnob'
 
 import { Collapse, CollapsePanel } from 'components/Collapse'
