@@ -1,5 +1,5 @@
 
-import React, { useCallback, useState, useEffect } from 'react'
+import React, { useCallback, useState, useEffect, useMemo } from 'react'
 import CollapsePanel from './CollapsePanel'
 
 
@@ -23,7 +23,7 @@ interface TProps {
 function Collapse(props: TProps): JSX.Element {
   const { isAccordion, onChange, defaultActiveKey, disabled, ...restProps } = props
 
-  const initialInnerActiveKey = defaultActiveKey || []
+  const initialInnerActiveKey = useMemo(() => defaultActiveKey || [], [defaultActiveKey])
   const [innerActiveKey, setInnerActiveKey] = useState<string[]>(initialInnerActiveKey)
 
   const activeKey = props.activeKey ? props.activeKey : innerActiveKey
