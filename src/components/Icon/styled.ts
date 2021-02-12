@@ -3,7 +3,7 @@ import styled, { keyframes, css } from 'styled-components'
 
 import { switchTransition } from 'utils/transitions'
 import { getThemeColor } from 'utils/theme'
-import { TTheme, COLOR_NAMES } from 'components/ThemeProvider/types'
+import { COLOR_NAMES } from 'components/ThemeProvider/types'
 
 
 import { sizes, ICON_SIZES } from './consts'
@@ -31,7 +31,6 @@ const preloader = keyframes`
 interface TIconSvgProps {
   size: ICON_SIZES,
   striked: boolean,
-  theme: TTheme,
   fill: COLOR_NAMES,
 }
 
@@ -57,7 +56,6 @@ const IconSvg = styled.svg<TIconSvgProps>`
 interface TIconWrapperProps {
   paid: boolean,
   striked: boolean,
-  theme: TTheme,
 }
 
 const IconWrapper = styled.span<TIconWrapperProps>`

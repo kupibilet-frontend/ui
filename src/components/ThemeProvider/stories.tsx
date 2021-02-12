@@ -3,13 +3,18 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { color } from './theme'
 
-const ColorBox = styled.div`
+interface TColorBoxProps {
+  pickedColor: string
+}
+
+const ColorBox = styled.div<TColorBoxProps>`
   width: 100px;
   height: 50px;
   background-color: ${({ theme, pickedColor }) => theme.color[pickedColor]};
   padding: 10px;
   margin: 5px;
 `
+
 const ColorCard = styled.div`
   flex: 1;
   cursor: pointer;
@@ -41,27 +46,33 @@ const ColorPanel = styled.div`
 
 const colors = Object.keys(color)
 
-const copyToClipboard = (str) => {
+const copyToClipboard = (str: string): void => {
   const el = document.createElement('textarea')
   el.value = str
   el.setAttribute('readonly', '')
   el.style.position = 'absolute'
   el.style.left = '-9999px'
   document.body.appendChild(el)
-  const selected = document.getSelection().rangeCount > 0
-    ? document.getSelection().getRangeAt(0)
+  const selected = (document?.getSelection()?.rangeCount ?? 0) > 0
+    ? document?.getSelection()?.getRangeAt(0)
     : false
   el.select()
   document.execCommand('copy')
   document.body.removeChild(el)
   const card = document.getElementById(str)
-  card.style.backgroundColor = color[str]
+  if (card) {
+    card.style.backgroundColor = color[str]
+  }
   setTimeout(() => {
-    card.style.backgroundColor = 'white'
+    if (card) {
+      card.style.backgroundColor = 'white'
+    }
   }, 3000)
   if (selected) {
-    document.getSelection().removeAllRanges()
-    document.getSelection().addRange(selected)
+    /* eslint-disable no-unused-expressions */
+    document?.getSelection()?.removeAllRanges()
+    document?.getSelection()?.addRange(selected)
+    /* eslint-enable no-unused-expressions */
   }
 }
 

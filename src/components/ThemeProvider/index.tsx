@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
-
-import * as defaultTheme from './theme'
+import { defaultTheme } from './theme'
 
 export const GlobalStylesScope = styled.div`
   ${({ theme }) => theme.font}
@@ -14,17 +13,14 @@ export const GlobalStylesScope = styled.div`
   }
 `
 
-const ThemeAndScopedStylesProvider = ({ theme = {}, children, ...props }) => (
-  <ThemeProvider
-    theme={{
-      ...defaultTheme,
-      ...theme,
-      color: {
-        ...defaultTheme.color,
-        ...theme.color,
-      },
-    }}
-  >
+interface TProps {
+  children: React.ReactNode,
+  [key: string]: any,
+}
+
+
+const ThemeAndScopedStylesProvider = ({ children, ...props }: TProps): JSX.Element => (
+  <ThemeProvider theme={defaultTheme}>
     <GlobalStylesScope {...props}>
       { children }
     </GlobalStylesScope>

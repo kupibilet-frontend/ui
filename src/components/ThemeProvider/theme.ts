@@ -1,3 +1,4 @@
+import { DefaultTheme } from 'styled-components'
 import { COLOR_NAMES, TColor } from './types'
 
 export const color: TColor = {
@@ -44,3 +45,9 @@ export const font = `
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 `
+const defaultTheme: DefaultTheme = {
+  font,
+  color,
+}
+
+export { defaultTheme }

@@ -1,9 +1,8 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
 import { getLinkColor, getLinkHoverColor } from 'utils/link'
-import { TTheme } from 'components/ThemeProvider/types'
 import { queries } from 'utils/media-queries'
 import {
   BUTTON_SIZES_NAMES,
@@ -15,8 +14,8 @@ import { BUTTON_SIZES } from './consts'
 
 // TThemeAndVariantProps is a common type for many helpers functions
 interface TThemeAndVariantProps {
-  theme: TTheme,
   variant: TButtonVariant,
+  theme: DefaultTheme,
 }
 
 const TYPOGRAPHY = {

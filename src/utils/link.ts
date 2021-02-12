@@ -1,11 +1,10 @@
-import { css } from 'styled-components'
+import { css, DefaultTheme } from 'styled-components'
 import { opacify } from 'polished'
 
-import { TTheme } from 'components/ThemeProvider/types'
 import { switchTransition } from 'utils/transitions'
 
 interface TProps {
-  theme: TTheme,
+  theme: DefaultTheme,
 }
 
 export function getLinkColor(props: TProps): string {
