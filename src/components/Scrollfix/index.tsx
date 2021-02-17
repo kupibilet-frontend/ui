@@ -1,21 +1,18 @@
-// @flow
-
 import { Component } from 'react'
 import _get from 'lodash/get'
 import ReactDOM from 'react-dom'
-import type { Element } from 'react'
 
-type Props = {
-  children: Element<*>,
+interface TProps {
+  children: React.ReactChild,
   freezableElement?: 'DEPRECATED and don`t needed anymore', // eslint-disable-line react/no-unused-prop-types
 }
 
-class Scrollfix extends Component<Props> {
+class Scrollfix extends Component<TProps> {
   static defaultProps = {
     freezableElement: null,
   }
 
-  element = {}
+  element: any = {}
   lastY = 0
 
   componentDidMount() {
@@ -32,12 +29,12 @@ class Scrollfix extends Component<Props> {
     this.element.removeEventListener('touchmove', this.onTouch, { passive: true })
   }
 
-  onWheel = (event: Event) => {
+  onWheel = (event: any) => {
     const { deltaY } = event
     this.onScroll(event, deltaY)
   }
 
-  onTouch = (event: Event) => {
+  onTouch = (event: any) => {
     const currentY = event.changedTouches[0].clientY
     const deltaY = this.lastY - currentY
 
@@ -58,7 +55,7 @@ class Scrollfix extends Component<Props> {
     }
   }
 
-  getTouchStartCoord = (event: Event) => {
+  getTouchStartCoord = (event: any) => {
     this.lastY = event.changedTouches[0].clientY
   }
 
