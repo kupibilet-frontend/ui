@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import mq from 'utils/media-queries'
+import mq, { queries } from 'utils/media-queries'
 
 export const OVERLAY_Z_INDEX = 10
 
@@ -28,7 +28,11 @@ const slide = keyframes`
   }
 `
 
-export const Wrapper = styled.div`
+interface TProps {
+  isOnBottom: boolean,
+}
+
+export const Wrapper = styled.div<TProps>`
   background: rgba(34, 34, 34, 0.85);
   position: fixed;
   overflow-y: scroll;
@@ -43,30 +47,35 @@ export const Wrapper = styled.div`
   opacity: 1;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
-  ${mq.desktop`
+
+  @media ${queries.isDesktop} {
     animation-name: ${fade};
     animation-duration: 0.35s;
-  `}
-  ${mq.mobile`
-    ${(props) => (props.isOnBottom ? '' : 'background: white;')}
-  `}
+  }
+
+  @media ${queries.isMobile} {
+    ${({ isOnBottom }) => (isOnBottom ? '' : 'background: white;')}
+  }
 `
 
-export const OverlayContentWrap = styled.div`
+export const OverlayContentWrap = styled.div<TProps>`
   height: 100%;
   width: 100%;
   opacity: 1;
   padding-top: 0;
   text-align: center;
-  ${mq.desktop`
+
+  @media ${queries.isDesktop} {
     animation-name: ${slide};
     animation-duration: 0.35s;
     padding: 24px 0;
-  `}
-  ${mq.mobile`
+  }
+
+  @media ${queries.isMobile} {
     height: 100%;
-    ${(props) => (props.isOnBottom ? '' : 'background: white;')}
-  `}
+    ${({ isOnBottom }) => (isOnBottom ? '' : 'background: white;')}
+  }
+
   &:before {
     content: '';
     display: inline-block;
@@ -76,15 +85,16 @@ export const OverlayContentWrap = styled.div`
 
 `
 
-export const OverlayContent = styled.div`
+export const OverlayContent = styled.div<TProps>`
   display: inline-flex;
   justify-content: center;
   vertical-align: middle;
   text-align: left;
   cursor: auto;
-  ${mq.mobile`
+
+  @media ${queries.isMobile} {
     width: 100%;
-    ${(props) => (props.isOnBottom ? '' : 'min-height: 100%;')}
-    vertical-align: ${(props) => (props.isOnBottom ? 'bottom' : 'top')};
-  `}
+    ${({ isOnBottom }) => (isOnBottom ? '' : 'min-height: 100%;')}
+    vertical-align: ${({ isOnBottom }) => (isOnBottom ? 'bottom' : 'top')};
+  }
 `
