@@ -20,7 +20,7 @@ export const ModalContent = styled.div<TProps>`
   justify-content: space-between;
   position: relative;
   z-index: ${OVERLAY_Z_INDEX + 1};
-  width: ${({ size }) => getWidth(size)}px;
+  width: ${({ size }) => getWidth(size)};
 
   @media ${queries.isTablet} {
     ${({ size }) => !isSetSize(size) && `

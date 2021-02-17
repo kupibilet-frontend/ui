@@ -1,1 +1,1 @@
-export type ModalSize = 'thin' | 'compact' | 'wide'
+export type ModalSize = 'thin' | 'compact' | 'wide' |'auto'

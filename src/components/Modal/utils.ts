@@ -9,15 +9,18 @@ export const isSetSize = (size: ModalSize): boolean => isThin(size) || isCompact
 export const getWidth = (size: ModalSize): string => {
   switch (size) {
     case 'thin':
-      return '378'
+      return '378px'
 
     case 'compact':
-      return '588'
+      return '588px'
 
     case 'wide':
-      return '882'
+      return '882px'
+
+    case 'auto':
+      return 'auto'
 
     default:
-      return '882'
+      return '882px'
   }
 }
