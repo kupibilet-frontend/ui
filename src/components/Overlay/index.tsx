@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { MouseEvent } from 'react'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
 import Scrollfix from 'components/Scrollfix'
@@ -20,12 +20,12 @@ interface TProps extends TWithMediaProps {
   scrollFix?: boolean,
 }
 
-class Overlay extends Component<TProps> {
+class Overlay extends React.PureComponent<TProps> {
   static defaultProps = {
     scrollFix: true,
   }
 
-  stopPropagation = (e: any) => {
+  stopPropagation = (e: MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
   }
 
