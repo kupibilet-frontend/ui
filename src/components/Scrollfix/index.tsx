@@ -12,42 +12,47 @@ class Scrollfix extends Component<TProps> {
     freezableElement: null,
   }
 
-  element: any = {}
+  element: Element | null | Text = null
   lastY = 0
 
   componentDidMount() {
     // eslint-disable-next-line react/no-find-dom-node
     this.element = ReactDOM.findDOMNode(this)
-    this.element.addEventListener('mousewheel', this.onWheel, { passive: true })
-    this.element.addEventListener('touchstart', this.getTouchStartCoord, { passive: true })
-    this.element.addEventListener('touchmove', this.onTouch, { passive: true })
+    if (this.element) {
+      this.element.addEventListener('mousewheel', this.onWheel, { passive: true })
+      this.element.addEventListener('touchstart', this.getTouchStartCoord, { passive: true })
+      this.element.addEventListener('touchmove', this.onTouch, { passive: true })
+    }
   }
 
   componentWillUnmount() {
-    this.element.removeEventListener('mousewheel', this.onWheel, { passive: true })
-    this.element.removeEventListener('touchstart', this.getTouchStartCoord, { passive: true })
-    this.element.removeEventListener('touchmove', this.onTouch, { passive: true })
+    if (this.element) {
+      this.element.removeEventListener('mousewheel', this.onWheel)
+      this.element.removeEventListener('touchstart', this.getTouchStartCoord)
+      this.element.removeEventListener('touchmove', this.onTouch)
+    }
   }
 
-  onWheel = (event: any) => {
-    const { deltaY } = event
+  onWheel = (event: Event): void => {
+    const { deltaY } = event as WheelEvent
     this.onScroll(event, deltaY)
   }
 
-  onTouch = (event: any) => {
-    const currentY = event.changedTouches[0].clientY
+  onTouch = (event: Event): void => {
+    const currentY = (event as TouchEvent).changedTouches[0].clientY
     const deltaY = this.lastY - currentY
 
     this.onScroll(event, deltaY)
   }
 
-  onScroll = (event: Event, deltaY: number) => {
-    const { scrollTop } = this.element
+  onScroll = (event: Event, deltaY: number): void => {
+    const { scrollTop } = this.element as HTMLElement
     const touchesLength = _get(event, 'touches.length', 0)
     if (scrollTop <= 1 && deltaY < 0 && touchesLength < 2) {
       event.preventDefault()
     } else if (
-      scrollTop + this.element.offsetHeight >= this.element.scrollHeight - 1
+      scrollTop + (this.element as HTMLElement).offsetHeight
+      >= (this.element as HTMLElement).scrollHeight - 1
       && deltaY > 0
       && touchesLength < 2
     ) {
@@ -55,8 +60,8 @@ class Scrollfix extends Component<TProps> {
     }
   }
 
-  getTouchStartCoord = (event: any) => {
-    this.lastY = event.changedTouches[0].clientY
+  getTouchStartCoord = (event: Event): void => {
+    this.lastY = (event as TouchEvent).changedTouches[0].clientY
   }
 
   render() {
