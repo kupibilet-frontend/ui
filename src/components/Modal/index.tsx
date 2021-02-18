@@ -1,15 +1,12 @@
-import React from 'react'
+/* eslint react/prop-types: 0 */
+import React, { useCallback, useEffect } from 'react'
 import { Portal } from 'react-portal'
 import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
-
-import { ICON_SIZES } from 'components/Icon/consts'
 import { BUTTON_SIZES_NAMES } from 'components/Button/types'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import { withMedia } from 'utils/media-queries'
 import { TWithMediaProps } from 'utils/types'
-import { isCompact } from './utils'
 import { ModalSize } from './types'
 
 import {
@@ -22,22 +19,7 @@ import {
   SubmitButton,
   StyledIcon,
 } from './styled'
-
-const getCloseIconSize = ({ isHandheld, size }: TProps): ICON_SIZES => {
-  if (isHandheld) {
-    return ICON_SIZES.normal
-  } else if (isCompact(size)) {
-    return ICON_SIZES.xxsmall
-  }
-  return ICON_SIZES.medium
-}
-
-const getCloseIconColor = ({ size }: TProps): COLOR_NAMES => {
-  if (isCompact(size)) {
-    return COLOR_NAMES.miscDarkest
-  }
-  return COLOR_NAMES.textLight
-}
+import { getCloseIconColor, getCloseIconSize } from './utils'
 
 interface TProps extends TWithMediaProps {
   size: ModalSize,
@@ -59,128 +41,128 @@ interface TProps extends TWithMediaProps {
   isOpen: boolean,
 }
 
-class Modal extends React.PureComponent<TProps> {
-  static defaultProps = {
-    heading: '',
-    renderHeader: ({ heading, size }: TProps) => (heading ? (
-      <Header size={size}>
-        <H4>{heading}</H4>
-      </Header>
-    ) : null),
-    renderContent: (props: any) => <Content {...props} />,
-    footer: null,
-    size: 'wide',
-    closeOnOutsideClick: true,
-    closeOnEsc: true,
-    shouldRenderCloseIcon: true,
-    isOnBottom: false,
-    scrollFix: true,
-    onSubmitClick: null,
-    submitText: 'Продолжить',
-    submitButtonCloseText: 'Отменить',
-    defaultButtonCloseText: 'Закрыть',
-    shouldRenderCloseButton: true,
-  }
+let Modal: React.FC<TProps> = (props) => {
+  const {
+    size,
+    heading,
+    renderHeader,
+    renderContent,
+    footer,
+    isOpen,
+    closeOnOutsideClick,
+    shouldRenderCloseIcon,
+    isOnBottom,
+    scrollFix,
+    onSubmitClick,
+    submitText,
+    submitButtonCloseText,
+    defaultButtonCloseText,
+    shouldRenderCloseButton,
+    closeOnEsc,
+    onClose,
+    isHandheld,
+  } = props
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyDown)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown)
-  }
-
-  closePortal = () => {
-    if (this.props.onClose) {
-      this.props.onClose()
+  const closePortal = useCallback(() => {
+    if (onClose) {
+      onClose()
     }
-  }
+  }, [onClose])
 
-  handleKeyDown = (event: any) => {
-    if (event.keyCode === 27 && this.props.closeOnEsc) {
-      this.closePortal()
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if (event.keyCode === 27 && closeOnEsc) {
+      closePortal()
     }
-  }
+  }, [closeOnEsc, closePortal])
 
-  render() {
-    const {
-      size,
-      heading,
-      renderHeader,
-      renderContent,
-      footer,
-      isOpen,
-      closeOnOutsideClick,
-      shouldRenderCloseIcon,
-      isOnBottom,
-      scrollFix,
-      onSubmitClick,
-      submitText,
-      submitButtonCloseText,
-      defaultButtonCloseText,
-      shouldRenderCloseButton,
-      onClose,
-    } = this.props
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
 
-    const defaultFooter = !isOnBottom ? (
-      <Footer size={size}>
-        {onSubmitClick && (
-          <SubmitButton
-            size={BUTTON_SIZES_NAMES.large}
-            onClick={onSubmitClick}
-          >
-            {submitText}
-          </SubmitButton>
-        )}
-        {shouldRenderCloseButton && (
-          <CloseButton
-            onClick={onClose}
-            size={BUTTON_SIZES_NAMES.large}
-            variant="secondary"
-          >
-            {onSubmitClick ? submitButtonCloseText : defaultButtonCloseText}
-          </CloseButton>
-        )}
-      </Footer>
-    ) : null
-
-    if (!isOpen) {
-      return null
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
     }
+  }, [handleKeyDown])
 
-    return (
-      <Portal node={document && document.getElementById('portal')}>
-        <GlobalStylesScope>
-          <Overlay
-            closePortal={closeOnOutsideClick && this.closePortal}
-            isOnBottom={isOnBottom}
-            scrollFix={scrollFix}
-          >
-            <ModalContent size={size}>
-              {renderHeader && renderHeader({
-                ...this.props,
-                children: heading as React.ReactChild,
-              })}
-              {shouldRenderCloseIcon && (
-                <CloseIcon
-                  modalSize={size}
-                  // isOnBottom={isOnBottom}
-                  icon={<StyledIcon
-                    name="cross"
-                    fill={getCloseIconColor(this.props)}
-                    onClick={this.closePortal}
-                    size={getCloseIconSize(this.props)}
-                  />}
-                />
-              )}
-              { renderContent && renderContent(this.props) }
-              { footer || defaultFooter }
-            </ModalContent>
-          </Overlay>
-        </GlobalStylesScope>
-      </Portal>
-    )
+  const defaultFooter = !isOnBottom && (
+    <Footer size={size}>
+      {onSubmitClick && (
+        <SubmitButton
+          size={BUTTON_SIZES_NAMES.large}
+          onClick={onSubmitClick}
+        >
+          {submitText}
+        </SubmitButton>
+      )}
+      {shouldRenderCloseButton && (
+        <CloseButton
+          onClick={onClose}
+          size={BUTTON_SIZES_NAMES.large}
+          variant="secondary"
+        >
+          {onSubmitClick ? submitButtonCloseText : defaultButtonCloseText}
+        </CloseButton>
+      )}
+    </Footer>
+  )
+
+  if (!isOpen) {
+    return null
   }
+
+  return (
+    <Portal node={document && document.getElementById('portal')}>
+      <GlobalStylesScope>
+        <Overlay
+          closePortal={closeOnOutsideClick && closePortal}
+          isOnBottom={isOnBottom}
+          scrollFix={scrollFix}
+        >
+          <ModalContent size={size}>
+            {renderHeader && renderHeader({
+              ...props,
+              children: heading as React.ReactChild,
+            })}
+            {shouldRenderCloseIcon && (
+              <CloseIcon
+                modalSize={size}
+                icon={<StyledIcon
+                  name="cross"
+                  fill={getCloseIconColor(size)}
+                  onClick={closePortal}
+                  size={getCloseIconSize(isHandheld, size)}
+                />}
+              />
+            )}
+            { renderContent && renderContent(props) }
+            { footer || defaultFooter }
+          </ModalContent>
+        </Overlay>
+      </GlobalStylesScope>
+    </Portal>
+  )
 }
+
+Modal.defaultProps = {
+  heading: '',
+  renderHeader: ({ heading, size }: TProps) => (heading ? (
+    <Header size={size}>
+      <H4>{heading}</H4>
+    </Header>
+  ) : null),
+  renderContent: (props: any) => <Content {...props} />,
+  footer: null,
+  size: 'wide',
+  closeOnOutsideClick: true,
+  closeOnEsc: true,
+  shouldRenderCloseIcon: true,
+  isOnBottom: false,
+  scrollFix: true,
+  submitText: 'Продолжить',
+  submitButtonCloseText: 'Отменить',
+  defaultButtonCloseText: 'Закрыть',
+  shouldRenderCloseButton: true,
+}
+
+Modal = React.memo(Modal)
 
 export default withMedia(Modal)
