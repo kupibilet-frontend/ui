@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import mq, { queries } from 'utils/media-queries'
+import { queries } from 'utils/media-queries'
 
 export const OVERLAY_Z_INDEX = 10
 
