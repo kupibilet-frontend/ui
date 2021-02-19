@@ -1,43 +1,46 @@
-// @flow
-import * as React from 'react'
-import type { Element } from 'react'
+import React from 'react'
 import { renderIcon } from 'components/Link'
 import { StyledLink } from './styled'
 
-type Props = {
+interface TProps {
   /**
     Чаще всего текст ссылки
   */
-  children: React.Node,
+  children: React.ReactElement | string,
   /**
     Иконка слева от текста
   */
-  leftIcon?: Element<*>,
+  leftIcon?: React.ReactElement | null,
   /**
     Иконка справа от текста
   */
-  rightIcon?: Element<*>,
+  rightIcon?: React.ReactElement | null,
   /**
     Адрес ссылки. Обязательный параметр
   */
   to: string,
+  onClick?: () => void,
 }
 
 /**
  * Стилизованный компонент Link из React Router, может содержать текст и иконки рядом с текстом
  */
+const RouterLink = React.memo((props: TProps) => {
+  const {
+    children,
+    to,
+    leftIcon = null,
+    rightIcon = null,
+    ...rest
+  } = props
 
-const RouterLink = ({ children, to, leftIcon, rightIcon, ...props }: Props) => (
-  <StyledLink to={to} {...props}>
-    {renderIcon(leftIcon, true)}
-    {children}
-    {renderIcon(rightIcon)}
-  </StyledLink>
-)
-
-RouterLink.defaultProps = {
-  leftIcon: null,
-  rightIcon: null,
-}
+  return (
+    <StyledLink to={to} {...rest}>
+      {renderIcon(leftIcon, true)}
+      {children}
+      {renderIcon(rightIcon)}
+    </StyledLink>
+  )
+})
 
 export default RouterLink
