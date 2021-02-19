@@ -1,4 +1,3 @@
-/* eslint react/prop-types: 0 */
 import React, { useCallback, useEffect } from 'react'
 import { Portal } from 'react-portal'
 import H4 from 'components/Typography/H4'
@@ -41,24 +40,28 @@ interface TProps extends TWithMediaProps {
   isOpen: boolean,
 }
 
-let Modal: React.FC<TProps> = (props) => {
+const Modal = React.memo((props: TProps) => {
   const {
-    size,
-    heading,
-    renderHeader,
-    renderContent,
-    footer,
+    heading = '',
+    renderHeader = ({ heading: header, size }: TProps) => (header ? (
+      <Header size={size}>
+        <H4>{header}</H4>
+      </Header>
+    ) : null),
+    renderContent = (contentProps: any) => <Content {...contentProps} />,
+    footer = null,
+    size = 'wide',
+    closeOnOutsideClick = true,
+    closeOnEsc = true,
+    shouldRenderCloseIcon = true,
+    isOnBottom = false,
+    scrollFix = true,
+    submitText = 'Продолжить',
+    submitButtonCloseText = 'Отменить',
+    defaultButtonCloseText = 'Закрыть',
+    shouldRenderCloseButton = true,
     isOpen,
-    closeOnOutsideClick,
-    shouldRenderCloseIcon,
-    isOnBottom,
-    scrollFix,
     onSubmitClick,
-    submitText,
-    submitButtonCloseText,
-    defaultButtonCloseText,
-    shouldRenderCloseButton,
-    closeOnEsc,
     onClose,
     isHandheld,
   } = props
@@ -120,6 +123,8 @@ let Modal: React.FC<TProps> = (props) => {
           <ModalContent size={size}>
             {renderHeader && renderHeader({
               ...props,
+              size,
+              heading,
               children: heading as React.ReactChild,
             })}
             {shouldRenderCloseIcon && (
@@ -133,36 +138,13 @@ let Modal: React.FC<TProps> = (props) => {
                 />}
               />
             )}
-            { renderContent && renderContent(props) }
+            { renderContent && renderContent({ ...props, size }) }
             { footer || defaultFooter }
           </ModalContent>
         </Overlay>
       </GlobalStylesScope>
     </Portal>
   )
-}
-
-Modal.defaultProps = {
-  heading: '',
-  renderHeader: ({ heading, size }: TProps) => (heading ? (
-    <Header size={size}>
-      <H4>{heading}</H4>
-    </Header>
-  ) : null),
-  renderContent: (props: any) => <Content {...props} />,
-  footer: null,
-  size: 'wide',
-  closeOnOutsideClick: true,
-  closeOnEsc: true,
-  shouldRenderCloseIcon: true,
-  isOnBottom: false,
-  scrollFix: true,
-  submitText: 'Продолжить',
-  submitButtonCloseText: 'Отменить',
-  defaultButtonCloseText: 'Закрыть',
-  shouldRenderCloseButton: true,
-}
-
-Modal = React.memo(Modal)
+})
 
 export default withMedia(Modal)
