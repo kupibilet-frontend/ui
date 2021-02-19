@@ -77,6 +77,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-onclickoutside": "^6.7.3",
     "@types/react-portal": "^4.0.2",
+    "@types/react-router-dom": "^5.1.7",
     "@types/redux-form": "^7.0.4",
     "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
