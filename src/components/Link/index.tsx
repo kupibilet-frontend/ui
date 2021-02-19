@@ -1,38 +1,38 @@
-// @flow
-import * as React from 'react'
-import type { Element } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import style from 'utils/link'
 
 import { PaddingWrap } from './styled'
 
-const cloneIconWithSize = (iconNode) => (
+const cloneIconWithSize = (iconNode: React.ReactElement): JSX.Element => (
   React.cloneElement(iconNode, {
     size: iconNode.props.size || 'normal',
   })
 )
 
-type Props = {
+interface TProps {
   /**
     Чаще всего текст ссылки
   */
-  children: React.Node,
+  children: React.ReactElement | string,
   /**
     Иконка слева от текста
   */
-  leftIcon?: Element<*>,
+  leftIcon?: React.ReactElement,
   /**
     Иконка справа от текста
   */
-  rightIcon?: Element<*>,
+  rightIcon?: React.ReactElement,
   /**
     Адрес ссылки. Если не передан, рендерится <span>
   */
   href?: string,
+  onClick?: () => void,
 }
 
-export const renderIcon = (icon: Element<*> | null = null, isLeft: boolean = false) => {
+function renderIcon(icon: React.ReactElement | null = null, isLeft = false): JSX.Element | null {
   if (!icon) return null
+
   return (
     <PaddingWrap isLeft={isLeft}>
       {cloneIconWithSize(icon)}
@@ -44,29 +44,32 @@ export const renderIcon = (icon: Element<*> | null = null, isLeft: boolean = fal
  * Ссылки могут содержать текст и иконку рядом с текстом. Если вам нужно использовать Link
  * из React Router, возьмите компонент RouterLink
  */
+const Link = React.memo((props: TProps) => {
+  const {
+    children,
+    href = '',
+    leftIcon = null,
+    rightIcon = null,
+    ...rest
+  } = props
 
-const Link = ({ children, href, leftIcon, rightIcon, ...props }: Props) => {
   const LinkComponent = href ? 'a' : 'span'
 
   return (
-    <LinkComponent href={href} {...props}>
+    <LinkComponent href={href} {...rest}>
       {renderIcon(leftIcon, true)}
       {children}
       {renderIcon(rightIcon)}
     </LinkComponent>
   )
-}
-
-Link.defaultProps = {
-  href: null,
-  leftIcon: null,
-  rightIcon: null,
-}
+})
 
 const StyledLink = styled(Link)`
   ${style}
   display: inline-flex;
   align-items: center;
 `
+
+export { renderIcon }
 
 export default StyledLink
