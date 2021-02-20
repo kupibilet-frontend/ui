@@ -8,7 +8,7 @@ import RenderedComponent from './RenderedComponent'
 export interface TButtonProps {
   size?: BUTTON_SIZES_NAMES,
   variant?: TButtonVariant,
-  children?: React.ReactChild,
+  children?: React.ReactElement | React.ReactChild | string,
   disabled?: boolean,
   icon?: TIconArg,
   leftIcon?: TIconArg,
