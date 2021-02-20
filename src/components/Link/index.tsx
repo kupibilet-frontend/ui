@@ -44,7 +44,7 @@ function renderIcon(icon: React.ReactElement | null = null, isLeft = false): JSX
  * Ссылки могут содержать текст и иконку рядом с текстом. Если вам нужно использовать Link
  * из React Router, возьмите компонент RouterLink
  */
-const Link = React.memo((props: TProps) => {
+const Link = (props: TProps) => {
   const {
     children,
     href = '',
@@ -62,7 +62,7 @@ const Link = React.memo((props: TProps) => {
       {renderIcon(rightIcon)}
     </LinkComponent>
   )
-})
+}
 
 const StyledLink = styled(Link)`
   ${style}
