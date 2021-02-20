@@ -17,8 +17,7 @@ export interface TButtonProps {
   neighboringInGroup?: TNeighboringInGroupType,
   href?: string,
   target?: string,
-
-  onClick?: (...args: any[]) => void,
+  onClick?: (event: Event) => void,
 }
 
 
