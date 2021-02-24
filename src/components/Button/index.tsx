@@ -5,10 +5,10 @@ import cloneIconWithSize from './cloneIconWithSize'
 import { BUTTON_SIZES_NAMES, TButtonVariant, TIconArg, TNeighboringInGroupType } from './types'
 import RenderedComponent from './RenderedComponent'
 
-interface TProps {
+export interface TButtonProps {
   size?: BUTTON_SIZES_NAMES,
   variant?: TButtonVariant,
-  children?: React.ReactChildren | string,
+  children?: React.ReactElement | React.ReactChild | string,
   disabled?: boolean,
   icon?: TIconArg,
   leftIcon?: TIconArg,
@@ -17,6 +17,7 @@ interface TProps {
   neighboringInGroup?: TNeighboringInGroupType,
   href?: string,
   target?: string,
+  onClick?: (event: Event) => void,
 }
 
 
@@ -31,7 +32,7 @@ const Button = ({
   isBlock = false,
   neighboringInGroup = null,
   ...restProps
-}: TProps): JSX.Element => (
+}: TButtonProps): JSX.Element => (
   <RenderedComponent
     neighboringInGroup={neighboringInGroup}
     size={size}

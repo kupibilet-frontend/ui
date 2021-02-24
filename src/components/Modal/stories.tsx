@@ -1,11 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { select, boolean } from '@storybook/addon-knobs'
+// @ts-ignore
 import updateKnob from 'storybook/updateKnob'
 import styled from 'styled-components'
 import Modal from 'components/Modal'
 import Button from 'components/Button'
 import _get from 'lodash/get'
+import { BUTTON_SIZES_NAMES } from 'components/Button/types'
 
 const isOpen = () => boolean('isOpen', _get(process, 'env.NODE_ENV') !== 'test')
 const onClick = () => updateKnob('isOpen', 'boolean', true)
@@ -20,14 +22,14 @@ const FooterWrapper = styled.div`
 const footerContent = (
   <FooterWrapper>
     <Button
-      size="large"
+      size={BUTTON_SIZES_NAMES.large}
       onClick={onClose}
     >
       Отправить
     </Button>
     <Button
       variant="link"
-      size="large"
+      size={BUTTON_SIZES_NAMES.large}
       onClick={onClose}
     >
       Отменить

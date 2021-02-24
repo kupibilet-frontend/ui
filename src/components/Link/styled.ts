@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const PaddingWrap = styled.span`
+interface TPaddingWrapProps {
+  isLeft?: boolean,
+}
+
+export const PaddingWrap = styled.span<TPaddingWrapProps>`
   display: inline-flex;
   align-self: center;
   justify-content: center;

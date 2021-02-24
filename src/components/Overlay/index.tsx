@@ -1,9 +1,9 @@
-// @flow
-import React, { Component } from 'react'
-import type { Element } from 'react'
+import React, { MouseEvent } from 'react'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
 import Scrollfix from 'components/Scrollfix'
+
+import { TWithMediaProps } from 'utils/types'
 
 import {
   Wrapper,
@@ -13,19 +13,19 @@ import {
 
 export { OVERLAY_Z_INDEX } from './styled'
 
-type Props = {
-  closePortal: (Event) => void,
+interface TProps extends TWithMediaProps {
+  closePortal: () => void,
   isOnBottom: boolean,
-  children: Element<*>,
+  children: React.ReactElement,
   scrollFix?: boolean,
 }
 
-class Overlay extends Component<Props, void> {
+class Overlay extends React.PureComponent<TProps> {
   static defaultProps = {
     scrollFix: true,
   }
 
-  stopPropagation = (e) => {
+  stopPropagation = (e: MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
   }
 

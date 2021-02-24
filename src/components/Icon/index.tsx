@@ -6,7 +6,7 @@ import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import { IconSvg, IconWrapper, PaidIcon } from './styled'
 import { ICON_SIZES } from './consts'
 
-interface TIconProps {
+export interface TIconProps {
   name: string,
   size?: ICON_SIZES,
   prefix?: string,
@@ -18,6 +18,7 @@ interface TIconProps {
   rotate?: string | boolean,
   currency?: string,
   theme: DefaultTheme,
+  onClick?: () => void,
 }
 
 const Icon = ({
@@ -31,9 +32,14 @@ const Icon = ({
   paid = false,
   currency = 'RUB',
   fill = COLOR_NAMES.miscDarker,
+  onClick,
   ...restProps
 }: TIconProps): JSX.Element => (
-  <IconWrapper striked={striked} paid={paid}>
+  <IconWrapper
+    striked={striked}
+    paid={paid}
+    onClick={onClick}
+  >
     <IconSvg
       size={size}
       name={name}
