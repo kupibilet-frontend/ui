@@ -15,12 +15,13 @@ export default css`
   padding-bottom: 1rem;
   flex-direction: row;
   outline: none;
+  width: 100%;
 }
 
 .DayPicker-Months {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   outline: none;
 }
 
@@ -138,7 +139,7 @@ export default css`
   color: ${({ theme }) => theme.color.textDarkest};
   box-sizing: border-box;
   display: block;
-  width: 4%;
+  width: 14.3%;
   height: 45px;
   min-width: 42px;
   max-width: 52px;
