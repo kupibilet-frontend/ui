@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './theme'
 
@@ -14,7 +13,7 @@ export const GlobalStylesScope = styled.div`
 `
 
 interface TProps {
-  children: React.ReactNode,
+  children: React.ReactChild,
   [key: string]: any,
 }
 
@@ -26,19 +25,5 @@ const ThemeAndScopedStylesProvider = ({ children, ...props }: TProps): JSX.Eleme
     </GlobalStylesScope>
   </ThemeProvider>
 )
-
-ThemeAndScopedStylesProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-  theme: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({
-      font: PropTypes.string,
-    }),
-  ]),
-}
-
-ThemeAndScopedStylesProvider.defaultProps = {
-  theme: defaultTheme,
-}
 
 export default ThemeAndScopedStylesProvider
