@@ -1,5 +1,4 @@
-// @flow
-import * as React from 'react'
+import React from 'react'
 import {
   RadioLabel,
   StyledRadio,
@@ -7,16 +6,10 @@ import {
   LabelText,
 } from './styled'
 
-const DEFAULT_PROPS = {
-  disabled: false,
-  className: '',
-  checked: false,
-  onChange: () => null,
-}
 
 export type TValue = string | number | boolean
 
-type TProps = {
+interface TProps {
   /**
   * Значение опции
   */
@@ -24,12 +17,11 @@ type TProps = {
   /**
   * Отображаемая подпись опции
   */
-  label: React.Node,
+  label: React.ReactNode,
   /**
   * Недоступность выбора опции
   */
   disabled?: boolean,
-  className?: string,
   /**
   * Выбрана ли опция
   */
@@ -37,31 +29,31 @@ type TProps = {
   /**
   * Функция, срабатывающая при выборе опции. Принимает значение опции
   */
-  onChange?: (TValue) => void,
+  onChange?: (value: TValue) => void,
 }
 
 /**
  * Компонент для выбора опции
  */
 
-const Radio = (props: TProps) => {
+const Radio = (props: TProps): JSX.Element => {
   const {
     value,
     label,
-    disabled,
-    className,
-    checked,
-    onChange,
+    disabled = false,
+    checked = false,
+    onChange = () => null,
   } = props
 
   return (
-    <RadioLabel disabled={disabled} className={className}>
+    <RadioLabel disabled={disabled}>
       <StyledRadio
         disabled={disabled}
         checked={checked}
       />
       <RadioInput
         {...props}
+        value={value.toString()}
         type="radio"
         checked={checked}
         onChange={() => onChange(value)}
@@ -72,7 +64,5 @@ const Radio = (props: TProps) => {
     </RadioLabel>
   )
 }
-
-Radio.defaultProps = DEFAULT_PROPS
 
 export default Radio

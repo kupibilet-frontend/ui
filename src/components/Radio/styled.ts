@@ -1,7 +1,15 @@
 import styled, { css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
+import { TTheme } from 'components/ThemeProvider/types'
 
-const getBorderColor = ({ theme, checked, disabled }) => {
+
+interface TStyledRadioProps {
+  disabled: boolean,
+  checked: boolean,
+  theme: TTheme,
+}
+
+const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (checked) {
     return theme.color.primaryDark
   } else if (disabled) {
@@ -11,9 +19,9 @@ const getBorderColor = ({ theme, checked, disabled }) => {
   return theme.color.misc
 }
 
-const getBoxShadow = (props) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
+const getBoxShadow = (props: TStyledRadioProps) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
 
-const getRadioBackground = ({ theme, checked, disabled }) => {
+const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (checked) {
     return theme.color.primaryDark
   } else if (disabled) {
@@ -27,7 +35,7 @@ export const RadioInput = styled.input`
   display: none;
 `
 
-export const StyledRadio = styled.div`
+export const StyledRadio = styled.div<TStyledRadioProps>`
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -55,7 +63,12 @@ export const StyledRadio = styled.div`
   };
 `
 
-export const LabelText = styled.span`
+
+interface TLabelTextProps {
+  disabled: boolean,
+}
+
+export const LabelText = styled.span<TLabelTextProps>`
   ${switchTransition};
   transition-property: color;
   margin-left: 6px;
@@ -65,7 +78,11 @@ export const LabelText = styled.span`
   )}
 `
 
-export const RadioLabel = styled.label`
+interface TRadioLabelProps {
+  disabled: boolean,
+}
+
+export const RadioLabel = styled.label<TRadioLabelProps>`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
   display: inline-flex;
   align-items: center;
