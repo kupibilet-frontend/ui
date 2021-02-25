@@ -1,22 +1,22 @@
-// @flow
-import React from 'react'
-import type { Node } from 'react'
+import React, { ReactElement } from 'react'
 import { TogglerWrapper, ItemsWrapper, StyledError } from './styled'
 
-type Props = {
+export type TVariant = 'primary' | 'secondary'
+
+type TProps = {
   /**
   * Для указания доступных опций используется компонент <TogglerItem />
   */
-  children: Node,
+  children: ReactElement[],
   /**
   * Функция, срабатывающая при выборе опции. Принимает значение опции
   */
-  onChange?: (string) => void,
+  onChange?: (value: string) => void,
   /**
   * Функция, срабатывающая при смене фокуса на элементах.
     Используется для правильного срабатывания ReduxForm touched props и корректной валидации
   */
-  onBlur?: (Event) => void,
+  onBlur?: (event: Event) => void,
    /**
   * Текущее значение компонента
   */
@@ -32,16 +32,7 @@ type Props = {
   /**
    * Вариант контрола для стилизации
    */
-  variant?: 'primary' | 'secondary',
-}
-
-const DEFAULT_PROPS = {
-  name: '',
-  errorMessage: '',
-  onChange: () => null,
-  onBlur: () => null,
-  currentValue: '',
-  variant: 'primary',
+  variant?: TVariant,
 }
 
 /**
@@ -50,26 +41,28 @@ const DEFAULT_PROPS = {
 
 const TogglerGroup = ({
   children,
-  onChange,
-  onBlur,
-  currentValue,
-  errorMessage,
-  name,
+  onChange = () => null,
+  onBlur = () => null,
+  currentValue = '',
+  errorMessage = '',
+  name = '',
+  variant = 'primary',
   ...props
-}: Props) => {
+}: TProps) => {
   const [isFocused, setFocus] = React.useState(false)
 
   return (
     <TogglerWrapper {...props}>
-      <ItemsWrapper hasError={Boolean(errorMessage)} isFocused={isFocused}>
-        {React.Children.map(children, (child) => (
-          React.cloneElement(child, {
+      <ItemsWrapper hasError={Boolean(errorMessage)}>
+        {React.Children.map(children, (element: ReactElement) => (
+          React.cloneElement(element, {
             onChange,
             onBlur,
             currentValue,
             errorMessage,
             name,
             setFocus,
+            variant,
             ...props,
           })
         ))}
@@ -83,6 +76,6 @@ const TogglerGroup = ({
   )
 }
 
-TogglerGroup.defaultProps = DEFAULT_PROPS
+// TogglerGroup.defaultProps = DEFAULT_PROPS
 
 export default TogglerGroup

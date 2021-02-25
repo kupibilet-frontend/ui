@@ -1,8 +1,15 @@
 import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import Text from 'components/Typography/Text'
+import { TVariant } from '../TogglerGroup'
 
-export const StyledWrapper = styled(Text)`
+
+interface TStyledWrapperProps {
+  variant: TVariant,
+  isSelected: boolean,
+}
+
+export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   padding: 9px 14px 9px 14px;
   cursor: pointer;
   text-align: center;
@@ -67,9 +74,12 @@ export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
     }
   }
 `
+interface TItemWrapperProps {
+  isSelected: boolean,
+}
 
 // add external container for managing styles
-export const ItemWrapper = styled.div`
+export const ItemWrapper = styled.div<TItemWrapperProps>`
   position: relative;
   flex: 1 1 auto;
   width: 0;

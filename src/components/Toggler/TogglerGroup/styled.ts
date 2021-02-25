@@ -6,7 +6,12 @@ export const TogglerWrapper = styled.div`
   position: relative;
 `
 
-export const ItemsWrapper = styled.div`
+interface TItemsWrapperProps {
+  hasError: boolean,
+  // isFocused: boolean,
+}
+
+export const ItemsWrapper = styled.div<TItemsWrapperProps>`
   display: flex;
   position: relative;
   justify-content: stretch;

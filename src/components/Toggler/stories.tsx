@@ -1,20 +1,15 @@
 // @flow
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { text } from '@storybook/addon-knobs'
-import updateKnob from 'storybook/updateKnob'
 import { TogglerItem, TogglerGroup } from 'components/Toggler'
 
-const onChange = (value) => {
-  updateKnob('currentValue', 'text', value)
-}
+// @ts-ignore, TODO: add storybook folder to typescript settings?
+import updateKnob from 'storybook/updateKnob'
 
-const onSelectedTogglerChange = (value) => {
-  updateKnob('currentSelectedValue', 'text', value)
-}
-
-export const GenderToggler = () => {
-  const currentValue = text('currentValue', '')
+export const GenderToggler = (): ReactNode => {
+  const currentValue = text('currentValueGender', '')
   const errorMessage = text('errorMessage', '')
+  const onChange = (value: string) => updateKnob('currentValueGender', 'text', value)
 
   return (
     <TogglerGroup
@@ -37,9 +32,10 @@ GenderToggler.story = {
   name: 'Gender Toggler',
 }
 
-export const ManyOptionsToggler = () => {
-  const currentValue = text('currentValue', '')
+export const ManyOptionsToggler = (): ReactNode => {
+  const currentValue = text('currentValueManyOptions', '')
   const errorMessage = text('errorMessage', '')
+  const onChange = (value: string) => updateKnob('currentValueManyOptions', 'text', value)
 
   return (
     <TogglerGroup
@@ -68,14 +64,15 @@ ManyOptionsToggler.story = {
   name: 'Toggler with many options',
 }
 
-export const SelectedToggler = () => {
-  const currentValue = text('currentSelectedValue', '1')
+export const SelectedToggler = (): ReactNode => {
+  const currentValue = text('currentValueSelected', '1')
   const errorMessage = text('errorMessage', '')
+  const onChange = (value: string) => updateKnob('currentValueSelected', 'text', value)
 
   return (
     <TogglerGroup
       currentValue={currentValue}
-      onChange={onSelectedTogglerChange}
+      onChange={onChange}
       errorMessage={errorMessage}
       name="number"
     >
@@ -96,9 +93,10 @@ SelectedToggler.story = {
   name: 'Toggler with selected option',
 }
 
-export const FailedToggler = () => {
-  const currentValue = text('currentValue', '')
+export const FailedToggler = (): ReactNode => {
+  const currentValue = text('currentValueFailed', '')
   const errorMessage = text('errorFailedMessage', 'Выберите значение')
+  const onChange = (value: string) => updateKnob('currentValueFailed', 'text', value)
 
   return (
     <TogglerGroup
@@ -124,9 +122,10 @@ FailedToggler.story = {
   name: 'Toggler with error',
 }
 
-export const SecondaryToggler = () => {
-  const currentValue = text('currentValue', 'none')
+export const SecondaryToggler = (): ReactNode => {
+  const currentValue = text('currentValueSecondary', 'none')
   const errorMessage = text('errorMessage', '')
+  const onChange = (value: string) => updateKnob('currentValueSecondary', 'text', value)
 
   return (
     <TogglerGroup
@@ -153,9 +152,10 @@ SecondaryToggler.story = {
   name: 'Secondary toggler',
 }
 
-export const TooltipToggler = () => {
-  const currentValue = text('currentValue', 'none')
+export const TooltipToggler = (): ReactNode => {
+  const currentValue = text('currentValueTooltip', 'none')
   const errorMessage = text('errorMessage', '')
+  const onChange = (value: string) => updateKnob('currentValueTooltip', 'text', value)
 
   return (
     <TogglerGroup
