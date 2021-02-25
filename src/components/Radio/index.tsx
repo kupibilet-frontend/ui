@@ -30,6 +30,7 @@ interface TProps {
   * Функция, срабатывающая при выборе опции. Принимает значение опции
   */
   onChange?: (value: TValue) => void,
+  className?: string,
 }
 
 /**
@@ -40,13 +41,14 @@ const Radio = (props: TProps): JSX.Element => {
   const {
     value,
     label,
+    className = '',
     disabled = false,
     checked = false,
     onChange = () => null,
   } = props
 
   return (
-    <RadioLabel disabled={disabled}>
+    <RadioLabel disabled={disabled} className={className}>
       <StyledRadio
         disabled={disabled}
         checked={checked}
