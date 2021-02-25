@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 
-import { TTheme } from 'components/ThemeProvider/types'
 import { switchTransition } from 'utils/transitions'
 import { floatFromTop } from 'utils/animations'
 import { borderRadiusSmall } from 'utils/borderRadius'
@@ -14,7 +13,6 @@ export const CheckboxInput = styled.input`
 export const fadeInDown = floatFromTop
 
 interface TIconWrapProps {
-  theme: TTheme,
   checked: boolean,
 }
 
@@ -26,7 +24,6 @@ export const IconWrap = styled.span<TIconWrapProps>`
 `
 
 interface TStyledCheckboxProps {
-  theme: TTheme,
   checked: boolean,
   disabled: boolean,
   classname: string,
@@ -48,7 +45,6 @@ export const StyledCheckbox = styled.span<TStyledCheckboxProps>`
 `
 
 interface TLabelTextProps {
-  theme: TTheme,
   disabled: boolean,
 }
 
@@ -63,7 +59,6 @@ export const LabelText = styled.span<TLabelTextProps>`
 `
 
 interface TCheckboxLabelProps {
-  theme: TTheme,
   disabled: boolean,
 }
 

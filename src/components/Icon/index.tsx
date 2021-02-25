@@ -1,8 +1,8 @@
 import React from 'react'
-import { withTheme } from 'styled-components'
+import { DefaultTheme, withTheme } from 'styled-components'
 import cn from 'classnames'
 
-import { COLOR_NAMES, TTheme } from 'components/ThemeProvider/types'
+import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import { IconSvg, IconWrapper, PaidIcon } from './styled'
 import { ICON_SIZES } from './consts'
 
@@ -17,7 +17,7 @@ export interface TIconProps {
   paid?: boolean
   rotate?: string | boolean,
   currency?: string,
-  theme: TTheme,
+  theme: DefaultTheme,
   onClick?: () => void,
 }
 

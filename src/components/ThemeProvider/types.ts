@@ -70,10 +70,7 @@ interface TColor {
   [COLOR_NAMES.miscLight]: string,
   [COLOR_NAMES.miscLighter]: string,
   [COLOR_NAMES.miscLightest]: string,
+  [key: string]: string,
 }
 
-interface TTheme {
-  color: TColor
-}
-
-export { COLOR_NAMES, TColor, TTheme }
+export { COLOR_NAMES, TColor }
