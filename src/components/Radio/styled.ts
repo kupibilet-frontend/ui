@@ -1,12 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
-import { TTheme } from 'components/ThemeProvider/types'
 
 
 interface TStyledRadioProps {
   disabled: boolean,
   checked: boolean,
-  theme: TTheme,
+  theme: DefaultTheme,
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
