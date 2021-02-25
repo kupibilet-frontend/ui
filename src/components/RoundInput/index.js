@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react'
 import type { fieldMetaPropTypes } from 'redux-form'
-import { IconWrap } from 'components/Input'
+import { IconWrap } from 'components/Input/styled'
 
 import { StyledInputWrapper, StyledError, SuccessMessage, StyledInnerInput } from './styled'
 

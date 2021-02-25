@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { InputWrapper, Error, InnerInput } from 'components/Input'
+import { InputWrapper, Error, InnerInput } from 'components/Input/styled'
 
 export const SIZES = {
   small: 12,

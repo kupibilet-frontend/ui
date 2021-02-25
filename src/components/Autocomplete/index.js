@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import Autosuggest from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
-import type { controlsGroupProps } from 'components/ControlsGroup'
+import type { TControlsGroupProps } from 'components/ControlsGroup/types'
 
 import style, { SuggestionsContainer } from './styled'
 
@@ -39,7 +39,7 @@ type Section = {}
 type Suggestion = {}
 type onChange = (Event, { newValue: string, method: string }) => void
 
-type Props = controlsGroupProps & {
+type Props = TControlsGroupProps & {
   forceSuggestedValue: boolean,
   suggestions: Suggestion[] | Section[],
 

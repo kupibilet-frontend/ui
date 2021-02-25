@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import { Error } from 'components/Input'
+import { Error } from 'components/Input/styled'
 
 export const TogglerWrapper = styled.div`
   position: relative;

@@ -1,81 +1,17 @@
-import styled from 'styled-components'
+import React from 'react'
+import styled, { DefaultTheme, css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import placeholder from 'utils/placeholder'
+import {
+  TEXTAREA_PADDINGS,
+  ICON_PADDINGS,
+  ICON_GROUP_PADDINGS,
+  SIZE,
+  TYPOGRAPHY,
+  INPUT_HEIGHT,
+} from './consts'
+import { TNeighboringInGroup, TInputSize } from './types'
 
-
-const inputBorderColor = (props) => {
-  const { active, theme, disabled } = props
-  if (active) {
-    return theme.color.primary
-  } else if (disabled) {
-    return theme.color.miscLighter
-  }
-  return theme.color.misc
-}
-
-const TEXTAREA_PADDINGS = {
-  large: 10,
-  normal: 8,
-  small: 5,
-}
-const ICON_PADDINGS = {
-  large: {
-    outer: '10px',
-    inner: '8px',
-  },
-  normal: {
-    outer: '7px',
-    inner: '5px',
-  },
-  small: {
-    outer: '7px',
-    inner: '5px',
-  },
-}
-
-const ICON_GROUP_PADDINGS = {
-  large: {
-    outer: '10px',
-    inner: '3px',
-  },
-  normal: {
-    outer: '7px',
-    inner: '3px',
-  },
-  small: {
-    outer: '7px',
-    inner: '3px',
-  },
-}
-
-const SIZE = {
-  large: 14,
-  normal: 11,
-  small: 8,
-}
-
-const TYPOGRAPHY = {
-  large: 18,
-  normal: 16,
-  small: 16,
-}
-
-const INPUTHEIGHT = {
-  large: '42px',
-  normal: '36px',
-  small: '30px',
-}
-
-const displayIndicator = ({ active, success, error }) => {
-  if (active) {
-    return 'none'
-  }
-  if (success || error) {
-    return 'block'
-  }
-  return 'none'
-}
 
 const Error = styled.span`
   position: absolute;
@@ -93,8 +29,24 @@ const Error = styled.span`
   background-color: ${({ theme }) => theme.color.fail};
 `
 
-/* eslint-disable react/prop-types */
-const InnerInput = styled.input`
+interface TCommonInnerInputProps<T> {
+  theme: DefaultTheme,
+  inputSize: 'large' | 'normal' | 'small',
+  neighboringInGroup: TNeighboringInGroup,
+  type: string,
+  placeholder: string,
+  hasInnerGroup?: boolean,
+  leftIcon?: React.ReactNode,
+  rightIcon?: React.ReactNode,
+  success?: boolean,
+  disabled?: boolean,
+  error?: boolean,
+  onBlur?: (event: React.FocusEvent<T>) => void,
+  onFocus?: (event: React.FocusEvent<T>) => void,
+}
+
+function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
+  return css`
   position: relative;
   flex-grow: 1;
   flex-shrink: 1;
@@ -102,32 +54,27 @@ const InnerInput = styled.input`
   height: 100%;
   line-height: normal;
   border: none;
-  min-height: ${({ size }) => INPUTHEIGHT[size]};
+  min-height: ${INPUT_HEIGHT[props.inputSize]};
   font-family: inherit;
 
-  ${({ size }) => (size === 'large'
-    ? 'letter-spacing: -0.1px'
-    : null
-  )
-};
+  ${props.inputSize === 'large' ? 'letter-spacing: -0.1px' : null};
 
-  padding-left: ${({ size, leftIcon }) => (leftIcon
-    ? '0'
-    : `${SIZE[size]}px`
-  )};
-  padding-right: ${({ size, rightIcon }) => (rightIcon
-    ? '0'
-    : `${SIZE[size]}px`
-  )};
-  font-size: ${({ size }) => TYPOGRAPHY[size]}px;
-  color: ${({ theme }) => theme.color.textDarker};
+  padding-left: ${props.leftIcon ? '0' : `${SIZE[props.inputSize]}px`};
+
+  padding-right: ${props.rightIcon ? '0' : `${SIZE[props.inputSize]}px`};
+  
+  font-size: ${TYPOGRAPHY[props.inputSize]}px;
+  color: ${props.theme.color.textDarker};
+
   background-color: transparent;
-  ${({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
-    if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup)) {
+  
+  ${(({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
+    if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup as string)) {
       return `border-right: 1px solid ${disabled ? theme.color.miscLightest : theme.color.misc};`
     }
-  }}
-  ${({ neighboringInGroup, success, error }) => {
+  })(props)}
+
+  ${(({ neighboringInGroup, success, error }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left
     } else if (neighboringInGroup === 'left' || success || error) {
@@ -137,32 +84,63 @@ const InnerInput = styled.input`
     }
 
     return ''
-  }}
+  })(props)}
 
-  ${placeholder`
+  &::placeholder {
     color: ${({ theme }) => theme.color.miscDark};
-  `}
+  }
 
   &:focus {
     outline-style: none;
   }
 
   &:disabled {
-    ${placeholder`
+    &::placeholder {
       color: ${({ theme }) => theme.color.misc};
-  `}
+  }
   }
   `
+}
 
-const InnerTextarea = styled(InnerInput.withComponent('textarea'))`
-  ${({ size }) => (`
-      padding-top: ${TEXTAREA_PADDINGS[size]}px;
-      padding-bottom: ${TEXTAREA_PADDINGS[size]}px;
-    `
-  )}
+const InnerInput = styled.input<TCommonInnerInputProps<HTMLInputElement>>`
+  ${(props) => getCommonInputStyles(props)}
+`
+
+
+const InnerTextarea = styled.textarea<TCommonInnerInputProps<HTMLTextAreaElement>>`
+  ${(props) => getCommonInputStyles(props)}
+
+  ${({ inputSize }) => (`
+  padding-top: ${TEXTAREA_PADDINGS[inputSize]}px;
+  padding-bottom: ${TEXTAREA_PADDINGS[inputSize]}px;
   `
+  )}
+  
+`
 
-const InputWrapper = styled.div`
+interface TInputWrapperProps {
+  active: boolean,
+  theme: DefaultTheme,
+  disabled: boolean,
+  neighboringInGroup: TNeighboringInGroup,
+  success: boolean,
+  error: boolean,
+}
+
+function getInputBorderColor(props: TInputWrapperProps) {
+  const { active, theme, disabled } = props
+
+  if (active) {
+    return theme.color.primary
+  } else if (disabled) {
+    return theme.color.miscLighter
+  }
+
+  return theme.color.misc
+}
+
+
+const InputWrapper = styled.div<TInputWrapperProps>`
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -186,7 +164,7 @@ const InputWrapper = styled.div`
     return ''
   }}
 
-  border: 1px solid ${inputBorderColor};
+  border: 1px solid ${getInputBorderColor};
   border-style: solid;
   ${({ active, theme }) => {
     if (active) {
@@ -195,7 +173,7 @@ const InputWrapper = styled.div`
   }}
 
   ${({ neighboringInGroup }) => {
-    if (['left', 'both'].includes(neighboringInGroup)) {
+    if (['left', 'both'].includes((neighboringInGroup || '').toString())) {
       return 'margin-left: -1px;'
     }
   }}
@@ -214,21 +192,46 @@ const InputWrapper = styled.div`
   .combined-inputs-group {
     height: 100%;
   }
-  `
+`
 
-const StatusIndicator = styled.div`
+interface TStatusIndicatorProps {
+  active: boolean,
+  success: boolean,
+  error: boolean,
+  theme: DefaultTheme,
+}
+
+function getDisplayIndicator({ active, success, error }: TStatusIndicatorProps) {
+  if (active) {
+    return 'none'
+  }
+  if (success || error) {
+    return 'block'
+  }
+  return 'none'
+}
+
+const StatusIndicator = styled.div<TStatusIndicatorProps>`
     position: absolute;
     top: -1px;
     left: -1px;
-    display: ${(props) => displayIndicator(props)};
+    display: ${(props) => getDisplayIndicator(props)};
     height: calc(100% + 2px);
     width: 2px;
     background-color: ${({ theme, success, error }) => (
     success && !error ? theme.color.success : theme.color.fail
   )};
-  `
+`
 
-const getIconWrapPaddings = ({ left, right, isGroup, size }) => {
+interface TGetIconWrapPaddingsProps {
+  left?: boolean,
+  right?: boolean,
+  isGroup: boolean,
+  size: TInputSize,
+  onMouseDown: React.MouseEventHandler<HTMLDivElement>,
+}
+
+function getIconWrapPaddings({ left, right, isGroup, size }: TGetIconWrapPaddingsProps) {
   if (left && isGroup) {
     return `
       padding-left: ${ICON_GROUP_PADDINGS[size].outer};
@@ -252,7 +255,7 @@ const getIconWrapPaddings = ({ left, right, isGroup, size }) => {
   }
 }
 
-const IconWrap = styled.div`
+const IconWrap = styled.div<TGetIconWrapPaddingsProps>`
   flex-grow: 0;
   flex-shrink: 0;
   height: 100%;
@@ -260,7 +263,7 @@ const IconWrap = styled.div`
   display: flex;
   vertical-align: top;
   align-items: center;
-  `
+`
 
 export {
   Error,
