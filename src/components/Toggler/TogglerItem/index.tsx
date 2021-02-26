@@ -27,7 +27,7 @@ const isSelectedStatusChange = (prevProps: TProps, nextProps: TProps) => {
   const isSelected = prevProps.value === prevProps.currentValue
   const isSelectedNext = prevProps.value === nextProps.currentValue
 
-  return isSelected !== isSelectedNext
+  return isSelected === isSelectedNext
 }
 
 const TogglerItem = React.memo(({
