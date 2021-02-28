@@ -22,6 +22,7 @@ type TProps = {
 }
 
 const ENTER_KEY_CODE = 13
+const ENTER_KEY = 'Enter'
 
 const isSelectedStatusChange = (prevProps: TProps, nextProps: TProps) => {
   const isSelected = prevProps.value === prevProps.currentValue
@@ -66,8 +67,8 @@ const TogglerItem = React.memo(({
   }
 
   const onKeyDownHandler = (event: React.KeyboardEvent<HTMLInputElement>): void => {
-    const keyCode = event.key || event.keyCode
-    if (keyCode === ENTER_KEY_CODE) {
+    const isEnterKeyDown = event.key === ENTER_KEY || event.keyCode === ENTER_KEY_CODE
+    if (isEnterKeyDown) {
       onChange(value)
     }
   }
