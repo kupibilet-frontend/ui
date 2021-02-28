@@ -69,8 +69,16 @@ export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
   position: absolute;
   z-index: -1;
   &:focus {
-    & + ${StyledWrapper} {
-      position: static;
+    & + ${StyledWrapper}::before{
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: ${({ checked }) => (checked ? '100%' : 'calc(100% + 1px)')};
+      top: 0;
+      left: 0;
+      border: 2px solid ${({ theme }) => theme.color.primaryDark}; 
+      pointer-events: none;
+      z-index: 2;
     }
   }
 `
@@ -83,9 +91,7 @@ export const ItemWrapper = styled.div<TItemWrapperProps>`
   position: relative;
   flex: 1 1 auto;
   width: 0;
-  ${({ isSelected }) => css`
-    z-index: ${isSelected ? 1 : 0};
-  `}
+  ${({ isSelected }) => (isSelected ? 'z-index: 1;' : '')}
   &:hover {
     z-index: 1;
   }
