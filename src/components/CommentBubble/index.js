@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react'
-import moment from '@kupibilet/moment'
+import moment from 'moment'
 import type { Node } from 'react'
 import {
   Bubble,

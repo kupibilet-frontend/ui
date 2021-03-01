@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import moment from '@kupibilet/moment'
+import moment from 'moment'
 import VisibilitySensor from 'react-visibility-sensor'
 
 type Props = {
