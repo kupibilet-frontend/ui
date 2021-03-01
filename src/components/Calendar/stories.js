@@ -1,12 +1,21 @@
 // @flow
 import React from 'react'
-import moment from '@kupibilet/moment'
+import moment from 'moment'
 import styled from 'styled-components'
 import { text } from '@storybook/addon-knobs'
 import updateKnob from 'storybook/updateKnob'
 import Calendar, { DocGenCalendar } from 'components/Calendar'
 import CalendarDay from 'components/CalendarDay'
 
+const weekdays = [
+  'Вс',
+  'Пн',
+  'Вт',
+  'Ср',
+  'Чт',
+  'Пт',
+  'Сб',
+]
 
 const ContainerWithFixedSize = styled.div`
   height: 365px;
@@ -48,10 +57,11 @@ const renderDay = (day) => (
   />
 )
 
-
 export const CalendarStory = () => (
   <ContainerWithFixedSize>
     <Calendar
+      weekdays={weekdays}
+      months={moment.months()}
       renderDay={renderDay}
       selectedDays={[text('from'), text('to')]}
       onDayClick={onDayClick}

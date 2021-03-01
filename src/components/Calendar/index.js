@@ -1,11 +1,11 @@
 // @flow
 import React from 'react'
-import moment from '@kupibilet/moment'
+import moment from 'moment'
 import { withMedia } from 'utils/media-queries'
 import Button from 'components/Button'
 import CalendarDay from 'components/CalendarDay'
 import MonthCaption from './parts/MonthCaption'
-import WeekdaysRow, { type TWeekdays } from './parts/WeekdaysRow'
+import WeekdaysRow from './parts/WeekdaysRow'
 
 import {
   StyledDayPicker,
@@ -40,7 +40,7 @@ type TProps = {
   /**
     Массив выбранных дней. Один или два дня в формате Timestamp
   */
-  selectedDays?: Array<number>,
+  selectedDays?: number[],
   /**
     Функция, рендерящая день, если нам нужно кастомное отображение дней.
     Например, вместе с ценами для календаря цен
@@ -54,7 +54,7 @@ type TProps = {
     Объект с названиями дней недели в формате { MONDAY: string, TUESDAY: string, ... }.
     Передаем сверху для локализации
   */
-  weekdays?: TWeekdays,
+  weekdays: string[],
   isMobile: boolean,
   /**
     Должен ли календарь скроллиться
@@ -67,16 +67,6 @@ type TNavbarProps = {
   onNextClick: () => void,
 }
 
-const WEEKDAYS_DEFAULT = {
-  MONDAY: 'Пн',
-  TUESDAY: 'Вт',
-  WEDNESDAY: 'Ср',
-  THURSDAY: 'Чт',
-  FRIDAY: 'Пт',
-  SATURDAY: 'Сб',
-  SUNDAY: 'Вс',
-}
-
 /**
  * Кадендарь позволяет выбрать одну дату или диапазон дат
  */
@@ -87,7 +77,6 @@ class Calendar extends React.PureComponent<TProps> {
     selectedDays: [],
     numberOfMonths: 2,
     renderDay: (day: Date) => <CalendarDay day={moment(day)} />,
-    weekdays: WEEKDAYS_DEFAULT,
   }
 
   getMaxVisibleMonth = (date: Date) => new Date(
@@ -176,8 +165,8 @@ class Calendar extends React.PureComponent<TProps> {
       onDayClick,
       renderDay,
       numberOfMonths,
-      weekdays,
       hasScrolling,
+      weekdays,
     } = this.props
 
     const modifiers: TCalendarModifiers = this.getModifires()
@@ -186,13 +175,10 @@ class Calendar extends React.PureComponent<TProps> {
     const maxVisibleMonth = this.getMaxVisibleMonth(today)
     const selectedDay = selectedDays[0] && new Date(selectedDays[0])
 
-    const { SUNDAY, ...restWeekdays } = weekdays
-    const weekdaysFromSunday = Object.values({ SUNDAY, ...restWeekdays })
-
     return (
       <DayPickerWrapper hasScrolling={hasScrolling}>
         <StyledDayPicker
-          weekdaysShort={weekdaysFromSunday}
+          weekdaysShort={weekdays}
           showWeekDays={!isMobile}
           modifiers={modifiers}
           month={!isMobile ? (selectedDay || today) : today}

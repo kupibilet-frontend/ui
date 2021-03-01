@@ -64,7 +64,7 @@
     "@babel/types": "^7.12.12",
     "@emotion/core": "^10.0.10",
     "@kupibilet/icons": "~5.5.14",
-    "@kupibilet/moment": "^0.0.3",
+    "moment": "^2.29.1",
     "@storybook/addon-docs": "^6.1.15",
     "@storybook/addon-knobs": "^6.1.15",
     "@storybook/addon-storyshots": "^6.1.15",
@@ -138,7 +138,7 @@
   },
   "peerDependencies": {
     "@kupibilet/icons": "~5.1.0",
-    "@kupibilet/moment": "^0.0.3",
+    "moment": "^2.29.1",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "polished": "^1.3.0",
