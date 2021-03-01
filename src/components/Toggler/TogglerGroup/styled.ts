@@ -8,7 +8,6 @@ export const TogglerWrapper = styled.div`
 
 interface TItemsWrapperProps {
   hasError: boolean,
-  // isFocused: boolean,
 }
 
 export const ItemsWrapper = styled.div<TItemsWrapperProps>`

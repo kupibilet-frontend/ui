@@ -76,6 +76,4 @@ const TogglerGroup = ({
   )
 }
 
-// TogglerGroup.defaultProps = DEFAULT_PROPS
-
 export default TogglerGroup
