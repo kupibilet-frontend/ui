@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import Text from 'components/Typography/Text'
-import { TVariant } from '../TogglerGroup'
+import { TVariant } from '../types'
 
 
 interface TStyledWrapperProps {
