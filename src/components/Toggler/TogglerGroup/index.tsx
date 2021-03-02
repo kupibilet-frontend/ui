@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react'
 import { TogglerWrapper, ItemsWrapper, StyledError } from './styled'
-
-export type TVariant = 'primary' | 'secondary'
+import { TVariant } from '../types'
 
 type TProps = {
   /**
@@ -48,7 +47,7 @@ const TogglerGroup = ({
   name = '',
   variant = 'primary',
   ...props
-}: TProps) => {
+}: TProps): JSX.Element => {
   const [isFocused, setFocus] = React.useState(false)
 
   return (

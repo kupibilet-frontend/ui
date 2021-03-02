@@ -1,6 +1,6 @@
 import React, { ReactNode, useMemo } from 'react'
 import Tooltip from 'components/Tooltip'
-import { TVariant } from '../TogglerGroup'
+import { TVariant } from '../types'
 import {
   StyledWrapper,
   HiddenRadio,
@@ -41,7 +41,7 @@ const TogglerItem = React.memo(({
   setFocus = () => null,
   onBlur,
   tooltipContent = null,
-}: TProps) => {
+}: TProps): JSX.Element => {
   const isSelected = useMemo(() => value === currentValue, [value, currentValue])
 
   const renderContent = (): ReactNode => (
