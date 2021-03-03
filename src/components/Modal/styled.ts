@@ -106,7 +106,7 @@ export const CloseIcon = styled(Button)<{ modalSize: ModalSize }>`
     }
 
     ${StyledIcon} {
-      fill: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.miscDarkest : theme.color.primaryDarkest)};
+      fill: ${({ theme }) => theme.color.primaryDarkest};
     }
   }
 `
