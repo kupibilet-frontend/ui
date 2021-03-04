@@ -69,14 +69,30 @@ const TooltipPortal = ({
   )
 }
 
-interface TTooltipProps {
+type TProps = {
+  /**
+  * Вложенный в тултип элемент
+  */
   children: ReactElement,
+  /**
+  * То, что будет отображаться в тултипе
+  */
   content: any,
+  /**
+  * Положение тултипа, относительно элемента
+  */
   placement: TPlacement,
+  /**
+  * Тултип цвета успеха
+  */
   success?: boolean,
+  /**
+  * Тултип цвета ошибки
+  */
   error?: boolean,
-  dotCentering?: boolean,
-  align?: string,
+  /**
+  * Тултип цвета ошибки
+  */
 }
 
 const getCoordinates = (node: RefObject<HTMLDivElement>): TCoordinates | undefined => {
@@ -91,15 +107,17 @@ const getCoordinates = (node: RefObject<HTMLDivElement>): TCoordinates | undefin
   }
 }
 
+/**
+ * Компонент для всплывающих при наведении подсказок
+ */
+
 const Tooltip = ({
   content,
   placement = 'bottom',
   success = false,
   error = false,
-  dotCentering = false,
-  align = '',
   children,
-}: TTooltipProps): JSX.Element => {
+}: TProps): JSX.Element => {
   const childRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpenStatus] = useState<boolean>(false)
   const [coords, setCoords] = useState<TCoordinates | undefined>(undefined)
