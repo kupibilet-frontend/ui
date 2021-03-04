@@ -1,75 +1,8 @@
 import React, { ReactElement, RefObject, useRef, useState, useEffect } from 'react'
-import { Portal } from 'react-portal'
-import { GlobalStylesScope } from 'components/ThemeProvider'
-import TextSmall from 'components/Typography/TextSmall'
+import TooltipPortal from './TooltipPortal'
 import { TCoordinates, TPlacement } from './types'
-import {
-  TooltipBackground,
-  TooltipContainer,
-  RelativeWrapper,
-  TooltipDot,
-  PositionWrapper,
-  PlacementWrapper,
-} from './styled'
 
-interface TPortalProps {
-  isOpen: boolean,
-  coords: TCoordinates | undefined,
-  placement: TPlacement,
-  content: any,
-  success?: boolean,
-  error?: boolean,
-}
-
-const TooltipPortal = ({
-  isOpen,
-  coords,
-  placement,
-  content,
-  success = false,
-  error = false,
-}: TPortalProps): JSX.Element | null => {
-  if (!content || !isOpen || !coords) return null
-
-  return (
-    <Portal>
-      <GlobalStylesScope>
-        <TooltipContainer
-          top={coords.top}
-          left={coords.left}
-          width={coords.width}
-          height={coords.height}
-          placement={placement}
-        >
-          <PositionWrapper>
-            <PlacementWrapper placement={placement}>
-              <RelativeWrapper
-                placement={placement}
-                width={coords.width}
-                height={coords.height}
-              >
-                <TooltipDot
-                  success={success}
-                  error={error}
-                />
-                <TooltipBackground
-                  success={success}
-                  error={error}
-                >
-                  <TextSmall>
-                    { content }
-                  </TextSmall>
-                </TooltipBackground>
-              </RelativeWrapper>
-            </PlacementWrapper>
-          </PositionWrapper>
-        </TooltipContainer>
-      </GlobalStylesScope>
-    </Portal>
-  )
-}
-
-type TProps = {
+export interface TProps {
   /**
   * Вложенный в тултип элемент
   */
@@ -77,7 +10,7 @@ type TProps = {
   /**
   * То, что будет отображаться в тултипе
   */
-  content: any,
+  content: React.ReactNode,
   /**
   * Положение тултипа, относительно элемента
   */
@@ -90,9 +23,6 @@ type TProps = {
   * Тултип цвета ошибки
   */
   error?: boolean,
-  /**
-  * Тултип цвета ошибки
-  */
 }
 
 const getCoordinates = (node: RefObject<HTMLDivElement>): TCoordinates | undefined => {
@@ -122,22 +52,20 @@ const Tooltip = ({
   const [isOpen, setOpenStatus] = useState<boolean>(false)
   const [coords, setCoords] = useState<TCoordinates | undefined>(undefined)
 
-  let hoverTimeout: ReturnType<typeof setTimeout>
+  const hoverTimeout = useRef<number>()
 
   useEffect(() => {
     setCoords(getCoordinates(childRef))
-    return () => {
-      clearTimeout(hoverTimeout)
-    }
+    return () => window.clearTimeout(hoverTimeout.current)
   }, [])
 
   const handleMouseLeave = (): void => {
-    clearTimeout(hoverTimeout)
+    window.clearTimeout(hoverTimeout.current)
     setOpenStatus(false)
   }
 
   const handleMouseEnter = (): void => {
-    hoverTimeout = setTimeout(() => {
+    hoverTimeout.current = window.setTimeout(() => {
       setCoords(getCoordinates(childRef))
       setOpenStatus(Boolean(hoverTimeout))
     }, 150)

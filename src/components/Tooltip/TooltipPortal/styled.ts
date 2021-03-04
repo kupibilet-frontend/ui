@@ -1,6 +1,6 @@
 import styled, { keyframes, DefaultTheme } from 'styled-components'
 import { transparentize } from 'polished'
-import { TPlacement, TCoordinates } from './types'
+import { TPlacement, TCoordinates } from '../types'
 
 const flexDirections = {
   top: 'column-reverse',
@@ -14,13 +14,13 @@ const arrival = keyframes`
   100% { opacity: 1; }
 `
 
-interface TTooltipProps {
+interface TTooltipCommonProps {
   error: boolean,
   success: boolean,
   theme: DefaultTheme,
 }
 
-const getBackgroundColor = ({ theme, error, success }: TTooltipProps): string => {
+const getBackgroundColor = ({ theme, error, success }: TTooltipCommonProps): string => {
   if (success) {
     return transparentize(0.03, theme.color.success)
   } else if (error) {
