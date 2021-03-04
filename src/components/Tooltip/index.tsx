@@ -79,12 +79,7 @@ interface TTooltipProps {
   align?: string,
 }
 
-type TTooltipState = {
-  isOpen: boolean,
-}
-
 const getCoordinates = (node: RefObject<HTMLDivElement>): TCoordinates | undefined => {
-  console.log('getCoordinates', node.current)
   if (node.current !== null) {
     const rect = node.current.getBoundingClientRect()
     return {
@@ -104,7 +99,7 @@ const Tooltip = ({
   dotCentering = false,
   align = '',
   children,
-}: TTooltipProps): JSX.Element[] => {
+}: TTooltipProps): JSX.Element => {
   const childRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpenStatus] = useState<boolean>(false)
   const [coords, setCoords] = useState<TCoordinates | undefined>(undefined)
@@ -130,26 +125,28 @@ const Tooltip = ({
     }, 150)
   }
 
-  return ([
-    <div
-      ref={childRef}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      key="tooltippedElement"
-      style={{ display: 'inline-block' }}
-    >
-      {children}
-    </div>,
-    <TooltipPortal
-      key="tooltipPortal"
-      coords={coords}
-      placement={placement}
-      isOpen={isOpen}
-      content={content}
-      success={success}
-      error={error}
-    />,
-  ])
+  return (
+    <>
+      <div
+        ref={childRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        key="tooltippedElement"
+        style={{ display: 'inline-block' }}
+      >
+        {children}
+      </div>
+      <TooltipPortal
+        key="tooltipPortal"
+        coords={coords}
+        placement={placement}
+        isOpen={isOpen}
+        content={content}
+        success={success}
+        error={error}
+      />
+    </>
+  )
 }
 
 export default Tooltip
