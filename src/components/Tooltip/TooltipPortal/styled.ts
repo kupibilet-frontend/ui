@@ -51,7 +51,7 @@ const PlacementWrapper = styled.div<TPlacementWrapper>`
 }
 `
 
-const TooltipDot = styled.div<TTooltipProps>`
+const TooltipDot = styled.div<TTooltipCommonProps>`
   width: 7px;
   height: 7px;
   margin: 2px;
@@ -59,7 +59,7 @@ const TooltipDot = styled.div<TTooltipProps>`
   background: ${(props) => getBackgroundColor(props)};
 `
 
-const TooltipBackground = styled.div<TTooltipProps>`
+const TooltipBackground = styled.div<TTooltipCommonProps>`
   min-height: 24px;
   max-height: 24px;
   min-width: 90px;
