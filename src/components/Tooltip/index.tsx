@@ -26,7 +26,7 @@ export interface TProps {
   /**
   * Проп для стилизации обертки контента тултипа
   */
-  className: string
+  className?: string
 }
 
 const getCoordinates = (node: RefObject<HTMLDivElement>): TCoordinates | undefined => {
@@ -51,7 +51,7 @@ const Tooltip = ({
   success = false,
   error = false,
   children,
-  className,
+  className = '',
 }: TProps): JSX.Element => {
   const childRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpenStatus] = useState<boolean>(false)
