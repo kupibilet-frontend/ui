@@ -23,6 +23,10 @@ export interface TProps {
   * Тултип цвета ошибки
   */
   error?: boolean,
+  /**
+  * Проп для стилизации обертки контента тултипа
+  */
+  className: string
 }
 
 const getCoordinates = (node: RefObject<HTMLDivElement>): TCoordinates | undefined => {
@@ -47,6 +51,7 @@ const Tooltip = ({
   success = false,
   error = false,
   children,
+  className,
 }: TProps): JSX.Element => {
   const childRef = useRef<HTMLDivElement>(null)
   const [isOpen, setOpenStatus] = useState<boolean>(false)
@@ -78,7 +83,7 @@ const Tooltip = ({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         key="tooltippedElement"
-        style={{ display: 'inline-block' }}
+        className={className}
       >
         {children}
       </div>
