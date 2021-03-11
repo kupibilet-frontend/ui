@@ -42,6 +42,7 @@ interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   children?: React.ReactElement[] | null,
   isTextarea?: boolean,
   rows?: number,
+  autoComplete?: 'no' | null,
 }
 
 type TNormalizedProps<T> = Required<TProps<T>>
@@ -70,6 +71,7 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     onFocus: props.onFocus || (() => null),
     innerRef: props.innerRef || null,
     rows: props.rows || 0,
+    autoComplete: props.autoComplete || null,
   }
 }
 
@@ -144,7 +146,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     onFocus,
     onBlur,
     innerRef,
-    ...restProps
+    autoComplete,
   } = normalizedProps
   const [isActive, setIsActive] = useState<boolean>(false)
   const innerInput = innerRef || useRef<T>(null)
@@ -209,6 +211,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
             <ControlsGroup className="combined-inputs-group">
               {React.Children.map(children, (child: React.ReactElement) => (
                 React.cloneElement(child, {
+                  autoComplete,
                   inputSize: size,
                   name: child.props.name,
                   hasInnerGroup: true,
