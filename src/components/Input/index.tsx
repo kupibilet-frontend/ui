@@ -209,7 +209,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
             <ControlsGroup className="combined-inputs-group">
               {React.Children.map(children, (child: React.ReactElement) => (
                 React.cloneElement(child, {
-                  ...restProps,
+                  ...props,
                   size,
                   name: child.props.name,
                   hasInnerGroup: true,
