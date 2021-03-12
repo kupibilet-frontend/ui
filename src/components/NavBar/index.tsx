@@ -1,14 +1,12 @@
-// @flow
-
-import * as React from 'react'
+import React from 'react'
 import { Wrap, Inner } from './styled'
 
-type TProps = {
-  className: string,
-  children: React.Node,
+export interface TProps {
+  className?: string,
+  children: React.ReactNode,
 }
 
-const MobileHorizontalScroll = ({ className, children }: TProps) => (
+const MobileHorizontalScroll = ({ className, children }: TProps): JSX.Element => (
   <Wrap className={className}>
     <Inner>
       {children}
@@ -17,7 +15,7 @@ const MobileHorizontalScroll = ({ className, children }: TProps) => (
 )
 
 
-export const NavBar = ({ children, className }: TProps) => (
+export const NavBar = ({ children, className }: TProps): JSX.Element => (
   <MobileHorizontalScroll className={className}>
     {children}
   </MobileHorizontalScroll>
