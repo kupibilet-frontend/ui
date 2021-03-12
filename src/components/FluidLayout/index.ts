@@ -27,6 +27,7 @@ const FluidSection = styled.div`
     width: 100%;
   `}
 `
+
 FluidSection.displayName = 'FluidSection'
 
 const Aside = styled.div`
@@ -39,9 +40,8 @@ const Aside = styled.div`
     width: auto;
     margin-left: 0;
   `}
-
-  ${({ beforeSection }) => beforeSection && 'order: 0;'}
 `
+
 Aside.displayName = 'Aside'
 
 const CONTAINER_MARGIN_HANDHELD = 18
