@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
-import mq from 'utils/media-queries'
+import { queries } from 'utils/media-queries'
+
 
 const fadeStyles = css`
   content: '';
@@ -45,7 +46,11 @@ export const Inner = styled.div`
   }
 `
 
-export const NavItem = styled.span`
+interface TNavItemProps {
+  isActive: boolean,
+}
+
+export const NavItem = styled.span<TNavItemProps>`
   display: inline-block;
   position: relative;
   color: ${({ theme }) => theme.color.primaryDarkest};
@@ -56,9 +61,9 @@ export const NavItem = styled.span`
   cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.color.textLighter};
 
-  ${mq.mobile`
+  @media ${queries.isMobile} {
     padding: 11px 9px;
-  `}
+  }
 
   &:first-child {
     padding-left: 0;
