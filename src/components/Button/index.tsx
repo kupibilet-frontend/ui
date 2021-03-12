@@ -18,6 +18,7 @@ export interface TButtonProps {
   href?: string,
   target?: string,
   onClick?: (event: Event) => void,
+  type?: string,
 }
 
 
