@@ -20,7 +20,7 @@ type TIconPressHandlerProp = ((
   event: TIconMouseEvent
 ) => void) | null
 
-interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
+export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   onChange?: (event: React.ChangeEvent<THTMLElement>) => void,
   value?: string,
   name?: string,
