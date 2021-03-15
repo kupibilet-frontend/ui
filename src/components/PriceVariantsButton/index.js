@@ -4,7 +4,13 @@ import type { Element } from 'react'
 import styled from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import Price from '../Typography/Price'
+
+const Price = styled.span`
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: ${({ theme }) => theme.color.secondaryDarker};
+`
 
 const Root = styled.div`
   display: inline-flex;
