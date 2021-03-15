@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Caption = styled.span`
+const TextXsUpper = styled.span`
   font-size: 11px;
   font-weight: 400;
   line-height: 16px;
@@ -8,4 +8,4 @@ const Caption = styled.span`
   text-transform: uppercase;
 `
 
-export default Caption
+export default TextXsUpper

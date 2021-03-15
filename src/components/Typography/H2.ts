@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import mq from 'utils/media-queries'
+import { queries } from 'utils/media-queries'
 
 const H2 = styled.h2`
   font-size: 38px;
@@ -7,11 +7,12 @@ const H2 = styled.h2`
   line-height: 38px;
   letter-spacing: -1px;
   margin: 0;
-  ${mq.handheld`
+
+  @media ${queries.isHandheld} {
     font-size: 24px;
     line-height: 28px;
-    letter-spacing: -.4px;
-  `}
+    letter-spacing: -0.4px;
+  }
 `
 
 export default H2

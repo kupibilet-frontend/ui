@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { Meta, Story } from '@storybook/react'
 import H1 from './H1'
 import H2 from './H2'
 import H3 from './H3'
@@ -9,11 +9,9 @@ import H6 from './H6'
 import Text from './Text'
 import TextSmall from './TextSmall'
 import TextLarge from './TextLarge'
-import UppercaseLarge from './UppercaseLarge'
-import Uppercase from './Uppercase'
-import Caption from './Caption'
-import { List, ListItem } from './List'
-import Price from './Price'
+import TextXsUpper from './TextXsUpper'
+import TextCaption from './TextCaption'
+import { List as UIList, ListItem } from './List'
 
 const headers = (
   <div>
@@ -38,39 +36,43 @@ const texts = (
       <TextSmall>TextSmall: Пересадка 22ч 20 мин</TextSmall>
     </div>
     <div>
-      <Caption>Caption: Пересадка 22ч 20 мин</Caption>
+      <TextXsUpper>TextXsUpper: Пересадка 22ч 20 мин</TextXsUpper>
     </div>
     <div>
-      <UppercaseLarge>UppercaseLarge: Пересадка 22ч 20 мин</UppercaseLarge>
-    </div>
-    <div>
-      <Uppercase>Uppercase: Пересадка 22ч 20 мин</Uppercase>
-    </div>
-    <div>
-      Price: <Price>12 345</Price>
+      <TextCaption>TextCaption: Пересадка 22ч 20 мин</TextCaption>
     </div>
   </div>
 )
 
-storiesOf('COMPONENTS|Utils', module)
-  .add('Typography', () => (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-        width: '100vw',
-        alignItems: 'center',
-      }}
-    >
-      { headers }
-      { texts }
-    </div>
-  ))
-  .add('List', () => (
-    <List style={{ width: '284px' }}>
-      <ListItem>Мы рады всем карточкам и банкам</ListItem>
-      <ListItem>Гарантируем быстрый возврат средств</ListItem>
-      <ListItem>Не будет проблем с двойным списанием авиакомпании</ListItem>
-      <ListItem>Цена билета</ListItem>
-    </List>
-  ))
+const Template: Story = () => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-around',
+      width: '100vw',
+      alignItems: 'center',
+    }}
+  >
+    { headers }
+    { texts }
+  </div>
+)
+
+const Typography = Template.bind({})
+
+const ListTemplate: Story = () => (
+  <UIList style={{ width: '284px' }}>
+    <ListItem>Мы рады всем карточкам и банкам</ListItem>
+    <ListItem>Гарантируем быстрый возврат средств</ListItem>
+    <ListItem>Не будет проблем с двойным списанием авиакомпании</ListItem>
+    <ListItem>Цена билета</ListItem>
+  </UIList>
+)
+
+const List = ListTemplate.bind({})
+
+export default {
+  title: 'COMPONENTS|Typography',
+} as Meta
+
+export { Typography, List }
