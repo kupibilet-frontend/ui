@@ -1,9 +1,9 @@
 import React from 'react'
 import { Story } from '@storybook/react'
 import { useArgs } from '@storybook/client-api'
-import ControlsGroup from 'components/ControlsGroup'
 import Icon from 'components/Icon'
 import { Input, TProps } from 'components/Input'
+import { InnerInput } from 'components/Input/styled'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
 
 
@@ -32,7 +32,7 @@ const DEFAULT_INPUT_PROPS = {
 // ----------------------------------------------
 // Default Input
 // ----------------------------------------------
-export const DefaultInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const DefaultInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 
 DefaultInput.args = DEFAULT_INPUT_PROPS
 
@@ -40,7 +40,7 @@ DefaultInput.args = DEFAULT_INPUT_PROPS
 // ----------------------------------------------
 // Success Input
 // ----------------------------------------------
-export const SuccessInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const SuccessInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 
 SuccessInput.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -50,7 +50,7 @@ SuccessInput.args = {
 // ----------------------------------------------
 // Error Input
 // ----------------------------------------------
-export const ErrorInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const ErrorInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 
 ErrorInput.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -60,7 +60,7 @@ ErrorInput.args = {
 // ----------------------------------------------
 // Input with Icons
 // ----------------------------------------------
-export const InputWithIcons: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const InputWithIcons: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 
 InputWithIcons.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -71,7 +71,7 @@ InputWithIcons.args = {
 // ----------------------------------------------
 // Input with Icons group
 // ----------------------------------------------
-export const InputWithIconsGroup: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const InputWithIconsGroup: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 
 InputWithIconsGroup.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -84,7 +84,7 @@ InputWithIconsGroup.args = {
 // ----------------------------------------------
 // Input as Textarea
 // ----------------------------------------------
-export const InputAsTextarea: Story<TProps<HTMLTextAreaElement>> = InputTemplate.bind({})
+const InputAsTextarea: Story<TProps<HTMLTextAreaElement>> = InputTemplate.bind({})
 
 InputAsTextarea.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -95,7 +95,7 @@ InputAsTextarea.args = {
 // ----------------------------------------------
 // Input in ControlsGroup
 // ----------------------------------------------
-export function InputInControlsGroup(args: TProps<HTMLInputElement>): JSX.Element {
+function InputInControlsGroup(args: TProps<HTMLInputElement>): JSX.Element {
   const [{ firstValue, secondValue, thirdValue }, updateArgs] = useArgs()
 
   function createOnChangeHandler(field: string) {
@@ -105,26 +105,26 @@ export function InputInControlsGroup(args: TProps<HTMLInputElement>): JSX.Elemen
   }
 
   return (
-    <ControlsGroup>
-      <Input
-        {...args}
+    <Input {...args}>
+      <InnerInput
+        inputSize="normal"
         value={firstValue}
         onChange={createOnChangeHandler('firstValue')}
         placeholder="First"
       />
-      <Input
-        {...args}
+      <InnerInput
+        inputSize="normal"
         value={secondValue}
         onChange={createOnChangeHandler('secondValue')}
         placeholder="Second"
       />
-      <Input
-        {...args}
+      <InnerInput
+        inputSize="normal"
         value={thirdValue}
         onChange={createOnChangeHandler('thirdValue')}
         placeholder="Third"
       />
-    </ControlsGroup>
+    </Input>
   )
 }
 
@@ -132,6 +132,37 @@ InputInControlsGroup.args = {
   ...DEFAULT_INPUT_PROPS,
 }
 
+// ----------------------------------------------
+// Input in ControlsGroup Success
+// ----------------------------------------------
+const InputInControlsGroupSuccess: Story<TProps<HTMLInputElement>> = InputInControlsGroup.bind({})
+
+InputInControlsGroupSuccess.args = {
+  ...DEFAULT_INPUT_PROPS,
+  success: true,
+}
+
+// ----------------------------------------------
+// Input in ControlsGroup Error
+// ----------------------------------------------
+const InputInControlsGroupError: Story<TProps<HTMLInputElement>> = InputInControlsGroup.bind({})
+
+InputInControlsGroupError.args = {
+  ...DEFAULT_INPUT_PROPS,
+  error: 'Error! Please enter correct data',
+}
+
+export {
+  DefaultInput,
+  SuccessInput,
+  ErrorInput,
+  InputWithIcons,
+  InputWithIconsGroup,
+  InputAsTextarea,
+  InputInControlsGroup,
+  InputInControlsGroupSuccess,
+  InputInControlsGroupError,
+}
 
 export default {
   component: Input,

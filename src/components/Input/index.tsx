@@ -8,7 +8,6 @@ import {
   InnerInput,
   InputWrapper,
   IconWrap,
-  StatusIndicator,
   InnerTextarea,
 } from './styled'
 
@@ -98,7 +97,6 @@ function renderInputElement<T>(
         {...props}
         inputSize={size}
         disabled={disabled}
-        success={success}
         error={Boolean(error)}
         onFocus={(event: React.FocusEvent<HTMLTextAreaElement>) => handleFocus(null, event)}
         onBlur={(event: React.FocusEvent<HTMLTextAreaElement>) => handleBlur(null, event)}
@@ -116,7 +114,6 @@ function renderInputElement<T>(
       {...props}
       inputSize={size}
       disabled={disabled}
-      success={success}
       error={Boolean(error)}
       onFocus={(event: React.FocusEvent<HTMLInputElement>) => handleFocus(null, event)}
       onBlur={(event: React.FocusEvent<HTMLInputElement>) => handleBlur(null, event)}
@@ -243,11 +240,6 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
             null
           )
         }
-      <StatusIndicator
-        error={Boolean(!active && error)}
-        success={success}
-        active={active || isActive}
-      />
       { error && !active && (
       <Error>
         { error }

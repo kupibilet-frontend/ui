@@ -32,13 +32,12 @@ const Error = styled.span`
 interface TCommonInnerInputProps<T> {
   theme: DefaultTheme,
   inputSize: 'large' | 'normal' | 'small',
-  neighboringInGroup: TNeighboringInGroup,
-  type: string,
+  neighboringInGroup?: TNeighboringInGroup,
+  type?: string,
   placeholder: string,
   hasInnerGroup?: boolean,
   leftIcon?: React.ReactNode,
   rightIcon?: React.ReactNode,
-  success?: boolean,
   disabled?: boolean,
   error?: boolean,
   onBlur?: (event: React.FocusEvent<T>) => void,
@@ -74,10 +73,10 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
     }
   })(props)}
 
-  ${(({ neighboringInGroup, success, error }) => {
+  ${(({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left
-    } else if (neighboringInGroup === 'left' || success || error) {
+    } else if (neighboringInGroup === 'left') {
       return borderRadiusSmall.right
     } else if (neighboringInGroup !== 'both') {
       return borderRadiusSmall.all
@@ -128,13 +127,12 @@ interface TInputWrapperProps {
 }
 
 function getInputBorderColor(props: TInputWrapperProps) {
-  const { active, theme, disabled } = props
+  const { success, error, active, theme, disabled } = props
 
-  if (active) {
-    return theme.color.primary
-  } else if (disabled) {
-    return theme.color.miscLighter
-  }
+  if (active) return theme.color.primary
+  if (success) return theme.color.success
+  if (error) return theme.color.fail
+  if (disabled) return theme.color.miscLighter
 
   return theme.color.misc
 }
@@ -152,10 +150,10 @@ const InputWrapper = styled.div<TInputWrapperProps>`
 
   ${({ disabled }) => disabled && 'pointer-events: none;'}
 
-  ${({ neighboringInGroup, success, error }) => {
+  ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
       return borderRadiusSmall.left
-    } else if (neighboringInGroup === 'left' || success || error) {
+    } else if (neighboringInGroup === 'left') {
       return borderRadiusSmall.right
     } else if (neighboringInGroup !== 'both') {
       return borderRadiusSmall.all
@@ -165,6 +163,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   }}
 
   border: 1px solid ${getInputBorderColor};
+
   border-style: solid;
   ${({ active, theme }) => {
     if (active) {
@@ -184,43 +183,18 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   ${switchTransition}
   transition-property: border-color;
 
+  ${({ theme, active, error }) => (!active && error) && `
+    background-color: ${theme.color.failTransparent};
+  `}
+
   &:hover {
-    border-color: ${({ theme, disabled }) => (!disabled) && theme.color.primary};
+    border-color: ${({ success, error, theme, disabled }) => (!disabled && !success && !error) && theme.color.primary};
     z-index: 1;
   }
 
   .combined-inputs-group {
     height: 100%;
   }
-`
-
-interface TStatusIndicatorProps {
-  active: boolean,
-  success: boolean,
-  error: boolean,
-  theme: DefaultTheme,
-}
-
-function getDisplayIndicator({ active, success, error }: TStatusIndicatorProps) {
-  if (active) {
-    return 'none'
-  }
-  if (success || error) {
-    return 'block'
-  }
-  return 'none'
-}
-
-const StatusIndicator = styled.div<TStatusIndicatorProps>`
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    display: ${(props) => getDisplayIndicator(props)};
-    height: calc(100% + 2px);
-    width: 2px;
-    background-color: ${({ theme, success, error }) => (
-    success && !error ? theme.color.success : theme.color.fail
-  )};
 `
 
 interface TGetIconWrapPaddingsProps {
@@ -270,6 +244,5 @@ export {
   InnerInput,
   InputWrapper,
   IconWrap,
-  StatusIndicator,
   InnerTextarea,
 }
