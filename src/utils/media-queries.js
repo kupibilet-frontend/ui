@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from 'styled-components'
-import Media from '@kupibilet/react-media'
+// import Media from '@kupibilet/react-media'
 
 export const queries = {
   isMobile: 'screen and (max-width: 599px)',
@@ -25,9 +25,7 @@ export const withMedia = (Component) => (
 
     render() {
       return (
-        <Media queries={queries}>
-          { this.renderMedias }
-        </Media>
+        <Component isDesktop isHandheld={false} isMobile={false} isTablet={false} />
       )
     }
   }
