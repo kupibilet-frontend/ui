@@ -9,7 +9,7 @@ import H6 from './H6'
 import Text from './Text'
 import TextSmall from './TextSmall'
 import TextLarge from './TextLarge'
-import TextXsUpper from './TextXsUpper'
+import UppercaseExtraSmall from './UppercaseExtraSmall'
 import TextCaption from './TextCaption'
 import { List as UIList, ListItem } from './List'
 
@@ -36,7 +36,7 @@ const texts = (
       <TextSmall>TextSmall: Пересадка 22ч 20 мин</TextSmall>
     </div>
     <div>
-      <TextXsUpper>TextXsUpper: Пересадка 22ч 20 мин</TextXsUpper>
+      <UppercaseExtraSmall>UppercaseExtraSmall: Пересадка 22ч 20 мин</UppercaseExtraSmall>
     </div>
     <div>
       <TextCaption>TextCaption: Пересадка 22ч 20 мин</TextCaption>
@@ -44,7 +44,7 @@ const texts = (
   </div>
 )
 
-const Template: Story = () => (
+const Typography: Story = () => (
   <div
     style={{
       display: 'flex',
@@ -58,9 +58,7 @@ const Template: Story = () => (
   </div>
 )
 
-const Typography = Template.bind({})
-
-const ListTemplate: Story = () => (
+const List: Story = () => (
   <UIList style={{ width: '284px' }}>
     <ListItem>Мы рады всем карточкам и банкам</ListItem>
     <ListItem>Гарантируем быстрый возврат средств</ListItem>
@@ -68,8 +66,6 @@ const ListTemplate: Story = () => (
     <ListItem>Цена билета</ListItem>
   </UIList>
 )
-
-const List = ListTemplate.bind({})
 
 export default {
   title: 'COMPONENTS|Typography',
