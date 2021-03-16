@@ -25,7 +25,7 @@ export const withMedia = (Component) => (
 
     render() {
       return (
-        <Component isDesktop isHandheld={false} isMobile={false} isTablet={false} />
+        <Component {...this.props} isDesktop isHandheld={false} isMobile={false} isTablet={false} />
       )
     }
   }
