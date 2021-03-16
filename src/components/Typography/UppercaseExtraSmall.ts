@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const TextXsUpper = styled.span`
+const UppercaseExtraSmall = styled.span`
   font-size: 11px;
   font-weight: 400;
   line-height: 16px;
@@ -8,4 +8,4 @@ const TextXsUpper = styled.span`
   text-transform: uppercase;
 `
 
-export default TextXsUpper
+export default UppercaseExtraSmall
