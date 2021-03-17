@@ -26,7 +26,6 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   type?: string,
   active?: boolean,
   error?: React.ReactNode,
-  success?: boolean,
   size?: TInputSize,
   disabled?: boolean,
   placeholder?: string,
@@ -55,7 +54,6 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     size: props.size || 'normal',
     type: props.type || 'text',
     name: props.name || 'input',
-    success: props.success || false,
     error: props.error || false,
     disabled: props.disabled || false,
     neighboringInGroup: props.neighboringInGroup ? props.neighboringInGroup : null,
@@ -82,7 +80,6 @@ function renderInputElement<T>(
 ): JSX.Element {
   const {
     size,
-    success,
     error = false,
     disabled = false,
     leftIcon,
@@ -131,7 +128,6 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
   const {
     active,
     size,
-    success,
     error,
     disabled,
     neighboringInGroup,
@@ -181,7 +177,6 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     <InputWrapper
       active={active || isActive}
       disabled={disabled}
-      success={success}
       error={Boolean(error)}
       neighboringInGroup={neighboringInGroup}
     >
@@ -257,7 +252,6 @@ const RFInput = ({ input, meta, ...props }: TRFInputProps): JSX.Element => (
     {...meta}
     {...props}
     error={meta.touched && meta.error}
-    success={meta.touched && meta.valid}
   />
 )
 

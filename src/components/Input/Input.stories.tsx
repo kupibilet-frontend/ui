@@ -36,17 +36,6 @@ const DefaultInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 
 DefaultInput.args = DEFAULT_INPUT_PROPS
 
-
-// ----------------------------------------------
-// Success Input
-// ----------------------------------------------
-const SuccessInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
-
-SuccessInput.args = {
-  ...DEFAULT_INPUT_PROPS,
-  success: true,
-}
-
 // ----------------------------------------------
 // Error Input
 // ----------------------------------------------
@@ -133,16 +122,6 @@ InputInControlsGroup.args = {
 }
 
 // ----------------------------------------------
-// Input in ControlsGroup Success
-// ----------------------------------------------
-const InputInControlsGroupSuccess: Story<TProps<HTMLInputElement>> = InputInControlsGroup.bind({})
-
-InputInControlsGroupSuccess.args = {
-  ...DEFAULT_INPUT_PROPS,
-  success: true,
-}
-
-// ----------------------------------------------
 // Input in ControlsGroup Error
 // ----------------------------------------------
 const InputInControlsGroupError: Story<TProps<HTMLInputElement>> = InputInControlsGroup.bind({})
@@ -154,13 +133,11 @@ InputInControlsGroupError.args = {
 
 export {
   DefaultInput,
-  SuccessInput,
   ErrorInput,
   InputWithIcons,
   InputWithIconsGroup,
   InputAsTextarea,
   InputInControlsGroup,
-  InputInControlsGroupSuccess,
   InputInControlsGroupError,
 }
 

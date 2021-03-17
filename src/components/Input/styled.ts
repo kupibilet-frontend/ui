@@ -122,15 +122,13 @@ interface TInputWrapperProps {
   theme: DefaultTheme,
   disabled: boolean,
   neighboringInGroup: TNeighboringInGroup,
-  success: boolean,
   error: boolean,
 }
 
 function getInputBorderColor(props: TInputWrapperProps) {
-  const { success, error, active, theme, disabled } = props
+  const { error, active, theme, disabled } = props
 
   if (active) return theme.color.primary
-  if (success) return theme.color.success
   if (error) return theme.color.fail
   if (disabled) return theme.color.miscLighter
 
@@ -188,7 +186,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   `}
 
   &:hover {
-    border-color: ${({ success, error, theme, disabled }) => (!disabled && !success && !error) && theme.color.primary};
+    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.primary};
     z-index: 1;
   }
 
