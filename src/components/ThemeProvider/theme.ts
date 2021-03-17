@@ -4,7 +4,6 @@ import { COLOR_NAMES, TColor } from './types'
 export const color: TColor = {
   [COLOR_NAMES.background]: '#ffffff',
   [COLOR_NAMES.fail]: '#e64926',
-  [COLOR_NAMES.failTransparent]: 'rgba(212, 85, 53, 0.1)',
   [COLOR_NAMES.success]: '#23c256',
 
   [COLOR_NAMES.primary]: '#38afff',

@@ -181,8 +181,8 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   ${switchTransition}
   transition-property: border-color;
 
-  ${({ theme, active, error }) => (!active && error) && `
-    background-color: ${theme.color.failTransparent};
+  ${({ theme, error, active }) => error && !active && `
+    box-shadow: inset 0px 0px 0px 1px ${theme.color.fail};
   `}
 
   &:hover {
