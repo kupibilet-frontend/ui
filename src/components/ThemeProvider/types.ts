@@ -1,7 +1,6 @@
 enum COLOR_NAMES {
   background = 'background',
   fail = 'fail',
-  failTransparent = 'failTransparent',
   success = 'success',
   primary = 'primary',
   primaryDark = 'primaryDark',
@@ -37,7 +36,6 @@ enum COLOR_NAMES {
 interface TColor {
   [COLOR_NAMES.background]: string,
   [COLOR_NAMES.fail]: string,
-  [COLOR_NAMES.failTransparent]: string,
   [COLOR_NAMES.success]: string,
 
   [COLOR_NAMES.primary]: string,
