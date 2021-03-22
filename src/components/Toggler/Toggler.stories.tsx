@@ -1,4 +1,5 @@
 import React from 'react'
+import { Story } from '@storybook/react'
 import { useArgs } from '@storybook/client-api'
 import { TogglerItem, TogglerGroup } from 'components/Toggler'
 
@@ -8,7 +9,7 @@ interface TTogglerProps {
 }
 
 export const GenderToggler = (args: TTogglerProps): JSX.Element => {
-  const [{ currentValue, errorMessage }, updateArgs] = useArgs()
+  const [, updateArgs] = useArgs()
 
   function onChange(value: string): void {
     updateArgs({ currentValue: value })
@@ -16,8 +17,7 @@ export const GenderToggler = (args: TTogglerProps): JSX.Element => {
 
   return (
     <TogglerGroup
-      currentValue={currentValue}
-      errorMessage={errorMessage}
+      {...args}
       onChange={onChange}
       name="gender"
     >
@@ -36,7 +36,7 @@ GenderToggler.args = {
 }
 
 export const ManyOptionsToggler = (args: TTogglerProps): JSX.Element => {
-  const [{ currentValue, errorMessage }, updateArgs] = useArgs()
+  const [, updateArgs] = useArgs()
 
   function onChange(value: string): void {
     updateArgs({ currentValue: value })
@@ -44,8 +44,7 @@ export const ManyOptionsToggler = (args: TTogglerProps): JSX.Element => {
 
   return (
     <TogglerGroup
-      currentValue={currentValue}
-      errorMessage={errorMessage}
+      {...args}
       onChange={onChange}
       name="number"
     >
@@ -69,31 +68,7 @@ ManyOptionsToggler.args = {
   currentValue: '2',
 }
 
-export const FailedToggler = (args: TTogglerProps): JSX.Element => {
-  const [{ currentValue, errorMessage }] = useArgs()
-
-  return (
-    <TogglerGroup
-      currentValue={currentValue}
-      onChange={() => null}
-      name="number"
-      errorMessage={errorMessage}
-    >
-      <TogglerItem value="1">
-        1
-      </TogglerItem>
-      <TogglerItem value="2">
-          2
-      </TogglerItem>
-      <TogglerItem value="3">
-        3
-      </TogglerItem>
-      <TogglerItem value="4">
-        4
-      </TogglerItem>
-    </TogglerGroup>
-  )
-}
+export const FailedToggler: Story<TTogglerProps> = ManyOptionsToggler.bind({})
 
 FailedToggler.args = {
   errorMessage: 'Выберите значение',
