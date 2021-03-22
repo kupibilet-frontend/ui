@@ -55,7 +55,6 @@ interface TItemWrapperProps {
 export const ItemWrapper = styled.div<TItemWrapperProps>`
   position: relative;
   flex: 1 1 auto;
-  width: 0;
   ${({ isSelected }) => (isSelected ? 'z-index: 1;' : '')}
   &:hover {
     z-index: 1;
