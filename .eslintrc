@@ -6,7 +6,6 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["blocks", "./src/blocks"],
           ["components", "./src/components"],
           ["utils", "./src/utils"],
           ["storybook", "./storybook"]

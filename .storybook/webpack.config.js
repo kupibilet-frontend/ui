@@ -25,7 +25,6 @@ module.exports = function({ config }) {
   })
 
   config.resolve.alias = {
-    blocks: path.resolve(__dirname, '../src/blocks'),
     components: path.resolve(__dirname, '../src/components'),
     utils: path.resolve(__dirname, '../src/utils'),
   }
