@@ -1,7 +1,6 @@
 import React, { MouseEvent } from 'react'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
-import Scrollfix from 'components/Scrollfix'
 
 import { TWithMediaProps } from 'utils/types'
 
@@ -17,14 +16,9 @@ interface TProps extends TWithMediaProps {
   closePortal: () => void,
   isOnBottom: boolean,
   children: React.ReactElement,
-  scrollFix?: boolean,
 }
 
 class Overlay extends React.PureComponent<TProps> {
-  static defaultProps = {
-    scrollFix: true,
-  }
-
   stopPropagation = (e: MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
   }
@@ -51,25 +45,12 @@ class Overlay extends React.PureComponent<TProps> {
   }
 
   render() {
-    const { scrollFix } = this.props
-
-    if (!scrollFix) {
-      return (
-        <GlobalStylesScope>
-          {this.renderOverlay()}
-        </GlobalStylesScope>
-      )
-    }
-
     return (
       <GlobalStylesScope>
-        <Scrollfix>
-          {this.renderOverlay()}
-        </Scrollfix>
+        {this.renderOverlay()}
       </GlobalStylesScope>
     )
   }
 }
-
 
 export default withMedia(Overlay)

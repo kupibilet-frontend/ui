@@ -26,7 +26,6 @@ interface TProps extends TWithMediaProps {
   closeOnEsc: boolean,
   shouldRenderCloseIcon: boolean,
   isOnBottom: boolean,
-  scrollFix?: boolean,
   onSubmitClick?: () => void,
   submitText?: React.ReactChild,
   submitButtonCloseText?: React.ReactChild,
@@ -55,7 +54,6 @@ const Modal = React.memo((props: TProps) => {
     closeOnEsc = true,
     shouldRenderCloseIcon = true,
     isOnBottom = false,
-    scrollFix = true,
     submitText = 'Продолжить',
     submitButtonCloseText = 'Отменить',
     defaultButtonCloseText = 'Закрыть',
@@ -118,7 +116,6 @@ const Modal = React.memo((props: TProps) => {
         <Overlay
           closePortal={closeOnOutsideClick && closePortal}
           isOnBottom={isOnBottom}
-          scrollFix={scrollFix}
         >
           <ModalContent size={size}>
             {renderHeader && renderHeader({
