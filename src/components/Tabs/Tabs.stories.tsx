@@ -47,6 +47,7 @@ StyledTabs.args = defaultArgs
 export const ConditionalRenderedTabs: Story<TTabsTemplateProps> = TabsTemplate.bind({})
 ConditionalRenderedTabs.args = {
   ...defaultArgs,
+  activeKey: '1',
   showHiddenTabs: false,
 }
 
