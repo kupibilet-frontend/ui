@@ -1,9 +1,9 @@
 import React from 'react'
 import { Story } from '@storybook/react'
 import { useArgs } from '@storybook/client-api'
-import { Tabs, TabPane, TabBar, Tab as StyledTab } from '.'
-import { TTabProps } from './Tab'
-import { TTabsProps } from './Tabs'
+import { Tabs, TabPane, TabBar, Tab as StyledTab } from 'components/Tabs'
+import { TTabProps } from 'components/Tabs/Tab'
+import { TTabsProps } from 'components/Tabs/Tabs'
 
 interface TTabsTemplateProps extends TTabsProps {
   showHiddenTabs: boolean,
