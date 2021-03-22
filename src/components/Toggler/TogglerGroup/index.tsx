@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react'
 import { TogglerWrapper, ItemsWrapper, StyledError } from './styled'
-import { TVariant } from '../types'
 
 type TProps = {
   /**
@@ -28,10 +27,6 @@ type TProps = {
   * Имя контрола
   */
   name?: string,
-  /**
-   * Вариант контрола для стилизации
-   */
-  variant?: TVariant,
 }
 
 /**
@@ -45,7 +40,6 @@ const TogglerGroup = ({
   currentValue = '',
   errorMessage = '',
   name = '',
-  variant = 'primary',
   ...props
 }: TProps): JSX.Element => {
   const [isFocused, setFocus] = React.useState(false)
@@ -61,7 +55,6 @@ const TogglerGroup = ({
             errorMessage,
             name,
             setFocus,
-            variant,
             ...props,
           })
         ))}

@@ -1,11 +1,8 @@
 import styled, { css } from 'styled-components'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import Text from 'components/Typography/Text'
-import { TVariant } from '../types'
-
 
 interface TStyledWrapperProps {
-  variant: TVariant,
   isSelected: boolean,
 }
 
@@ -14,55 +11,23 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   cursor: pointer;
   text-align: center;
   height: 100%;
-  ${({ variant, theme, isSelected }) => {
-    switch (variant) {
-      case 'secondary':
-        return css`
-          font-size: 14px;
-          color: ${theme.color.text};
-          line-height: 18px;
-          box-sizing: border-box;
-          box-shadow: inset 1px 0 0 0 ${theme.color.misc};
-          
-          &:hover {
-            background: ${theme.color.miscLightest};
-            color: ${theme.color.text};
-            box-shadow: inset 0 0 0 1px ${theme.color.primaryDark} !important;
-          }
-          &:active {
-            background: ${theme.color.miscLightest};
-          }
-          
-          ${isSelected && `
-            color: ${theme.color.background};
-            background: ${theme.color.background};
-            color: ${theme.color.text};
-            box-shadow: inset 0 0 0 2px ${theme.color.primaryDark} !important;
-            &:hover {
-              box-shadow: inset 0 0 0 2px ${theme.color.primaryDark} !important;
-            }
-          `}          
-        `
-      case 'primary':
-      default:
-        return css`
-          box-shadow: inset 1px 0 0 0 ${theme.color.misc};
-          ${isSelected ? `
-            color: ${theme.color.background};
-            font-weight: 600;
-            background: ${theme.color.primaryDarkest};
-            box-shadow: inset 0 0 0 1px ${theme.color.primaryDarkest} !important;
-          ` : `
-            &:hover {
-              box-shadow: inset 0 0 0 1px ${theme.color.primaryDark} !important;
-              background: ${theme.color.miscLightest};
-              color: ${theme.color.primaryDarkest};
-            }
-          `}
-        `
-    }
-  }}
-`
+  ${({ theme, isSelected }) => css`
+      box-shadow: inset 1px 0 0 0 ${theme.color.misc};
+      ${isSelected ? `
+        color: ${theme.color.background};
+        font-weight: 600;
+        background: ${theme.color.primaryDarkest};
+        box-shadow: inset 0 0 0 1px ${theme.color.primaryDarkest} !important;
+      ` : `
+        &:hover {
+          box-shadow: inset 0 0 0 1px ${theme.color.primaryDark} !important;
+          background: ${theme.color.miscLightest};
+          color: ${theme.color.primaryDarkest};
+        }
+      `}
+    `
+}`
+
 
 export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
   opacity: 0;

@@ -1,6 +1,4 @@
 import React, { ReactNode, useMemo } from 'react'
-import Tooltip from 'components/Tooltip'
-import { TVariant } from '../types'
 import {
   StyledWrapper,
   HiddenRadio,
@@ -17,8 +15,6 @@ type TProps = {
   name?: string,
   setFocus?: (isFocused: boolean) => void,
   onBlur?: () => void,
-  variant?: TVariant,
-  tooltipContent?: string | ReactNode,
 }
 
 const ENTER_KEY_CODE = 13
@@ -36,20 +32,17 @@ const TogglerItem = React.memo(({
   value = '',
   currentValue = '',
   name = '',
-  variant = 'primary',
   onChange = () => null,
   setFocus = () => null,
   onBlur,
-  tooltipContent = null,
 }: TProps): JSX.Element => {
   const isSelected = useMemo(() => value === currentValue, [value, currentValue])
 
-  const renderContent = (): ReactNode => (
+  const renderContent = (): JSX.Element => (
     <StyledWrapper
       isSelected={isSelected}
       as="div"
       onClick={() => onChange(value)}
-      variant={variant}
     >
       {children}
     </StyledWrapper>
@@ -86,11 +79,7 @@ const TogglerItem = React.memo(({
         // to remove react warning
         onChange={() => null}
       />
-      {tooltipContent ? (
-        <Tooltip align="bottom" content={tooltipContent}>
-          {renderContent()}
-        </Tooltip>
-      ) : renderContent()}
+      {renderContent()}
     </ItemWrapper>
   )
 }, isSelectedStatusChange)
