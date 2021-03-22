@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-interface RenderTabArg {
+interface TRenderTabArg {
   role: string,
   isActive: boolean,
   'aria-disabled': boolean,
@@ -14,7 +14,7 @@ interface RenderTabArg {
 export interface TTabBarProps {
   children: React.ReactElement[],
   className?: string,
-  renderTab: (arg: RenderTabArg) => JSX.Element,
+  renderTab: (arg: TRenderTabArg) => JSX.Element,
   activeKey: string,
   onTabChange: (tabKey: string) => void,
 }
