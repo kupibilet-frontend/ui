@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, DefaultTheme } from 'styled-components'
 import { transparentize } from 'polished'
+import { TPlacement, TCoordinates } from '../types'
 
 const flexDirections = {
   top: 'column-reverse',
@@ -13,7 +14,13 @@ const arrival = keyframes`
   100% { opacity: 1; }
 `
 
-const getBackgroundColor = ({ theme, error, success }) => {
+interface TTooltipCommonProps {
+  error: boolean,
+  success: boolean,
+  theme: DefaultTheme,
+}
+
+const getBackgroundColor = ({ theme, error, success }: TTooltipCommonProps): string => {
   if (success) {
     return transparentize(0.03, theme.color.success)
   } else if (error) {
@@ -25,7 +32,12 @@ const getBackgroundColor = ({ theme, error, success }) => {
 const PositionWrapper = styled.div`
   position: relative;
 `
-const PlacementWrapper = styled.div`
+
+interface TPlacementWrapper {
+  placement: TPlacement,
+}
+
+const PlacementWrapper = styled.div<TPlacementWrapper>`
   position: absolute;
   ${({ placement }) => {
     if (placement === 'left') {
@@ -39,7 +51,7 @@ const PlacementWrapper = styled.div`
 }
 `
 
-const TooltipDot = styled.div`
+const TooltipDot = styled.div<TTooltipCommonProps>`
   width: 7px;
   height: 7px;
   margin: 2px;
@@ -47,7 +59,7 @@ const TooltipDot = styled.div`
   background: ${(props) => getBackgroundColor(props)};
 `
 
-const TooltipBackground = styled.div`
+const TooltipBackground = styled.div<TTooltipCommonProps>`
   min-height: 24px;
   max-height: 24px;
   min-width: 90px;
@@ -60,33 +72,36 @@ const TooltipBackground = styled.div`
   align-items: center;
   justify-content: center;
 `
+interface TTooltipContainer extends TCoordinates {
+  placement: TPlacement,
+}
 
-const TooltipContainer = styled.div`
+const TooltipContainer = styled.div<TTooltipContainer>`
   height: 0;
   position: absolute;
   opacity: 0;
   animation: 0.15s ease-out forwards ${arrival};
-  ${(props) => {
-    switch (props.placement) {
+  ${({ placement, top, left, width, height }) => {
+    switch (placement) {
       case 'right':
         return `
-          top: ${props.top}px;
-          left: ${props.left + props.width}px;
+          top: ${top}px;
+          left: ${left + width}px;
         `
       case 'bottom':
         return `
-          top: ${props.top + props.height}px;
-          left: ${props.left}px;
+          top: ${top + height}px;
+          left: ${left}px;
         `
       case 'top':
         return `
-          top: ${props.top}px;
-          left: ${props.left}px;
+          top: ${top}px;
+          left: ${left}px;
         `
       default:
         return `
-          top: ${props.top}px;
-          left: ${props.left}px;
+          top: ${top}px;
+          left: ${left}px;
         `
     }
   }
@@ -94,8 +109,13 @@ const TooltipContainer = styled.div`
 z-index: 100;
   `
 
+interface TRelativeWrapper {
+  placement: TPlacement,
+  width: number,
+  height: number
+}
 
-const RelativeWrapper = styled.div`
+const RelativeWrapper = styled.div<TRelativeWrapper>`
   min-width: ${({ width }) => `${width}px`};
   min-height: ${({ height }) => `${height}px`};
   ${({ placement, width }) => {

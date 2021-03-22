@@ -5,6 +5,10 @@ import withTheme from 'storybook/decorators/withTheme'
 import withIcons from 'storybook/decorators/withIcons'
 import withReduxContext from 'storybook/decorators/withReduxContext'
 
+export const parameters = {
+  layout: 'centered',
+}
+
 addParameters({
   options: {
     isFullscreen: false,

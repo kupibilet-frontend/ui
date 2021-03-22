@@ -1,9 +1,8 @@
 // @flow
 import * as React from 'react'
+import ReactDOM from 'react-dom'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
-import Tooltip from 'components/Tooltip'
-import type { Coordinates } from 'components/Tooltip'
 import TextSmall from 'components/Typography/TextSmall'
 import {
   PopoverBackground,
@@ -16,10 +15,16 @@ import {
   HeaderText,
 } from './styled'
 
+type TCoordinates = {
+  left: number,
+  top: number,
+  width: number,
+  height: number,
+}
 
 type PortalProps = {
   isOpen: boolean,
-  coords: Coordinates | null,
+  coords: TCoordinates | null,
   placement: string,
   align: ?string,
   content: any | null,
@@ -96,8 +101,6 @@ type PopoverProps = {
   align: ?string,
   dotCentering: ?boolean,
   size: string,
-  success: ?boolean,
-  error: ?boolean,
 }
 
 type PopoverState = {
@@ -105,15 +108,64 @@ type PopoverState = {
 }
 
 /* eslint-disable react/prop-types */
-class Popover extends Tooltip<PopoverProps, PopoverState> {
+class Popover extends React.Component<PopoverProps, PopoverState> {
   static defaultProps = {
     placement: 'bottom',
     size: 'normal',
     shouldRender: true,
     dotCentering: false,
-    success: false,
-    error: false,
   }
+
+  state = {
+    isOpen: false,
+  }
+
+  childRef = null
+  coords = null
+  hoverTimeout = null
+
+  componentDidMount() {
+    if (this.childRef !== null) {
+      this.coords = this.getCoordinates(this.childRef)
+    }
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.hoverTimeout)
+  }
+
+  handleMouseLeave = () => {
+    clearTimeout(this.hoverTimeout)
+    this.hoverTimeout = null
+
+    this.setState({
+      isOpen: false,
+    })
+  }
+
+  handleMouseEnter = () => {
+    this.hoverTimeout = setTimeout(() => {
+      this.coords = this.getCoordinates(this.childRef)
+      this.setState({
+        isOpen: Boolean(this.hoverTimeout),
+      })
+    }, 150)
+  }
+
+  /* eslint-disable react/no-find-dom-node */
+  getCoordinates = (node) => {
+    const availableNode = ReactDOM.findDOMNode(node)
+    if (availableNode) {
+      const rect = ReactDOM.findDOMNode(node).getBoundingClientRect()
+      return {
+        width: rect.width,
+        height: rect.height,
+        left: rect.left + window.pageXOffset,
+        top: rect.top + window.pageYOffset,
+      }
+    }
+  }
+
   render() {
     const {
       children,
