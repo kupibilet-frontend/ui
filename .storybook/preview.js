@@ -18,8 +18,6 @@ addParameters({
 })
 
 if (process.env.NODE_ENV !== 'test') {
-  // TODO: return it, when 5.4 version is avaliable. more details: https://github.com/storybookjs/storybook/pull/8388
-  // addDecorator(centered)
   addDecorator(withIcons)
 }
 
