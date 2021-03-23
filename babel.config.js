@@ -5,7 +5,6 @@ const BASE_PLUGINS = [
   ['module-resolver', {
     root: ['./'],
     alias: {
-      blocks: './src/blocks',
       components: './src/components',
       utils: './src/utils',
       storybook: './storybook',

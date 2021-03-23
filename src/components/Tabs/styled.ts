@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import Link from 'utils/link'
-import { Tab } from 'components/Tabs'
+import Tab from './Tab'
 
-
-export default styled(Tab)`
+const StyledTab = styled(Tab)`
   ${Link}
 
   display: inline-block;
@@ -29,3 +28,5 @@ export default styled(Tab)`
     outline: none;
   }
 `
+
+export default StyledTab

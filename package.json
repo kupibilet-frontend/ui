@@ -35,8 +35,6 @@
   "author": "Kupibilet.ru Frontend Team",
   "license": "MIT",
   "resolutions": {
-    "// Still have no activity… https://github.com/react-component/tabs/issues/133": "",
-    "rc-tabs": "9.3.0",
     "// Sequrity patches": "",
     "js-yaml": "3.13.1",
     "lodash": "^4.17.14",
@@ -129,7 +127,7 @@
     "@kupibilet/react-day-picker": "^7.2.5",
     "@kupibilet/react-media": "^1.5.1",
     "@types/classnames": "^2.2.11",
-    "rc-tabs": "9.6.4",
+    "rc-tabs": "^11.7.3",
     "react-autosuggest": "^10.0.0",
     "react-portal": "^4.1.4",
     "react-router-dom": "^5.2.0",

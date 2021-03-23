@@ -6,7 +6,6 @@
 # Ignore builded modules
 /index.js
 lib/*
-blocks/*
 components/*
 utils/*
 

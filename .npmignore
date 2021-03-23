@@ -1,10 +1,8 @@
 *
 
-!blocks/**/*.js
 !components/**/*.js
 !utils/**/*.js
 
-!blocks/**/*.d.ts
 !components/**/*.d.ts
 !utils/**/*.d.ts
 
