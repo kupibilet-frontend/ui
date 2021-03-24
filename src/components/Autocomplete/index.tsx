@@ -1,16 +1,9 @@
-// @flow
-// https://github.com/brigand/babel-plugin-flow-react-proptypes/issues/71#issuecomment-295771268
-
-'no babel-plugin-flow-react-proptypes'
-
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 
-import Autosuggest from 'react-autosuggest'
+import Autosuggest, { GetSectionSuggestions, RenderSectionTitle } from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
-import type { TControlsGroupProps } from 'components/ControlsGroup/types'
 
 import style, { SuggestionsContainer } from './styled'
 
@@ -19,8 +12,7 @@ import style, { SuggestionsContainer } from './styled'
 // http://jrgraphix.net/r/Unicode/0400-04FF
 const NON_LETTERS_REGEXP = /[^\w\u0400-\u04FF]/g
 
-const isValuesEqual = (a, b) => {
-  /* eslint-disable no-underscore-dangle */
+const isValuesEqual = (a: string, b: string) => {
   const _a = (a ? String(a) : '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
   const _b = (b ? String(b) : '').toLowerCase().replace(NON_LETTERS_REGEXP, '')
 
@@ -33,57 +25,47 @@ export const AUTOSUGGEST_METHODS = {
   SELECT_LAST_EQUAL_SUGGEST: 'AUTOSUGGEST_SELECT_LAST_EQUAL_SUGGEST',
 }
 
-const emptyArray = []
+type TSuggestion = Record<string, unknown>
+type TSection = TSuggestion[] | {
+  values: TSuggestion[]
+}
 
-type Section = {}
-type Suggestion = {}
-type onChange = (Event, { newValue: string, method: string }) => void
-
-type Props = TControlsGroupProps & {
-  forceSuggestedValue: boolean,
-  suggestions: Suggestion[] | Section[],
-
-  onSuggestionsFetchRequested: ({ value: string }) => any,
-  onSuggestionsClearRequested: () => void,
-  onSuggestionSelected: (Event, {
-    suggestion: Object,
-    suggestionValue: string,
-    suggestionIndex: number,
-    sectionIndex: ?number,
-    method: 'click' | 'enter' | 'blur' | 'autoSuggest'
-  }) => void,
-  renderInputComponent: ?({}) => React.Element<*>,
-  getSuggestionValue: (Suggestion) => string,
-  renderSuggestion: ?(Suggestion, {query: string}) => React.Element<*>,
-  inputProps: {
+type TProps = Autosuggest.AutosuggestProps<TSuggestion, TSection> & {
+  forceSuggestedValue: boolean;
+  getSectionSuggestions?: GetSectionSuggestions<TSuggestion, TSection>;
+  renderSectionTitle?: RenderSectionTitle;
+  isSuggestAlreadySelected: (props: TProps) => boolean;
+  isValueEqualWithFirstSuggest: (
     value: string,
-    onChange: onChange,
-    // can be proxied from redux-form
-    meta?: {
-      error: string,
-    }
-  },
-  shouldRenderSuggestions: ?string => boolean,
-  alwaysRenderSuggestions: ?boolean,
-  multiSection: ?boolean,
-  renderSectionTitle: ?(Object) => React.Element<*>,
-  getSectionSuggestions: Object => Suggestion[],
-  focusInputOnSuggestionClick: ?boolean,
-  highlightFirstSuggestion: boolean,
-  theme: ?Object,
-  id: ?string,
-
-  isSuggestAlreadySelected?: (props: Props) => boolean,
-  isValueEqualWithFirstSugget?: (string, Suggestion[]) => boolean,
+    suggestions: ReadonlyArray<TSuggestion> | ReadonlyArray<TSection>
+  ) => boolean;
+  inputProps: Autosuggest.InputProps<TSuggestion> & {
+    meta: { active: boolean } | null;
+    IATACode: string;
+  };
+  size?: number;
+  className: string;
 }
 
 type State = {
-  suggestions: Suggestion[],
+  suggestions: ReadonlyArray<TSuggestion> | ReadonlyArray<TSection>,
 }
 
-const getFirstSuggestion = ({ suggestions, multiSection }: Props) => {
+interface TAutosuggestInstance extends Autosuggest {
+  justSelectedSuggestion: boolean;
+  willRenderSuggestions: (psops: TProps) => boolean;
+  closeSuggestions: () => void;
+  maybeCallOnChange: (
+    event: React.FocusEvent<HTMLElement>,
+    newValue: string,
+    method: string,
+  ) => void;
+  onSuggestionSelected: Autosuggest.OnSuggestionSelected<TSuggestion>
+}
+
+const getFirstSuggestion = ({ suggestions, multiSection }: TProps) => {
   let [suggestion] = suggestions
-  if (multiSection && suggestion) {
+  if (multiSection && suggestion && Array.isArray(suggestion)) {
     // destructuring dosn't work for assignment in babel
     // eslint-disable-next-line prefer-destructuring
     suggestion = suggestion[0]
@@ -92,52 +74,62 @@ const getFirstSuggestion = ({ suggestions, multiSection }: Props) => {
   return suggestion || null
 }
 
-const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }: Props) => (
-  createSectionIterator({
-    multiSection,
-    data: multiSection
-      ? suggestions.map((section) => getSectionSuggestions(section).length)
-      : suggestions.length,
-  })
-)
+const getSectionIterator = ({ multiSection, suggestions, getSectionSuggestions }: TProps) => {
+  return (
+    createSectionIterator({
+      multiSection,
+      data: multiSection
+        ? suggestions.map((section: unknown) => {
+          if (!getSectionSuggestions) {
+            throw new Error(
+              '"getSectionSuggestions" must be implemented',
+            )
+          }
+          return getSectionSuggestions(section as TSection).length
+        })
+        : suggestions.length,
+    })
+  )
+}
 
-class Autocomplete extends PureComponent<Props, State> {
-  /* eslint-disable react/sort-comp */
+class Autocomplete extends PureComponent<TProps, State> {
   state = {
     suggestions: this.props.suggestions || [],
   }
 
-  sectionIterator: createSectionIterator = getSectionIterator(this.props)
-  autosuggestInstance: Autosuggest = null
-  userAreTyping: ?boolean = true
-
-  static propTypes = {
-    ...Autosuggest.propTypes,
-    forceSuggestedValue: PropTypes.bool,
-  }
+  sectionIterator = getSectionIterator(this.props)
+  autosuggestInstance: TAutosuggestInstance | null = null
+  userAreTyping = true
 
   static defaultProps = {
+    // @ts-ignore
     ...Autosuggest.defaultProps,
     highlightFirstSuggestion: true,
-    getSuggestionValue: (suggestion) => suggestion.value,
-    getSectionSuggestions: (section) => section.values,
+    getSuggestionValue: (suggestion: TSuggestion) => suggestion.value,
+    getSectionSuggestions: (section: TSection) => section.values,
     forceSuggestedValue: true,
-    renderSuggestionsContainer: ({ containerProps, children, query }) => (
-      <SuggestionsContainer query={query} {...containerProps}>
+    renderSuggestionsContainer: (
+      {
+        containerProps,
+        children,
+      }: Autosuggest.RenderSuggestionsContainerParams,
+    ) => (
+      <SuggestionsContainer {...containerProps}>
         {children}
       </SuggestionsContainer>
     ),
-    isSuggestAlreadySelected: (props) => Boolean(props.inputProps.IATACode),
-    isValueEqualWithFirstSuggest: (value, suggestions) => (
-      isValuesEqual(value, _get(suggestions, '0.value'))
-      || isValuesEqual(value, _get(suggestions, '0.IATACode'))
+    isSuggestAlreadySelected: (props: TProps) => Boolean(props.inputProps.IATACode),
+    isValueEqualWithFirstSuggest: (
+      value: string,
+      suggestions: ReadonlyArray<TSuggestion> | ReadonlyArray<TSection>,
+    ) => (
+      isValuesEqual(value, _get(suggestions, '0.value')) || isValuesEqual(value, _get(suggestions, '0.IATACode'))
     ),
   }
-  /* eslint-enable react/sort-comp */
 
   // TODO airbnb config for `react/sort-comp` are missing UNSAFE_ lifecycles
   // eslint-disable-next-line camelcase, react/sort-comp
-  UNSAFE_componentWillReceiveProps(nextProps: Props) {
+  UNSAFE_componentWillReceiveProps(nextProps: TProps) {
     const {
       suggestions,
       multiSection,
@@ -166,29 +158,17 @@ class Autocomplete extends PureComponent<Props, State> {
     }
   }
 
-  onChange: onChange = (event, payload) => {
-    const { highlightedSectionIndex, highlightedSuggestionIndex } = this.autosuggestInstance.state
-    const userAreTyping = payload.newValue.length >= this.props.inputProps.value.length
-
-    let suggestion = null
-    if (['down', 'up'].includes(payload.method)) {
-      const iterate = this.sectionIterator[payload.method === 'down' ? 'next' : 'prev']
-      const [sectionIndex, suggestIndex] = iterate([
-        highlightedSectionIndex,
-        highlightedSuggestionIndex,
-      ])
-      suggestion = this.autosuggestInstance.getSuggestion(sectionIndex, suggestIndex)
-    }
+  onChange: Autosuggest.InputProps<TSuggestion>['onChange'] = (event, params) => {
+    const userAreTyping = params.newValue.length >= this.props.inputProps.value.length
 
     this.props.inputProps.onChange(event, {
-      ...payload,
-      suggestion,
+      ...params,
     })
 
     this.userAreTyping = userAreTyping
   }
 
-  onBlur = (event: Event) => {
+  onBlur = (event: React.FocusEvent<HTMLElement>) => {
     if (this.props.inputProps.onBlur) {
       this.props.inputProps.onBlur(event)
     }
@@ -200,7 +180,7 @@ class Autocomplete extends PureComponent<Props, State> {
     }
   }
 
-  onKeyDown = (event: KeyboardEvent) => {
+  onKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
     const { suggestions, inputProps } = this.props
 
     if (inputProps.onKeyDown) {
@@ -212,7 +192,9 @@ class Autocomplete extends PureComponent<Props, State> {
     }
   }
 
-  selectFirstSuggest(event: ?Event, props: Props, method: string) {
+  selectFirstSuggest(event: React.FocusEvent<HTMLElement> | null, props: TProps, method: string) {
+    if (this.autosuggestInstance === null) return
+
     const { getSuggestionValue, alwaysRenderSuggestions, multiSection } = props
     const suggestion = getFirstSuggestion(props)
 
@@ -233,16 +215,20 @@ class Autocomplete extends PureComponent<Props, State> {
     ]
 
     if (suggestion && (this.userAreTyping || ALLOWED_METHODS.includes(method))) {
-      const newValue = getSuggestionValue(suggestion)
+      const newValue = getSuggestionValue(suggestion as TSuggestion)
 
-      this.autosuggestInstance.maybeCallOnChange(event, newValue, method)
+      this.autosuggestInstance.maybeCallOnChange(
+        event as React.FocusEvent<HTMLElement>,
+        newValue,
+        method,
+      )
 
-      this.autosuggestInstance.onSuggestionSelected(event, {
-        suggestion,
+      this.autosuggestInstance.onSuggestionSelected(event as React.FormEvent<HTMLElement>, {
+        suggestion: suggestion as TSuggestion,
         suggestionValue: newValue,
         suggestionIndex: 0,
         sectionIndex: multiSection ? 0 : null,
-        method,
+        method: method as 'click' | 'enter',
       })
 
       this.autosuggestInstance.justSelectedSuggestion = true
@@ -256,32 +242,37 @@ class Autocomplete extends PureComponent<Props, State> {
         }
       }, 0)
     } else if (!suggestion) {
-      this.autosuggestInstance.maybeCallOnChange(event, '', method)
+      this.autosuggestInstance.maybeCallOnChange(event as React.FocusEvent<HTMLElement>, '', method)
     }
   }
 
   render() {
-    const { suggestions = emptyArray } = this.state
-    // Pass neighboringInGroup prop to input
-    const { neighboringInGroup, inputProps, size, className, ...props } = this.props
-    const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0]) || ''
+    const { suggestions = [] } = this.state
+    const { inputProps, size, className, ...props } = this.props
+    const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0] as TSuggestion) || ''
 
     return (
       <Autosuggest
         {...props}
         inputProps={{
-          neighboringInGroup,
           ...inputProps,
           onChange: this.onChange,
           onBlur: this.onBlur,
           onKeyDown: this.onKeyDown,
+          // @ts-ignore
           spell,
           size,
         }}
         suggestions={suggestions}
-        ref={(ref) => { this.autosuggestInstance = ref }}
+        ref={
+          (ref) => {
+            this.autosuggestInstance = ref as TAutosuggestInstance
+          }
+        }
         theme={{
-          // Pass `className` into Autosuggest theme. The `container` is className for root block
+
+          // @ts-ignore Pass `className` into Autosuggest theme.
+          // The `container` is className for root block
           ...Autosuggest.defaultProps.theme,
           container: className,
         }}
