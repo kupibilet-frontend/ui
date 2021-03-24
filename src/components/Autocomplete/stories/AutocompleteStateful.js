@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import groupBy from 'lodash/groupBy'
 
 import Autocomplete from 'components/Autocomplete'
+import Suggestion from 'components/Suggestion'
 import { Input } from 'components/Input'
 
 const getMultiSectionSuggestions = (suggestions) => {
@@ -32,25 +33,17 @@ class AutocompleteStateful extends PureComponent {
   fetchSuggestions = _throttle(async ({ value }) => {
     try {
       const { multiSection } = this.props
-      const result = await fetch(`https://suggest.kupibilet.ru/suggest.json?term=${value}`)
+      const result = await fetch(`https://hinter.kupibilet.ru/hinter.json?limit=10&str=${value}`)
       const { data } = await result.json()
       const formattedSuggestions = data.map((suggest) => {
-        const isCity = !suggest.city_code
-        const city = (suggest.city_name || suggest.name).ru
-        const country = suggest.country_name && suggest.country_name.ru
-
         return {
-          value: suggest.name.ru,
-          isCity,
-          city,
-          country,
-          IATACode: suggest.code,
-          isGeoSuggest: false,
+          key: suggest.city.code,
+          value: suggest.city.name.ru,
+          country: suggest.country.ru,
         }
       })
       const suggestions = multiSection
-        ? getMultiSectionSuggestions(formattedSuggestions)
-        : formattedSuggestions
+        ? getMultiSectionSuggestions(formattedSuggestions) : formattedSuggestions
 
       if (value === this.state.value) {
         this.setState({ suggestions })
@@ -112,6 +105,9 @@ class AutocompleteStateful extends PureComponent {
         onSuggestionSelected={this.onSuggestionSelected}
         renderInputComponent={({ ref, ...props }) => <Input ref={ref} {...props} />}
         shouldRenderSuggestions={this.shouldRenderSuggestions}
+        renderSuggestion={(suggestion) => {
+          return <Suggestion suggestion={suggestion} />
+        }}
         {...restProps}
       />
     )
