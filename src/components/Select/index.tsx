@@ -1,14 +1,19 @@
-// @flow
 import React from 'react'
 import styled from 'styled-components'
 import mq from 'utils/media-queries'
-import Autocomplete from 'components/Autocomplete'
+import { COLOR_NAMES } from 'components/ThemeProvider/types'
+import Autocomplete, {
+  TProps as TAutocompleteProps,
+  TSuggestion,
+  TSection,
+} from 'components/Autocomplete'
 import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
 import { shadowSmall } from 'utils/shadows'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import noop from 'lodash/noop'
+import Autosuggest from 'react-autosuggest'
 
 const StyledContainer = styled.div`
   margin: 3px 0 0;
@@ -45,96 +50,60 @@ const StyledAutocomplete = styled(Autocomplete)`
   }
 `
 
-
-type SectionObject = {
-  title?: string,
-}
-type SuggestionObject = {
-  key?: any,
-  value?: any,
-}
-type OnChange = (Event, { newValue: string, method: string }) => void
-
-type Meta = {
-  error?: string | React.Element<*>,
-  touched?: boolean,
-}
-type InputProps = {
-  value: SuggestionObject | Object | string,
-  onChange?: OnChange,
-  meta?: Meta,
-}
-
 /* eslint-disable react/prop-types */
-const defaultInput = ({ isOpen, ...props }) => (
+const defaultInput = (props: any) => (
   <Input
     {...props}
     rightIcon={
       <Icon
         name="angle"
-        rotate={isOpen}
-        fill="miscDark"
+        rotate={props.isOpen}
+        fill={COLOR_NAMES.miscDark}
       />
     }
   />
 )
 
-// Omit ref cause it can't be set for statless RFInput and not really used by react-autowhatever
-// eslint-disable-next-line no-unused-vars
-const defaultRFInput = ({ isOpen, ref, ...props }) => (
+const defaultRFInput = (props: any) => (
   <RFInput
     {...props}
     rightIcon={
       <Icon
         name="angle"
-        rotate={isOpen}
-        fill="miscDark"
+        rotate={props.isOpen}
+        fill={COLOR_NAMES.miscDark}
       />
     }
   />
 )
 
-const defaultContainer = ({ containerProps, children }) => (
+const defaultContainer = (
+  {
+    containerProps,
+    children,
+  }: Autosuggest.RenderSuggestionsContainerParams,
+) => (
   <StyledContainer {... containerProps}>
     {children}
   </StyledContainer>
 )
 
-const defaultSectionTitle = (section: SectionObject) => (
+const defaultSectionTitle = (section: TSection) => (
   <SectionHeader>
     {section.title}
   </SectionHeader>
 )
 
-const emptySuggestions = []
-
-type Props = {
-  suggestions: SuggestionObject[] | SectionObject[],
-  selectedSuggestion: SuggestionObject | Object | string,
-  forceSuggestedValue: boolean,
-  focusInputOnSuggestionClick: boolean,
-  renderInputComponent: (Object) => Element,
-  renderSuggestionsContainer: (Object) => Element,
-  renderSectionTitle: (Object) => Element,
-  renderSuggestion?: (Object) => Element,
-  shouldRenderSuggestions: () => boolean,
-  getSuggestionValue: (Object) => any,
-  getSuggestionKey: (Object) => string,
-  onSuggestionSelected?: (Event, {
-    suggestion: SuggestionObject,
-    suggestionValue: string,
-    suggestionIndex: number,
-    sectionIndex: ?number,
-    method: 'click' | 'enter' | 'blur' | 'autoSuggest'
-  }) => void,
-  inputProps: InputProps,
+type TProps = TAutocompleteProps & {
+  selectedSuggestion: TSuggestion,
+  getSuggestionKey: (suggestion: TSuggestion) => string,
 }
 
 type State = {
   isOpen: boolean,
 }
 
-export class Select extends React.Component <Props, State> {
+export class Select extends React.Component <TProps, State> {
   static defaultProps = {
     suggestions: [],
     selectedSuggestion: {
@@ -147,9 +116,9 @@ export class Select extends React.Component <Props, State> {
     renderSuggestionsContainer: defaultContainer,
     renderSectionTitle: defaultSectionTitle,
     shouldRenderSuggestions: () => true,
-    getSuggestionValue: (suggestion: SuggestionObject) => suggestion.value,
-    getSuggestionKey: (suggestion: SuggestionObject) => suggestion.key,
-    renderSuggestion: (suggestion: SuggestionObject, props) => (
+    getSuggestionValue: (suggestion: TSuggestion) => suggestion.value,
+    getSuggestionKey: (suggestion: TSuggestion) => suggestion.key,
+    renderSuggestion: (suggestion: TSuggestion, props: TProps) => (
       <Suggestion suggestion={suggestion} {...props} />
     ),
     onSuggestionSelected: noop,
@@ -167,7 +136,10 @@ export class Select extends React.Component <Props, State> {
     this.setState({ isOpen: false })
   }
 
-  handleIconPress = (inputNode, event) => {
+  handleIconPress = (
+    inputNode: React.RefObject<any>,
+    event: React.FormEvent<HTMLElement>,
+  ) => {
     event.preventDefault()
     event.stopPropagation()
     const { isOpen } = this.state
@@ -178,14 +150,17 @@ export class Select extends React.Component <Props, State> {
     }
   }
 
-  renderSuggestion = (suggestion: {}, { query, isHighlighted }) => {
+  renderSuggestion = (
+    suggestion: TSuggestion,
+    { query, isHighlighted }: Autosuggest.RenderSuggestionParams,
+  ) => {
     const { renderSuggestion, ...props } = this.props
     const { selectedSuggestion, getSuggestionKey } = this.props
 
-    // Respect react-autocomplete signature…
     return renderSuggestion(suggestion, {
       query,
       isHighlighted,
+      // @ts-ignore
       selectedKey: getSuggestionKey(selectedSuggestion),
       ...props,
     })
@@ -202,9 +177,10 @@ export class Select extends React.Component <Props, State> {
       selectedSuggestion,
     } = this.props
     return (
+      // @ts-ignore
       <StyledAutocomplete
         {...this.props}
-        suggestions={isOpen ? suggestions : emptySuggestions}
+        suggestions={isOpen ? suggestions : []}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         renderSuggestionsContainer={renderSuggestionsContainer}
@@ -215,6 +191,7 @@ export class Select extends React.Component <Props, State> {
           readOnly: true,
           value: getSuggestionValue(selectedSuggestion) || '',
           isOpen,
+          // eslint-disable-next-line @typescript-eslint/no-empty-function
           onChange: () => {},
           handleRightIconPress: this.handleIconPress,
         }}
@@ -223,11 +200,17 @@ export class Select extends React.Component <Props, State> {
   }
 }
 
+type RFSelectProps = TProps & {
+  input: any;
+  meta: { active: boolean };
+  placeholder: string;
+}
 
-type RFProps = FieldProps
-
-export default class RFSelect extends React.Component <RFProps, void> {
-  onSuggestionSelected = (e, { suggestion }) => {
+export default class RFSelect extends React.Component <RFSelectProps, void> {
+  onSuggestionSelected = (
+    e: React.FormEvent<HTMLElement>,
+    { suggestion }: Record<'suggestion', TSuggestion>,
+  ) => {
     const { onChange } = this.props.input
     onChange(suggestion)
   }

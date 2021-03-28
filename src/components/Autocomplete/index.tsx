@@ -25,12 +25,13 @@ export const AUTOSUGGEST_METHODS = {
   SELECT_LAST_EQUAL_SUGGEST: 'AUTOSUGGEST_SELECT_LAST_EQUAL_SUGGEST',
 }
 
-type TSuggestion = Record<string, unknown>
-type TSection = TSuggestion[] | {
-  values: TSuggestion[]
+export type TSuggestion = Record<string, unknown>
+export type TSection = {
+  title: string;
+  values: TSuggestion[];
 }
 
-type TProps = Autosuggest.AutosuggestProps<TSuggestion, TSection> & {
+export type TProps = Autosuggest.AutosuggestProps<TSuggestion, TSection> & {
   forceSuggestedValue: boolean;
   getSectionSuggestions?: GetSectionSuggestions<TSuggestion, TSection>;
   renderSectionTitle?: RenderSectionTitle;
