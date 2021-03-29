@@ -31,27 +31,27 @@ function getLinkHoverColor(props: TLinkProps): string {
 }
 
 const linkStyles = css`
-    ${switchTransition}
-    display: inline-flex;
-    align-items: center;
-    color: ${getLinkColor};
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
-    transition-property: color;
+  ${switchTransition}
+  display: inline-flex;
+  align-items: center;
+  color: ${getLinkColor};
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  transition-property: color;
+
+  .icon-inherit-color {
+    fill: ${getLinkColor};
+  }
+
+  &:hover {
+    color: ${getLinkHoverColor};
 
     .icon-inherit-color {
-      fill: ${getLinkColor};
+      fill: ${getLinkHoverColor};
     }
-
-    &:hover {
-      color: ${getLinkHoverColor};
-
-      .icon-inherit-color {
-        fill: ${getLinkHoverColor};
-      }
-    }
+  }
 `
 
 const LinkAComponent = styled.a`${linkStyles}`
