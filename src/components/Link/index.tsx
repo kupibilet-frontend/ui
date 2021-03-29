@@ -57,6 +57,4 @@ const Link = (props: TProps): JSX.Element => {
   )
 }
 
-export { renderIcon }
-
 export default Link
