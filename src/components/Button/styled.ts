@@ -2,7 +2,7 @@ import styled, { css, DefaultTheme } from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
-import { getLinkColor, getLinkHoverColor } from 'utils/link'
+import { getLinkColor, getLinkHoverColor } from 'components/Link/styled'
 import { queries } from 'utils/media-queries'
 import {
   BUTTON_SIZES_NAMES,

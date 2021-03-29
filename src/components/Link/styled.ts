@@ -22,11 +22,11 @@ interface TLinkProps {
   theme: DefaultTheme,
 }
 
-export function getLinkColor(props: TLinkProps): string {
+function getLinkColor(props: TLinkProps): string {
   return props.theme.color.primaryDarkest
 }
 
-export function getLinkHoverColor(props: TLinkProps): string {
+function getLinkHoverColor(props: TLinkProps): string {
   return opacify(-0.2, getLinkColor(props))
 }
 
@@ -59,6 +59,8 @@ const LinkSpanComponent = styled.span`${linkStyles}`
 
 export {
   IconPaddingWrap,
+  getLinkColor,
+  getLinkHoverColor,
   linkStyles,
   LinkAComponent,
   LinkSpanComponent,
