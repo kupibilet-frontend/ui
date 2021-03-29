@@ -54,14 +54,9 @@ const linkStyles = css`
   }
 `
 
-const LinkAComponent = styled.a`${linkStyles}`
-const LinkSpanComponent = styled.span`${linkStyles}`
-
 export {
   IconPaddingWrap,
   getLinkColor,
   getLinkHoverColor,
   linkStyles,
-  LinkAComponent,
-  LinkSpanComponent,
 }
