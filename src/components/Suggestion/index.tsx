@@ -1,6 +1,7 @@
-// @flow
 import React from 'react'
 import Icon from 'components/Icon'
+import { TSuggestion } from 'components/Autocomplete'
+import { COLOR_NAMES } from 'components/ThemeProvider/types'
 
 import {
   SuggestionContainer,
@@ -8,19 +9,15 @@ import {
   SuggestionText,
 } from './styled'
 
-type SuggestionObject = {
-  key?: any,
-  value?: any,
-}
-
-type Props = {
-  suggestion: Object,
+interface TProps {
+  suggestion: TSuggestion,
   selectedKey?: string | any,
   isHighlighted?: boolean,
-  getSuggestionValue: (Object: SuggestionObject) => string | any,
-  getSuggestionKey: (Object: SuggestionObject) => string | any,
+  getSuggestionValue: (suggestion: TSuggestion) => string | any,
+  getSuggestionKey: (suggestion: TSuggestion) => string | any,
 }
-const Suggestion = (props: Props) => {
+
+const Suggestion = (props: TProps) => {
   const {
     suggestion,
     selectedKey,
@@ -32,7 +29,7 @@ const Suggestion = (props: Props) => {
     <SuggestionContainer isHighlighted={isHighlighted} title={getSuggestionValue(suggestion)}>
       <SuggestionIcon>
         {selectedKey === getSuggestionKey(suggestion)
-          && <Icon name="checkmark" fill="primaryLight" />
+          && <Icon name="checkmark" fill={COLOR_NAMES.primaryLight} />
         }
       </SuggestionIcon>
       <SuggestionText>
@@ -45,8 +42,8 @@ const Suggestion = (props: Props) => {
 Suggestion.defaultProps = {
   selectedKey: '',
   isHighlighted: false,
-  getSuggestionValue: (suggestion: SuggestionObject) => suggestion.value,
-  getSuggestionKey: (suggestion: SuggestionObject) => suggestion.key,
+  getSuggestionValue: (suggestion: TSuggestion) => suggestion.value,
+  getSuggestionKey: (suggestion: TSuggestion) => suggestion.key,
 }
 
 export default Suggestion

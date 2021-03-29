@@ -1,7 +1,12 @@
 import styled from 'styled-components'
 import Text from 'components/Typography/Text'
 
-export const SuggestionContainer = styled.div`
+type TSuggestionContainerProps = {
+  isHighlighted?: boolean;
+  title: string;
+}
+
+export const SuggestionContainer = styled.div<TSuggestionContainerProps>`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
