@@ -40,10 +40,6 @@ function renderIcon(icon: React.ReactElement | null = null, isLeft = false): JSX
   )
 }
 
-/**
- * Ссылки могут содержать текст и иконку рядом с текстом. Если вам нужно использовать Link
- * из React Router, возьмите компонент RouterLink
- */
 const Link = (props: TProps) => {
   const {
     children,
