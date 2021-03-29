@@ -1,8 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import style from 'utils/link'
-
-import { IconPaddingWrap } from './styled'
+import { IconPaddingWrap, LinkAComponent, LinkSpanComponent } from './styled'
 
 const cloneIconWithSize = (iconNode: React.ReactElement): JSX.Element => (
   React.cloneElement(iconNode, {
@@ -40,7 +37,7 @@ function renderIcon(icon: React.ReactElement | null = null, isLeft = false): JSX
   )
 }
 
-const Link = (props: TProps) => {
+const Link = (props: TProps): JSX.Element => {
   const {
     children,
     href = '',
@@ -49,7 +46,7 @@ const Link = (props: TProps) => {
     ...rest
   } = props
 
-  const LinkComponent = href ? 'a' : 'span'
+  const LinkComponent = href ? LinkAComponent : LinkSpanComponent
 
   return (
     <LinkComponent href={href} {...rest}>
@@ -60,12 +57,6 @@ const Link = (props: TProps) => {
   )
 }
 
-const StyledLink = styled(Link)`
-  ${style}
-  display: inline-flex;
-  align-items: center;
-`
-
 export { renderIcon }
 
-export default StyledLink
+export default Link
