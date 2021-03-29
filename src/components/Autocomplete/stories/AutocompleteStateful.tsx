@@ -4,11 +4,29 @@ import _throttle from 'lodash/throttle'
 import get from 'lodash/get'
 import groupBy from 'lodash/groupBy'
 
-import Autocomplete from 'components/Autocomplete'
+import Autocomplete, { TSuggestion, ReactAutosuggest } from 'components/Autocomplete'
 import Suggestion from 'components/Suggestion'
 import { Input } from 'components/Input'
 
-const getMultiSectionSuggestions = (suggestions) => {
+export interface TProps {
+  multiSection?: boolean;
+  renderSectionTitle?: ReactAutosuggest.RenderSectionTitle;
+  renderInputComponent?: ReactAutosuggest.RenderInputComponent;
+}
+
+export interface TState {
+  value: string;
+  suggest: TSuggestion | string | null;
+  suggestions: TSuggestion[];
+}
+
+export interface TOnChange {
+  newValue: string;
+  suggestion: TSuggestion;
+  method: string;
+}
+
+const getMultiSectionSuggestions = (suggestions: TSuggestion) => {
   const suggestsGroupByCountry = Object.entries(
     groupBy(suggestions,
       (suggest) => get(suggest, 'country', 'Нет страны')),
@@ -20,14 +38,15 @@ const getMultiSectionSuggestions = (suggestions) => {
   }))
 }
 
-class AutocompleteStateful extends PureComponent {
-  static propTypes = Autocomplete.propTypes
-  static defaultProps = Autocomplete.defaultProps
-
-  state = {
+class AutocompleteStateful extends PureComponent<TProps, TState> {
+  state: TState = {
     value: '',
     suggest: null,
     suggestions: [],
+  }
+
+  static defaultProps = {
+    renderInputComponent: ({ ref, ...props }: any) => <Input ref={ref} {...props} />,
   }
 
   fetchSuggestions = _throttle(async ({ value }) => {
@@ -35,7 +54,7 @@ class AutocompleteStateful extends PureComponent {
       const { multiSection } = this.props
       const result = await fetch(`https://hinter.kupibilet.ru/hinter.json?limit=10&str=${value}`)
       const { data } = await result.json()
-      const formattedSuggestions = data.map((suggest) => {
+      const formattedSuggestions = data.map((suggest: any) => {
         return {
           key: suggest.city.code,
           value: suggest.city.name.ru,
@@ -53,7 +72,10 @@ class AutocompleteStateful extends PureComponent {
     }
   }, 300)
 
-  onChange = (event, { newValue, suggestion, method }) => {
+  onChange = (
+    event: React.FormEvent<HTMLElement>,
+    { newValue, suggestion, method }: TOnChange,
+  ) => {
     const { suggest } = this.state
 
     if (method !== 'blur' || !suggest) {
@@ -64,7 +86,10 @@ class AutocompleteStateful extends PureComponent {
     }
   }
 
-  onSuggestionSelected = (event, { suggestion, suggestionValue }) => {
+  onSuggestionSelected: ReactAutosuggest.OnSuggestionSelected<TSuggestion> = (
+    event,
+    { suggestion, suggestionValue },
+  ) => {
     this.setState({
       suggest: suggestion,
       value: suggestionValue,
@@ -77,16 +102,15 @@ class AutocompleteStateful extends PureComponent {
     })
   }
 
-  shouldRenderSuggestions = (value) => {
+  shouldRenderSuggestions = (value: string) => {
     const { suggest } = this.state
 
     return !suggest && value.trim().length > 1
   }
 
   render() {
-    const { value, suggest, suggestions } = this.state
-    const { inputProps, ...restProps } = this.props
-
+    const { value, suggestions } = this.state
+    const { renderInputComponent, renderSectionTitle, multiSection } = this.props
     return (
       <Autocomplete
         inputProps={{
@@ -95,20 +119,19 @@ class AutocompleteStateful extends PureComponent {
           onChange: this.onChange,
           type: 'text',
           autoFocus: true,
-          ...suggest,
-          ...inputProps,
         }}
         highlightFirstSuggestion
         suggestions={suggestions}
         onSuggestionsFetchRequested={this.fetchSuggestions}
         onSuggestionsClearRequested={this.clearSuggestions}
         onSuggestionSelected={this.onSuggestionSelected}
-        renderInputComponent={({ ref, ...props }) => <Input ref={ref} {...props} />}
+        renderInputComponent={renderInputComponent}
         shouldRenderSuggestions={this.shouldRenderSuggestions}
-        renderSuggestion={(suggestion) => {
+        renderSuggestion={(suggestion: TSuggestion) => {
           return <Suggestion suggestion={suggestion} />
         }}
-        {...restProps}
+        renderSectionTitle={renderSectionTitle}
+        multiSection={multiSection}
       />
     )
   }

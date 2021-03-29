@@ -6,6 +6,7 @@ import Autocomplete, {
   TProps as TAutocompleteProps,
   TSuggestion,
   TSection,
+  ReactAutosuggest,
 } from 'components/Autocomplete'
 import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
@@ -13,7 +14,6 @@ import Suggestion from 'components/Suggestion'
 import { shadowSmall } from 'utils/shadows'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import noop from 'lodash/noop'
-import Autosuggest from 'react-autosuggest'
 
 const StyledContainer = styled.div`
   margin: 3px 0 0;
@@ -81,7 +81,7 @@ const defaultContainer = (
   {
     containerProps,
     children,
-  }: Autosuggest.RenderSuggestionsContainerParams,
+  }: ReactAutosuggest.RenderSuggestionsContainerParams,
 ) => (
   <StyledContainer {... containerProps}>
     {children}
@@ -152,7 +152,7 @@ export class Select extends React.Component <TProps, State> {
 
   renderSuggestion = (
     suggestion: TSuggestion,
-    { query, isHighlighted }: Autosuggest.RenderSuggestionParams,
+    { query, isHighlighted }: ReactAutosuggest.RenderSuggestionParams,
   ) => {
     const { renderSuggestion, ...props } = this.props
     const { selectedSuggestion, getSuggestionKey } = this.props

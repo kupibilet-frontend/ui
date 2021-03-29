@@ -1,8 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { Input } from 'components/Input'
+import { Input, TProps as TPropsInput } from 'components/Input'
 import Icon from 'components/Icon'
+import { TSection } from 'components/Autocomplete'
+import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import AutocompleteStateful from './AutocompleteStateful'
 import AutocompleteMultiSelect from './AutocompleteMultiSelect'
 
@@ -19,7 +21,7 @@ const Container = styled.div`
   width: 244px;
 `
 
-const renderSectionTitle = (section) => (
+const renderSectionTitle = (section: TSection) => (
   <SectionHeader>
     {section.title}
   </SectionHeader>
@@ -51,10 +53,8 @@ storiesOf('COMPONENTS|Controls/Autocomplete', module)
       <Container>
         <AutocompleteStateful
           renderInputComponent={
-            (props) => (<Input
-              leftIcon={<Icon name="man" fill="miscDark" />}
-              {...props}
-            />)}
+            (props) => (<Input leftIcon={<Icon name="man" fill={COLOR_NAMES.miscDark} />} {...props as TPropsInput} />)
+          }
         />
       </Container>
     ),

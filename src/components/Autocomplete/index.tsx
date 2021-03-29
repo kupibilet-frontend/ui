@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 
-import Autosuggest, { GetSectionSuggestions, RenderSectionTitle } from 'react-autosuggest'
+import ReactAutosuggest, { GetSectionSuggestions, RenderSectionTitle } from 'react-autosuggest'
 import createSectionIterator from 'section-iterator'
 import _get from 'lodash/get'
 
@@ -20,6 +20,8 @@ const isValuesEqual = (a: string, b: string) => {
   return Boolean(_a && _a === _b)
 }
 
+export { ReactAutosuggest }
+
 export const AUTOSUGGEST_METHODS = {
   SELECT_RIGHT_ARROW: 'AUTOSUGGEST_SELECT_RIGHT_ARROW',
   SELECT_LAST_EQUAL_SUGGEST: 'AUTOSUGGEST_SELECT_LAST_EQUAL_SUGGEST',
@@ -31,7 +33,7 @@ export type TSection = {
   values: TSuggestion[];
 }
 
-export type TProps = Autosuggest.AutosuggestProps<TSuggestion, TSection> & {
+export type TProps = ReactAutosuggest.AutosuggestProps<TSuggestion, TSection> & {
   forceSuggestedValue: boolean;
   getSectionSuggestions?: GetSectionSuggestions<TSuggestion, TSection>;
   renderSectionTitle?: RenderSectionTitle;
@@ -40,7 +42,7 @@ export type TProps = Autosuggest.AutosuggestProps<TSuggestion, TSection> & {
     value: string,
     suggestions: ReadonlyArray<TSuggestion> | ReadonlyArray<TSection>
   ) => boolean;
-  inputProps: Autosuggest.InputProps<TSuggestion> & {
+  inputProps: ReactAutosuggest.InputProps<TSuggestion> & {
     meta: { active: boolean } | null;
     IATACode: string;
   };
@@ -48,11 +50,11 @@ export type TProps = Autosuggest.AutosuggestProps<TSuggestion, TSection> & {
   className: string;
 }
 
-type State = {
+interface State {
   suggestions: ReadonlyArray<TSuggestion> | ReadonlyArray<TSection>,
 }
 
-interface TAutosuggestInstance extends Autosuggest {
+interface TAutosuggestInstance extends ReactAutosuggest {
   justSelectedSuggestion: boolean;
   willRenderSuggestions: (psops: TProps) => boolean;
   closeSuggestions: () => void;
@@ -61,7 +63,7 @@ interface TAutosuggestInstance extends Autosuggest {
     newValue: string,
     method: string,
   ) => void;
-  onSuggestionSelected: Autosuggest.OnSuggestionSelected<TSuggestion>
+  onSuggestionSelected: ReactAutosuggest.OnSuggestionSelected<TSuggestion>
 }
 
 const getFirstSuggestion = ({ suggestions, multiSection }: TProps) => {
@@ -104,7 +106,7 @@ class Autocomplete extends PureComponent<TProps, State> {
 
   static defaultProps = {
     // @ts-ignore
-    ...Autosuggest.defaultProps,
+    ...ReactAutosuggest.defaultProps,
     highlightFirstSuggestion: true,
     getSuggestionValue: (suggestion: TSuggestion) => suggestion.value,
     getSectionSuggestions: (section: TSection) => section.values,
@@ -113,7 +115,7 @@ class Autocomplete extends PureComponent<TProps, State> {
       {
         containerProps,
         children,
-      }: Autosuggest.RenderSuggestionsContainerParams,
+      }: ReactAutosuggest.RenderSuggestionsContainerParams,
     ) => (
       <SuggestionsContainer {...containerProps}>
         {children}
@@ -159,7 +161,7 @@ class Autocomplete extends PureComponent<TProps, State> {
     }
   }
 
-  onChange: Autosuggest.InputProps<TSuggestion>['onChange'] = (event, params) => {
+  onChange: ReactAutosuggest.InputProps<TSuggestion>['onChange'] = (event, params) => {
     const userAreTyping = params.newValue.length >= this.props.inputProps.value.length
 
     this.props.inputProps.onChange(event, {
@@ -253,7 +255,7 @@ class Autocomplete extends PureComponent<TProps, State> {
     const spell = suggestions.length && this.props.getSuggestionValue(suggestions[0] as TSuggestion) || ''
 
     return (
-      <Autosuggest
+      <ReactAutosuggest
         {...props}
         inputProps={{
           ...inputProps,
@@ -274,7 +276,7 @@ class Autocomplete extends PureComponent<TProps, State> {
 
           // @ts-ignore Pass `className` into Autosuggest theme.
           // The `container` is className for root block
-          ...Autosuggest.defaultProps.theme,
+          ...ReactAutosuggest.defaultProps.theme,
           container: className,
         }}
       />

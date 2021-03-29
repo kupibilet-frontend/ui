@@ -1,31 +1,48 @@
 import React, { PureComponent } from 'react'
 import 'whatwg-fetch'
 
-import Autocomplete from 'components/Autocomplete'
+import Autocomplete, { TSuggestion } from 'components/Autocomplete'
 import Suggestion from 'components/Suggestion'
 import { Input } from 'components/Input'
 
-const normalizeSuggestions = (suggestions) => (
+export interface TProps {
+  citiesList: string[],
+}
+
+interface TState {
+  filterValue: string,
+  suggestions: string[],
+  citiesListFilter: string[],
+}
+
+interface TGetNextCitiesFilter {
+  value: string;
+  citiesListFilter: string[];
+}
+
+interface TFetchSuggestions {
+  value: string;
+  reason: 'input-changed' | 'suggestion-selected';
+}
+
+const normalizeSuggestions = (suggestions: TSuggestion[]) => (
   suggestions.map((suggestion) => ({ key: suggestion, value: suggestion }))
 )
 
-const getNextCitiesFilter = ({ value, citiesListFilter }) => (
+const getNextCitiesFilter = ({ value, citiesListFilter }: TGetNextCitiesFilter) => (
   citiesListFilter.includes(value)
     ? citiesListFilter.filter((item) => item !== value)
     : [...citiesListFilter, value]
 )
 
-class AutocompleteMultiSelect extends PureComponent {
-  static propTypes = Autocomplete.propTypes
-  static defaultProps = Autocomplete.defaultProps
-
-  state = {
+class AutocompleteMultiSelect extends PureComponent<TProps, TState> {
+  state: TState = {
     filterValue: '',
     suggestions: [],
     citiesListFilter: [],
   }
 
-  fetchSuggestions = ({ value, reason }) => {
+  fetchSuggestions = ({ value, reason }: TFetchSuggestions) => {
     const { citiesListFilter } = this.state
     const { citiesList } = this.props
 
@@ -58,7 +75,7 @@ class AutocompleteMultiSelect extends PureComponent {
     })
   }
 
-  onChange = (event, { newValue }) => {
+  onChange = (event: React.FormEvent<HTMLElement>, { newValue }: Record<'newValue', string>) => {
     this.setState({
       filterValue: newValue || '',
     })
@@ -71,7 +88,6 @@ class AutocompleteMultiSelect extends PureComponent {
 
   render() {
     const { filterValue, suggestions, citiesListFilter } = this.state
-    const { inputProps, ...restProps } = this.props
     return (
       <Autocomplete
         inputProps={{
@@ -80,16 +96,16 @@ class AutocompleteMultiSelect extends PureComponent {
           onChange: this.onChange,
           type: 'text',
           autoFocus: true,
-          ...inputProps,
         }}
+        focusInputOnSuggestionClick={false}
         alwaysRenderSuggestions
         forceSuggestedValue={false}
-        suggestions={normalizeSuggestions(suggestions)}
+        suggestions={normalizeSuggestions(suggestions as unknown as TSuggestion[])}
         onSuggestionsFetchRequested={this.fetchSuggestions}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        renderInputComponent={({ ref, ...props }) => <Input ref={ref} {...props} />}
-        renderSuggestion={(suggestion) => {
-          if (citiesListFilter.includes(suggestion.value)) {
+        renderInputComponent={({ ref, ...props }: any) => <Input ref={ref} {...props} />}
+        renderSuggestion={(suggestion: TSuggestion) => {
+          if (citiesListFilter.includes(suggestion.value as string)) {
             // Suggestion was not designed to support multi selections,
             // so just pass selectedKey equal to current suggestion key
             return <Suggestion suggestion={suggestion} selectedKey={suggestion.key} />
@@ -98,7 +114,6 @@ class AutocompleteMultiSelect extends PureComponent {
           return <Suggestion suggestion={suggestion} />
         }}
         shouldRenderSuggestions={() => true}
-        {...restProps}
       />
     )
   }
