@@ -23,7 +23,7 @@ const DEFAULT_SLIDER_PROPS: TArgs = {
 
 export const UncontrolledSliderStory = (args: TArgs): JSX.Element => (
   <StyledContainer>
-    <Slider min={args.min} max={args.max} values={args.values} />
+    <Slider {...args} />
   </StyledContainer>
 )
 
@@ -40,7 +40,7 @@ export const ControlledSliderStory = (args: TArgs): JSX.Element => {
 
   return (
     <StyledContainer>
-      <Slider min={args.min} max={args.max} values={args.values} onAfterChange={onAfterChange} />
+      <Slider {...args} onAfterChange={onAfterChange} />
     </StyledContainer>
   )
 }

@@ -48,7 +48,7 @@ function Slider(props: TProps): JSX.Element {
   }
 
   return (
-    <StyledRangeWrapper>
+    <StyledRangeWrapper disabled={disabled}>
       <Range
         min={min}
         max={max}
@@ -61,7 +61,7 @@ function Slider(props: TProps): JSX.Element {
         // @ts-ignore some TS types doesn't match with rc-slider props
         handle={(handleProps: HandleProps) => (
           <StyledHandleWrapper {...handleProps} style={{ zIndex: 4, boxShadow: 'none' }}>
-            <StyledHandle min={min} max={max} value={handleProps.value} />
+            <StyledHandle min={min} max={max} value={handleProps.value} disabled={disabled} />
           </StyledHandleWrapper>
         )}
       />
