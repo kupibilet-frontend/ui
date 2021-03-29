@@ -7,7 +7,7 @@ const cloneIconWithSize = (iconNode: React.ReactElement): JSX.Element => (
   })
 )
 
-interface TProps {
+export interface TProps {
   /**
     Чаще всего текст ссылки
   */
