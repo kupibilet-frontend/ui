@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-interface TPaddingWrapProps {
+interface TIconPaddingWrapProps {
   isLeft?: boolean,
 }
 
-export const PaddingWrap = styled.span<TPaddingWrapProps>`
+const IconPaddingWrap = styled.span<TIconPaddingWrapProps>`
   display: inline-flex;
   align-self: center;
   justify-content: center;
@@ -15,3 +15,7 @@ export const PaddingWrap = styled.span<TPaddingWrapProps>`
     isLeft ? 'padding-right: 3px;' : 'padding-left: 3px;'
   )}
 `
+
+export {
+  IconPaddingWrap,
+}

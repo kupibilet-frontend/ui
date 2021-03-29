@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import style from 'utils/link'
 
-import { PaddingWrap } from './styled'
+import { IconPaddingWrap } from './styled'
 
 const cloneIconWithSize = (iconNode: React.ReactElement): JSX.Element => (
   React.cloneElement(iconNode, {
@@ -34,9 +34,9 @@ function renderIcon(icon: React.ReactElement | null = null, isLeft = false): JSX
   if (!icon) return null
 
   return (
-    <PaddingWrap isLeft={isLeft}>
+    <IconPaddingWrap isLeft={isLeft}>
       {cloneIconWithSize(icon)}
-    </PaddingWrap>
+    </IconPaddingWrap>
   )
 }
 
