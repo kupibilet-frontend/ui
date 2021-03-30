@@ -1,24 +1,24 @@
-// @flow
-
 import React from 'react'
 import moment from 'moment'
 import VisibilitySensor from 'react-visibility-sensor'
 
-type Props = {
+interface TProps {
   date: Date,
   modifiers: {
-    selected: Array<Date | Object>,
+    selected: Date[],
   },
-  onMonthVisibilityChange: (Date) => void,
+  onMonthVisibilityChange: (date: Date) => void,
   isMobile: boolean,
 }
 
-type State = {
+interface TState {
   isSelectedMonth: boolean,
 }
 
-class MonthCaption extends React.PureComponent<Props, State> {
-  constructor(props: Props) {
+class MonthCaption extends React.PureComponent<TProps, TState> {
+  selectedMonth = React.createRef<HTMLDivElement>()
+
+  constructor(props: TProps) {
     super(props)
     const {
       date,
@@ -34,35 +34,30 @@ class MonthCaption extends React.PureComponent<Props, State> {
     }
   }
 
-  componentDidMount() {
-    const {
-      isMobile,
-    } = this.props
+  componentDidMount(): void {
+    const { isMobile } = this.props
+    const { isSelectedMonth } = this.state
 
-    const {
-      isSelectedMonth,
-    } = this.state
-
-    if (isMobile && isSelectedMonth) {
-      this.selectedMonth.scrollIntoView()
+    if (isMobile && isSelectedMonth && this.selectedMonth.current) {
+      this.selectedMonth.current.scrollIntoView()
     }
   }
 
-  componentDidUpdate(prevProps: Props) {
+  componentDidUpdate(prevProps: TProps): void {
     const { onMonthVisibilityChange, date } = this.props
     if (prevProps.date !== date) {
       onMonthVisibilityChange(date)
     }
   }
 
-  onChange = (isVisible: boolean) => {
+  onChange = (isVisible: boolean): void => {
     const { onMonthVisibilityChange, date } = this.props
     if (isVisible) {
       onMonthVisibilityChange(date)
     }
   }
 
-  render() {
+  render(): JSX.Element {
     const { date } = this.props
 
     const formatDate = moment(date).format('MMMM YYYY')
@@ -75,7 +70,7 @@ class MonthCaption extends React.PureComponent<Props, State> {
       >
         <div
           className="DayPicker-Caption"
-          ref={(element) => { this.selectedMonth = element }}
+          ref={this.selectedMonth}
         >
           <div>{month}</div>
         </div>
