@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import DayPicker from '@kupibilet/react-day-picker'
-import mq from 'utils/media-queries'
+import { queries } from 'utils/media-queries'
 import notMobileReactDayStyles from './not-mobile-react-day-styles'
 import mobileReactDayStyles from './mobile-react-day-styles'
 
@@ -312,25 +312,27 @@ const castomReactDayStyles = css`
 }
 `
 const reactDayStyles = css`
-  ${mq.desktop`
+  @media ${queries.isDesktop} {
     ${defaultReactDayStyles};
     ${castomReactDayStyles};
     ${notMobileReactDayStyles};
-  `}
-  ${mq.tablet`
+  }
+
+  @media ${queries.isTablet} {
     ${defaultReactDayStyles};
     ${castomReactDayStyles};
     ${notMobileReactDayStyles};
-  `}
-  ${mq.mobile`
+  }
+
+  @media ${queries.isMobile} {
     ${castomReactDayStyles};
     ${mobileReactDayStyles};
-  `}
+  }
 `
 
 export const StyledDayPicker = styled(DayPicker)`
   ${reactDayStyles};
-  ${mq.mobile`
+  @media ${queries.isMobile} {
     display: flex;
     max-height: 100%;
     overflow-x: hidden;
@@ -344,10 +346,14 @@ export const StyledDayPicker = styled(DayPicker)`
 
     // hack for some native mobile browsers
     background: ${({ theme }) => theme.color.background};
-  `}
+  }
 `
 
-export const DayPickerWrapper = styled.div`
+interface TDayPickerWrapperProps {
+  hasScrolling: boolean,
+}
+
+export const DayPickerWrapper = styled.div<TDayPickerWrapperProps>`
   ${({ hasScrolling }) => (hasScrolling ? `
     overflow-y: scroll;
     overflow-x: hidden;
@@ -361,9 +367,9 @@ export const DayPickerWrapper = styled.div`
 export const Navbar = styled.div`
   padding: 0.5em 1em 0;
   position: relative;
-  ${mq.handheld`
+  @media ${queries.isHandheld} {
     padding-bottom: 0.5em;
-  `}
+  }
 `
 
 export const NavbarInfo = styled.div`
@@ -371,9 +377,9 @@ export const NavbarInfo = styled.div`
   justify-content: flex-end;
   align-items: center;
   white-space: nowrap;
-  ${mq.handheld`
+  @media ${queries.isHandheld} {
     flex-direction: column;
-  `}
+  }
 `
 
 export const NavbarButtons = styled.div`
