@@ -1,7 +1,9 @@
-// @flow
 import React from 'react'
 import moment from 'moment'
+import { Modifiers } from 'react-day-picker'
+
 import { withMedia } from 'utils/media-queries'
+import { TWithMediaProps } from 'utils/types'
 import Button from 'components/Button'
 import CalendarDay from 'components/CalendarDay'
 import MonthCaption from './parts/MonthCaption'
@@ -14,70 +16,58 @@ import {
   NavbarButtons,
 } from './styled'
 
-export type TCalendarModifiers = {
-  disabled: {
-    before: Date,
-    after: Date,
-  },
-  selected: [
-    Date,
-    { from: Date, to: Date },
-  ],
-  start: Date,
-  end: Date,
-}
 
-type TProps = {
+interface TProps extends TWithMediaProps {
   /**
     Функция, срабатывающая при клике на день в кадендаре. Возвращает выбранный день
   */
-  onDayClick: (Date, TCalendarModifiers) => void,
+  onDayClick: (date: Date, calendarModifiers: Modifiers) => void,
   /**
     Массив выбранных дней. Один или два дня в формате Timestamp
   */
-  selectedDays?: number[],
+  selectedDays: number[],
   /**
     Функция, рендерящая день, если нам нужно кастомное отображение дней.
     Например, вместе с ценами для календаря цен
   */
-  renderDay?: (Date) => void,
+  renderDay: (date: Date) => React.ReactNode,
   /**
     Количество отображаемых месяцев
   */
-  numberOfMonths?: number,
+  numberOfMonths: number,
   /**
     Объект с названиями дней недели в формате { MONDAY: string, TUESDAY: string, ... }.
     Передаем сверху для локализации
   */
   weekdays: string[],
-  isMobile: boolean,
   /**
     Должен ли календарь скроллиться
   */
   hasScrolling: boolean,
 }
 
-type TNavbarProps = {
+interface TNavbarProps {
   onPreviousClick: () => void,
   onNextClick: () => void,
+  nextMonth: Date,
+  previousMonth: Date,
 }
 
 /**
  * Кадендарь позволяет выбрать одну дату или диапазон дат
  */
-
 class Calendar extends React.PureComponent<TProps> {
   static defaultProps = {
     selectedDays: [],
     numberOfMonths: 2,
-    renderDay: (day: Date) => <CalendarDay day={moment(day)} />,
+    renderDay: (day: Date): JSX.Element => <CalendarDay day={moment(day)} />,
   }
 
-  getMaxVisibleMonth = (date: Date) => new Date(
+  getMaxVisibleMonth = (date: Date): Date => new Date(
     date.getFullYear() + 1, date.getMonth(), date.getDate(),
   )
 
-  getModifires = (): TCalendarModifiers => {
+  getModifires = (): Modifiers => {
     const {
       selectedDays,
     } = this.props
@@ -87,10 +77,12 @@ class Calendar extends React.PureComponent<TProps> {
     lastDay.setDate(lastDay.getDate() - 1)
     lastDay.setMonth(lastDay.getMonth() + 12)
 
-    const fromDate = selectedDays[0] && moment(selectedDays[0]).toDate()
-    const toDate = selectedDays[1] && moment(selectedDays[1]).toDate()
+    const fromDate = selectedDays[0] && moment(selectedDays[0]).toDate() || undefined
+    const toDate = selectedDays[1] && moment(selectedDays[1]).toDate() || undefined
 
     return ({
+      today: undefined,
+      outside: undefined,
       disabled: {
         before: today,
         after: lastDay,
@@ -104,7 +96,7 @@ class Calendar extends React.PureComponent<TProps> {
     })
   }
 
-  renderMonthCaption = (captionProps: Object) => {
+  renderMonthCaption = (captionProps: { date: Date }): JSX.Element => {
     const { isMobile } = this.props
 
     return (
@@ -116,7 +108,8 @@ class Calendar extends React.PureComponent<TProps> {
     )
   }
 
-  renderNavbar = ({ onPreviousClick, onNextClick, nextMonth, previousMonth }: TNavbarProps) => {
+  renderNavbar = (navbarProps: TNavbarProps): JSX.Element => {
+    const { onPreviousClick, onNextClick, nextMonth, previousMonth } = navbarProps
     const today = new Date()
     const maxVisibleMonth = this.getMaxVisibleMonth(today)
     const isPreviousButtonDisabled = moment(previousMonth).isBefore(today, 'month')
@@ -148,18 +141,18 @@ class Calendar extends React.PureComponent<TProps> {
     )
   }
 
-  render() {
+  render(): JSX.Element {
     const {
-      isMobile,
       selectedDays,
       onDayClick,
       renderDay,
       numberOfMonths,
       hasScrolling,
       weekdays,
+      isMobile,
     } = this.props
 
-    const modifiers: TCalendarModifiers = this.getModifires()
+    const modifiers: Modifiers = this.getModifires()
 
     const today = new Date()
     const maxVisibleMonth = this.getMaxVisibleMonth(today)

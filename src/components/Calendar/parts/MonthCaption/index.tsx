@@ -1,11 +1,10 @@
 import React from 'react'
 import moment from 'moment'
+import { Modifiers } from 'react-day-picker'
 
 interface TProps {
   date: Date,
-  modifiers: {
-    selected: Date[],
-  },
+  modifiers: Modifiers,
   isMobile: boolean,
 }
 
@@ -26,8 +25,8 @@ class MonthCaption extends React.PureComponent<TProps, TState> {
     } = props
 
     this.state = {
-      isSelectedMonth: selected[0]
-        ? moment(date).isSame(moment(selected[0]), 'month')
+      isSelectedMonth: (Array.isArray(selected) && selected[0])
+        ? moment(date).isSame(moment(selected[0] as Date), 'month')
         : false,
     }
   }
