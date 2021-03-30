@@ -33,11 +33,6 @@ type TProps = {
   */
   onDayClick: (Date, TCalendarModifiers) => void,
   /**
-    Функция, срабатывающая попадении месяца в поле видимости.
-    Нужна для инициирования подгрузки календаря цен
-  */
-  onMonthVisibilityChange?: () => void,
-  /**
     Массив выбранных дней. Один или два дня в формате Timestamp
   */
   selectedDays?: number[],
@@ -73,7 +68,6 @@ type TNavbarProps = {
 
 class Calendar extends React.PureComponent<TProps> {
   static defaultProps = {
-    onMonthVisibilityChange: () => null,
     selectedDays: [],
     numberOfMonths: 2,
     renderDay: (day: Date) => <CalendarDay day={moment(day)} />,
@@ -111,15 +105,11 @@ class Calendar extends React.PureComponent<TProps> {
   }
 
   renderMonthCaption = (captionProps: Object) => {
-    const {
-      onMonthVisibilityChange,
-      isMobile,
-    } = this.props
+    const { isMobile } = this.props
 
     return (
       <MonthCaption
         modifiers={this.getModifires()}
-        onMonthVisibilityChange={onMonthVisibilityChange}
         isMobile={isMobile}
         {...captionProps}
       />

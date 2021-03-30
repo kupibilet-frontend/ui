@@ -1,13 +1,11 @@
 import React from 'react'
 import moment from 'moment'
-import VisibilitySensor from 'react-visibility-sensor'
 
 interface TProps {
   date: Date,
   modifiers: {
     selected: Date[],
   },
-  onMonthVisibilityChange: (date: Date) => void,
   isMobile: boolean,
 }
 
@@ -43,20 +41,6 @@ class MonthCaption extends React.PureComponent<TProps, TState> {
     }
   }
 
-  componentDidUpdate(prevProps: TProps): void {
-    const { onMonthVisibilityChange, date } = this.props
-    if (prevProps.date !== date) {
-      onMonthVisibilityChange(date)
-    }
-  }
-
-  onChange = (isVisible: boolean): void => {
-    const { onMonthVisibilityChange, date } = this.props
-    if (isVisible) {
-      onMonthVisibilityChange(date)
-    }
-  }
-
   render(): JSX.Element {
     const { date } = this.props
 
@@ -64,17 +48,12 @@ class MonthCaption extends React.PureComponent<TProps, TState> {
     const month = formatDate[0].toUpperCase() + formatDate.substr(1)
 
     return (
-      <VisibilitySensor
-        onChange={this.onChange}
-        partialVisibility
+      <div
+        className="DayPicker-Caption"
+        ref={this.selectedMonth}
       >
-        <div
-          className="DayPicker-Caption"
-          ref={this.selectedMonth}
-        >
-          <div>{month}</div>
-        </div>
-      </VisibilitySensor>
+        <div>{month}</div>
+      </div>
     )
   }
 }
