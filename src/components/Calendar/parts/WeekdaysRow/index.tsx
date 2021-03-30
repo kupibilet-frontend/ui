@@ -1,11 +1,7 @@
-// @flow
 import React from 'react'
-import {
-  WeekdaysWrapper,
-  Weekday,
-} from './styled'
+import { WeekdaysWrapper, Weekday } from './styled'
 
-type TProps = {
+interface TProps {
   weekdays: string[],
 }
 
