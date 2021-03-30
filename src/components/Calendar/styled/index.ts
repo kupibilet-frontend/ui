@@ -1,12 +1,10 @@
 import styled, { css } from 'styled-components'
-import DayPicker from '@kupibilet/react-day-picker'
+import DayPicker from 'react-day-picker'
 import { queries } from 'utils/media-queries'
 import notMobileReactDayStyles from './not-mobile-react-day-styles'
 import mobileReactDayStyles from './mobile-react-day-styles'
 
 const defaultReactDayStyles = css`
-/* DayPicker styles - copy from @kupibilet/react-day-picker/lib/style.css */
-
 .DayPicker {
   display: inline-block;
   font-size: 1rem;
