@@ -17,7 +17,7 @@ import {
 } from './styled'
 
 
-interface TProps extends TWithMediaProps {
+export interface TProps extends TWithMediaProps {
   /**
     Функция, срабатывающая при клике на день в кадендаре. Возвращает выбранный день
   */
@@ -185,6 +185,7 @@ class Calendar extends React.PureComponent<TProps> {
 const DocGenCalendar = Calendar
 
 export {
+  Calendar,
   DocGenCalendar,
   WeekdaysRow,
 }
