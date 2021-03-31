@@ -156,14 +156,14 @@ export class Select extends React.Component <TProps, State> {
   ) => {
     const { renderSuggestion, ...props } = this.props
     const { selectedSuggestion, getSuggestionKey } = this.props
-
-    return renderSuggestion(suggestion, {
+    const renderSuggestionParams = {
       query,
       isHighlighted,
-      // @ts-ignore
       selectedKey: getSuggestionKey(selectedSuggestion),
       ...props,
-    })
+    }
+
+    return renderSuggestion(suggestion, renderSuggestionParams)
   }
 
   render() {
@@ -177,7 +177,7 @@ export class Select extends React.Component <TProps, State> {
       selectedSuggestion,
     } = this.props
     return (
-      // @ts-ignore
+      // @ts-ignore Destruction `this.props` is incompatible with types of styled component.
       <StyledAutocomplete
         {...this.props}
         suggestions={isOpen ? suggestions : []}

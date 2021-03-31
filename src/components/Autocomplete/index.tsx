@@ -69,10 +69,10 @@ interface TAutosuggestInstance extends ReactAutosuggest {
 
 const getFirstSuggestion = ({ suggestions, multiSection }: TProps) => {
   let [suggestion] = suggestions
-  if (multiSection && suggestion && Array.isArray(suggestion)) {
+  if (multiSection && suggestion) {
     // destructuring dosn't work for assignment in babel
     // eslint-disable-next-line prefer-destructuring
-    suggestion = suggestion[0]
+    suggestion = suggestion[0] as TSuggestion
   }
 
   return suggestion || null
@@ -106,7 +106,7 @@ class Autocomplete extends PureComponent<TProps, State> {
   userAreTyping = true
 
   static defaultProps = {
-    // @ts-ignore
+    // @ts-ignore Extract `defaultProps` from Autosuggest.
     ...ReactAutosuggest.defaultProps,
     highlightFirstSuggestion: true,
     getSuggestionValue: (suggestion: TSuggestion) => suggestion.value,
@@ -263,7 +263,7 @@ class Autocomplete extends PureComponent<TProps, State> {
           onChange: this.onChange,
           onBlur: this.onBlur,
           onKeyDown: this.onKeyDown,
-          // @ts-ignore
+          // @ts-ignore Pass `spell` into Autosuggest inputProps.
           spell,
           size,
         }}
