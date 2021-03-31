@@ -244,7 +244,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
   )
 }
 
-type TRFInputProps = WrappedFieldProps & TProps
+export type TRFInputProps = WrappedFieldProps & TProps
 
 const RFInput = ({ input, meta, ...props }: TRFInputProps): JSX.Element => (
   <InputControl
