@@ -94,7 +94,7 @@ const defaultSectionTitle = (section: TSection) => (
   </SectionHeader>
 )
 
-type TProps = TAutocompleteProps & {
+export type TProps = TAutocompleteProps & {
   selectedSuggestion: TSuggestion,
   getSuggestionKey: (suggestion: TSuggestion) => string,
 }

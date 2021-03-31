@@ -44,6 +44,7 @@ export type TProps = ReactAutosuggest.AutosuggestProps<TSuggestion, TSection> & 
   ) => boolean;
   inputProps: ReactAutosuggest.InputProps<TSuggestion> & {
     meta: { active: boolean } | null;
+    error: string | null;
     IATACode: string;
   };
   size?: number;
