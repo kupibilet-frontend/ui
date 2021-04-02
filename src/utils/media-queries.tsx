@@ -20,7 +20,7 @@ export const queries = {
 
 export function withMedia<T extends TWithMediaProps>(
   Component:React.ComponentType<T>,
-): (props: T) => JSX.Element {
+): (props: Subtract<T, TWithMediaProps>) => JSX.Element {
   function MediaProvider(props: Subtract<T, TWithMediaProps>): JSX.Element {
     const renderMedias = (medias: TWithMediaProps) => {
       return <Component {...props as T} {...medias} />
