@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import Link from 'utils/link'
+import { linkStyles } from 'components/Link/styled'
 import Tab from './Tab'
 
 const StyledTab = styled(Tab)`
-  ${Link}
+  ${linkStyles}
 
   display: inline-block;
   padding: 0 10px;

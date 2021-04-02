@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import style from 'utils/link'
-
-import { PaddingWrap } from './styled'
+import { IconPaddingWrap, linkStyles } from './styled'
 
 const cloneIconWithSize = (iconNode: React.ReactElement): JSX.Element => (
   React.cloneElement(iconNode, {
@@ -10,7 +8,7 @@ const cloneIconWithSize = (iconNode: React.ReactElement): JSX.Element => (
   })
 )
 
-interface TProps {
+export interface TProps {
   /**
     Чаще всего текст ссылки
   */
@@ -34,17 +32,13 @@ function renderIcon(icon: React.ReactElement | null = null, isLeft = false): JSX
   if (!icon) return null
 
   return (
-    <PaddingWrap isLeft={isLeft}>
+    <IconPaddingWrap isLeft={isLeft}>
       {cloneIconWithSize(icon)}
-    </PaddingWrap>
+    </IconPaddingWrap>
   )
 }
 
-/**
- * Ссылки могут содержать текст и иконку рядом с текстом. Если вам нужно использовать Link
- * из React Router, возьмите компонент RouterLink
- */
-const Link = (props: TProps) => {
+const Link = (props: TProps): JSX.Element => {
   const {
     children,
     href = '',
@@ -64,12 +58,7 @@ const Link = (props: TProps) => {
   )
 }
 
-const StyledLink = styled(Link)`
-  ${style}
-  display: inline-flex;
-  align-items: center;
-`
 
-export { renderIcon }
+const StyledLink = styled(Link)`${linkStyles}`
 
 export default StyledLink
