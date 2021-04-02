@@ -21,11 +21,11 @@ import {
 import { getCloseIconColor, getCloseIconSize } from './utils'
 
 interface TProps extends TWithMediaProps {
-  size: ModalSize,
-  closeOnOutsideClick: boolean,
-  closeOnEsc: boolean,
-  shouldRenderCloseIcon: boolean,
-  isOnBottom: boolean,
+  size?: ModalSize,
+  closeOnOutsideClick?: boolean,
+  closeOnEsc?: boolean,
+  shouldRenderCloseIcon?: boolean,
+  isOnBottom?: boolean,
   onSubmitClick?: () => void,
   submitText?: React.ReactChild,
   submitButtonCloseText?: React.ReactChild,
@@ -37,19 +37,20 @@ interface TProps extends TWithMediaProps {
   renderHeader?: (props: TProps & { children: React.ReactChild }) => React.ReactNode,
   renderContent?: (props: TProps) => React.ReactNode,
   isOpen: boolean,
+  children: React.ReactChild,
 }
 
 const Modal = React.memo((props: TProps) => {
   const {
     heading = '',
-    renderHeader = ({ heading: header, size }: TProps) => (header ? (
-      <Header size={size}>
-        <H4>{header}</H4>
-      </Header>
-    ) : null),
     renderContent = (contentProps: any) => <Content {...contentProps} />,
     footer = null,
     size = 'wide',
+    renderHeader = ({ heading: header, size: modalSize = 'wide' }: TProps) => (header ? (
+      <Header size={modalSize}>
+        <H4>{header}</H4>
+      </Header>
+    ) : null),
     closeOnOutsideClick = true,
     closeOnEsc = true,
     shouldRenderCloseIcon = true,
@@ -114,7 +115,7 @@ const Modal = React.memo((props: TProps) => {
     <Portal node={document && document.getElementById('portal')}>
       <GlobalStylesScope>
         <Overlay
-          closePortal={closeOnOutsideClick && closePortal}
+          closePortal={closeOnOutsideClick ? closePortal : () => null}
           isOnBottom={isOnBottom}
         >
           <ModalContent size={size}>
