@@ -19,6 +19,7 @@ export interface TButtonProps {
   target?: string,
   onClick?: (event: Event) => void,
   type?: string,
+  tabIndex?: number,
 }
 
 

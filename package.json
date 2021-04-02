@@ -123,8 +123,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
-    "@kupibilet/react-dates": "^12.3.0",
-    "@kupibilet/react-day-picker": "^7.2.5",
     "@kupibilet/react-media": "^1.5.1",
     "@types/classnames": "^2.2.11",
     "rc-slider": "^9.7.1",
@@ -132,7 +130,6 @@
     "react-autosuggest": "^10.0.0",
     "react-portal": "^4.1.4",
     "react-router-dom": "^5.2.0",
-    "react-visibility-sensor": "^4.1.1",
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
