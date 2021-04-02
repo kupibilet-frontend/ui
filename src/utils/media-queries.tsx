@@ -12,12 +12,16 @@ export const queries = {
   isDesktop: 'screen and (min-width: 1200px)',
 }
 
-//  @usage
-//  const Component = ({ isMobile, isTablet, isHandheld, isDesktop }) => {}
-//  export default withMedia(Component)
+/**
+ * @usage
+ * const Component = ({ isMobile, isTablet, isHandheld, isDesktop }) => {}
+ * export default withMedia(Component)
+ */
 
-export function withMedia<T extends TWithMediaProps>(Component: React.ComponentType<T>) {
-  return function MediaProvider(props: Subtract<T, TWithMediaProps>): JSX.Element {
+export function withMedia<T extends TWithMediaProps>(
+  Component:React.ComponentType<T>,
+): (props: T) => JSX.Element {
+  function MediaProvider(props: Subtract<T, TWithMediaProps>): JSX.Element {
     const renderMedias = (medias: TWithMediaProps) => {
       return <Component {...props as T} {...medias} />
     }
@@ -28,6 +32,10 @@ export function withMedia<T extends TWithMediaProps>(Component: React.ComponentT
       </Media>
     )
   }
+
+  MediaProvider.displayName = 'withMedia'
+
+  return MediaProvider
 }
 
 const media = {
