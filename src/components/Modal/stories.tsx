@@ -8,6 +8,7 @@ import Modal from 'components/Modal'
 import Button from 'components/Button'
 import _get from 'lodash/get'
 import { BUTTON_SIZES_NAMES } from 'components/Button/types'
+import { ModalSize } from './types'
 
 const isOpen = () => boolean('isOpen', _get(process, 'env.NODE_ENV') !== 'test')
 const onClick = () => updateKnob('isOpen', 'boolean', true)
@@ -40,7 +41,7 @@ const footerContent = (
 
 storiesOf('COMPONENTS|Complex controls/Modal', module)
   .add('With sizes & custom footer', () => {
-    const size = select('size', sizes, 'wide')
+    const size = select('size', sizes, 'wide') as ModalSize
 
     return (
       <div>

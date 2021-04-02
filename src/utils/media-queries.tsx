@@ -1,5 +1,7 @@
 import React from 'react'
+import { Subtract } from 'utility-types'
 import { css, FlattenSimpleInterpolation } from 'styled-components'
+import { TWithMediaProps } from 'utils/types'
 // @ts-ignore delete old package
 import Media from '@kupibilet/react-media'
 
@@ -14,10 +16,10 @@ export const queries = {
 //  const Component = ({ isMobile, isTablet, isHandheld, isDesktop }) => {}
 //  export default withMedia(Component)
 
-export function withMedia(Component: React.ComponentType) {
-  return function MediaProvider(props: any): JSX.Element {
-    const renderMedias = (medias: any) => {
-      return <Component {...props} {...medias} />
+export function withMedia<T extends TWithMediaProps>(Component: React.ComponentType<T>) {
+  return function MediaProvider(props: Subtract<T, TWithMediaProps>): JSX.Element {
+    const renderMedias = (medias: TWithMediaProps) => {
+      return <Component {...props as T} {...medias} />
     }
 
     return (
