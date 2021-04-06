@@ -22,7 +22,7 @@ const IconWrapper = styled.div`
   margin: 12px 6px;
 `
 
-storiesOf('COMPONENTS|Icon', module)
+storiesOf('Icon', module)
   .add('All icons', () => (
     <AllIconsWrapper>
       {icons.map((icon) => (

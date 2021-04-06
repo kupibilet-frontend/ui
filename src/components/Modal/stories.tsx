@@ -39,7 +39,7 @@ const footerContent = (
 )
 
 
-storiesOf('COMPONENTS|Complex controls/Modal', module)
+storiesOf('Modal', module)
   .add('With sizes & custom footer', () => {
     const size = select('size', sizes, 'wide') as ModalSize
 

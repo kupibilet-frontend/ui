@@ -27,7 +27,7 @@ const StyledHeader = styled.div<TStyledHeaderProps>`
   padding: 10px 20px;
 `
 
-storiesOf('COMPONENTS|Collapse', module)
+storiesOf('Collapse', module)
   .add('with defaultActiveKey', () => (
     <StyledCollapseContainer>
       <Collapse defaultActiveKey={['0']}>

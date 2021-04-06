@@ -27,7 +27,7 @@ const CustomDropdownContainer = styled.div`
   padding: 10px;
 `
 
-storiesOf('COMPONENTS|Complex controls/Dropdown', module)
+storiesOf('Dropdown', module)
   .add('Defalut', () => {
     const isOpen = boolean('isOpen', false)
     const onToggle = (event: Event, value: boolean) => {

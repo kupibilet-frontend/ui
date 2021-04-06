@@ -68,7 +68,7 @@ const List: Story = () => (
 )
 
 export default {
-  title: 'COMPONENTS|Typography',
+  title: 'Typography',
 } as Meta
 
 export { Typography, List }

@@ -16,7 +16,7 @@ function createOnChangeHandler(fieldName: string, fieldType: string) {
   }
 }
 
-storiesOf('COMPONENTS|Complex controls/ControlsGroup', module)
+storiesOf('ControlsGroup', module)
   .add('Inputs group', () => {
     const firstName = text('firstName', '')
     const lastName = text('lastName', '')

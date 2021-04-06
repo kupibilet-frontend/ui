@@ -47,5 +47,5 @@ export function OneColumn(): JSX.Element {
 }
 
 export default {
-  title: 'COMPONENTS|Controls/FluidLayout',
+  title: 'FluidLayout',
 }
