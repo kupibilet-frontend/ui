@@ -2,7 +2,7 @@
 import styled, { keyframes, css } from 'styled-components'
 
 import { switchTransition } from 'utils/transitions'
-import { getThemeColor } from 'utils/theme'
+import getThemeColor from 'utils/getThemeColor'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
 
 
