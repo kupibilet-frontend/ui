@@ -1,5 +1,4 @@
 const BASE_PLUGINS = [
-  ['flow-react-proptypes'],
   ['@babel/plugin-proposal-class-properties'],
   ['@babel/plugin-proposal-export-default-from'],
   ['module-resolver', {
@@ -15,7 +14,7 @@ const BASE_PLUGINS = [
   }],
 ]
 
-const BASE_PRESETS = ['@babel/preset-env', '@babel/preset-react', '@babel/preset-flow', '@babel/typescript']
+const BASE_PRESETS = ['@babel/preset-env', '@babel/preset-react', '@babel/typescript']
 
 module.exports = {
   env: {
