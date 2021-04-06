@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
 
-export const getThemeColor = (
+const getThemeColor = (
   theme: DefaultTheme,
   colorKey: COLOR_NAMES,
   fallbackColor = 'transparent',
@@ -13,3 +13,5 @@ export const getThemeColor = (
 
   return theme.color[colorKey] || fallbackColor
 }
+
+export default getThemeColor
