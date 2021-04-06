@@ -65,7 +65,7 @@ StyledTooltipExample.story = {
 }
 
 export default {
-  title: 'COMPONENTS|Controls/Tooltip',
+  title: 'Tooltip',
   parameters: {
     component: Tooltip,
     componentSubtitle: `import { TogglerItem, TogglerGroup } from '@kupibilet/ui/components/Toggler'`,

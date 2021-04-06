@@ -10,7 +10,7 @@ const onChange = (value: TValue) => {
   updateKnob('selectedValue', 'text', value)
 }
 
-storiesOf('COMPONENTS|Controls/Radio', module)
+storiesOf('Radio', module)
   .add('Radio Group', () => {
     const selectedValue = text('selectedValue', 'base')
     const disabled = boolean('disabled', false)

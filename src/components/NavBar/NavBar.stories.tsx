@@ -37,7 +37,7 @@ NavBarStory.argTypes = {
 }
 
 export default {
-  title: 'COMPONENTS|Controls/NavBar',
+  title: 'NavBar',
   parameters: {
     component: NavBar,
     componentSubtitle: `
