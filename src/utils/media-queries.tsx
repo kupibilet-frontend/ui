@@ -1,5 +1,4 @@
 import React from 'react'
-import { Subtract } from 'utility-types'
 import { css, FlattenSimpleInterpolation } from 'styled-components'
 import { TWithMediaProps } from 'utils/types'
 // @ts-ignore delete old package
@@ -20,8 +19,8 @@ export const queries = {
 
 export function withMedia<T extends TWithMediaProps>(
   Component:React.ComponentType<T>,
-): (props: Subtract<T, TWithMediaProps>) => JSX.Element {
-  function MediaProvider(props: Subtract<T, TWithMediaProps>): JSX.Element {
+): (props: Partial<T>) => JSX.Element {
+  function MediaProvider(props: Partial<T>): JSX.Element {
     const renderMedias = (medias: TWithMediaProps) => {
       return <Component {...props as T} {...medias} />
     }
