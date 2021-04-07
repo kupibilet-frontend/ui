@@ -14,7 +14,7 @@ function getNeighboringInGroup(index: number, length: number): TNeighboringInGro
   return 'both'
 }
 
-interface TProps {
+export interface TProps {
   children: React.ReactNode,
   className?: string,
 }
