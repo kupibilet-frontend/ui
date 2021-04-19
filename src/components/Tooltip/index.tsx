@@ -1,49 +1,10 @@
-import React, { ReactElement, RefObject, useRef, useState, useEffect } from 'react'
-import TooltipPortal from './TooltipPortal'
-import { TCoordinates, TPlacement } from './types'
-
-export interface TProps {
-  /**
-  * Вложенный в тултип элемент
-  */
-  children: ReactElement,
-  /**
-  * То, что будет отображаться в тултипе
-  */
-  content: React.ReactNode,
-  /**
-  * Положение тултипа, относительно элемента
-  */
-  placement: TPlacement,
-  /**
-  * Тултип цвета успеха
-  */
-  success?: boolean,
-  /**
-  * Тултип цвета ошибки
-  */
-  error?: boolean,
-  /**
-  * Проп для стилизации обертки контента тултипа
-  */
-  className?: string
-}
-
-const getCoordinates = (node: RefObject<HTMLDivElement>): TCoordinates | undefined => {
-  if (node.current !== null) {
-    const rect = node.current.getBoundingClientRect()
-    return {
-      width: rect.width,
-      height: rect.height,
-      left: rect.left + window.pageXOffset,
-      top: rect.top + window.pageYOffset,
-    }
-  }
-}
-
-/**
- * Компонент для всплывающих при наведении подсказок
- */
+import { GlobalStylesScope } from 'components/ThemeProvider'
+import TextSmall from 'components/Typography/TextSmall'
+import { usePopover } from 'hooks/usePopover'
+import React from 'react'
+import { Portal } from 'react-portal'
+import { TooltipBackground, TooltipIconContainer, TooltipIcon } from './styled'
+import { TTooltipProps } from './types'
 
 const Tooltip = ({
   content,
@@ -52,50 +13,59 @@ const Tooltip = ({
   error = false,
   children,
   className = '',
-}: TProps): JSX.Element => {
-  const childRef = useRef<HTMLDivElement>(null)
-  const [isOpen, setOpenStatus] = useState<boolean>(false)
-  const [coords, setCoords] = useState<TCoordinates | undefined>(undefined)
-
-  const hoverTimeout = useRef<number>()
-
-  useEffect(() => {
-    setCoords(getCoordinates(childRef))
-    return () => window.clearTimeout(hoverTimeout.current)
-  }, [])
-
-  const handleMouseLeave = (): void => {
-    window.clearTimeout(hoverTimeout.current)
-    setOpenStatus(false)
-  }
-
-  const handleMouseEnter = (): void => {
-    hoverTimeout.current = window.setTimeout(() => {
-      setCoords(getCoordinates(childRef))
-      setOpenStatus(Boolean(hoverTimeout))
-    }, 150)
-  }
+}: TTooltipProps): JSX.Element => {
+  const {
+    isOpen,
+    setRef,
+    setPopper,
+    setArrow,
+    styles,
+    attributes,
+    onMouseEnter,
+    onMouseLeave,
+    side,
+  } = usePopover(placement)
 
   return (
     <>
       <div
-        ref={childRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        ref={setRef}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
         key="tooltippedElement"
         className={className}
       >
         {children}
       </div>
-      <TooltipPortal
-        key="tooltipPortal"
-        coords={coords}
-        placement={placement}
-        isOpen={isOpen}
-        content={content}
-        success={success}
-        error={error}
-      />
+      {isOpen && (
+        <Portal>
+          <GlobalStylesScope>
+            <div ref={setPopper} style={styles.popper} {...attributes.popper}>
+              <TooltipIconContainer
+                ref={setArrow}
+                style={styles.arrow}
+                {...attributes.arrow}
+                placement={side}
+              >
+                <TooltipIcon
+                  placement={side}
+                  success={success}
+                  error={error}
+                />
+              </TooltipIconContainer>
+              <TooltipBackground
+                placement={side}
+                success={success}
+                error={error}
+              >
+                <TextSmall>
+                  { content }
+                </TextSmall>
+              </TooltipBackground>
+            </div>
+          </GlobalStylesScope>
+        </Portal>
+      )}
     </>
   )
 }
