@@ -1,63 +1,43 @@
+import { Placement } from '@popperjs/core'
 import React from 'react'
 
-// General types
 type TPopoverSize = 'normal' | 'large'
 
-type TPopoverPlacement = 'top' | 'bottom' | 'left' | 'right'
-
-interface TCoordinates {
-  left: number,
-  top: number,
-  width: number,
-  height: number,
-}
-
-type TTopLeftCoordinates = Pick<TCoordinates, 'top' | 'left'>
-
-
-// Component's props
 type TPopoverProps = {
+  /**
+  * Вложенный в тултип элемент
+  */
   children: React.ReactNode,
+  /**
+  * То, что будет отображаться в поповере
+  */
   content: React.ReactNode,
-  header?: string,
-  placement?: TPopoverPlacement,
+  /**
+  * Хедер поповера
+  */
+  header?: React.ReactNode,
+  /**
+  * Положение поповера, относительно элемента
+  */
+  placement?: Placement,
+  /**
+  * Размер поповера
+  */
   size?: TPopoverSize,
 }
 
-interface TPopoverContentProps {
-  isOpen: boolean,
-  coordinates?: TCoordinates | null,
-  placement: TPopoverPlacement,
-  content: React.ReactNode,
-  header?: string,
-  size: TPopoverSize,
+type TPopoverWithDefaultsProps = Required<TPopoverProps>
+
+interface TPopoverIconProps {
+  side: BasePlacement,
 }
 
-
-// Styled's props
-type TPopoverContainerProps = Required<Pick<TPopoverContentProps, 'placement'>> & { coordinates: TCoordinates }
-
-type TPlacementWrapperProps = Pick<TPopoverContentProps, 'placement'>
-
-type TRelativeWrapperProps = Pick<TPopoverContentProps, 'placement'>
-
-type TPopoverDotProps = Pick<TPopoverContentProps, 'placement'>
-
-type TPopoverBackgroundProps = Pick<TPopoverContentProps, 'size'>
+type TPopoverBackgroundProps = Pick<TPopoverWithDefaultsProps, 'size'>
 
 
 export {
   TPopoverSize,
-  TPopoverPlacement,
-  TCoordinates,
-  TTopLeftCoordinates,
-
   TPopoverProps,
-  TPopoverContentProps,
-
-  TPopoverContainerProps,
-  TPlacementWrapperProps,
-  TRelativeWrapperProps,
   TPopoverDotProps,
   TPopoverBackgroundProps,
 }

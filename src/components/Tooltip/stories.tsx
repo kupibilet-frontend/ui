@@ -4,20 +4,20 @@ import { select, boolean, text } from '@storybook/addon-knobs'
 import Tooltip from 'components/Tooltip'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
-import { TPlacement } from './types'
+import { Placement } from '@popperjs/core'
 
 const placements = ['top', 'bottom', 'left', 'right']
 
 export const TooltipExample = (): JSX.Element => {
   const content = text('content', 'Высококонверсионный заяц следит за длинной строкой.')
-  const placement = select('placement', placements, 'bottom') as TPlacement
+  const placement = select('placement', placements, 'top')
   const success = boolean('success', false)
   const error = Boolean(boolean('error', false))
 
   return (
     <Tooltip
       content={content}
-      placement={placement}
+      placement={placement as Placement}
       success={success}
       error={error}
     >
@@ -36,7 +36,7 @@ TooltipExample.story = {
 
 export const StyledTooltipExample = (): JSX.Element => {
   const content = text('content', 'Высококонверсионный заяц следит за длинной строкой.')
-  const placement = select('placement', placements, 'bottom') as TPlacement
+  const placement = select('placement', placements, 'bottom')
   const success = boolean('success', false)
   const error = Boolean(boolean('error', false))
   const StyledTooltip = styled(Tooltip)`
@@ -47,7 +47,7 @@ export const StyledTooltipExample = (): JSX.Element => {
   return (
     <StyledTooltip
       content={content}
-      placement={placement}
+      placement={placement as Placement}
       success={success}
       error={error}
     >
