@@ -20,7 +20,7 @@ import {
 } from './styled'
 import { getCloseIconColor, getCloseIconSize } from './utils'
 
-interface TProps extends TWithMediaProps {
+export interface TProps extends TWithMediaProps {
   size?: ModalSize,
   closeOnOutsideClick?: boolean,
   closeOnEsc?: boolean,
@@ -40,7 +40,7 @@ interface TProps extends TWithMediaProps {
   children: React.ReactChild,
 }
 
-const Modal = React.memo((props: TProps) => {
+export const Modal = React.memo((props: TProps) => {
   const {
     heading = '',
     renderContent = (contentProps: any) => <Content {...contentProps} />,

@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 
 import { DesktopOnly, MobileOnly, TabletOnly, HandheldOnly, NotMobileOnly } from 'components/ResponsiveOnly'
@@ -26,8 +25,8 @@ const NotMobileStoryTip = styled(StoryTip)`
   background: black;
 `
 
-storiesOf('ResponsiveOnly', module)
-  .add('Responsive only story', () => (
+export const ResponsiveOnlyStory = (): JSX.Element => {
+  return (
     <div>
       <DesktopOnly>
         <StoryTip>Desktop</StoryTip>
@@ -49,4 +48,9 @@ storiesOf('ResponsiveOnly', module)
         <NotMobileStoryTip>Not mobile</NotMobileStoryTip>
       </NotMobileOnly>
     </div>
-  ))
+  )
+}
+
+export default {
+  title: 'ResponsiveOnly',
+}

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import onClickOutside from 'react-onclickoutside'
 import { DropdownWrapper, DropdownContent } from './styled'
 
-interface TProps {
+export interface TProps {
   isOpen: boolean,
   onToggle: (event: Event, isOpen: boolean) => void,
   children?: React.ReactNode,
@@ -10,7 +10,7 @@ interface TProps {
   renderDropdownContainer?: (children: React.ReactNode) => JSX.Element,
 }
 
-class Dropdown extends PureComponent<TProps> {
+export class Dropdown extends PureComponent<TProps> {
   onToggle = (event: Event) => {
     this.props.onToggle(event, !this.props.isOpen)
   }

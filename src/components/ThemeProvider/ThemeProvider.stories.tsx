@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { storiesOf } from '@storybook/react'
 import { color } from './theme'
 
 interface TColorBoxProps {
@@ -76,8 +75,8 @@ const copyToClipboard = (str: string): void => {
   }
 }
 
-storiesOf('COLORS', module)
-  .add('Theme colors', () => (
+export const ThemeColors = (): JSX.Element => {
+  return (
     <>
       <Text>click to copy</Text>
       <ColorPanel>
@@ -94,4 +93,9 @@ storiesOf('COLORS', module)
         ))}
       </ColorPanel>
     </>
-  ))
+  )
+}
+
+export default {
+  title: 'COLORS',
+}

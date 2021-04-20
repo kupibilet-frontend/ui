@@ -3,7 +3,7 @@ import React, { useCallback, useState, useEffect, useMemo } from 'react'
 import CollapsePanel from './CollapsePanel'
 
 
-interface TProps {
+export interface TProps {
   activeKey?: string[],
   defaultActiveKey?: string[],
   isAccordion?: boolean,

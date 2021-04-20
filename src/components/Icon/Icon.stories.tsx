@@ -6,7 +6,7 @@ import icons from '@kupibilet/icons/dist/sprite.json'
 
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
 
-import Icon from './index'
+import Icon, { TIconProps } from './index'
 import { ICON_SIZES } from './consts'
 
 const AllIconsWrapper = styled.div`
@@ -22,11 +22,28 @@ const IconWrapper = styled.div`
   margin: 12px 6px;
 `
 
-storiesOf('Icon', module)
-  .add('All icons', () => (
+export const Default = (args: TIconProps): JSX.Element => {
+  return (
+    <Icon
+      name={select('name', icons, 'checkmark')}
+      size={select('size', ICON_SIZES, ICON_SIZES.large)}
+      fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary)}
+      striked={boolean('striked', false)}
+      paid={boolean('paid', false)}
+      rotate={boolean('rotate', false)}
+      inheritColor={boolean('inheritColor', false)}
+    />
+  )
+}
+
+export const AllIcons = (args: TIconProps): JSX.Element => {
+  return (
     <AllIconsWrapper>
-      {icons.map((icon) => (
-        <IconWrapper>
+      {icons.map((icon, index) => (
+        <IconWrapper
+          /* eslint-disable-next-line react/no-array-index-key */
+          key={index}
+        >
           <Icon
             name={icon}
             size={select('size', ICON_SIZES, ICON_SIZES.large)}
@@ -41,15 +58,10 @@ storiesOf('Icon', module)
         </IconWrapper>
       ))}
     </AllIconsWrapper>
-  ))
-  .add('Default', () => (
-    <Icon
-      name={select('name', icons, 'checkmark')}
-      size={select('size', ICON_SIZES, ICON_SIZES.large)}
-      fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary)}
-      striked={boolean('striked', false)}
-      paid={boolean('paid', false)}
-      rotate={boolean('rotate', false)}
-      inheritColor={boolean('inheritColor', false)}
-    />
-  ))
+  )
+}
+
+export default {
+  title: 'Icon',
+  component: Icon,
+}

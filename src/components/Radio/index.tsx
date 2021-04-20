@@ -9,7 +9,7 @@ import {
 
 export type TValue = string | number | boolean
 
-interface TProps {
+export interface TProps {
   /**
   * Значение опции
   */

@@ -11,7 +11,7 @@ import {
   LabelText,
 } from './styled'
 
-type TProps = {
+export type TProps = {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
   checked: boolean,
   disabled?: boolean,
@@ -20,7 +20,7 @@ type TProps = {
   className?: string,
 }
 
-const Checkbox = React.memo((props: TProps) => {
+export const Checkbox = React.memo((props: TProps) => {
   const {
     checked = false,
     disabled = false,
@@ -60,7 +60,7 @@ const Checkbox = React.memo((props: TProps) => {
   )
 })
 
-interface TRFCheckboxProps extends WrappedFieldProps {
+export interface TRFCheckboxProps extends WrappedFieldProps {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
   children: React.ReactChild,
 }
@@ -86,7 +86,5 @@ const RFCheckbox = React.memo((props: TRFCheckboxProps) => {
     />
   )
 })
-
-export { Checkbox }
 
 export default RFCheckbox
