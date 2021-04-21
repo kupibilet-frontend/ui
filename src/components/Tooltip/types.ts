@@ -1,5 +1,6 @@
 import React from 'react'
-import { Placement } from '@popperjs/core'
+import { BasePlacement, Placement } from '@popperjs/core'
+import { DefaultTheme } from 'styled-components'
 
 export interface TTooltipProps {
   /**

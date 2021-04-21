@@ -3,6 +3,12 @@ import { transparentize } from 'polished'
 import { getPopoverArrow } from 'utils/getPopoverArrow'
 import { TooltipIconContainerProps, TTooltipCommonProps } from './types'
 
+const getColoredIconSrc = memoizeOne((color: string) => {
+  const src = getColoredIconXmlSrc(color)
+  const base64src = window.btoa(src)
+  return `url(data:image/svg+xml;base64,${base64src})`
+})
+
 const arrival = keyframes`
   0% { opacity: 0; }
   100% { opacity: 1; }

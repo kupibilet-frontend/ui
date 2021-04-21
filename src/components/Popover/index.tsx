@@ -12,7 +12,6 @@ import {
   PopoverIcon,
 } from './styled'
 
-
 function Popover(props: TPopoverProps): JSX.Element {
   const {
     children,
@@ -31,6 +30,7 @@ function Popover(props: TPopoverProps): JSX.Element {
     attributes,
     onMouseEnter,
     onMouseLeave,
+    side,
   } = usePopover(placement)
 
   return (
@@ -46,7 +46,7 @@ function Popover(props: TPopoverProps): JSX.Element {
       {isOpen && (
         <Portal>
           <GlobalStylesScope>
-            <div ref={setPopper} style={styles.popper} {...attributes.poper}>
+            <div ref={setPopper} style={styles.popper} {...attributes.popper}>
               <PopoverIconContainer
                 ref={setArrow}
                 style={styles.arrow}

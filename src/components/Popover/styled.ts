@@ -6,7 +6,7 @@ import { transparentize } from 'polished'
 import { color } from 'components/ThemeProvider/theme'
 import {
   TPopoverBackgroundProps,
-  TPopoverDotProps,
+  TPopoverIconProps,
 } from './types'
 
 const iconSrc = getPopoverArrow(transparentize(0.03, color.textDarker))
@@ -29,7 +29,7 @@ const CONTAINER_ANIMATION_KEYFRAMES = keyframes`
   100% { opacity: 1; }
 `
 
-const PopoverIconContainer = styled.div<TPopoverDotProps>`
+const PopoverIconContainer = styled.div<TPopoverIconProps>`
   flex-shrink: 0;
   animation: 0.15s ease-out forwards ${CONTAINER_ANIMATION_KEYFRAMES};
   ${({ side }) => {

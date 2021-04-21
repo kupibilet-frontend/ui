@@ -1,4 +1,4 @@
-import { Placement } from '@popperjs/core'
+import { BasePlacement, Placement } from '@popperjs/core'
 import { useEffect, useRef, useState } from 'react'
 import { usePopper } from 'react-popper'
 
@@ -120,5 +120,6 @@ export function usePopover(placement: Placement): TUsePopover {
     attributes,
     onMouseEnter,
     onMouseLeave,
+    side,
   }
 }

@@ -23,6 +23,7 @@ const Tooltip = ({
     attributes,
     onMouseEnter,
     onMouseLeave,
+    side,
   } = usePopover(placement)
 
   return (
@@ -39,7 +40,7 @@ const Tooltip = ({
       {isOpen && (
         <Portal>
           <GlobalStylesScope>
-            <div ref={setPopper} style={styles.popper} {...attributes.poper}>
+            <div ref={setPopper} style={styles.popper} {...attributes.popper}>
               <TooltipIconContainer
                 ref={setArrow}
                 style={styles.arrow}

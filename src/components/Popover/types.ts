@@ -1,4 +1,4 @@
-import { Placement } from '@popperjs/core'
+import { BasePlacement, Placement } from '@popperjs/core'
 import React from 'react'
 
 type TPopoverSize = 'normal' | 'large'
@@ -38,6 +38,6 @@ type TPopoverBackgroundProps = Pick<TPopoverWithDefaultsProps, 'size'>
 export {
   TPopoverSize,
   TPopoverProps,
-  TPopoverDotProps,
+  TPopoverIconProps,
   TPopoverBackgroundProps,
 }
