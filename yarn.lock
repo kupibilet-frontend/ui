@@ -1237,10 +1237,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@kupibilet/icons@~5.5.14":
-  version "5.5.14"
-  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.5.14.tgz#4044131bd0acbd1ba99db308f735b8b03ca9bf70"
-  integrity sha512-H+s4TIzg5ijgQ0dGib4Hmb7HhlaO0Orm1/LSFOO9yNoBWWbHzigdeM/NJ1P0qjtp/mj65MydRUXMiSeLHeJwsA==
+"@kupibilet/icons@5.5.15":
+  version "5.5.15"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.5.15.tgz#203dbcbde0b7ee7435584cb1cfd31da80ed5ade3"
+  integrity sha512-fLep954kwO+P9OrMH0/PuJ06hN/gczDNFwAEYiqTEj54QNjAdOIUUTQlNzwolsaRyxZ8m3GzoDpSPJ/9zjo2EQ==
 
 "@kupibilet/react-media@^1.5.1":
   version "1.5.1"

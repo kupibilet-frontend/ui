@@ -58,7 +58,7 @@
     "@babel/preset-typescript": "^7.12.7",
     "@babel/types": "^7.12.12",
     "@emotion/core": "^10.0.10",
-    "@kupibilet/icons": "~5.5.14",
+    "@kupibilet/icons": "5.5.15",
     "@storybook/addon-docs": "^6.1.15",
     "@storybook/addon-knobs": "^6.1.15",
     "@storybook/addon-storyshots": "^6.1.15",
