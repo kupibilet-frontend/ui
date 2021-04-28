@@ -4,17 +4,32 @@ import React from 'react'
 type TPopoverSize = 'normal' | 'large'
 
 type TPopoverProps = {
+  /**
+  * Вложенный в тултип элемент
+  */
   children: React.ReactNode,
+  /**
+  * То, что будет отображаться в поповере
+  */
   content: React.ReactNode,
+  /**
+  * Хедер поповера
+  */
   header?: string,
+  /**
+  * Положение поповера, относительно элемента
+  */
   placement?: Placement,
+  /**
+  * Размер поповера
+  */
   size?: TPopoverSize,
 }
 
 type TPopoverWithDefaultsProps = Required<TPopoverProps>
 
 interface TPopoverIconProps {
-  placement: BasePlacement,
+  side: BasePlacement,
 }
 
 type TPopoverBackgroundProps = Pick<TPopoverWithDefaultsProps, 'size'>

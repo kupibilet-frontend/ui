@@ -24,8 +24,8 @@ const CONTAINER_ANIMATION_KEYFRAMES = keyframes`
 const PopoverIconContainer = styled.div<TPopoverIconProps>`
   flex-shrink: 0;
   animation: 0.15s ease-out forwards ${CONTAINER_ANIMATION_KEYFRAMES};
-  ${({ placement }) => {
-    switch (placement) {
+  ${({ side }) => {
+    switch (side) {
       case 'top':
         return 'bottom: -8px;'
       case 'right':
@@ -44,8 +44,8 @@ const PopoverIcon = styled.div<TPopoverIconProps>`
   width: 20px;
   height: 8px;
 
-  ${({ placement }) => {
-    switch (placement) {
+  ${({ side }) => {
+    switch (side) {
       case 'top':
         return 'transform: rotate(180deg);'
       case 'right':

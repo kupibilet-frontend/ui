@@ -32,10 +32,10 @@ export interface TTooltipProps {
 export type TTooltipWithDefaultsProps = Required<TTooltipProps>
 
 export interface TTooltipCommonProps extends Pick<TTooltipWithDefaultsProps, 'error' | 'success'> {
-  placement: BasePlacement,
+  side: BasePlacement,
   theme: DefaultTheme,
 }
 
 export interface TooltipIconContainerProps {
-  placement: BasePlacement,
+  side: BasePlacement,
 }

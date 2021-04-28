@@ -45,16 +45,16 @@ const Tooltip = ({
                 ref={setArrow}
                 style={styles.arrow}
                 {...attributes.arrow}
-                placement={side}
+                side={side}
               >
                 <TooltipIcon
-                  placement={side}
+                  side={side}
                   success={success}
                   error={error}
                 />
               </TooltipIconContainer>
               <TooltipBackground
-                placement={side}
+                side={side}
                 success={success}
                 error={error}
               >

@@ -51,9 +51,9 @@ function Popover(props: TPopoverProps): JSX.Element {
                 ref={setArrow}
                 style={styles.arrow}
                 {...attributes.arrow}
-                placement={side}
+                side={side}
               >
-                <PopoverIcon placement={side} />
+                <PopoverIcon side={side} />
               </PopoverIconContainer>
               <PopoverBackground size={size}>
                 {header && (
