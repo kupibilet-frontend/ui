@@ -15,7 +15,7 @@ type TPopoverProps = {
   /**
   * Хедер поповера
   */
-  header?: string,
+  header?: React.ReactNode,
   /**
   * Положение поповера, относительно элемента
   */
