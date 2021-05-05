@@ -35,6 +35,11 @@ const getColoredIconXmlSrc = (color: string) => `<?xml version="1.0" encoding="U
 
 export const getPopoverArrow = memoizeOne((color: string) => {
   const src = getColoredIconXmlSrc(color)
-  const base64src = window.btoa(src)
-  return `url(data:image/svg+xml;base64,${base64src})`
+  if (typeof window !== 'undefined') {
+    const base64src = window.btoa(src)
+    if (base64src) {
+      return `url(data:image/svg+xml;base64,${base64src})`
+    }
+  }
+  return null
 })

@@ -11,6 +11,14 @@ import {
 
 const iconSrc = getPopoverArrow(transparentize(0.03, color.textDarker))
 
+const getBackgroundImage = () => {
+  if (iconSrc) {
+    return `background-image: ${iconSrc}`
+  }
+
+  return ''
+}
+
 const POPOVER_SIZES: { [key: string]: string } = {
   normal: '360px',
   large: '480px',
@@ -40,7 +48,7 @@ const PopoverIconContainer = styled.div<TPopoverIconProps>`
 `
 
 const PopoverIcon = styled.div<TPopoverIconProps>`
-  background-image: ${iconSrc};
+  ${getBackgroundImage};
   width: 20px;
   height: 8px;
 
@@ -65,7 +73,7 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   flex-grow: 1;
   min-width: 240px;
   max-width: ${({ size }) => POPOVER_SIZES[size]};
-  background: rgba(51, 51, 51, 0.97);
+  background: ${transparentize(0.03, color.textDarker)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
   padding: 12px;
