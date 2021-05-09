@@ -28,6 +28,16 @@ export interface TUsePopover {
   side: BasePlacement,
 }
 
+function calcOffset({ placement }: { placement: Placement }): [number, number] {
+  if (/start/.test(placement)) {
+    return [-16, 12]
+  } else if (/end/.test(placement)) {
+    return [16, 12]
+  }
+
+  return [0, 12]
+}
+
 export function usePopover(placement: Placement): TUsePopover {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [ref, setRef] = useState<HTMLDivElement | null>(null)
@@ -38,14 +48,14 @@ export function usePopover(placement: Placement): TUsePopover {
       {
         name: 'offset',
         options: {
-          offset: [0, 14],
+          offset: calcOffset,
         },
       },
       {
         name: 'arrow',
         options: {
           element: arrow,
-          padding: 3,
+          padding: 16,
         },
       },
     ],

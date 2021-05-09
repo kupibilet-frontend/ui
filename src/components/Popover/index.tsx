@@ -40,13 +40,14 @@ function Popover(props: TPopoverProps): JSX.Element {
         ref={setRef}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        style={{ display: 'inline-flex' }}
       >
         {children}
       </div>
       {isOpen && (
         <Portal>
           <GlobalStylesScope>
-            <div ref={setPopper} style={styles.popper} {...attributes.popper}>
+            <div ref={setPopper} style={{ ...styles.popper, zIndex: 100 }} {...attributes.popper}>
               <PopoverIconContainer
                 ref={setArrow}
                 style={styles.arrow}

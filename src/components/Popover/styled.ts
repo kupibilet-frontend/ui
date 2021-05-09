@@ -37,9 +37,9 @@ const PopoverIconContainer = styled.div<TPopoverIconProps>`
       case 'top':
         return 'bottom: -8px;'
       case 'right':
-        return 'left: -8px;'
+        return 'left: -14px;'
       case 'left':
-        return 'right: -8px;'
+        return 'right: -14px;'
       case 'bottom':
       default:
         return 'top: -8px;'
