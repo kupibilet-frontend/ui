@@ -3,6 +3,7 @@ import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
 import TextSmall from 'components/Typography/TextSmall'
 import { usePopover } from 'hooks/usePopover'
+import { OVERLAY_Z_INDEX } from 'components/Overlay'
 import { TPopoverProps } from './types'
 import {
   PopoverBackground,
@@ -46,7 +47,11 @@ function Popover(props: TPopoverProps): JSX.Element {
       {isOpen && (
         <Portal>
           <GlobalStylesScope>
-            <div ref={setPopper} style={styles.popper} {...attributes.popper}>
+            <div
+              ref={setPopper}
+              style={{ ...styles.popper, zIndex: OVERLAY_Z_INDEX - 1 }}
+              {...attributes.popper}
+            >
               <PopoverIconContainer
                 ref={setArrow}
                 style={styles.arrow}

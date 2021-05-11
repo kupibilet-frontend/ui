@@ -3,6 +3,7 @@ import TextSmall from 'components/Typography/TextSmall'
 import { usePopover } from 'hooks/usePopover'
 import React from 'react'
 import { Portal } from 'react-portal'
+import { OVERLAY_Z_INDEX } from 'components/Overlay'
 import { TooltipBackground, TooltipIconContainer, TooltipIcon } from './styled'
 import { TTooltipProps } from './types'
 
@@ -40,7 +41,11 @@ const Tooltip = ({
       {isOpen && (
         <Portal>
           <GlobalStylesScope>
-            <div ref={setPopper} style={styles.popper} {...attributes.popper}>
+            <div
+              ref={setPopper}
+              style={{ ...styles.popper, zIndex: OVERLAY_Z_INDEX - 1 }}
+              {...attributes.popper}
+            >
               <TooltipIconContainer
                 ref={setArrow}
                 style={styles.arrow}
