@@ -24,6 +24,10 @@ type TPopoverProps = {
   * Размер поповера
   */
   size?: TPopoverSize,
+  /**
+  * z-index поповера
+  */
+  zIndex?: number,
 }
 
 type TPopoverWithDefaultsProps = Required<TPopoverProps>
