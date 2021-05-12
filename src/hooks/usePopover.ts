@@ -1,4 +1,5 @@
-import { BasePlacement, Placement } from '@popperjs/core'
+/* eslint-disable no-param-reassign */
+import { BasePlacement, Modifier, Placement } from '@popperjs/core'
 import { useEffect, useRef, useState } from 'react'
 import { usePopper } from 'react-popper'
 
@@ -16,6 +17,32 @@ function getSide(
   return sides.find((side) => placement.includes(side)) as BasePlacement
 }
 
+const applyPopperShift: Modifier<'applyPopperShift', Record<string, never>> = {
+  name: 'applyPopperShift',
+  enabled: true,
+  phase: 'main',
+  fn({ state, name }) {
+    const { placement } = state
+    let offset = { x: 0, y: 0 }
+
+    if (state.modifiersData.arrow?.centerOffset !== 0) {
+      if (/start/.test(placement)) {
+        offset = { x: -16, y: 0 }
+      } else if (/end/.test(placement)) {
+        offset = { x: 16, y: 0 }
+      }
+    }
+
+    state.modifiersData[name] = offset
+    const { x, y } = offset
+
+    if (state.modifiersData.popperOffsets != null) {
+      state.modifiersData.popperOffsets.x += x
+      state.modifiersData.popperOffsets.y += y
+    }
+  },
+}
+
 export interface TUsePopover {
   isOpen: boolean,
   setRef: (ref: HTMLDivElement | null) => void,
@@ -28,16 +55,6 @@ export interface TUsePopover {
   side: BasePlacement,
 }
 
-function calcOffset({ placement }: { placement: Placement }): [number, number] {
-  if (/start/.test(placement)) {
-    return [-16, 12]
-  } else if (/end/.test(placement)) {
-    return [16, 12]
-  }
-
-  return [0, 12]
-}
-
 export function usePopover(placement: Placement): TUsePopover {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [ref, setRef] = useState<HTMLDivElement | null>(null)
@@ -48,7 +65,7 @@ export function usePopover(placement: Placement): TUsePopover {
       {
         name: 'offset',
         options: {
-          offset: calcOffset,
+          offset: [0, 12],
         },
       },
       {
@@ -58,6 +75,7 @@ export function usePopover(placement: Placement): TUsePopover {
           padding: 16,
         },
       },
+      applyPopperShift,
     ],
     placement,
   })
