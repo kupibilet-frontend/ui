@@ -45,7 +45,7 @@ const applyPopperShift: Modifier<'applyPopperShift', Record<string, never>> = {
 
 export interface TUsePopover {
   isOpen: boolean,
-  setRef: (ref: HTMLDivElement | null) => void,
+  setRef: (ref: Element | null) => void,
   setPopper: (ref: HTMLDivElement | null) => void,
   setArrow: (ref: HTMLDivElement | null) => void,
   styles: ReturnType<typeof usePopper>['styles'],
@@ -57,7 +57,7 @@ export interface TUsePopover {
 
 export function usePopover(placement: Placement): TUsePopover {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [ref, setRef] = useState<HTMLDivElement | null>(null)
+  const [ref, setRef] = useState<Element | null>(null)
   const [popper, setPopper] = useState<HTMLDivElement | null>(null)
   const [arrow, setArrow] = useState<HTMLDivElement | null>(null)
   const { styles, attributes } = usePopper(ref, popper, {
@@ -102,9 +102,17 @@ export function usePopover(placement: Placement): TUsePopover {
 
   const side = getSide(placement, attributes)
 
+  const setRefFirstChild = (node: Element | null) => {
+    if (node?.firstElementChild) {
+      setRef(node?.firstElementChild)
+    } else {
+      setRef(node)
+    }
+  }
+
   return {
     isOpen,
-    setRef,
+    setRef: setRefFirstChild,
     setPopper,
     setArrow,
     styles,
