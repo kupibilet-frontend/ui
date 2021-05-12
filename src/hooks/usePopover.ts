@@ -1,4 +1,5 @@
-import { BasePlacement, Placement } from '@popperjs/core'
+/* eslint-disable no-param-reassign */
+import { BasePlacement, Modifier, Placement } from '@popperjs/core'
 import { useEffect, useRef, useState } from 'react'
 import { usePopper } from 'react-popper'
 
@@ -64,7 +65,7 @@ export function usePopover(placement: Placement): TUsePopover {
       {
         name: 'offset',
         options: {
-          offset: [0, 14],
+          offset: [0, 12],
         },
       },
       {
@@ -74,6 +75,7 @@ export function usePopover(placement: Placement): TUsePopover {
           padding: 3,
         },
       },
+      applyPopperShift,
     ],
     placement,
   })
