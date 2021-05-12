@@ -14,6 +14,7 @@ const Tooltip = ({
   error = false,
   children,
   className = '',
+  zIndex = OVERLAY_Z_INDEX - 1,
 }: TTooltipProps): JSX.Element => {
   const {
     isOpen,
@@ -43,7 +44,7 @@ const Tooltip = ({
           <GlobalStylesScope>
             <div
               ref={setPopper}
-              style={{ ...styles.popper, zIndex: OVERLAY_Z_INDEX - 1 }}
+              style={{ ...styles.popper, zIndex }}
               {...attributes.popper}
             >
               <TooltipIconContainer

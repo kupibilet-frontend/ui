@@ -26,7 +26,11 @@ export interface TTooltipProps {
   /**
   * Проп для стилизации обертки контента тултипа
   */
-  className?: string
+  className?: string,
+  /**
+  * z-index тултипа
+  */
+  zIndex?: number,
 }
 
 export type TTooltipWithDefaultsProps = Required<TTooltipProps>

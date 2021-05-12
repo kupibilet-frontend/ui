@@ -20,6 +20,7 @@ function Popover(props: TPopoverProps): JSX.Element {
     header,
     placement = 'bottom-start',
     size = 'normal',
+    zIndex = OVERLAY_Z_INDEX - 1,
   } = props
 
   const {
@@ -49,7 +50,7 @@ function Popover(props: TPopoverProps): JSX.Element {
           <GlobalStylesScope>
             <div
               ref={setPopper}
-              style={{ ...styles.popper, zIndex: OVERLAY_Z_INDEX - 1 }}
+              style={{ ...styles.popper, zIndex }}
               {...attributes.popper}
             >
               <PopoverIconContainer
