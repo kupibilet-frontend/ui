@@ -3,7 +3,6 @@ import { Portal } from 'react-portal'
 import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
-import { BUTTON_SIZES_NAMES } from 'components/Button/types'
 import { withMedia } from 'utils/media-queries'
 import { TWithMediaProps } from 'utils/types'
 import { ModalSize } from './types'
@@ -89,7 +88,7 @@ export const Modal = React.memo((props: TProps) => {
     <Footer size={size}>
       {onSubmitClick && (
         <SubmitButton
-          size={BUTTON_SIZES_NAMES.large}
+          size="large"
           onClick={onSubmitClick}
         >
           {submitText}
@@ -98,7 +97,7 @@ export const Modal = React.memo((props: TProps) => {
       {shouldRenderCloseButton && (
         <CloseButton
           onClick={onClose}
-          size={BUTTON_SIZES_NAMES.large}
+          size="large"
           variant="secondary"
         >
           {onSubmitClick ? submitButtonCloseText : defaultButtonCloseText}

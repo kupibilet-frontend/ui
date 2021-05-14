@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { StyledButton, StyledButtonLink } from './styled'
-import { BUTTON_SIZES_NAMES, TButtonVariant, TNeighboringInGroupType } from './types'
+import { TButtonSize, TButtonVariant, TNeighboringInGroupType } from './types'
 
 interface TRenderedComponentProps {
-  size: BUTTON_SIZES_NAMES,
+  size: TButtonSize,
   variant: TButtonVariant,
   children: JSX.Element | (JSX.Element | null)[],
   disabled: boolean,
