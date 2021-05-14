@@ -1,10 +1,19 @@
-import { BUTTON_SIZES_NAMES } from './types'
+import { TButtonSize } from './types'
 
-const BUTTON_SIZES = {
-  [BUTTON_SIZES_NAMES.small]: 12,
-  [BUTTON_SIZES_NAMES.normal]: 15,
-  [BUTTON_SIZES_NAMES.large]: 21,
+export const BUTTON_TYPOGRAPHY: Record<TButtonSize, number> = {
+  small: 18,
+  medium: 20,
+  large: 20,
 }
 
+export const BUTTON_SIZES: Record<TButtonSize, number> = {
+  small: 16,
+  medium: 20,
+  large: 24,
+}
 
-export { BUTTON_SIZES }
+export const BUTTON_BORDER_RADIUS: Record<TButtonSize, number> = {
+  small: 8,
+  medium: 8,
+  large: 8,
+}

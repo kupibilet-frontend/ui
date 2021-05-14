@@ -5,11 +5,11 @@ import { switchTransition } from 'utils/transitions'
 import { getLinkColor, getLinkHoverColor } from 'components/Link/styled'
 import { queries } from 'utils/media-queries'
 import {
-  BUTTON_SIZES_NAMES,
   TNeighboringInGroupType,
   TButtonVariant,
+  TButtonSize,
 } from './types'
-import { BUTTON_SIZES } from './consts'
+import { BUTTON_BORDER_RADIUS, BUTTON_SIZES, BUTTON_TYPOGRAPHY } from './consts'
 
 
 // TThemeAndVariantProps is a common type for many helpers functions
@@ -18,17 +18,11 @@ interface TThemeAndVariantProps {
   theme: DefaultTheme,
 }
 
-const TYPOGRAPHY = {
-  [BUTTON_SIZES_NAMES.small]: 16,
-  [BUTTON_SIZES_NAMES.normal]: 18,
-  [BUTTON_SIZES_NAMES.large]: 20,
-}
-
 function calculateButtonPadding(
-  size: BUTTON_SIZES_NAMES, icon: boolean, hasLeftIcon: boolean, hasRightIcon: boolean,
+  size: TButtonSize, icon: boolean, hasLeftIcon: boolean, hasRightIcon: boolean,
 ): string {
   const spacing = BUTTON_SIZES[size]
-  const typographyRelatedPadding = ((spacing * 2 - TYPOGRAPHY[size]) / 2).toFixed(1)
+  const typographyRelatedPadding = ((spacing * 2 - BUTTON_TYPOGRAPHY[size]) / 2).toFixed(1)
   const iconVisualCenterShift = 5 / 4
   const iconPadding = (BUTTON_SIZES[size] / 2 * iconVisualCenterShift).toFixed(1)
 
@@ -45,7 +39,8 @@ function calculateButtonPadding(
 }
 
 function calculateTextPadding(
-  size: BUTTON_SIZES_NAMES, hasLeftIcon: boolean, hasRightIcon: boolean,
+  size: TButtonSize, hasLeftIcon: boolean,
+  hasRightIcon: boolean,
 ): string {
   const iconVisualCenterShift = 3 / 4
   const iconPadding = (BUTTON_SIZES[size] / 2 * iconVisualCenterShift).toFixed(1)
@@ -53,16 +48,21 @@ function calculateTextPadding(
   return `0 ${hasRightIcon ? iconPadding : 0}px 0 ${hasLeftIcon ? iconPadding : 0}px`
 }
 
-function calculateBorderRadius(neighboringInGroup: TNeighboringInGroupType): string {
+function calculateBorderRadius(
+  size: TButtonSize,
+  neighboringInGroup: TNeighboringInGroupType,
+): string {
+  const radius = BUTTON_BORDER_RADIUS[size]
+
   if (neighboringInGroup === 'both') {
     return ''
   } else if (neighboringInGroup === 'left') {
-    return `border-radius: 0 6px 6px 0;`
+    return `border-radius: 0 ${radius}px ${radius}px 0;`
   } else if (neighboringInGroup === 'right') {
-    return `border-radius: 6px 0 0 6px;`
+    return `border-radius: ${radius}px 0 0 ${radius}px;`
   }
 
-  return `border-radius: 6px;`
+  return `border-radius: ${radius}px;`
 }
 function getButtonColor(props: TThemeAndVariantProps): string {
   const { theme, variant } = props
@@ -121,7 +121,7 @@ function getButtonActiveBackground({ theme, variant }: TThemeAndVariantProps): s
 }
 
 interface TStyledButtonProps {
-  size: BUTTON_SIZES_NAMES,
+  size: TButtonSize,
   isBlock: boolean,
   neighboringInGroup: TNeighboringInGroupType,
   variant: TButtonVariant,
@@ -131,14 +131,23 @@ interface TStyledButtonProps {
   disabled: boolean,
 }
 
+function fontWeight({ size }: TStyledButtonProps) {
+  if (size !== 'small') {
+    return 'font-weight: 600;'
+  }
+
+  return ''
+}
+
 export const StyledButton = styled.button<TStyledButtonProps>`
   ${control}
   display: inline-block;
   color: ${getButtonColor};
   background: ${getButtonBackground};
 
-  font-size: ${({ size }) => TYPOGRAPHY[size]}px;
-  line-height: ${({ size }) => TYPOGRAPHY[size]}px;
+  font-size: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
+  ${fontWeight}
+  line-height: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
@@ -153,8 +162,8 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
 
-  ${({ neighboringInGroup }) => (
-    calculateBorderRadius(neighboringInGroup)
+  ${({ neighboringInGroup, size }) => (
+    calculateBorderRadius(size, neighboringInGroup)
   )};
 
   ${({ size, isIconOnly, hasLeftIcon, hasRightIcon }) => (
@@ -204,7 +213,7 @@ export const StyledButton = styled.button<TStyledButtonProps>`
 export const StyledButtonLink = StyledButton.withComponent('a')
 
 interface TStyledButtonTextProps {
-  size: BUTTON_SIZES_NAMES,
+  size: TButtonSize,
   hasLeftIcon: boolean,
   hasRightIcon: boolean,
 }
@@ -217,7 +226,7 @@ export const StyledButtonText = styled.span<TStyledButtonTextProps>`
 `
 
 interface TIconWrapProps {
-  size: BUTTON_SIZES_NAMES,
+  size: TButtonSize,
 }
 
 export const IconWrap = styled.span<TIconWrapProps>`
@@ -226,6 +235,6 @@ export const IconWrap = styled.span<TIconWrapProps>`
   justify-content: center;
   align-items: center;
 
-  width: ${({ size }) => TYPOGRAPHY[size]}px;
-  height: ${({ size }) => TYPOGRAPHY[size]}px;
+  width: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
+  height: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
 `

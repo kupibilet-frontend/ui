@@ -4,7 +4,6 @@ import { Input } from 'components/Input'
 import Button from 'components/Button'
 
 import ControlsGroup from 'components/ControlsGroup'
-import { BUTTON_SIZES_NAMES } from 'components/Button/types'
 
 export const InputsGroup = (): JSX.Element => {
   const [firstName, setFirstName] = useState('')
@@ -42,7 +41,7 @@ export const DifferentControlsGroup = (): JSX.Element => {
 
   return (
     <ControlsGroup>
-      <Button size={BUTTON_SIZES_NAMES.large}>
+      <Button size="large">
       Пойти
       </Button>
       <Input
@@ -50,7 +49,7 @@ export const DifferentControlsGroup = (): JSX.Element => {
         onChange={onEmailChange}
         placeholder="Email"
       />
-      <Button size={BUTTON_SIZES_NAMES.large}>
+      <Button size="large">
       Найти
       </Button>
     </ControlsGroup>
@@ -72,7 +71,7 @@ export const WithStandartInput = (): JSX.Element => {
           onChange={onEmailChange}
           placeholder="Email"
         />
-        <Button size={BUTTON_SIZES_NAMES.large}>
+        <Button size="large">
         Подписаться
         </Button>
       </ControlsGroup>

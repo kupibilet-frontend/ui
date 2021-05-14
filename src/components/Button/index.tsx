@@ -1,33 +1,14 @@
 import React from 'react'
-
 import { StyledButtonText, IconWrap } from './styled'
 import cloneIconWithSize from './cloneIconWithSize'
-import { BUTTON_SIZES_NAMES, TButtonVariant, TIconArg, TNeighboringInGroupType } from './types'
+import { TButtonProps } from './types'
 import RenderedComponent from './RenderedComponent'
-
-export interface TButtonProps {
-  size?: BUTTON_SIZES_NAMES,
-  variant?: TButtonVariant,
-  children?: React.ReactElement | React.ReactChild | string,
-  disabled?: boolean,
-  icon?: TIconArg,
-  leftIcon?: TIconArg,
-  rightIcon?: TIconArg,
-  isBlock?: boolean,
-  neighboringInGroup?: TNeighboringInGroupType,
-  href?: string,
-  target?: string,
-  onClick?: (event: Event) => void,
-  type?: string,
-  tabIndex?: number,
-}
-
 
 const Button = ({
   children,
   variant = 'primary',
   disabled = false,
-  size = BUTTON_SIZES_NAMES.normal,
+  size = 'medium',
   icon = null,
   leftIcon = null,
   rightIcon = null,

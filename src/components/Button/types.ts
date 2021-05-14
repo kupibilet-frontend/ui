@@ -1,18 +1,22 @@
-enum BUTTON_SIZES_NAMES {
-  small = 'small',
-  normal = 'normal',
-  large = 'large',
-}
+export type TButtonSize = 'small' | 'medium' | 'large'
 
-type TNeighboringInGroupType = 'both' | 'left' | 'right' | null
+export type TNeighboringInGroupType = 'both' | 'left' | 'right' | null
 
-type TButtonVariant = 'primary' | 'secondary' | 'link'
+export type TButtonVariant = 'primary' | 'secondary' | 'link'
 
-type TIconArg = string | { props: { size: BUTTON_SIZES_NAMES } } | null
-
-export {
-  BUTTON_SIZES_NAMES,
-  TNeighboringInGroupType,
-  TButtonVariant,
-  TIconArg,
+export interface TButtonProps {
+  size?: TButtonSize,
+  variant?: TButtonVariant,
+  children?: React.ReactElement | React.ReactChild | string,
+  disabled?: boolean,
+  icon?: React.ReactNode,
+  leftIcon?: React.ReactNode,
+  rightIcon?: React.ReactNode,
+  isBlock?: boolean,
+  neighboringInGroup?: TNeighboringInGroupType,
+  href?: string,
+  target?: string,
+  onClick?: (event: Event) => void,
+  type?: string,
+  tabIndex?: number,
 }
