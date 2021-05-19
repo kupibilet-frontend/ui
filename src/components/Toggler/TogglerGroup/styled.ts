@@ -16,6 +16,7 @@ export const ItemsWrapper = styled.div<TItemsWrapperProps>`
   justify-content: stretch;
   align-items: stretch;
   overflow: hidden;
+  height: 38px;
   ${borderRadiusSmall.all}
   ${({ theme, hasError }) => css`
     ${hasError ? `
