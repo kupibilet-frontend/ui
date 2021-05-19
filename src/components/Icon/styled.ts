@@ -50,7 +50,7 @@ const IconSvg = styled.svg<TIconSvgProps>`
     }
   }}
 
-  animation: ${({ name }) => (name === 'spinner' ? css`${preloader} 3s infinite ease-in-out;` : '')}
+  animation: ${({ name }) => (name === 'spinner' ? css`${preloader} 3s infinite ease-in-out;` : '')};
 `
 
 interface TIconWrapperProps {

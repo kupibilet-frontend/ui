@@ -6,6 +6,7 @@ const BASE_PLUGINS = [
     alias: {
       components: './src/components',
       utils: './src/utils',
+      hooks: './src/hooks',
       storybook: './storybook',
     },
   }],

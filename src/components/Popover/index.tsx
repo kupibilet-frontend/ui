@@ -1,81 +1,85 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { TCoordinates, TPopoverProps } from './types'
-import PopoverContent from './PopoverContent'
-
+import React from 'react'
+import { Portal } from 'react-portal'
+import { GlobalStylesScope } from 'components/ThemeProvider'
+import TextSmall from 'components/Typography/TextSmall'
+import { usePopover } from 'hooks/usePopover'
+import { OVERLAY_Z_INDEX } from 'components/Overlay'
+import { TPopoverProps } from './types'
+import {
+  PopoverBackground,
+  Header,
+  HeaderText,
+  PopoverIconContainer,
+  PopoverIcon,
+} from './styled'
 
 function Popover(props: TPopoverProps): JSX.Element {
   const {
     children,
     content,
     header,
-    placement = 'bottom',
+    placement = 'bottom-start',
     size = 'normal',
+    zIndex = OVERLAY_Z_INDEX - 1,
   } = props
 
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const childRef = useRef<HTMLDivElement | null>(null)
-  const [coordinates, setCoordinates] = useState<TCoordinates | null>(null)
-  const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  function getCoordinates() {
-    if (childRef.current) {
-      const rect = childRef.current.getBoundingClientRect()
-
-      return {
-        width: rect.width as number,
-        height: rect.height as number,
-        left: (rect.left + window.pageXOffset) as number,
-        top: (rect.top + window.pageYOffset) as number,
-      }
-    }
-  }
-
-  useEffect(() => {
-    if (childRef.current) {
-      setCoordinates(getCoordinates() as TCoordinates)
-    }
-
-    return () => {
-      if (hoverTimeout.current) clearTimeout(hoverTimeout.current)
-    }
-  }, [])
-
-  function handleMouseLeave() {
-    if (hoverTimeout.current) clearTimeout(hoverTimeout.current)
-
-    hoverTimeout.current = null
-    setIsOpen(false)
-  }
-
-  function handleMouseEnter() {
-    hoverTimeout.current = setTimeout(() => {
-      setCoordinates(getCoordinates() as TCoordinates)
-      setIsOpen(Boolean(hoverTimeout.current))
-    }, 150)
-  }
+  const {
+    isOpen,
+    setRef,
+    setPopper,
+    setArrow,
+    styles,
+    attributes,
+    onMouseEnter,
+    onMouseLeave,
+    side,
+  } = usePopover(placement)
 
   return (
     <>
       <div
         key="PopoverpedElement"
-        ref={childRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        ref={setRef}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        style={{ display: 'inline-flex' }}
       >
         {children}
       </div>
-      <PopoverContent
-        key="PopoverContent"
-        coordinates={coordinates}
-        placement={placement}
-        isOpen={isOpen}
-        content={content}
-        header={header}
-        size={size}
-      />
+      {isOpen && (
+        <Portal>
+          <GlobalStylesScope>
+            <div
+              ref={setPopper}
+              style={{ ...styles.popper, zIndex }}
+              {...attributes.popper}
+            >
+              <PopoverIconContainer
+                ref={setArrow}
+                style={styles.arrow}
+                {...attributes.arrow}
+                side={side}
+              >
+                <PopoverIcon side={side} />
+              </PopoverIconContainer>
+              <PopoverBackground size={size}>
+                {header && (
+                  <Header>
+                    <HeaderText>
+                      {header}
+                    </HeaderText>
+                  </Header>
+                )}
+                <TextSmall>
+                  {content}
+                </TextSmall>
+              </PopoverBackground>
+            </div>
+          </GlobalStylesScope>
+        </Portal>
+      )}
     </>
   )
 }
-
 
 export default Popover

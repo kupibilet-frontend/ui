@@ -2,9 +2,11 @@
 
 !components/**/*.js
 !utils/**/*.js
+!hooks/**/*.js
 
 !components/**/*.d.ts
 !utils/**/*.d.ts
+!hooks/**/*.d.ts
 
 **/*stories*
 **/*test*
