@@ -38,6 +38,7 @@ export const color: TColor = {
   [COLOR_NAMES.miscLight]: '#cad3de',
   [COLOR_NAMES.miscLighter]: '#dde3eb',
   [COLOR_NAMES.miscLightest]: '#f0f5fa',
+  [COLOR_NAMES.miscSoft]: '#fafbfc',
 }
 
 export const font = `

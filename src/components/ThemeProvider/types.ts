@@ -31,6 +31,7 @@ enum COLOR_NAMES {
   miscLight = 'miscLight',
   miscLighter = 'miscLighter',
   miscLightest = 'miscLightest',
+  miscSoft = 'miscSoft',
 }
 
 interface TColor {
@@ -70,6 +71,7 @@ interface TColor {
   [COLOR_NAMES.miscLight]: string,
   [COLOR_NAMES.miscLighter]: string,
   [COLOR_NAMES.miscLightest]: string,
+  [COLOR_NAMES.miscSoft]: string,
   [key: string]: string,
 }
 
