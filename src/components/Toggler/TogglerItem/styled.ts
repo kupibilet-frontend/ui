@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { borderRadiusSmall } from 'utils/borderRadius'
 import Text from 'components/Typography/Text'
 
 interface TStyledWrapperProps {
@@ -11,21 +10,19 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   cursor: pointer;
   text-align: center;
   height: 100%;
-  ${({ theme, isSelected }) => css`
-      box-shadow: inset 1px 0 0 0 ${theme.color.misc};
-      ${isSelected ? `
-        color: ${theme.color.background};
-        font-weight: 600;
-        background: ${theme.color.primaryDarkest};
-        box-shadow: inset 0 0 0 1px ${theme.color.primaryDarkest} !important;
-      ` : `
-        &:hover {
-          box-shadow: inset 0 0 0 1px ${theme.color.primaryDark} !important;
-          background: ${theme.color.miscLightest};
-          color: ${theme.color.primaryDarkest};
-        }
-      `}
-    `
+
+  color: ${({ theme }) => theme.color.miscDarker};
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ${({ isSelected }) => isSelected && css`
+    color: ${({ theme }) => theme.color.textDarker};
+    font-weight: 600;
+    box-shadow: 0px 1px 3px rgba(98, 112, 139, 0.2);
+  `
 }`
 
 
@@ -58,19 +55,5 @@ export const ItemWrapper = styled.div<TItemWrapperProps>`
   ${({ isSelected }) => (isSelected ? 'z-index: 1;' : '')}
   &:hover {
     z-index: 1;
-  }
-  &:first-child {
-    ${StyledWrapper} {
-      box-shadow: none;
-      ${borderRadiusSmall.left}
-    }
-  }
-  &:last-child{
-    ${StyledWrapper} {
-      ${borderRadiusSmall.right}
-    }
-  }
-  & + & {
-    margin-left: -1px;
   }
 `

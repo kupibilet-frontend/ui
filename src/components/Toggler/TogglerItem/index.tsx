@@ -15,6 +15,7 @@ type TProps = {
   name?: string,
   setFocus?: (isFocused: boolean) => void,
   onBlur?: () => void,
+  className?: string,
 }
 
 const ENTER_KEY_CODE = 13
@@ -35,6 +36,7 @@ const TogglerItem = React.memo(({
   onChange = () => null,
   setFocus = () => null,
   onBlur,
+  className = '',
 }: TProps): JSX.Element => {
   const isSelected = useMemo(() => value === currentValue, [value, currentValue])
 
@@ -43,6 +45,7 @@ const TogglerItem = React.memo(({
       isSelected={isSelected}
       as="div"
       onClick={() => onChange(value)}
+      className={className}
     >
       {children}
     </StyledWrapper>
