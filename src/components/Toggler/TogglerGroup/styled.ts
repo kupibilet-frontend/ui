@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { borderRadiusSmall } from 'utils/borderRadius'
 import { Error } from 'components/Input/styled'
 
 export const TogglerWrapper = styled.div`
@@ -16,15 +15,19 @@ export const ItemsWrapper = styled.div<TItemsWrapperProps>`
   justify-content: stretch;
   align-items: stretch;
   overflow: hidden;
-  height: 38px;
-  ${borderRadiusSmall.all}
+  height: 40px;
+
+  padding: 4px;
+  border-radius: 6px;
+  
+  
   ${({ theme, hasError }) => css`
     ${hasError ? `
       box-shadow: inset 0 0 0 2px ${theme.color.fail};
     ` : `
       box-shadow: inset 0 0 0 1px ${theme.color.misc};
     `}
-    background: ${theme.color.background};
+    background: ${theme.color.miscSoft};
   `}
 `
 
