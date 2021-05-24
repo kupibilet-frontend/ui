@@ -15,7 +15,7 @@ export const ItemsWrapper = styled.div<TItemsWrapperProps>`
   justify-content: stretch;
   align-items: stretch;
   overflow: hidden;
-  height: 40px;
+  height: 38px;
 
   padding: 4px;
   border-radius: 6px;
