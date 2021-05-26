@@ -72,7 +72,7 @@ const IconWrapper = styled.span<TIconWrapperProps>`
         &:after {
           content: '';
           position: absolute;
-          border-left: 2px solid ${theme.color.secondaryDarkest};
+          border-left: 2px solid ${theme.color.secondary700};
           width: 2px;
           border-radius: 50px;
           height: 150%;

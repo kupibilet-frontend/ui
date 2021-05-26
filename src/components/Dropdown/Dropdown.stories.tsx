@@ -17,7 +17,7 @@ const CustomDropdownContainer = styled.div`
   top: 100%;
   right: 0;
   width: 150px;
-  border: 1px solid ${({ theme }) => theme.color.miscDark};
+  border: 1px solid ${({ theme }) => theme.color.misc500};
   background-color: ${({ theme }) => theme.color.background};
   padding: 10px;
 `

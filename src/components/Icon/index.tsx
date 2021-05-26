@@ -31,7 +31,7 @@ const Icon = ({
   rotate = false,
   paid = false,
   currency = 'RUB',
-  fill = COLOR_NAMES.miscDarker,
+  fill = COLOR_NAMES.misc600,
   onClick,
   ...restProps
 }: TIconProps): JSX.Element => (

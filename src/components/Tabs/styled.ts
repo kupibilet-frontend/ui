@@ -13,11 +13,11 @@ const StyledTab = styled(Tab)`
   ${({ isActive, theme }) => {
     if (isActive) {
       return `
-        color: ${theme.color.textDarker};
-        background: ${theme.color.secondaryLightest};
+        color: ${theme.color.text600};
+        background: ${theme.color.secondary100};
 
         &:hover {
-          color: ${theme.color.textDarker};
+          color: ${theme.color.text600};
         }
       `
     }

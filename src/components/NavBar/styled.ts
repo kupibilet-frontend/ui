@@ -30,7 +30,7 @@ export const Wrap = styled.div`
     position: absolute;
     display: block;
     width: calc(100% - 36px);
-    background: ${({ theme }) => theme.color.textLighter};
+    background: ${({ theme }) => theme.color.text200};
   }
 `
 
@@ -53,13 +53,13 @@ interface TNavItemProps {
 export const NavItem = styled.span<TNavItemProps>`
   display: inline-block;
   position: relative;
-  color: ${({ theme }) => theme.color.primaryDarkest};
+  color: ${({ theme }) => theme.color.primary700};
   font-size: 18px;
   padding: 11px 15px;
   line-height: 26px;
   text-decoration: none;
   cursor: pointer;
-  border-bottom: 1px solid ${({ theme }) => theme.color.textLighter};
+  border-bottom: 1px solid ${({ theme }) => theme.color.text200};
 
   @media ${queries.isMobile} {
     padding: 11px 9px;
@@ -82,7 +82,7 @@ export const NavItem = styled.span<TNavItemProps>`
   /* for custom support */
   ${({ isActive, theme }) => isActive && css`
     background: transparent;
-    color: ${theme.color.textDarker};
+    color: ${theme.color.text600};
 
     &:after {
       position: absolute;
@@ -91,14 +91,14 @@ export const NavItem = styled.span<TNavItemProps>`
       height: 2px;
       left: 15px;
       content: '';
-      background-color: ${theme.color.secondaryLight};
+      background-color: ${theme.color.secondary300};
     }
   `}
 
   /* for support NavLink */
   &.active {
     background: transparent;
-    color: ${({ theme }) => theme.color.textDarker};
+    color: ${({ theme }) => theme.color.text600};
 
     &:after {
       position: absolute;
@@ -107,7 +107,7 @@ export const NavItem = styled.span<TNavItemProps>`
       height: 2px;
       left: 0;
       content: '';
-      background-color: ${({ theme }) => theme.color.secondaryLight};
+      background-color: ${({ theme }) => theme.color.secondary300};
     }
   }
 `

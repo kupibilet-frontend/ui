@@ -39,7 +39,7 @@ const SectionHeader = styled.div`
   height: 30px;
   line-height: 30px;
   padding-left: 9px;
-  color: ${({ theme }) => theme.color.miscDark};
+  color: ${({ theme }) => theme.color.misc500};
 `
 
 const StyledAutocomplete = styled(Autocomplete)`
@@ -58,7 +58,7 @@ const defaultInput = (props: any) => (
       <Icon
         name="angle"
         rotate={props.isOpen}
-        fill={COLOR_NAMES.miscDark}
+        fill={COLOR_NAMES.misc500}
       />
     }
   />
@@ -71,7 +71,7 @@ const defaultRFInput = (props: any) => (
       <Icon
         name="angle"
         rotate={props.isOpen}
-        fill={COLOR_NAMES.miscDark}
+        fill={COLOR_NAMES.misc500}
       />
     }
   />

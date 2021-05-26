@@ -27,7 +27,7 @@ export const Default = (args: TIconProps): JSX.Element => {
     <Icon
       name={select('name', icons, 'checkmark')}
       size={select('size', ICON_SIZES, ICON_SIZES.large)}
-      fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary)}
+      fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary400)}
       striked={boolean('striked', false)}
       paid={boolean('paid', false)}
       rotate={boolean('rotate', false)}
@@ -47,7 +47,7 @@ export const AllIcons = (args: TIconProps): JSX.Element => {
           <Icon
             name={icon}
             size={select('size', ICON_SIZES, ICON_SIZES.large)}
-            fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary)}
+            fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary400)}
             striked={boolean('striked', false)}
             paid={boolean('paid', false)}
             rotate={boolean('rotate', false)}

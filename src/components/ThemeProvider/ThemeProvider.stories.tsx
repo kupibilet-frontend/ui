@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import { color } from './theme'
 
 interface TColorBoxProps {
-  pickedColor: string
+  pickedColor: COLOR_NAMES,
 }
 
 const ColorBox = styled.div<TColorBoxProps>`
@@ -43,9 +44,9 @@ const ColorPanel = styled.div`
   width: 1000px;
 `
 
-const colors = Object.keys(color)
+const colors = Object.keys(color) as COLOR_NAMES[]
 
-const copyToClipboard = (str: string): void => {
+const copyToClipboard = (str: COLOR_NAMES): void => {
   const el = document.createElement('textarea')
   el.value = str
   el.setAttribute('readonly', '')

@@ -12,7 +12,7 @@ const PanelHeader = styled.div`
 
   padding: 12px 0;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.color.miscLighter}
+  border-bottom: 1px solid ${({ theme }) => theme.color.misc200}
 `
 
 const PanelHeaderText = styled.div`
@@ -21,7 +21,7 @@ const PanelHeaderText = styled.div`
 `
 
 const CollapseHeaderArrow = styled(Icon)`
-  fill: ${({ theme }) => theme.color.miscDarker};
+  fill: ${({ theme }) => theme.color.misc600};
   display: block;
 `
 
