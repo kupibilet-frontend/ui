@@ -11,7 +11,7 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   text-align: center;
   height: 100%;
 
-  color: ${({ theme }) => theme.color.miscDarker};
+  color: ${({ theme }) => theme.color.misc600};
   border-radius: 4px;
 
   display: flex;
@@ -19,7 +19,7 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   justify-content: center;
 
   ${({ isSelected }) => isSelected && css`
-    color: ${({ theme }) => theme.color.textDarker};
+    color: ${({ theme }) => theme.color.text600};
     font-weight: 600;
     box-shadow: 0px 1px 3px rgba(98, 112, 139, 0.2);
   `
@@ -38,7 +38,7 @@ export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
       width: ${({ checked }) => (checked ? '100%' : 'calc(100% + 1px)')};
       top: 0;
       left: 0;
-      border: 2px solid ${({ theme }) => theme.color.primaryDark}; 
+      border: 2px solid ${({ theme }) => theme.color.primary500}; 
       pointer-events: none;
       z-index: 2;
     }
@@ -63,7 +63,7 @@ export const ItemWrapper = styled.div<TItemWrapperProps>`
         content: '';
         width: 1px;
         height: 24px;
-        background-color: ${({ theme }) => theme.color.miscLighter};
+        background-color: ${({ theme }) => theme.color.misc200};
         display: block;
         position: absolute;
         right: 0;

@@ -26,7 +26,7 @@ const Error = styled.span`
   opacity: 0.97;
   z-index: 2;
   ${borderRadiusSmall.all}
-  background-color: ${({ theme }) => theme.color.fail};
+  background-color: ${({ theme }) => theme.color.error700};
 `
 
 interface TCommonInnerInputProps<T> {
@@ -63,13 +63,13 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   padding-right: ${props.rightIcon ? '0' : `${SIZE[props.inputSize]}px`};
   
   font-size: ${TYPOGRAPHY[props.inputSize]}px;
-  color: ${props.theme.color.textDarker};
+  color: ${props.theme.color.text600};
 
   background-color: transparent;
   
   ${(({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
     if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup as string)) {
-      return `border-right: 1px solid ${disabled ? theme.color.miscLightest : theme.color.misc};`
+      return `border-right: 1px solid ${disabled ? theme.color.misc100 : theme.color.misc400};`
     }
   })(props)}
 
@@ -86,7 +86,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   })(props)}
 
   &::placeholder {
-    color: ${({ theme }) => theme.color.miscDark};
+    color: ${({ theme }) => theme.color.misc500};
   }
 
   &:focus {
@@ -95,7 +95,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
 
   &:disabled {
     &::placeholder {
-      color: ${({ theme }) => theme.color.misc};
+      color: ${({ theme }) => theme.color.misc400};
   }
   }
   `
@@ -128,11 +128,11 @@ interface TInputWrapperProps {
 function getInputBorderColor(props: TInputWrapperProps) {
   const { error, active, theme, disabled } = props
 
-  if (active) return theme.color.primary
-  if (error) return theme.color.fail
-  if (disabled) return theme.color.miscLighter
+  if (active) return theme.color.primary400
+  if (error) return theme.color.error700
+  if (disabled) return theme.color.misc200
 
-  return theme.color.misc
+  return theme.color.misc400
 }
 
 
@@ -143,7 +143,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   justify-content: space-between;
   align-items: center;
   background-color: ${({ disabled, theme }) => (
-    disabled ? theme.color.miscLightest : theme.color.background
+    disabled ? theme.color.misc100 : theme.color.background
   )};
 
   ${({ disabled }) => disabled && 'pointer-events: none;'}
@@ -165,7 +165,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   border-style: solid;
   ${({ active, theme }) => {
     if (active) {
-      return `box-shadow: 0 0 0 1px ${theme.color.primary};`
+      return `box-shadow: 0 0 0 1px ${theme.color.primary400};`
     }
   }}
 
@@ -182,11 +182,11 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   transition-property: border-color;
 
   ${({ theme, error, active }) => error && !active && `
-    box-shadow: inset 0px 0px 0px 1px ${theme.color.fail};
+    box-shadow: inset 0px 0px 0px 1px ${theme.color.error700};
   `}
 
   &:hover {
-    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.primary};
+    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.primary400};
     z-index: 1;
   }
 

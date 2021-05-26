@@ -29,7 +29,7 @@ const Suggestion = (props: TProps) => {
     <SuggestionContainer isHighlighted={isHighlighted} title={getSuggestionValue(suggestion)}>
       <SuggestionIcon>
         {selectedKey === getSuggestionKey(suggestion)
-          && <Icon name="checkmark" fill={COLOR_NAMES.primaryLight} />
+          && <Icon name="checkmark" fill={COLOR_NAMES.primary300} />
         }
       </SuggestionIcon>
       <SuggestionText>

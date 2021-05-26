@@ -10,21 +10,21 @@ interface TStyledRadioProps {
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (checked) {
-    return theme.color.primaryDark
+    return theme.color.primary500
   } else if (disabled) {
-    return theme.color.textLighter
+    return theme.color.text200
   }
 
-  return theme.color.misc
+  return theme.color.misc400
 }
 
 const getBoxShadow = (props: TStyledRadioProps) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (checked) {
-    return theme.color.primaryDark
+    return theme.color.primary500
   } else if (disabled) {
-    return theme.color.textLightest
+    return theme.color.text100
   }
 
   return theme.color.background
@@ -73,7 +73,7 @@ export const LabelText = styled.span<TLabelTextProps>`
   margin-left: 6px;
   width: 100%;
   ${({ disabled, theme }) => (disabled
-    && css`color: ${theme.color.textLight};`
+    && css`color: ${theme.color.text300};`
   )}
 `
 
@@ -90,10 +90,10 @@ export const RadioLabel = styled.label<TRadioLabelProps>`
   width: 100%;
 
   ${StyledRadio}:hover {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primary)};
+    border-color: ${({ theme, disabled }) => (disabled ? theme.color.text200 : theme.color.primary400)};
   };
 
   ${LabelText}:hover {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
+    color: ${({ theme, disabled }) => (disabled ? theme.color.text300 : theme.color.primary700)};
   };
 `

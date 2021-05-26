@@ -32,7 +32,7 @@ const SectionHeader = styled.div`
   height: 30px;
   line-height: 30px;
   padding-left: 9px;
-  color: ${({ theme }) => theme.color.miscDark};
+  color: ${({ theme }) => theme.color.misc500};
 `
 
 const customRenderSectionTitle = (section: TSection) => (
@@ -128,7 +128,7 @@ AirportWithMultiplySections.args = {
 export const AutocompleteWithCustomInput = AutocompleteTemplate.bind({})
 AutocompleteWithCustomInput.args = {
   renderInputComponent: (props) => (
-    <Input leftIcon={<Icon name="man" fill={COLOR_NAMES.miscDark} />} {...props as TPropsInput} />
+    <Input leftIcon={<Icon name="man" fill={COLOR_NAMES.misc500} />} {...props as TPropsInput} />
   ),
 }
 

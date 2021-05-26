@@ -69,7 +69,7 @@ function getButtonColor(props: TThemeAndVariantProps): string {
   if (variant === 'primary') {
     return theme.color.background
   } else if (variant === 'secondary') {
-    return theme.color.primaryDarkest
+    return theme.color.primary700
   } else if (variant === 'link') {
     return getLinkColor(props)
   }
@@ -86,9 +86,9 @@ function getButtonHoverColor(props: TThemeAndVariantProps): string {
 
 function getButtonBackground({ theme, variant }: TThemeAndVariantProps): string {
   if (variant === 'primary') {
-    return theme.color.primaryDark
+    return theme.color.primary500
   } else if (variant === 'secondary') {
-    return theme.color.miscLightest
+    return theme.color.misc100
   } if (variant === 'link') {
     return 'transparent'
   }
@@ -98,9 +98,9 @@ function getButtonBackground({ theme, variant }: TThemeAndVariantProps): string 
 
 function getButtonHoverBackground({ theme, variant }: TThemeAndVariantProps): string {
   if (variant === 'primary') {
-    return theme.color.primaryDarker
+    return theme.color.primary600
   } else if (variant === 'secondary') {
-    return theme.color.miscLighter
+    return theme.color.misc200
   } if (variant === 'link') {
     return 'transparent'
   }
@@ -110,9 +110,9 @@ function getButtonHoverBackground({ theme, variant }: TThemeAndVariantProps): st
 
 function getButtonActiveBackground({ theme, variant }: TThemeAndVariantProps): string {
   if (variant === 'primary') {
-    return theme.color.primaryDarkest
+    return theme.color.primary700
   } else if (variant === 'secondary') {
-    return theme.color.miscLight
+    return theme.color.misc300
   } if (variant === 'link') {
     return 'transparent'
   }

@@ -3,7 +3,7 @@ import { borderRadiusLarge } from 'utils/borderRadius'
 
 export const styles = css`
   background: ${({ theme }) => (theme.color.background)};
-  border: 1px solid ${({ theme }) => (theme.color.miscLighter)};
+  border: 1px solid ${({ theme }) => (theme.color.misc200)};
   ${borderRadiusLarge.all}
 `
 
