@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo } from 'react'
+import React, { ReactNode } from 'react'
 import {
   StyledWrapper,
   HiddenRadio,
@@ -16,19 +16,13 @@ type TProps = {
   setFocus?: (isFocused: boolean) => void,
   onBlur?: () => void,
   className?: string,
+  hasDelimiter?: boolean,
 }
 
 const ENTER_KEY_CODE = 13
 const ENTER_KEY = 'Enter'
 
-const isSelectedStatusChange = (prevProps: TProps, nextProps: TProps) => {
-  const isSelected = prevProps.value === prevProps.currentValue
-  const isSelectedNext = prevProps.value === nextProps.currentValue
-
-  return isSelected === isSelectedNext
-}
-
-const TogglerItem = React.memo(({
+const TogglerItem = ({
   children,
   value = '',
   currentValue = '',
@@ -37,8 +31,9 @@ const TogglerItem = React.memo(({
   setFocus = () => null,
   onBlur,
   className = '',
+  hasDelimiter = true,
 }: TProps): JSX.Element => {
-  const isSelected = useMemo(() => value === currentValue, [value, currentValue])
+  const isSelected = value === currentValue
 
   const renderContent = (): JSX.Element => (
     <StyledWrapper
@@ -70,7 +65,10 @@ const TogglerItem = React.memo(({
   }
 
   return (
-    <ItemWrapper isSelected={isSelected}>
+    <ItemWrapper
+      isSelected={isSelected}
+      hasDelimiter={hasDelimiter}
+    >
       <HiddenRadio
         name={name}
         value={value}
@@ -85,6 +83,6 @@ const TogglerItem = React.memo(({
       {renderContent()}
     </ItemWrapper>
   )
-}, isSelectedStatusChange)
+}
 
 export default TogglerItem
