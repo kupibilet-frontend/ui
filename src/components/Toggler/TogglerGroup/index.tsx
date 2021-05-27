@@ -47,17 +47,29 @@ const TogglerGroup = ({
   return (
     <TogglerWrapper {...props}>
       <ItemsWrapper hasError={Boolean(errorMessage)}>
-        {React.Children.map(children, (element: ReactElement) => (
-          React.cloneElement(element, {
+        {React.Children.toArray(children).map((element, index: number, array) => {
+          let hasDelimiter = true
+          if ((element as ReactElement).props?.value === currentValue) {
+            hasDelimiter = false
+          } else if (array[index + 1]) {
+            if ((array[index + 1] as ReactElement).props?.value === currentValue) {
+              hasDelimiter = false
+            }
+          } else {
+            hasDelimiter = false
+          }
+
+          return React.cloneElement(element as ReactElement, {
             onChange,
             onBlur,
             currentValue,
             errorMessage,
             name,
             setFocus,
+            hasDelimiter,
             ...props,
           })
-        ))}
+        })}
       </ItemsWrapper>
       {errorMessage && !isFocused && (
         <StyledError>

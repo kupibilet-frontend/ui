@@ -46,6 +46,7 @@ export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`
 `
 interface TItemWrapperProps {
   isSelected: boolean,
+  hasDelimiter: boolean,
 }
 
 // add external container for managing styles
@@ -56,4 +57,18 @@ export const ItemWrapper = styled.div<TItemWrapperProps>`
   &:hover {
     z-index: 1;
   }
+  ${({ hasDelimiter }) => hasDelimiter && (
+    css`
+      &:after {
+        content: '';
+        width: 1px;
+        height: 24px;
+        background-color: ${({ theme }) => theme.color.miscLighter};
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 3px;
+      }
+    `
+  )}
 `
