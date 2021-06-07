@@ -39,7 +39,7 @@ export const color: TColor = {
   [COLOR_NAMES.text700]: '#222222',
 
   [COLOR_NAMES.error010]: '#FBEEEB',
-  [COLOR_NAMES.error700]: '#D45535',
+  [COLOR_NAMES.error700]: '#E64926',
 
   [COLOR_NAMES.success010]: '#DEF6E6',
   [COLOR_NAMES.success700]: '#23C256',
