@@ -23,7 +23,7 @@ interface TLinkProps {
 }
 
 function getLinkColor(props: TLinkProps): string {
-  return props.theme.color.primaryDarkest
+  return props.theme.color.primary700
 }
 
 function getLinkHoverColor(props: TLinkProps): string {

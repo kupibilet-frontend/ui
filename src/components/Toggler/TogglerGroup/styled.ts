@@ -23,11 +23,11 @@ export const ItemsWrapper = styled.div<TItemsWrapperProps>`
   
   ${({ theme, hasError }) => css`
     ${hasError ? `
-      box-shadow: inset 0 0 0 2px ${theme.color.fail};
+      box-shadow: inset 0 0 0 2px ${theme.color.error700};
     ` : `
-      box-shadow: inset 0 0 0 1px ${theme.color.misc};
+      box-shadow: inset 0 0 0 1px ${theme.color.misc400};
     `}
-    background: ${theme.color.miscSoft};
+    background: ${theme.color.misc10};
   `}
 `
 

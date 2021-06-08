@@ -9,7 +9,7 @@ import {
   TPopoverIconProps,
 } from './types'
 
-const iconSrc = getPopoverArrow(transparentize(0.03, color.textDarker))
+const iconSrc = getPopoverArrow(transparentize(0.03, color.text600))
 
 const getBackgroundImage = () => {
   if (iconSrc) {
@@ -73,7 +73,7 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   flex-grow: 1;
   min-width: 240px;
   max-width: ${({ size }) => POPOVER_SIZES[size]};
-  background: ${transparentize(0.03, color.textDarker)};
+  background: ${transparentize(0.03, color.text600)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
   padding: 12px;

@@ -14,19 +14,19 @@ export const SuggestionContainer = styled.div<TSuggestionContainerProps>`
   min-height: 30px;
 
   cursor: pointer;
-  color: ${({ theme }) => theme.color.textDarker};
+  color: ${({ theme }) => theme.color.text600};
   background-color: ${({ theme, isHighlighted }) => (isHighlighted
-    ? theme.color.secondaryLightest
+    ? theme.color.secondary100
     : theme.color.background
   )};
 
   &:hover {
-    background: ${({ theme }) => theme.color.secondaryLightest};
+    background: ${({ theme }) => theme.color.secondary100};
     .icon-inherit-color {
-      fill: ${({ theme }) => theme.color.textDarker};
+      fill: ${({ theme }) => theme.color.text600};
     }
     &::after {
-      background: linear-gradient(to left, ${({ theme }) => theme.color.secondaryLightest} 25%, transparent 0%);
+      background: linear-gradient(to left, ${({ theme }) => theme.color.secondary100} 25%, transparent 0%);
     }
   }
   &::after {
@@ -37,7 +37,7 @@ export const SuggestionContainer = styled.div<TSuggestionContainerProps>`
     width: 24px;
     background: linear-gradient(to left,
       ${({ theme, isHighlighted }) => (isHighlighted
-    ? theme.color.secondaryLightest
+    ? theme.color.secondary100
     : theme.color.background
   )} 25%, transparent 0%);
   }

@@ -54,7 +54,7 @@ export const LabelText = styled.span<TLabelTextProps>`
   margin-left: 6px;
   width: 100%;
   ${({ disabled, theme }) => (disabled
-    && css`color: ${theme.color.textLight};`
+    && css`color: ${theme.color.text300};`
   )}
 `
 
@@ -73,10 +73,10 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   width: 100%;
 
   &:hover .checkbox {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.textLighter : theme.color.primaryDark)};
+    border-color: ${({ theme, disabled }) => (disabled ? theme.color.text200 : theme.color.primary500)};
   };
 
   &:hover .label-text {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.textLight : theme.color.primaryDarkest)};
+    color: ${({ theme, disabled }) => (disabled ? theme.color.text300 : theme.color.primary700)};
   };
 `

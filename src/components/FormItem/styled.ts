@@ -9,7 +9,7 @@ const Label = styled.label`
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 18px;
-  color: ${({ theme }) => theme.color.textDarker};
+  color: ${({ theme }) => theme.color.text600};
   user-select: none;
 `
 

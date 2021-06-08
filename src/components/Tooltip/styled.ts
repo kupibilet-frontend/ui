@@ -10,12 +10,12 @@ const arrival = keyframes`
 
 const getBackgroundColor = ({ theme, error, success }: TTooltipCommonProps): string => {
   if (success) {
-    return transparentize(0.03, theme.color.success)
+    return transparentize(0.03, theme.color.success700)
   } else if (error) {
-    return transparentize(0.03, theme.color.fail)
+    return transparentize(0.03, theme.color.error700)
   }
 
-  return transparentize(0.03, theme.color.textDarker)
+  return transparentize(0.03, theme.color.text600)
 }
 
 const getColoredIcon = (props: TTooltipCommonProps) => {
