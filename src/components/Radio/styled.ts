@@ -9,11 +9,9 @@ interface TStyledRadioProps {
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (checked) {
-    return theme.color.primary500
-  } else if (disabled) {
-    return theme.color.text200
-  }
+  if (disabled && checked) return theme.color.primary200
+  if (checked) return theme.color.primary500
+  if (disabled) return theme.color.text200
 
   return theme.color.misc400
 }
@@ -21,11 +19,8 @@ const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
 const getBoxShadow = (props: TStyledRadioProps) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (checked) {
-    return theme.color.primary500
-  } else if (disabled) {
-    return theme.color.text100
-  }
+  if (disabled && checked) return theme.color.primary200
+  if (checked) return theme.color.primary500
 
   return theme.color.background
 }

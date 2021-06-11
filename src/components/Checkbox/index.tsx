@@ -37,7 +37,7 @@ export const Checkbox = React.memo((props: TProps) => {
         disabled={disabled}
         checked={checked}
       >
-        {(checked && !disabled) ? (
+        {checked ? (
           <IconWrap checked={checked}>
             <Icon name="checkmark" fill={COLOR_NAMES.background} />
           </IconWrap>
