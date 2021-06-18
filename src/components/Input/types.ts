@@ -1,5 +1,5 @@
 type TNeighboringInGroup = null | 'left' | 'right' | 'both'
 
-type TInputSize = 'large' | 'normal' | 'small'
+type TInputSize = 'small' | 'medium' | 'large'
 
 export { TNeighboringInGroup, TInputSize }

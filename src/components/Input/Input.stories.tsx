@@ -23,7 +23,15 @@ function InputTemplate<T extends HTMLInputElement | HTMLTextAreaElement>(args: T
   )
 }
 
-const DEFAULT_INPUT_PROPS = {
+const DEFAULT_INPUT_PROPS: TProps<HTMLInputElement> = {
+  size: 'small',
+  type: 'text',
+  name: 'input',
+  placeholder: 'Только прямые рейсы',
+}
+
+const DEFAULT_TEXTAREA_PROPS: TProps<HTMLTextAreaElement> = {
+  size: 'small',
   type: 'text',
   name: 'input',
   placeholder: 'Только прямые рейсы',
@@ -76,7 +84,7 @@ InputWithIconsGroup.args = {
 const InputAsTextarea: Story<TProps<HTMLTextAreaElement>> = InputTemplate.bind({})
 
 InputAsTextarea.args = {
-  ...DEFAULT_INPUT_PROPS,
+  ...DEFAULT_TEXTAREA_PROPS,
   isTextarea: true,
 }
 
@@ -96,19 +104,19 @@ function InputInControlsGroup(args: TProps<HTMLInputElement>): JSX.Element {
   return (
     <Input {...args}>
       <InnerInput
-        inputSize="normal"
+        inputSize="medium"
         value={firstValue}
         onChange={createOnChangeHandler('firstValue')}
         placeholder="First"
       />
       <InnerInput
-        inputSize="normal"
+        inputSize="medium"
         value={secondValue}
         onChange={createOnChangeHandler('secondValue')}
         placeholder="Second"
       />
       <InnerInput
-        inputSize="normal"
+        inputSize="medium"
         value={thirdValue}
         onChange={createOnChangeHandler('thirdValue')}
         placeholder="Third"
@@ -144,4 +152,14 @@ export {
 export default {
   component: Input,
   title: 'Input',
+  argTypes: {
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: 'radio',
+    },
+    variant: {
+      options: ['primary', 'secondary'],
+      control: 'radio',
+    },
+  },
 }

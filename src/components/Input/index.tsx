@@ -53,7 +53,7 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     onChange: props.onChange || (() => null),
     value: props.value || '',
     active: props.active || false,
-    size: props.size || 'normal',
+    size: props.size || 'medium',
     type: props.type || 'text',
     name: props.name || 'input',
     error: props.error || false,

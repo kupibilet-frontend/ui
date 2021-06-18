@@ -1,15 +1,19 @@
-const TEXTAREA_PADDINGS = {
+import { TInputSize } from './types'
+
+const TEXTAREA_PADDINGS: Record<TInputSize, number> = {
   large: 10,
-  normal: 8,
+  medium: 8,
   small: 5,
 }
 
-const ICON_PADDINGS = {
+type TPadding = Record<TInputSize, { outer: string, inner: string }>
+
+const ICON_PADDINGS: TPadding = {
   large: {
     outer: '10px',
     inner: '8px',
   },
-  normal: {
+  medium: {
     outer: '7px',
     inner: '5px',
   },
@@ -19,12 +23,12 @@ const ICON_PADDINGS = {
   },
 }
 
-const ICON_GROUP_PADDINGS = {
+const ICON_GROUP_PADDINGS: TPadding = {
   large: {
     outer: '10px',
     inner: '3px',
   },
-  normal: {
+  medium: {
     outer: '7px',
     inner: '3px',
   },
@@ -34,22 +38,23 @@ const ICON_GROUP_PADDINGS = {
   },
 }
 
-const SIZE = {
+const SIZE: Record<TInputSize, number> = {
   large: 14,
-  normal: 11,
+  medium: 11,
   small: 8,
 }
 
-const TYPOGRAPHY = {
+const TYPOGRAPHY: Record<TInputSize, number> = {
   large: 18,
-  normal: 16,
+  medium: 16,
   small: 16,
 }
 
-const INPUT_HEIGHT = {
-  large: '42px',
-  normal: '36px',
-  small: '30px',
+// plus 2px of border from container
+const INPUT_HEIGHT: Record<TInputSize, number> = {
+  large: 46,
+  medium: 38,
+  small: 30,
 }
 
 export {
