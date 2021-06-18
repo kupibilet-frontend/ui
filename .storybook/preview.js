@@ -1,5 +1,4 @@
 import { configure, setAddon, addDecorator, addParameters } from '@storybook/react'
-import { withKnobs } from '@storybook/addon-knobs'
 
 import withTheme from 'storybook/decorators/withTheme'
 import withIcons from 'storybook/decorators/withIcons'
@@ -23,7 +22,6 @@ if (process.env.NODE_ENV !== 'test') {
 
 addDecorator(withReduxContext)
 addDecorator(withTheme)
-addDecorator(withKnobs)
 
 const req = require.context('../src', true, /stories.(js|ts|tsx)$/)
 
