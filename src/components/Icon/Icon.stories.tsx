@@ -1,11 +1,8 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { select, boolean } from '@storybook/addon-knobs'
 import icons from '@kupibilet/icons/dist/sprite.json'
-
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
-
+import { Story } from '@storybook/react'
 import Icon, { TIconProps } from './index'
 import { ICON_SIZES } from './consts'
 
@@ -22,21 +19,22 @@ const IconWrapper = styled.div`
   margin: 12px 6px;
 `
 
-export const Default = (args: TIconProps): JSX.Element => {
-  return (
-    <Icon
-      name={select('name', icons, 'checkmark')}
-      size={select('size', ICON_SIZES, ICON_SIZES.large)}
-      fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary400)}
-      striked={boolean('striked', false)}
-      paid={boolean('paid', false)}
-      rotate={boolean('rotate', false)}
-      inheritColor={boolean('inheritColor', false)}
-    />
-  )
+const Template = (args: TIconProps): JSX.Element => <Icon {...args} />
+
+const Default: Story<TIconProps> = Template.bind({})
+Default.args = {
+  name: 'checkmark',
+  size: ICON_SIZES.large,
+  fill: COLOR_NAMES.primary400,
+  striked: false,
+  paid: false,
+  rotate: false,
+  inheritColor: false,
 }
 
-export const AllIcons = (args: TIconProps): JSX.Element => {
+export { Default }
+
+export const AllIcons = (): JSX.Element => {
   return (
     <AllIconsWrapper>
       {icons.map((icon, index) => (
@@ -46,12 +44,12 @@ export const AllIcons = (args: TIconProps): JSX.Element => {
         >
           <Icon
             name={icon}
-            size={select('size', ICON_SIZES, ICON_SIZES.large)}
-            fill={select('fill', COLOR_NAMES, COLOR_NAMES.primary400)}
-            striked={boolean('striked', false)}
-            paid={boolean('paid', false)}
-            rotate={boolean('rotate', false)}
-            inheritColor={boolean('inheritColor', false)}
+            size={ICON_SIZES.large}
+            fill={COLOR_NAMES.primary400}
+            striked={false}
+            paid={false}
+            rotate={false}
+            inheritColor={false}
           />
 
           {icon}
@@ -64,4 +62,18 @@ export const AllIcons = (args: TIconProps): JSX.Element => {
 export default {
   title: 'Icon',
   component: Icon,
+  argTypes: {
+    size: {
+      options: ICON_SIZES,
+      control: 'select',
+    },
+    name: {
+      options: icons,
+      control: 'select',
+    },
+    fill: {
+      options: COLOR_NAMES,
+      control: 'select',
+    },
+  },
 }
