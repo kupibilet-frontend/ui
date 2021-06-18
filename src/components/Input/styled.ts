@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { DefaultTheme, css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
-import { borderRadiusSmall } from 'utils/borderRadius'
+import { borderRadiusLarge, borderRadiusSmall } from 'utils/borderRadius'
 import {
   TEXTAREA_PADDINGS,
   ICON_PADDINGS,
@@ -11,7 +11,6 @@ import {
   INPUT_HEIGHT,
 } from './consts'
 import { TNeighboringInGroup, TInputSize } from './types'
-
 
 const Error = styled.span`
   position: absolute;
@@ -31,7 +30,7 @@ const Error = styled.span`
 
 interface TCommonInnerInputProps<T> {
   theme: DefaultTheme,
-  inputSize: 'large' | 'normal' | 'small',
+  inputSize: TInputSize,
   neighboringInGroup?: TNeighboringInGroup,
   type?: string,
   placeholder: string,
@@ -53,7 +52,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   height: 100%;
   line-height: normal;
   border: none;
-  min-height: ${INPUT_HEIGHT[props.inputSize]};
+  min-height: ${INPUT_HEIGHT[props.inputSize]}px;
   font-family: inherit;
 
   ${props.inputSize === 'large' ? 'letter-spacing: -0.1px' : null};
@@ -75,11 +74,11 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
 
   ${(({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
-      return borderRadiusSmall.left
+      return borderRadiusLarge.left
     } else if (neighboringInGroup === 'left') {
-      return borderRadiusSmall.right
+      return borderRadiusLarge.right
     } else if (neighboringInGroup !== 'both') {
-      return borderRadiusSmall.all
+      return borderRadiusLarge.all
     }
 
     return ''
@@ -150,11 +149,11 @@ const InputWrapper = styled.div<TInputWrapperProps>`
 
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
-      return borderRadiusSmall.left
+      return borderRadiusLarge.left
     } else if (neighboringInGroup === 'left') {
-      return borderRadiusSmall.right
+      return borderRadiusLarge.right
     } else if (neighboringInGroup !== 'both') {
-      return borderRadiusSmall.all
+      return borderRadiusLarge.all
     }
 
     return ''
