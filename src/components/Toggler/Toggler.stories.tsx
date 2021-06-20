@@ -22,10 +22,10 @@ export const GenderToggler = (args: TTogglerProps): JSX.Element => {
       name="gender"
     >
       <TogglerItem value="male">
-        М
+        Мужской
       </TogglerItem>
       <TogglerItem value="female">
-        Ж
+        Женский
       </TogglerItem>
     </TogglerGroup>
   )
