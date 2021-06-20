@@ -9,20 +9,20 @@
  */
 
 export const borderRadiusSmall = {
-  left: 'border-radius: 3px 0 0 3px;',
-  right: 'border-radius: 0 3px 3px 0;',
-  top: 'border-radius: 3px 3px 0 0;',
-  bottom: 'border-radius: 0 0 3px 3px;',
-  all: 'border-radius: 3px;',
+  left: 'border-radius: 4px 0 0 4px;',
+  right: 'border-radius: 0 4px 4px 0;',
+  top: 'border-radius: 4px 4px 0 0;',
+  bottom: 'border-radius: 0 0 4px 4px;',
+  all: 'border-radius: 4px;',
   toString: (): string => borderRadiusSmall.all,
 }
 
 export const borderRadiusLarge = {
-  left: 'border-radius: 6px 0 0 6px;',
-  right: 'border-radius: 0 6px 6px 0;',
-  top: 'border-radius: 6px 6px 0 0;',
-  bottom: 'border-radius: 0 0 6px 6px;',
-  all: 'border-radius: 6px;',
+  left: 'border-radius: 8px 0 0 8px;',
+  right: 'border-radius: 0 8px 8px 0;',
+  top: 'border-radius: 8px 8px 0 0;',
+  bottom: 'border-radius: 0 0 8px 8px;',
+  all: 'border-radius: 8px;',
   toString: (): string => borderRadiusLarge.all,
 }
 
