@@ -18,18 +18,6 @@ const Template: Story<TButtonProps> = (args) => (
 export const DefaultButton = Template.bind({})
 DefaultButton.args = { ...defaultProps }
 
-export const SmallButton = Template.bind({})
-SmallButton.args = {
-  ...defaultProps,
-  size: 'small',
-}
-
-export const LargeButton = Template.bind({})
-LargeButton.args = {
-  ...defaultProps,
-  size: 'large',
-}
-
 export const WithCustomIcons = Template.bind({})
 WithCustomIcons.args = {
   ...defaultProps,
@@ -66,4 +54,14 @@ LinkButton.args = {
 export default {
   title: 'Button',
   component: Button,
+  argTypes: {
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: 'radio',
+    },
+    variant: {
+      options: ['primary', 'secondary', 'link'],
+      control: 'radio',
+    },
+  },
 }
