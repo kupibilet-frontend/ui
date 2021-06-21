@@ -66,15 +66,16 @@ function calculateBorderRadius(
 }
 function getButtonColor(props: TThemeAndVariantProps): string {
   const { theme, variant } = props
-  if (variant === 'primary') {
-    return theme.color.background
-  } else if (variant === 'secondary') {
-    return theme.color.primary700
-  } else if (variant === 'link') {
-    return getLinkColor(props)
+  switch (variant) {
+    default:
+    case 'primary':
+    case 'carrot':
+      return theme.color.background
+    case 'secondary':
+      return theme.color.primary700
+    case 'link':
+      return getLinkColor(props)
   }
-
-  return ''
 }
 function getButtonHoverColor(props: TThemeAndVariantProps): string {
   if (props.variant === 'link') {
@@ -85,27 +86,31 @@ function getButtonHoverColor(props: TThemeAndVariantProps): string {
 }
 
 function getButtonBackground({ theme, variant }: TThemeAndVariantProps): string {
-  if (variant === 'primary') {
-    return theme.color.primary500
-  } else if (variant === 'secondary') {
-    return theme.color.misc100
-  } if (variant === 'link') {
-    return 'transparent'
+  switch (variant) {
+    default:
+    case 'primary':
+      return theme.color.primary500
+    case 'carrot':
+      return theme.color.secondary500
+    case 'secondary':
+      return theme.color.misc100
+    case 'link':
+      return 'transparent'
   }
-
-  return ''
 }
 
 function getButtonHoverBackground({ theme, variant }: TThemeAndVariantProps): string {
-  if (variant === 'primary') {
-    return theme.color.primary600
-  } else if (variant === 'secondary') {
-    return theme.color.misc200
-  } if (variant === 'link') {
-    return 'transparent'
+  switch (variant) {
+    default:
+    case 'primary':
+      return theme.color.primary600
+    case 'carrot':
+      return theme.color.secondary600
+    case 'secondary':
+      return theme.color.misc200
+    case 'link':
+      return 'transparent'
   }
-
-  return ''
 }
 
 function getButtonActiveBackground({ theme, variant }: TThemeAndVariantProps): string {
