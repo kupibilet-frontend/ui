@@ -5,6 +5,7 @@ export interface TProps {
   label: React.ReactNode,
   children: React.ReactNode,
   htmlFor?: string,
+  className?: string,
 }
 
 function FormItem({ children, label, htmlFor = 'null', ...props }: TProps): JSX.Element {
