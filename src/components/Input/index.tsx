@@ -32,6 +32,7 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   neighboringInGroup?: TNeighboringInGroup,
   onBlur?: (event: React.FocusEvent<THTMLElement>) => void,
   onFocus?: (event: React.FocusEvent<THTMLElement>) => void,
+  onKeyUp?: (event: React.KeyboardEvent<THTMLElement>) => void,
   leftIcon?: React.ReactNode,
   rightIcon?: React.ReactNode,
   handleLeftIconPress?: TIconPressHandlerProp,
@@ -68,6 +69,7 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     placeholder: props.placeholder || '',
     onBlur: props.onBlur || (() => null),
     onFocus: props.onFocus || (() => null),
+    onKeyUp: props.onKeyUp || (() => null),
     innerRef: props.innerRef || null,
     rows: props.rows || 0,
     autoComplete: props.autoComplete || null,
@@ -80,6 +82,7 @@ function renderInputElement<T>(
   normalizedProps: TNormalizedProps<T>,
   handleFocus: (callback: null, event: React.FocusEvent) => void,
   handleBlur: (callback: null, event: React.FocusEvent) => void,
+  handleKeyUp: (callback: null, event: React.KeyboardEvent) => void,
   innerInput: React.RefObject<T>,
 ): JSX.Element {
   const {
@@ -101,6 +104,7 @@ function renderInputElement<T>(
         error={Boolean(error)}
         onFocus={(event: React.FocusEvent<HTMLTextAreaElement>) => handleFocus(null, event)}
         onBlur={(event: React.FocusEvent<HTMLTextAreaElement>) => handleBlur(null, event)}
+        onKeyUp={(event: React.KeyboardEvent<HTMLTextAreaElement>) => handleKeyUp(null, event)}
         // @ts-ignore TODO: fix ts with React refs
         ref={innerInput}
         leftIcon={leftIcon}
@@ -118,6 +122,7 @@ function renderInputElement<T>(
       error={Boolean(error)}
       onFocus={(event: React.FocusEvent<HTMLInputElement>) => handleFocus(null, event)}
       onBlur={(event: React.FocusEvent<HTMLInputElement>) => handleBlur(null, event)}
+      onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) => handleKeyUp(null, event)}
         // @ts-ignore TODO: fix ts with React refs
       ref={innerInput}
       leftIcon={leftIcon}
@@ -142,6 +147,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     handleRightIconPress,
     onFocus,
     onBlur,
+    onKeyUp,
     innerRef,
     autoComplete,
   } = normalizedProps
@@ -172,6 +178,13 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     if (onBlurArg) onBlurArg(event)
 
     setIsActive(false)
+  }
+
+  const handleKeyUp = (
+    onKeyUpArg: ((event: React.KeyboardEvent<T>) => void) | null, event: React.KeyboardEvent<T>,
+  ): void => {
+    if (onKeyUp) onKeyUp(event)
+    if (onKeyUpArg) onKeyUpArg(event)
   }
 
   const leftIconsArray = React.Children.toArray(leftIcon)
@@ -213,12 +226,15 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
                   hasInnerGroup: true,
                   onFocus: (event: React.FocusEvent<T>) => handleFocus(child.props.onFocus, event),
                   onBlur: (event: React.FocusEvent<T>) => handleBlur(child.props.onBlur, event),
+                  onKeyUp: (event: React.KeyboardEvent<T>) => handleKeyUp(
+                    child.props.onKeyUp, event,
+                  ),
                 })
               ))}
             </ControlsGroup>
           ) : (
             // @ts-ignore TODO: fix this
-            renderInputElement(normalizedProps, handleFocus, handleBlur, innerInput)
+            renderInputElement(normalizedProps, handleFocus, handleBlur, handleKeyUp, innerInput)
           )
         }
       {
