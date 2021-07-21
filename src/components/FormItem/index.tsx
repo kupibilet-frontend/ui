@@ -5,12 +5,13 @@ export interface TProps {
   label: React.ReactNode,
   children: React.ReactNode,
   htmlFor?: string,
+  disabled?: boolean,
 }
 
-function FormItem({ children, label, htmlFor = 'null', ...props }: TProps): JSX.Element {
+function FormItem({ children, label, htmlFor = 'null', disabled = false, ...props }: TProps): JSX.Element {
   return (
     <LabelWrapper {...props}>
-      <Label htmlFor={htmlFor}>
+      <Label htmlFor={htmlFor} disabled={disabled}>
         {label}
       </Label>
 
