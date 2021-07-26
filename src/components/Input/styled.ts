@@ -68,7 +68,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   
   ${(({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
     if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup as string)) {
-      return `border-right: 1px solid ${disabled ? theme.color.misc100 : theme.color.misc400};`
+      return `border-right: 1px solid ${disabled ? theme.color.misc100 : theme.color.misc200};`
     }
   })(props)}
 
