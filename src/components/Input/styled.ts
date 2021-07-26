@@ -130,9 +130,9 @@ function getInputBorderColor(props: TInputWrapperProps) {
 
   if (active) return theme.color.primary400
   if (error) return theme.color.error700
-  if (disabled) return theme.color.misc200
+  if (disabled) return theme.color.misc100
 
-  return theme.color.misc400
+  return theme.color.misc200
 }
 
 
@@ -143,7 +143,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   justify-content: space-between;
   align-items: center;
   background-color: ${({ disabled, theme }) => (
-    disabled ? theme.color.misc100 : theme.color.background
+    disabled ? theme.color.misc10 : theme.color.background
   )};
 
   ${({ disabled }) => disabled && 'pointer-events: none;'}
