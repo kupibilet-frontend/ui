@@ -6,6 +6,7 @@ export interface TProps {
   children: React.ReactNode,
   htmlFor?: string,
   disabled?: boolean,
+  className?: string,
 }
 
 function FormItem({ children, label, htmlFor = 'null', disabled = false, ...props }: TProps): JSX.Element {
