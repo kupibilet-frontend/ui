@@ -13,7 +13,7 @@ const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (checked) return theme.color.primary500
   if (disabled) return theme.color.text200
 
-  return theme.color.misc400
+  return theme.color.misc200
 }
 
 const getBoxShadow = (props: TStyledRadioProps) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
