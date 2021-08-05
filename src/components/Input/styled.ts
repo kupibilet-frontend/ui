@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { DefaultTheme, css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { borderRadiusLarge, borderRadiusSmall } from 'utils/borderRadius'
+import { IconSvg } from 'components/Icon/styled'
 import {
   TEXTAREA_PADDINGS,
   ICON_PADDINGS,
@@ -93,7 +94,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   }
 
   &:disabled {
-    color: ${({ theme }) => theme.color.text300};
+    color: ${({ theme }) => theme.color.misc300};
     &::placeholder {
       color: ${({ theme }) => theme.color.misc400};
   }
@@ -142,9 +143,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ disabled, theme }) => (
-    disabled ? theme.color.misc10 : theme.color.background
-  )};
+  background-color: ${({ theme }) => theme.color.misc10};
 
   ${({ disabled }) => disabled && 'pointer-events: none;'}
 
@@ -199,6 +198,7 @@ interface TGetIconWrapPaddingsProps {
   left?: boolean,
   right?: boolean,
   isGroup: boolean,
+  disabled?: boolean,
   size: TInputSize,
   onMouseDown: React.MouseEventHandler<HTMLDivElement>,
 }
@@ -235,6 +235,10 @@ const IconWrap = styled.div<TGetIconWrapPaddingsProps>`
   display: flex;
   vertical-align: top;
   align-items: center;
+
+  ${IconSvg} {
+    ${({ disabled }) => disabled && 'opacity: 0.6;'}
+  }
 `
 
 export {

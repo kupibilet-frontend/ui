@@ -193,6 +193,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
                   : onIconPress
               )}
               size={size}
+              disabled={disabled}
               isGroup={leftIconsArray.length > 1}
               left
             >
@@ -230,6 +231,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
                   : onIconPress
               )}
               size={size}
+              disabled={disabled}
               isGroup={rightIconsArray.length > 1}
               right
             >
