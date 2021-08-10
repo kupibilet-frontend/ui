@@ -43,6 +43,7 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   autoComplete?: 'no' | null,
   className?: string | null,
   readOnly?: boolean,
+  'data-test'?: string | null,
 }
 
 type TNormalizedProps<T> = Required<TProps<T>>
@@ -73,6 +74,7 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     autoComplete: props.autoComplete || null,
     className: props.className || null,
     readOnly: props.readOnly ?? false,
+    'data-test': props['data-test'] || null,
   }
 }
 
