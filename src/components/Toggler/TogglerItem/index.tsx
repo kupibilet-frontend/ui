@@ -32,11 +32,13 @@ const TogglerItem = ({
   onBlur,
   className = '',
   hasDelimiter = true,
+  ...props
 }: TProps): JSX.Element => {
   const isSelected = value === currentValue
 
   const renderContent = (): JSX.Element => (
     <StyledWrapper
+      {...props}
       isSelected={isSelected}
       as="div"
       onClick={() => onChange(value)}
