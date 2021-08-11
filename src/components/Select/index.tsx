@@ -29,7 +29,6 @@ const StyledContainer = styled.div`
   background: ${({ theme }) => theme.color.background};
 
   ${mq.mobile`
-    padding: 0;
     top: initial;
   `}
 

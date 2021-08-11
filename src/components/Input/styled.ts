@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { DefaultTheme, css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { borderRadiusLarge, borderRadiusSmall } from 'utils/borderRadius'
+import { IconSvg } from 'components/Icon/styled'
 import {
   TEXTAREA_PADDINGS,
   ICON_PADDINGS,
@@ -68,7 +69,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   
   ${(({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
     if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup as string)) {
-      return `border-right: 1px solid ${disabled ? theme.color.misc100 : theme.color.misc400};`
+      return `border-right: 1px solid ${disabled ? theme.color.misc100 : theme.color.misc200};`
     }
   })(props)}
 
@@ -93,6 +94,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   }
 
   &:disabled {
+    color: ${({ theme }) => theme.color.misc300};
     &::placeholder {
       color: ${({ theme }) => theme.color.misc400};
   }
@@ -129,9 +131,9 @@ function getInputBorderColor(props: TInputWrapperProps) {
 
   if (active) return theme.color.primary400
   if (error) return theme.color.error700
-  if (disabled) return theme.color.misc200
+  if (disabled) return theme.color.misc100
 
-  return theme.color.misc400
+  return theme.color.misc200
 }
 
 
@@ -141,9 +143,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ disabled, theme }) => (
-    disabled ? theme.color.misc100 : theme.color.background
-  )};
+  background-color: ${({ theme }) => theme.color.misc10};
 
   ${({ disabled }) => disabled && 'pointer-events: none;'}
 
@@ -198,6 +198,7 @@ interface TGetIconWrapPaddingsProps {
   left?: boolean,
   right?: boolean,
   isGroup: boolean,
+  disabled?: boolean,
   size: TInputSize,
   onMouseDown: React.MouseEventHandler<HTMLDivElement>,
 }
@@ -234,6 +235,10 @@ const IconWrap = styled.div<TGetIconWrapPaddingsProps>`
   display: flex;
   vertical-align: top;
   align-items: center;
+
+  ${IconSvg} {
+    ${({ disabled }) => disabled && 'opacity: 0.6;'}
+  }
 `
 
 export {

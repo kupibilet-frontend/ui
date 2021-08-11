@@ -25,7 +25,7 @@ export const ItemsWrapper = styled.div<TItemsWrapperProps>`
     ${hasError ? `
       box-shadow: inset 0 0 0 2px ${theme.color.error700};
     ` : `
-      box-shadow: inset 0 0 0 1px ${theme.color.misc400};
+      box-shadow: inset 0 0 0 1px ${theme.color.misc200};
     `}
     background: ${theme.color.misc10};
   `}
