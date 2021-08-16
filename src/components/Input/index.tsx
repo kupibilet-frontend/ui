@@ -146,7 +146,8 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     autoComplete,
   } = normalizedProps
   const [isActive, setIsActive] = useState<boolean>(false)
-  const innerInput = innerRef || useRef<T>(null)
+  const ref = useRef<T>(null)
+  const innerInput = innerRef || ref
 
   const onIconPress = (event: TIconMouseEvent): void => {
     if (!isActive) {
