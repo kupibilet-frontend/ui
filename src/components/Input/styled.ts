@@ -55,6 +55,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   border: none;
   min-height: ${INPUT_HEIGHT[props.inputSize]}px;
   font-family: inherit;
+  opacity: 1;
 
   ${props.inputSize === 'large' ? 'letter-spacing: -0.1px' : null};
 
