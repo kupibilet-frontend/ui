@@ -1,6 +1,7 @@
 {
   "extends": [
-    "kupibilet"
+    "kupibilet",
+    "plugin:react-hooks/recommended"
   ],
   "settings": {
     "import/resolver": {
