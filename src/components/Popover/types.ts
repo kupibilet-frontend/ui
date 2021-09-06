@@ -28,6 +28,10 @@ type TPopoverProps = {
   * z-index поповера
   */
   zIndex?: number,
+  /**
+   * allow popover usage with styled components
+   */
+  className?: string,
 }
 
 type TPopoverWithDefaultsProps = Required<TPopoverProps>
