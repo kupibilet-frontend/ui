@@ -21,6 +21,7 @@ function Popover(props: TPopoverProps): JSX.Element {
     placement = 'bottom-start',
     size = 'normal',
     zIndex = OVERLAY_Z_INDEX - 1,
+    className = '',
   } = props
 
   const {
@@ -42,7 +43,7 @@ function Popover(props: TPopoverProps): JSX.Element {
         ref={setRef}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        style={{ display: 'inline-flex' }}
+        className={className}
       >
         {children}
       </div>
