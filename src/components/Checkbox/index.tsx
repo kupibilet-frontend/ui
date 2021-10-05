@@ -28,6 +28,7 @@ export const Checkbox = React.memo((props: TProps) => {
     children,
     name = '',
     className = '',
+    ...restProps
   } = props
 
   return (
@@ -50,6 +51,7 @@ export const Checkbox = React.memo((props: TProps) => {
           onChange={onChange}
           disabled={disabled}
           name={name}
+          {...restProps}
         />
       </StyledCheckbox>
       <LabelText className="label-text" disabled={disabled}>
