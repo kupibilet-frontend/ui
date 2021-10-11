@@ -48,7 +48,7 @@ export const color: TColor = {
 }
 
 export const font = `
-  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
+  font: 400 16px / 20px 'KB Suisse Intl';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 `
