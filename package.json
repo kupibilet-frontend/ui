@@ -5,7 +5,7 @@
   "scripts": {
     "lint": "yarn lint:js && yarn lint:css",
     "prestart": "scripts/check-engines.js",
-    "start": "BABEL_ENV=default start-storybook -p 9001 -c .storybook",
+    "start": "BABEL_ENV=default start-storybook -p 9001 -c .storybook -s ./public",
     "build-storybook": "BABEL_ENV=default build-storybook",
     "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" >&2 && exit 0; stylelint ./src/components/**/*.js",
     "lint:js": "BABEL_ENV=default eslint \"./src/**/*.js\" \"./src/**/*.ts\" \"./src/**/*.tsx\"",
