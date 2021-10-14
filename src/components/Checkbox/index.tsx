@@ -18,6 +18,7 @@ export type TProps = {
   children: React.ReactChild,
   name?: string,
   className?: string,
+  labelPlacement?: 'start' | 'end',
 }
 
 export const Checkbox = React.memo((props: TProps) => {
@@ -28,10 +29,11 @@ export const Checkbox = React.memo((props: TProps) => {
     children,
     name = '',
     className = '',
+    labelPlacement = 'end',
   } = props
 
   return (
-    <CheckboxLabel disabled={disabled} className={className}>
+    <CheckboxLabel disabled={disabled} className={className} labelPlacement={labelPlacement}>
       <StyledCheckbox
         classname="checkmark"
         disabled={disabled}
@@ -52,7 +54,7 @@ export const Checkbox = React.memo((props: TProps) => {
           name={name}
         />
       </StyledCheckbox>
-      <LabelText className="label-text" disabled={disabled}>
+      <LabelText className="label-text" disabled={disabled} labelPlacement={labelPlacement}>
         {children}
       </LabelText>
 
