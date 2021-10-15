@@ -15,9 +15,10 @@ const Tooltip = ({
   children,
   className = '',
   zIndex = OVERLAY_Z_INDEX - 1,
+  isOpen: isOpenProp = null,
 }: TTooltipProps): JSX.Element => {
   const {
-    isOpen,
+    isOpen: isOpenInnerState,
     setRef,
     setPopper,
     setArrow,
@@ -27,6 +28,8 @@ const Tooltip = ({
     onMouseLeave,
     side,
   } = usePopover(placement)
+
+  const isTooltipOpen = isOpenProp === null ? isOpenInnerState : isOpenProp
 
   return (
     <>
@@ -39,7 +42,7 @@ const Tooltip = ({
       >
         {children}
       </div>
-      {isOpen && (
+      {isTooltipOpen && (
         <Portal>
           <GlobalStylesScope>
             <div
