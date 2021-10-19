@@ -40,7 +40,7 @@ const ColorPanel = styled.div`
   display: grid;
   grid-gap: 12px;
   padding: 20px;
-  grid-template-columns: repeat(7, 140px);
+  grid-template-columns: repeat(5, 200px);
   width: 1000px;
 `
 
