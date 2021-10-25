@@ -60,7 +60,7 @@ export default {
       control: 'radio',
     },
     variant: {
-      options: ['primary', 'secondary', 'contrast', 'link'],
+      options: ['primary', 'secondary', 'carrot', 'link', 'help'],
       control: 'radio',
     },
   },
