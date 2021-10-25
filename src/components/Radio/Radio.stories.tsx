@@ -35,6 +35,12 @@ RadioGroup.args = {
   value: 'base',
 }
 
+export const DisabledRadioGroup: Story<TProps> = RadioTemplate.bind({})
+DisabledRadioGroup.args = {
+  value: 'base',
+  disabled: true,
+}
+
 export default {
   title: 'Radio',
   component: Radio,
