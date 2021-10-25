@@ -56,6 +56,10 @@ enum COLOR_NAMES {
   colorTextDanger = 'colorTextDanger',
   colorTextDisabled = 'colorTextDisabled',
 
+  colorTextLink = 'colorTextLink',
+  colorTextLinkHover = 'colorTextLinkHover',
+  colorTextLinkFocus = 'colorTextLinkFocus',
+
   colorBgPrimary = 'colorBgPrimary',
   colorBgHover = 'colorBgHover',
   colorBgLayout = 'colorBgLayout',

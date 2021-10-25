@@ -60,6 +60,10 @@ export const color: TColor = {
   [COLOR_NAMES.colorTextDanger]: '#DE350B',
   [COLOR_NAMES.colorTextDisabled]: '#A0A2AB',
 
+  [COLOR_NAMES.colorTextLink]: '#0041A3',
+  [COLOR_NAMES.colorTextLinkHover]: '#002F8C',
+  [COLOR_NAMES.colorTextLinkFocus]: '#001B73',
+
   [COLOR_NAMES.colorBgPrimary]: '#FFFFFF',
   [COLOR_NAMES.colorBgHover]: '#F5F5F7',
   [COLOR_NAMES.colorBgLayout]: '#F5F5F7',
