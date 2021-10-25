@@ -70,9 +70,10 @@ function getButtonColor(props: TThemeAndVariantProps): string {
     default:
     case 'primary':
     case 'contrast':
-      return theme.color.background
+    case 'help':
+      return theme.color.colorTextContrast
     case 'secondary':
-      return theme.color.primary700
+      return theme.color.colorTextPrimary
     case 'link':
       return getLinkColor(props)
   }
@@ -94,6 +95,8 @@ function getButtonBackground({ theme, variant }: TThemeAndVariantProps): string 
       return theme.color.colorBgContrast
     case 'secondary':
       return theme.color.colorBgSecondary
+    case 'help':
+      return theme.color.colorBgHelp
     case 'link':
       return 'transparent'
   }
@@ -108,6 +111,8 @@ function getButtonHoverBackground({ theme, variant }: TThemeAndVariantProps): st
       return theme.color.colorBgContrastHover
     case 'secondary':
       return theme.color.colorBgSecondaryHover
+    case 'help':
+      return theme.color.colorBgHelpHover
     case 'link':
       return 'transparent'
   }
@@ -122,6 +127,8 @@ function getButtonActiveBackground({ theme, variant }: TThemeAndVariantProps): s
       return theme.color.colorBgContrastFocus
     case 'secondary':
       return theme.color.colorBgSecondaryFocus
+    case 'help':
+      return theme.color.colorBgHelpFocus
     case 'link':
       return 'transparent'
   }
