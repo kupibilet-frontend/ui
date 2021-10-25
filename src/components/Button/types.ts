@@ -2,7 +2,7 @@ export type TButtonSize = 'small' | 'medium' | 'large'
 
 export type TNeighboringInGroupType = 'both' | 'left' | 'right' | null
 
-export type TButtonVariant = 'primary' | 'secondary' | 'carrot' | 'link'
+export type TButtonVariant = 'primary' | 'secondary' | 'contrast' | 'link'
 
 export interface TButtonProps {
   size?: TButtonSize,

@@ -69,7 +69,7 @@ function getButtonColor(props: TThemeAndVariantProps): string {
   switch (variant) {
     default:
     case 'primary':
-    case 'carrot':
+    case 'contrast':
       return theme.color.background
     case 'secondary':
       return theme.color.primary700
@@ -89,11 +89,11 @@ function getButtonBackground({ theme, variant }: TThemeAndVariantProps): string 
   switch (variant) {
     default:
     case 'primary':
-      return theme.color.primary500
-    case 'carrot':
-      return theme.color.secondary500
+      return theme.color.colorBgAccent
+    case 'contrast':
+      return theme.color.colorBgContrast
     case 'secondary':
-      return theme.color.misc100
+      return theme.color.colorBgSecondary
     case 'link':
       return 'transparent'
   }
@@ -103,26 +103,28 @@ function getButtonHoverBackground({ theme, variant }: TThemeAndVariantProps): st
   switch (variant) {
     default:
     case 'primary':
-      return theme.color.primary600
-    case 'carrot':
-      return theme.color.secondary600
+      return theme.color.colorBgAccentHover
+    case 'contrast':
+      return theme.color.colorBgContrastHover
     case 'secondary':
-      return theme.color.misc200
+      return theme.color.colorBgSecondaryHover
     case 'link':
       return 'transparent'
   }
 }
 
 function getButtonActiveBackground({ theme, variant }: TThemeAndVariantProps): string {
-  if (variant === 'primary') {
-    return theme.color.primary700
-  } else if (variant === 'secondary') {
-    return theme.color.misc300
-  } if (variant === 'link') {
-    return 'transparent'
+  switch (variant) {
+    default:
+    case 'primary':
+      return theme.color.colorBgAccentFocus
+    case 'contrast':
+      return theme.color.colorBgContrastFocus
+    case 'secondary':
+      return theme.color.colorBgSecondaryFocus
+    case 'link':
+      return 'transparent'
   }
-
-  return ''
 }
 
 interface TStyledButtonProps {
