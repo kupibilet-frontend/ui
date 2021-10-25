@@ -18,6 +18,7 @@ const PanelHeader = styled.div`
 const PanelHeaderText = styled.div`
   font-weight: 700;
   user-select: none;
+  color: ${({ theme }) => theme.color.colorTextPrimary};
 `
 
 const CollapseHeaderArrow = styled(Icon)`
@@ -25,6 +26,9 @@ const CollapseHeaderArrow = styled(Icon)`
   display: block;
 `
 
+const StyledPanelContent = styled.div`
+  color: ${({ theme }) => theme.color.colorTextSecondary};
+`
 
 export interface TPanelHeaderProps {
   isActive?: boolean,
@@ -65,9 +69,9 @@ function CollapsePanel(props: TProps): JSX.Element {
         {renderHeader({ header, isActive: isOpen })}
       </div>
       {isOpen && (
-        <>
+        <StyledPanelContent>
           {children}
-        </>
+        </StyledPanelContent>
       )}
     </div>
   )
