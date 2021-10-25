@@ -70,6 +70,7 @@ export const color: TColor = {
 
   [COLOR_NAMES.colorBgSecondary]: '#E8E9ED',
   [COLOR_NAMES.colorBgSecondaryHover]: '#D0D1D7',
+  [COLOR_NAMES.colorBgSecondaryFocus]: '#A0A2AB',
   [COLOR_NAMES.colorBgSecondaryDisabled]: '#F5F5F7',
   [COLOR_NAMES.colorBgAccent]: '#FA6258',
   [COLOR_NAMES.colorBgAccentHover]: '#D74043',
@@ -78,8 +79,8 @@ export const color: TColor = {
   [COLOR_NAMES.colorBgHelpHover]: '#6C45DB',
   [COLOR_NAMES.colorBgHelpFocus]: '#4E2FB7',
   [COLOR_NAMES.colorBgContrast]: '#212126',
-  [COLOR_NAMES.colorBgContrastHover]: '_',
-  [COLOR_NAMES.colorBgContrastFocus]: '_',
+  [COLOR_NAMES.colorBgContrastHover]: '#3A3A41',
+  [COLOR_NAMES.colorBgContrastFocus]: '#101014',
   [COLOR_NAMES.colorBgSwitch]: '_',
 
   [COLOR_NAMES.colorBgPrimaryLight]: '#FEEADD',

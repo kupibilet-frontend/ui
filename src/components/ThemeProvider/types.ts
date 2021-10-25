@@ -66,6 +66,7 @@ enum COLOR_NAMES {
 
   colorBgSecondary = 'colorBgSecondary',
   colorBgSecondaryHover = 'colorBgSecondaryHover',
+  colorBgSecondaryFocus = 'colorBgSecondaryFocus',
   colorBgSecondaryDisabled = 'colorBgSecondaryDisabled',
   colorBgAccent = 'colorBgAccent',
   colorBgAccentHover = 'colorBgAccentHover',
