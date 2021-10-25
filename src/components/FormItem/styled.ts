@@ -13,7 +13,7 @@ const Label = styled.label<TStyledLabelProps>`
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 18px;
-  color: ${({ theme, disabled }) => (disabled ? theme.color.text300 : theme.color.text600)};
+  color: ${({ theme, disabled }) => (disabled ? theme.color.colorTextDisabled : theme.color.colorTextSecondary)};
   user-select: none;
 `
 
