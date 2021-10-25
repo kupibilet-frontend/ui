@@ -64,7 +64,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   padding-right: ${props.rightIcon ? '0' : `${SIZE[props.inputSize]}px`};
   
   font-size: ${TYPOGRAPHY[props.inputSize]}px;
-  color: ${props.theme.color.text600};
+  color: ${props.theme.color.colorTextPrimary};
 
   background-color: transparent;
   
@@ -87,7 +87,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   })(props)}
 
   &::placeholder {
-    color: ${({ theme }) => theme.color.misc500};
+    color: ${({ theme }) => theme.color.colorTextPlaceholder};
   }
 
   &:focus {
@@ -95,9 +95,9 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   }
 
   &:disabled {
-    color: ${({ theme }) => theme.color.misc300};
+    color: ${({ theme }) => theme.color.colorTextDisabled};
     &::placeholder {
-      color: ${({ theme }) => theme.color.misc300};
+      color: ${({ theme }) => theme.color.colorTextDisabled};
   }
   }
   `
@@ -130,11 +130,11 @@ interface TInputWrapperProps {
 function getInputBorderColor(props: TInputWrapperProps) {
   const { error, active, theme, disabled } = props
 
-  if (active) return theme.color.primary400
-  if (error) return theme.color.error700
-  if (disabled) return theme.color.misc100
+  if (active) return theme.color.colorBorderActive
+  if (error) return theme.color.colorBorderDanger
+  if (disabled) return theme.color.colorBgSecondaryDisabled
 
-  return theme.color.misc200
+  return theme.color.colorBorderPrimary
 }
 
 
@@ -144,9 +144,12 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.color.misc10};
+  background-color: ${({ theme }) => theme.color.colorBgPrimary};
 
-  ${({ disabled }) => disabled && 'pointer-events: none;'}
+  ${({ disabled, theme }) => disabled && `
+    background-color: ${theme.color.colorBgSecondaryDisabled};
+    pointer-events: none;
+  `}
 
   ${({ neighboringInGroup }) => {
     if (neighboringInGroup === 'right') {
@@ -163,11 +166,6 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   border: 1px solid ${getInputBorderColor};
 
   border-style: solid;
-  ${({ active, theme }) => {
-    if (active) {
-      return `box-shadow: 0 0 0 1px ${theme.color.primary400};`
-    }
-  }}
 
   ${({ neighboringInGroup }) => {
     if (['left', 'both'].includes((neighboringInGroup || '').toString())) {
@@ -181,12 +179,8 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   ${switchTransition}
   transition-property: border-color;
 
-  ${({ theme, error, active }) => error && !active && `
-    box-shadow: inset 0px 0px 0px 1px ${theme.color.error700};
-  `}
-
   &:hover {
-    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.primary400};
+    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.colorBorderHover};
     z-index: 1;
   }
 
