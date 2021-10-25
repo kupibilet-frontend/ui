@@ -15,5 +15,5 @@ export const BUTTON_SIZES: Record<TButtonSize, number> = {
 export const BUTTON_BORDER_RADIUS: Record<TButtonSize, number> = {
   small: 8,
   medium: 8,
-  large: 8,
+  large: 12,
 }
