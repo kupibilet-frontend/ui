@@ -23,11 +23,15 @@ interface TLinkProps {
 }
 
 function getLinkColor(props: TLinkProps): string {
-  return props.theme.color.primary700
+  return props.theme.color.colorTextLink
 }
 
 function getLinkHoverColor(props: TLinkProps): string {
-  return opacify(-0.2, getLinkColor(props))
+  return props.theme.color.colorTextLinkHover
+}
+
+function getLinkFocusColor(props: TLinkProps): string {
+  return props.theme.color.colorTextLinkFocus
 }
 
 const linkStyles = css`
@@ -50,6 +54,14 @@ const linkStyles = css`
 
     .icon-inherit-color {
       fill: ${getLinkHoverColor};
+    }
+  }
+
+  &:focus {
+    color: ${getLinkFocusColor};
+
+    .icon-inherit-color {
+      fill: ${getLinkFocusColor};
     }
   }
 `
