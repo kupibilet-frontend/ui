@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { borderRadiusSmall } from 'utils/borderRadius'
+import { borderRadiusMedium } from 'utils/borderRadius'
 import { shadow2 } from 'utils/shadows'
 
 const DropdownWrapper = styled.div`
@@ -16,7 +16,7 @@ const DropdownContent = styled.div`
   padding: 18px 12px;
   background: ${({ theme }) => theme.color.background};
   ${shadow2}
-  ${borderRadiusSmall.all}
+  ${borderRadiusMedium.all}
   z-index: 10;
 
   margin-bottom: 18px;

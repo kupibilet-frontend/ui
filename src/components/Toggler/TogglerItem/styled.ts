@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import Text from 'components/Typography/Text'
-import { borderRadiusSmall } from 'utils/borderRadius'
+import { borderRadiusMedium } from 'utils/borderRadius'
 
 interface TStyledWrapperProps {
   isSelected: boolean,
@@ -13,7 +13,7 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   height: 100%;
 
   color: ${({ theme }) => theme.color.misc600};
-  ${borderRadiusSmall.all}
+  ${borderRadiusMedium.all}
 
   display: flex;
   align-items: center;
