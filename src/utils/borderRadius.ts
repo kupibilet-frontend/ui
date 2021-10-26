@@ -1,20 +1,30 @@
 /*
  * @usage
  * const roundAllCorners = css`
- *   ${ borderRadiusSmall }
+ *   ${ borderRadiusMedium }
  * `
  * const roudOnlyLeftCorners = css`
- *   ${ borderRadiusSmall.left }
+ *   ${ borderRadiusMedium.left }
  * `
  */
 
+
 export const borderRadiusSmall = {
+  left: 'border-radius: 4px 0 0 4px;',
+  right: 'border-radius: 0 4px 4px 0;',
+  top: 'border-radius: 4px 4px 0 0;',
+  bottom: 'border-radius: 0 0 4px 4px;',
+  all: 'border-radius: 4px;',
+  toString: (): string => borderRadiusSmall.all,
+}
+
+export const borderRadiusMedium = {
   left: 'border-radius: 8px 0 0 8px;',
   right: 'border-radius: 0 8px 8px 0;',
   top: 'border-radius: 8px 8px 0 0;',
   bottom: 'border-radius: 0 0 8px 8px;',
   all: 'border-radius: 8px;',
-  toString: (): string => borderRadiusSmall.all,
+  toString: (): string => borderRadiusMedium.all,
 }
 
 export const borderRadiusLarge = {

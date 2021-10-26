@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { DefaultTheme, css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
-import { borderRadiusLarge, borderRadiusSmall } from 'utils/borderRadius'
+import { borderRadiusLarge, borderRadiusMedium } from 'utils/borderRadius'
 import { IconSvg } from 'components/Icon/styled'
 import {
   TEXTAREA_PADDINGS,
@@ -25,7 +25,7 @@ const Error = styled.span`
   color: #fff;
   opacity: 0.97;
   z-index: 2;
-  ${borderRadiusSmall.all}
+  ${borderRadiusMedium.all}
   background-color: ${({ theme }) => theme.color.error700};
 `
 
