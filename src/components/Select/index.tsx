@@ -12,7 +12,7 @@ import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
 import { shadow2 } from 'utils/shadows'
-import { borderRadiusSmall } from 'utils/borderRadius'
+import { borderRadiusMedium } from 'utils/borderRadius'
 import noop from 'lodash/noop'
 
 const StyledContainer = styled.div`
@@ -23,7 +23,7 @@ const StyledContainer = styled.div`
   position: absolute;
   top: 100%;
   ${shadow2}
-  ${borderRadiusSmall.all}
+  ${borderRadiusMedium.all}
   overflow: hidden;
   z-index: 10;
   background: ${({ theme }) => theme.color.background};
