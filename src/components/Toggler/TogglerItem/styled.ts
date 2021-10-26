@@ -12,7 +12,7 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   text-align: center;
   height: 100%;
 
-  color: ${({ theme }) => theme.color.misc600};
+  color: ${({ theme }) => theme.color.colorTextSecondary};
   ${borderRadiusMedium.all}
 
   display: flex;
@@ -20,8 +20,8 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   justify-content: center;
 
   ${({ isSelected }) => isSelected && css`
-    color: ${({ theme }) => theme.color.text600};
-    background-color: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.colorTextPrimary};
+    background-color: ${({ theme }) => theme.color.colorBgPrimary};
     font-weight: 600;
     box-shadow: 0px 1px 3px rgba(98, 112, 139, 0.2);
   `
