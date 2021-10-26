@@ -3,7 +3,12 @@ import styled, { css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { floatFromTop } from 'utils/animations'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import { getBackgroundColor, getShadowColor } from './helpers'
+import {
+  getBackgroundColor,
+  getHoverBackgroundColor,
+  getShadowColor,
+  getHoverShadowColor,
+} from './helpers'
 
 export type TLabelPlacement = 'start' | 'end'
 
@@ -43,6 +48,11 @@ export const StyledCheckbox = styled.span<TStyledCheckboxProps>`
   transition-property: background, border;
   background: ${({ disabled, checked, theme }) => getBackgroundColor(disabled, checked, theme)};
   ${borderRadiusSmall.all}
+
+  &:hover {
+    box-shadow: ${({ disabled, checked, theme }) => css`inset 0 0 0 1px ${getHoverShadowColor(disabled, checked, theme)}`};
+    background: ${({ disabled, checked, theme }) => getHoverBackgroundColor(disabled, checked, theme)};
+  }
 `
 
 interface TLabelTextProps {
@@ -66,6 +76,7 @@ export const LabelText = styled.span<TLabelTextProps>`
 `
 
 interface TCheckboxLabelProps {
+  checked: boolean,
   disabled: boolean,
   labelPlacement: TLabelPlacement
 }
@@ -80,15 +91,18 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   user-select: none;
   width: 100%;
 
-  ${({ labelPlacement }) => labelPlacement === 'start' && css`
-    flex-direction: row-reverse;
-  `}
+  color: ${({ theme, disabled, checked }) => {
+    if (disabled) return theme.color.colorTextDisabled
+    if (checked) return theme.color.colorTextPrimary
 
-  &:hover .checkbox {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.text200 : theme.color.primary500)};
-  };
+    return theme.color.colorTextSecondary
+  }};
 
-  &:hover .label-text {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.text300 : theme.color.primary700)};
-  };
+  &:hover {
+    color: ${({ theme, disabled }) => (disabled ? theme.color.colorTextDisabled : theme.color.colorTextPrimary)};
+  }
+
+  &:hover ${StyledCheckbox} {
+    box-shadow: ${({ disabled, checked, theme }) => css`inset 0 0 0 1px ${getHoverShadowColor(disabled, checked, theme)}`};
+  }
 `
