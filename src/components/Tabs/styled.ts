@@ -10,22 +10,35 @@ const StyledTab = styled(Tab)`
   border-radius: 100px;
   line-height: 24px;
   user-select: none;
+  color: ${({ theme }) => theme.color.colorTextSecondary};
   ${({ isActive, theme }) => {
     if (isActive) {
       return `
-        color: ${theme.color.text600};
-        background: ${theme.color.secondary100};
+        color: ${theme.color.colorTextContrast};
+        background: ${theme.color.colorBgContrast};
 
         &:hover {
-          color: ${theme.color.text600};
+          color: ${theme.color.colorTextContrast};
+          background-color: ${theme.color.colorBgContrastHover};
         }
       `
     }
-    return 'background: transparent;'
+
+    return `
+      background: transparent;
+      &:hover {
+        color: ${theme.color.colorTextSecondary};
+      }
+    `
   }}
 
+  /* override "linkStyles" */
   &:focus {
     outline: none;
+    color: ${({ theme }) => theme.color.colorTextContrast};
+    .icon-inherit-color {
+      fill: ${({ theme }) => theme.color.colorTextContrast};
+    }
   }
 `
 
