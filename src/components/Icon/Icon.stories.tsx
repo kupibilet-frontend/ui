@@ -25,7 +25,7 @@ const Default: Story<TIconProps> = Template.bind({})
 Default.args = {
   name: 'checkmark',
   size: ICON_SIZES.large,
-  fill: COLOR_NAMES.primary400,
+  fill: COLOR_NAMES.colorTextPrimary,
   striked: false,
   paid: false,
   rotate: false,
@@ -45,7 +45,7 @@ export const AllIcons = (): JSX.Element => {
           <Icon
             name={icon}
             size={ICON_SIZES.large}
-            fill={COLOR_NAMES.primary400}
+            fill={COLOR_NAMES.colorTextPrimary}
             striked={false}
             paid={false}
             rotate={false}
