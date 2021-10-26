@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Checkbox, TProps } from 'components/Checkbox'
 import { useArgs } from '@storybook/client-api'
+import { Story } from '@storybook/react'
 
 export const Default = (args: TProps): JSX.Element => {
   const [{ checked, disabled }, updateArgs] = useArgs()
@@ -19,6 +20,11 @@ export const Default = (args: TProps): JSX.Element => {
       Авиабилеты
     </Checkbox>
   )
+}
+
+export const DisabledCheckbox: Story<TProps> = Default.bind({})
+DisabledCheckbox.args = {
+  disabled: true,
 }
 
 export default {
