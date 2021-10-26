@@ -27,7 +27,7 @@ export const ItemsWrapper = styled.div<TItemsWrapperProps>`
     ` : `
       box-shadow: inset 0 0 0 1px ${theme.color.misc200};
     `}
-    background: ${theme.color.misc10};
+    background: ${theme.color.colorBgLayout};
   `}
 `
 
