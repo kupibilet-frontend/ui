@@ -40,6 +40,7 @@ export const Header = styled.div<TProps>`
   flex: 0 0 auto;
   min-height: 60px;
   justify-content: space-between;
+  color: ${({ theme }) => theme.color.colorTextPrimary};
   padding: 42px 42px ${({ size }) => (isCompact(size) ? '18' : '30')}px;
   ${H4} {
     font-weight: 700;
@@ -67,6 +68,7 @@ export const Content = styled.div`
   flex-grow: 1;
   margin-bottom: 18px;
   padding: 0 42px;
+  color: ${({ theme }) => theme.color.colorTextSecondary};
 
   @media ${queries.isMobile} {
     padding: 0 30px;
