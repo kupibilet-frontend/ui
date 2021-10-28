@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Tooltip from 'components/Tooltip'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
@@ -35,6 +35,41 @@ const TooltipTemplate = (): JSX.Element => {
 export const DefaultTooltip: Story<TTooltipProps> = TooltipTemplate.bind({})
 DefaultTooltip.args = {
   ...DEFAULT_ARGS as TTooltipProps,
+}
+
+
+export const PropControlledTooltip: Story<TTooltipProps> = (): JSX.Element => {
+  const [isTooltipOpen, setTooltipStatus] = useState<boolean>(false)
+  const tooltipTimeout = useRef<number | null>(null)
+
+
+  function onButtonClick(): void {
+    if (isTooltipOpen || Boolean(tooltipTimeout.current)) return
+
+    setTooltipStatus(true)
+
+    tooltipTimeout.current = window.setTimeout(() => {
+      setTooltipStatus(false)
+      tooltipTimeout.current = null
+    }, 3000)
+  }
+
+  // clear timeout
+  useEffect(() => (): void => {
+    if (tooltipTimeout.current !== null) window.clearTimeout(tooltipTimeout.current)
+  }, [])
+
+  return (
+    <Tooltip
+      content="Hello! I will dissapear in just 3 seconds"
+      placement="top"
+      isOpen={isTooltipOpen}
+    >
+      <Button onClick={onButtonClick} variant="secondary">
+        Click me to show tooltip!
+      </Button>
+    </Tooltip>
+  )
 }
 
 export default {
