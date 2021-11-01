@@ -9,7 +9,6 @@ import H6 from './H6'
 import Text from './Text'
 import TextSmall from './TextSmall'
 import TextLarge from './TextLarge'
-import UppercaseExtraSmall from './UppercaseExtraSmall'
 import TextCaption from './TextCaption'
 import { List as UIList, ListItem } from './List'
 
@@ -34,9 +33,6 @@ const texts = (
     </div>
     <div>
       <TextSmall>TextSmall: Пересадка 22ч 20 мин</TextSmall>
-    </div>
-    <div>
-      <UppercaseExtraSmall>UppercaseExtraSmall: Пересадка 22ч 20 мин</UppercaseExtraSmall>
     </div>
     <div>
       <TextCaption>TextCaption: Пересадка 22ч 20 мин</TextCaption>
