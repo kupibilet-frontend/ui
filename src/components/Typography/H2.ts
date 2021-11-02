@@ -3,10 +3,10 @@ import { queries } from 'utils/media-queries'
 
 const H2 = styled.h2`
   font-size: 38px;
-  font-weight: 500;
   line-height: 38px;
   letter-spacing: -1px;
   margin: 0;
+  font-weight: 600;
 
   @media ${queries.isHandheld} {
     font-size: 24px;
