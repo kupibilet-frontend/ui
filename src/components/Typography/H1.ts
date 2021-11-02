@@ -3,7 +3,7 @@ import { queries } from 'utils/media-queries'
 
 const H1 = styled.h1`
   font-size: 44px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 44px;
   letter-spacing: -1.2px;
   margin: 0;

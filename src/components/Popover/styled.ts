@@ -86,7 +86,7 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
 `
 
 const HeaderText = styled(Text)`
-  font-weight: 600;
+  font-weight: 500;
 `
 
 const Header = styled.div`
