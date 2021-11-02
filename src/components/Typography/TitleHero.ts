@@ -6,6 +6,7 @@ const TitleHero = styled.h1`
   line-height: 64px;
   margin: 0;
   font-weight: 600;
+  color: ${({ theme }) => theme.color.colorTextPrimary};
 
   @media ${queries.isTablet} {
     font-size: 40px;
