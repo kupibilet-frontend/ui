@@ -22,7 +22,7 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
   ${({ isSelected }) => isSelected && css`
     color: ${({ theme }) => theme.color.colorTextPrimary};
     background-color: ${({ theme }) => theme.color.colorBgPrimary};
-    font-weight: 600;
+    font-weight: 500;
     box-shadow: 0px 1px 3px rgba(98, 112, 139, 0.2);
   `
 }`

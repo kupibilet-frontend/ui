@@ -43,7 +43,7 @@ export const Header = styled.div<TProps>`
   color: ${({ theme }) => theme.color.colorTextPrimary};
   padding: 42px 42px ${({ size }) => (isCompact(size) ? '18' : '30')}px;
   ${H4} {
-    font-weight: 700;
+    font-weight: 500;
   }
 
   @media ${queries.isDesktop} {
