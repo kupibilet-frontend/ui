@@ -16,7 +16,7 @@ const PanelHeader = styled.div`
 `
 
 const PanelHeaderText = styled.div`
-  font-weight: 700;
+  font-weight: 500;
   user-select: none;
   color: ${({ theme }) => theme.color.colorTextPrimary};
 `

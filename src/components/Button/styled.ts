@@ -147,7 +147,7 @@ interface TStyledButtonProps {
 
 function fontWeight({ size }: TStyledButtonProps) {
   if (size !== 'small') {
-    return 'font-weight: 600;'
+    return 'font-weight: 500;'
   }
 
   return ''
