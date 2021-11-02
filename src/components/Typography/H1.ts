@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { queries } from 'utils/media-queries'
 
 const H1 = styled.h1`
-  font-size: 36;
+  font-size: 36px;
   line-height: 48px;
   margin: 0;
   font-weight: 600;
