@@ -6,6 +6,7 @@ const H4 = styled.h4`
   line-height: 28px;
   margin: 0;
   font-weight: 600;
+  color: ${({ theme }) => theme.color.colorTextPrimary};
 
   @media ${queries.isHandheld} {
     font-size: 20px;
