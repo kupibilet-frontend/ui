@@ -7,6 +7,7 @@ import H3 from './H3'
 import H4 from './H4'
 import H5 from './H5'
 import H6 from './H6'
+import TextAccent from './TextAccent'
 import Text from './Text'
 import TextSmall from './TextSmall'
 import TextLarge from './TextLarge'
@@ -27,6 +28,9 @@ const headers = (
 
 const texts = (
   <div>
+    <div>
+      <TextAccent>TextAccent: Пересадка 22ч 20 мин</TextAccent>
+    </div>
     <div>
       <TextLarge>TextLarge: Пересадка 22ч 20 мин</TextLarge>
     </div>
