@@ -1,5 +1,6 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
+import TitleHero from './TitleHero'
 import H1 from './H1'
 import H2 from './H2'
 import H3 from './H3'
@@ -14,6 +15,7 @@ import { List as UIList, ListItem } from './List'
 
 const headers = (
   <div>
+    <TitleHero>TitleHero: 22ч 20 мин</TitleHero>
     <H1>H1: Пересадка 22ч 20 мин</H1>
     <H2>H2: Пересадка 22ч 20 мин</H2>
     <H3>H3: Пересадка 22ч 20 мин</H3>
