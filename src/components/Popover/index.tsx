@@ -1,7 +1,7 @@
 import React from 'react'
 import { Portal } from 'react-portal'
 import { GlobalStylesScope } from 'components/ThemeProvider'
-import TextCation from 'components/Typography/TextCation'
+import TextCaption from 'components/Typography/TextCaption'
 import { usePopover } from 'hooks/usePopover'
 import { OVERLAY_Z_INDEX } from 'components/Overlay'
 import { TPopoverProps } from './types'
@@ -71,9 +71,9 @@ function Popover(props: TPopoverProps): JSX.Element {
                     </HeaderText>
                   </Header>
                 )}
-                <TextCation>
+                <TextCaption>
                   {content}
-                </TextCation>
+                </TextCaption>
               </PopoverBackground>
             </div>
           </GlobalStylesScope>
