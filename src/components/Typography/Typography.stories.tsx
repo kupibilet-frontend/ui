@@ -9,7 +9,7 @@ import H5 from './H5'
 import H6 from './H6'
 import TextAccent from './TextAccent'
 import Text from './Text'
-import TextCation from './TextCation'
+import TextCaption from './TextCaption'
 import TextLarge from './TextLarge'
 import TextDescription from './TextDescription'
 import { List as UIList, ListItem } from './List'
@@ -38,7 +38,7 @@ const texts = (
       <Text>Text: Пересадка 22ч 20 мин</Text>
     </div>
     <div>
-      <TextCation>TextCation: Пересадка 22ч 20 мин</TextCation>
+      <TextCaption>TextCaption: Пересадка 22ч 20 мин</TextCaption>
     </div>
     <div>
       <TextDescription>TextDescription: Пересадка 22ч 20 мин</TextDescription>
