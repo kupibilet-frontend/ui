@@ -1,5 +1,5 @@
 import { GlobalStylesScope } from 'components/ThemeProvider'
-import TextSmall from 'components/Typography/TextSmall'
+import TextCation from 'components/Typography/TextCation'
 import { usePopover } from 'hooks/usePopover'
 import React from 'react'
 import { Portal } from 'react-portal'
@@ -67,9 +67,9 @@ const Tooltip = ({
                 success={success}
                 error={error}
               >
-                <TextSmall>
+                <TextCation>
                   { content }
-                </TextSmall>
+                </TextCation>
               </TooltipBackground>
             </div>
           </GlobalStylesScope>
