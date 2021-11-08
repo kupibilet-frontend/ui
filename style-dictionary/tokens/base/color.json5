@@ -1,0 +1,62 @@
+{
+    "color": {
+        "bg": {
+            "accent": {
+                "normal": {
+                    "value": "#FA6258"
+                },
+                "hover": {
+                    "value": "#D74043"
+                },
+                "focus": {
+                    "value": "#B32C3A"
+                },
+                "disable": {
+                    "value": "#F5F5F7"
+                }
+            },
+            "secondary": {
+                "normal": {
+                    "value": "#E8E9ED"
+                },
+                "hover": {
+                    "value": "#D0D1D7"
+                },
+                "focus": {
+                    "value": "#A0A2AB"
+                },
+                "disable": {
+                    "value": "#F5F5F7"
+                }
+            },
+
+            "layout": {
+                "value": "#F5F5F7"
+            }
+        },
+
+
+        "text": {
+            "primary": {
+                "default": {
+                    "value": "#101014"
+                }
+            },
+            "secondary": {
+                "default": {
+                    "value": "#51525A"
+                }
+            },
+            "contrast": {
+                "default": {
+                    "value": "#FFFFFF"
+                }
+            },
+            "default": {
+                "disable": {
+                    "value": "#A0A2AB"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "typography": {
+        "hedline1": {
+            "default": {
+                "default": {
+                    "value": {
+                        "font-weight": "{font.weight.bold.default.value}",
+                        "size": "24",
+                        "lineHeight": "32"
+                    }
+                }
+            }
+        },
+
+        "text": {
+            "medium": {
+                "default": {
+                    "value": {
+                        "font-weight": "{font.weight.regular.default.value}",
+                        "size": "14",
+                        "lineHeight": "20"
+                    }
+                }
+
+            }
+        },
+
+        "button": {
+            "medium": {
+                "default": {
+                    "value": {
+                        "font-weight": "{font.weight.medium.default.value}",
+                        "size": "16",
+                        "lineHeight": "24"
+                    }
+                }
+            }
+        }
+    }
+}
