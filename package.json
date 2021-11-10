@@ -17,7 +17,7 @@
     "build:typescript-types": "tsc --noEmit false --emitDeclarationOnly",
     "watch": "yarn build --watch",
     "snyk": "snyk test --dev --severity-threshold=medium",
-    "tokens": "style-dictionary build --config ./style-dictionary/config.json",
+    "tokens": "style-dictionary build --config ./style-dictionary/config.ts",
     "//": "---        NPM hooks section        ---",
     "postinstall": "move-bin; true",
     "prepublishOnly": "yarn build"

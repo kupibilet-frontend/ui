@@ -3,7 +3,7 @@
         "borderRadius": {
             "small": {
                 "default": {
-                    "value": "4"
+                    "value": "4px"
                 }
             },
             "medium": {

@@ -1,8 +1,8 @@
 /**
  * Do not edit directly
- * Generated on Mon, 08 Nov 2021 15:11:10 GMT
+ * Generated on Thu, 11 Nov 2021 08:15:59 GMT
  */
 
-export const SizeBorderRadiusSmallDefault = "4rem";
-export const SizeBorderRadiusMediumDefault = "8rem";
-export const SizeBorderRadiusLargeDefault = "12rem";
+export const sizeBorderRadiusSmallDefault = "4px";
+export const sizeBorderRadiusMediumDefault = "8px";
+export const sizeBorderRadiusLargeDefault = "12px";
