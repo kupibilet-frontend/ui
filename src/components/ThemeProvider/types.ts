@@ -89,7 +89,8 @@ enum COLOR_NAMES {
   colorBorderDecorative = 'colorBorderDecorative',
   colorBorderPrimary = 'colorBorderPrimary',
   colorBorderHover = 'colorBorderHover',
-  colorBorderActive = 'colorBorderActive',
+  colorBorderFocus = 'colorBorderFocus',
+  colorBorderAccent = 'colorBorderAccent',
   colorBorderSuccess = 'colorBorderSuccess',
   colorBorderDanger = 'colorBorderDanger',
 
