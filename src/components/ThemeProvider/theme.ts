@@ -65,12 +65,13 @@ export const color: TColor = {
   [COLOR_NAMES.colorTextLinkFocus]: '#001B73',
 
   [COLOR_NAMES.colorBgPrimary]: '#FFFFFF',
+  [COLOR_NAMES.colorBgPrimaryFocus]: '#E8E9ED',
   [COLOR_NAMES.colorBgHover]: '#F5F5F7',
-  [COLOR_NAMES.colorBgLayout]: '#F5F5F7',
+  [COLOR_NAMES.colorBgLayout]: '#FAFAFB',
 
-  [COLOR_NAMES.colorBgSecondary]: '#E8E9ED',
-  [COLOR_NAMES.colorBgSecondaryHover]: '#D0D1D7',
-  [COLOR_NAMES.colorBgSecondaryFocus]: '#A0A2AB',
+  [COLOR_NAMES.colorBgSecondary]: '#F5F5F7',
+  [COLOR_NAMES.colorBgSecondaryHover]: '#E8E9ED',
+  [COLOR_NAMES.colorBgSecondaryFocus]: '#D0D1D7',
   [COLOR_NAMES.colorBgSecondaryDisabled]: '#F5F5F7',
   [COLOR_NAMES.colorBgAccent]: '#FA6258',
   [COLOR_NAMES.colorBgAccentHover]: '#D74043',
@@ -87,7 +88,7 @@ export const color: TColor = {
   [COLOR_NAMES.colorBgHelpLight]: '#EBDFFF',
   [COLOR_NAMES.colorBgSuccess]: '#EEF7C9',
   [COLOR_NAMES.colorBgInfo]: '#D9EEFF',
-  [COLOR_NAMES.colorBgWarning]: '#FFF1CC',
+  [COLOR_NAMES.colorBgWarningInfo]: '#FFF1CC',
   [COLOR_NAMES.colorBgDanger]: '#FDE5CD',
 
   [COLOR_NAMES.colorBorderDecorative]: '#E8E9ED',

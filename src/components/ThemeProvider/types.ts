@@ -61,6 +61,7 @@ enum COLOR_NAMES {
   colorTextLinkFocus = 'colorTextLinkFocus',
 
   colorBgPrimary = 'colorBgPrimary',
+  colorBgPrimaryFocus = 'colorBgPrimaryFocus',
   colorBgHover = 'colorBgHover',
   colorBgLayout = 'colorBgLayout',
 
@@ -83,7 +84,7 @@ enum COLOR_NAMES {
   colorBgHelpLight = 'colorBgHelpLight',
   colorBgSuccess = 'colorBgSuccess',
   colorBgInfo = 'colorBgInfo',
-  colorBgWarning = 'colorBgWarning',
+  colorBgWarningInfo = 'colorBgWarningInfo',
   colorBgDanger = 'colorBgDanger',
 
   colorBorderDecorative = 'colorBorderDecorative',
