@@ -93,7 +93,8 @@ export const color: TColor = {
   [COLOR_NAMES.colorBorderDecorative]: '#E8E9ED',
   [COLOR_NAMES.colorBorderPrimary]: '#D0D1D7',
   [COLOR_NAMES.colorBorderHover]: '#3A3A41',
-  [COLOR_NAMES.colorBorderActive]: '#101014',
+  [COLOR_NAMES.colorBorderFocus]: '#101014',
+  [COLOR_NAMES.colorBorderAccent]: '#FA6258',
   [COLOR_NAMES.colorBorderSuccess]: '#85BC0C',
   [COLOR_NAMES.colorBorderDanger]: '#DE350B',
 

@@ -130,7 +130,7 @@ interface TInputWrapperProps {
 function getInputBorderColor(props: TInputWrapperProps) {
   const { error, active, theme, disabled } = props
 
-  if (active) return theme.color.colorBorderActive
+  if (active) return theme.color.colorBorderFocus
   if (error) return theme.color.colorBorderDanger
   if (disabled) return theme.color.colorBgSecondaryDisabled
 
