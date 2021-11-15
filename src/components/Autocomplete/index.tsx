@@ -72,6 +72,7 @@ const getFirstSuggestion = ({ suggestions, multiSection }: TProps) => {
   if (multiSection && suggestion) {
     // destructuring dosn't work for assignment in babel
     // eslint-disable-next-line prefer-destructuring
+    // @ts-ignore
     suggestion = suggestion[0] as TSuggestion
   }
 

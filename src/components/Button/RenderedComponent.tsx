@@ -36,8 +36,8 @@ const RenderedComponent = (props: TRenderedComponentProps): JSX.Element => {
     return (
       <StyledButtonLink
         href={href}
-        size={size}
-        variant={variant}
+        size={size as any}
+        variant={variant as any}
         disabled={disabled}
         isBlock={isBlock}
         neighboringInGroup={neighboringInGroup}
@@ -53,8 +53,8 @@ const RenderedComponent = (props: TRenderedComponentProps): JSX.Element => {
 
   return (
     <StyledButton
-      size={size}
-      variant={variant}
+      size={size as any}
+      variant={variant as any}
       disabled={disabled}
       isBlock={isBlock}
       neighboringInGroup={neighboringInGroup}

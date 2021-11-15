@@ -61,10 +61,10 @@ function calculateBorderRadius(
 }
 
 interface TStyledButtonProps {
-  size: TButtonSize,
+  size: 'medium',
   isBlock: boolean,
   neighboringInGroup: TNeighboringInGroupType,
-  variant: TButtonVariant,
+  variant: 'primary' | 'secondary',
   isIconOnly: boolean,
   hasLeftIcon: boolean,
   hasRightIcon: boolean,
