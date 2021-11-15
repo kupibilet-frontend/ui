@@ -1,25 +1,25 @@
 /**
  * Do not edit directly
- * Generated on Thu, 11 Nov 2021 08:15:59 GMT
+ * Generated on Fri, 12 Nov 2021 13:44:22 GMT
  */
 
-export const buttonPrimaryMediumColorBgNormal = "#fa6258";
-export const buttonPrimaryMediumColorBgHover = "#d74043";
-export const buttonPrimaryMediumColorBgFocus = "#b32c3a";
-export const buttonPrimaryMediumColorBgDisable = "#f5f5f7";
-export const buttonPrimaryMediumColorTextNormal = "#ffffff";
-export const buttonPrimaryMediumColorTextHover = "#ffffff";
-export const buttonPrimaryMediumColorTextFocus = "#ffffff";
-export const buttonPrimaryMediumColorTextDisable = "#a0a2ab";
-export const buttonPrimaryMediumTypographyDefaultDefault = {"font-weight":"SuisseIntl-Medium-WebS","size":"16","lineHeight":"24"};
-export const buttonPrimaryMediumSizeBorderRadiusDefault = "8px";
-export const buttonSecondaryMediumColorBgNormal = "#e8e9ed";
-export const buttonSecondaryMediumColorBgHover = "#d0d1d7";
-export const buttonSecondaryMediumColorBgFocus = "#a0a2ab";
-export const buttonSecondaryMediumColorBgDisable = "#f5f5f7";
-export const buttonSecondaryMediumColorTextNormal = "#101014";
-export const buttonSecondaryMediumColorTextHover = "#101014";
-export const buttonSecondaryMediumColorTextFocus = "#101014";
-export const buttonSecondaryMediumColorTextDisable = "#a0a2ab";
-export const buttonSecondaryMediumTypographyDefaultDefault = {"font-weight":"SuisseIntl-Medium-WebS","size":"16","lineHeight":"24"};
-export const buttonSecondaryMediumSizeBorderRadiusDefault = "8px";
+export const button_primary_medium_color_bg_normal = "#fa6258";
+export const button_primary_medium_color_bg_hover = "#d74043";
+export const button_primary_medium_color_bg_focus = "#b32c3a";
+export const button_primary_medium_color_bg_disable = "#f5f5f7";
+export const button_primary_medium_color_text_normal = "#ffffff";
+export const button_primary_medium_color_text_hover = "#ffffff";
+export const button_primary_medium_color_text_focus = "#ffffff";
+export const button_primary_medium_color_text_disable = "#a0a2ab";
+export const button_primary_medium_typography_default_default = {"font-weight":"SuisseIntl-Medium-WebS","size":"16","lineHeight":"24"};
+export const button_primary_medium_size_border_radius_default = "8px";
+export const button_secondary_medium_color_bg_normal = "#e8e9ed";
+export const button_secondary_medium_color_bg_hover = "#d0d1d7";
+export const button_secondary_medium_color_bg_focus = "#a0a2ab";
+export const button_secondary_medium_color_bg_disable = "#f5f5f7";
+export const button_secondary_medium_color_text_normal = "#101014";
+export const button_secondary_medium_color_text_hover = "#101014";
+export const button_secondary_medium_color_text_focus = "#101014";
+export const button_secondary_medium_color_text_disable = "#a0a2ab";
+export const button_secondary_medium_typography_default_default = {"font-weight":"SuisseIntl-Medium-WebS","size":"16","lineHeight":"24"};
+export const button_secondary_medium_size_border_radius_default = "8px";

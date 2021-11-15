@@ -4,7 +4,7 @@ module.exports = {
     source: ["./style-dictionary/tokens/**/*.json5"],
     platforms: {
       js: {
-        transforms: ["attribute/cti", "name/cti/camel", "time/seconds", "content/icon", "size/px", "color/css"],
+        transforms: ["attribute/cti", "name/cti/snake", "time/seconds", "content/icon", "size/px", "color/css"],
         files: [
           {
             destination: "src/tokens/font.ts",
