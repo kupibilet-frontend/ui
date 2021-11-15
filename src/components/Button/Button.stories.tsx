@@ -15,8 +15,35 @@ const Template: Story<TButtonProps> = (args) => (
   </Button>
 )
 
+const DesignSystemDemo: Story<TButtonProps> = () => (
+  <>
+    <Button>
+    Авиабилеты
+    </Button>
+
+    <Button variant="secondary">
+      Авиабилеты
+    </Button>
+
+    <hr />
+
+    <Button themeName="dark">
+    Авиабилеты
+    </Button>
+
+    <Button themeName="dark" variant="secondary">
+      Авиабилеты
+    </Button>
+  </>
+)
+
 export const DefaultButton = Template.bind({})
 DefaultButton.args = { ...defaultProps }
+
+export const TokensDemo = DesignSystemDemo.bind({})
+TokensDemo.args = {
+  ...defaultProps,
+}
 
 export const WithCustomIcons = Template.bind({})
 WithCustomIcons.args = {

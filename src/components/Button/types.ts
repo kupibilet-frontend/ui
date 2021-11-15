@@ -4,6 +4,8 @@ export type TNeighboringInGroupType = 'both' | 'left' | 'right' | null
 
 export type TButtonVariant = 'primary' | 'secondary' | 'carrot' | 'link'
 
+export type TThemeName = 'light' | 'dark'
+
 export interface TButtonProps {
   size?: TButtonSize,
   variant?: TButtonVariant,
@@ -19,4 +21,5 @@ export interface TButtonProps {
   onClick?: (event: Event) => void,
   type?: string,
   tabIndex?: number,
+  themeName?: TThemeName,
 }

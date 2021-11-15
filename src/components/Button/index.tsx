@@ -14,6 +14,7 @@ const Button = ({
   rightIcon = null,
   isBlock = false,
   neighboringInGroup = null,
+  themeName = 'light',
   ...restProps
 }: TButtonProps): JSX.Element => (
   <RenderedComponent
@@ -25,6 +26,7 @@ const Button = ({
     hasRightIcon={Boolean(rightIcon)}
     isBlock={Boolean(isBlock)}
     disabled={disabled}
+    themeName={themeName}
     {...restProps}
   >
     {
