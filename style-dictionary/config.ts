@@ -1,7 +1,9 @@
 const StyleDictionary = require("style-dictionary");
 
-module.exports = {
-    source: ["./style-dictionary/tokens/**/*.json5"],
+StyleDictionary.extend({
+    source: [
+      `./style-dictionary/tokens/**/!(*-dark).json5`
+    ],
     platforms: {
       js: {
         transforms: ["attribute/cti", "name/cti/snake", "time/seconds", "content/icon", "size/px", "color/css"],
@@ -16,7 +18,7 @@ module.exports = {
             },
           },
           {
-            destination: "src/tokens/color.ts",
+            destination: "src/tokens/light/color.ts",
             format: "javascript/es6",
             filter: {
                 attributes: {
@@ -43,7 +45,7 @@ module.exports = {
             },
           },
           {
-            destination: "src/components/Button/ButtonTokens.ts",
+            destination: "src/components/Button/tokens/light.ts",
             format: "javascript/es6",
             filter: {
                 attributes: {
@@ -54,4 +56,37 @@ module.exports = {
         ],
       },
     },
-  };
+  }).buildAllPlatforms();
+
+const modes = [`color`];
+
+StyleDictionary.extend({
+  source: [
+    `./style-dictionary/tokens/**/!(${modes.join(`|*.`)}).json5`
+  ],
+  platforms: {
+    js: {
+      transforms: ["attribute/cti", "name/cti/snake", "time/seconds", "content/icon", "size/px", "color/css"],
+      files: [
+        {
+          destination: "src/tokens/dark/color.ts",
+          format: "javascript/es6",
+          filter: {
+              attributes: {
+                  category: "color",
+              }
+          },
+        },
+        {
+          destination: "src/components/Button/tokens/dark.ts",
+          format: "javascript/es6",
+          filter: {
+              attributes: {
+                  category: "button",
+              }
+          },
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms();

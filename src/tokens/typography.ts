@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 12 Nov 2021 13:44:22 GMT
+ * Generated on Mon, 15 Nov 2021 18:43:52 GMT
  */
 
 export const typography_hedline1_default_default = {"font-weight":"SuisseIntl-SemiBold-WebS","size":"24","lineHeight":"32"};

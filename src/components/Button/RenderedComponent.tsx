@@ -53,8 +53,8 @@ const RenderedComponent = (props: TRenderedComponentProps): JSX.Element => {
 
   return (
     <StyledButton
-      size={size as any}
-      variant={variant as any}
+      size={size}
+      variant={variant}
       disabled={disabled}
       isBlock={isBlock}
       neighboringInGroup={neighboringInGroup}

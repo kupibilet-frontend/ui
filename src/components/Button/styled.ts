@@ -9,7 +9,13 @@ import {
   TButtonSize,
 } from './types'
 import { BUTTON_SIZES, BUTTON_TYPOGRAPHY } from './consts'
-import * as buttonTokens from './ButtonTokens'
+import * as lightTokens from './tokens/light'
+import * as darkTokens from './tokens/dark'
+
+const buttonTokens = {
+  light: lightTokens,
+  dark: darkTokens,
+}
 
 function calculateButtonPadding(
   size: TButtonSize, icon: boolean, hasLeftIcon: boolean, hasRightIcon: boolean,

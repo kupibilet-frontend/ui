@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 12 Nov 2021 13:44:22 GMT
+ * Generated on Mon, 15 Nov 2021 18:43:52 GMT
  */
 
 export const size_border_radius_small_default = "4px";

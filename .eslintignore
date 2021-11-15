@@ -1,2 +1,2 @@
 /src/tokens
-/src/components/**/*Tokens.ts
+/src/components/**/tokens
