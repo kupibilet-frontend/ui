@@ -11,7 +11,7 @@ import Autocomplete, {
 import RFInput, { Input } from 'components/Input'
 import Icon from 'components/Icon'
 import Suggestion from 'components/Suggestion'
-import { shadow2 } from 'utils/shadows'
+import { shadowElevate } from 'utils/shadows'
 import { borderRadiusMedium } from 'utils/borderRadius'
 import noop from 'lodash/noop'
 
@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
   padding: 3px 0;
   position: absolute;
   top: 100%;
-  ${shadow2}
+  ${shadowElevate}
   ${borderRadiusMedium.all}
   overflow: hidden;
   z-index: 10;

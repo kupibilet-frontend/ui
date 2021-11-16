@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { shadow2 } from 'utils/shadows'
+import { shadowElevate } from 'utils/shadows'
 import { borderRadiusMedium } from 'utils/borderRadius'
 import mq from 'utils/media-queries'
 
@@ -51,7 +51,7 @@ export const SuggestionsContainer = styled.div`
   position: absolute;
   top: 100%;
   width: 300px;
-  ${shadow2}
+  ${shadowElevate}
   ${borderRadiusMedium.all}
   max-height: 360px;
   overflow-y: auto;
