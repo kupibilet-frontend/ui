@@ -4,6 +4,7 @@ import _get from 'lodash/get'
 import Icon from 'components/Icon'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import {
+  TLabelPlacement,
   CheckboxLabel,
   StyledCheckbox,
   IconWrap,
@@ -18,7 +19,7 @@ export type TProps = {
   children: React.ReactChild,
   name?: string,
   className?: string,
-  labelPlacement?: 'start' | 'end',
+  labelPlacement?: TLabelPlacement,
 }
 
 export const Checkbox = React.memo((props: TProps) => {
