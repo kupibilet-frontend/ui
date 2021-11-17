@@ -5,7 +5,6 @@ const H6 = styled.h6`
   line-height: 22px;
   margin: 0;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.colorTextPrimary};
 `
 
 export default H6

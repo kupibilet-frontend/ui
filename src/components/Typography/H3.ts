@@ -6,7 +6,6 @@ const H3 = styled.h3`
   line-height: 32px;
   margin: 0;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.colorTextPrimary};
   
   @media ${queries.isMobile} {
     font-size: 18px;
