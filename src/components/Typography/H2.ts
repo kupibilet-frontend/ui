@@ -6,7 +6,6 @@ const H2 = styled.h2`
   line-height: 40px;
   margin: 0;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.colorTextPrimary};
 
   @media ${queries.isTablet} {
     font-size: 24px;
