@@ -136,7 +136,7 @@ export const CloseButton = styled(Button)`
 `
 
 export const SubmitButton = styled(Button)`
-  margin-right: 24px;
+  margin-right: 8px;
 
   @media ${queries.isMobile} {
     width: 100%;
