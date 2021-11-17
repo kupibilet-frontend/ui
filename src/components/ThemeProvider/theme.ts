@@ -66,6 +66,7 @@ export const color: TColor = {
 
   [COLOR_NAMES.colorBgPrimary]: '#FFFFFF',
   [COLOR_NAMES.colorBgPrimaryFocus]: '#E8E9ED',
+  [COLOR_NAMES.colorBgPrimaryHover]: '#F5F5F7',
   [COLOR_NAMES.colorBgHover]: '#F5F5F7',
   [COLOR_NAMES.colorBgLayout]: '#FAFAFB',
 
