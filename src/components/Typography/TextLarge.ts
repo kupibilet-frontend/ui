@@ -4,7 +4,6 @@ import { queries } from 'utils/media-queries'
 const TextLarge = styled.span`
 font-size: 18px;
 line-height: 28px;
-color: ${({ theme }) => theme.color.colorTextPrimary};
 
 @media ${queries.isMobile} {
   font-size: 16px;
