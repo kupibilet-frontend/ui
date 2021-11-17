@@ -196,6 +196,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
       disabled={disabled}
       error={Boolean(error)}
       neighboringInGroup={neighboringInGroup}
+      size={size}
     >
       {
           leftIcon ? (
