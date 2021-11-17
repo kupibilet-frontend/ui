@@ -44,6 +44,29 @@ interface TCommonInnerInputProps<T> {
   onFocus?: (event: React.FocusEvent<T>) => void,
 }
 
+function getInputBorderRadius(
+  neighboringInGroup: TNeighboringInGroup | undefined,
+  size: TInputSize,
+) {
+  const sizeToRadiusMapper: Record<TInputSize, any> = {
+    small: borderRadiusMedium,
+    medium: borderRadiusMedium,
+    large: borderRadiusLarge,
+  }
+
+  const borderRadius = sizeToRadiusMapper[size as TInputSize]
+
+  if (neighboringInGroup === 'right') {
+    return borderRadius.left
+  } else if (neighboringInGroup === 'left') {
+    return borderRadius.right
+  } else if (neighboringInGroup !== 'both') {
+    return borderRadius.all
+  }
+
+  return ''
+}
+
 function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   return css`
   position: relative;
@@ -74,17 +97,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
     }
   })(props)}
 
-  ${(({ neighboringInGroup }) => {
-    if (neighboringInGroup === 'right') {
-      return borderRadiusLarge.left
-    } else if (neighboringInGroup === 'left') {
-      return borderRadiusLarge.right
-    } else if (neighboringInGroup !== 'both') {
-      return borderRadiusLarge.all
-    }
-
-    return ''
-  })(props)}
+  ${getInputBorderRadius(props.neighboringInGroup, props.inputSize)}
 
   &::placeholder {
     color: ${({ theme }) => theme.color.colorTextPlaceholder};
@@ -124,6 +137,7 @@ interface TInputWrapperProps {
   theme: DefaultTheme,
   disabled: boolean,
   neighboringInGroup: TNeighboringInGroup,
+  size: TInputSize,
   error: boolean,
 }
 
@@ -151,17 +165,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
     pointer-events: none;
   `}
 
-  ${({ neighboringInGroup }) => {
-    if (neighboringInGroup === 'right') {
-      return borderRadiusLarge.left
-    } else if (neighboringInGroup === 'left') {
-      return borderRadiusLarge.right
-    } else if (neighboringInGroup !== 'both') {
-      return borderRadiusLarge.all
-    }
-
-    return ''
-  }}
+  ${({ neighboringInGroup, size }) => getInputBorderRadius(neighboringInGroup, size)}
 
   border: 1px solid ${getInputBorderColor};
 
