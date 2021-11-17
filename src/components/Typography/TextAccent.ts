@@ -4,7 +4,6 @@ import { queries } from 'utils/media-queries'
 const TextAccent = styled.span`
   font-size: 24px;
   line-height: 36px;
-  color: ${({ theme }) => theme.color.colorTextPrimary};
 
   @media ${queries.isTablet} {
     font-size: 22px;
