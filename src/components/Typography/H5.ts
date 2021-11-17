@@ -6,7 +6,6 @@ const H5 = styled.h5`
   line-height: 24px;
   margin: 0;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.colorTextPrimary};
   
   @media ${queries.isMobile} {
     font-size: 14px;
