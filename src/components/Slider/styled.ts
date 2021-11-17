@@ -46,7 +46,7 @@ function getHandlerColor(props: StyledHandlerProps): string {
 
   if (disabled) return theme.color.colorBgSecondaryDisabled
 
-  return theme.color.colorBgContrast
+  return theme.color.colorBgPrimary
 }
 
 const StyledHandleWrapper = styled(Handle)`
@@ -67,7 +67,7 @@ const StyledHandle = styled.div<StyledHandlerProps>`
   left: 5px;
   z-index: 4;
   transform: translateX(-50%);
-  border: none;
+  border: 2px solid ${({ theme }) => theme.color.colorBgContrast};
 
   &:hover {
     background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBgContrastHover};
