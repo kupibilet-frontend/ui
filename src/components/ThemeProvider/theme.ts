@@ -51,7 +51,7 @@ export const color: TColor = {
 
   // new color scheme with "design tokens"
   [COLOR_NAMES.colorTextPrimary]: '#101014',
-  [COLOR_NAMES.colorTextSecondary]: '#6A6C76',
+  [COLOR_NAMES.colorTextSecondary]: '#51525A',
   [COLOR_NAMES.colorTextPlaceholder]: '#A0A2AB',
   [COLOR_NAMES.colorTextContrast]: '#FFFFFF',
   [COLOR_NAMES.colorTextAccent]: '#FA6258',
