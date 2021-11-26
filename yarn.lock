@@ -1507,10 +1507,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@kupibilet/icons@5.9.2":
-  version "5.9.2"
-  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.9.2.tgz#7dbddf86961174a6f91690aee93b3ef142886071"
-  integrity sha512-/OaZ67p55PvDJPURjqkOGa3IL6XryMVhVykGdgeODHxNOWadh6gjmqgJbgni4iR3EYrm4esSTNX7rf76h9rElQ==
+"@kupibilet/icons@5.9.4":
+  version "5.9.4"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.9.4.tgz#4217ba2568b4252a2ce90fd6ed23edebb4ec149b"
+  integrity sha512-/xmu/jZcOn/2vy/ufphxFDWlvfKZ+0yhphig3O9adCMZ3IFHZvflv2yGJcwNgOVYoLE+RqEdDgwbaAiIO4tGTA==
 
 "@kupibilet/react-media@^1.5.1":
   version "1.5.1"
