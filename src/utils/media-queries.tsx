@@ -89,4 +89,37 @@ const media = {
   `,
 }
 
+export const media2021 = {
+  mobileS: (literals: TemplateStringsArray, ...placeholders: any[]): FlattenSimpleInterpolation => css`
+    @media ${queries2021.isMobileS} {
+      ${css(literals, ...placeholders)}
+    }
+  `,
+  mobileM: (literals: TemplateStringsArray, ...placeholders: any[]): FlattenSimpleInterpolation => css`
+    @media ${queries2021.isMobileM} {
+      ${css(literals, ...placeholders)}
+    }
+  `,
+  mobile: (literals: TemplateStringsArray, ...placeholders: any[]): FlattenSimpleInterpolation => css`
+    @media ${queries2021.isMobile} {
+      ${css(literals, ...placeholders)}
+    }
+  `,
+  tablet: (literals: TemplateStringsArray, ...placeholders: any[]): FlattenSimpleInterpolation => css`
+    @media ${queries2021.isTablet} {
+      ${css(literals, ...placeholders)}
+    }
+  `,
+  handheld: (literals: TemplateStringsArray, ...placeholders: any[]): FlattenSimpleInterpolation => css`
+    @media ${queries2021.isHandheld} {
+      ${css(literals, ...placeholders)}
+    }
+  `,
+  desktop: (literals: TemplateStringsArray, ...placeholders: any[]): FlattenSimpleInterpolation => css`
+    @media ${queries2021.isDesktop} {
+      ${css(literals, ...placeholders)}
+    }
+  `,
+}
+
 export default media
