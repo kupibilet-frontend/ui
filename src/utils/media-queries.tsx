@@ -11,6 +11,15 @@ export const queries = {
   isDesktop: 'screen and (min-width: 1200px)',
 }
 
+export const queries2021 = {
+  isMobileS: 'screen and (max-width: 767px)',
+  isMobileM: 'screen and (min-width: 768px) and (max-width: 1023px)',
+  isMobile: 'screen and (max-width: 1023px)',
+  isTablet: 'screen and (min-width: 1024px) and (max-width: 1279px)',
+  isHandheld: 'screen and (max-width: 1279px)',
+  isDesktop: 'screen and (min-width: 1280px)',
+}
+
 /**
  * @usage
  * const Component = ({ isMobile, isTablet, isHandheld, isDesktop }) => {}
@@ -27,6 +36,26 @@ export function withMedia<T extends TWithMediaProps>(
 
     return (
       <Media queries={queries}>
+        { renderMedias }
+      </Media>
+    )
+  }
+
+  MediaProvider.displayName = 'withMedia'
+
+  return MediaProvider
+}
+
+export function withMedia2021<T extends TWithMediaProps>(
+  Component:React.ComponentType<T>,
+): (props: Partial<T>) => JSX.Element {
+  function MediaProvider(props: Partial<T>): JSX.Element {
+    const renderMedias = (medias: TWithMediaProps) => {
+      return <Component {...props as T} {...medias} />
+    }
+
+    return (
+      <Media queries={queries2021}>
         { renderMedias }
       </Media>
     )
