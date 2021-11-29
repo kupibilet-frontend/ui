@@ -9,6 +9,7 @@ interface TProps {
   max?: number,
   values?: number[],
   disabled?: boolean,
+  className?: string,
   handle?: () => React.ReactNode,
   progressBar?: () => React.ReactNode,
   onChange?: (values: number[]) => void,
@@ -26,6 +27,7 @@ function Slider(props: TProps): JSX.Element {
     min = 1,
     max = 100,
     disabled = false,
+    className,
     onAfterChange = () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
   } = props
 
@@ -48,7 +50,7 @@ function Slider(props: TProps): JSX.Element {
   }
 
   return (
-    <StyledRangeWrapper disabled={disabled}>
+    <StyledRangeWrapper className={className} disabled={disabled}>
       <Range
         min={min}
         max={max}
