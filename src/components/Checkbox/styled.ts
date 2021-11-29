@@ -91,6 +91,10 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   user-select: none;
   width: 100%;
 
+  ${({ labelPlacement }) => labelPlacement === 'start' && css`
+    flex-direction: row-reverse;
+  `}
+
   color: ${({ theme, disabled, checked }) => {
     if (disabled) return theme.color.colorTextDisabled
     if (checked) return theme.color.colorTextPrimary
