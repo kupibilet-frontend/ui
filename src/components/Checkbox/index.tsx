@@ -35,7 +35,12 @@ export const Checkbox = React.memo((props: TProps) => {
   } = props
 
   return (
-    <CheckboxLabel disabled={disabled} className={className} labelPlacement={labelPlacement}>
+    <CheckboxLabel
+      checked={checked}
+      disabled={disabled}
+      className={className}
+      labelPlacement={labelPlacement}
+    >
       <StyledCheckbox
         classname="checkmark"
         disabled={disabled}
