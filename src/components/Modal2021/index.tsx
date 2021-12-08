@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react'
 import { Portal } from 'react-portal'
 import H4 from 'components/Typography/H4'
-import Overlay from 'components/Overlay'
+import Overlay from 'components/Overlay2021'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia2021 } from 'utils/media-queries'
 import { TWithMediaProps } from 'utils/types'
