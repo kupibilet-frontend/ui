@@ -10,6 +10,7 @@ import {
   getHoverShadowColor,
 } from './helpers'
 
+export type TLabelPlacement = 'start' | 'end'
 
 export const CheckboxInput = styled.input`
   display: none;
@@ -56,6 +57,7 @@ export const StyledCheckbox = styled.span<TStyledCheckboxProps>`
 
 interface TLabelTextProps {
   disabled: boolean,
+  labelPlacement: TLabelPlacement,
 }
 
 export const LabelText = styled.span<TLabelTextProps>`
@@ -63,11 +65,20 @@ export const LabelText = styled.span<TLabelTextProps>`
   transition-property: color;
   margin-left: 6px;
   width: 100%;
+  
+  ${({ disabled, theme }) => (disabled
+    && css`color: ${theme.color.text300};`
+  )}
+
+  ${({ labelPlacement }) => (
+    labelPlacement === 'start' ? 'margin-right: 6px;' : 'margin-left: 6px;'
+  )}
 `
 
 interface TCheckboxLabelProps {
   checked: boolean,
   disabled: boolean,
+  labelPlacement: TLabelPlacement
 }
 
 export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
@@ -79,6 +90,10 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   position: relative;
   user-select: none;
   width: 100%;
+
+  ${({ labelPlacement }) => labelPlacement === 'start' && css`
+    flex-direction: row-reverse;
+  `}
 
   color: ${({ theme, disabled, checked }) => {
     if (disabled) return theme.color.colorTextDisabled
