@@ -4,7 +4,7 @@ import { queries2021 } from 'utils/media-queries'
 import Button from 'components/Button'
 import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
-import { OVERLAY_Z_INDEX } from 'components/Overlay'
+import { OVERLAY_Z_INDEX } from 'components/Overlay2021'
 import { getWidth, isCompact, isSetSize } from 'components/Modal/utils'
 import { ModalSize } from 'components/Modal/types'
 
