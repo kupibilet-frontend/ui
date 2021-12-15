@@ -114,7 +114,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
-    "@kupibilet/react-media": "^1.5.1",
     "@popperjs/core": "^2.9.2",
     "@types/classnames": "^2.2.11",
     "memoize-one": "^5.1.1",
