@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { queries } from 'utils/media-queries'
+import styled, { css } from 'styled-components'
 
 const H5 = styled.h5`
   font-size: 16px;
@@ -7,10 +6,12 @@ const H5 = styled.h5`
   margin: 0;
   font-weight: 600;
   
-  @media ${queries.isMobile} {
-    font-size: 14px;
-    line-height: 20px;
-  }
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  `}
 `
 
 export default H5

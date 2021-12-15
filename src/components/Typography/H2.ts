@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { queries } from 'utils/media-queries'
+import styled, { css } from 'styled-components'
 
 const H2 = styled.h2`
   font-size: 28px;
@@ -7,15 +6,17 @@ const H2 = styled.h2`
   margin: 0;
   font-weight: 600;
 
-  @media ${queries.isTablet} {
-    font-size: 24px;
-    line-height: 36px;
-  }
-  
-  @media ${queries.isMobile} {
-    font-size: 20px;
-    line-height: 26px;
-  }
+  ${({ theme }) => css`
+    @media ${theme.queries.isTablet} {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    
+    @media ${theme.queries.isMobile} {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  `}
 `
 
 export default H2

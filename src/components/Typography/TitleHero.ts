@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { queries } from 'utils/media-queries'
+import styled, { css } from 'styled-components'
 
 const TitleHero = styled.h1`
   font-size: 48px;
@@ -7,15 +6,17 @@ const TitleHero = styled.h1`
   margin: 0;
   font-weight: 600;
 
-  @media ${queries.isTablet} {
-    font-size: 40px;
-    line-height: 52px;
-  }
-  
-  @media ${queries.isMobile} {
-    font-size: 28px;
-    line-height: 36px;
-  }
+  ${({ theme }) => css`
+    @media ${theme.queries.isTablet} {
+      font-size: 40px;
+      line-height: 52px;
+    }
+    
+    @media ${theme.queries.isMobile} {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  `}
 `
 
 export default TitleHero

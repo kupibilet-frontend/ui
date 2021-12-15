@@ -1,4 +1,5 @@
 import { DefaultTheme } from 'styled-components'
+import { queries } from 'utils/media-queries'
 import { COLOR_NAMES, TColor } from './types'
 
 
@@ -111,6 +112,7 @@ export const font = `
 const defaultTheme: DefaultTheme = {
   font,
   color,
+  queries,
 }
 
 export { defaultTheme }

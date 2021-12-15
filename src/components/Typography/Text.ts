@@ -1,14 +1,15 @@
-import styled from 'styled-components'
-import { queries } from 'utils/media-queries'
+import styled, { css } from 'styled-components'
 
 const Text = styled.span`
   font-size: 16px;
   line-height: 24px;
 
-  @media ${queries.isMobile} {
-    font-size: 14px;
-    line-height: 20px;
-  }
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  `}
 `
 
 export default Text
