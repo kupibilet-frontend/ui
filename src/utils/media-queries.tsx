@@ -1,8 +1,7 @@
 import React from 'react'
 import { css, FlattenSimpleInterpolation } from 'styled-components'
 import { TWithMediaProps } from 'utils/types'
-// @ts-ignore delete old package
-import Media from '@kupibilet/react-media'
+import Media from 'react-media'
 
 export const queries = {
   isMobile: 'screen and (max-width: 599px)',
