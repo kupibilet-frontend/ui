@@ -5,5 +5,6 @@ declare module 'styled-components' {
   export interface DefaultTheme {
       font: string,
       color: TColor,
+      queries: Record<string, string>
   }
 }
