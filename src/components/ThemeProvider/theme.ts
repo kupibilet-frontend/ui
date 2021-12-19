@@ -102,6 +102,7 @@ export const color: TColor = {
   [COLOR_NAMES.colorBorderDanger]: '#DE350B',
 
   [COLOR_NAMES.colorOverlay]: '#212126',
+  [COLOR_NAMES.colorBgStatusDanger]: '#FCEDE8',
 }
 
 export const font = `

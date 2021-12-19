@@ -97,6 +97,8 @@ enum COLOR_NAMES {
   colorBorderDanger = 'colorBorderDanger',
 
   colorOverlay = 'colorOverlay',
+
+  colorBgStatusDanger = 'colorBgStatusDanger',
 }
 
 type TColor = Record<COLOR_NAMES, string>
