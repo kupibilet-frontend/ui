@@ -16,6 +16,7 @@ import { BUTTON_BORDER_RADIUS, BUTTON_SIZES, BUTTON_TYPOGRAPHY } from './consts'
 interface TThemeAndVariantProps {
   variant: TButtonVariant,
   theme: DefaultTheme,
+  disabled: boolean,
 }
 
 function calculateButtonPadding(
@@ -65,7 +66,12 @@ function calculateBorderRadius(
   return `border-radius: ${radius}px;`
 }
 function getButtonColor(props: TThemeAndVariantProps): string {
-  const { theme, variant } = props
+  const { theme, variant, disabled } = props
+
+  if (disabled && variant !== 'link') {
+    return theme.color.colorTextDisabled
+  }
+
   switch (variant) {
     default:
     case 'primary':
@@ -86,7 +92,11 @@ function getButtonHoverColor(props: TThemeAndVariantProps): string {
   return ''
 }
 
-function getButtonBackground({ theme, variant }: TThemeAndVariantProps): string {
+function getButtonBackground({ theme, variant, disabled }: TThemeAndVariantProps): string {
+  if (disabled && variant !== 'link') {
+    return theme.color.colorBgSecondaryDisabled
+  }
+
   switch (variant) {
     default:
     case 'primary':
@@ -186,10 +196,6 @@ export const StyledButton = styled.button<TStyledButtonProps>`
 
   ${switchTransition}
   transition-property: opacity, box-shadow;
-
-  ${({ disabled }) => (disabled
-    ? 'opacity: .2;'
-    : '')}
 
   .icon-inherit-color {
     fill: ${getButtonColor};
