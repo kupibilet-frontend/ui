@@ -195,7 +195,7 @@ export const StyledButton = styled.button<TStyledButtonProps>`
     fill: ${getButtonColor};
   }
 
-  &:hover, &:focus {
+  &:hover {
     ${(props) => (
     !props.disabled
       ? `
