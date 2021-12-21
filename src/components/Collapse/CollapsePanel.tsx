@@ -7,14 +7,14 @@ import { borderRadiusMedium } from 'utils/borderRadius'
 import H4 from 'components/Typography/H4'
 import useMouseState from 'hooks/useMouseState'
 
-const PanelHeader = styled.div`
+const PanelHeader = styled.div<{ isOpen?: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 24px 0;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.color.misc200};
+  ${({ theme, isOpen }) => !isOpen && `border-bottom: 1px solid ${theme.color.misc200};`}
   cursor: pointer;
 `
 
@@ -52,6 +52,7 @@ const CollapseButtonIcon = styled(Icon)`
 
 const StyledPanelContent = styled.div`
   color: ${({ theme }) => theme.color.colorTextSecondary};
+  border-bottom: 1px solid ${({ theme }) => theme.color.misc200};
 `
 
 export interface TPanelHeaderProps {
@@ -70,7 +71,7 @@ const renderDefaultHeader = (props: TPanelHeaderProps): JSX.Element => {
   } = props
 
   return (
-    <PanelHeader>
+    <PanelHeader isOpen={isActive}>
       <PanelHeaderText as="div">
         {header}
       </PanelHeaderText>
