@@ -63,6 +63,7 @@ enum COLOR_NAMES {
   colorBgPrimary = 'colorBgPrimary',
   colorBgPrimaryFocus = 'colorBgPrimaryFocus',
   colorBgPrimaryHover = 'colorBgPrimaryHover',
+  colorBgPrimaryDisable = 'colorBgPrimaryDisable',
   colorBgHover = 'colorBgHover',
   colorBgLayout = 'colorBgLayout',
 
