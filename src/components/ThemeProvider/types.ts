@@ -100,6 +100,10 @@ enum COLOR_NAMES {
 
   colorBgStatusDanger = 'colorBgStatusDanger',
   colorBgStatusPrimary = 'colorBgStatusPrimary',
+  colorBgStatusHelp = 'colorBgStatusHelp',
+  colorBgStatusInfo = 'colorBgStatusInfo',
+  colorBgStatusWarning = 'colorBgStatusWarning',
+  colorBgStatusSuccess = 'colorBgStatusSuccess',
 }
 
 type TColor = Record<COLOR_NAMES, string>
