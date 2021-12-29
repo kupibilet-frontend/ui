@@ -46,6 +46,8 @@ enum COLOR_NAMES {
 
   // new color scheme with "design tokens"
   colorTextPrimary = 'colorTextPrimary',
+  colorTextPrimaryHover = 'colorTextPrimaryHover',
+  colorTextPrimaryDisabled = 'colorTextPrimaryDisabled',
   colorTextSecondary = 'colorTextSecondary',
   colorTextPlaceholder = 'colorTextPlaceholder',
   colorTextContrast = 'colorTextContrast',
@@ -55,10 +57,6 @@ enum COLOR_NAMES {
   colorTextWarning = 'colorTextWarning',
   colorTextDanger = 'colorTextDanger',
   colorTextDisabled = 'colorTextDisabled',
-
-  colorTextLink = 'colorTextLink',
-  colorTextLinkHover = 'colorTextLinkHover',
-  colorTextLinkFocus = 'colorTextLinkFocus',
 
   colorBgPrimary = 'colorBgPrimary',
   colorBgPrimaryFocus = 'colorBgPrimaryFocus',
