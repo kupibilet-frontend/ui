@@ -25,6 +25,9 @@ export interface TProps {
     Адрес ссылки. Если не передан, рендерится <span>
   */
   href?: string,
+
+  withUnderline?: boolean,
+
   onClick?: () => void,
 }
 
@@ -44,20 +47,21 @@ const Link = (props: TProps): JSX.Element => {
     href = '',
     leftIcon = null,
     rightIcon = null,
+    withUnderline = false,
     ...rest
   } = props
 
   const LinkComponent = href ? 'a' : 'span'
 
   return (
-    <LinkComponent href={href} {...rest}>
+    // @ts-ignore
+    <LinkComponent href={href} withUnderline={withUnderline} {...rest}>
       {renderIcon(leftIcon, true)}
       {children}
       {renderIcon(rightIcon)}
     </LinkComponent>
   )
 }
-
 
 const StyledLink = styled(Link)`${linkStyles}`
 

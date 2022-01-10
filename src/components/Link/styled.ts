@@ -1,5 +1,4 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import { opacify } from 'polished'
 import { switchTransition } from 'utils/transitions'
 
 interface TIconPaddingWrapProps {
@@ -20,6 +19,7 @@ const IconPaddingWrap = styled.span<TIconPaddingWrapProps>`
 
 interface TLinkProps {
   theme: DefaultTheme,
+  withUnderline?: boolean,
 }
 
 function getLinkColor(props: TLinkProps): string {
@@ -38,7 +38,7 @@ const linkStyles = css`
   cursor: pointer;
   font-size: 16px;
   line-height: 20px;
-  text-decoration: underline;
+  text-decoration: ${({ withUnderline }) => (withUnderline ? 'underline' : 'none')};
   transition-property: color;
 
   .icon-inherit-color {
@@ -59,4 +59,5 @@ export {
   getLinkColor,
   getLinkHoverColor,
   linkStyles,
+  TLinkProps,
 }
