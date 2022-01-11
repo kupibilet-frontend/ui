@@ -3,17 +3,20 @@
         "borderRadius": {
             "small": {
                 "default": {
-                    "value": "4px"
+                    "value": "4",
+                    "description": "для элементов до 24px по меньшей стороне включительно"
                 }
             },
             "medium": {
                 "default": {
-                    "value": "8"
+                    "value": "8",
+                    "description": "для элементов от 25px до 55px по меньшей стороне включительно"
                 }
             },
             "large": {
                 "default": {
-                    "value": "12"
+                    "value": "12",
+                    "description": "для элементов более 56px по меньшей стороне включительно"
                 }
             }
         }

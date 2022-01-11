@@ -1,19 +1,19 @@
 {
     "font": {
-        "weight": {
+        "family": {
             "regular": {
-                "default":{
-                    "value": "SuisseIntl-Regular-WebS"
+                "default": {
+                    "value": "SuisseIntl-Regular"
                 }
             },
             "medium": {
-                "default":{
-                    "value": "SuisseIntl-Medium-WebS"
+                "default": {
+                    "value": "SuisseIntl-Medium"
                 }
             },
             "bold": {
-                "default":{
-                    "value": "SuisseIntl-SemiBold-WebS"
+                "default": {
+                    "value": "SuisseIntl-SemiBold"
                 }
             }
         }

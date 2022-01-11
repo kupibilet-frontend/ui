@@ -1,60 +1,230 @@
 {
     "color": {
         "bg": {
-            "accent": {
+            "layout": {
+                "default":{
+                    "value": "rgba(16, 16, 20, 1)"
+                }
+            },
+            "primary":{
                 "normal": {
-                    "value": "#FA6258"
+                    "value":"rgba(33, 33, 38, 1)"
                 },
                 "hover": {
-                    "value": "#D74043"
+                    "value":"rgba(46, 46, 51, 1)"
                 },
-                "focus": {
-                    "value": "#B32C3A"
+                "active": {
+                    "value":"rgba(58, 58, 65, 1)"
                 },
-                "disable": {
-                    "value": "#3A3A41"
+                "disable":{
+                    "value":"rgba(58, 58, 65, 1)"
                 }
             },
             "secondary": {
-                "normal": {
-                    "value": "#3A3A41"
+                "normal":{
+                    "value": "rgba(58, 58, 65, 1)"
                 },
-                "hover": {
-                    "value": "#3A3A41"
+                "hover":{
+                    "value": "rgba(70, 71, 78, 1)"
                 },
-                "focus": {
-                    "value": "#3A3A41"
+                "active":{
+                    "value": "rgba(81, 82, 90, 1)"
                 },
-                "disable": {
-                    "value": "#F5F5F7"
+                "disable":{
+                    "value":"rgba(58, 58, 65, 1)"
                 }
             },
-
-            "layout": {
-                "value": "#212126"
+            "accent":{
+                "normal": {
+                    "value":"rgba(228, 92, 82, 1)"
+                },
+                "hover": {
+                    "value":"rgba(215, 64, 67, 1)"
+                },
+                "active": {
+                    "value":"rgba(179, 44, 58, 1)"
+                },
+                "disable":{
+                    "value":"rgba(58, 58, 65, 1)"
+                }
+            },
+            "help": {
+                "normal":{
+                    "value": "rgba(120, 83, 213, 1)"
+                },
+                "hover":{
+                    "value": "rgba(108, 69, 219, 1)"
+                },
+                "active":{
+                    "value": "rgba(78, 47, 183, 1)"
+                },
+                "disable":{
+                    "value":"rgba(58, 58, 65, 1)"
+                }
+            },
+            "contrast": {
+                "normal":{
+                    "value": "rgba(250, 250, 251, 1)"
+                },
+                "hover":{
+                    "value": "rgba(245, 245, 247, 1)"
+                },
+                "active":{
+                    "value": "rgba(232, 233, 237, 1)"
+                },
+                "disable":{
+                    "value":"rgba(58, 58, 65, 1)"
+                }
+            },
+            "status-info": {
+                "normal":{
+                    "value":"rgba(0, 27, 115, 1)"
+                }
+            },
+            "status-danger": {
+                "normal":{
+                    "value": "rgba(87, 10, 17, 1)"
+                }
+            },
+            "status-warning": {
+                "normal":{
+                    "value": "rgba(82, 50, 3, 1)"
+                }
+            },
+            "status-help": {
+                "normal":{
+                    "value": "rgba(35, 18, 122, 1)"
+                }
+            },
+            "status-sucsess": {
+                "normal":{
+                    "value": "rgba(48, 79, 2, 1)"
+                }
+            },
+            "bonus-default": {
+                "normal":{
+                    "value": "rgba(217, 74, 64, 1)"
+                }
+            },
+            "bonus-gold": {
+                "normal":{
+                    "value": "rgba(215, 103, 0, 1)"
+                }
+            },
+            "bonus-platinum": {
+                "normal":{
+                    "value": "rgba(26, 67, 152, 1)"
+                }
+            },
+            "dark": {
+                "normal":{
+                    "value": "rgba(208, 209, 215, 1)",
+                    "description": "Используется для серого фона компонентов, которым не хватает контраста с secondary"
+                }
+            },
+            "transparent":{
+                "default":{
+                    "value": "rgba(0, 0, 0, 0)"
+                }
             }
         },
 
 
         "text": {
             "primary": {
-                "default": {
-                    "value": "#FFFFFF"
+                "normal": {
+                    "value": "rgba(232, 233, 237, 1)"
+                },
+                "hover": {
+                    "value": "rgba(208, 209, 215, 1)"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1)"
                 }
             },
             "secondary": {
                 "default": {
-                    "value": "#CCCCCC"
+                    "value": "rgba(208, 209, 215, 1)"
+                }
+            },
+            "placeholder": {
+                "default": {
+                    "value": "rgba(129, 130, 140, 1)"
                 }
             },
             "contrast": {
                 "default": {
-                    "value": "#FFFFFF"
+                    "value": "rgba(16, 16, 20, 1)"
                 }
             },
-            "default": {
-                "disable": {
-                    "value": "#A0A2AB"
+            "accent": {
+                "default": {
+                    "value": "rgba(228, 92, 82, 1)"
+                }
+            },
+            "success": {
+                "default": {
+                    "value": "rgba(146, 206, 13, 1)"
+                }
+            },
+            "info": {
+                "default": {
+                    "value": "rgba(59, 162, 247, 1)"
+                }
+            },
+            "warning": {
+                "default": {
+                    "value": "rgba(255, 162, 51, 1)"
+                }
+            },
+            "danger": {
+                "default": {
+                    "value": "rgba(245, 51, 51, 1)"
+                }
+            },
+            "static-white": {
+                "default": {
+                    "value": "rgba(255, 255, 255, 1)"
+                }
+            }
+        },
+        "border":{
+            "decorative":{
+                "default":{
+                    "value": "rgba(58, 58, 65, 1)"
+                }
+            },
+            "primary":{
+                "normal":{
+                    "value": "rgba(81, 82, 90, 1)"
+                },
+                "hover":{
+                    "value": "rgba(250, 250, 251, 1)"
+                },
+                "active":{
+                    "value": "rgba(245, 245, 247, 1)"
+                }
+            },
+            "accent":{
+                "normal":{
+                    "value": "rgba(228, 92, 82, 1)"
+                }
+            },
+            "success":{
+                "normal":{
+                    "value": "rgba(146, 206, 13, 1)"
+                }
+            },
+            "danger":{
+                "normal":{
+                    "value": "rgba(245, 51, 51, 1)"
+                }
+            }
+        },
+        "overlay": {
+            "primary":{
+                "default":{
+                    "value": "rgba(33, 33, 38, 0.56)"
                 }
             }
         }
