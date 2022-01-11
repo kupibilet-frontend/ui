@@ -1,5 +1,6 @@
 import { DefaultTheme } from 'styled-components'
 import { COLOR_NAMES, TColor } from './types'
+import * as buttonTokens from './tokens/button'
 
 
 export const color: TColor = {
@@ -55,6 +56,7 @@ export const font = `
 const defaultTheme: DefaultTheme = {
   font,
   color,
+  button: buttonTokens,
 }
 
 export { defaultTheme }

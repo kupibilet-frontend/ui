@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { StyledButton, StyledButtonLink } from './styled'
-import { TButtonSize, TButtonVariant, TNeighboringInGroupType, TThemeName } from './types'
+import { TButtonSize, TButtonVariant, TNeighboringInGroupType } from './types'
 
 interface TRenderedComponentProps {
   size: TButtonSize,
@@ -15,7 +15,6 @@ interface TRenderedComponentProps {
   hasRightIcon: boolean,
   href?: string,
   target?: string,
-  themeName: TThemeName,
 }
 
 const RenderedComponent = (props: TRenderedComponentProps): JSX.Element => {
@@ -30,7 +29,6 @@ const RenderedComponent = (props: TRenderedComponentProps): JSX.Element => {
     hasLeftIcon,
     hasRightIcon,
     href,
-    themeName,
     ...restProps
   } = props
 
@@ -46,7 +44,6 @@ const RenderedComponent = (props: TRenderedComponentProps): JSX.Element => {
         isIconOnly={isIconOnly}
         hasLeftIcon={hasLeftIcon}
         hasRightIcon={hasRightIcon}
-        themeName={themeName}
         {...restProps}
       >
         {children}
@@ -64,7 +61,6 @@ const RenderedComponent = (props: TRenderedComponentProps): JSX.Element => {
       isIconOnly={isIconOnly}
       hasLeftIcon={hasLeftIcon}
       hasRightIcon={hasRightIcon}
-      themeName={themeName}
       {...restProps}
     >
       {children}

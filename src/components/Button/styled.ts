@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { DefaultTheme, css } from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
@@ -7,16 +7,8 @@ import {
   TNeighboringInGroupType,
   TButtonVariant,
   TButtonSize,
-  TThemeName,
 } from './types'
 import { BUTTON_SIZES, BUTTON_TYPOGRAPHY } from './consts'
-import * as lightTokens from './tokens/light'
-import * as darkTokens from './tokens/dark'
-
-const buttonTokens = {
-  light: lightTokens,
-  dark: darkTokens,
-}
 
 function calculateButtonPadding(
   size: TButtonSize, icon: boolean, hasLeftIcon: boolean, hasRightIcon: boolean,
@@ -52,10 +44,10 @@ function calculateBorderRadius(
   size: TButtonSize,
   variant: TButtonVariant,
   neighboringInGroup: TNeighboringInGroupType,
-  themeName: TThemeName,
+  theme: DefaultTheme,
 ): string {
   // @ts-ignore
-  const radius = buttonTokens[themeName][`button_${variant}_${size}_size_border_radius_default`]
+  const radius = theme.button[`button_${variant}_${size}_size_border_radius_default`]
 
   if (neighboringInGroup === 'both') {
     return ''
@@ -77,21 +69,20 @@ interface TStyledButtonProps {
   hasLeftIcon: boolean,
   hasRightIcon: boolean,
   disabled: boolean,
-  themeName: TThemeName,
 }
 
 export const StyledButton = styled.button<TStyledButtonProps>`
   ${control}
   display: inline-block;
-  color: ${({ themeName, variant, size }) => buttonTokens[themeName][`button_${variant}_${size}_color_text_normal`]};
+  color: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_color_text_normal`]};
 
-  background: ${({ themeName, variant, size }) => {
+  background: ${({ theme, variant, size }) => {
     // @ts-ignore
-    return buttonTokens[themeName][`button_${variant}_${size}_color_bg_normal`]
+    return theme.button[`button_${variant}_${size}_color_bg_normal`]
   }};
 
-  font-size: ${({ themeName, variant, size }) => buttonTokens[themeName][`button_${variant}_${size}_typography_default_default`].size}px;
-  line-height: ${({ themeName, variant, size }) => buttonTokens[themeName][`button_${variant}_${size}_typography_default_default`].lineHeight}px;
+  font-size: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_typography_default_default`].size}px;
+  line-height: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_typography_default_default`].lineHeight}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
@@ -106,8 +97,8 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
 
-  ${({ themeName, neighboringInGroup, size, variant }) => (
-    calculateBorderRadius(size, variant, neighboringInGroup, themeName)
+  ${({ theme, neighboringInGroup, size, variant }) => (
+    calculateBorderRadius(size, variant, neighboringInGroup, theme)
   )};
 
   ${({ size, isIconOnly, hasLeftIcon, hasRightIcon }) => (
@@ -117,29 +108,29 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   ${switchTransition}
   transition-property: opacity, box-shadow;
 
-  ${({ themeName, disabled, variant, size }) => disabled && css`
-    color: ${buttonTokens[themeName][`button_${variant}_${size}_color_text_disable`]};
-    background: ${buttonTokens[themeName][`button_${variant}_${size}_color_bg_disable`]};
+  ${({ theme, disabled, variant, size }) => disabled && css`
+    color: ${theme.button[`button_${variant}_${size}_color_text_disable`]};
+    background: ${theme.button[`button_${variant}_${size}_color_bg_disable`]};
   `}
 
   .icon-inherit-color {
-    fill: ${({ themeName, variant, size }) => buttonTokens[themeName][`button_${variant}_${size}_color_text_normal`]};
+    fill: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_color_text_normal`]};
   }
 
   &:hover {
-    ${({ themeName, disabled, variant, size }) => !disabled && css`
+    ${({ theme, disabled, variant, size }) => !disabled && css`
       cursor: pointer;
-      color: ${buttonTokens[themeName][`button_${variant}_${size}_color_text_hover`]};
-      background: ${buttonTokens[themeName][`button_${variant}_${size}_color_bg_hover`]};
+      color: ${theme.button[`button_${variant}_${size}_color_text_hover`]};
+      background: ${theme.button[`button_${variant}_${size}_color_bg_hover`]};
       transition: none;
     `}
   }
 
   &:focus {
-    ${({ themeName, disabled, variant, size }) => !disabled && css`
+    ${({ theme, disabled, variant, size }) => !disabled && css`
       cursor: pointer;
-      color: ${buttonTokens[themeName][`button_${variant}_${size}_color_text_focus`]};
-      background: ${buttonTokens[themeName][`button_${variant}_${size}_color_bg_focus`]};
+      color: ${theme.button[`button_${variant}_${size}_color_text_focus`]};
+      background: ${theme.button[`button_${variant}_${size}_color_bg_focus`]};
       transition: none;
     `}
   }

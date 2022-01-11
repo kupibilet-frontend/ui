@@ -27,11 +27,11 @@ const DesignSystemDemo: Story<TButtonProps> = () => (
 
     <hr />
 
-    <Button themeName="dark">
+    <Button>
     Авиабилеты
     </Button>
 
-    <Button themeName="dark" variant="secondary">
+    <Button variant="secondary">
       Авиабилеты
     </Button>
   </>

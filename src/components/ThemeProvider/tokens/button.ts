@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 15 Nov 2021 18:43:52 GMT
+ * Generated on Tue, 11 Jan 2022 06:34:57 GMT
  */
 
 export const button_primary_medium_color_bg_normal = "#fa6258";
