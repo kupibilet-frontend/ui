@@ -11,7 +11,7 @@ const H1 = styled.h1`
       line-height: 40px;
     }
     
-    @queries ${theme.queries.isMobile} {
+    @media ${theme.queries.isMobile} {
       font-size: 24px;
       line-height: 32px;
     }
