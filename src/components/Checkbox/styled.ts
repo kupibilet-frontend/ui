@@ -3,8 +3,14 @@ import styled, { css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { floatFromTop } from 'utils/animations'
 import { borderRadiusSmall } from 'utils/borderRadius'
-import { getBackgroundColor, getShadowColor } from './helpers'
+import {
+  getBackgroundColor,
+  getHoverBackgroundColor,
+  getShadowColor,
+  getHoverShadowColor,
+} from './helpers'
 
+export type TLabelPlacement = 'start' | 'end'
 
 export const CheckboxInput = styled.input`
   display: none;
@@ -42,10 +48,16 @@ export const StyledCheckbox = styled.span<TStyledCheckboxProps>`
   transition-property: background, border;
   background: ${({ disabled, checked, theme }) => getBackgroundColor(disabled, checked, theme)};
   ${borderRadiusSmall.all}
+
+  &:hover {
+    box-shadow: ${({ disabled, checked, theme }) => css`inset 0 0 0 1px ${getHoverShadowColor(disabled, checked, theme)}`};
+    background: ${({ disabled, checked, theme }) => getHoverBackgroundColor(disabled, checked, theme)};
+  }
 `
 
 interface TLabelTextProps {
   disabled: boolean,
+  labelPlacement: TLabelPlacement,
 }
 
 export const LabelText = styled.span<TLabelTextProps>`
@@ -53,13 +65,20 @@ export const LabelText = styled.span<TLabelTextProps>`
   transition-property: color;
   margin-left: 6px;
   width: 100%;
+  
   ${({ disabled, theme }) => (disabled
     && css`color: ${theme.color.text300};`
+  )}
+
+  ${({ labelPlacement }) => (
+    labelPlacement === 'start' ? 'margin-right: 6px;' : 'margin-left: 6px;'
   )}
 `
 
 interface TCheckboxLabelProps {
+  checked: boolean,
   disabled: boolean,
+  labelPlacement: TLabelPlacement
 }
 
 export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
@@ -72,11 +91,22 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   user-select: none;
   width: 100%;
 
-  &:hover .checkbox {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.text200 : theme.color.primary500)};
-  };
+  ${({ labelPlacement }) => labelPlacement === 'start' && css`
+    flex-direction: row-reverse;
+  `}
 
-  &:hover .label-text {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.text300 : theme.color.primary700)};
-  };
+  color: ${({ theme, disabled, checked }) => {
+    if (disabled) return theme.color.colorTextDisabled
+    if (checked) return theme.color.colorTextPrimary
+
+    return theme.color.colorTextSecondary
+  }};
+
+  &:hover {
+    color: ${({ theme, disabled }) => (disabled ? theme.color.colorTextDisabled : theme.color.colorTextPrimary)};
+  }
+
+  &:hover ${StyledCheckbox} {
+    box-shadow: ${({ disabled, checked, theme }) => css`inset 0 0 0 1px ${getHoverShadowColor(disabled, checked, theme)}`};
+  }
 `

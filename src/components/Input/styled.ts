@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { DefaultTheme, css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
-import { borderRadiusLarge, borderRadiusSmall } from 'utils/borderRadius'
+import { borderRadiusLarge, borderRadiusMedium } from 'utils/borderRadius'
 import { IconSvg } from 'components/Icon/styled'
 import {
   TEXTAREA_PADDINGS,
@@ -25,7 +25,7 @@ const Error = styled.span`
   color: #fff;
   opacity: 0.97;
   z-index: 2;
-  ${borderRadiusSmall.all}
+  ${borderRadiusMedium.all}
   background-color: ${({ theme }) => theme.color.error700};
 `
 
@@ -42,6 +42,29 @@ interface TCommonInnerInputProps<T> {
   error?: boolean,
   onBlur?: (event: React.FocusEvent<T>) => void,
   onFocus?: (event: React.FocusEvent<T>) => void,
+}
+
+function getInputBorderRadius(
+  neighboringInGroup: TNeighboringInGroup | undefined,
+  size: TInputSize,
+) {
+  const sizeToRadiusMapper: Record<TInputSize, any> = {
+    small: borderRadiusMedium,
+    medium: borderRadiusMedium,
+    large: borderRadiusLarge,
+  }
+
+  const borderRadius = sizeToRadiusMapper[size as TInputSize]
+
+  if (neighboringInGroup === 'right') {
+    return borderRadius.left
+  } else if (neighboringInGroup === 'left') {
+    return borderRadius.right
+  } else if (neighboringInGroup !== 'both') {
+    return borderRadius.all
+  }
+
+  return ''
 }
 
 function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
@@ -64,7 +87,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   padding-right: ${props.rightIcon ? '0' : `${SIZE[props.inputSize]}px`};
   
   font-size: ${TYPOGRAPHY[props.inputSize]}px;
-  color: ${props.theme.color.text600};
+  color: ${props.theme.color.colorTextPrimary};
 
   background-color: transparent;
   
@@ -74,20 +97,10 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
     }
   })(props)}
 
-  ${(({ neighboringInGroup }) => {
-    if (neighboringInGroup === 'right') {
-      return borderRadiusLarge.left
-    } else if (neighboringInGroup === 'left') {
-      return borderRadiusLarge.right
-    } else if (neighboringInGroup !== 'both') {
-      return borderRadiusLarge.all
-    }
-
-    return ''
-  })(props)}
+  ${getInputBorderRadius(props.neighboringInGroup, props.inputSize)}
 
   &::placeholder {
-    color: ${({ theme }) => theme.color.misc500};
+    color: ${({ theme }) => theme.color.colorTextPlaceholder};
   }
 
   &:focus {
@@ -95,9 +108,9 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   }
 
   &:disabled {
-    color: ${({ theme }) => theme.color.misc300};
+    color: ${({ theme }) => theme.color.colorTextDisabled};
     &::placeholder {
-      color: ${({ theme }) => theme.color.misc300};
+      color: ${({ theme }) => theme.color.colorTextDisabled};
   }
   }
   `
@@ -124,17 +137,18 @@ interface TInputWrapperProps {
   theme: DefaultTheme,
   disabled: boolean,
   neighboringInGroup: TNeighboringInGroup,
+  size: TInputSize,
   error: boolean,
 }
 
 function getInputBorderColor(props: TInputWrapperProps) {
   const { error, active, theme, disabled } = props
 
-  if (active) return theme.color.primary400
-  if (error) return theme.color.error700
-  if (disabled) return theme.color.misc100
+  if (active) return theme.color.colorBorderFocus
+  if (error) return theme.color.colorBorderDanger
+  if (disabled) return theme.color.colorBgSecondaryDisabled
 
-  return theme.color.misc200
+  return theme.color.colorBorderPrimary
 }
 
 
@@ -144,30 +158,18 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.color.misc10};
+  background-color: ${({ theme }) => theme.color.colorBgPrimary};
 
-  ${({ disabled }) => disabled && 'pointer-events: none;'}
+  ${({ disabled, theme }) => disabled && `
+    background-color: ${theme.color.colorBgSecondaryDisabled};
+    pointer-events: none;
+  `}
 
-  ${({ neighboringInGroup }) => {
-    if (neighboringInGroup === 'right') {
-      return borderRadiusLarge.left
-    } else if (neighboringInGroup === 'left') {
-      return borderRadiusLarge.right
-    } else if (neighboringInGroup !== 'both') {
-      return borderRadiusLarge.all
-    }
-
-    return ''
-  }}
+  ${({ neighboringInGroup, size }) => getInputBorderRadius(neighboringInGroup, size)}
 
   border: 1px solid ${getInputBorderColor};
 
   border-style: solid;
-  ${({ active, theme }) => {
-    if (active) {
-      return `box-shadow: 0 0 0 1px ${theme.color.primary400};`
-    }
-  }}
 
   ${({ neighboringInGroup }) => {
     if (['left', 'both'].includes((neighboringInGroup || '').toString())) {
@@ -181,12 +183,8 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   ${switchTransition}
   transition-property: border-color;
 
-  ${({ theme, error, active }) => error && !active && `
-    box-shadow: inset 0px 0px 0px 1px ${theme.color.error700};
-  `}
-
   &:hover {
-    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.primary400};
+    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.colorBorderHover};
     z-index: 1;
   }
 

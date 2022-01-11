@@ -9,20 +9,33 @@ interface TStyledRadioProps {
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.primary200
-  if (checked) return theme.color.primary500
-  if (disabled) return theme.color.text200
+  if (disabled && checked) return theme.color.colorBgSecondaryDisabled
+  if (checked) return theme.color.colorBgContrastFocus
+  if (disabled) return theme.color.colorBgSecondaryDisabled
 
-  return theme.color.misc200
+  return theme.color.colorBorderPrimary
 }
 
-const getBoxShadow = (props: TStyledRadioProps) => `box-shadow: inset 0 0 0 1px ${getBorderColor(props)}`
+const getHoverBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
+  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (checked) return theme.color.colorBgContrastHover
+
+  return theme.color.colorBorderHover
+}
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.primary200
-  if (checked) return theme.color.primary500
+  if (disabled && checked) return theme.color.colorBgSecondaryDisabled
+  if (checked) return theme.color.colorBgContrastFocus
 
-  return theme.color.background
+  return theme.color.colorBgPrimary
+}
+
+const getHoverRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
+  if (!checked && disabled) return theme.color.colorBgPrimary
+  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (checked) return theme.color.colorBgContrastHover
+
+  return theme.color.colorBgPrimary
 }
 
 export const RadioInput = styled.input`
@@ -40,7 +53,7 @@ export const StyledRadio = styled.div<TStyledRadioProps>`
   border-radius: 50%;
   user-select: none;
 
-  ${getBoxShadow};
+  border: 1px solid ${getBorderColor};
 
   ${switchTransition};
   transition-property: background, border;
@@ -55,6 +68,11 @@ export const StyledRadio = styled.div<TStyledRadioProps>`
     border-radius: 50%;
     opacity: ${({ checked }) => (checked ? 1 : 0)};
   };
+
+  &:hover {
+    border: 1px solid ${getHoverBorderColor};
+    background-color: ${getHoverRadioBackground};
+  }
 `
 
 
@@ -68,7 +86,7 @@ export const LabelText = styled.span<TLabelTextProps>`
   margin-left: 6px;
   width: 100%;
   ${({ disabled, theme }) => (disabled
-    && css`color: ${theme.color.text300};`
+    && css`color: ${theme.color.colorTextPrimary};`
   )}
 `
 
@@ -84,11 +102,7 @@ export const RadioLabel = styled.label<TRadioLabelProps>`
   user-select: none;
   width: 100%;
 
-  ${StyledRadio}:hover {
-    border-color: ${({ theme, disabled }) => (disabled ? theme.color.text200 : theme.color.primary400)};
-  };
-
   ${LabelText}:hover {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.text300 : theme.color.primary700)};
+    color: ${({ theme }) => theme.color.colorTextPrimary};
   };
 `

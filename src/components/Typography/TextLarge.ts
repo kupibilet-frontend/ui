@@ -1,9 +1,15 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const TextLarge = styled.span`
   font-size: 18px;
-  font-weight: 400;
-  line-height: 26px;
+  line-height: 28px;
+
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  `}
 `
 
 export default TextLarge

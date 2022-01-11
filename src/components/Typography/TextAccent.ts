@@ -1,22 +1,20 @@
 import styled, { css } from 'styled-components'
 
-const H2 = styled.h2`
-  font-size: 28px;
-  line-height: 40px;
-  margin: 0;
-  font-weight: 600;
+const TextAccent = styled.span`
+  font-size: 24px;
+  line-height: 36px;
 
   ${({ theme }) => css`
     @media ${theme.queries.isTablet} {
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 22px;
+      line-height: 32px;
     }
     
     @media ${theme.queries.isMobile} {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 26px;
     }
   `}
 `
 
-export default H2
+export default TextAccent

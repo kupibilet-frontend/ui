@@ -1,9 +1,15 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Text = styled.span`
   font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
+  line-height: 24px;
+
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  `}
 `
 
 export default Text

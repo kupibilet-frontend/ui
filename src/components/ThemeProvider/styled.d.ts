@@ -9,5 +9,6 @@ declare module 'styled-components' {
       font: string,
       color: TColor,
       button: typeof buttonTokens,
+      queries: Record<string, string>
   }
 }

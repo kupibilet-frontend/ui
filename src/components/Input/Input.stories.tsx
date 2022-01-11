@@ -57,6 +57,16 @@ ErrorInput.args = {
 }
 
 // ----------------------------------------------
+// Disabled Input
+// ----------------------------------------------
+const DisabledInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+
+DisabledInput.args = {
+  ...DEFAULT_INPUT_PROPS,
+  disabled: true,
+}
+
+// ----------------------------------------------
 // Input with Icons
 // ----------------------------------------------
 const InputWithIcons: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
@@ -174,6 +184,7 @@ function ReactHookFormExample(props: TProps): JSX.Element {
 export {
   DefaultInput,
   ErrorInput,
+  DisabledInput,
   InputWithIcons,
   InputWithIconsGroup,
   InputAsTextarea,

@@ -1,18 +1,21 @@
-import styled from 'styled-components'
-import { queries } from 'utils/media-queries'
+import styled, { css } from 'styled-components'
 
 const H1 = styled.h1`
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 44px;
-  letter-spacing: -1.2px;
+  font-size: 36px;
+  line-height: 48px;
   margin: 0;
-
-  @media ${queries.isHandheld} {
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: -0.4px;
-  }
+  font-weight: 600;
+  ${({ theme }) => css`
+    @media ${theme.queries.isTablet} {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    
+    @queries ${theme.queries.isMobile} {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  `}
 `
 
 export default H1

@@ -1,4 +1,5 @@
 enum COLOR_NAMES {
+  // old color sheme
   primary100 = 'primary100',
   primary200 = 'primary200',
   primary300 = 'primary300',
@@ -41,6 +42,64 @@ enum COLOR_NAMES {
   success700 = 'success700',
 
   background = 'background',
+
+
+  // new color scheme with "design tokens"
+  colorTextPrimary = 'colorTextPrimary',
+  colorTextSecondary = 'colorTextSecondary',
+  colorTextPlaceholder = 'colorTextPlaceholder',
+  colorTextContrast = 'colorTextContrast',
+  colorTextAccent = 'colorTextAccent',
+  colorTextSuccess = 'colorTextSuccess',
+  colorTextInfo = 'colorTextInfo',
+  colorTextWarning = 'colorTextWarning',
+  colorTextDanger = 'colorTextDanger',
+  colorTextDisabled = 'colorTextDisabled',
+
+  colorTextLink = 'colorTextLink',
+  colorTextLinkHover = 'colorTextLinkHover',
+  colorTextLinkFocus = 'colorTextLinkFocus',
+
+  colorBgPrimary = 'colorBgPrimary',
+  colorBgPrimaryFocus = 'colorBgPrimaryFocus',
+  colorBgPrimaryHover = 'colorBgPrimaryHover',
+  colorBgPrimaryDisable = 'colorBgPrimaryDisable',
+  colorBgHover = 'colorBgHover',
+  colorBgLayout = 'colorBgLayout',
+
+  colorBgSecondary = 'colorBgSecondary',
+  colorBgSecondaryHover = 'colorBgSecondaryHover',
+  colorBgSecondaryFocus = 'colorBgSecondaryFocus',
+  colorBgSecondaryDisabled = 'colorBgSecondaryDisabled',
+  colorBgAccent = 'colorBgAccent',
+  colorBgAccentHover = 'colorBgAccentHover',
+  colorBgAccentFocus = 'colorBgAccentFocus',
+  colorBgHelp = 'colorBgHelp',
+  colorBgHelpHover = 'colorBgHelpHover',
+  colorBgHelpFocus = 'colorBgHelpFocus',
+  colorBgContrast = 'colorBgContrast',
+  colorBgContrastHover = 'colorBgContrastHover',
+  colorBgContrastFocus = 'colorBgContrastFocus',
+  colorBgSwitch = 'colorBgSwitch',
+
+  colorBgPrimaryLight = 'colorBgPrimaryLight',
+  colorBgHelpLight = 'colorBgHelpLight',
+  colorBgSuccess = 'colorBgSuccess',
+  colorBgInfo = 'colorBgInfo',
+  colorBgWarningInfo = 'colorBgWarningInfo',
+  colorBgDanger = 'colorBgDanger',
+
+  colorBorderDecorative = 'colorBorderDecorative',
+  colorBorderPrimary = 'colorBorderPrimary',
+  colorBorderHover = 'colorBorderHover',
+  colorBorderFocus = 'colorBorderFocus',
+  colorBorderAccent = 'colorBorderAccent',
+  colorBorderSuccess = 'colorBorderSuccess',
+  colorBorderDanger = 'colorBorderDanger',
+
+  colorOverlay = 'colorOverlay',
+
+  colorBgStatusDanger = 'colorBgStatusDanger',
 }
 
 type TColor = Record<COLOR_NAMES, string>

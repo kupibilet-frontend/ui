@@ -1,18 +1,17 @@
-import styled from 'styled-components'
-import { queries } from 'utils/media-queries'
+import styled, { css } from 'styled-components'
 
 const H4 = styled.h4`
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 18px;
   line-height: 28px;
-  letter-spacing: -0.4px;
   margin: 0;
-
-  @media ${queries.isHandheld} {
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-  }
+  font-weight: 600;
+  
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  `}
 `
 
 export default H4

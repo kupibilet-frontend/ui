@@ -1,11 +1,11 @@
 {
   "name": "@kupibilet/ui",
-  "version": "22.5.2",
+  "version": "22.5.3",
   "description": "UI kit for kupibilet web app",
   "scripts": {
     "lint": "yarn lint:js && yarn lint:css",
     "prestart": "scripts/check-engines.js",
-    "start": "BABEL_ENV=default start-storybook -p 9001 -c .storybook",
+    "start": "BABEL_ENV=default start-storybook -p 9001 -c .storybook -s ./public",
     "build-storybook": "BABEL_ENV=default build-storybook",
     "lint:css": "echo \"TODO: Fix stylelint. kupibilet-frontend/ui#1\" >&2 && exit 0; stylelint ./src/components/**/*.js",
     "lint:js": "BABEL_ENV=default eslint \"./src/**/*.js\" \"./src/**/*.ts\" \"./src/**/*.tsx\"",
@@ -59,7 +59,7 @@
     "@babel/preset-typescript": "^7.12.7",
     "@babel/types": "^7.12.12",
     "@emotion/core": "^10.0.10",
-    "@kupibilet/icons": "5.9.2",
+    "@kupibilet/icons": "5.9.4",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/client-api": "^6.3.12",
     "@storybook/react": "^6.3.12",
@@ -132,7 +132,7 @@
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
-    "@kupibilet/icons": "~5.1.0",
+    "@kupibilet/icons": "^5.9.4",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "moment": "^2.29.1",

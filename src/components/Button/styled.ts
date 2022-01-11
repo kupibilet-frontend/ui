@@ -1,14 +1,23 @@
-import styled, { DefaultTheme, css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 
 import { control } from 'utils/reset'
 import { switchTransition } from 'utils/transitions'
+import { getLinkColor, getLinkHoverColor } from 'components/Link/styled'
 import { queries } from 'utils/media-queries'
 import {
   TNeighboringInGroupType,
   TButtonVariant,
   TButtonSize,
 } from './types'
-import { BUTTON_SIZES, BUTTON_TYPOGRAPHY } from './consts'
+import { BUTTON_BORDER_RADIUS, BUTTON_SIZES, BUTTON_TYPOGRAPHY } from './consts'
+
+
+// TThemeAndVariantProps is a common type for many helpers functions
+interface TThemeAndVariantProps {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  disabled: boolean,
+}
 
 function calculateButtonPadding(
   size: TButtonSize, icon: boolean, hasLeftIcon: boolean, hasRightIcon: boolean,
@@ -42,47 +51,127 @@ function calculateTextPadding(
 
 function calculateBorderRadius(
   size: TButtonSize,
-  variant: TButtonVariant,
   neighboringInGroup: TNeighboringInGroupType,
-  theme: DefaultTheme,
 ): string {
-  // @ts-ignore
-  const radius = theme.button[`button_${variant}_${size}_size_border_radius_default`]
+  const radius = BUTTON_BORDER_RADIUS[size]
 
   if (neighboringInGroup === 'both') {
     return ''
   } else if (neighboringInGroup === 'left') {
-    return `border-radius: 0 ${radius} ${radius} 0;`
+    return `border-radius: 0 ${radius}px ${radius}px 0;`
   } else if (neighboringInGroup === 'right') {
-    return `border-radius: ${radius} 0 0 ${radius};`
+    return `border-radius: ${radius}px 0 0 ${radius}px;`
   }
 
-  return `border-radius: ${radius};`
+  return `border-radius: ${radius}px;`
+}
+function getButtonColor(props: TThemeAndVariantProps): string {
+  const { theme, variant, disabled } = props
+
+  if (disabled && variant !== 'link') {
+    return theme.color.colorTextDisabled
+  }
+
+  switch (variant) {
+    default:
+    case 'primary':
+    case 'contrast':
+    case 'help':
+      return theme.color.colorTextContrast
+    case 'secondary':
+      return theme.color.colorTextPrimary
+    case 'link':
+      return getLinkColor(props)
+  }
+}
+function getButtonHoverColor(props: TThemeAndVariantProps): string {
+  if (props.variant === 'link') {
+    return getLinkHoverColor(props)
+  }
+
+  return ''
+}
+
+function getButtonBackground({ theme, variant, disabled }: TThemeAndVariantProps): string {
+  if (disabled && variant !== 'link') {
+    return theme.color.colorBgSecondaryDisabled
+  }
+
+  switch (variant) {
+    default:
+    case 'primary':
+      return theme.color.colorBgAccent
+    case 'contrast':
+      return theme.color.colorBgContrast
+    case 'secondary':
+      return theme.color.colorBgSecondary
+    case 'help':
+      return theme.color.colorBgHelp
+    case 'link':
+      return 'transparent'
+  }
+}
+
+function getButtonHoverBackground({ theme, variant }: TThemeAndVariantProps): string {
+  switch (variant) {
+    default:
+    case 'primary':
+      return theme.color.colorBgAccentHover
+    case 'contrast':
+      return theme.color.colorBgContrastHover
+    case 'secondary':
+      return theme.color.colorBgSecondaryHover
+    case 'help':
+      return theme.color.colorBgHelpHover
+    case 'link':
+      return 'transparent'
+  }
+}
+
+function getButtonActiveBackground({ theme, variant }: TThemeAndVariantProps): string {
+  switch (variant) {
+    default:
+    case 'primary':
+      return theme.color.colorBgAccentFocus
+    case 'contrast':
+      return theme.color.colorBgContrastFocus
+    case 'secondary':
+      return theme.color.colorBgSecondaryFocus
+    case 'help':
+      return theme.color.colorBgHelpFocus
+    case 'link':
+      return 'transparent'
+  }
 }
 
 interface TStyledButtonProps {
-  size: 'medium',
+  size: TButtonSize,
   isBlock: boolean,
   neighboringInGroup: TNeighboringInGroupType,
-  variant: 'primary' | 'secondary',
+  variant: TButtonVariant,
   isIconOnly: boolean,
   hasLeftIcon: boolean,
   hasRightIcon: boolean,
   disabled: boolean,
 }
 
+function fontWeight({ size }: TStyledButtonProps) {
+  if (size !== 'small') {
+    return 'font-weight: 500;'
+  }
+
+  return ''
+}
+
 export const StyledButton = styled.button<TStyledButtonProps>`
   ${control}
   display: inline-block;
-  color: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_color_text_normal`]};
+  color: ${getButtonColor};
+  background: ${getButtonBackground};
 
-  background: ${({ theme, variant, size }) => {
-    // @ts-ignore
-    return theme.button[`button_${variant}_${size}_color_bg_normal`]
-  }};
-
-  font-size: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_typography_default_default`].size}px;
-  line-height: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_typography_default_default`].lineHeight}px;
+  font-size: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
+  ${fontWeight}
+  line-height: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
@@ -97,8 +186,8 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
 
-  ${({ theme, neighboringInGroup, size, variant }) => (
-    calculateBorderRadius(size, variant, neighboringInGroup, theme)
+  ${({ neighboringInGroup, size }) => (
+    calculateBorderRadius(size, neighboringInGroup)
   )};
 
   ${({ size, isIconOnly, hasLeftIcon, hasRightIcon }) => (
@@ -108,31 +197,37 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   ${switchTransition}
   transition-property: opacity, box-shadow;
 
-  ${({ theme, disabled, variant, size }) => disabled && css`
-    color: ${theme.button[`button_${variant}_${size}_color_text_disable`]};
-    background: ${theme.button[`button_${variant}_${size}_color_bg_disable`]};
-  `}
-
   .icon-inherit-color {
-    fill: ${({ theme, variant, size }) => theme.button[`button_${variant}_${size}_color_text_normal`]};
+    fill: ${getButtonColor};
   }
 
   &:hover {
-    ${({ theme, disabled, variant, size }) => !disabled && css`
-      cursor: pointer;
-      color: ${theme.button[`button_${variant}_${size}_color_text_hover`]};
-      background: ${theme.button[`button_${variant}_${size}_color_bg_hover`]};
-      transition: none;
-    `}
+    ${(props) => (
+    !props.disabled
+      ? `
+        cursor: pointer;
+        background: ${getButtonHoverBackground(props)};
+        box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
+
+        // Immediately change visual state on hover, mousedown and mouseup
+        // Transition only for mouseleave
+        transition: none;
+      `
+      : ''
+  )}
+
+    ${(props) => ((!props.disabled && props.variant === 'link') && `color: ${getButtonHoverColor(props)};`)}
   }
 
-  &:focus {
-    ${({ theme, disabled, variant, size }) => !disabled && css`
-      cursor: pointer;
-      color: ${theme.button[`button_${variant}_${size}_color_text_focus`]};
-      background: ${theme.button[`button_${variant}_${size}_color_bg_focus`]};
-      transition: none;
-    `}
+  &:active {
+    ${(props) => (
+    !props.disabled
+      ? `
+        background: ${getButtonActiveBackground(props)};
+        box-shadow: none;
+      `
+      : ''
+  )}
   }
 `
 export const StyledButtonLink = StyledButton.withComponent('a')

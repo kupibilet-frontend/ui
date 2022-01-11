@@ -3,40 +3,88 @@ import React from 'react'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
 import { ICON_SIZES } from 'components/Icon/consts'
+import { borderRadiusMedium } from 'utils/borderRadius'
+import H4 from 'components/Typography/H4'
+import useMouseState from 'hooks/useMouseState'
 
-
-const PanelHeader = styled.div`
+const PanelHeader = styled.div<{ isOpen?: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 12px 0;
+  padding: 24px 0;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.color.misc200}
+  ${({ theme, isOpen }) => !isOpen && `border-bottom: 1px solid ${theme.color.misc200};`}
+  cursor: pointer;
 `
 
-const PanelHeaderText = styled.div`
-  font-weight: 700;
+const PanelHeaderText = styled(H4)`
+  font-weight: 500;
   user-select: none;
+  color: ${({ theme }) => theme.color.colorTextPrimary};
 `
 
-const CollapseHeaderArrow = styled(Icon)`
-  fill: ${({ theme }) => theme.color.misc600};
+const CollapseButton = styled.div<{ isHover: boolean, isActive: boolean }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: ${({ theme, isHover, isActive }) => {
+    if (isActive) {
+      return theme.color.colorBgSecondaryFocus
+    }
+
+    if (isHover) {
+      return theme.color.colorBgSecondaryHover
+    }
+
+    return theme.color.colorBgSecondary
+  }};
+  ${borderRadiusMedium.all}
+`
+
+const CollapseButtonIcon = styled(Icon)`
+  fill: ${({ theme }) => theme.color.colorTextPrimary};
   display: block;
 `
 
+const StyledPanelContent = styled.div`
+  color: ${({ theme }) => theme.color.colorTextSecondary};
+  border-bottom: 1px solid ${({ theme }) => theme.color.misc200};
+`
 
 export interface TPanelHeaderProps {
   isActive?: boolean,
   header?: string | JSX.Element,
+  isMouseHover: boolean,
+  isMouseActive: boolean,
 }
 
-const renderDefaultHeader = (props: TPanelHeaderProps): JSX.Element => (
-  <PanelHeader>
-    <PanelHeaderText>{props.header}</PanelHeaderText>
-    <CollapseHeaderArrow name="angle" rotate={props.isActive} size={ICON_SIZES.normal} />
-  </PanelHeader>
-)
+const renderDefaultHeader = (props: TPanelHeaderProps): JSX.Element => {
+  const {
+    header,
+    isActive,
+    isMouseHover,
+    isMouseActive,
+  } = props
+
+  return (
+    <PanelHeader isOpen={isActive}>
+      <PanelHeaderText as="div">
+        {header}
+      </PanelHeaderText>
+      <CollapseButton isHover={isMouseHover} isActive={isMouseActive}>
+        <CollapseButtonIcon
+          name="angle"
+          rotate={isActive}
+          size={ICON_SIZES.normal}
+        />
+      </CollapseButton>
+    </PanelHeader>
+  )
+}
 
 interface TPropsFromCollapseParent {
   isOpen?: boolean,
@@ -59,15 +107,36 @@ function CollapsePanel(props: TProps): JSX.Element {
     ...restProps
   } = props
 
+  const {
+    isMouseHover,
+    isMouseActive,
+    onMouseEnter,
+    onMouseLeave,
+    onMouseDown,
+    onMouseUp,
+  } = useMouseState()
+
   return (
     <div {...restProps}>
-      <div onClick={onClick} onKeyDown={onClick}>
-        {renderHeader({ header, isActive: isOpen })}
+      <div
+        onClick={onClick}
+        onKeyDown={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseDown={onMouseDown}
+        onMouseUp={onMouseUp}
+      >
+        {renderHeader({
+          header,
+          isActive: isOpen,
+          isMouseHover,
+          isMouseActive,
+        })}
       </div>
       {isOpen && (
-        <>
+        <StyledPanelContent>
           {children}
-        </>
+        </StyledPanelContent>
       )}
     </div>
   )
