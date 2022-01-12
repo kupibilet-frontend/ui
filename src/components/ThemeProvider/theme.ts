@@ -70,10 +70,10 @@ export const color: TColor = {
   [COLOR_NAMES.colorBgHover]: '#F5F5F7',
   [COLOR_NAMES.colorBgLayout]: '#FAFAFB',
 
-  [COLOR_NAMES.colorBgSecondary]: '#F5F5F7',
+  [COLOR_NAMES.colorBgSecondary]: '#EEEFF2',
   [COLOR_NAMES.colorBgSecondaryHover]: '#E8E9ED',
   [COLOR_NAMES.colorBgSecondaryFocus]: '#D0D1D7',
-  [COLOR_NAMES.colorBgSecondaryDisabled]: '#F5F5F7',
+  [COLOR_NAMES.colorBgSecondaryDisabled]: '#EEEFF2',
   [COLOR_NAMES.colorBgAccent]: '#FA6258',
   [COLOR_NAMES.colorBgAccentHover]: '#D74043',
   [COLOR_NAMES.colorBgAccentFocus]: '#B32C3A',
