@@ -44,7 +44,6 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   className?: string | null,
   readOnly?: boolean,
   'data-test'?: string | null,
-  uncontrolled?: boolean,
 }
 
 type TNormalizedProps<T> = Required<TProps<T>>
@@ -76,7 +75,6 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     className: props.className || null,
     readOnly: props.readOnly ?? false,
     'data-test': props['data-test'] || null,
-    uncontrolled: props.uncontrolled ?? false,
   }
 }
 
@@ -93,16 +91,8 @@ function renderInputElement<T>(
     leftIcon,
     rightIcon,
     isTextarea,
-    uncontrolled,
     ...props
   } = normalizedProps
-
-  if (uncontrolled) {
-    // value is required in TNormalizedProps but ESLint thinks its optional
-    // @ts-ignore The operand of a 'delete' operator must be optional
-    // eslint-disable-next-line react/prop-types
-    delete props.value
-  }
 
   if (isTextarea) {
     return (
@@ -264,14 +254,6 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
   )
 }
 
-
-// ReactHookForm wrapper for Input
-const RHFInput = React.forwardRef((props: TProps, ref) => (
-  // @ts-ignore TODO: fix ref's passing types
-  <InputControl {...props} innerRef={ref} uncontrolled />
-))
-
-
 export type TRFInputProps = WrappedFieldProps & TProps
 
 // ReduxForm wrapper for Input
@@ -286,7 +268,6 @@ const RFInput = ({ input, meta, ...props }: TRFInputProps): JSX.Element => (
 
 export {
   InputControl as Input,
-  RHFInput,
 }
 
 export default RFInput

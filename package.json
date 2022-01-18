@@ -121,7 +121,6 @@
     "rc-slider": "^9.7.1",
     "rc-tabs": "^11.7.3",
     "react-autosuggest": "^10.0.0",
-    "react-hook-form": "^7.12.2",
     "react-popper": "^2.2.5",
     "react-portal": "^4.1.4",
     "react-router-dom": "^5.2.0",
