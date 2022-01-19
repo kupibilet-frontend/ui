@@ -40,8 +40,6 @@ const linkStyles = css`
   align-items: center;
   color: ${getLinkColor};
   cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
   text-decoration: none;
   transition-property: color;
 
