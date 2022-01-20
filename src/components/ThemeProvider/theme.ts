@@ -103,7 +103,12 @@ export const color: TColor = {
   [COLOR_NAMES.colorBorderDanger]: '#DE350B',
 
   [COLOR_NAMES.colorOverlay]: '#212126',
+  [COLOR_NAMES.colorBgStatus]: '#F5F5F7',
   [COLOR_NAMES.colorBgStatusDanger]: '#FCEDE8',
+  [COLOR_NAMES.colorBgStatusHelp]: '#F2EBFF',
+  [COLOR_NAMES.colorBgStatusInfo]: '#EBF3FF',
+  [COLOR_NAMES.colorBgStatusWarning]: '#FFF6EB',
+  [COLOR_NAMES.colorBgStatusSuccess]: '#F4FADB',
 }
 
 export const font = `
