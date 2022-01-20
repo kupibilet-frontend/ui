@@ -34,23 +34,23 @@ interface TGetButtonBackground {
   isActive?: boolean,
 }
 
-function calculateButtonPadding(
-  size: TButtonSize, icon: boolean, hasLeftIcon: boolean, hasRightIcon: boolean,
-): string {
-  const spacing = BUTTON_SIZES[size]
-  const typographyRelatedPadding = ((spacing * 2 - BUTTON_TYPOGRAPHY[size]) / 2).toFixed(1)
-  const iconVisualCenterShift = 5 / 4
-  const iconPadding = (BUTTON_SIZES[size] / 2 * iconVisualCenterShift).toFixed(1)
+interface TCalculateButtonPadding {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  size: TButtonSize,
+}
 
-  // Symetric padding around icon-only button for circle effect
-  if (icon) {
-    return `padding: ${typographyRelatedPadding}px;`
-  }
-
+function calculateButtonPadding({
+  variant,
+  theme,
+  size,
+}: TCalculateButtonPadding) {
+  const paddingTokens = theme.button[`button_${variant}_${size}_size_padding_default`]
   return `
-    padding: ${typographyRelatedPadding}px;
-    padding-right: ${hasRightIcon ? iconPadding : spacing}px;
-    padding-left: ${hasLeftIcon ? iconPadding : spacing}px;
+    padding-top: ${paddingTokens.top}
+    padding-bottom: ${paddingTokens.bottom}
+    padding-right: ${paddingTokens.right}
+    padding-left: ${paddingTokens.left}
   `
 }
 
@@ -175,8 +175,8 @@ export const StyledButton = styled.button<TStyledButtonProps>`
     calculateBorderRadius({ size, neighboringInGroup, variant, theme })
   )};
 
-  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon }) => (
-    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon)
+  ${({ size, variant, theme }) => (
+    calculateButtonPadding({ size, variant, theme })
   )};
 
   .icon-inherit-color {

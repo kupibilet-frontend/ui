@@ -288,7 +288,7 @@
             }
         },
         
-        "default":{
+        "component":{
             "button": {
                 "large": {
                     "default": {
@@ -313,7 +313,7 @@
                         "value": {
                             "fontFamily": "{font.family.medium.default.value}",
                             "size": "14",
-                            "lineHeight": "20"
+                            "lineHeight": "16"
                         }
                     }
                 }

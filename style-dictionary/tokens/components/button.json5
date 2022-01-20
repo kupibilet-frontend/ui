@@ -35,7 +35,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.small.default.value}"
+                            "value": "{typography.component.button.small.default.value}"
                         }
                     }
                 },
@@ -43,6 +43,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -81,7 +91,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.medium.default.value}"
+                            "value": "{typography.component.button.medium.default.value}"
                         }
                     }
                 },
@@ -89,6 +99,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -127,7 +147,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.large.default.value}"
+                            "value": "{typography.component.button.large.default.value}"
                         }
                     }
                 },
@@ -135,6 +155,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.large.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.20.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.20.default.value}"
+                            }
                         }
                     }
                 }
@@ -175,7 +205,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.small.default.value}"
+                            "value": "{typography.component.button.small.default.value}"
                         }
                     }
                 },
@@ -183,6 +213,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -221,7 +261,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.medium.default.value}"
+                            "value": "{typography.component.button.medium.default.value}"
                         }
                     }
                 },
@@ -229,6 +269,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -267,7 +317,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.large.default.value}"
+                            "value": "{typography.component.button.large.default.value}"
                         }
                     }
                 },
@@ -275,6 +325,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.large.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.20.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.20.default.value}"
+                            }
                         }
                     }
                 }
@@ -315,7 +375,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.small.default.value}"
+                            "value": "{typography.component.button.small.default.value}"
                         }
                     }
                 },
@@ -323,6 +383,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.8.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.8.default.value}"
+                            }
                         }
                     }
                 }
@@ -361,7 +431,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.medium.default.value}"
+                            "value": "{typography.component.button.medium.default.value}"
                         }
                     }
                 },
@@ -369,6 +439,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -407,7 +487,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.large.default.value}"
+                            "value": "{typography.component.button.large.default.value}"
                         }
                     }
                 },
@@ -415,6 +495,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.large.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.20.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.20.default.value}"
+                            }
                         }
                     }
                 }
@@ -455,7 +545,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.small.default.value}"
+                            "value": "{typography.component.button.small.default.value}"
                         }
                     }
                 },
@@ -463,6 +553,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -501,7 +601,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.medium.default.value}"
+                            "value": "{typography.component.button.medium.default.value}"
                         }
                     }
                 },
@@ -509,6 +609,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -547,7 +657,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.large.default.value}"
+                            "value": "{typography.component.button.large.default.value}"
                         }
                     }
                 },
@@ -555,6 +665,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.large.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.20.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.20.default.value}"
+                            }
                         }
                     }
                 }
@@ -595,7 +715,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.small.default.value}"
+                            "value": "{typography.component.button.small.default.value}"
                         }
                     }
                 },
@@ -603,6 +723,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -641,7 +771,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.medium.default.value}"
+                            "value": "{typography.component.button.medium.default.value}"
                         }
                     }
                 },
@@ -649,6 +779,16 @@
                     "borderRadius": {
                         "default": {
                             "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}"
+                            }
                         }
                     }
                 }
@@ -687,7 +827,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.default.button.large.default.value}"
+                            "value": "{typography.component.button.large.default.value}"
                         }
                     }
                 },
@@ -696,9 +836,19 @@
                         "default": {
                             "value": "{size.borderRadius.large.default.value}"
                         }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.20.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.20.default.value}"
+                            }
+                        }
                     }
                 }
             }
-        }
+        } 
     }
 }

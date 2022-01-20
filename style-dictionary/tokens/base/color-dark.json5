@@ -76,6 +76,11 @@
                     "value":"rgba(58, 58, 65, 1)"
                 }
             },
+            "status-defaul": {
+                "normal":{
+                    "value":"rgba(46, 46, 51, 1)"
+                }
+            },
             "status-info": {
                 "normal":{
                     "value":"rgba(0, 27, 115, 1)"
@@ -103,7 +108,7 @@
             },
             "bonus-default": {
                 "normal":{
-                    "value": "rgba(217, 74, 64, 1)"
+                    "value": "rgba(250, 98, 87, 1)"
                 }
             },
             "bonus-gold": {
