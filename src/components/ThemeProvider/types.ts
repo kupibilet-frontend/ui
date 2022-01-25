@@ -48,6 +48,7 @@ enum COLOR_NAMES {
   colorTextPrimary = 'colorTextPrimary',
   colorTextSecondary = 'colorTextSecondary',
   colorTextPlaceholder = 'colorTextPlaceholder',
+  colorTextDescription = 'colorTextDescription',
   colorTextContrast = 'colorTextContrast',
   colorTextAccent = 'colorTextAccent',
   colorTextSuccess = 'colorTextSuccess',

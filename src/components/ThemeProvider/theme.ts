@@ -53,6 +53,7 @@ export const color: TColor = {
   [COLOR_NAMES.colorTextPrimary]: '#101014',
   [COLOR_NAMES.colorTextSecondary]: '#51525A',
   [COLOR_NAMES.colorTextPlaceholder]: '#A0A2AB',
+  [COLOR_NAMES.colorTextDescription]: '#797A86',
   [COLOR_NAMES.colorTextContrast]: '#FFFFFF',
   [COLOR_NAMES.colorTextAccent]: '#FA6258',
   [COLOR_NAMES.colorTextSuccess]: '#85BC0C',
