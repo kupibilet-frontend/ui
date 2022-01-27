@@ -49,7 +49,7 @@ export const WithCustomIcons = Template.bind({})
 WithCustomIcons.args = {
   ...defaultProps,
   leftIcon: <Icon name="plane" inheritColor />,
-  rightIcon: <Icon name="hand-baggage" inheritColor />,
+  rightIcon: <Icon name="arrow-right-long" inheritColor />,
 }
 
 export const WithLeftAndRightIcons = Template.bind({})
@@ -74,6 +74,7 @@ LoadingButton.args = {
 export const LinkButton = Template.bind({})
 LinkButton.args = {
   ...defaultProps,
+  variant: 'link',
   href: '/',
   target: '_blank',
 }

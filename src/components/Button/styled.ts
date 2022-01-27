@@ -1,13 +1,11 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 
 import { control } from 'utils/reset'
-import { queries } from 'utils/media-queries'
 import {
   TNeighboringInGroupType,
   TButtonVariant,
   TButtonSize,
 } from './types'
-import { BUTTON_TYPOGRAPHY } from './consts'
 
 type TState = 'hover' | 'active'
 
@@ -47,6 +45,15 @@ interface TCalculateTextPadding {
   variant: TButtonVariant,
   theme: DefaultTheme,
   size: TButtonSize,
+  hasLeftIcon: boolean,
+  hasRightIcon: boolean,
+}
+
+interface TCalculateMargin {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  size: TButtonSize,
+  isIconOnly: boolean,
   hasLeftIcon: boolean,
   hasRightIcon: boolean,
 }
@@ -136,6 +143,36 @@ function getButtonColor({
   return theme.button[`button_default_${variant}_${size}_color_text_normal`]
 }
 
+function calculateMargin({
+  variant,
+  theme,
+  size,
+  isIconOnly,
+  hasLeftIcon,
+  hasRightIcon,
+}: TCalculateMargin) {
+  if (variant !== 'link') return
+
+  const buttonDefaultPadding = theme.button[`button_default_${variant}_${size}_size_padding_default`]
+  const buttonWithIconPadding = theme.button[`button_with_icon_${variant}_${size}_size_padding_default`]
+  const buttonIconPadding = theme.button[`button_icon_${variant}_${size}_size_padding_default`]
+
+  let paddingTokens = buttonDefaultPadding
+
+  if (isIconOnly) {
+    paddingTokens = buttonIconPadding
+  }
+
+  if (hasLeftIcon || hasRightIcon) {
+    paddingTokens = buttonWithIconPadding
+  }
+
+  return `
+    margin-right: -${paddingTokens.right}
+    margin-left: -${paddingTokens.left}
+  `
+}
+
 function getButtonBackground({
   theme,
   variant,
@@ -175,19 +212,16 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   color: ${getButtonColor};
   background: ${getButtonBackground};
 
-  font-size: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].size}px
-  fontWeight: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].fontWeight}
-  line-height: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].lineHeight}px
+  font-size: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].size}px;
+  font-weight: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].fontWeight};
+  line-height: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].lineHeight}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
 
-  
-  @media ${queries.isHandheld} {
-    ${({ isBlock }) => !isBlock && css`
-      max-width: 340px;
-    `}
-  };
+  ${({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon }) => (
+    calculateMargin({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon })
+  )};
 
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
@@ -241,10 +275,7 @@ interface TIconWrapProps {
 
 export const IconWrap = styled.span<TIconWrapProps>`
   display: inline-flex;
-  vertical-align: top;
+  vertical-align: middle;
   justify-content: center;
   align-items: center;
-
-  width: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
-  height: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
 `
