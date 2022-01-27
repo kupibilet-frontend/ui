@@ -5,9 +5,3 @@ export const BUTTON_TYPOGRAPHY: Record<TButtonSize, number> = {
   medium: 20,
   large: 20,
 }
-
-export const BUTTON_SIZES: Record<TButtonSize, number> = {
-  small: 16,
-  medium: 20,
-  large: 24,
-}

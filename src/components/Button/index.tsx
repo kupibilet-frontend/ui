@@ -42,6 +42,7 @@ const Button = ({
         </IconWrap>
       ) : (
         <StyledButtonText
+          variant={variant}
           size={size}
           hasLeftIcon={Boolean(leftIcon)}
           hasRightIcon={Boolean(rightIcon)}

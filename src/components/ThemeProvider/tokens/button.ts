@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 27 Jan 2022 07:27:33 GMT
+ * Generated on Thu, 27 Jan 2022 11:15:00 GMT
  */
 
 export const button_default_primary_small_color_bg_normal = "#fa6258";
@@ -288,7 +288,7 @@ export const button_with_icon_contrast_medium_color_text_active = "#ffffff";
 export const button_with_icon_contrast_medium_color_text_disable = "#a0a2ab";
 export const button_with_icon_contrast_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_with_icon_contrast_medium_size_border_radius_default = "8px";
-export const button_with_icon_contrast_medium_size_padding_default = {"top":"8px","right":"16px","bottom":"8px","left":"16px"};
+export const button_with_icon_contrast_medium_size_padding_default = {"top":"8px","right":"16px","bottom":"8px","left":"16px","innerHorisontal":"16px"};
 export const button_with_icon_contrast_large_color_bg_normal = "#212126";
 export const button_with_icon_contrast_large_color_bg_hover = "#3a3a41";
 export const button_with_icon_contrast_large_color_bg_active = "#101014";

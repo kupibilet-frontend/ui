@@ -1479,7 +1479,8 @@
                                 "top": "{size.padding.8.default.value}",
                                 "right": "{size.padding.16.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
-                                "left": "{size.padding.16.default.value}"
+                                "left": "{size.padding.16.default.value}",
+                                "innerHorisontal": "{size.padding.16.default.value}"
                             }
                         }
                     }
