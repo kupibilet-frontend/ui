@@ -11,11 +11,10 @@ StyleDictionary.extend({
           {
             destination: "src/components/ThemeProvider/tokens/button.ts",
             format: "javascript/es6",
-            filter: {
-                attributes: {
-                    category: "button",
-                }
-            },
+            filter: function(token) {
+              const buttonTokenCategories = ['buttonDefault', 'buttonWithIcon', 'buttonIcon']
+              return buttonTokenCategories.includes(token.attributes.category)
+            }
           },
         ],
       },
