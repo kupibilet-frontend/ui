@@ -1824,9 +1824,9 @@
                         "default": {
                             "value": {
                                 "top": "{size.padding.8.default.value}",
-                                "right": "{size.padding.16.default.value}",
+                                "right": "{size.padding.8.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
-                                "left": "{size.padding.16.default.value}"
+                                "left": "{size.padding.8.default.value}"
                             }
                         }
                     }
@@ -1880,9 +1880,9 @@
                         "default": {
                             "value": {
                                 "top": "{size.padding.12.default.value}",
-                                "right": "{size.padding.20.default.value}",
+                                "right": "{size.padding.12.default.value}",
                                 "bottom": "{size.padding.12.default.value}",
-                                "left": "{size.padding.20.default.value}"
+                                "left": "{size.padding.12.default.value}"
                             }
                         }
                     }

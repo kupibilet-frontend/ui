@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 27 Jan 2022 11:15:00 GMT
+ * Generated on Thu, 27 Jan 2022 15:18:19 GMT
  */
 
 export const button_default_primary_small_color_bg_normal = "#fa6258";
@@ -354,7 +354,7 @@ export const button_icon_primary_medium_color_text_active = "#ffffff";
 export const button_icon_primary_medium_color_text_disable = "#a0a2ab";
 export const button_icon_primary_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_icon_primary_medium_size_border_radius_default = "8px";
-export const button_icon_primary_medium_size_padding_default = {"top":"8px","right":"16px","bottom":"8px","left":"16px"};
+export const button_icon_primary_medium_size_padding_default = {"top":"8px","right":"8px","bottom":"8px","left":"8px"};
 export const button_icon_primary_large_color_bg_normal = "#fa6258";
 export const button_icon_primary_large_color_bg_hover = "#d74043";
 export const button_icon_primary_large_color_bg_active = "#b32c3a";
@@ -365,7 +365,7 @@ export const button_icon_primary_large_color_text_active = "#ffffff";
 export const button_icon_primary_large_color_text_disable = "#a0a2ab";
 export const button_icon_primary_large_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"24","fontWeight":"500"};
 export const button_icon_primary_large_size_border_radius_default = "12px";
-export const button_icon_primary_large_size_padding_default = {"top":"12px","right":"20px","bottom":"12px","left":"20px"};
+export const button_icon_primary_large_size_padding_default = {"top":"12px","right":"12px","bottom":"12px","left":"12px"};
 export const button_icon_secondary_small_color_bg_normal = "#eeeff2";
 export const button_icon_secondary_small_color_bg_hover = "#e8e9ed";
 export const button_icon_secondary_small_color_bg_active = "#d0d1d7";
