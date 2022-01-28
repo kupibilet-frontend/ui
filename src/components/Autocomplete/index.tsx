@@ -68,11 +68,10 @@ interface TAutosuggestInstance extends ReactAutosuggest {
 }
 
 const getFirstSuggestion = ({ suggestions, multiSection }: TProps) => {
-  let [suggestion] = suggestions
+  let [suggestion] = suggestions as TSuggestion[]
   if (multiSection && suggestion) {
     // destructuring dosn't work for assignment in babel
     // eslint-disable-next-line prefer-destructuring
-    // @ts-ignore
     suggestion = suggestion[0] as TSuggestion
   }
 
