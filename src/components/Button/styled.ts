@@ -66,9 +66,9 @@ function calculateButtonPadding({
   hasLeftIcon,
   hasRightIcon,
 }: TCalculateButtonPadding) {
-  const buttonDefaultPadding = theme.button[`button_default_${variant}_${size}_size_padding_default`]
-  const buttonWithIconPadding = theme.button[`button_with_icon_${variant}_${size}_size_padding_default`]
-  const buttonIconPadding = theme.button[`button_icon_${variant}_${size}_size_padding_default`]
+  const buttonDefaultPadding = theme.button[`text_button_${variant}_${size}_size_padding_default`]
+  const buttonWithIconPadding = theme.button[`text_button_with_icon_${variant}_${size}_size_padding_default`]
+  const buttonIconPadding = theme.button[`icon_button_${variant}_${size}_size_padding_default`]
 
   let paddingTokens = buttonDefaultPadding
 
@@ -96,7 +96,7 @@ function calculateTextPadding({
   hasRightIcon,
 }: TCalculateTextPadding) {
   const hasIcon = hasLeftIcon || hasRightIcon
-  const buttonWithIconPadding = theme.button[`button_with_icon_${variant}_${size}_size_padding_default`]
+  const buttonWithIconPadding = theme.button[`text_button_with_icon_${variant}_${size}_size_padding_default`]
   const innerPadding = hasIcon ? buttonWithIconPadding.innerHorisontal : 0
 
   return `0 ${innerPadding} 0 ${innerPadding}`
@@ -108,7 +108,7 @@ function calculateBorderRadius({
   theme,
   variant,
 }: TCalculateBorderRadius): string {
-  const radius = theme.button[`button_default_${variant}_${size}_size_border_radius_default`]
+  const radius = theme.button[`text_button_${variant}_${size}_size_border_radius_default`]
 
   if (neighboringInGroup === 'both') {
     return ''
@@ -129,18 +129,18 @@ function getButtonColor({
   state,
 }: TGetButtonColor): string {
   if (disabled) {
-    return theme.button[`button_default_${variant}_${size}_color_text_disable`]
+    return theme.button[`text_button_${variant}_${size}_color_text_disable`]
   }
 
   if (state === 'hover') {
-    return theme.button[`button_default_${variant}_${size}_color_text_hover`]
+    return theme.button[`text_button_${variant}_${size}_color_text_hover`]
   }
 
   if (state === 'active') {
-    return theme.button[`button_default_${variant}_${size}_color_text_active`]
+    return theme.button[`text_button_${variant}_${size}_color_text_active`]
   }
 
-  return theme.button[`button_default_${variant}_${size}_color_text_normal`]
+  return theme.button[`text_button_${variant}_${size}_color_text_normal`]
 }
 
 function calculateMargin({
@@ -153,9 +153,9 @@ function calculateMargin({
 }: TCalculateMargin) {
   if (variant !== 'link') return
 
-  const buttonDefaultPadding = theme.button[`button_default_${variant}_${size}_size_padding_default`]
-  const buttonWithIconPadding = theme.button[`button_with_icon_${variant}_${size}_size_padding_default`]
-  const buttonIconPadding = theme.button[`button_icon_${variant}_${size}_size_padding_default`]
+  const buttonDefaultPadding = theme.button[`text_button_${variant}_${size}_size_padding_default`]
+  const buttonWithIconPadding = theme.button[`text_button_with_icon_${variant}_${size}_size_padding_default`]
+  const buttonIconPadding = theme.button[`icon_button_${variant}_${size}_size_padding_default`]
 
   let paddingTokens = buttonDefaultPadding
 
@@ -181,18 +181,18 @@ function getButtonBackground({
   state,
 }: TGetButtonBackground): string {
   if (disabled) {
-    return theme.button[`button_default_${variant}_${size}_color_bg_disable`]
+    return theme.button[`text_button_${variant}_${size}_color_bg_disable`]
   }
 
   if (state === 'hover') {
-    return theme.button[`button_default_${variant}_${size}_color_bg_hover`]
+    return theme.button[`text_button_${variant}_${size}_color_bg_hover`]
   }
 
   if (state === 'active') {
-    return theme.button[`button_default_${variant}_${size}_color_bg_active`]
+    return theme.button[`text_button_${variant}_${size}_color_bg_active`]
   }
 
-  return theme.button[`button_default_${variant}_${size}_color_bg_normal`]
+  return theme.button[`text_button_${variant}_${size}_color_bg_normal`]
 }
 
 interface TStyledButtonProps {
@@ -208,13 +208,13 @@ interface TStyledButtonProps {
 
 export const StyledButton = styled.button<TStyledButtonProps>`
   ${control}
-  display: inline-block;
+  display: inline-flex;
   color: ${getButtonColor};
   background: ${getButtonBackground};
 
-  font-size: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].size}px;
-  font-weight: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].fontWeight};
-  line-height: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].lineHeight}px;
+  font-size: ${({ theme, variant, size }) => theme.button[`text_button_${variant}_${size}_typography_default_default`].size}px;
+  font-weight: ${({ theme, variant, size }) => theme.button[`text_button_${variant}_${size}_typography_default_default`].fontWeight};
+  line-height: ${({ theme, variant, size }) => theme.button[`text_button_${variant}_${size}_typography_default_default`].lineHeight}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
