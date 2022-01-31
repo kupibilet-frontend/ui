@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import icons from '@kupibilet/icons/dist/sprite.json'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import { Story } from '@storybook/react'
+import * as colorTokensLight from 'components/ThemeProvider/tokens/light/color'
 import Icon, { TIconProps } from './index'
 import { ICON_SIZES } from './consts'
 
@@ -25,7 +25,7 @@ const Default: Story<TIconProps> = Template.bind({})
 Default.args = {
   name: 'checkmark',
   size: ICON_SIZES.large,
-  fill: COLOR_NAMES.colorTextPrimary,
+  fill: 'colorTextAccentDefault',
   striked: false,
   paid: false,
   rotate: false,
@@ -45,7 +45,7 @@ export const AllIcons = (): JSX.Element => {
           <Icon
             name={icon}
             size={ICON_SIZES.large}
-            fill={COLOR_NAMES.colorTextPrimary}
+            fill="colorTextPrimaryNormal"
             striked={false}
             paid={false}
             rotate={false}
@@ -72,7 +72,7 @@ export default {
       control: 'select',
     },
     fill: {
-      options: COLOR_NAMES,
+      options: Object.keys(colorTokensLight),
       control: 'select',
     },
   },

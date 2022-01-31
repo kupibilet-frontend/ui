@@ -57,7 +57,7 @@ const defaultInput = (props: any) => (
       <Icon
         name="angle"
         rotate={props.isOpen}
-        fill={COLOR_NAMES.misc500}
+        fill="misc500"
       />
     }
   />
@@ -70,7 +70,7 @@ const defaultRFInput = (props: any) => (
       <Icon
         name="angle"
         rotate={props.isOpen}
-        fill={COLOR_NAMES.misc500}
+        fill="misc500"
       />
     }
   />

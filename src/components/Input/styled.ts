@@ -87,7 +87,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   padding-right: ${props.rightIcon ? '0' : `${SIZE[props.inputSize]}px`};
   
   font-size: ${TYPOGRAPHY[props.inputSize]}px;
-  color: ${props.theme.color.colorTextPrimary};
+  color: ${props.theme.color.colorTextPrimaryNormal};
 
   background-color: transparent;
   
@@ -100,7 +100,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   ${getInputBorderRadius(props.neighboringInGroup, props.inputSize)}
 
   &::placeholder {
-    color: ${({ theme }) => theme.color.colorTextPlaceholder};
+    color: ${({ theme }) => theme.color.colorTextPlaceholderDefault};
   }
 
   &:focus {
@@ -108,9 +108,9 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   }
 
   &:disabled {
-    color: ${({ theme }) => theme.color.colorTextDisabled};
+    color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
     &::placeholder {
-      color: ${({ theme }) => theme.color.colorTextDisabled};
+      color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
   }
   }
   `
@@ -144,11 +144,11 @@ interface TInputWrapperProps {
 function getInputBorderColor(props: TInputWrapperProps) {
   const { error, active, theme, disabled } = props
 
-  if (active) return theme.color.colorBorderFocus
-  if (error) return theme.color.colorBorderDanger
-  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (active) return theme.color.colorBorderPrimaryActive
+  if (error) return theme.color.colorBorderDangerNormal
+  if (disabled) return theme.color.colorBgSecondaryDisable
 
-  return theme.color.colorBorderPrimary
+  return theme.color.colorBorderPrimaryNormal
 }
 
 
@@ -158,10 +158,10 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.color.colorBgPrimary};
+  background-color: ${({ theme }) => theme.color.colorBgPrimaryNormal};
 
   ${({ disabled, theme }) => disabled && `
-    background-color: ${theme.color.colorBgSecondaryDisabled};
+    background-color: ${theme.color.colorBgSecondaryDisable};
     pointer-events: none;
   `}
 
@@ -184,7 +184,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   transition-property: border-color;
 
   &:hover {
-    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.colorBorderHover};
+    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.colorBorderPrimaryHover};
     z-index: 1;
   }
 

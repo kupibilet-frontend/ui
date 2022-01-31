@@ -1,16 +1,19 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, DefaultTheme } from 'styled-components'
 import Text from 'components/Typography/Text'
 import { queries } from 'utils/media-queries'
 import { getPopoverArrow } from 'utils/getPopoverArrow'
-import { color } from 'components/ThemeProvider/theme'
 import {
   TPopoverBackgroundProps,
   TPopoverIconProps,
 } from './types'
 
-const iconSrc = getPopoverArrow(color.colorTextContrast)
+interface TGetBackgroundImage {
+  theme: DefaultTheme,
+}
 
-const getBackgroundImage = () => {
+const getBackgroundImage = ({ theme }: TGetBackgroundImage) => {
+  const iconSrc = getPopoverArrow(theme.color.colorTextContrastDefault)
+
   if (iconSrc) {
     return `background-image: ${iconSrc}`
   }
@@ -72,8 +75,8 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   flex-grow: 1;
   min-width: 240px;
   max-width: ${({ size }) => POPOVER_SIZES[size]};
-  background: ${({ theme }) => theme.color.colorBgContrast};
-  color: ${({ theme }) => theme.color.colorTextContrast};
+  background: ${({ theme }) => theme.color.colorBgContrastNormal};
+  color: ${({ theme }) => theme.color.colorTextContrastDefault};
   border-radius: 6px;
   padding: 12px;
   display: flex;
