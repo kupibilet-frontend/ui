@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 31 Jan 2022 09:54:02 GMT
+ * Generated on Mon, 31 Jan 2022 13:13:36 GMT
  */
 
 export const icon_button_primary_small_color_bg_normal = "#fa6258";

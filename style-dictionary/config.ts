@@ -1,62 +1,108 @@
 const StyleDictionary = require("style-dictionary");
 
-const buttonFilter = (token) => {
-  const buttonTokenCategories = ['IconButton', 'TextButton', 'TextButtonWithIcon']
-  return buttonTokenCategories.includes(token.attributes.category)
+const transforms = {
+  color: ["attribute/cti", "name/cti/camel", "color/css"],
+  component: ["attribute/cti", "name/cti/snake", "time/seconds", "content/icon", "size/px", "color/css"]
 }
 
+const destinationRoot = "src/components/ThemeProvider/tokens/"
+const source = {
+  base: `./style-dictionary/tokens/**/!(*-dark).json5`,
+  dark: `./style-dictionary/tokens/**/!(color|*.).json5`
+}
+
+StyleDictionary.registerFilter({
+  name: "isButton",
+  matcher: function (prop) {
+    const buttonTokenCategories = ['IconButton', 'TextButton', 'TextButtonWithIcon']
+    return buttonTokenCategories.includes(prop.attributes.category)
+  },
+});
+
+
+// light color tokens
 StyleDictionary.extend({
-    source: [
-      `./style-dictionary/tokens/**/!(*-dark).json5`
-    ],
-    platforms: {
-      js: {
-        transforms: ["attribute/cti", "name/cti/snake", "time/seconds", "content/icon", "size/px", "color/css"],
-        files: [
-          {
-            destination: "src/components/ThemeProvider/tokens/light/button.ts",
-            format: "javascript/es6",
-            filter: buttonFilter
+  source: [
+    source.base
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.color,
+      files: [
+        {
+          destination: `${destinationRoot}/light/color.ts`,
+          format: "javascript/es6",
+          filter: {
+              attributes: {
+                  category: "color",
+              }
           },
-          {
-            destination: "src/components/ThemeProvider/tokens/light/color.ts",
-            format: "javascript/es6",
-            filter: {
-                attributes: {
-                    category: "color",
-                }
-            },
-          },
-        ],
-      },
+        },
+      ],
     },
-  }).buildAllPlatforms();
+  },
+}).buildAllPlatforms();
 
-  const properties = [`color`];
 
-  StyleDictionary.extend({
-    source: [
-      `./style-dictionary/tokens/**/!(${properties.join(`|*.`)}).json5`
-    ],
-    platforms: {
-      js: {
-        transforms: ["attribute/cti", "name/cti/snake", "time/seconds", "content/icon", "size/px", "color/css"],
-        files: [
-          {
-            destination: "src/components/ThemeProvider/tokens/dark/color.ts",
-            format: "javascript/es6",
-            filter: {
-                attributes: {
-                    category: "color",
-                }
-            },
+// dark color tokens
+StyleDictionary.extend({
+  source: [
+    source.dark
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.color,
+      files: [
+        {
+          destination: `${destinationRoot}/dark/color.ts`,
+          format: "javascript/es6",
+          filter: {
+              attributes: {
+                  category: "color",
+              }
           },
-          {
-            destination: "src/components/ThemeProvider/tokens/dark/button.ts",
-            format: "javascript/es6",
-            filter: buttonFilter
-          },
-        ],
-      },
+        },
+      ],
     },
-  }).buildAllPlatforms();
+  },
+}).buildAllPlatforms();
+
+
+// light components tokens
+StyleDictionary.extend({
+  source: [
+    source.base
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/light/button.ts`,
+          format: "javascript/es6",
+          filter: "isButton"
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms();
+
+
+// dark components tokens
+StyleDictionary.extend({
+  source: [
+    source.dark
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/dark/button.ts`,
+          format: "javascript/es6",
+          filter: "isButton"
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms();
