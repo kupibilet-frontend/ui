@@ -36,8 +36,6 @@ const linkStyles = css`
   align-items: center;
   color: ${getLinkColor};
   cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
   text-decoration: ${({ withUnderline }) => (withUnderline ? 'underline' : 'none')};
   transition-property: color;
 

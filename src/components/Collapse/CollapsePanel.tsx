@@ -22,6 +22,7 @@ const PanelHeaderText = styled(H4)`
   font-weight: 500;
   user-select: none;
   color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
+  padding-right: 16px;
 `
 
 const CollapseButton = styled.div<{ isHover: boolean, isActive: boolean }>`
@@ -50,7 +51,7 @@ const CollapseButtonIcon = styled(Icon)`
   display: block;
 `
 
-const StyledPanelContent = styled.div`
+export const StyledPanelContent = styled.div`
   color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
   border-bottom: 1px solid ${({ theme }) => theme.color.misc200};
 `
