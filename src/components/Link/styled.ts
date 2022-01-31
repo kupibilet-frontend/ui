@@ -57,4 +57,5 @@ export {
   getLinkColor,
   getLinkHoverColor,
   linkStyles,
+  TLinkProps,
 }
