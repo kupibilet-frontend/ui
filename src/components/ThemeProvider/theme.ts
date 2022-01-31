@@ -1,11 +1,12 @@
 import { DefaultTheme } from 'styled-components'
 import { queries } from 'utils/media-queries'
 import { COLOR_NAMES, TColor } from './types'
-import * as buttonTokens from './tokens/button'
+import * as buttonTokensLight from './tokens/light/button'
+import * as buttonTokensDark from './tokens/dark/button'
 
 
 export const color: TColor = {
-  // old color sheme
+  // old color scheme
   [COLOR_NAMES.primary100]: '#F5F5F7',
   [COLOR_NAMES.primary200]: '#F5F5F7',
   [COLOR_NAMES.primary300]: '#D0D1D7',
@@ -112,11 +113,17 @@ export const font = `
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 `
-const defaultTheme: DefaultTheme = {
+
+const lightTheme: DefaultTheme = {
   font,
   color,
-  button: buttonTokens,
   queries,
+  button: buttonTokensLight,
 }
 
-export { defaultTheme }
+const darkTheme: DefaultTheme = {
+  ...lightTheme,
+  button: buttonTokensDark,
+}
+
+export { lightTheme, darkTheme }
