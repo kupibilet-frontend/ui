@@ -2,7 +2,6 @@ import React, { useCallback } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import _get from 'lodash/get'
 import Icon from 'components/Icon'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import {
   TLabelPlacement,
   CheckboxLabel,

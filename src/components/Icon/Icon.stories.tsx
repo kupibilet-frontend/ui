@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import icons from '@kupibilet/icons/dist/sprite.json'
 import { Story } from '@storybook/react'
-import * as colorTokensLight from 'components/ThemeProvider/tokens/light/color'
+import { colorsLight } from 'components/ThemeProvider/colors'
 import Icon, { TIconProps } from './index'
 import { ICON_SIZES } from './consts'
 
@@ -72,7 +72,7 @@ export default {
       control: 'select',
     },
     fill: {
-      options: Object.keys(colorTokensLight),
+      options: Object.keys(colorsLight),
       control: 'select',
     },
   },
