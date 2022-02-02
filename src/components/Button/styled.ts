@@ -209,6 +209,7 @@ interface TStyledButtonProps {
 export const StyledButton = styled.button<TStyledButtonProps>`
   ${control}
   display: inline-flex;
+  align-items: center;
   color: ${getButtonColor};
   background: ${getButtonBackground};
 
