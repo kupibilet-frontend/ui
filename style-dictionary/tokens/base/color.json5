@@ -76,47 +76,47 @@
                     "value":"rgba(238, 239, 242, 1)"
                 }
             },
-            "status-default": {
+            "statusDefault": {
                 "normal":{
                     "value":"rgba(245, 245, 247, 1)"
                 }
             },
-            "status-info": {
+            "statusInfo": {
                 "normal":{
                     "value":"rgba(235, 243, 255, 1)"
                 }
             },
-            "status-danger": {
+            "statusDanger": {
                 "normal":{
                     "value": "rgba(252, 237, 232, 1)"
                 }
             },
-            "status-warning": {
+            "statusWarning": {
                 "normal":{
                     "value": "rgba(255, 246, 235, 1)"
                 }
             },
-            "status-help": {
+            "statusHelp": {
                 "normal":{
                     "value": "rgba(242, 235, 255, 1)"
                 }
             },
-            "status-sucsess": {
+            "statusSucsess": {
                 "normal":{
                     "value": "rgba(244, 250, 219, 1)"
                 }
             },
-            "bonus-default": {
+            "bonusDefault": {
                 "normal":{
                     "value": "rgba(250, 98, 87, 1)"
                 }
             },
-            "bonus-gold": {
+            "bonusGold": {
                 "normal":{
                     "value": "rgba(252, 133, 24, 1)"
                 }
             },
-            "bonus-platinum": {
+            "bonusPlatinum": {
                 "normal":{
                     "value": "rgba(19, 48, 109, 1)"
                 }
@@ -141,6 +141,9 @@
                     "value": "rgba(16, 16, 20, 1)"
                 },
                 "hover": {
+                    "value": "rgba(81, 82, 90, 1)"
+                },
+                "active": {
                     "value": "rgba(81, 82, 90, 1)"
                 },
                 "disable": {
@@ -187,9 +190,12 @@
                     "value": "rgba(222, 53, 11, 1)"
                 }
             },
-            "static-white": {
-                "default": {
+            "staticWhite": {
+                "normal": {
                     "value": "rgba(255, 255, 255, 1)"
+                },
+                "hover": {
+                    "value": "rgba(255, 255, 255, 0.75)"
                 }
             }
             

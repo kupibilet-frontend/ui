@@ -1,20 +1,20 @@
-const StyleDictionary = require("style-dictionary");
+const StyleDictionary = require('style-dictionary');
 
 const transforms = {
-  color: ["attribute/cti", "name/cti/camel", "color/css"],
-  component: ["attribute/cti", "name/cti/snake", "time/seconds", "content/icon", "size/px", "color/css"]
+  color: ['attribute/cti', 'name/cti/camel', 'color/css'],
+  component: ['attribute/cti', 'name/cti/snake', 'time/seconds', 'content/icon', 'size/px', 'color/css']
 }
 
-const destinationRoot = "src/components/ThemeProvider/tokens/"
+const destinationRoot = 'src/components/ThemeProvider/tokens'
 const source = {
-  base: `./style-dictionary/tokens/**/!(*-dark).json5`,
-  dark: `./style-dictionary/tokens/**/!(color|*.).json5`
+  base: './style-dictionary/tokens/**/!(*-dark).json5',
+  dark: './style-dictionary/tokens/**/!(color|*.).json5'
 }
 
 StyleDictionary.registerFilter({
   name: "isButton",
   matcher: function (prop) {
-    const buttonTokenCategories = ['IconButton', 'TextButton', 'TextButtonWithIcon']
+    const buttonTokenCategories = ['buttonComposite', 'buttonDefault', 'buttonIcon']
     return buttonTokenCategories.includes(prop.attributes.category)
   },
 });

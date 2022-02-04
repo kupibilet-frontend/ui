@@ -439,6 +439,18 @@
                         }
                     }
                 }
+            },
+            "tagLable":{
+                "medium":{
+                    "default":{
+                        "value": {
+                            "fontFamily": "{font.family.medium.default.value}",
+                            "size": "12",
+                            "lineHeight": "18",
+                            "fontWeight": "500"
+                        }
+                    }
+                }
             }
         }
     }
