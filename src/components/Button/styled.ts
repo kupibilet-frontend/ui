@@ -245,6 +245,10 @@ export const StyledButton = styled.button<TStyledButtonProps>`
       cursor: pointer;
       background: ${getButtonBackground({ ...props, state: 'hover' })};
       color: ${getButtonColor({ ...props, state: 'hover' })};
+
+      .icon-inherit-color {
+        fill: ${getButtonColor({ ...props, state: 'hover' })};
+      }
     `}
   }
 
@@ -252,6 +256,10 @@ export const StyledButton = styled.button<TStyledButtonProps>`
     ${(props) => !props.disabled && `
       background: ${getButtonBackground({ ...props, state: 'active' })};
       color: ${getButtonColor({ ...props, state: 'active' })};
+
+      .icon-inherit-color {
+        fill: ${getButtonColor({ ...props, state: 'active' })};
+      }
     `}
   }
 `
