@@ -13,6 +13,7 @@ const Button = ({
   leftIcon = null,
   rightIcon = null,
   isBlock = false,
+  withTextUnderline = false,
   neighboringInGroup = null,
   ...restProps
 }: TButtonProps): JSX.Element => (
@@ -46,6 +47,7 @@ const Button = ({
           size={size}
           hasLeftIcon={Boolean(leftIcon)}
           hasRightIcon={Boolean(rightIcon)}
+          withTextUnderline={withTextUnderline}
         >
           { children }
         </StyledButtonText>

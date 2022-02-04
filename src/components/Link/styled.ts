@@ -37,6 +37,7 @@ const linkStyles = css`
   color: ${getLinkColor};
   cursor: pointer;
   text-decoration: ${({ withUnderline }) => (withUnderline ? 'underline' : 'none')};
+  text-decoration-skip-ink: none;
   transition-property: color;
 
   .icon-inherit-color {

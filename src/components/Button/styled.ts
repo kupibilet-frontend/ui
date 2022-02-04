@@ -151,7 +151,7 @@ function calculateMargin({
   hasLeftIcon,
   hasRightIcon,
 }: TCalculateMargin) {
-  if (variant !== 'link') return
+  if (variant !== 'text') return
 
   const buttonDefaultPadding = theme.button[`button_default_${variant}_${size}_size_padding_default`]
   const buttonWithIconPadding = theme.button[`button_composite_${variant}_${size}_size_padding_default`]
@@ -262,13 +262,18 @@ interface TStyledButtonTextProps {
   size: TButtonSize,
   hasLeftIcon: boolean,
   hasRightIcon: boolean,
+  withTextUnderline: boolean,
 }
 
 export const StyledButtonText = styled.span<TStyledButtonTextProps>`
   display: inline-block;
   vertical-align: top;
-
   padding: ${({ theme, variant, size, hasLeftIcon, hasRightIcon }) => calculateTextPadding({ theme, variant, size, hasLeftIcon, hasRightIcon })};
+  text-decoration-skip-ink: none;
+
+  ${({ withTextUnderline }) => withTextUnderline && `
+    text-decoration: underline;
+  `}
 `
 
 interface TIconWrapProps {

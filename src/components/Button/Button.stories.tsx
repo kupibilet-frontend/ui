@@ -18,7 +18,7 @@ const Template: Story<TButtonProps> = (args) => (
 const DesignSystemDemo: Story<TButtonProps> = () => (
   <>
     <Button>
-    Авиабилеты
+      Авиабилеты
     </Button>
 
     <Button variant="secondary">

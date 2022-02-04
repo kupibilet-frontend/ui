@@ -2,7 +2,7 @@ export type TButtonSize = 'small' | 'medium' | 'large'
 
 export type TNeighboringInGroupType = 'both' | 'left' | 'right' | null
 
-export type TButtonVariant = 'primary' | 'secondary' | 'contrast' | 'link' | 'help'
+export type TButtonVariant = 'primary' | 'secondary' | 'contrast' | 'link' | 'help' | 'text'
 
 export interface TButtonProps {
   size?: TButtonSize,
@@ -19,4 +19,5 @@ export interface TButtonProps {
   onClick?: (event: Event) => void,
   type?: string,
   tabIndex?: number,
+  withTextUnderline?: boolean,
 }
