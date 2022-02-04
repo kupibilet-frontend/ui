@@ -1,13 +1,13 @@
 const StyleDictionary = require('style-dictionary');
 
 const transforms = {
-  color: ['attribute/cti', 'name/cti/camel', 'color/css'],
+  color: ['attribute/cti', 'name/cti/camel', 'color/css'], 
   component: ['attribute/cti', 'name/cti/snake', 'time/seconds', 'content/icon', 'size/px', 'color/css']
 }
 
 const destinationRoot = 'src/components/ThemeProvider/tokens'
 const source = {
-  base: './style-dictionary/tokens/**/!(*-dark).json5',
+  common: './style-dictionary/tokens/**/!(*-dark).json5',
   dark: './style-dictionary/tokens/**/!(color|*.).json5'
 }
 
@@ -19,11 +19,34 @@ StyleDictionary.registerFilter({
   },
 });
 
+// typography tokens
+StyleDictionary.extend({
+  source: [
+    source.common
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/typography.ts`,
+          format: "javascript/es6",
+          filter: {
+              attributes: {
+                  category: "typography",
+              }
+          },
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms();
+
 
 // light color tokens
 StyleDictionary.extend({
   source: [
-    source.base
+    source.common
   ],
   platforms: {
     js: {
@@ -71,7 +94,7 @@ StyleDictionary.extend({
 // light components tokens
 StyleDictionary.extend({
   source: [
-    source.base
+    source.common
   ],
   platforms: {
     js: {

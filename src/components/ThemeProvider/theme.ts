@@ -2,6 +2,8 @@ import { DefaultTheme } from 'styled-components'
 import { queries } from 'utils/media-queries'
 import { colorsLight, colorsDark } from './colors'
 
+import * as typographyTokens from './tokens/typography'
+
 import * as buttonTokensLight from './tokens/light/button'
 import * as buttonTokensDark from './tokens/dark/button'
 
@@ -13,8 +15,9 @@ export const font = `
 
 const lightTheme: DefaultTheme = {
   font,
-  color: colorsLight,
+  typography: typographyTokens,
   queries,
+  color: colorsLight,
   button: buttonTokensLight,
 }
 
