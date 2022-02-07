@@ -9,7 +9,7 @@ export type TButtonVariant = 'primary' | 'secondary' | 'contrast' | 'link' | 'he
 export interface TButtonProps {
   size?: TButtonSize,
   variant?: TButtonVariant,
-  children?: React.ReactElement | React.ReactChild | string,
+  children?: React.ReactNode,
   disabled?: boolean,
   icon?: React.ReactNode,
   leftIcon?: React.ReactNode,
