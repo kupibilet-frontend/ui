@@ -5,6 +5,7 @@ import {
   TNeighboringInGroupType,
   TButtonVariant,
   TButtonSize,
+  TIconPosition,
 } from './types'
 
 type TState = 'hover' | 'active'
@@ -58,6 +59,13 @@ interface TCalculateMargin {
   hasRightIcon: boolean,
 }
 
+interface TCalculateIconMargin {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  size: TButtonSize,
+  iconPosition?: TIconPosition,
+}
+
 function calculateButtonPadding({
   variant,
   theme,
@@ -86,20 +94,6 @@ function calculateButtonPadding({
     padding-right: ${paddingTokens.right}
     padding-left: ${paddingTokens.left}
   `
-}
-
-function calculateTextPadding({
-  variant,
-  theme,
-  size,
-  hasLeftIcon,
-  hasRightIcon,
-}: TCalculateTextPadding) {
-  const hasIcon = hasLeftIcon || hasRightIcon
-  const buttonWithIconPadding = theme.button[`button_composite_${variant}_${size}_size_padding_default`]
-  const innerPadding = hasIcon ? buttonWithIconPadding.innerHorisontal : 0
-
-  return `0 ${innerPadding} 0 ${innerPadding}`
 }
 
 function calculateBorderRadius({
@@ -195,6 +189,30 @@ function getButtonBackground({
   return theme.button[`button_default_${variant}_${size}_color_bg_normal`]
 }
 
+function calculateIconMargin({
+  variant,
+  theme,
+  size,
+  iconPosition,
+}: TCalculateIconMargin) {
+  if (!iconPosition) return
+
+  const buttonWithIconPadding = theme.button[`button_composite_${variant}_${size}_size_padding_default`]
+  const innerMargin = buttonWithIconPadding.innerHorisontal
+
+  if (iconPosition === 'left') {
+    return `
+      margin-right: ${innerMargin}
+    `
+  }
+
+  if (iconPosition === 'right') {
+    return `
+      margin-left: ${innerMargin}
+    `
+  }
+}
+
 interface TStyledButtonProps {
   size: TButtonSize,
   isBlock: boolean,
@@ -268,15 +286,12 @@ export const StyledButtonLink = StyledButton.withComponent('a')
 interface TStyledButtonTextProps {
   variant: TButtonVariant,
   size: TButtonSize,
-  hasLeftIcon: boolean,
-  hasRightIcon: boolean,
   withTextUnderline: boolean,
 }
 
 export const StyledButtonText = styled.span<TStyledButtonTextProps>`
   display: inline-block;
   vertical-align: top;
-  padding: ${({ theme, variant, size, hasLeftIcon, hasRightIcon }) => calculateTextPadding({ theme, variant, size, hasLeftIcon, hasRightIcon })};
   text-decoration-skip-ink: none;
 
   ${({ withTextUnderline }) => withTextUnderline && `
@@ -286,6 +301,8 @@ export const StyledButtonText = styled.span<TStyledButtonTextProps>`
 
 interface TIconWrapProps {
   size: TButtonSize,
+  variant: TButtonVariant,
+  iconPosition?: TIconPosition,
 }
 
 export const IconWrap = styled.span<TIconWrapProps>`
@@ -293,4 +310,8 @@ export const IconWrap = styled.span<TIconWrapProps>`
   vertical-align: middle;
   justify-content: center;
   align-items: center;
+
+  ${({ size, variant, theme, iconPosition }) => (
+    calculateIconMargin({ size, variant, theme, iconPosition })
+  )};
 `
