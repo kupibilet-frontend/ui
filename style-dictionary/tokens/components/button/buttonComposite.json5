@@ -109,7 +109,7 @@
                                 "right": "{size.padding.12.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
                                 "left": "{size.padding.12.default.value}",
-                                "innerHorisontal": "{size.padding.12.default.value}"
+                                "innerHorisontal": "{size.padding.8.default.value}"
                             }
                         }
                     }
@@ -282,7 +282,7 @@
                                 "right": "{size.padding.12.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
                                 "left": "{size.padding.12.default.value}",
-                                "innerHorisontal": "{size.padding.12.default.value}"
+                                "innerHorisontal": "{size.padding.8.default.value}"
                             }
                         }
                     }
@@ -455,7 +455,7 @@
                                 "right": "{size.padding.12.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
                                 "left": "{size.padding.12.default.value}",
-                                "innerHorisontal": "{size.padding.12.default.value}"
+                                "innerHorisontal": "{size.padding.8.default.value}"
                             }
                         }
                     }
@@ -628,7 +628,7 @@
                                 "right": "{size.padding.16.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
                                 "left": "{size.padding.16.default.value}",
-                                "innerHorisontal": "{size.padding.16.default.value}"
+                                "innerHorisontal": "{size.padding.8.default.value}"
                             }
                         }
                     }
@@ -801,7 +801,7 @@
                                 "right": "{size.padding.12.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
                                 "left": "{size.padding.12.default.value}",
-                                "innerHorisontal": "{size.padding.12.default.value}"
+                                "innerHorisontal": "{size.padding.8.default.value}"
                             }
                         }
                     }
@@ -974,7 +974,7 @@
                                 "right": "{size.padding.0.default.value}",
                                 "bottom": "{size.padding.0.default.value}",
                                 "left": "{size.padding.0.default.value}",
-                                "innerHorisontal": "{size.padding.12.default.value}"
+                                "innerHorisontal": "{size.padding.8.default.value}"
                             }
                         }
                     }

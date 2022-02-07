@@ -155,6 +155,11 @@
                     "value": "rgba(208, 209, 215, 1)"
                 }
             },
+            "description": {
+                "default": {
+                    "value": "rgba(181, 182, 192, 1)"
+                }
+            },
             "placeholder": {
                 "default": {
                     "value": "rgba(129, 130, 140, 1)"

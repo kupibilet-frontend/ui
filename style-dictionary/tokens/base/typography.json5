@@ -396,7 +396,7 @@
                     }
                 }
             },
-            "form-item-label":{
+            "formItemLabel":{
                 "medium":{
                     "default":{
                         "value": {
@@ -440,7 +440,7 @@
                     }
                 }
             },
-            "tagLable":{
+            "tagLabel":{
                 "medium":{
                     "default":{
                         "value": {

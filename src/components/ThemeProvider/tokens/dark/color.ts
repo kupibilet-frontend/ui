@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 04 Feb 2022 13:45:02 GMT
+ * Generated on Mon, 07 Feb 2022 21:12:57 GMT
  */
 
 export const colorBgLayoutDefault = "#101014";
@@ -40,6 +40,7 @@ export const colorTextPrimaryHover = "#d0d1d7";
 export const colorTextPrimaryActive = "#d0d1d7";
 export const colorTextPrimaryDisable = "#51525a";
 export const colorTextSecondaryDefault = "#d0d1d7";
+export const colorTextDescriptionDefault = "#b5b6c0";
 export const colorTextPlaceholderDefault = "#81828c";
 export const colorTextContrastDefault = "#101014";
 export const colorTextAccentDefault = "#e45c52";
