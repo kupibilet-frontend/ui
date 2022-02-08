@@ -19,24 +19,25 @@ export type TVariant =
   | 'medium'
   | 'small'
 
-type TBold = '_bold' | '_normal' | ''
+type TBold = '_bold' | '_normal' | '_default'
 
 interface TProps {
   variant?: TVariant,
   color?: COLOR_NAMES,
   isBold?: boolean,
   tag?: keyof JSX.IntrinsicElements,
-  children: React.ReactNode,
+  children?: React.ReactNode,
   isMobile: boolean,
 }
 
 interface TStyledTypography {
   color: COLOR_NAMES,
-  tokenName:keyof typeof typographyTokens,
+  tokenName: keyof typeof typographyTokens,
 }
 
+type TVariantMapper = Record<TVariant, keyof JSX.IntrinsicElements>
 
-const VARIANTS_MAPPER = {
+const VARIANTS_MAPPER: TVariantMapper = {
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
@@ -51,18 +52,18 @@ const VARIANTS_MAPPER = {
   small: 'span',
 }
 
-const calculateTokenVariant = (variant: TVariant):string => {
+const calculateTokenVariant = (variant: TVariant) => {
   switch (variant) {
     case 'h1':
-      return 'headline_h1_default'
+      return 'headline_h1'
     case 'h2':
-      return 'headline_h2_default'
+      return 'headline_h2'
     case 'h3':
-      return 'headline_h3_default'
+      return 'headline_h3'
     case 'h4':
-      return 'headline_h4_default'
+      return 'headline_h4'
     case 'h5':
-      return 'headline_h5_default'
+      return 'headline_h5'
     case 'accent':
       return 'text_accent'
     case 'caption':
@@ -72,7 +73,7 @@ const calculateTokenVariant = (variant: TVariant):string => {
     case 'large':
       return 'text_large'
     case 'hero':
-      return 'headline_hero_default'
+      return 'headline_hero'
     case 'medium':
       return 'text_medium'
     case 'small':
@@ -85,17 +86,16 @@ const calculateTokenVariant = (variant: TVariant):string => {
 const calculateBold = (variant: TVariant, isBold: boolean): TBold => {
   const withoutBoldVariants = ['hero', 'h1', 'h2', 'h3', 'h4', 'h5']
 
-  if (!withoutBoldVariants.includes(variant) && isBold) {
-    return '_bold'
-  } else if (!withoutBoldVariants.includes(variant) && !isBold) {
-    return '_normal'
-  } else { return '' }
+  if (withoutBoldVariants.includes(variant)) return '_default'
+
+  if (isBold) return '_bold'
+
+  return '_normal'
 }
 
 const StyledTypography = styled.span<TStyledTypography>`
   color: ${({ theme, color }) => theme.color[color]};
   font-size: ${({ theme, tokenName }) => theme.typography[tokenName].size}px;
-  font-family: ${({ theme, tokenName }) => theme.typography[tokenName].fontFamily};
   font-weight: ${({ theme, tokenName }) => theme.typography[tokenName].fontWeight};
   line-height: ${({ theme, tokenName }) => theme.typography[tokenName].lineHeight}px;
 `
@@ -107,11 +107,11 @@ const Typography = ({
   tag,
   children,
   isMobile,
-}: TProps): JSX.Element => {
+}: TProps) => {
   const platform = isMobile ? 'mobile' : 'desktop'
   const tokenVariant = calculateTokenVariant(variant)
   const bold = calculateBold(variant, isBold)
-  const tokenName = `typography_${platform}_${tokenVariant}${bold}`
+  const tokenName = `typography_${platform}_${tokenVariant}${bold}` as const
 
   return (
     <StyledTypography
