@@ -47,7 +47,7 @@ const TypographyPreview: Story = () => (
       caption: Пример текста Text-Caption-Normal
     </Typography>
 
-    <Typography 
+    <Typography
       variant="caption"
       isBold
     >
