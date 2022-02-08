@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { withMedia2021 } from 'utils/media-queries'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
+import { TWithMediaProps } from 'utils/types'
 import * as typographyTokens from 'components/ThemeProvider/tokens/typography'
 
 
@@ -37,12 +38,12 @@ type TVAriaantToken =
   | 'text_small'
   | 'text_medium'
 
-interface TProps {
+interface TProps extends TWithMediaProps {
   variant?: TVariant,
   color?: COLOR_NAMES,
   isBold?: boolean,
   tag?: keyof JSX.IntrinsicElements,
-  children?: React.ReactNode,
+  children: React.ReactNode,
   isMobile: boolean,
 }
 
