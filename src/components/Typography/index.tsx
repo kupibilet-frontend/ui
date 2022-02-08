@@ -20,6 +20,22 @@ export type TVariant =
   | 'small'
 
 type TBold = '_bold' | '_normal' | '_default'
+type TTokenName = keyof typeof typographyTokens
+
+type TVAriaantToken =
+  | 'headline_h1'
+  | 'headline_h2'
+  | 'headline_h3'
+  | 'headline_h4'
+  | 'headline_h5'
+  | 'headline_hero'
+  | 'text_accent'
+  | 'text_caption'
+  | 'text_description'
+  | 'text_large'
+  | 'text_medium'
+  | 'text_small'
+  | 'text_medium'
 
 interface TProps {
   variant?: TVariant,
@@ -32,7 +48,7 @@ interface TProps {
 
 interface TStyledTypography {
   color: COLOR_NAMES,
-  tokenName: keyof typeof typographyTokens,
+  tokenName: TTokenName,
 }
 
 type TVariantMapper = Record<TVariant, keyof JSX.IntrinsicElements>
@@ -52,7 +68,7 @@ const VARIANTS_MAPPER: TVariantMapper = {
   small: 'span',
 }
 
-const calculateTokenVariant = (variant: TVariant) => {
+const calculateTokenVariant = (variant: TVariant): TVAriaantToken => {
   switch (variant) {
     case 'h1':
       return 'headline_h1'
@@ -111,7 +127,7 @@ const Typography = ({
   const platform = isMobile ? 'mobile' : 'desktop'
   const tokenVariant = calculateTokenVariant(variant)
   const bold = calculateBold(variant, isBold)
-  const tokenName = `typography_${platform}_${tokenVariant}${bold}` as const
+  const tokenName = `typography_${platform}_${tokenVariant}${bold}` as TTokenName
 
   return (
     <StyledTypography
