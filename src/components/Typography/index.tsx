@@ -47,7 +47,7 @@ interface TProps {
 }
 
 interface TStyledTypography {
-  color: COLOR_NAMES,
+  color?: COLOR_NAMES,
   tokenName: TTokenName,
 }
 
@@ -110,14 +110,14 @@ const calculateBold = (variant: TVariant, isBold: boolean): TBold => {
 }
 
 const StyledTypography = styled.span<TStyledTypography>`
-  color: ${({ theme, color }) => theme.color[color]};
+  color: ${({ theme, color }) => (color ? theme.color[color] : 'inherit')};
   font-size: ${({ theme, tokenName }) => theme.typography[tokenName].size}px;
   font-weight: ${({ theme, tokenName }) => theme.typography[tokenName].fontWeight};
   line-height: ${({ theme, tokenName }) => theme.typography[tokenName].lineHeight}px;
 `
 
 const Typography = ({
-  color = 'colorTextPrimaryNormal',
+  color,
   variant = 'medium',
   isBold = false,
   tag,

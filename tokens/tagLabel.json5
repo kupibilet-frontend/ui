@@ -1,5 +1,5 @@
 {
-    "tagLable":{
+    "tagLabel":{
         "warning":{
             "medium":{
                 "color":{
@@ -17,7 +17,7 @@
                 "typography": {
                     "default": {
                         "default": {
-                            "value": "{typography.component.tagLable.medium.default.value}"
+                            "value": "{typography.component.tagLabel.medium.default.value}"
                         }
                     }
                 },

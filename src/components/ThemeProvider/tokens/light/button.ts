@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 04 Feb 2022 13:45:02 GMT
+ * Generated on Tue, 08 Feb 2022 13:04:13 GMT
  */
 
 export const button_composite_primary_small_color_bg_normal = "#fa6258";
@@ -24,7 +24,7 @@ export const button_composite_primary_medium_color_text_active = "#ffffff";
 export const button_composite_primary_medium_color_text_disable = "#a0a2ab";
 export const button_composite_primary_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_composite_primary_medium_size_border_radius_default = "8px";
-export const button_composite_primary_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"12px"};
+export const button_composite_primary_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"8px"};
 export const button_composite_primary_large_color_bg_normal = "#fa6258";
 export const button_composite_primary_large_color_bg_hover = "#d74043";
 export const button_composite_primary_large_color_bg_active = "#b32c3a";
@@ -57,7 +57,7 @@ export const button_composite_secondary_medium_color_text_active = "#101014";
 export const button_composite_secondary_medium_color_text_disable = "#a0a2ab";
 export const button_composite_secondary_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_composite_secondary_medium_size_border_radius_default = "8px";
-export const button_composite_secondary_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"12px"};
+export const button_composite_secondary_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"8px"};
 export const button_composite_secondary_large_color_bg_normal = "#eeeff2";
 export const button_composite_secondary_large_color_bg_hover = "#e8e9ed";
 export const button_composite_secondary_large_color_bg_active = "#d0d1d7";
@@ -90,7 +90,7 @@ export const button_composite_text_medium_color_text_active = "#101014";
 export const button_composite_text_medium_color_text_disable = "#a0a2ab";
 export const button_composite_text_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_composite_text_medium_size_border_radius_default = "8px";
-export const button_composite_text_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"12px"};
+export const button_composite_text_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"8px"};
 export const button_composite_text_large_color_bg_normal = "rgba(0, 0, 0, 0)";
 export const button_composite_text_large_color_bg_hover = "#f6f7f8";
 export const button_composite_text_large_color_bg_active = "#f6f7f8";
@@ -123,7 +123,7 @@ export const button_composite_contrast_medium_color_text_active = "#ffffff";
 export const button_composite_contrast_medium_color_text_disable = "#a0a2ab";
 export const button_composite_contrast_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_composite_contrast_medium_size_border_radius_default = "8px";
-export const button_composite_contrast_medium_size_padding_default = {"top":"8px","right":"16px","bottom":"8px","left":"16px","innerHorisontal":"16px"};
+export const button_composite_contrast_medium_size_padding_default = {"top":"8px","right":"16px","bottom":"8px","left":"16px","innerHorisontal":"8px"};
 export const button_composite_contrast_large_color_bg_normal = "#212126";
 export const button_composite_contrast_large_color_bg_hover = "#3a3a41";
 export const button_composite_contrast_large_color_bg_active = "#101014";
@@ -156,7 +156,7 @@ export const button_composite_help_medium_color_text_active = "#ffffff";
 export const button_composite_help_medium_color_text_disable = "#a0a2ab";
 export const button_composite_help_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_composite_help_medium_size_border_radius_default = "8px";
-export const button_composite_help_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"12px"};
+export const button_composite_help_medium_size_padding_default = {"top":"8px","right":"12px","bottom":"8px","left":"12px","innerHorisontal":"8px"};
 export const button_composite_help_large_color_bg_normal = "#8d5fff";
 export const button_composite_help_large_color_bg_hover = "#6c45db";
 export const button_composite_help_large_color_bg_active = "#4e2fb7";
@@ -189,7 +189,7 @@ export const button_composite_link_medium_color_text_active = "#51525a";
 export const button_composite_link_medium_color_text_disable = "#a0a2ab";
 export const button_composite_link_medium_typography_default_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const button_composite_link_medium_size_border_radius_default = "8px";
-export const button_composite_link_medium_size_padding_default = {"top":"0px","right":"0px","bottom":"0px","left":"0px","innerHorisontal":"12px"};
+export const button_composite_link_medium_size_padding_default = {"top":"0px","right":"0px","bottom":"0px","left":"0px","innerHorisontal":"8px"};
 export const button_composite_link_large_color_bg_normal = "rgba(0, 0, 0, 0)";
 export const button_composite_link_large_color_bg_hover = "rgba(0, 0, 0, 0)";
 export const button_composite_link_large_color_bg_active = "rgba(0, 0, 0, 0)";

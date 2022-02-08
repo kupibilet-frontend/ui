@@ -1,12 +1,12 @@
 /**
  * Do not edit directly
- * Generated on Fri, 04 Feb 2022 13:45:02 GMT
+ * Generated on Tue, 08 Feb 2022 13:04:12 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"SuisseIntl-SemiBold","size":"48","lineHeight":"64","fontWeight":"600"};
 export const typography_desktop_headline_h1_default = {"fontFamily":"SuisseIntl-SemiBold","size":"36","lineHeight":"48","fontWeight":"600"};
 export const typography_desktop_headline_h2_default = {"fontFamily":"SuisseIntl-SemiBold","size":"28","lineHeight":"40","fontWeight":"600"};
-export const typography_desktop_headline_h3_default = {"fontFamily":"SuisseIntl-SemiBold","size":"22","lineHeight":"32"};
+export const typography_desktop_headline_h3_default = {"fontFamily":"SuisseIntl-SemiBold","size":"22","lineHeight":"32","fontWeight":"600"};
 export const typography_desktop_headline_h4_default = {"fontFamily":"SuisseIntl-SemiBold","size":"18","lineHeight":"28","fontWeight":"600"};
 export const typography_desktop_headline_h5_default = {"fontFamily":"SuisseIntl-SemiBold","size":"16","lineHeight":"24","fontWeight":"600"};
 export const typography_desktop_text_accent_normal = {"fontFamily":"SuisseIntl-Regular","size":"24","lineHeight":"36","fontWeight":"400"};
@@ -46,4 +46,4 @@ export const typography_component_form_item_label_medium_default = {"fontFamily"
 export const typography_component_form_item_label_large_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const typography_component_form_item_hint_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const typography_component_form_item_hint_large_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_component_tag_lable_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
+export const typography_component_tag_label_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
