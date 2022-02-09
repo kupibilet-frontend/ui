@@ -15,7 +15,7 @@ const TypographyPreview: Story = () => (
       color: 'black',
     }}
   >
-    <Typography variant="hero">
+    <Typography variant="hero" isBold>
       hero: Пример заголовка headline-hero-default
     </Typography>
 
