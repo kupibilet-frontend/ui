@@ -5,6 +5,7 @@ import { TWithMediaProps } from 'utils/types'
 import * as typographyTokens from 'components/ThemeProvider/tokens/typography'
 import { StyledTypography } from 'components/Typography/styled'
 
+
 export type TVariant =
   | 'h1'
   | 'h2'
