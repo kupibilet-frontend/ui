@@ -1,12 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import styled from 'styled-components'
 import Typography from '.'
 
-
-const StyledSmall = styled(Typography)`
-  text-align: end;
-`
 
 const TypographyPreview: Story = () => (
   <div
@@ -20,10 +15,6 @@ const TypographyPreview: Story = () => (
       color: 'black',
     }}
   >
-    <StyledSmall as="h2" variant="small">
-      Текст с as
-    </StyledSmall>
-
     <Typography variant="hero">
       hero: Пример заголовка headline-hero-default
     </Typography>

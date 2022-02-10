@@ -1,8 +1,7 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { borderRadiusLarge } from 'utils/borderRadius'
 import { queries2021 } from 'utils/media-queries'
 import Button from 'components/Button'
-import H4 from 'components/Typography/H4'
 import Icon from 'components/Icon'
 import { OVERLAY_Z_INDEX } from 'components/Overlay2021'
 import { getWidth, isCompact, isSetSize } from 'components/Modal/utils'
@@ -11,6 +10,20 @@ import { ModalSize } from 'components/Modal/types'
 interface TProps {
   size: ModalSize,
 }
+
+export const H4 = styled.h4`
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  font-weight: 600;
+  
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  `}
+`
 
 export const ModalContent = styled.div<TProps>`
   ${borderRadiusLarge.all}
@@ -42,9 +55,6 @@ export const Header = styled.div<TProps>`
   justify-content: space-between;
   color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
   padding: 42px 42px ${({ size }) => (isCompact(size) ? '18' : '30')}px;
-  ${H4} {
-    font-weight: 500;
-  }
 
   @media ${queries2021.isDesktop} {
     max-width: 672px;

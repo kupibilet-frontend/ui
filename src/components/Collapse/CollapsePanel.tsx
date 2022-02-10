@@ -1,10 +1,9 @@
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Icon from 'components/Icon'
 import { ICON_SIZES } from 'components/Icon/consts'
 import { borderRadiusMedium } from 'utils/borderRadius'
-import H4 from 'components/Typography/H4'
 import useMouseState from 'hooks/useMouseState'
 
 const PanelHeader = styled.div<{ isOpen?: boolean }>`
@@ -18,11 +17,21 @@ const PanelHeader = styled.div<{ isOpen?: boolean }>`
   cursor: pointer;
 `
 
-const PanelHeaderText = styled(H4)`
+const PanelHeaderText = styled.h4`
   font-weight: 500;
   user-select: none;
   color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
   padding-right: 16px;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  `}
 `
 
 const CollapseButton = styled.div<{ isHover: boolean, isActive: boolean }>`

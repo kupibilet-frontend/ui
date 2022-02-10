@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect } from 'react'
 import { Portal } from 'react-portal'
-import H4 from 'components/Typography/H4'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
 import { withMedia } from 'utils/media-queries'
@@ -16,6 +15,7 @@ import {
   CloseButton,
   SubmitButton,
   StyledIcon,
+  H4,
 } from './styled'
 import { getCloseIconColor, getCloseIconSize } from './utils'
 
