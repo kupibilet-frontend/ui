@@ -1,10 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import { withMedia2021 } from 'utils/media-queries'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import { TWithMediaProps } from 'utils/types'
 import * as typographyTokens from 'components/ThemeProvider/tokens/typography'
-
+import { StyledTypography } from 'components/Typography/styled'
 
 export type TVariant =
   | 'h1'
@@ -21,7 +20,7 @@ export type TVariant =
   | 'small'
 
 type TBold = '_bold' | '_normal' | '_default'
-type TTokenName = keyof typeof typographyTokens
+export type TTokenName = keyof typeof typographyTokens
 
 type TVAriaantToken =
   | 'headline_h1'
@@ -45,11 +44,6 @@ interface TProps extends TWithMediaProps {
   tag?: keyof JSX.IntrinsicElements,
   children: React.ReactNode,
   isMobile: boolean,
-}
-
-interface TStyledTypography {
-  color?: COLOR_NAMES,
-  tokenName: TTokenName,
 }
 
 type TVariantMapper = Record<TVariant, keyof JSX.IntrinsicElements>
@@ -110,12 +104,6 @@ const calculateBold = (variant: TVariant, isBold: boolean): TBold => {
   return '_normal'
 }
 
-const StyledTypography = styled.span<TStyledTypography>`
-  color: ${({ theme, color }) => (color ? theme.color[color] : 'inherit')};
-  font-size: ${({ theme, tokenName }) => theme.typography[tokenName].size}px;
-  font-weight: ${({ theme, tokenName }) => theme.typography[tokenName].fontWeight};
-  line-height: ${({ theme, tokenName }) => theme.typography[tokenName].lineHeight}px;
-`
 
 const Typography = ({
   color,
