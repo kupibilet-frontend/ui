@@ -15,7 +15,7 @@ const getBackgroundColor = ({ theme, error, success }: TTooltipCommonProps): str
     return transparentize(0.03, theme.color.error700)
   }
 
-  return theme.color.colorBgContrast
+  return theme.color.colorBgContrastNormal
 }
 
 const getColoredIcon = (props: TTooltipCommonProps) => {
@@ -67,7 +67,7 @@ const TooltipBackground = styled.div<TTooltipCommonProps>`
   min-width: 90px;
   white-space: nowrap;
   background: ${getBackgroundColor};
-  color: ${({ theme }) => theme.color.colorTextContrast};
+  color: ${({ theme }) => theme.color.colorTextContrastDefault};
   border-radius: 100px;
   padding: 0 12px;
   display: flex;

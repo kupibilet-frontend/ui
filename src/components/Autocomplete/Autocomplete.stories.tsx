@@ -8,7 +8,6 @@ import get from 'lodash/get'
 import _throttle from 'lodash/throttle'
 import styled from 'styled-components'
 import Icon from 'components/Icon'
-import { COLOR_NAMES } from '../ThemeProvider/types'
 
 export interface TOnChange {
   newValue: string;
@@ -128,7 +127,7 @@ AirportWithMultiplySections.args = {
 export const AutocompleteWithCustomInput = AutocompleteTemplate.bind({})
 AutocompleteWithCustomInput.args = {
   renderInputComponent: (props) => (
-    <Input leftIcon={<Icon name="man" fill={COLOR_NAMES.misc500} />} {...props as TPropsInput} />
+    <Input leftIcon={<Icon name="man" fill="misc500" />} {...props as TPropsInput} />
   ),
 }
 

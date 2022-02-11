@@ -11,7 +11,7 @@ interface TStyledRangeWrapperProps {
 const StyledRangeWrapper = styled.div<TStyledRangeWrapperProps>`
   .rc-slider-track {
     background-color: ${({ theme, disabled }) => (
-    disabled ? theme.color.colorBgSecondaryDisabled : theme.color.colorBgContrast
+    disabled ? theme.color.colorBgSecondaryDisable : theme.color.colorBgContrastNormal
   )} !important;
     
     display: flex;
@@ -23,7 +23,7 @@ const StyledRangeWrapper = styled.div<TStyledRangeWrapperProps>`
   }
 
   .rc-slider-step {
-    background-color: ${({ theme }) => theme.color.colorBgSecondary};
+    background-color: ${({ theme }) => theme.color.colorBgSecondaryNormal};
     height: 6px;
     top: 3px;
     border-radius: 3px;
@@ -44,9 +44,9 @@ interface StyledHandlerProps extends HandleProps {
 function getHandlerColor(props: StyledHandlerProps): string {
   const { theme, disabled } = props
 
-  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (disabled) return theme.color.colorBgSecondaryDisable
 
-  return theme.color.colorBgPrimary
+  return theme.color.colorBgPrimaryNormal
 }
 
 const StyledHandleWrapper = styled(Handle)`
@@ -67,7 +67,7 @@ const StyledHandle = styled.div<StyledHandlerProps>`
   left: 5px;
   z-index: 4;
   transform: translateX(-50%);
-  border: 2px solid ${({ theme }) => theme.color.colorBgContrast};
+  border: 2px solid ${({ theme }) => theme.color.colorBgContrastNormal};
 
   &:hover {
     background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBgContrastHover};
@@ -75,7 +75,7 @@ const StyledHandle = styled.div<StyledHandlerProps>`
   }
   &:focus,
   &:active {
-    background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBgContrastFocus};
+    background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBgContrastActive};
     box-shadow: 0px 2px 4px rgba(98, 112, 139, 0.6);
   }
 `
