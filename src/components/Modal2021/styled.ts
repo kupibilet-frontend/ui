@@ -15,7 +15,7 @@ export const H4 = styled.h4`
   font-size: 18px;
   line-height: 28px;
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   
   ${({ theme }) => css`
     @media ${theme.queries.isMobile} {

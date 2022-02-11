@@ -50,10 +50,10 @@ export const SuggestionIcon = styled.div`
   justify-content: center;
 `
 export const SuggestionText = styled.div`
-flex-grow: 1;
-white-space: nowrap;
-font-size: 16px;
-line-height: 24px;
+  flex-grow: 1;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
 
 ${({ theme }) => css`
   @media ${theme.queries.isMobile} {
