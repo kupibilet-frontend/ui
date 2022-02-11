@@ -96,14 +96,14 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   `}
 
   color: ${({ theme, disabled, checked }) => {
-    if (disabled) return theme.color.colorTextDisabled
-    if (checked) return theme.color.colorTextPrimary
+    if (disabled) return theme.color.colorTextPrimaryDisable
+    if (checked) return theme.color.colorTextPrimaryNormal
 
-    return theme.color.colorTextSecondary
+    return theme.color.colorTextSecondaryDefault
   }};
 
   &:hover {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.colorTextDisabled : theme.color.colorTextPrimary)};
+    color: ${({ theme, disabled }) => (disabled ? theme.color.colorTextPrimaryDisable : theme.color.colorTextPrimaryNormal)};
   }
 
   &:hover ${StyledCheckbox} {

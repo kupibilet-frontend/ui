@@ -1,146 +1,215 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 
 import { control } from 'utils/reset'
-import { switchTransition } from 'utils/transitions'
-import { getLinkColor, getLinkHoverColor } from 'components/Link/styled'
-import { queries } from 'utils/media-queries'
 import {
   TNeighboringInGroupType,
   TButtonVariant,
   TButtonSize,
+  TIconPosition,
 } from './types'
-import { BUTTON_BORDER_RADIUS, BUTTON_SIZES, BUTTON_TYPOGRAPHY } from './consts'
 
+type TState = 'hover' | 'active'
 
-// TThemeAndVariantProps is a common type for many helpers functions
-interface TThemeAndVariantProps {
+interface TCalculateBorderRadius {
+  size: TButtonSize,
+  neighboringInGroup: TNeighboringInGroupType,
+  theme: DefaultTheme,
+  variant: TButtonVariant,
+}
+
+interface TGetButtonColor {
   variant: TButtonVariant,
   theme: DefaultTheme,
   disabled: boolean,
+  size: TButtonSize,
+  state?: TState
 }
 
-function calculateButtonPadding(
-  size: TButtonSize, icon: boolean, hasLeftIcon: boolean, hasRightIcon: boolean,
-): string {
-  const spacing = BUTTON_SIZES[size]
-  const typographyRelatedPadding = ((spacing * 2 - BUTTON_TYPOGRAPHY[size]) / 2).toFixed(1)
-  const iconVisualCenterShift = 5 / 4
-  const iconPadding = (BUTTON_SIZES[size] / 2 * iconVisualCenterShift).toFixed(1)
+interface TGetButtonBackground {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  disabled: boolean,
+  size: TButtonSize,
+  state?: TState
+}
 
-  // Symetric padding around icon-only button for circle effect
-  if (icon) {
-    return `padding: ${typographyRelatedPadding}px;`
+interface TCalculateButtonPadding {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  size: TButtonSize,
+  isIconOnly: boolean,
+  hasLeftIcon: boolean,
+  hasRightIcon: boolean,
+}
+
+interface TCalculateTextPadding {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  size: TButtonSize,
+  hasLeftIcon: boolean,
+  hasRightIcon: boolean,
+}
+
+interface TCalculateMargin {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  size: TButtonSize,
+  isIconOnly: boolean,
+  hasLeftIcon: boolean,
+  hasRightIcon: boolean,
+}
+
+interface TCalculateIconMargin {
+  variant: TButtonVariant,
+  theme: DefaultTheme,
+  size: TButtonSize,
+  iconPosition?: TIconPosition,
+}
+
+function calculateButtonPadding({
+  variant,
+  theme,
+  size,
+  isIconOnly,
+  hasLeftIcon,
+  hasRightIcon,
+}: TCalculateButtonPadding) {
+  const buttonDefaultPadding = theme.button[`button_default_${variant}_${size}_size_padding_default`]
+  const buttonWithIconPadding = theme.button[`button_composite_${variant}_${size}_size_padding_default`]
+  const buttonIconPadding = theme.button[`button_icon_${variant}_${size}_size_padding_default`]
+
+  let paddingTokens = buttonDefaultPadding
+
+  if (isIconOnly) {
+    paddingTokens = buttonIconPadding
+  }
+
+  if (hasLeftIcon || hasRightIcon) {
+    paddingTokens = buttonWithIconPadding
   }
 
   return `
-    padding: ${typographyRelatedPadding}px;
-    padding-right: ${hasRightIcon ? iconPadding : spacing}px;
-    padding-left: ${hasLeftIcon ? iconPadding : spacing}px;
+    padding-top: ${paddingTokens.top}
+    padding-bottom: ${paddingTokens.bottom}
+    padding-right: ${paddingTokens.right}
+    padding-left: ${paddingTokens.left}
   `
 }
 
-function calculateTextPadding(
-  size: TButtonSize, hasLeftIcon: boolean,
-  hasRightIcon: boolean,
-): string {
-  const iconVisualCenterShift = 3 / 4
-  const iconPadding = (BUTTON_SIZES[size] / 2 * iconVisualCenterShift).toFixed(1)
-
-  return `0 ${hasRightIcon ? iconPadding : 0}px 0 ${hasLeftIcon ? iconPadding : 0}px`
-}
-
-function calculateBorderRadius(
-  size: TButtonSize,
-  neighboringInGroup: TNeighboringInGroupType,
-): string {
-  const radius = BUTTON_BORDER_RADIUS[size]
+function calculateBorderRadius({
+  size,
+  neighboringInGroup,
+  theme,
+  variant,
+}: TCalculateBorderRadius): string {
+  const radius = theme.button[`button_default_${variant}_${size}_size_border_radius_default`]
 
   if (neighboringInGroup === 'both') {
     return ''
   } else if (neighboringInGroup === 'left') {
-    return `border-radius: 0 ${radius}px ${radius}px 0;`
+    return `border-radius: 0 ${radius} ${radius} 0;`
   } else if (neighboringInGroup === 'right') {
-    return `border-radius: ${radius}px 0 0 ${radius}px;`
+    return `border-radius: ${radius} 0 0 ${radius};`
   }
 
-  return `border-radius: ${radius}px;`
-}
-function getButtonColor(props: TThemeAndVariantProps): string {
-  const { theme, variant, disabled } = props
-
-  if (disabled && variant !== 'link') {
-    return theme.color.colorTextDisabled
-  }
-
-  switch (variant) {
-    default:
-    case 'primary':
-    case 'contrast':
-    case 'help':
-      return theme.color.colorTextContrast
-    case 'secondary':
-      return theme.color.colorTextPrimary
-    case 'link':
-      return getLinkColor(props)
-  }
-}
-function getButtonHoverColor(props: TThemeAndVariantProps): string {
-  if (props.variant === 'link') {
-    return getLinkHoverColor(props)
-  }
-
-  return ''
+  return `border-radius: ${radius};`
 }
 
-function getButtonBackground({ theme, variant, disabled }: TThemeAndVariantProps): string {
-  if (disabled && variant !== 'link') {
-    return theme.color.colorBgSecondaryDisabled
+function getButtonColor({
+  theme,
+  variant,
+  size,
+  disabled,
+  state,
+}: TGetButtonColor): string {
+  if (disabled) {
+    return theme.button[`button_default_${variant}_${size}_color_text_disable`]
   }
 
-  switch (variant) {
-    default:
-    case 'primary':
-      return theme.color.colorBgAccent
-    case 'contrast':
-      return theme.color.colorBgContrast
-    case 'secondary':
-      return theme.color.colorBgSecondary
-    case 'help':
-      return theme.color.colorBgHelp
-    case 'link':
-      return 'transparent'
+  if (state === 'hover') {
+    return theme.button[`button_default_${variant}_${size}_color_text_hover`]
   }
+
+  if (state === 'active') {
+    return theme.button[`button_default_${variant}_${size}_color_text_active`]
+  }
+
+  return theme.button[`button_default_${variant}_${size}_color_text_normal`]
 }
 
-function getButtonHoverBackground({ theme, variant }: TThemeAndVariantProps): string {
-  switch (variant) {
-    default:
-    case 'primary':
-      return theme.color.colorBgAccentHover
-    case 'contrast':
-      return theme.color.colorBgContrastHover
-    case 'secondary':
-      return theme.color.colorBgSecondaryHover
-    case 'help':
-      return theme.color.colorBgHelpHover
-    case 'link':
-      return 'transparent'
+function calculateMargin({
+  variant,
+  theme,
+  size,
+  isIconOnly,
+  hasLeftIcon,
+  hasRightIcon,
+}: TCalculateMargin) {
+  if (variant !== 'text') return
+
+  const buttonDefaultPadding = theme.button[`button_default_${variant}_${size}_size_padding_default`]
+  const buttonWithIconPadding = theme.button[`button_composite_${variant}_${size}_size_padding_default`]
+  const buttonIconPadding = theme.button[`button_icon_${variant}_${size}_size_padding_default`]
+
+  let paddingTokens = buttonDefaultPadding
+
+  if (isIconOnly) {
+    paddingTokens = buttonIconPadding
   }
+
+  if (hasLeftIcon || hasRightIcon) {
+    paddingTokens = buttonWithIconPadding
+  }
+
+  return `
+    margin-right: -${paddingTokens.right}
+    margin-left: -${paddingTokens.left}
+  `
 }
 
-function getButtonActiveBackground({ theme, variant }: TThemeAndVariantProps): string {
-  switch (variant) {
-    default:
-    case 'primary':
-      return theme.color.colorBgAccentFocus
-    case 'contrast':
-      return theme.color.colorBgContrastFocus
-    case 'secondary':
-      return theme.color.colorBgSecondaryFocus
-    case 'help':
-      return theme.color.colorBgHelpFocus
-    case 'link':
-      return 'transparent'
+function getButtonBackground({
+  theme,
+  variant,
+  size,
+  disabled,
+  state,
+}: TGetButtonBackground): string {
+  if (disabled) {
+    return theme.button[`button_default_${variant}_${size}_color_bg_disable`]
+  }
+
+  if (state === 'hover') {
+    return theme.button[`button_default_${variant}_${size}_color_bg_hover`]
+  }
+
+  if (state === 'active') {
+    return theme.button[`button_default_${variant}_${size}_color_bg_active`]
+  }
+
+  return theme.button[`button_default_${variant}_${size}_color_bg_normal`]
+}
+
+function calculateIconMargin({
+  variant,
+  theme,
+  size,
+  iconPosition,
+}: TCalculateIconMargin) {
+  if (!iconPosition) return
+
+  const buttonWithIconPadding = theme.button[`button_composite_${variant}_${size}_size_padding_default`]
+  const innerMargin = buttonWithIconPadding.innerHorisontal
+
+  if (iconPosition === 'left') {
+    return `
+      margin-right: ${innerMargin}
+    `
+  }
+
+  if (iconPosition === 'right') {
+    return `
+      margin-left: ${innerMargin}
+    `
   }
 }
 
@@ -155,106 +224,94 @@ interface TStyledButtonProps {
   disabled: boolean,
 }
 
-function fontWeight({ size }: TStyledButtonProps) {
-  if (size !== 'small') {
-    return 'font-weight: 500;'
-  }
-
-  return ''
-}
-
 export const StyledButton = styled.button<TStyledButtonProps>`
   ${control}
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: ${getButtonColor};
   background: ${getButtonBackground};
 
-  font-size: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
-  ${fontWeight}
-  line-height: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
+  font-size: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].size}px;
+  font-weight: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].fontWeight};
+  line-height: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].lineHeight}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
 
-  
-  @media ${queries.isHandheld} {
-    ${({ isBlock }) => !isBlock && css`
-      max-width: 340px;
-    `}
-  }
+  ${({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon }) => (
+    calculateMargin({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon })
+  )};
 
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
 
-  ${({ neighboringInGroup, size }) => (
-    calculateBorderRadius(size, neighboringInGroup)
+  ${({ neighboringInGroup, variant, theme, size }) => (
+    calculateBorderRadius({ size, neighboringInGroup, variant, theme })
   )};
 
-  ${({ size, isIconOnly, hasLeftIcon, hasRightIcon }) => (
-    calculateButtonPadding(size, isIconOnly, hasLeftIcon, hasRightIcon)
+  ${({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon }) => (
+    calculateButtonPadding({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon })
   )};
-
-  ${switchTransition}
-  transition-property: opacity, box-shadow;
 
   .icon-inherit-color {
     fill: ${getButtonColor};
   }
 
   &:hover {
-    ${(props) => (
-    !props.disabled
-      ? `
-        cursor: pointer;
-        background: ${getButtonHoverBackground(props)};
-        box-shadow: 0 0 0 1px ${getButtonHoverBackground(props)};
+    ${(props) => !props.disabled && `
+      cursor: pointer;
+      background: ${getButtonBackground({ ...props, state: 'hover' })};
+      color: ${getButtonColor({ ...props, state: 'hover' })};
 
-        // Immediately change visual state on hover, mousedown and mouseup
-        // Transition only for mouseleave
-        transition: none;
-      `
-      : ''
-  )}
-
-    ${(props) => ((!props.disabled && props.variant === 'link') && `color: ${getButtonHoverColor(props)};`)}
+      .icon-inherit-color {
+        fill: ${getButtonColor({ ...props, state: 'hover' })};
+      }
+    `}
   }
 
   &:active {
-    ${(props) => (
-    !props.disabled
-      ? `
-        background: ${getButtonActiveBackground(props)};
-        box-shadow: none;
-      `
-      : ''
-  )}
+    ${(props) => !props.disabled && `
+      background: ${getButtonBackground({ ...props, state: 'active' })};
+      color: ${getButtonColor({ ...props, state: 'active' })};
+
+      .icon-inherit-color {
+        fill: ${getButtonColor({ ...props, state: 'active' })};
+      }
+    `}
   }
 `
 export const StyledButtonLink = StyledButton.withComponent('a')
 
 interface TStyledButtonTextProps {
+  variant: TButtonVariant,
   size: TButtonSize,
-  hasLeftIcon: boolean,
-  hasRightIcon: boolean,
+  withTextUnderline: boolean,
 }
 
 export const StyledButtonText = styled.span<TStyledButtonTextProps>`
   display: inline-block;
   vertical-align: top;
+  text-decoration-skip-ink: none;
 
-  padding: ${({ size, hasLeftIcon, hasRightIcon }) => calculateTextPadding(size, hasLeftIcon, hasRightIcon)};
+  ${({ withTextUnderline }) => withTextUnderline && `
+    text-decoration: underline;
+  `}
 `
 
 interface TIconWrapProps {
   size: TButtonSize,
+  variant: TButtonVariant,
+  iconPosition?: TIconPosition,
 }
 
 export const IconWrap = styled.span<TIconWrapProps>`
   display: inline-flex;
-  vertical-align: top;
+  vertical-align: middle;
   justify-content: center;
   align-items: center;
 
-  width: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
-  height: ${({ size }) => BUTTON_TYPOGRAPHY[size]}px;
+  ${({ size, variant, theme, iconPosition }) => (
+    calculateIconMargin({ size, variant, theme, iconPosition })
+  )};
 `

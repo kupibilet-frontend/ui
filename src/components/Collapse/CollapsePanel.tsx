@@ -21,7 +21,7 @@ const PanelHeader = styled.div<{ isOpen?: boolean }>`
 const PanelHeaderText = styled(H4)`
   font-weight: 500;
   user-select: none;
-  color: ${({ theme }) => theme.color.colorTextPrimary};
+  color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
   padding-right: 16px;
 `
 
@@ -34,25 +34,25 @@ const CollapseButton = styled.div<{ isHover: boolean, isActive: boolean }>`
   height: 32px;
   background-color: ${({ theme, isHover, isActive }) => {
     if (isActive) {
-      return theme.color.colorBgSecondaryFocus
+      return theme.color.colorBgSecondaryActive
     }
 
     if (isHover) {
       return theme.color.colorBgSecondaryHover
     }
 
-    return theme.color.colorBgSecondary
+    return theme.color.colorBgSecondaryNormal
   }};
   ${borderRadiusMedium.all}
 `
 
 const CollapseButtonIcon = styled(Icon)`
-  fill: ${({ theme }) => theme.color.colorTextPrimary};
+  fill: ${({ theme }) => theme.color.colorTextPrimaryNormal};
   display: block;
 `
 
 export const StyledPanelContent = styled.div`
-  color: ${({ theme }) => theme.color.colorTextSecondary};
+  color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
   border-bottom: 1px solid ${({ theme }) => theme.color.misc200};
 `
 

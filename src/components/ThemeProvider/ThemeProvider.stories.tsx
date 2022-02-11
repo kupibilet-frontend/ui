@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
-import { color } from './theme'
+import { colorsLight } from './colors'
 
 interface TColorBoxProps {
   pickedColor: COLOR_NAMES,
@@ -44,7 +44,7 @@ const ColorPanel = styled.div`
   width: 1000px;
 `
 
-const colors = Object.keys(color) as COLOR_NAMES[]
+const colors = Object.keys(colorsLight) as COLOR_NAMES[]
 
 const copyToClipboard = (str: COLOR_NAMES): void => {
   const el = document.createElement('textarea')
@@ -61,7 +61,7 @@ const copyToClipboard = (str: COLOR_NAMES): void => {
   document.body.removeChild(el)
   const card = document.getElementById(str)
   if (card) {
-    card.style.backgroundColor = color[str]
+    card.style.backgroundColor = colorsLight[str]
   }
   setTimeout(() => {
     if (card) {
@@ -88,7 +88,7 @@ export const ThemeColors = (): JSX.Element => {
             key={pickedColor}
           >
             <span>{pickedColor}</span>
-            <span>{color[pickedColor]}</span>
+            <span>{colorsLight[pickedColor]}</span>
             <ColorBox pickedColor={pickedColor} />
           </ColorCard>
         ))}
