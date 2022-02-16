@@ -5,6 +5,7 @@ import { TTokenName } from 'components/Typography'
 interface TStyledTypography {
     color?: COLOR_NAMES,
     tokenName: TTokenName,
+    className?: string;
 }
 
 export const StyledTypography = styled.span<TStyledTypography>`

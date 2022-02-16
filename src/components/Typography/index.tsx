@@ -38,13 +38,14 @@ type TVAriaantToken =
   | 'text_small'
   | 'text_medium'
 
-interface TProps extends TWithMediaProps {
+export interface TProps extends TWithMediaProps {
   variant?: TVariant,
   color?: COLOR_NAMES,
   isBold?: boolean,
   tag?: keyof JSX.IntrinsicElements,
   children: React.ReactNode,
   isMobile: boolean,
+  className: string;
 }
 
 type TVariantMapper = Record<TVariant, keyof JSX.IntrinsicElements>
@@ -113,6 +114,7 @@ const Typography = ({
   tag,
   children,
   isMobile,
+  ...props
 }: TProps) => {
   const platform = isMobile ? 'mobile' : 'desktop'
   const tokenVariant = calculateTokenVariant(variant)
@@ -124,6 +126,7 @@ const Typography = ({
       as={tag ?? VARIANTS_MAPPER[variant]}
       color={color}
       tokenName={tokenName}
+      {...props}
     >
       {children}
     </StyledTypography>
