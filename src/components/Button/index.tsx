@@ -30,7 +30,11 @@ const Button = ({
   >
     {
       leftIcon ? (
-        <IconWrap size={size}>
+        <IconWrap
+          size={size}
+          variant={variant}
+          iconPosition="left"
+        >
           { cloneIconWithSize(leftIcon, size) }
         </IconWrap>
       ) : null
@@ -38,15 +42,16 @@ const Button = ({
 
     {
       icon ? (
-        <IconWrap size={size}>
+        <IconWrap
+          size={size}
+          variant={variant}
+        >
           { cloneIconWithSize(icon, size) }
         </IconWrap>
       ) : (
         <StyledButtonText
           variant={variant}
           size={size}
-          hasLeftIcon={Boolean(leftIcon)}
-          hasRightIcon={Boolean(rightIcon)}
           withTextUnderline={withTextUnderline}
         >
           { children }
@@ -56,7 +61,11 @@ const Button = ({
 
     {
       rightIcon ? (
-        <IconWrap size={size}>
+        <IconWrap
+          size={size}
+          variant={variant}
+          iconPosition="right"
+        >
           { cloneIconWithSize(rightIcon, size) }
         </IconWrap>
       ) : null

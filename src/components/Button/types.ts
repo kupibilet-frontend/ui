@@ -2,12 +2,14 @@ export type TButtonSize = 'small' | 'medium' | 'large'
 
 export type TNeighboringInGroupType = 'both' | 'left' | 'right' | null
 
+export type TIconPosition = 'left' | 'right'
+
 export type TButtonVariant = 'primary' | 'secondary' | 'contrast' | 'link' | 'help' | 'text'
 
 export interface TButtonProps {
   size?: TButtonSize,
   variant?: TButtonVariant,
-  children?: React.ReactElement | React.ReactChild | string,
+  children?: React.ReactNode,
   disabled?: boolean,
   icon?: React.ReactNode,
   leftIcon?: React.ReactNode,
