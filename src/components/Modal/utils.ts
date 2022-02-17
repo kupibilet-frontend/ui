@@ -38,7 +38,7 @@ export const getCloseIconSize = (isHandheld: boolean, size: ModalSize): ICON_SIZ
 
 export const getCloseIconColor = (size: ModalSize): COLOR_NAMES => {
   if (isCompact(size)) {
-    return COLOR_NAMES.primary700
+    return 'primary700'
   }
-  return COLOR_NAMES.text300
+  return 'text300'
 }

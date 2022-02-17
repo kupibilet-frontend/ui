@@ -2,7 +2,6 @@ import React, { useCallback } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import _get from 'lodash/get'
 import Icon from 'components/Icon'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import {
   TLabelPlacement,
   CheckboxLabel,
@@ -48,7 +47,7 @@ export const Checkbox = React.memo((props: TProps) => {
       >
         {checked ? (
           <IconWrap checked={checked}>
-            <Icon name="checkmark" fill={COLOR_NAMES.background} />
+            <Icon name="checkmark" fill="background" />
           </IconWrap>
         ) : (
           null

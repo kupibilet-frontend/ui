@@ -15,14 +15,41 @@ const Template: Story<TButtonProps> = (args) => (
   </Button>
 )
 
+const DesignSystemDemo: Story<TButtonProps> = () => (
+  <>
+    <Button>
+      Авиабилеты
+    </Button>
+
+    <Button variant="secondary">
+      Авиабилеты
+    </Button>
+
+    <hr />
+
+    <Button>
+    Авиабилеты
+    </Button>
+
+    <Button variant="secondary">
+      Авиабилеты
+    </Button>
+  </>
+)
+
 export const DefaultButton = Template.bind({})
 DefaultButton.args = { ...defaultProps }
+
+export const TokensDemo = DesignSystemDemo.bind({})
+TokensDemo.args = {
+  ...defaultProps,
+}
 
 export const WithCustomIcons = Template.bind({})
 WithCustomIcons.args = {
   ...defaultProps,
   leftIcon: <Icon name="plane" inheritColor />,
-  rightIcon: <Icon name="hand-baggage" inheritColor />,
+  rightIcon: <Icon name="arrow-right-long" inheritColor />,
 }
 
 export const WithLeftAndRightIcons = Template.bind({})
@@ -47,6 +74,7 @@ LoadingButton.args = {
 export const LinkButton = Template.bind({})
 LinkButton.args = {
   ...defaultProps,
+  variant: 'link',
   href: '/',
   target: '_blank',
 }

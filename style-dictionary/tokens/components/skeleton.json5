@@ -1,0 +1,20 @@
+{
+    "skeleton":{
+        "default":{
+            "default":{
+                "color":{
+                    "bg":{
+                        "default":{
+                            "value": "{color.bg.secondary.normal.value}"
+                        }
+                    },
+                    "primary":{
+                        "default":{
+                            "value": "{color.bg.primary.normal.value}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

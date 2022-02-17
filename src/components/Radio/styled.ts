@@ -9,33 +9,33 @@ interface TStyledRadioProps {
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgSecondaryDisabled
-  if (checked) return theme.color.colorBgContrastFocus
-  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (disabled && checked) return theme.color.colorBgSecondaryDisable
+  if (checked) return theme.color.colorBgContrastActive
+  if (disabled) return theme.color.colorBgSecondaryDisable
 
-  return theme.color.colorBorderPrimary
+  return theme.color.colorBorderPrimaryNormal
 }
 
 const getHoverBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (disabled) return theme.color.colorBgSecondaryDisable
   if (checked) return theme.color.colorBgContrastHover
 
-  return theme.color.colorBorderHover
+  return theme.color.colorBorderPrimaryHover
 }
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgSecondaryDisabled
-  if (checked) return theme.color.colorBgContrastFocus
+  if (disabled && checked) return theme.color.colorBgSecondaryDisable
+  if (checked) return theme.color.colorBgContrastActive
 
-  return theme.color.colorBgPrimary
+  return theme.color.colorBgPrimaryNormal
 }
 
 const getHoverRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (!checked && disabled) return theme.color.colorBgPrimary
-  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (!checked && disabled) return theme.color.colorBgPrimaryNormal
+  if (disabled) return theme.color.colorBgSecondaryDisable
   if (checked) return theme.color.colorBgContrastHover
 
-  return theme.color.colorBgPrimary
+  return theme.color.colorBgPrimaryNormal
 }
 
 export const RadioInput = styled.input`
@@ -86,7 +86,7 @@ export const LabelText = styled.span<TLabelTextProps>`
   margin-left: 6px;
   width: 100%;
   ${({ disabled, theme }) => (disabled
-    && css`color: ${theme.color.colorTextPrimary};`
+    && css`color: ${theme.color.colorTextPrimaryNormal};`
   )}
 `
 
@@ -103,6 +103,6 @@ export const RadioLabel = styled.label<TRadioLabelProps>`
   width: 100%;
 
   ${LabelText}:hover {
-    color: ${({ theme }) => theme.color.colorTextPrimary};
+    color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
   };
 `

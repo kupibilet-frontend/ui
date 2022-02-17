@@ -18,7 +18,7 @@ const DropdownContent = styled.div`
   ${shadowElevate}
   ${borderRadiusMedium.all}
   z-index: 10;
-  color: ${({ theme }) => theme.color.colorTextPrimary};
+  color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
 
   margin-bottom: 18px;
 `

@@ -25,6 +25,9 @@ export interface TProps {
     Адрес ссылки. Если не передан, рендерится <span>
   */
   href?: string,
+
+  withUnderline?: boolean,
+
   onClick?: () => void,
 }
 
@@ -44,13 +47,16 @@ const Link = (props: TProps): JSX.Element => {
     href = '',
     leftIcon = null,
     rightIcon = null,
+    withUnderline = false,
     ...rest
   } = props
 
   const LinkComponent = href ? 'a' : 'span'
 
   return (
-    <LinkComponent href={href} {...rest}>
+    // @ts-ignore problem is due to the combination of two tags.
+    // Need to separate or doing through the styled as attribute
+    <LinkComponent href={href} withUnderline={withUnderline} {...rest}>
       {renderIcon(leftIcon, true)}
       {children}
       {renderIcon(rightIcon)}

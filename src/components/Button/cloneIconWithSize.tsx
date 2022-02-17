@@ -5,8 +5,8 @@ import { TButtonSize } from './types'
 
 const BUTTON_SIZE_TO_ICON_MAP: Record<TButtonSize, ICON_SIZES> = {
   small: ICON_SIZES.xxsmall,
-  medium: ICON_SIZES.normal,
-  large: ICON_SIZES.normal,
+  medium: ICON_SIZES.xsmall,
+  large: ICON_SIZES.xsmall,
 }
 
 function cloneIconWithSize(icon: React.ReactNode, size: TButtonSize): JSX.Element {
