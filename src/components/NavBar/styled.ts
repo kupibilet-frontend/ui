@@ -53,7 +53,7 @@ interface TNavItemProps {
 export const NavItem = styled.span<TNavItemProps>`
   display: inline-block;
   position: relative;
-  color: ${({ theme }) => theme.color.colorTextSecondary};
+  color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
   font-size: 18px;
   padding: 11px 15px;
   line-height: 26px;
@@ -82,7 +82,7 @@ export const NavItem = styled.span<TNavItemProps>`
   /* for custom support */
   ${({ isActive, theme }) => isActive && css`
     background: transparent;
-    color: ${theme.color.colorTextPrimary};
+    color: ${theme.color.colorTextPrimaryNormal};
 
     &:after {
       position: absolute;

@@ -1,31 +1,31 @@
 import { DefaultTheme } from 'styled-components'
 
 function getBackgroundColor(disabled: boolean, checked: boolean, theme: DefaultTheme): string {
-  if (disabled) return theme.color.colorBgSecondaryDisabled
-  if (checked) return theme.color.colorBgContrastFocus
+  if (disabled) return theme.color.colorBgSecondaryDisable
+  if (checked) return theme.color.colorBgContrastActive
 
-  return theme.color.colorBgPrimary
+  return theme.color.colorBgPrimaryNormal
 }
 
 function getHoverBackgroundColor(disabled: boolean, checked: boolean, theme: DefaultTheme): string {
-  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (disabled) return theme.color.colorBgSecondaryDisable
   if (checked) return theme.color.colorBgContrastHover
 
-  return theme.color.colorBgPrimary
+  return theme.color.colorBgPrimaryNormal
 }
 
 function getShadowColor(disabled: boolean, checked: boolean, theme: DefaultTheme): string {
-  if (disabled) return theme.color.colorBgSecondaryDisabled
-  if (checked) return theme.color.colorBgContrastFocus
+  if (disabled) return theme.color.colorBgSecondaryDisable
+  if (checked) return theme.color.colorBgContrastActive
 
-  return theme.color.colorBorderPrimary
+  return theme.color.colorBorderPrimaryNormal
 }
 
 function getHoverShadowColor(disabled: boolean, checked: boolean, theme: DefaultTheme): string {
-  if (disabled) return theme.color.colorBgSecondaryDisabled
+  if (disabled) return theme.color.colorBgSecondaryDisable
   if (checked) return theme.color.colorBgContrastHover
 
-  return theme.color.colorBorderHover
+  return theme.color.colorBorderPrimaryHover
 }
 
 export {

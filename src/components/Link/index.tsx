@@ -54,7 +54,8 @@ const Link = (props: TProps): JSX.Element => {
   const LinkComponent = href ? 'a' : 'span'
 
   return (
-    // @ts-ignore
+    // @ts-ignore problem is due to the combination of two tags.
+    // Need to separate or doing through the styled as attribute
     <LinkComponent href={href} withUnderline={withUnderline} {...rest}>
       {renderIcon(leftIcon, true)}
       {children}

@@ -23,7 +23,7 @@ interface TLinkProps {
 }
 
 function getLinkColor(props: TLinkProps): string {
-  return props.theme.color.colorTextPrimary
+  return props.theme.color.colorTextPrimaryNormal
 }
 
 function getLinkHoverColor(props: TLinkProps): string {
@@ -36,9 +36,8 @@ const linkStyles = css`
   align-items: center;
   color: ${getLinkColor};
   cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
   text-decoration: ${({ withUnderline }) => (withUnderline ? 'underline' : 'none')};
+  text-decoration-skip-ink: none;
   transition-property: color;
 
   .icon-inherit-color {
