@@ -80,7 +80,7 @@ export const StyledIcon = styled(Icon)`
 `
 
 export const CloseIcon = styled(Button)<{ modalSize: ModalSize }>`
-  background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.colorBgSecondary : 'none')};
+  background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.colorBgSecondaryNormal : 'none')};
   position: ${(props) => (isCompact(props.modalSize) ? 'absolute' : 'fixed')};
   right: ${(props) => (isCompact(props.modalSize) ? '12' : '4')}px;
   top: ${(props) => (isCompact(props.modalSize) ? '12' : '5')}px;
@@ -91,12 +91,12 @@ export const CloseIcon = styled(Button)<{ modalSize: ModalSize }>`
   }
 
   &:focus {
-    background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.colorBgSecondaryFocus : 'none')};
+    background: ${({ modalSize, theme }) => (isCompact(modalSize) ? theme.color.colorBgSecondaryActive : 'none')};
     box-shadow: none;
   }
 
   @media ${queries.isHandheld} {
-    background: ${({ theme }) => theme.color.colorBgSecondary}; 
+    background: ${({ theme }) => theme.color.colorBgSecondaryNormal}; 
     margin-left: 32px;
     position: absolute;
     right: 12px;
