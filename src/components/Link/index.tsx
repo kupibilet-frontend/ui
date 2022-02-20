@@ -64,7 +64,6 @@ const Link = (props: TProps): JSX.Element => {
   )
 }
 
-
 const StyledLink = styled(Link)`${linkStyles}`
 
 export default StyledLink
