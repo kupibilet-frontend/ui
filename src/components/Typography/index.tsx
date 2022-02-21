@@ -46,6 +46,7 @@ export interface TProps extends TWithMediaProps {
   children: React.ReactNode,
   isMobile: boolean,
   className?: string,
+  as?: React.ElementType | keyof JSX.IntrinsicElements,
   // properties when used as a reference:
   href?: string,
   target?: string,
