@@ -1,5 +1,5 @@
 import React from 'react'
-import { List, ListItem } from './List'
+import { List, ListItem } from 'components/List'
 
 export function DefaultList():JSX.Element {
   return (
