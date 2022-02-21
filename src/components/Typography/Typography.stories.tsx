@@ -1,8 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Meta, Story } from '@storybook/react'
 import Typography from 'components/Typography'
-import Link from 'components/Link'
 
 
 const TypographyPreview: Story = () => (
@@ -22,7 +20,7 @@ const TypographyPreview: Story = () => (
       hero: Пример заголовка headline-hero-default
     </Typography>
 
-    <Typography variant="h1" color="colorTextAccentDefault" as={Link}>
+    <Typography variant="h1" color="colorTextAccentDefault">
       h1: Пример заголовка headline-1-default colorTextAccentDefault
     </Typography>
 

@@ -13,5 +13,7 @@ export const StyledTypography = styled.span<TStyledTypography>`
   font-size: ${({ theme, tokenName }) => theme.typography[tokenName].size}px;
   font-weight: ${({ theme, tokenName }) => theme.typography[tokenName].fontWeight};
   line-height: ${({ theme, tokenName }) => theme.typography[tokenName].lineHeight}px;
+  text-decoration: none;
+  text-decoration-skip-ink: none;
   margin: 0;
 `
