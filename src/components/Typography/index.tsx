@@ -46,7 +46,10 @@ export interface TProps extends TWithMediaProps {
   children: React.ReactNode,
   isMobile: boolean,
   className?: string,
+  // properties when used as a reference:
   href?: string,
+  target?: string,
+  rel?: string,
 }
 
 type TVariantMapper = Record<TVariant, keyof JSX.IntrinsicElements>

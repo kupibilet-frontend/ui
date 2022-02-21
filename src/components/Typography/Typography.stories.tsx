@@ -15,6 +15,15 @@ const TypographyPreview: Story = () => (
       color: 'black',
     }}
   >
+    <Typography
+      variant="hero"
+      tag="a"
+      href="/"
+      rel="nofollow"
+      target="_blank"
+    >
+      Компонент hero с ссылкой
+    </Typography>
 
     <Typography variant="hero">
       hero: Пример заголовка headline-hero-default
