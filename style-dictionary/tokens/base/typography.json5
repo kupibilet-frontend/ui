@@ -79,7 +79,7 @@
                     "normal": {
                         "value": {
                             "fontFamily": "{font.family.regular.default.value}",
-                            "size": "18",
+                            "size": "16",
                             "lineHeight": "28",
                             "fontWeight": "400"
                         }
@@ -87,7 +87,7 @@
                     "bold": {
                         "value": {
                             "fontFamily": "{font.family.medium.default.value}",
-                            "size": "18",
+                            "size": "16",
                             "lineHeight": "28",
                             "fontWeight": "500"
                         }
