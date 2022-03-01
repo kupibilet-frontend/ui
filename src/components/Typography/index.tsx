@@ -23,7 +23,7 @@ export type TVariant =
 type TBold = '_bold' | '_normal' | '_default'
 export type TTokenName = keyof typeof typographyTokens
 
-type TVAriaantToken =
+type TVariantToken =
   | 'headline_h1'
   | 'headline_h2'
   | 'headline_h3'
@@ -38,7 +38,7 @@ type TVAriaantToken =
   | 'text_small'
   | 'text_medium'
 
-export interface TProps extends TWithMediaProps {
+export interface TTypographyProps extends TWithMediaProps {
   variant?: TVariant,
   color?: COLOR_NAMES,
   isBold?: boolean,
@@ -70,7 +70,7 @@ const VARIANTS_MAPPER: TVariantMapper = {
   small: 'span',
 }
 
-const calculateTokenVariant = (variant: TVariant): TVAriaantToken => {
+const calculateTokenVariant = (variant: TVariant): TVariantToken => {
   switch (variant) {
     case 'h1':
       return 'headline_h1'
@@ -120,7 +120,7 @@ const Typography = ({
   children,
   isMobile,
   ...props
-}: TProps) => {
+}: TTypographyProps) => {
   const platform = isMobile ? 'mobile' : 'desktop'
   const tokenVariant = calculateTokenVariant(variant)
   const bold = calculateBold(variant, isBold)
