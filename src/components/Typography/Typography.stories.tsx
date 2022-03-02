@@ -1,76 +1,100 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import TitleHero from './TitleHero'
-import H1 from './H1'
-import H2 from './H2'
-import H3 from './H3'
-import H4 from './H4'
-import H5 from './H5'
-import H6 from './H6'
-import TextAccent from './TextAccent'
-import Text from './Text'
-import TextCaption from './TextCaption'
-import TextLarge from './TextLarge'
-import TextDescription from './TextDescription'
-import { List as UIList, ListItem } from './List'
+import Typography from 'components/Typography'
 
-const headers = (
-  <div>
-    <TitleHero>TitleHero: 22ч 20 мин</TitleHero>
-    <H1>H1: Пересадка 22ч 20 мин</H1>
-    <H2>H2: Пересадка 22ч 20 мин</H2>
-    <H3>H3: Пересадка 22ч 20 мин</H3>
-    <H4>H4: Пересадка 22ч 20 мин</H4>
-    <H5>H5: Пересадка 22ч 20 мин</H5>
-    <H6>H6: Пересадка 22ч 20 мин</H6>
-  </div>
-)
 
-const texts = (
-  <div>
-    <div>
-      <TextAccent>TextAccent: Пересадка 22ч 20 мин</TextAccent>
-    </div>
-    <div>
-      <TextLarge>TextLarge: Пересадка 22ч 20 мин</TextLarge>
-    </div>
-    <div>
-      <Text>Text: Пересадка 22ч 20 мин</Text>
-    </div>
-    <div>
-      <TextCaption>TextCaption: Пересадка 22ч 20 мин</TextCaption>
-    </div>
-    <div>
-      <TextDescription>TextDescription: Пересадка 22ч 20 мин</TextDescription>
-    </div>
-  </div>
-)
-
-const Typography: Story = () => (
+const TypographyPreview: Story = () => (
   <div
     style={{
       display: 'flex',
       justifyContent: 'space-around',
+      flexDirection: 'column',
       width: '100vw',
       alignItems: 'center',
+      fontFamily: 'KB Suisse Intl',
+      color: 'black',
     }}
   >
-    { headers }
-    { texts }
-  </div>
-)
+    <Typography variant="hero">
+      hero: Пример заголовка headline-hero-default
+    </Typography>
 
-const List: Story = () => (
-  <UIList style={{ width: '284px' }}>
-    <ListItem>Мы рады всем карточкам и банкам</ListItem>
-    <ListItem>Гарантируем быстрый возврат средств</ListItem>
-    <ListItem>Не будет проблем с двойным списанием авиакомпании</ListItem>
-    <ListItem>Цена билета</ListItem>
-  </UIList>
+    <Typography variant="h1" color="colorTextAccentDefault">
+      h1: Пример заголовка headline-1-default colorTextAccentDefault
+    </Typography>
+
+    <Typography variant="h2">
+      h2: Пример заголовка headline-2-default
+    </Typography>
+
+    <Typography variant="h3">
+      h3: Пример заголовка headline-3-default
+    </Typography>
+
+    <Typography variant="h4">
+      h4: Пример заголовка headline-4-default
+    </Typography>
+
+    <Typography variant="h5">
+      h5: Пример заголовка headline-5-default
+    </Typography>
+
+    <Typography variant="accent">
+      accent: Пример текста text-accent-normal
+    </Typography>
+
+    <Typography variant="caption">
+      caption: Пример текста Text-Caption-Normal
+    </Typography>
+
+    <Typography
+      variant="caption"
+      isBold
+    >
+      caption: Пример текста Text-Caption-Bold
+    </Typography>
+
+    <Typography variant="description">
+      description: Пример текста
+    </Typography>
+
+    <Typography variant="large">
+      large: Пример текста Text-Large-Normal
+    </Typography>
+
+    <Typography
+      variant="large"
+      isBold
+    >
+      large: Пример текста Text-Large-Bold
+    </Typography>
+
+    <Typography variant="medium">
+      medium: Пример текста Text-Medium-Normal
+    </Typography>
+
+    <Typography
+      variant="medium"
+      isBold
+    >
+      medium: Пример текста Text-Medium-Bold
+    </Typography>
+
+    <Typography variant="small">
+      small: Пример текста Text-Small-Normal
+    </Typography>
+
+    <Typography
+      variant="small"
+      isBold
+    >
+      small: Пример текста Text-Small-Bold
+    </Typography>
+  </div>
 )
 
 export default {
   title: 'Typography',
 } as Meta
 
-export { Typography, List }
+export { TypographyPreview }

@@ -1,12 +1,12 @@
 /**
  * Do not edit directly
- * Generated on Mon, 07 Feb 2022 21:12:57 GMT
+ * Generated on Tue, 01 Mar 2022 14:11:04 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"SuisseIntl-SemiBold","size":"48","lineHeight":"64","fontWeight":"600"};
 export const typography_desktop_headline_h1_default = {"fontFamily":"SuisseIntl-SemiBold","size":"36","lineHeight":"48","fontWeight":"600"};
 export const typography_desktop_headline_h2_default = {"fontFamily":"SuisseIntl-SemiBold","size":"28","lineHeight":"40","fontWeight":"600"};
-export const typography_desktop_headline_h3_default = {"fontFamily":"SuisseIntl-SemiBold","size":"22","lineHeight":"32"};
+export const typography_desktop_headline_h3_default = {"fontFamily":"SuisseIntl-SemiBold","size":"22","lineHeight":"32","fontWeight":"600"};
 export const typography_desktop_headline_h4_default = {"fontFamily":"SuisseIntl-SemiBold","size":"18","lineHeight":"28","fontWeight":"600"};
 export const typography_desktop_headline_h5_default = {"fontFamily":"SuisseIntl-SemiBold","size":"16","lineHeight":"24","fontWeight":"600"};
 export const typography_desktop_text_accent_normal = {"fontFamily":"SuisseIntl-Regular","size":"24","lineHeight":"36","fontWeight":"400"};

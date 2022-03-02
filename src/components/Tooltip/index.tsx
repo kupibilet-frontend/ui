@@ -1,10 +1,14 @@
 import { GlobalStylesScope } from 'components/ThemeProvider'
-import TextCaption from 'components/Typography/TextCaption'
 import { usePopover } from 'hooks/usePopover'
 import React from 'react'
 import { Portal } from 'react-portal'
 import { OVERLAY_Z_INDEX } from 'components/Overlay'
-import { TooltipBackground, TooltipIconContainer, TooltipIcon } from './styled'
+import {
+  TooltipBackground,
+  TooltipIconContainer,
+  TooltipIcon,
+  TextCaption,
+} from './styled'
 import { TTooltipProps } from './types'
 
 const Tooltip = ({

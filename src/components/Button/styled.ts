@@ -231,50 +231,40 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   justify-content: center;
   color: ${getButtonColor};
   background: ${getButtonBackground};
-
   font-size: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].size}px;
   font-weight: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].fontWeight};
   line-height: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].lineHeight}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
-
   ${({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon }) => (
     calculateMargin({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon })
   )};
-
   // Fix circle-to-rect render bug in chrome
   transform: translateZ(0);
-
   ${({ neighboringInGroup, variant, theme, size }) => (
     calculateBorderRadius({ size, neighboringInGroup, variant, theme })
   )};
-
   ${({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon }) => (
     calculateButtonPadding({ size, variant, theme, isIconOnly, hasLeftIcon, hasRightIcon })
   )};
-
   .icon-inherit-color {
     fill: ${getButtonColor};
   }
-
   &:hover {
     ${(props) => !props.disabled && `
       cursor: pointer;
       background: ${getButtonBackground({ ...props, state: 'hover' })};
       color: ${getButtonColor({ ...props, state: 'hover' })};
-
       .icon-inherit-color {
         fill: ${getButtonColor({ ...props, state: 'hover' })};
       }
     `}
   }
-
   &:active {
     ${(props) => !props.disabled && `
       background: ${getButtonBackground({ ...props, state: 'active' })};
       color: ${getButtonColor({ ...props, state: 'active' })};
-
       .icon-inherit-color {
         fill: ${getButtonColor({ ...props, state: 'active' })};
       }
@@ -293,7 +283,6 @@ export const StyledButtonText = styled.span<TStyledButtonTextProps>`
   display: inline-block;
   vertical-align: top;
   text-decoration-skip-ink: none;
-
   ${({ withTextUnderline }) => withTextUnderline && `
     text-decoration: underline;
   `}
@@ -310,7 +299,6 @@ export const IconWrap = styled.span<TIconWrapProps>`
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-
   ${({ size, variant, theme, iconPosition }) => (
     calculateIconMargin({ size, variant, theme, iconPosition })
   )};
