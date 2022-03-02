@@ -42,14 +42,6 @@ interface TCalculateButtonPadding {
   hasRightIcon: boolean,
 }
 
-interface TCalculateTextPadding {
-  variant: TButtonVariant,
-  theme: DefaultTheme,
-  size: TButtonSize,
-  hasLeftIcon: boolean,
-  hasRightIcon: boolean,
-}
-
 interface TCalculateMargin {
   variant: TButtonVariant,
   theme: DefaultTheme,
@@ -231,9 +223,9 @@ export const StyledButton = styled.button<TStyledButtonProps>`
   justify-content: center;
   color: ${getButtonColor};
   background: ${getButtonBackground};
-  font-size: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].size}px;
-  font-weight: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].fontWeight};
-  line-height: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_default_default`].lineHeight}px;
+  font-size: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_desktop_default`].size}px;
+  font-weight: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_desktop_default`].fontWeight};
+  line-height: ${({ theme, variant, size }) => theme.button[`button_default_${variant}_${size}_typography_desktop_default`].lineHeight}px;
   ${({ isBlock }) => isBlock && css`
     width: 100%;
   `}
