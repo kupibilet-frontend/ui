@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import { transparentize } from 'polished'
 import { getPopoverArrow } from 'utils/getPopoverArrow'
 import { TooltipIconContainerProps, TTooltipCommonProps } from './types'
@@ -76,8 +76,21 @@ const TooltipBackground = styled.div<TTooltipCommonProps>`
   animation: 0.15s ease-out forwards ${arrival};
 `
 
+const TextCaption = styled.span`
+  font-size: 14px;
+  line-height: 20px;
+
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 12px;
+      line-height: 26px;
+    }
+  `}
+`
+
 export {
   TooltipBackground,
   TooltipIconContainer,
   TooltipIcon,
+  TextCaption,
 }

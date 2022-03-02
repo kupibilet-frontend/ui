@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import Text from 'components/Typography/Text'
+import styled, { css } from 'styled-components'
 
 type TSuggestionContainerProps = {
   isHighlighted?: boolean;
@@ -50,7 +49,16 @@ export const SuggestionIcon = styled.div`
   align-items: center;
   justify-content: center;
 `
-export const SuggestionText = styled(Text.withComponent('div'))`
+export const SuggestionText = styled.div`
   flex-grow: 1;
   white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+
+${({ theme }) => css`
+  @media ${theme.queries.isMobile} {
+    font-size: 14px;
+    line-height: 20px;
+  }
+`}
 `

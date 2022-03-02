@@ -1,7 +1,6 @@
 import React from 'react'
 import * as shadowsImport from 'utils/shadows'
-import styled from 'styled-components'
-import H3 from 'components/Typography/H3'
+import styled, { css } from 'styled-components'
 
 const shadows: { [key: string]: string } = { ...shadowsImport }
 
@@ -32,6 +31,18 @@ const Shadow = styled.div<TProps>`
   &:active {
     transform: scale(1.05);
   }
+`
+const H3 = styled.h3`
+  font-size: 22px;
+  line-height: 32px;
+  margin: 0;
+  font-weight: 600;
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  `}
 `
 
 export function Shadows(): JSX.Element {

@@ -37,7 +37,8 @@
                         "value": {
                             "fontFamily": "{font.family.bold.default.value}",
                             "size": "22",
-                            "lineHeight": "32"
+                            "lineHeight": "32",
+                            "fontWeight": "600"
                         }
                     }
                 },
