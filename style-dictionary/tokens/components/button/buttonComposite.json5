@@ -33,9 +33,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.small.default.value}"
+                            "value": "{typography.componentsMobile.button.small.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.small.default.value}"
                         }
                     }
                 },
@@ -90,9 +95,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.medium.default.value}"
+                            "value": "{typography.componentsMobile.button.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.medium.default.value}"
                         }
                     }
                 },
@@ -147,9 +157,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.large.default.value}"
+                            "value": "{typography.componentsMobile.button.large.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.large.default.value}"
                         }
                     }
                 },
@@ -206,9 +221,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.small.default.value}"
+                            "value": "{typography.componentsMobile.button.small.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.small.default.value}"
                         }
                     }
                 },
@@ -263,9 +283,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.medium.default.value}"
+                            "value": "{typography.componentsMobile.button.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.medium.default.value}"
                         }
                     }
                 },
@@ -320,9 +345,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.large.default.value}"
+                            "value": "{typography.componentsMobile.button.large.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.large.default.value}"
                         }
                     }
                 },
@@ -379,9 +409,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.small.default.value}"
+                            "value": "{typography.componentsMobile.button.small.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.small.default.value}"
                         }
                     }
                 },
@@ -436,9 +471,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.medium.default.value}"
+                            "value": "{typography.componentsMobile.button.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.medium.default.value}"
                         }
                     }
                 },
@@ -493,9 +533,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.large.default.value}"
+                            "value": "{typography.componentsMobile.button.large.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.large.default.value}"
                         }
                     }
                 },
@@ -552,9 +597,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.small.default.value}"
+                            "value": "{typography.componentsMobile.button.small.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.small.default.value}"
                         }
                     }
                 },
@@ -609,9 +659,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.medium.default.value}"
+                            "value": "{typography.componentsMobile.button.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.medium.default.value}"
                         }
                     }
                 },
@@ -666,9 +721,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.large.default.value}"
+                            "value": "{typography.componentsMobile.button.large.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.large.default.value}"
                         }
                     }
                 },
@@ -725,9 +785,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.small.default.value}"
+                            "value": "{typography.componentsMobile.button.small.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.small.default.value}"
                         }
                     }
                 },
@@ -782,9 +847,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.medium.default.value}"
+                            "value": "{typography.componentsMobile.button.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.medium.default.value}"
                         }
                     }
                 },
@@ -839,9 +909,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.large.default.value}"
+                            "value": "{typography.componentsMobile.button.large.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.large.default.value}"
                         }
                     }
                 },
@@ -898,9 +973,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.small.default.value}"
+                            "value": "{typography.componentsMobile.button.small.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.small.default.value}"
                         }
                     }
                 },
@@ -955,9 +1035,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.medium.default.value}"
+                            "value": "{typography.componentsMobile.button.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.medium.default.value}"
                         }
                     }
                 },
@@ -1012,9 +1097,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.button.large.default.value}"
+                            "value": "{typography.componentsMobile.button.large.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.button.large.default.value}"
                         }
                     }
                 },
