@@ -7,6 +7,9 @@ import * as typographyTokens from './tokens/typography'
 import * as buttonTokensLight from './tokens/light/button'
 import * as buttonTokensDark from './tokens/dark/button'
 
+import * as seatTokenLight from './tokens/light/seat'
+import * as seatTokenDark from './tokens/dark/seat'
+
 export const font = `
   font: 400 16px / 20px 'KB Suisse Intl';
   -moz-osx-font-smoothing: grayscale;
@@ -19,12 +22,14 @@ const lightTheme: DefaultTheme = {
   queries,
   color: colorsLight,
   button: buttonTokensLight,
+  seat: seatTokenLight,
 }
 
 const darkTheme: DefaultTheme = {
   ...lightTheme,
   color: colorsDark,
   button: buttonTokensDark,
+  seat: seatTokenDark,
 }
 
 export { lightTheme, darkTheme }
