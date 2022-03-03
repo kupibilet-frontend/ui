@@ -42,7 +42,7 @@ export interface TTypographyProps extends TWithMediaProps {
   variant?: TVariant,
   color?: COLOR_NAMES,
   isBold?: boolean,
-  tag?: keyof JSX.IntrinsicElements,
+  tag?: React.ElementType | keyof JSX.IntrinsicElements,
   children: React.ReactNode,
   isMobile: boolean,
   className?: string,
