@@ -245,7 +245,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
             null
           )
         }
-      { error && !active && (
+      { error && !active && !isActive && (
       <Error>
         { error }
       </Error>
