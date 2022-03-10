@@ -39,6 +39,13 @@ export interface TProps extends TWithMediaProps {
   children: React.ReactChild,
 }
 
+/**
+ * Компонент модального окна
+ * использование компонента:
+ * воздержитесь от использования выражений вида `condition && <Modal isOpen={isOpen} />`,
+ * вместо этого используем `<Modal isOpen={condition} />`
+ */
+
 export const Modal = React.memo((props: TProps) => {
   const {
     heading = '',
