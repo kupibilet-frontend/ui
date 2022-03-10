@@ -15,9 +15,14 @@
                     }
                 },
                 "typography": {
-                    "default": {
+                    "mobile": {
                         "default": {
-                            "value": "{typography.component.tagLabel.medium.default.value}"
+                            "value": "{typography.componentsMobile.tagLabel.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.componentsDesktop.tagLabel.medium.default.value}"
                         }
                     }
                 },

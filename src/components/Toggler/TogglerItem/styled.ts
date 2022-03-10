@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components'
-import Text from 'components/Typography/Text'
 import { borderRadiusMedium } from 'utils/borderRadius'
 
 interface TStyledWrapperProps {
   isSelected: boolean,
 }
 
-export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
+export const StyledWrapper = styled.span<TStyledWrapperProps>`
+  font-size: 16px;
+  line-height: 24px;
   padding: 9px 14px 9px 14px;
   cursor: pointer;
   text-align: center;
@@ -24,8 +25,14 @@ export const StyledWrapper = styled(Text)<TStyledWrapperProps>`
     background-color: ${({ theme }) => theme.color.colorBgPrimaryNormal};
     font-weight: 500;
     box-shadow: 0px 1px 3px rgba(98, 112, 139, 0.2);
-  `
-}`
+  `}
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  `}
+`
 
 
 export const HiddenRadio = styled.input.attrs(() => ({ type: 'radio' }))`

@@ -1,5 +1,4 @@
-import styled, { keyframes, DefaultTheme } from 'styled-components'
-import Text from 'components/Typography/Text'
+import styled, { keyframes, DefaultTheme, css } from 'styled-components'
 import { queries } from 'utils/media-queries'
 import { getPopoverArrow } from 'utils/getPopoverArrow'
 import {
@@ -88,12 +87,32 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   }
 `
 
-const HeaderText = styled(Text)`
+const HeaderText = styled.span`
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 500;
-`
 
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  `}
+`
 const Header = styled.div`
   margin-bottom: 3px;
+`
+
+const TextCaption = styled.span`
+  font-size: 14px;
+  line-height: 20px;
+
+  ${({ theme }) => css`
+    @media ${theme.queries.isMobile} {
+      font-size: 12px;
+      line-height: 26px;
+    }
+  `}
 `
 
 export {
@@ -102,4 +121,5 @@ export {
   HeaderText,
   PopoverIconContainer,
   PopoverIcon,
+  TextCaption,
 }

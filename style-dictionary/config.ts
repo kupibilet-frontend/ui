@@ -129,3 +129,48 @@ StyleDictionary.extend({
     },
   },
 }).buildAllPlatforms();
+
+
+StyleDictionary.registerFilter({
+  name: 'isSeat',
+  matcher: (prop) => prop.attributes.category === 'airplaneSeat',
+})
+
+// light seat tokens
+StyleDictionary.extend({
+  source: [
+    source.common,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/light/seat.ts`,
+          format: 'javascript/es6',
+          filter: 'isSeat',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()
+
+
+// dark seat tokens
+StyleDictionary.extend({
+  source: [
+    source.dark,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/dark/seat.ts`,
+          format: 'javascript/es6',
+          filter: 'isSeat',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()

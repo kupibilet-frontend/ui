@@ -81,6 +81,11 @@
                     "value":"rgba(245, 245, 247, 1)"
                 }
             },
+            "statusPrimary": {
+                "normal":{
+                    "value":"rgba(255, 239, 238, 1)"
+                }
+            },
             "statusInfo": {
                 "normal":{
                     "value":"rgba(235, 243, 255, 1)"
