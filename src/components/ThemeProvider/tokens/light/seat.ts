@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Mar 2022 09:35:46 GMT
+ * Generated on Thu, 10 Mar 2022 08:12:35 GMT
  */
 
 export const airplane_seat_category_one_medium_color_bg_normal = "rgba(255, 255, 255, 1)";
@@ -9,6 +9,7 @@ export const airplane_seat_category_one_medium_color_bg_disable = "#eeeff2";
 export const airplane_seat_category_one_medium_color_border_normal = "rgba(208, 209, 215, 1)";
 export const airplane_seat_category_one_medium_color_border_active = "rgba(33, 33, 38, 1)";
 export const airplane_seat_category_one_medium_color_border_disable = "#eeeff2";
+export const airplane_seat_category_one_medium_color_text_active = "#ffffff";
 export const airplane_seat_category_one_medium_typography_mobile_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_one_medium_typography_desktop_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_one_medium_size_border_radius_default = "4px";
@@ -18,6 +19,7 @@ export const airplane_seat_category_two_medium_color_bg_disable = "#eeeff2";
 export const airplane_seat_category_two_medium_color_border_normal = "rgba(82, 151, 255, 1)";
 export const airplane_seat_category_two_medium_color_border_active = "rgba(33, 33, 38, 1)";
 export const airplane_seat_category_two_medium_color_border_disable = "#eeeff2";
+export const airplane_seat_category_two_medium_color_text_active = "#ffffff";
 export const airplane_seat_category_two_medium_typography_mobile_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_two_medium_typography_desktop_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_two_medium_size_border_radius_default = "4px";
@@ -27,6 +29,7 @@ export const airplane_seat_category_three_medium_color_bg_disable = "#eeeff2";
 export const airplane_seat_category_three_medium_color_border_normal = "rgba(0, 65, 163, 1)";
 export const airplane_seat_category_three_medium_color_border_active = "rgba(33, 33, 38, 1)";
 export const airplane_seat_category_three_medium_color_border_disable = "#eeeff2";
+export const airplane_seat_category_three_medium_color_text_active = "#ffffff";
 export const airplane_seat_category_three_medium_typography_mobile_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_three_medium_typography_desktop_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_three_medium_size_border_radius_default = "4px";
@@ -36,6 +39,7 @@ export const airplane_seat_category_four_medium_color_bg_disable = "#eeeff2";
 export const airplane_seat_category_four_medium_color_border_normal = "rgba(133, 188, 12, 1)";
 export const airplane_seat_category_four_medium_color_border_active = "rgba(33, 33, 38, 1)";
 export const airplane_seat_category_four_medium_color_border_disable = "#eeeff2";
+export const airplane_seat_category_four_medium_color_text_active = "#ffffff";
 export const airplane_seat_category_four_medium_typography_mobile_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_four_medium_typography_desktop_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_four_medium_size_border_radius_default = "4px";
@@ -45,6 +49,7 @@ export const airplane_seat_category_five_medium_color_bg_disable = "#eeeff2";
 export const airplane_seat_category_five_medium_color_border_normal = "rgba(255, 139, 0, 1)";
 export const airplane_seat_category_five_medium_color_border_active = "rgba(33, 33, 38, 1)";
 export const airplane_seat_category_five_medium_color_border_disable = "#eeeff2";
+export const airplane_seat_category_five_medium_color_text_active = "#ffffff";
 export const airplane_seat_category_five_medium_typography_mobile_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_five_medium_typography_desktop_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_five_medium_size_border_radius_default = "4px";
@@ -54,6 +59,7 @@ export const airplane_seat_category_six_medium_color_bg_disable = "#eeeff2";
 export const airplane_seat_category_six_medium_color_border_normal = "rgba(250, 175, 0, 1)";
 export const airplane_seat_category_six_medium_color_border_active = "rgba(33, 33, 38, 1)";
 export const airplane_seat_category_six_medium_color_border_disable = "#eeeff2";
+export const airplane_seat_category_six_medium_color_text_active = "#ffffff";
 export const airplane_seat_category_six_medium_typography_mobile_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_six_medium_typography_desktop_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_six_medium_size_border_radius_default = "4px";
@@ -63,6 +69,7 @@ export const airplane_seat_category_seven_medium_color_bg_disable = "#eeeff2";
 export const airplane_seat_category_seven_medium_color_border_normal = "rgba(222, 53, 11, 1)";
 export const airplane_seat_category_seven_medium_color_border_active = "rgba(33, 33, 38, 1)";
 export const airplane_seat_category_seven_medium_color_border_disable = "#eeeff2";
+export const airplane_seat_category_seven_medium_color_text_active = "#ffffff";
 export const airplane_seat_category_seven_medium_typography_mobile_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_seven_medium_typography_desktop_airplane_seat_name = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const airplane_seat_category_seven_medium_size_border_radius_default = "4px";

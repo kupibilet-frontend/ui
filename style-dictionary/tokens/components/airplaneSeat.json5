@@ -24,6 +24,11 @@
                         "disable":{
                             "value": "{color.bg.secondary.disable.value}"
                         }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
                     }
                 },
                 "typography": {
@@ -70,6 +75,11 @@
                         },
                         "disable":{
                             "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
                         }
                     }
                 },
@@ -118,6 +128,11 @@
                         "disable":{
                             "value": "{color.bg.secondary.disable.value}"
                         }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
                     }
                 },
                 "typography": {
@@ -164,6 +179,11 @@
                         },
                         "disable":{
                             "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
                         }
                     }
                 },
@@ -212,6 +232,11 @@
                         "disable":{
                             "value": "{color.bg.secondary.disable.value}"
                         }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
                     }
                 },
                 "typography": {
@@ -259,6 +284,11 @@
                         "disable":{
                             "value": "{color.bg.secondary.disable.value}"
                         }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
                     }
                 },
                 "typography": {
@@ -305,6 +335,11 @@
                         },
                         "disable":{
                             "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
                         }
                     }
                 },
