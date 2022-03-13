@@ -76,4 +76,4 @@ const SingleFluidSection = styled.div`
 
 SingleFluidSection.displayName = 'SingleFluidSection'
 
-export { FluidContainer, FluidSection, Aside, SingleFluidSection }
+export { FluidContainer, FluidSection, Aside, SingleFluidSection, CONTAINER_MARGIN_HANDHELD }
