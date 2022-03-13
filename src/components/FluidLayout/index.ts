@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import media from 'utils/media-queries'
+import media, { media2021 } from 'utils/media-queries'
 
 const FluidContainer = styled.div`
   width: 1176px;
@@ -74,6 +74,24 @@ const SingleFluidSection = styled.div`
   }
 `
 
+const SingleFluidSection2021 = styled.div`
+  margin: 0 auto;
+  max-width: 966px;
+  width: 100%;
+
+  ${media2021.mobile`
+    margin: 0 ${CONTAINER_MARGIN_HANDHELD}px;
+    width: calc(100% - ${2 * CONTAINER_MARGIN_HANDHELD}px);
+  `}
+`
+
 SingleFluidSection.displayName = 'SingleFluidSection'
 
-export { FluidContainer, FluidSection, Aside, SingleFluidSection, CONTAINER_MARGIN_HANDHELD }
+export {
+  FluidContainer,
+  FluidSection,
+  Aside,
+  SingleFluidSection,
+  SingleFluidSection2021,
+  CONTAINER_MARGIN_HANDHELD,
+}
