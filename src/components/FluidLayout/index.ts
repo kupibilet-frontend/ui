@@ -74,17 +74,6 @@ const SingleFluidSection = styled.div`
   }
 `
 
-const SingleFluidSection2021 = styled.div`
-  margin: 0 auto;
-  max-width: 966px;
-  width: 100%;
-
-  ${media2021.mobile`
-    margin: 0 ${CONTAINER_MARGIN_HANDHELD}px;
-    width: calc(100% - ${2 * CONTAINER_MARGIN_HANDHELD}px);
-  `}
-`
-
 SingleFluidSection.displayName = 'SingleFluidSection'
 
 export {
@@ -92,6 +81,5 @@ export {
   FluidSection,
   Aside,
   SingleFluidSection,
-  SingleFluidSection2021,
   CONTAINER_MARGIN_HANDHELD,
 }
