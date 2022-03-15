@@ -190,7 +190,7 @@ function calculateIconMargin({
   if (!iconPosition) return
 
   const buttonWithIconPadding = theme.button[`button_composite_${variant}_${size}_size_padding_default`]
-  const innerMargin = buttonWithIconPadding.innerHorisontal
+  const innerMargin = buttonWithIconPadding.innerHorizontal
 
   if (iconPosition === 'left') {
     return `

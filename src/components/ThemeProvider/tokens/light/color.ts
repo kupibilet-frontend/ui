@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Mar 2022 09:35:46 GMT
+ * Generated on Tue, 15 Mar 2022 07:59:22 GMT
  */
 
 export const colorBgLayoutDefault = "#fafafb";
