@@ -1,4 +1,4 @@
-name: NPM Deploy
+name: CI
 on: push
 jobs:
   build:
@@ -11,6 +11,9 @@ jobs:
         with: 
           cache: 'yarn'
           registry-url: 'registry.npmjs.org'
-      - run: yarn install
-      - run: yarn build-storybook
-      - run: echo "🎉  ${{ secrets.NPM_TOKEN }} "
+      # - run: yarn install
+      # # - run: yarn build-storybook
+      - run: yarn versionize
+      - run: echo "🎉  ${{ VERSION }} "
+        env: 
+          VERSION: ${{ node -e "process.stdout.write(require('./package.json').version) }}
