@@ -11,5 +11,6 @@ jobs:
         with: 
           cache: 'yarn'
           registry-url: 'registry.npmjs.org'
+      - run: yarn install
       - run: yarn build-storybook
       - run: echo "🎉  ${{ secrets.NPM_TOKEN }} "
