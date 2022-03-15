@@ -1,0 +1,15 @@
+name: NPM Deploy
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v2
+        with: 
+          cache: 'yarn'
+          registry-url: 'registry.npmjs.org'
+      - run: yarn build-storybook
+      - run: echo "🎉  ${{ secrets.NPM_TOKEN }} "
