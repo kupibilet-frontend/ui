@@ -19,7 +19,7 @@
                 "disable":{
                     "value":"rgba(238, 239, 242, 1)"
                 }
-            },
+            }, 
             "secondary": {
                 "normal":{
                     "value": "rgba(238, 239, 242, 1)"

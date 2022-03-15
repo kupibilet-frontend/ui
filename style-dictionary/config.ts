@@ -7,7 +7,7 @@ const transforms = {
 
 const destinationRoot = 'src/components/ThemeProvider/tokens'
 const source = {
-  common: './style-dictionary/tokens/**/!(*-dark).json5',
+  common: './style-dictionary/tokens/**/!(*Dark).json5',
   dark: './style-dictionary/tokens/**/!(color|*.).json5'
 }
 
