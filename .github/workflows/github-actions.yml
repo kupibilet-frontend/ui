@@ -1,5 +1,7 @@
 name: CI
-on: push
+on:
+  pull_request:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +15,10 @@ jobs:
           registry-url: 'registry.npmjs.org'
       # - run: yarn install
       # # - run: yarn build-storybook
-      - run: yarn versionize
-      - run: echo "🎉  $VERSION "
-        env: 
-          VERSION: ${{ node -e "process.stdout.write(require('./package.json').version) }}
+      - name: Run script file
+        run: ./.github/scripts/build-prevesion.sh
+        shell: bash
+      # - run: yarn versionize
+      # - run: echo "🎉  $VERSION "
+      #   env: 
+      #     VERSION: ${{ node -e "process.stdout.write(require('./package.json').version) }}
