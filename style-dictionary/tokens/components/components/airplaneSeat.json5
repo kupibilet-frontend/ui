@@ -1,0 +1,420 @@
+{
+    "airplaneSeat":{
+        "categoryOne":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(255, 255, 255, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(208, 209, 215, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "categoryTwo":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(133, 182, 255, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(82, 151, 255, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "categoryThree":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(0, 78, 194, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(0, 45, 112, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "categoryFour":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(175, 241, 30, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(133, 188, 12, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "categoryFive":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(255, 144, 10, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(185, 89, 0, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "categorySix":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(255, 208, 99, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(250, 175, 0, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "categorySeven":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(248, 133, 104, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(222, 53, 11, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        },
+        "categoryEight":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "rgba(154, 127, 230, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "rgba(108, 69, 219, 1)"
+                        },
+                        "active":{
+                            "value": "{color.bg.contrast.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.secondary.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "active":{
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsMobile.airplaneSeatName.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "airplaneSeatName": {
+                            "value": "{typography.componentsDesktop.airplaneSeatName.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.small.default.value}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
