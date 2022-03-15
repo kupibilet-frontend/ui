@@ -14,6 +14,5 @@ jobs:
       # - run: yarn install
       # # - run: yarn build-storybook
       - run: yarn versionize
-      - run: echo "🎉  ${{ VERSION }} "
-        env: 
+      - env: 
           VERSION: ${{ node -e "process.stdout.write(require('./package.json').version) }}
