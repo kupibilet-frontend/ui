@@ -7,6 +7,9 @@ import * as typographyTokens from './tokens/typography'
 import * as seatTokenLight from './tokens/light/seat'
 import * as seatTokenDark from './tokens/dark/seat'
 
+import * as tagTokenLight from './tokens/light/tag'
+import * as tagTokenDark from './tokens/dark/tag'
+
 declare module 'styled-components' {
   export interface DefaultTheme {
       font: string,
@@ -14,6 +17,7 @@ declare module 'styled-components' {
       typography: typeof typographyTokens,
       button: typeof buttonTokensLight | typeof buttonTokensDark,
       seat: typeof seatTokenLight | typeof seatTokenDark,
+      tag: typeof tagTokenLight | typeof tagTokenDark,
       queries: Record<string, string>
   }
 }
