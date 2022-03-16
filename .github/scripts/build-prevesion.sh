@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git config user.email "system@kupibilet.ru"
-git config user.name "Kupibilet-System"
+git config user.email "tech@kupibilet.ru"
+git config user.name "kupibilet-dev"
 
 yarn versionize || exit $?
 
