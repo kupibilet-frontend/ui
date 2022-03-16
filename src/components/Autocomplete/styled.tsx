@@ -20,6 +20,10 @@ export default css`
     &::-webkit-search-cancel-button {
       display: none;
     }
+    &:disabled {
+      -webkit-text-fill-color: ${({ theme }) => theme.color.misc300};
+      opacity: 1;
+    }
   }
   .react-autosuggest__input--focused {
     outline: none;
