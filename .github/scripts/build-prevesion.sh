@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git config user.email "system@kupibilet.ru"
+git config user.name "Kupibilet-System"
+
 yarn versionize || exit $?
 
 VERSION=$(node -e "process.stdout.write(require('./package.json').version)")
