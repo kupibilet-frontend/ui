@@ -5,7 +5,6 @@ on:
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   GITHUB_TOKEN: ${{ github.token }}
-  REGISTRY-URL: 'https://registry.npmjs.org'
 
 jobs:
   build:
@@ -17,14 +16,9 @@ jobs:
       - uses: actions/setup-node@v2
         with: 
           cache: 'yarn'
-          registry-url: ${REGISTRY-URL}
-      # - run: yarn install
-      # # - run: yarn build-storybook
+          registry-url: 'https://registry.npmjs.org'
       - run: yarn --frozen-lockfile
       - name: Run script file
         run: ./.github/scripts/build-prevesion.sh
         shell: bash
-      # - run: yarn versionize
-      # - run: echo "🎉  $VERSION "
-      #   env: 
-      #     VERSION: ${{ node -e "process.stdout.write(require('./package.json').version) }}
+    
