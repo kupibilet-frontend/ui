@@ -2,6 +2,10 @@ name: CI
 on:
   pull_request:
 
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  GITHUB_TOKEN: ${{ github.token }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
