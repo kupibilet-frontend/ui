@@ -12,15 +12,32 @@ import {
 
 export { OVERLAY_Z_INDEX } from './styled'
 
+const SCROLLBAR_WIDTH = 20
+
 interface TProps extends TWithMediaProps {
   closePortal: () => void,
   isOnBottom: boolean,
   children: React.ReactElement,
+  isModalOverlay: boolean;
 }
 
 class Overlay extends React.PureComponent<TProps> {
+  static defaultProps = {
+    isModalOverlay: false,
+  }
+
   stopPropagation = (e: MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
+  }
+
+  close = (e: MouseEvent) => {
+    // Из-за невозможности определения ширины скроллбара
+    // на mac os, не закрываем портал если пользователь
+    // кликнул в область предпологаемого отображения скроллбара
+    if (this.props.isModalOverlay
+      && document.documentElement.clientWidth - e.clientX > SCROLLBAR_WIDTH) {
+      this.props.closePortal()
+    }
   }
 
   renderOverlay = () => {
@@ -32,7 +49,7 @@ class Overlay extends React.PureComponent<TProps> {
 
     return (
       <Wrapper
-        onMouseDown={closePortal}
+        onMouseDown={this.close}
         isOnBottom={isOnBottom}
       >
         <OverlayContentWrap isOnBottom={isOnBottom}>
@@ -52,5 +69,4 @@ class Overlay extends React.PureComponent<TProps> {
     )
   }
 }
-
 export default withMedia(Overlay)

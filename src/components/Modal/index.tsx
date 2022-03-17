@@ -130,6 +130,7 @@ export const Modal = React.memo((props: TProps) => {
     <Portal node={document && document.getElementById('portal')}>
       <GlobalStylesScope>
         <Overlay
+          isModalOverlay
           closePortal={closeOnOutsideClick ? closePortal : () => null}
           isOnBottom={isOnBottom}
         >
@@ -151,8 +152,8 @@ export const Modal = React.memo((props: TProps) => {
                 />}
               />
             )}
-            { renderContent && renderContent({ ...props, size }) }
-            { footer || defaultFooter }
+            {renderContent && renderContent({ ...props, size })}
+            {footer || defaultFooter}
           </ModalContent>
         </Overlay>
       </GlobalStylesScope>
