@@ -5,6 +5,8 @@ on:
 env:
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   GITHUB_TOKEN: ${{ github.token }}
+  TRAVIS_PULL_REQUEST_BRANCH: ${{ github.head_ref }} 
+  TRAVIS_COMMIT: ${{ github.sha }}
 
 jobs:
   build:
