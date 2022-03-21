@@ -1,4 +1,4 @@
-name: CI
+name: Publish new version to NPM, deploy story-book
 
 on: 
   push:

@@ -1,4 +1,4 @@
-name: CI
+name: Build and publish preversion
 
 on: 
   pull_request:
