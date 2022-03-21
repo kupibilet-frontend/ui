@@ -2,8 +2,6 @@ name: Publish new version to NPM, deploy story-book
 
 on: 
   push:
-    # branches: 
-    #   - add-deploy-and-publish-to-ci
     tags:
       - '*'
 
@@ -14,6 +12,7 @@ env:
 jobs:
   deploy:
     name: Publish new version to NPM, deploy story-book
+    if: github.event.base_ref == 'refs/heads/add-deploy-and-publish-to-ci'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,6 +24,3 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: yarn --frozen-lockfile
       - run: npm publish
-        with:
-          branches: 
-          - add-deploy-and-publish-to-ci
