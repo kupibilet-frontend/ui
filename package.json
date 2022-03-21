@@ -1,7 +1,10 @@
 {
   "name": "@kupibilet/ui",
-  "version": "22.6.0",
+  "version": "22.6.8",
   "description": "UI kit for kupibilet web app",
+  "publishConfig": {
+    "kupibilet-dev:registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "lint": "yarn lint:js && yarn lint:css",
     "prestart": "scripts/check-engines.js",

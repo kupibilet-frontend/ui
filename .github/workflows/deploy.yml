@@ -1,0 +1,28 @@
+name: Publish new version to NPM, deploy story-book
+
+on: 
+  push:
+    tags:
+      - '*'
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  GITHUB_TOKEN: ${{ github.token }}
+
+jobs:
+  deploy:
+    name: Publish new version to NPM, deploy story-book
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v2
+        with: 
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn --frozen-lockfile
+      - run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+        shell: bash
+      - run: npm publish --access public
