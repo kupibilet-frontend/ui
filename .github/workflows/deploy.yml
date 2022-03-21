@@ -2,8 +2,8 @@ name: Publish new version to NPM, deploy story-book
 
 on: 
   push:
-    branches: 
-      - master
+    # branches: 
+    #   - add-deploy-and-publish-to-ci
     tags:
       - '*'
 
