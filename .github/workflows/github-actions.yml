@@ -30,9 +30,9 @@ jobs:
         shell: bash
   deploy:
     name: Publish new version to NPM, deploy story-book
+    runs-on: ubuntu-latest
     with:
       branch: add-deploy-and-publish-to-ci
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
