@@ -12,7 +12,6 @@ env:
 jobs:
   deploy:
     name: Publish new version to NPM, deploy story-book
-    if: github.event.base_ref == 'refs/heads/add-deploy-and-publish-to-ci'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
