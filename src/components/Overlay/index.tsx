@@ -31,12 +31,17 @@ class Overlay extends React.PureComponent<TProps> {
   }
 
   close = (e: MouseEvent) => {
+    const { isModalOverlay, closePortal } = this.props
     // Из-за невозможности определения ширины скроллбара
     // на mac os, не закрываем портал если пользователь
     // кликнул в область предпологаемого отображения скроллбара
-    if (this.props.isModalOverlay
+    if (isModalOverlay
       && document.documentElement.clientWidth - e.clientX > SCROLLBAR_WIDTH) {
-      this.props.closePortal()
+      closePortal()
+    }
+
+    if (!isModalOverlay) {
+      closePortal()
     }
   }
 
