@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { Portal } from 'react-portal'
 import Overlay from 'components/Overlay'
 import GlobalStylesScope from 'components/ThemeProvider'
@@ -63,6 +63,22 @@ export const Modal = React.memo((props: TProps) => {
     onClose,
     isHandheld,
   } = props
+
+  const mounted = useRef(false)
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else if (mounted.current) {
+      document.body.style.overflow = ''
+    }
+
+    mounted.current = true
+  }, [isOpen, mounted])
+
+  useEffect(() => () => {
+    document.body.style.overflow = ''
+  }, [])
 
   const closePortal = useCallback(() => {
     if (onClose) {
