@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story } from '@storybook/react'
-import { Tag, IProps, TVariant } from 'components/Tag/Tag'
+import { Tag, IProps, TVariant } from 'components/Tag'
 import { ICON_SIZES } from 'components/Icon/consts'
 import Icon from 'components/Icon'
 

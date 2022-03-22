@@ -1,6 +1,6 @@
 import Icon from 'components/Icon'
 import styled, { css, DefaultTheme } from 'styled-components'
-import { TVariant } from './Tag'
+import { TVariant } from '.'
 
 
 const getPadding = (theme: DefaultTheme, variant: TVariant) => {

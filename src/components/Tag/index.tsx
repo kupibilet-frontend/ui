@@ -14,13 +14,11 @@ export const Tag = ({
   message,
   icon,
   variant,
-}: IProps): JSX.Element => {
-  return (
-    <Wrapper variant={variant}>
-      {icon}
-      <MessageBox withLeftIcon={Boolean(icon)} variant={variant}>
-        {message}
-      </MessageBox>
-    </Wrapper>
-  )
-}
+}: IProps) => (
+  <Wrapper variant={variant}>
+    {icon}
+    <MessageBox withLeftIcon={Boolean(icon)} variant={variant}>
+      {message}
+    </MessageBox>
+  </Wrapper>
+)
