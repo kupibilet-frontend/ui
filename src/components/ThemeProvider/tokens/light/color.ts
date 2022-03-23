@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Mar 2022 07:59:22 GMT
+ * Generated on Wed, 23 Mar 2022 09:29:00 GMT
  */
 
 export const colorBgLayoutDefault = "#fafafb";
@@ -26,11 +26,23 @@ export const colorBgContrastActive = "#101014";
 export const colorBgContrastDisable = "#eeeff2";
 export const colorBgStatusDefaultNormal = "#f5f5f7";
 export const colorBgStatusPrimaryNormal = "#ffefee";
+export const colorBgStatusPrimaryHover = "#e8e8ed";
+export const colorBgStatusPrimaryActive = "#e3e3e8";
 export const colorBgStatusInfoNormal = "#ebf3ff";
+export const colorBgStatusInfoHover = "#d6e7ff";
+export const colorBgStatusInfoActive = "#cce0ff";
 export const colorBgStatusDangerNormal = "#fcede8";
+export const colorBgStatusDangerHover = "#ffdddb";
+export const colorBgStatusDangerActive = "#ffd4d1";
 export const colorBgStatusWarningNormal = "#fff6eb";
+export const colorBgStatusWarningHover = "#ffecd6";
+export const colorBgStatusWarningActive = "#ffe8cc";
 export const colorBgStatusHelpNormal = "#f2ebff";
-export const colorBgStatusSucsessNormal = "#f4fadb";
+export const colorBgStatusHelpHover = "#e4d6ff";
+export const colorBgStatusHelpActive = "#deccff";
+export const colorBgStatusSuccessNormal = "#f4fadb";
+export const colorBgStatusSuccessHover = "#eff8c9";
+export const colorBgStatusSuccessActive = "#ecf6c0";
 export const colorBgBonusDefaultNormal = "#fa6257";
 export const colorBgBonusGoldNormal = "#fc8518";
 export const colorBgBonusPlatinumNormal = "#13306d";

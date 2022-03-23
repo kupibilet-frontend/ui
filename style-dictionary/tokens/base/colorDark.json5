@@ -79,42 +79,90 @@
             "statusDefault": {
                 "normal":{
                     "value":"rgba(46, 46, 51, 1)"
+                },
+                "hover":{
+                    "value":"rgba(46, 46, 51, 1)"
+                },
+                "active":{
+                    "value":"rgba(46, 46, 51, 1)"
                 }
             },
             "statusPrimary": {
                 "normal":{
                     "value":"rgba(93, 51, 52, 1)"
+                },
+                "hover":{
+                    "value":"rgba(86, 47, 48, 1)"
+                },
+                "active":{
+                    "value":"rgba(79, 43, 44, 1)"
                 }
             },
             "statusInfo": {
                 "normal":{
                     "value":"rgba(0, 27, 115, 1)"
+                },
+                "hover":{
+                    "value":"rgba(0, 27, 115, 1)"
+                },
+                "active":{
+                    "value":"rgba(0, 21, 92, 1)"
                 }
             },
             "statusDanger": {
                 "normal":{
                     "value": "rgba(87, 10, 17, 1)"
+                },
+                "hover":{
+                    "value":"rgba(78, 9, 15, 1)"
+                },
+                "active":{
+                    "value":"rgba(69, 8, 14, 1)"
                 }
             },
             "statusWarning": {
                 "normal":{
                     "value": "rgba(82, 50, 3, 1)"
+                },
+                "hover":{
+                    "value":"rgba(73, 45, 3, 1)"
+                },
+                "active":{
+                    "value":"rgba(64, 39, 3, 1)"
                 }
             },
             "statusHelp": {
                 "normal":{
                     "value": "rgba(35, 18, 122, 1)"
+                },
+                "hover":{
+                    "value":"rgba(32, 16, 111, 1)"
+                },
+                "active":{
+                    "value":"rgba(29, 15, 102, 1)"
                 }
             },
-            "statusSucsess": {
+            "statusSuccess": {
                 "normal":{
                     "value": "rgba(48, 79, 2, 1)"
+                },
+                "hover":{
+                    "value":"rgba(42, 69, 2, 1)"
+                },
+                "active":{
+                    "value":"rgba(36, 59, 2, 1)"
                 }
             },
             "bonusDefault": {
                 "normal":{
                     "value": "rgba(250, 98, 87, 1)"
-                }
+                },
+                "hover":{
+                    "value":"rgba(239, 248, 201, 1)"
+                },
+                "active":{
+                    "value":"rgba(236, 246, 192, 1)"
+                } 
             },
             "bonusGold": {
                 "normal":{

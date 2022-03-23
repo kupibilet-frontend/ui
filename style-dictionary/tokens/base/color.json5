@@ -84,31 +84,67 @@
             "statusPrimary": {
                 "normal":{
                     "value":"rgba(255, 239, 238, 1)"
+                },
+                "hover":{
+                    "value":"rgba(232, 232, 237, 1)"
+                },
+                "active":{
+                    "value":"rgba(227, 227, 232, 1)"
                 }
             },
             "statusInfo": {
                 "normal":{
                     "value":"rgba(235, 243, 255, 1)"
+                },
+                "hover":{
+                    "value":"rgba(214, 231, 255, 1)"
+                },
+                "active":{
+                    "value":"rgba(204, 224, 255, 1)"
                 }
             },
             "statusDanger": {
                 "normal":{
                     "value": "rgba(252, 237, 232, 1)"
+                },
+                "hover":{
+                    "value":"rgba(255, 221, 219, 1)"
+                },
+                "active":{
+                    "value":"rgba(255, 212, 209, 1)"
                 }
             },
             "statusWarning": {
                 "normal":{
                     "value": "rgba(255, 246, 235, 1)"
+                },
+                "hover":{
+                    "value":"rgba(255, 236, 214, 1)"
+                },
+                "active":{
+                    "value":"rgba(255, 232, 204, 1)"
                 }
             },
             "statusHelp": {
                 "normal":{
                     "value": "rgba(242, 235, 255, 1)"
+                },
+                "hover":{
+                    "value":"rgba(228, 214, 255, 1)"
+                },
+                "active":{
+                    "value":"rgba(222, 204, 255, 1)"
                 }
             },
-            "statusSucsess": {
+            "statusSuccess": {
                 "normal":{
                     "value": "rgba(244, 250, 219, 1)"
+                },
+                "hover":{
+                    "value":"rgba(239, 248, 201, 1)"
+                },
+                "active":{
+                    "value":"rgba(236, 246, 192, 1)"
                 }
             },
             "bonusDefault": {
