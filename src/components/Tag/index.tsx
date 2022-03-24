@@ -1,11 +1,11 @@
 import React from 'react'
-import { Wrapper, MessageBox } from './styled'
+import { Wrapper, IconBox } from './styled'
 
 
 export type TVariant = 'warning' | 'success' | 'danger' | 'normal'
 
 export interface IProps {
-  message: string;
+  message: React.ReactElement;
   icon?: React.ReactElement;
   variant: TVariant;
 }
@@ -14,11 +14,13 @@ export const Tag = ({
   message,
   icon,
   variant,
-}: IProps) => (
+}: IProps): JSX.Element => (
   <Wrapper variant={variant}>
-    {icon}
-    <MessageBox withLeftIcon={Boolean(icon)} variant={variant}>
-      {message}
-    </MessageBox>
+    {icon && (
+      <IconBox>
+        {icon}
+      </IconBox>
+    )}
+    {message}
   </Wrapper>
 )

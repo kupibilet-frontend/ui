@@ -3,10 +3,11 @@ import { Story } from '@storybook/react'
 import { Tag, IProps, TVariant } from 'components/Tag'
 import { ICON_SIZES } from 'components/Icon/consts'
 import Icon from 'components/Icon'
+import Typography from 'components/Typography'
 
 
 const DEFAULT_PROPS = {
-  message: 'AviaCompany',
+  message: <Typography variant="caption" isBold>AviaCompany</Typography>,
   variant: 'warning' as TVariant,
 }
 
