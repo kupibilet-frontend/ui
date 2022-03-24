@@ -174,3 +174,48 @@ StyleDictionary.extend({
     },
   },
 }).buildAllPlatforms()
+
+
+StyleDictionary.registerFilter({
+  name: 'isTagLabel',
+  matcher: (prop) => prop.attributes.category === 'tagLabel',
+})
+
+// light seat tokens
+StyleDictionary.extend({
+  source: [
+    source.common,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/light/tag.ts`,
+          format: 'javascript/es6',
+          filter: 'isTagLabel',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()
+
+
+// dark seat tokens
+StyleDictionary.extend({
+  source: [
+    source.dark,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/dark/tag.ts`,
+          format: 'javascript/es6',
+          filter: 'isTagLabel',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()

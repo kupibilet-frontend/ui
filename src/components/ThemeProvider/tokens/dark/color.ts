@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 15 Mar 2022 07:59:22 GMT
+ * Generated on Wed, 16 Mar 2022 10:06:20 GMT
  */
 
 export const colorBgLayoutDefault = "#101014";
@@ -30,7 +30,7 @@ export const colorBgStatusInfoNormal = "#001b73";
 export const colorBgStatusDangerNormal = "#570a11";
 export const colorBgStatusWarningNormal = "#523203";
 export const colorBgStatusHelpNormal = "#23127a";
-export const colorBgStatusSucsessNormal = "#304f02";
+export const colorBgStatusSuccessNormal = "#304f02";
 export const colorBgBonusDefaultNormal = "#fa6257";
 export const colorBgBonusGoldNormal = "#d76700";
 export const colorBgBonusPlatinumNormal = "#1a4398";
