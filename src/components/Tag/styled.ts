@@ -15,6 +15,15 @@ interface ITagProps {
   readonly variant: TVariant;
 }
 
+const getFont = (theme: DefaultTheme, variant: TVariant) => {
+  const { size, lineHeight, fontWeight } = theme.tag[`tag_label_${variant}_medium_typography_desktop_default`]
+
+  return `
+    font-weight: ${fontWeight};
+    font-size: ${size}px;
+    line-height: ${lineHeight}px;
+ `
+}
 
 export const Wrapper = styled.div<ITagProps>`
   min-width: 94px;
@@ -36,4 +45,8 @@ export const StyledIcon = styled(Icon)<ITagProps>`
 export const IconBox = styled.div`
   height: 16px;
   margin-right: 4px;
+`
+
+export const MessageBox = styled.div<ITagProps>`
+  ${({ theme, variant }) => getFont(theme, variant)}
 `

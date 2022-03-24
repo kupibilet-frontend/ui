@@ -1,5 +1,5 @@
 import React from 'react'
-import { Wrapper, IconBox } from './styled'
+import { Wrapper, IconBox, MessageBox } from './styled'
 
 
 export type TVariant = 'warning' | 'success' | 'danger' | 'normal'
@@ -21,6 +21,8 @@ export const Tag = ({
         {icon}
       </IconBox>
     )}
-    {message}
+    <MessageBox variant={variant}>
+      {message}
+    </MessageBox>
   </Wrapper>
 )
