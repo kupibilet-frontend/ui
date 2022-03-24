@@ -126,8 +126,6 @@ const Typography = ({
   const bold = calculateBold(variant, isBold)
   const tokenName = `typography_${platform}_${tokenVariant}${bold}` as TTokenName
 
-  console.log('tokenName', tokenName)
-
   return (
     <StyledTypography
       as={tag ?? VARIANTS_MAPPER[variant]}
