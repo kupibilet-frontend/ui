@@ -23,5 +23,3 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: yarn --frozen-lockfile
       - run: npm publish --access public
-        with:
-          registry-url: https://registry.npmjs.org/
