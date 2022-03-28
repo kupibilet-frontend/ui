@@ -22,4 +22,4 @@ jobs:
           cache: 'yarn'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn --frozen-lockfile
-      - run: npm publish
+      - run: npm publish --access public
