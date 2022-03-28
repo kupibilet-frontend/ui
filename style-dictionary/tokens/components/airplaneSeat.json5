@@ -5,7 +5,7 @@
                 "color":{
                     "bg":{
                         "normal":{
-                            "value": "rgba(255, 255, 255, 1)"
+                            "value": "{color.bg.primary.normal.value}"
                         },
                         "active":{
                             "value": "{color.bg.contrast.normal.value}"
@@ -16,7 +16,7 @@
                     },
                     "border":{
                         "normal":{
-                            "value": "rgba(208, 209, 215, 1)"
+                            "value": "{color.border.primary.normal.value}"
                         },
                         "active":{
                             "value": "{color.bg.contrast.normal.value}"

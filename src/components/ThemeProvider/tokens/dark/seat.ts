@@ -1,12 +1,12 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Mar 2022 10:06:20 GMT
+ * Generated on Mon, 28 Mar 2022 15:13:34 GMT
  */
 
-export const airplane_seat_category_one_medium_color_bg_normal = "rgba(255, 255, 255, 1)";
+export const airplane_seat_category_one_medium_color_bg_normal = "#212126";
 export const airplane_seat_category_one_medium_color_bg_active = "#fafafb";
 export const airplane_seat_category_one_medium_color_bg_disable = "#3a3a41";
-export const airplane_seat_category_one_medium_color_border_normal = "rgba(208, 209, 215, 1)";
+export const airplane_seat_category_one_medium_color_border_normal = "#51525a";
 export const airplane_seat_category_one_medium_color_border_active = "#fafafb";
 export const airplane_seat_category_one_medium_color_border_disable = "#3a3a41";
 export const airplane_seat_category_one_medium_color_text_active = "#ffffff";
