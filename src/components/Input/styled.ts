@@ -109,6 +109,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
 
   &:disabled {
     color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
+    -webkit-text-fill-color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
     &::placeholder {
       color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
   }

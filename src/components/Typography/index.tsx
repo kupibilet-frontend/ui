@@ -1,7 +1,5 @@
 import React from 'react'
-import { withMedia2021 } from 'utils/media-queries'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
-import { TWithMediaProps } from 'utils/types'
 import * as typographyTokens from 'components/ThemeProvider/tokens/typography'
 import { StyledTypography } from 'components/Typography/styled'
 
@@ -38,13 +36,12 @@ type TVariantToken =
   | 'text_small'
   | 'text_medium'
 
-export interface TTypographyProps extends TWithMediaProps {
+export interface TTypographyProps {
   variant?: TVariant,
   color?: COLOR_NAMES,
   isBold?: boolean,
   tag?: React.ElementType | keyof JSX.IntrinsicElements,
   children: React.ReactNode,
-  isMobile: boolean,
   className?: string,
   as?: React.ElementType | keyof JSX.IntrinsicElements,
   // properties when used as a reference:
@@ -118,19 +115,18 @@ const Typography = ({
   isBold = false,
   tag,
   children,
-  isMobile,
   ...props
-}: TTypographyProps) => {
-  const platform = isMobile ? 'mobile' : 'desktop'
+}: TTypographyProps):JSX.Element => {
   const tokenVariant = calculateTokenVariant(variant)
   const bold = calculateBold(variant, isBold)
-  const tokenName = `typography_${platform}_${tokenVariant}${bold}` as TTokenName
-
+  const tokenName = `typography_desktop_${tokenVariant}${bold}` as TTokenName
+  const mobileTokenName = `typography_mobile_${tokenVariant}${bold}` as TTokenName
   return (
     <StyledTypography
       as={tag ?? VARIANTS_MAPPER[variant]}
       color={color}
       tokenName={tokenName}
+      mobileTokenName={mobileTokenName}
       {...props}
     >
       {children}
@@ -138,4 +134,4 @@ const Typography = ({
   )
 }
 
-export default withMedia2021(Typography)
+export default Typography

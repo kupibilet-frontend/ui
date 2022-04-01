@@ -29,7 +29,7 @@
                 "size": {
                     "borderRadius": {
                         "default": {
-                            "value": "{size.borderRadius.medium.default.value}"
+                            "value": "{size.borderRadius.small.default.value}"
                         }
                     },
                     "padding": {
@@ -75,7 +75,7 @@
                 "size": {
                     "borderRadius": {
                         "default": {
-                            "value": "{size.borderRadius.medium.default.value}"
+                            "value": "{size.borderRadius.small.default.value}"
                         }
                     },
                     "padding": {
@@ -121,7 +121,7 @@
                 "size": {
                     "borderRadius": {
                         "default": {
-                            "value": "{size.borderRadius.medium.default.value}"
+                            "value": "{size.borderRadius.small.default.value}"
                         }
                     },
                     "padding": {
@@ -167,7 +167,7 @@
                 "size": {
                     "borderRadius": {
                         "default": {
-                            "value": "{size.borderRadius.medium.default.value}"
+                            "value": "{size.borderRadius.small.default.value}"
                         }
                     },
                     "padding": {
