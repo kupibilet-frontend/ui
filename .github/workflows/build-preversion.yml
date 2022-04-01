@@ -1,0 +1,28 @@
+name: Build and publish preversion
+
+on: 
+  pull_request:
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  GITHUB_TOKEN: ${{ github.token }}
+  TRAVIS_PULL_REQUEST_BRANCH: ${{ github.head_ref }} 
+  TRAVIS_COMMIT: ${{ github.sha }}
+
+jobs:
+  build-preversion:
+    name: Build and publish preversion
+    if: github.head_ref
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v2
+        with: 
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn --frozen-lockfile
+      - name: Run script file
+        run: ./.github/scripts/build-prevesion.sh
+        shell: bash
