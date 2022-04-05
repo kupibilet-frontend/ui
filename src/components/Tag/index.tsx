@@ -2,7 +2,7 @@ import React from 'react'
 import { Wrapper, IconBox, MessageBox } from './styled'
 
 
-export type TVariant = 'warning' | 'success' | 'danger' | 'normal'
+export type TVariant = 'warning' | 'success' | 'danger' | 'normal' | 'info' | 'primary'
 
 export interface IProps {
   message: React.ReactElement;

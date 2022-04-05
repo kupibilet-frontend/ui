@@ -24,7 +24,7 @@ Primary.args = {
 
 Primary.parameters = {
   variant: {
-    values: ['warning', 'normal', 'success', 'danger'],
+    values: ['warning', 'normal', 'success', 'danger', 'info', 'primary'],
   },
 }
 
