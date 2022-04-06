@@ -8,14 +8,16 @@ export interface IProps {
   message: React.ReactElement;
   icon?: React.ReactElement;
   variant: TVariant;
+  className?: string;
 }
 
 export const Tag = ({
   message,
   icon,
   variant,
+  className,
 }: IProps): JSX.Element => (
-  <Wrapper variant={variant}>
+  <Wrapper variant={variant} className={className}>
     {icon && (
       <IconBox>
         {icon}
