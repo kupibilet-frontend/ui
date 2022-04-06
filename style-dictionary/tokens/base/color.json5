@@ -277,6 +277,11 @@
                 "normal":{
                     "value": "rgba(222, 53, 11, 1)"
                 }
+            },
+            "transparent":{
+                "normal":{
+                    "value": "rgba(0, 0, 0, 0)"
+                }
             }
         },
         "overlay": {

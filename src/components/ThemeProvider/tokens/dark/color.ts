@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 01 Apr 2022 07:13:03 GMT
+ * Generated on Tue, 05 Apr 2022 15:09:56 GMT
  */
 
 export const colorBgLayoutDefault = "#101014";
@@ -74,4 +74,5 @@ export const colorBorderPrimaryActive = "#f5f5f7";
 export const colorBorderAccentNormal = "#e45c52";
 export const colorBorderSuccessNormal = "#92ce0d";
 export const colorBorderDangerNormal = "#f53333";
+export const colorBorderTransparentNormal = "rgba(0, 0, 0, 0)";
 export const colorOverlayPrimaryDefault = "rgba(33, 33, 38, 0.56)";
