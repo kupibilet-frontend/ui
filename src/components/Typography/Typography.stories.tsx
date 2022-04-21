@@ -72,13 +72,13 @@ const List: Story = () => (
 const NewTypography: Story = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <UITypography variant="h1" color={COLOR_NAMES.success700}>
+      <UITypography variant="h1" color="success700">
         H1
       </UITypography>
-      <UITypography variant="medium" color={COLOR_NAMES.primary400}>
+      <UITypography variant="medium" color="primary400">
         Text
       </UITypography>
-      <UITypography variant="medium" isBold color={COLOR_NAMES.primary700}>
+      <UITypography variant="medium" isBold color="primary700">
         Text Bold
       </UITypography>
     </div>

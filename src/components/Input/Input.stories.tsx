@@ -63,8 +63,8 @@ const InputWithIcons: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 
 InputWithIcons.args = {
   ...DEFAULT_INPUT_PROPS,
-  leftIcon: <Icon name="man" fill={COLOR_NAMES.misc500} />,
-  rightIcon: <Icon name="angle" fill={COLOR_NAMES.misc500} />,
+  leftIcon: <Icon name="man" fill="misc500" />,
+  rightIcon: <Icon name="angle" fill="misc500" />,
 }
 
 // ----------------------------------------------
@@ -75,8 +75,8 @@ const InputWithIconsGroup: Story<TProps<HTMLInputElement>> = InputTemplate.bind(
 InputWithIconsGroup.args = {
   ...DEFAULT_INPUT_PROPS,
   rightIcon: [
-    <Icon name="man" fill={COLOR_NAMES.misc500} />,
-    <Icon name="angle" fill={COLOR_NAMES.misc500} />,
+    <Icon name="man" fill="misc500" />,
+    <Icon name="angle" fill="misc500" />,
   ],
 }
 
