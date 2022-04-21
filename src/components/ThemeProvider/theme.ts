@@ -13,8 +13,14 @@ import * as seatTokenDark from './tokens/dark/seat'
 import * as tagTokenLight from './tokens/light/tag'
 import * as tagTokenDark from './tokens/dark/tag'
 
+// export const font = `
+//   font: 400 16px / 20px 'KB Suisse Intl';
+//   -moz-osx-font-smoothing: grayscale;
+//   -webkit-font-smoothing: antialiased;
+// `
+
 export const font = `
-  font: 400 16px / 20px 'KB Suisse Intl';
+  font: 400 16px / 20px 'KB Source Sans Pro', 'Source Sans Pro';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 `
