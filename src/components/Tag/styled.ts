@@ -26,7 +26,7 @@ const getFont = (theme: DefaultTheme, variant: TVariant) => {
 }
 
 export const Wrapper = styled.div<ITagProps>`
-  min-width: 94px;
+  white-space: nowrap;
   height: 24px;
   border-radius: ${({ theme, variant }) => theme.tag[`tag_label_${variant}_medium_size_border_radius_default`]};
   display: flex;
