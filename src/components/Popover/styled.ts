@@ -3,13 +3,13 @@ import Text from 'components/Typography/Text'
 import { queries } from 'utils/media-queries'
 import { getPopoverArrow } from 'utils/getPopoverArrow'
 import { transparentize } from 'polished'
-import { color } from 'components/ThemeProvider/theme'
+import { colorsLight } from 'components/ThemeProvider/colors'
 import {
   TPopoverBackgroundProps,
   TPopoverIconProps,
 } from './types'
 
-const iconSrc = getPopoverArrow(transparentize(0.03, color.text600))
+const iconSrc = getPopoverArrow(transparentize(0.03, colorsLight.text600))
 
 const getBackgroundImage = () => {
   if (iconSrc) {
@@ -73,7 +73,7 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   flex-grow: 1;
   min-width: 240px;
   max-width: ${({ size }) => POPOVER_SIZES[size]};
-  background: ${transparentize(0.03, color.text600)};
+  background: ${transparentize(0.03, colorsLight.text600)};
   color: ${({ theme }) => theme.color.background};
   border-radius: 6px;
   padding: 12px;

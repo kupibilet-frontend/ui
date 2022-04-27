@@ -1,5 +1,6 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
+import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import H1 from './H1'
 import H2 from './H2'
 import H3 from './H3'
@@ -12,6 +13,7 @@ import TextLarge from './TextLarge'
 import UppercaseExtraSmall from './UppercaseExtraSmall'
 import TextCaption from './TextCaption'
 import { List as UIList, ListItem } from './List'
+import UITypography from '.'
 
 const headers = (
   <div>
@@ -67,8 +69,24 @@ const List: Story = () => (
   </UIList>
 )
 
+const NewTypography: Story = () => {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <UITypography variant="h1" color="success700">
+        H1
+      </UITypography>
+      <UITypography variant="medium" color="primary400">
+        Text
+      </UITypography>
+      <UITypography variant="medium" isBold color="primary700">
+        Text Bold
+      </UITypography>
+    </div>
+  )
+}
+
 export default {
   title: 'Typography',
 } as Meta
 
-export { Typography, List }
+export { Typography, NewTypography, List }

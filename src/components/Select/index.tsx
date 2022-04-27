@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import mq from 'utils/media-queries'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import Autocomplete, {
   TProps as TAutocompleteProps,
   TSuggestion,
@@ -57,7 +56,7 @@ const defaultInput = (props: any) => (
       <Icon
         name="angle"
         rotate={props.isOpen}
-        fill={COLOR_NAMES.misc500}
+        fill="misc500"
       />
     }
   />
@@ -70,7 +69,7 @@ const defaultRFInput = (props: any) => (
       <Icon
         name="angle"
         rotate={props.isOpen}
-        fill={COLOR_NAMES.misc500}
+        fill="misc500"
       />
     }
   />

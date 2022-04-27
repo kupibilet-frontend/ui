@@ -1,7 +1,6 @@
 import React from 'react'
 import Icon from 'components/Icon'
 import { TSuggestion } from 'components/Autocomplete'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 
 import {
   SuggestionContainer,
@@ -29,7 +28,7 @@ const Suggestion = (props: TProps) => {
     <SuggestionContainer isHighlighted={isHighlighted} title={getSuggestionValue(suggestion)}>
       <SuggestionIcon>
         {selectedKey === getSuggestionKey(suggestion)
-          && <Icon name="checkmark" fill={COLOR_NAMES.primary300} />
+          && <Icon name="checkmark" fill="primary300" />
         }
       </SuggestionIcon>
       <SuggestionText>
