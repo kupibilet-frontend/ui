@@ -8,7 +8,7 @@ export interface TProps {
   defaultActiveKey?: string[],
   isAccordion?: boolean,
   onChange?: (activeKey: string[]) => void,
-  children: React.ReactElement[],
+  children: React.ReactElement[] | React.ReactElement,
   disabled?: boolean,
 }
 
