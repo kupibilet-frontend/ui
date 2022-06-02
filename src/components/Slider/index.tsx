@@ -60,6 +60,7 @@ function Slider(props: TProps): JSX.Element {
         onAfterChange={onAfterChange}
         // @ts-ignore some TS types doesn't match with rc-slider props
         handle={(handleProps: HandleProps) => (
+          // @ts-ignore
           <StyledHandleWrapper {...handleProps} style={{ zIndex: 4, boxShadow: 'none' }}>
             <StyledHandle min={min} max={max} value={handleProps.value} disabled={disabled} />
           </StyledHandleWrapper>
