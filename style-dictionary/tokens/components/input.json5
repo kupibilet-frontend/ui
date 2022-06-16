@@ -1,0 +1,155 @@
+{
+    "input":{
+        "default":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "normal":{
+                            "value": "{color.bg.primary.normal.value}"
+                        },
+                        "hover":{
+                            "value": "{color.bg.primary.normal.value}"
+                        },
+                        "active":{
+                            "value": "{color.bg.primary.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.bg.primary.disable.value}"
+                        }
+                    },
+                    "inputLabel":{
+                        "normal":{
+                            "value": "{color.text.secondary.normal.value}"
+                        },
+                        "hover":{
+                            "value": "{color.text.secondary.normal.value}"
+                        },
+                        "active":{
+                            "value": "{color.text.secondary.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.text.primary.disable.value}"
+                        },
+                        "error":{
+                            "value": "{color.text.secondary.normal.value}"
+                        }
+                    },
+                    "placeholder":{
+                        "normal":{
+                            "value": "{color.text.placeholder.normal.value}"
+                        },
+                        "hover":{
+                            "value": "{color.text.placeholder.normal.value}"
+                        },
+                        "active":{
+                            "value": "{color.text.placeholder.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.text.primary.disable.value}"
+                        },
+                        "error":{
+                            "value": "{color.text.placeholder.normal.value}"
+                        }
+                    },
+                    "inputText":{
+                        "normal":{
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "hover":{
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "active":{
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.text.primary.disable.value}"
+                        },
+                        "error":{
+                            "value": "{color.text.primary.normal.value}"
+                        }
+                    },
+                    "inputHint":{
+                        "normal":{
+                            "value": "{color.text.description.normal.value}"
+                        },
+                        "hover":{
+                            "value": "{color.text.description.normal.value}"
+                        },
+                        "active":{
+                            "value": "{color.text.description.normal.value}"
+                        },
+                        "disable":{
+                            "value": "{color.text.description.normal.value}"
+                        },
+                        "error":{
+                            "value": "{color.text.danger.default.value}"
+                        }
+                    },
+                    "border":{
+                        "normal":{
+                            "value": "{color.border.primary.normal.value}"
+                        },
+                        "hover":{
+                            "value": "{color.border.primary.hover.value}"
+                        },
+                        "active":{
+                            "value": "{color.border.primary.active.value}"
+                        },
+                        "error":{
+                            "value": "{color.border.danger.normal.value}"
+                        },
+                        "dusable": "{color.border.transparent.normal.value}}"
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "inputLabel": {
+                            "value": "{typography.componentsMobile.inputLabel.medium.default.value}"
+                        },
+                        "placeholder": {
+                            "value": "{typography.componentsMobile.placeholder.medium.default.value}"
+                        },
+                        "inputText": {
+                            "value": "{typography.componentsMobile.inputText.medium.default.value}"
+                        },
+                        "inputHint": {
+                            "value": "{typography.componentsMobile.inputHint.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "inputLabel": {
+                            "value": "{typography.componentsDesktop.inputLabel.medium.default.value}"
+                        },
+                        "placeholder": {
+                            "value": "{typography.componentsDesktop.placeholder.medium.default.value}"
+                        },
+                        "inputText": {
+                            "value": "{typography.componentsDesktop.inputText.medium.default.value}"
+                        },
+                        "inputHint": {
+                            "value": "{typography.componentsDesktop.inputHint.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.8.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.8.default.value}",
+                                "left": "{size.padding.16.default.value}",
+                                "innerHorizontal": "{size.padding.12.default.value}"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

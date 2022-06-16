@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 05 Apr 2022 15:09:56 GMT
+ * Generated on Thu, 16 Jun 2022 14:07:22 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"KB Source Sans Pro","size":"48","lineHeight":"64","fontWeight":"600"};
