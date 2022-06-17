@@ -117,10 +117,15 @@ const Typography = ({
   children,
   ...props
 }: TTypographyProps):JSX.Element => {
+  console.log('variant', variant)
+  console.log('tag', tag)
   const tokenVariant = calculateTokenVariant(variant)
   const bold = calculateBold(variant, isBold)
   const tokenName = `typography_desktop_${tokenVariant}${bold}` as TTokenName
   const mobileTokenName = `typography_mobile_${tokenVariant}${bold}` as TTokenName
+
+  console.log('tokenName', tokenName)
+  console.log('mobileTokenName', mobileTokenName)
   return (
     <StyledTypography
       as={tag ?? VARIANTS_MAPPER[variant]}
