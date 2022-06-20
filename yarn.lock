@@ -1512,13 +1512,6 @@
   resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.9.2.tgz#7dbddf86961174a6f91690aee93b3ef142886071"
   integrity sha512-/OaZ67p55PvDJPURjqkOGa3IL6XryMVhVykGdgeODHxNOWadh6gjmqgJbgni4iR3EYrm4esSTNX7rf76h9rElQ==
 
-"@kupibilet/react-media@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@kupibilet/react-media/-/react-media-1.5.1.tgz#73b8972681e67400477bfccdbd1f02ceb1b94d5b"
-  integrity sha1-c7iXJoHmdABHe/zNvR8CzrG5TVs=
-  dependencies:
-    json2mq "^0.2.0"
-
 "@mdx-js/loader@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-1.6.22.tgz#d9e8fe7f8185ff13c9c8639c048b123e30d322c4"
@@ -8209,13 +8202,6 @@ json-stable-stringify@^1.0.1:
   dependencies:
     jsonify "~0.0.0"
 
-json2mq@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/json2mq/-/json2mq-0.2.0.tgz#b637bd3ba9eabe122c83e9720483aeb10d2c904a"
-  integrity sha1-tje9O6nqvhIsg+lyBIOusQ0skEo=
-  dependencies:
-    string-convert "^0.2.0"
-
 json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
@@ -12572,11 +12558,6 @@ string-argv@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/string-argv/-/string-argv-0.0.2.tgz#dac30408690c21f3c3630a3ff3a05877bdcbd736"
   integrity sha1-2sMECGkMIfPDYwo/86BYd73L1zY=
-
-string-convert@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/string-convert/-/string-convert-0.2.1.tgz#6982cc3049fbb4cd85f8b24568b9d9bf39eeff97"
-  integrity sha1-aYLMMEn7tM2F+LJFaLnZvznu/5c=
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
