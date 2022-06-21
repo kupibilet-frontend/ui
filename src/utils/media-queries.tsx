@@ -13,14 +13,17 @@ export const queries = {
   isDesktop: `screen and (min-width: ${TABLET_BREAKPOINT + 1}px)`,
 }
 
-export function withMedia<T extends TWithMediaProps>(Component: React.ComponentType<T>): any {
-  function WrpappedComponet(props: T) {
+export function withMedia<T extends TWithMediaProps>(
+  Component: React.ComponentType<T>,
+): React.FunctionComponent<Omit<T, keyof TWithMediaProps>> {
+  function WrpappedComponent(props: Omit<T, keyof TWithMediaProps>): JSX.Element {
     const isMobile = useMediaQuery({ query: queries.isMobile })
     const isTablet = useMediaQuery({ query: queries.isTablet })
     const isHandheld = useMediaQuery({ query: queries.isHandheld })
     const isDesktop = useMediaQuery({ query: queries.isDesktop })
 
     return (
+      // @ts-ignore
       <Component
         {...props}
         isMobile={isMobile}
@@ -31,10 +34,10 @@ export function withMedia<T extends TWithMediaProps>(Component: React.ComponentT
     )
   }
 
-  WrpappedComponet.displayName = 'withMedia'
+  WrpappedComponent.displayName = `withMedia__${Component.name}`
 
 
-  return WrpappedComponet
+  return WrpappedComponent
 }
 
 const media = {
