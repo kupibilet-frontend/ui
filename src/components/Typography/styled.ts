@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import { queries } from 'utils/media-queries'
-import { TTokenName } from 'components/Typography'
+import { TTokenName } from './types'
 
 interface TStyledTypography {
     color?: COLOR_NAMES,
