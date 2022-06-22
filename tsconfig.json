@@ -10,8 +10,14 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "baseUrl": "src",
+
     "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "utils/*": ["src/utils/*"],
+      "hooks/*": ["src/hooks/*"],
+    },
     "typeRoots": [
       "node_modules/@types",
       "typings/index.d.ts"
