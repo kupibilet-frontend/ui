@@ -15,6 +15,23 @@ const BASE_PLUGINS = [
   }],
 ]
 
+/*
+ * typescript doesnt resolve alias in compiled code (see  https://github.com/microsoft/TypeScript/issues/10866)
+ * so we need to do it
+ * because of package which imports this package doesnt know alias were used
+ */
+const ALIAS_PLUGINS = [
+  '@babel/plugin-syntax-typescript',
+  ['module-resolver', {
+    root: ['./'],
+    alias: {
+      components: './components',
+      utils: './utils',
+      hooks: './hooks',
+    },
+  }],
+]
+
 const BASE_PRESETS = ['@babel/preset-env', '@babel/preset-react', '@babel/typescript']
 
 module.exports = {
@@ -37,6 +54,10 @@ module.exports = {
         }],
       ],
       presets: BASE_PRESETS,
+    },
+
+    alias: {
+      plugins: ALIAS_PLUGINS,
     },
 
     test: {
