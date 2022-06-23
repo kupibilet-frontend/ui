@@ -15,8 +15,8 @@ export const queries = {
 
 export function withMedia<T extends TWithMediaProps>(
   Component: React.ComponentType<T>,
-): React.FunctionComponent<Omit<T, keyof TWithMediaProps>> {
-  function WrpappedComponent(props: Omit<T, keyof TWithMediaProps>): JSX.Element {
+): (props: Partial<T>) => JSX.Element {
+  function WrpappedComponent(props: Partial<T>): JSX.Element {
     const isMobile = useMediaQuery({ query: queries.isMobile })
     const isTablet = useMediaQuery({ query: queries.isTablet })
     const isHandheld = useMediaQuery({ query: queries.isHandheld })
