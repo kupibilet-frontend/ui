@@ -19,36 +19,36 @@
                     },
                     "inputLabel":{
                         "normal":{
-                            "value": "{color.text.secondary.normal.value}"
+                            "value": "{color.text.secondary.default.value}"
                         },
                         "hover":{
-                            "value": "{color.text.secondary.normal.value}"
+                            "value": "{color.text.secondary.default.value}"
                         },
                         "active":{
-                            "value": "{color.text.secondary.normal.value}"
+                            "value": "{color.text.secondary.default.value}"
                         },
                         "disable":{
                             "value": "{color.text.primary.disable.value}"
                         },
                         "error":{
-                            "value": "{color.text.secondary.normal.value}"
+                            "value": "{color.text.secondary.default.value}"
                         }
                     },
                     "placeholder":{
                         "normal":{
-                            "value": "{color.text.placeholder.normal.value}"
+                            "value": "{color.text.placeholder.default.value}"
                         },
                         "hover":{
-                            "value": "{color.text.placeholder.normal.value}"
+                            "value": "{color.text.placeholder.default.value}"
                         },
                         "active":{
-                            "value": "{color.text.placeholder.normal.value}"
+                            "value": "{color.text.placeholder.default.value}"
                         },
                         "disable":{
                             "value": "{color.text.primary.disable.value}"
                         },
                         "error":{
-                            "value": "{color.text.placeholder.normal.value}"
+                            "value": "{color.text.placeholder.default.value}"
                         }
                     },
                     "inputText":{
@@ -70,16 +70,16 @@
                     },
                     "inputHint":{
                         "normal":{
-                            "value": "{color.text.description.normal.value}"
+                            "value": "{color.text.description.default.value}"
                         },
                         "hover":{
-                            "value": "{color.text.description.normal.value}"
+                            "value": "{color.text.description.default.value}"
                         },
                         "active":{
-                            "value": "{color.text.description.normal.value}"
+                            "value": "{color.text.description.default.value}"
                         },
                         "disable":{
-                            "value": "{color.text.description.normal.value}"
+                            "value": "{color.text.description.default.value}"
                         },
                         "error":{
                             "value": "{color.text.danger.default.value}"

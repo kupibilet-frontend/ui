@@ -27,7 +27,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
@@ -79,7 +79,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
@@ -131,7 +131,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
@@ -183,7 +183,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
@@ -235,7 +235,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
@@ -287,7 +287,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
@@ -339,7 +339,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
@@ -391,7 +391,7 @@
                     },
                     "text":{
                         "active":{
-                            "value": "{color.text.contrast.normal.value}"
+                            "value": "{color.text.contrast.default.value}"
                         }
                     }
                 },
