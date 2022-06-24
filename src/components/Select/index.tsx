@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import mq from 'utils/media-queries'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import Autocomplete, {
   TProps as TAutocompleteProps,
   TSuggestion,
