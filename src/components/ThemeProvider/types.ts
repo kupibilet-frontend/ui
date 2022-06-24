@@ -1,4 +1,5 @@
-import * as colorTokens from './tokens/light/color'
+import * as colorTokensLight from './tokens/light/color'
+import * as colorTokensDark from './tokens/dark/color'
 
 type DEPRECATED_COLOR_NAMES =
   | 'primary100'
@@ -44,9 +45,10 @@ type DEPRECATED_COLOR_NAMES =
 
   | 'background'
 
-type COLOR_TOKENS = keyof typeof colorTokens
+type COLOR_TOKENS_LIGHT = keyof typeof colorTokensLight
+type COLOR_TOKENS_DARK = keyof typeof colorTokensDark
 
-type COLOR_NAMES = DEPRECATED_COLOR_NAMES | COLOR_TOKENS
+type COLOR_NAMES = DEPRECATED_COLOR_NAMES | COLOR_TOKENS_DARK
 
 type TColor = Record<COLOR_NAMES, string>
 

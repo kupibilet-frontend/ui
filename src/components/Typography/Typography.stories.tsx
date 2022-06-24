@@ -93,22 +93,6 @@ const TypographyPreview: Story = () => (
   </div>
 )
 
-const NewTypography: Story = () => {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <UITypography variant="h1" color="success700">
-        H1
-      </UITypography>
-      <UITypography variant="medium" color="primary400">
-        Text
-      </UITypography>
-      <UITypography variant="medium" isBold color="primary700">
-        Text Bold
-      </UITypography>
-    </div>
-  )
-}
-
 export default {
   title: 'Typography',
 } as Meta
