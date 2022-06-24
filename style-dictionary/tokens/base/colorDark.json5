@@ -19,7 +19,7 @@
                 "disable":{
                     "value":"rgba(58, 58, 65, 1)"
                 }
-            },
+            }, 
             "secondary": {
                 "normal":{
                     "value": "rgba(58, 58, 65, 1)"
@@ -36,13 +36,13 @@
             },
             "accent":{
                 "normal": {
-                    "value":"rgba(228, 92, 82, 1)"
+                    "value":"rgba(15, 153, 245, 1)"
                 },
                 "hover": {
-                    "value":"rgba(215, 64, 67, 1)"
+                    "value":"rgba(0, 138, 230, 1)"
                 },
                 "active": {
-                    "value":"rgba(179, 44, 58, 1)"
+                    "value":"rgba(0, 122, 204, 1)"
                 },
                 "disable":{
                     "value":"rgba(58, 58, 65, 1)"
@@ -50,16 +50,16 @@
             },
             "help": {
                 "normal":{
-                    "value": "rgba(120, 83, 213, 1)"
+                    "value": "rgba(255, 144, 0, 1)"
                 },
                 "hover":{
-                    "value": "rgba(108, 69, 219, 1)"
+                    "value": "rgba(255, 125, 3, 1)"
                 },
                 "active":{
-                    "value": "rgba(78, 47, 183, 1)"
+                    "value": "rgba(252, 97, 0, 1)"
                 },
                 "disable":{
-                    "value":"rgba(58, 58, 65, 1)"
+                    "value":"rgba(238, 239, 242, 1)"
                 }
             },
             "contrast": {
@@ -70,7 +70,7 @@
                     "value": "rgba(245, 245, 247, 1)"
                 },
                 "active":{
-                    "value": "rgba(232, 233, 237, 1)"
+                    "value": "rgba(232, 233, 237, 1))"
                 },
                 "disable":{
                     "value":"rgba(58, 58, 65, 1)"
@@ -89,13 +89,13 @@
             },
             "statusPrimary": {
                 "normal":{
-                    "value":"rgba(93, 51, 52, 1)"
+                    "value":"rgba(0, 27, 115, 1)"
                 },
                 "hover":{
-                    "value":"rgba(86, 47, 48, 1)"
+                    "value":"rgba(0, 24, 102, 1)"
                 },
                 "active":{
-                    "value":"rgba(79, 43, 44, 1)"
+                    "value":"rgba(0, 21, 92, 1)"
                 }
             },
             "statusInfo": {
@@ -103,7 +103,7 @@
                     "value":"rgba(0, 27, 115, 1)"
                 },
                 "hover":{
-                    "value":"rgba(0, 27, 115, 1)"
+                    "value":"rgba(0, 24, 102, 1)"
                 },
                 "active":{
                     "value":"rgba(0, 21, 92, 1)"
@@ -133,13 +133,13 @@
             },
             "statusHelp": {
                 "normal":{
-                    "value": "rgba(35, 18, 122, 1)"
+                    "value":"rgba(0, 27, 115, 1)"
                 },
                 "hover":{
-                    "value":"rgba(32, 16, 111, 1)"
+                    "value":"rgba(0, 24, 102, 1)"
                 },
                 "active":{
-                    "value":"rgba(29, 15, 102, 1)"
+                    "value":"rgba(0, 21, 92, 1)"
                 }
             },
             "statusSuccess": {
@@ -155,28 +155,31 @@
             },
             "bonusDefault": {
                 "normal":{
-                    "value": "rgba(250, 98, 87, 1)"
+                    "value": "rgba(15, 153, 245, 1)"
                 },
                 "hover":{
-                    "value":"rgba(239, 248, 201, 1)"
+                    "value":"rgba(0, 138, 230, 1)"
                 },
                 "active":{
-                    "value":"rgba(236, 246, 192, 1)"
-                } 
+                    "value":"rgba(0, 122, 204, 1)"
+                },
+                "disable":{
+                    "value":"rgba(238, 239, 242, 1)"
+                }
             },
             "bonusGold": {
                 "normal":{
-                    "value": "rgba(215, 103, 0, 1)"
+                    "value": "rgba(252, 133, 24, 1)"
                 }
             },
             "bonusPlatinum": {
                 "normal":{
-                    "value": "rgba(26, 67, 152, 1)"
+                    "value": "rgba(19, 48, 109, 1)"
                 }
             },
             "dark": {
                 "normal":{
-                    "value": "rgba(208, 209, 215, 1)",
+                    "value": "rgba(70, 71, 78, 1)",
                     "description": "Используется для серого фона компонентов, которым не хватает контраста с secondary"
                 }
             },
@@ -193,12 +196,6 @@
                 "normal": {
                     "value": "rgba(232, 233, 237, 1)"
                 },
-                "hover": {
-                    "value": "rgba(208, 209, 215, 1)"
-                },
-                "active": {
-                    "value": "rgba(208, 209, 215, 1)"
-                },
                 "disable": {
                     "value": "rgba(81, 82, 90, 1)"
                 }
@@ -210,7 +207,7 @@
             },
             "description": {
                 "default": {
-                    "value": "rgba(181, 182, 192, 1)"
+                    "value": "rgba(181, 182, 192, 1))"
                 }
             },
             "placeholder": {
@@ -225,27 +222,47 @@
             },
             "accent": {
                 "default": {
-                    "value": "rgba(228, 92, 82, 1)"
+                    "value": "rgba(15, 153, 245, 1)"
+                },
+                "hover": {
+                    "value": "rgba(0, 138, 230, 1)"
+                },
+                "active": {
+                    "value": "rgba(0, 122, 204, 1)"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1)"
                 }
             },
             "success": {
                 "default": {
-                    "value": "rgba(146, 206, 13, 1)"
+                    "value": "rgba(133, 188, 12, 1)"
                 }
             },
             "info": {
                 "default": {
-                    "value": "rgba(59, 162, 247, 1)"
+                    "value": "rgba(0, 65, 163, 1)"
+                }
+            },
+            "link": {
+                "normal": {
+                    "value": "rgba(0, 65, 163, 1)"
+                },
+                "hover": {
+                    "value": "rgba(0, 138, 230, 1)"
+                },
+                "active": {
+                    "value": "rgba(0, 122, 204, 1)"
                 }
             },
             "warning": {
                 "default": {
-                    "value": "rgba(255, 162, 51, 1)"
+                    "value": "rgba(255, 144, 0, 1)"
                 }
             },
             "danger": {
                 "default": {
-                    "value": "rgba(245, 51, 51, 1)"
+                    "value": "rgba(230, 73, 38, 1)"
                 }
             },
             "staticWhite": {
@@ -256,6 +273,7 @@
                     "value": "rgba(255, 255, 255, 0.75)"
                 }
             }
+            
         },
         "border":{
             "decorative":{
@@ -263,30 +281,41 @@
                     "value": "rgba(58, 58, 65, 1)"
                 }
             },
+            "decorativeInverse":{
+                "default":{
+                    "value": "rgba(250, 250, 251, 1)"
+                }
+            },
             "primary":{
                 "normal":{
                     "value": "rgba(81, 82, 90, 1)"
                 },
                 "hover":{
-                    "value": "rgba(250, 250, 251, 1)"
+                    "value": "rgba(0, 138, 230, 1)"
                 },
                 "active":{
-                    "value": "rgba(245, 245, 247, 1)"
+                    "value": "rgba(0, 122, 204, 1)"
                 }
             },
             "accent":{
                 "normal":{
-                    "value": "rgba(228, 92, 82, 1)"
+                    "value": "rgba(15, 153, 245, 1)"
+                },
+                "hover":{
+                    "value": "rgba(0, 138, 230, 1)"
+                },
+                "active":{
+                    "value": "rgba(0, 122, 204, 1)"
                 }
             },
             "success":{
                 "normal":{
-                    "value": "rgba(146, 206, 13, 1)"
+                    "value": "rgba(133, 188, 12, 1)"
                 }
             },
             "danger":{
                 "normal":{
-                    "value": "rgba(245, 51, 51, 1)"
+                    "value": "rgba(230, 73, 38, 1)"
                 }
             },
             "transparent":{

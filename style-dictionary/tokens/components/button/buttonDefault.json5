@@ -944,13 +944,13 @@
                     },
                     "text": {
                         "normal": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.default.value}"
                         },
                         "hover": {
-                            "value": "{color.text.primary.hover.value}"
+                            "value": "{color.text.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.text.primary.active.value}"
+                            "value": "{color.text.accent.active.value}"
                         },
                         "disable": {
                             "value": "{color.text.primary.disable.value}"
@@ -1005,13 +1005,13 @@
                     },
                     "text": {
                         "normal": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.default.value}"
                         },
                         "hover": {
-                            "value": "{color.text.primary.hover.value}"
+                            "value": "{color.text.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.text.primary.active.value}"
+                            "value": "{color.text.accent.active.value}"
                         },
                         "disable": {
                             "value": "{color.text.primary.disable.value}"
@@ -1066,13 +1066,13 @@
                     },
                     "text": {
                         "normal": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.default.value}"
                         },
                         "hover": {
-                            "value": "{color.text.primary.hover.value}"
+                            "value": "{color.text.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.text.primary.active.value}"
+                            "value": "{color.text.accent.active.value}"
                         },
                         "disable": {
                             "value": "{color.text.primary.disable.value}"

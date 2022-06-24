@@ -197,7 +197,7 @@
                         "value": {
                             "fontFamily": "{font.family.bold.default.value}",
                             "size": "18",
-                            "lineHeight": "26",
+                            "lineHeight": "24",
                             "fontWeight": "600"
                         }
                     }

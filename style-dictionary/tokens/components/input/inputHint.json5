@@ -1,0 +1,39 @@
+{
+    "input":{
+        "default":{
+            "medium":{
+                "color":{
+                    "inputHint":{
+                        "normal":{
+                            "value": "{color.text.description.default.value}"
+                        },
+                        "hover":{
+                            "value": "{color.text.description.default.value}"
+                        },
+                        "active":{
+                            "value": "{color.text.description.default.value}"
+                        },
+                        "disable":{
+                            "value": "{color.text.description.default.value}"
+                        },
+                        "error":{
+                            "value": "{color.text.danger.default.value}"
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "inputHint": {
+                            "value": "{typography.componentsMobile.inputHint.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "inputHint": {
+                            "value": "{typography.componentsDesktop.inputHint.medium.default.value}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
