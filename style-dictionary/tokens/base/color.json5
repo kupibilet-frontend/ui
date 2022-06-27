@@ -79,6 +79,12 @@
             "statusDefault": {
                 "normal":{
                     "value":"rgba(245, 245, 247, 1)"
+                },
+                "hover":{
+                    "value":"rgba(232, 232, 237, 1)"
+                },
+                "active":{
+                    "value":"rgba(227, 227, 232, 1)"
                 }
             },
             "statusPrimary": {
@@ -149,8 +155,18 @@
             },
             "bonusDefault": {
                 "normal":{
-                    "value": "rgba(250, 98, 87, 1)"
+                    "value": "rgba(15, 153, 245, 1)"
+                },
+                "hover":{
+                    "value":"rgba(0, 138, 230, 1)"
+                },
+                "active":{
+                    "value":"rgba(0, 122, 204, 1)"
+                },
+                "disable":{
+                    "value":"rgba(238, 239, 242, 1)"
                 }
+
             },
             "bonusGold": {
                 "normal":{
@@ -181,44 +197,38 @@
                 "normal": {
                     "value": "rgba(16, 16, 20, 1)"
                 },
-                "disable": {
-                    "value": "rgba(160, 162, 171, 1)"
-                }
-            },
-            "secondary": {
-                "normal": {
+                "hover": {
+                    "value": "rgba(81, 82, 90, 1)"
+                },
+                "active": {
                     "value": "rgba(81, 82, 90, 1)"
                 },
                 "disable": {
                     "value": "rgba(160, 162, 171, 1)"
                 }
             },
+            "secondary": {
+                "default": {
+                    "value": "rgba(81, 82, 90, 1)"
+                }
+            },
             "description": {
-                "normal": {
+                "default": {
                     "value": "rgba(121, 122, 134, 1)"
-                },
-                "disable": {
-                    "value": "rgba(160, 162, 171, 1)"
                 }
             },
             "placeholder": {
-                "normal": {
-                    "value": "rgba(160, 162, 171, 1)"
-                },
-                "disable": {
+                "default": {
                     "value": "rgba(160, 162, 171, 1)"
                 }
             },
             "contrast": {
-                "normal": {
+                "default": {
                     "value": "rgba(255, 255, 255, 1)"
-                },
-                "disable": {
-                    "value": "rgba(255, 255, 255, 0.5)"
                 }
             },
             "accent": {
-                "normal": {
+                "default": {
                     "value": "rgba(15, 153, 245, 1)"
                 },
                 "hover": {
@@ -230,6 +240,7 @@
                 "disable": {
                     "value": "rgba(160, 162, 171, 1)"
                 }
+
             },
             "success": {
                 "default": {
@@ -268,20 +279,17 @@
                 },
                 "hover": {
                     "value": "rgba(255, 255, 255, 0.75)"
-                },
-                "disable": {
-                    "value": "rgba(160, 162, 171, 1)"
                 }
             }
             
         },
         "border":{
-            "decorativeLight":{
+            "decorative":{
                 "default":{
                     "value": "rgba(232, 233, 237, 1)"
                 }
             },
-            "decorativeDark":{
+            "decorativeInverse":{
                 "default":{
                     "value": "rgba(58, 58, 65, 1)"
                 }
@@ -291,7 +299,7 @@
                     "value": "rgba(208, 209, 215, 1)"
                 },
                 "hover":{
-                    "value": "rrgba(0, 138, 230, 1)"
+                    "value": "rgba(0, 138, 230, 1)"
                 },
                 "active":{
                     "value": "rgba(0, 122, 204, 1)"

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 16 Jun 2022 14:07:22 GMT
+ * Generated on Mon, 27 Jun 2022 09:43:00 GMT
  */
 
 export const colorBgLayoutDefault = "#fafafb";
@@ -25,6 +25,8 @@ export const colorBgContrastHover = "#3a3a41";
 export const colorBgContrastActive = "#101014";
 export const colorBgContrastDisable = "#eeeff2";
 export const colorBgStatusDefaultNormal = "#f5f5f7";
+export const colorBgStatusDefaultHover = "#e8e8ed";
+export const colorBgStatusDefaultActive = "#e3e3e8";
 export const colorBgStatusPrimaryNormal = "#ebf3ff";
 export const colorBgStatusPrimaryHover = "#d6e7ff";
 export const colorBgStatusPrimaryActive = "#cce0ff";
@@ -43,22 +45,23 @@ export const colorBgStatusHelpActive = "#cce0ff";
 export const colorBgStatusSuccessNormal = "#f4fadb";
 export const colorBgStatusSuccessHover = "#eff8c9";
 export const colorBgStatusSuccessActive = "#ecf6c0";
-export const colorBgBonusDefaultNormal = "#fa6257";
+export const colorBgBonusDefaultNormal = "#0f99f5";
+export const colorBgBonusDefaultHover = "#008ae6";
+export const colorBgBonusDefaultActive = "#007acc";
+export const colorBgBonusDefaultDisable = "#eeeff2";
 export const colorBgBonusGoldNormal = "#fc8518";
 export const colorBgBonusPlatinumNormal = "#13306d";
 export const colorBgDarkNormal = "#d0d1d7";
 export const colorBgTransparentDefault = "rgba(0, 0, 0, 0)";
 export const colorTextPrimaryNormal = "#101014";
+export const colorTextPrimaryHover = "#51525a";
+export const colorTextPrimaryActive = "#51525a";
 export const colorTextPrimaryDisable = "#a0a2ab";
-export const colorTextSecondaryNormal = "#51525a";
-export const colorTextSecondaryDisable = "#a0a2ab";
-export const colorTextDescriptionNormal = "#797a86";
-export const colorTextDescriptionDisable = "#a0a2ab";
-export const colorTextPlaceholderNormal = "#a0a2ab";
-export const colorTextPlaceholderDisable = "#a0a2ab";
-export const colorTextContrastNormal = "#ffffff";
-export const colorTextContrastDisable = "rgba(255, 255, 255, 0.5)";
-export const colorTextAccentNormal = "#0f99f5";
+export const colorTextSecondaryDefault = "#51525a";
+export const colorTextDescriptionDefault = "#797a86";
+export const colorTextPlaceholderDefault = "#a0a2ab";
+export const colorTextContrastDefault = "#ffffff";
+export const colorTextAccentDefault = "#0f99f5";
 export const colorTextAccentHover = "#008ae6";
 export const colorTextAccentActive = "#007acc";
 export const colorTextAccentDisable = "#a0a2ab";
@@ -71,9 +74,8 @@ export const colorTextWarningDefault = "#ff9000";
 export const colorTextDangerDefault = "#e64926";
 export const colorTextStaticWhiteNormal = "#ffffff";
 export const colorTextStaticWhiteHover = "rgba(255, 255, 255, 0.75)";
-export const colorTextStaticWhiteDisable = "#a0a2ab";
-export const colorBorderDecorativeLightDefault = "#e8e9ed";
-export const colorBorderDecorativeDarkDefault = "#3a3a41";
+export const colorBorderDecorativeDefault = "#e8e9ed";
+export const colorBorderDecorativeInverseDefault = "#3a3a41";
 export const colorBorderPrimaryNormal = "#d0d1d7";
 export const colorBorderPrimaryHover = "#008ae6";
 export const colorBorderPrimaryActive = "#007acc";
