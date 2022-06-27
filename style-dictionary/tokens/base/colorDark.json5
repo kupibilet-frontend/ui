@@ -196,6 +196,12 @@
                 "normal": {
                     "value": "rgba(232, 233, 237, 1)"
                 },
+                "hover": {
+                    "value": "rgba(208, 209, 215, 1)"
+                },
+                "active": {
+                    "value": "rgba(208, 209, 215, 1)"
+                },
                 "disable": {
                     "value": "rgba(81, 82, 90, 1)"
                 }

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 24 Jun 2022 13:21:46 GMT
+ * Generated on Mon, 27 Jun 2022 09:03:54 GMT
  */
 
 export const colorBgLayoutDefault = "#101014";
@@ -54,6 +54,8 @@ export const colorBgBonusPlatinumNormal = "#13306d";
 export const colorBgDarkNormal = "#46474e";
 export const colorBgTransparentDefault = "rgba(0, 0, 0, 0)";
 export const colorTextPrimaryNormal = "#e8e9ed";
+export const colorTextPrimaryHover = "#d0d1d7";
+export const colorTextPrimaryActive = "#d0d1d7";
 export const colorTextPrimaryDisable = "#51525a";
 export const colorTextSecondaryDefault = "#d0d1d7";
 export const colorTextDescriptionDefault = "#b5b6c0";
