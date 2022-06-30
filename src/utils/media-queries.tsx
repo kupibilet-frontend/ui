@@ -1,23 +1,29 @@
 import React from 'react'
 import { css, FlattenSimpleInterpolation } from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
 import { TWithMediaProps } from 'utils/types'
-// @ts-ignore delete old package
-import Media from '@kupibilet/react-media'
+
+export const MOBILE_S_BREAKPOINT = 767
+export const MOBILE_BREAKPOINT = 1023
+export const TABLET_BREAKPOINT = 1279
+
+export const MOBILE_BREAKPOINT_OLD = 599
+export const TABLET_BREAKPOINT_OLD = 1199
 
 export const queries = {
-  isMobile: 'screen and (max-width: 599px)',
-  isTablet: 'screen and (min-width: 600px) and (max-width: 1199px)',
-  isHandheld: 'screen and (max-width: 1199px)',
-  isDesktop: 'screen and (min-width: 1200px)',
+  isMobile: `screen and (max-width: ${MOBILE_BREAKPOINT_OLD}px)`,
+  isTablet: `screen and (min-width: ${MOBILE_BREAKPOINT_OLD + 1}px) and (max-width: ${TABLET_BREAKPOINT_OLD}px)`,
+  isHandheld: `screen and (max-width: ${TABLET_BREAKPOINT_OLD}px)`,
+  isDesktop: `screen and (min-width: ${TABLET_BREAKPOINT_OLD + 1}px)`,
 }
 
 export const queries2021 = {
-  isMobileS: 'screen and (max-width: 767px)',
-  isMobileM: 'screen and (min-width: 768px) and (max-width: 1023px)',
-  isMobile: 'screen and (max-width: 1023px)',
-  isTablet: 'screen and (min-width: 1024px) and (max-width: 1279px)',
-  isHandheld: 'screen and (max-width: 1279px)',
-  isDesktop: 'screen and (min-width: 1280px)',
+  isMobileS: `screen and (max-width: ${MOBILE_S_BREAKPOINT}px)`,
+  isMobileM: `screen and (min-width: ${MOBILE_S_BREAKPOINT + 1}px) and (max-width: ${MOBILE_BREAKPOINT}px)`,
+  isMobile: `screen and (max-width: ${MOBILE_BREAKPOINT}px)`,
+  isTablet: `screen and (min-width: ${MOBILE_BREAKPOINT + 1}px) and (max-width: ${TABLET_BREAKPOINT}px)`,
+  isHandheld: `screen and (max-width: ${TABLET_BREAKPOINT}px)`,
+  isDesktop: `screen and (min-width: ${TABLET_BREAKPOINT + 1}px)`,
 }
 
 /**
@@ -27,43 +33,57 @@ export const queries2021 = {
  */
 
 export function withMedia<T extends TWithMediaProps>(
-  Component:React.ComponentType<T>,
+  Component: React.ComponentType<T>,
 ): (props: Partial<T>) => JSX.Element {
-  function MediaProvider(props: Partial<T>): JSX.Element {
-    const renderMedias = (medias: TWithMediaProps) => {
-      return <Component {...props as T} {...medias} />
-    }
+  function WrpappedComponent(props: Partial<T>): JSX.Element {
+    const isMobile = useMediaQuery({ query: queries.isMobile })
+    const isTablet = useMediaQuery({ query: queries.isTablet })
+    const isHandheld = useMediaQuery({ query: queries.isHandheld })
+    const isDesktop = useMediaQuery({ query: queries.isDesktop })
 
     return (
-      <Media queries={queries}>
-        { renderMedias }
-      </Media>
+      // @ts-ignore
+      <Component
+        {...props}
+        isMobile={isMobile}
+        isTablet={isTablet}
+        isHandheld={isHandheld}
+        isDesktop={isDesktop}
+      />
     )
   }
 
-  MediaProvider.displayName = 'withMedia'
+  WrpappedComponent.displayName = `withMedia__${Component.name}`
 
-  return MediaProvider
+
+  return WrpappedComponent
 }
 
 export function withMedia2021<T extends TWithMediaProps>(
-  Component:React.ComponentType<T>,
+  Component: React.ComponentType<T>,
 ): (props: Partial<T>) => JSX.Element {
-  function MediaProvider(props: Partial<T>): JSX.Element {
-    const renderMedias = (medias: TWithMediaProps) => {
-      return <Component {...props as T} {...medias} />
-    }
+  function WrpappedComponent(props: Partial<T>): JSX.Element {
+    const isMobile = useMediaQuery({ query: queries2021.isMobile })
+    const isTablet = useMediaQuery({ query: queries2021.isTablet })
+    const isHandheld = useMediaQuery({ query: queries2021.isHandheld })
+    const isDesktop = useMediaQuery({ query: queries2021.isDesktop })
 
     return (
-      <Media queries={queries2021}>
-        { renderMedias }
-      </Media>
+      // @ts-ignore
+      <Component
+        {...props}
+        isMobile={isMobile}
+        isTablet={isTablet}
+        isHandheld={isHandheld}
+        isDesktop={isDesktop}
+      />
     )
   }
 
-  MediaProvider.displayName = 'withMedia'
+  WrpappedComponent.displayName = `withMedia2021__${Component.name}`
 
-  return MediaProvider
+
+  return WrpappedComponent
 }
 
 const media = {
