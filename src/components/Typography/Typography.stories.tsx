@@ -1,6 +1,5 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import { COLOR_NAMES } from 'components/ThemeProvider/types'
 import H1 from './H1'
 import H2 from './H2'
 import H3 from './H3'

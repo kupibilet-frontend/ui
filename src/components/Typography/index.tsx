@@ -1,17 +1,54 @@
 import React from 'react'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
-import styled, { css } from 'styled-components'
-import H1 from './H1'
-import H2 from './H2'
-import H3 from './H3'
-import H4 from './H4'
-import H5 from './H5'
-import H6 from './H6'
-import Text from './Text'
-import TextSmall from './TextSmall'
-import TextLarge from './TextLarge'
-import UppercaseExtraSmall from './UppercaseExtraSmall'
-import TextCaption from './TextCaption'
+import { StyledTypography } from 'components/Typography/styled'
+import { getTokenName } from './getTokenName'
+import { TVariant, TVariantMapper, TVariantToken } from './types'
+
+const VARIANTS_MAPPER: TVariantMapper = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  accent: 'span',
+  caption: 'span',
+  description: 'span',
+  large: 'span',
+  hero: 'h1',
+  medium: 'span',
+  small: 'span',
+}
+
+const calculateTokenVariant = (variant: TVariant): TVariantToken => {
+  switch (variant) {
+    case 'h1':
+      return 'headline_h1'
+    case 'h2':
+      return 'headline_h2'
+    case 'h3':
+      return 'headline_h3'
+    case 'h4':
+      return 'headline_h4'
+    case 'h5':
+      return 'headline_h5'
+    case 'accent':
+      return 'text_accent'
+    case 'caption':
+      return 'text_caption'
+    case 'description':
+      return 'text_description'
+    case 'large':
+      return 'text_large'
+    case 'hero':
+      return 'headline_hero'
+    case 'medium':
+      return 'text_medium'
+    case 'small':
+      return 'text_small'
+    default:
+      return 'text_medium'
+  }
+}
 
 export interface TTypographyProps {
   variant?: TVariant,
@@ -27,100 +64,28 @@ export interface TTypographyProps {
   rel?: string,
 }
 
-type TStyled = Pick<TTypographyProps, 'color' | 'isBold'>
-
-const styles = css<TStyled>`
-  font-weight: ${(props) => (props.isBold ? '600' : undefined)};
-  color: ${(props) => (props.color ? props.theme.color[props.color] : undefined)};
-`
-
-const StyledH1 = styled(H1)<TStyled>`
-  ${styles}
-`
-
-const StyledH2 = styled(H2)<TStyled>`
-  ${styles}
-`
-
-const StyledH3 = styled(H3)<TStyled>`
-  ${styles}
-`
-
-const StyledH4 = styled(H4)<TStyled>`
-  ${styles}
-`
-
-const StyledH5 = styled(H5)<TStyled>`
-  ${styles}
-`
-
-const StyledH6 = styled(H6)<TStyled>`
-  ${styles}
-`
-
-const StyledText = styled(Text)<TStyled>`
-  ${styles}
-`
-
-const StyledTextSmall = styled(TextSmall)<TStyled>`
-  ${styles}
-`
-
-const StyledTextLarge = styled(TextLarge)<TStyled>`
-  ${styles}
-`
-
-const StyledUppercaseExtraSmall = styled(UppercaseExtraSmall)<TStyled>`
-  ${styles}
-`
-
-const StyledTextCaption = styled(TextCaption)<TStyled>`
-  ${styles}
-`
-
-export type TVariant =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6'
-  | 'accent'
-  | 'caption'
-  | 'description'
-  | 'large'
-  | 'hero'
-  | 'medium'
-  | 'small'
-
-type TVariantMapper = Record<TVariant, React.ComponentType<TStyled>>
-
-const VARIANTS_MAPPER: TVariantMapper = {
-  h1: StyledH1,
-  h2: StyledH2,
-  h3: StyledH3,
-  h4: StyledH4,
-  h5: StyledH5,
-  h6: StyledH6,
-  hero: StyledH6,
-  small: StyledTextSmall,
-  medium: StyledText,
-  large: StyledTextLarge,
-  caption: StyledUppercaseExtraSmall,
-  description: StyledTextCaption,
-  accent: StyledText,
-}
-
 const Typography = ({
+  color,
   variant = 'medium',
+  isBold = false,
+  tag,
   children,
   ...props
-}: TTypographyProps):JSX.Element => {
-  const Component = VARIANTS_MAPPER[variant] ?? StyledText
+}: TTypographyProps): JSX.Element => {
+  const tokenVariant = calculateTokenVariant(variant)
+
+  const { desktop: tokenName, mobile: mobileTokenName } = getTokenName(tokenVariant, isBold)
+
   return (
-    <Component {...props}>
+    <StyledTypography
+      as={tag ?? VARIANTS_MAPPER[variant]}
+      color={color}
+      tokenName={tokenName}
+      mobileTokenName={mobileTokenName}
+      {...props}
+    >
       {children}
-    </Component>
+    </StyledTypography>
   )
 }
 

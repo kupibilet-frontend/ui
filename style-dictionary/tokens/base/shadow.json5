@@ -1,0 +1,50 @@
+{
+    "shadow":{
+        "default":{
+            "flat":{
+                "default":{
+                    "value":{
+                        "box-shadow-offset-x": "0",
+                        "box-shadow-offset-y": "1",
+                        "box-shadow-radius": "4",
+                        "box-shadow-color": "rgba(33, 33, 38, 0.1)",
+                        "elevation": "2"
+                    }
+                }
+            },
+            "active":{
+                "default":{
+                    "value":{
+                        "box-shadow-offset-x": "0",
+                        "box-shadow-offset-y": "8",
+                        "box-shadow-radius": "16",
+                        "box-shadow-color": "rgba(33, 33, 38, 0.08)",
+                        "elevation": "3"
+                    }
+                }
+            },
+            "elevate":{
+                "default":{
+                    "value":{
+                        "box-shadow-offset-x": "0",
+                        "box-shadow-offset-y": "8",
+                        "box-shadow-radius": "40",
+                        "box-shadow-color": "rgba(33, 33, 38, 0.1)",
+                        "elevation": "6"
+                    }
+                }
+            },
+            "popup":{
+                "default":{
+                    "value":{
+                        "box-shadow-offset-x": "0",
+                        "box-shadow-offset-y": "24",
+                        "box-shadow-radius": "48",
+                        "box-shadow-color": "rgba(33, 33, 38, 0.4)",
+                        "elevation": "24"
+                    }
+                }
+            }
+        }
+    }
+}

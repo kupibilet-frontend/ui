@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 05 Apr 2022 15:09:56 GMT
+ * Generated on Mon, 27 Jun 2022 09:43:00 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"KB Source Sans Pro","size":"48","lineHeight":"64","fontWeight":"600"};
@@ -22,7 +22,7 @@ export const typography_desktop_text_description_normal = {"fontFamily":"KB Sour
 export const typography_mobile_headline_hero_default = {"fontFamily":"KB Source Sans Pro","size":"28","lineHeight":"36","fontWeight":"600"};
 export const typography_mobile_headline_h1_default = {"fontFamily":"KB Source Sans Pro","size":"24","lineHeight":"32","fontWeight":"600"};
 export const typography_mobile_headline_h2_default = {"fontFamily":"KB Source Sans Pro","size":"20","lineHeight":"26","fontWeight":"600"};
-export const typography_mobile_headline_h3_default = {"fontFamily":"KB Source Sans Pro","size":"18","lineHeight":"26","fontWeight":"600"};
+export const typography_mobile_headline_h3_default = {"fontFamily":"KB Source Sans Pro","size":"18","lineHeight":"24","fontWeight":"600"};
 export const typography_mobile_headline_h4_default = {"fontFamily":"KB Source Sans Pro","size":"16","lineHeight":"24","fontWeight":"600"};
 export const typography_mobile_headline_h5_default = {"fontFamily":"KB Source Sans Pro","size":"14","lineHeight":"20","fontWeight":"600"};
 export const typography_mobile_text_accent_normal = {"fontFamily":"KB Source Sans Pro","size":"18","lineHeight":"26","fontWeight":"400"};

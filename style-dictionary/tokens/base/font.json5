@@ -1,0 +1,21 @@
+{
+    "font": {
+        "family": {
+            "regular": {
+                "default": {
+                    "value": "KB Source Sans Pro"
+                }
+            },
+            "medium": {
+                "default": {
+                    "value": "KB Source Sans Pro"
+                }
+            },
+            "bold": {
+                "default": {
+                    "value": "KB Source Sans Pro"
+                }
+            }
+        }
+    }
+}

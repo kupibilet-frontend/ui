@@ -14,7 +14,7 @@ import { shadow2 } from 'utils/shadows'
 import { borderRadiusSmall } from 'utils/borderRadius'
 import noop from 'lodash/noop'
 
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   margin: 3px 0 0;
   min-width: 90px;
   width: 100%;
