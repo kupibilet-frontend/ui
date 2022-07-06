@@ -43,7 +43,7 @@
     "lodash-es": "^4.17.14",
     "set-value": "^2.0.1",
     "mixin-deep": "^2.0.1",
-    "@types/react": "^17.0.0"
+    "@types/react": "^17.0.17"
   },
   "greenkeeper": {
     "lockfiles": {
@@ -67,9 +67,9 @@
     "@storybook/client-api": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@types/lodash": "^4.14.168",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.17",
     "@types/react-autosuggest": "^10.1.3",
-    "@types/react-dom": "^17.0.0",
+    "@types/react-dom": "^17.0.17",
     "@types/react-onclickoutside": "^6.7.3",
     "@types/react-portal": "^4.0.2",
     "@types/react-router-dom": "^5.1.7",

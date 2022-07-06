@@ -2,16 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import DropdownWrap, { Dropdown, TProps } from 'components/Dropdown'
-import { DropdownContent } from 'components/Dropdown/styled'
 import Button from 'components/Button'
 import { useArgs } from '@storybook/client-api'
 
-const StyledDropdown = styled(DropdownWrap)`
-  ${DropdownContent} {
-    left: auto;
-    width: 300px;
-  }
-`
 const CustomDropdownContainer = styled.div`
   position: absolute;
   top: 100%;
@@ -30,13 +23,13 @@ export const Default = (args: TProps): JSX.Element => {
   }
 
   return (
-    <StyledDropdown
+    <DropdownWrap
       overlay={<div>Dropdown content</div>}
       onToggle={handleToggle}
       isOpen={isOpen}
     >
       <Button>Open Dropdown</Button>
-    </StyledDropdown>
+    </DropdownWrap>
   )
 }
 
@@ -48,7 +41,7 @@ export const WithCustomDropdownContainer = (args: TProps): JSX.Element => {
   }
 
   return (
-    <StyledDropdown
+    <DropdownWrap
       overlay={<div>Dropdown content</div>}
       onToggle={handleToggle}
       isOpen={isOpen}
@@ -59,7 +52,7 @@ export const WithCustomDropdownContainer = (args: TProps): JSX.Element => {
       )}
     >
       <Button>Click to open Dropdown</Button>
-    </StyledDropdown>
+    </DropdownWrap>
   )
 }
 
