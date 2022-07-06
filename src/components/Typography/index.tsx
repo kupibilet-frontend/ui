@@ -1,56 +1,8 @@
 import React from 'react'
 import { COLOR_NAMES } from 'components/ThemeProvider/types'
-import * as typographyTokens from 'components/ThemeProvider/tokens/typography'
 import { StyledTypography } from 'components/Typography/styled'
-
-
-export type TVariant =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'accent'
-  | 'caption'
-  | 'description'
-  | 'large'
-  | 'hero'
-  | 'medium'
-  | 'small'
-
-type TBold = '_bold' | '_normal' | '_default'
-export type TTokenName = keyof typeof typographyTokens
-
-type TVariantToken =
-  | 'headline_h1'
-  | 'headline_h2'
-  | 'headline_h3'
-  | 'headline_h4'
-  | 'headline_h5'
-  | 'headline_hero'
-  | 'text_accent'
-  | 'text_caption'
-  | 'text_description'
-  | 'text_large'
-  | 'text_medium'
-  | 'text_small'
-  | 'text_medium'
-
-export interface TTypographyProps {
-  variant?: TVariant,
-  color?: COLOR_NAMES,
-  isBold?: boolean,
-  tag?: React.ElementType | keyof JSX.IntrinsicElements,
-  children: React.ReactNode,
-  className?: string,
-  as?: React.ElementType | keyof JSX.IntrinsicElements,
-  // properties when used as a reference:
-  href?: string,
-  target?: string,
-  rel?: string,
-}
-
-type TVariantMapper = Record<TVariant, keyof JSX.IntrinsicElements>
+import { getTokenName } from './getTokenName'
+import { TVariant, TVariantMapper, TVariantToken } from './types'
 
 const VARIANTS_MAPPER: TVariantMapper = {
   h1: 'h1',
@@ -98,16 +50,19 @@ const calculateTokenVariant = (variant: TVariant): TVariantToken => {
   }
 }
 
-const calculateBold = (variant: TVariant, isBold: boolean): TBold => {
-  const withoutBoldVariants = ['hero', 'h1', 'h2', 'h3', 'h4', 'h5']
-
-  if (withoutBoldVariants.includes(variant)) return '_default'
-
-  if (isBold) return '_bold'
-
-  return '_normal'
+export interface TTypographyProps {
+  variant?: TVariant,
+  color?: COLOR_NAMES,
+  isBold?: boolean,
+  tag?: React.ElementType | keyof JSX.IntrinsicElements,
+  children: React.ReactNode,
+  className?: string,
+  as?: React.ElementType | keyof JSX.IntrinsicElements,
+  // properties when used as a reference:
+  href?: string,
+  target?: string,
+  rel?: string,
 }
-
 
 const Typography = ({
   color,
@@ -116,11 +71,11 @@ const Typography = ({
   tag,
   children,
   ...props
-}: TTypographyProps):JSX.Element => {
+}: TTypographyProps): JSX.Element => {
   const tokenVariant = calculateTokenVariant(variant)
-  const bold = calculateBold(variant, isBold)
-  const tokenName = `typography_desktop_${tokenVariant}${bold}` as TTokenName
-  const mobileTokenName = `typography_mobile_${tokenVariant}${bold}` as TTokenName
+
+  const { desktop: tokenName, mobile: mobileTokenName } = getTokenName(tokenVariant, isBold)
+
   return (
     <StyledTypography
       as={tag ?? VARIANTS_MAPPER[variant]}
