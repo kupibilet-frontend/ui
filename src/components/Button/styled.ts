@@ -81,10 +81,10 @@ function calculateButtonPadding({
   }
 
   return `
-    padding-top: ${paddingTokens.top}
-    padding-bottom: ${paddingTokens.bottom}
-    padding-right: ${paddingTokens.right}
-    padding-left: ${paddingTokens.left}
+    padding-top: ${paddingTokens.top};
+    padding-bottom: ${paddingTokens.bottom};
+    padding-right: ${paddingTokens.right};
+    padding-left: ${paddingTokens.left};
   `
 }
 
@@ -154,8 +154,8 @@ function calculateMargin({
   }
 
   return `
-    margin-right: -${paddingTokens.right}
-    margin-left: -${paddingTokens.left}
+    margin-right: -${paddingTokens.right};
+    margin-left: -${paddingTokens.left};
   `
 }
 
@@ -194,13 +194,13 @@ function calculateIconMargin({
 
   if (iconPosition === 'left') {
     return `
-      margin-right: ${innerMargin}
+      margin-right: ${innerMargin};
     `
   }
 
   if (iconPosition === 'right') {
     return `
-      margin-left: ${innerMargin}
+      margin-left: ${innerMargin};
     `
   }
 }
