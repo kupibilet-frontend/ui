@@ -12,7 +12,7 @@ export interface TProps {
   /**
     Чаще всего текст ссылки
   */
-  children: React.ReactElement | string,
+  children: React.ReactNode | React.ReactNode[],
   /**
     Иконка слева от текста
   */
@@ -25,7 +25,7 @@ export interface TProps {
     Адрес ссылки. Если не передан, рендерится <span>
   */
   href?: string,
-  onClick?: () => void,
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLSpanElement>) => void,
 }
 
 function renderIcon(icon: React.ReactElement | null = null, isLeft = false): JSX.Element | null {
