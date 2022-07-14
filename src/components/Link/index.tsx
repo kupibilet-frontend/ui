@@ -8,7 +8,8 @@ const cloneIconWithSize = (iconNode: React.ReactElement): JSX.Element => (
   })
 )
 
-export interface TProps {
+// not precise but better than it was
+export interface TProps extends React.HTMLProps<HTMLAnchorElement> {
   /**
     Чаще всего текст ссылки
   */
