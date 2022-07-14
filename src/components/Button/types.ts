@@ -6,7 +6,7 @@ export type TNeighboringInGroupType = 'both' | 'left' | 'right' | null
 
 export type TButtonVariant = 'primary' | 'secondary' | 'carrot' | 'link'
 
-export interface TButtonProps {
+export interface TButtonProps extends Omit<React.HTMLProps<HTMLButtonElement>, 'size'> {
   size?: TButtonSize,
   variant?: TButtonVariant,
   children?: React.ReactNode | React.ReactNode[],
