@@ -4,24 +4,24 @@ import { DropdownWrapper, DropdownContent } from './styled'
 
 export interface TProps {
   isOpen: boolean,
-  onToggle: (event: Event, isOpen: boolean) => void,
+  onToggle: (event: React.MouseEvent, isOpen: boolean) => void,
   children?: React.ReactNode,
   overlay: React.ReactNode,
   renderDropdownContainer?: (children: React.ReactNode) => JSX.Element,
 }
 
 export class Dropdown extends PureComponent<TProps> {
-  onToggle = (event: Event) => {
+  onToggle = (event: React.MouseEvent): void => {
     this.props.onToggle(event, !this.props.isOpen)
   }
 
-  onHide = (event: Event) => {
+  onHide = (event: React.MouseEvent): void => {
     if (this.props.isOpen) {
       this.props.onToggle(event, false)
     }
   }
 
-  handleClickOutside = (event: Event) => {
+  handleClickOutside = (event: React.MouseEvent): void => {
     this.onHide(event)
   }
 

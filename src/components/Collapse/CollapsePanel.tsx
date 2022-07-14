@@ -12,7 +12,7 @@ const PanelHeader = styled.div`
 
   padding: 12px 0;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.color.misc200}
+  border-bottom: 1px solid ${({ theme }) => theme.color.misc200};
 `
 
 const PanelHeaderText = styled.div`
@@ -45,7 +45,7 @@ interface TPropsFromCollapseParent {
 
 interface TProps extends TPropsFromCollapseParent {
   header?: string | JSX.Element,
-  children: React.ReactElement | string,
+  children: React.ReactNode | React.ReactNode[],
   renderHeader?: (props: TPanelHeaderProps) => JSX.Element,
 }
 
