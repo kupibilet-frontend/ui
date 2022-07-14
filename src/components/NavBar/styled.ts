@@ -47,7 +47,7 @@ export const Inner = styled.div`
 `
 
 interface TNavItemProps {
-  isActive: boolean,
+  isActive?: boolean,
 }
 
 export const NavItem = styled.span<TNavItemProps>`

@@ -204,11 +204,11 @@ type RFSelectProps = TProps & {
   placeholder: string;
 }
 
-export default class RFSelect extends React.Component <RFSelectProps, void> {
+export default class RFSelect extends React.Component <RFSelectProps, Record<string, never>> {
   onSuggestionSelected = (
     e: React.FormEvent<HTMLElement>,
     { suggestion }: Record<'suggestion', TSuggestion>,
-  ) => {
+  ): void => {
     const { onChange } = this.props.input
     onChange(suggestion)
   }

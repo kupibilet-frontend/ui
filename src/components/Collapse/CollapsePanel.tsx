@@ -103,7 +103,7 @@ interface TPropsFromCollapseParent {
 
 interface TProps extends TPropsFromCollapseParent {
   header?: string | JSX.Element,
-  children: React.ReactElement | string,
+  children: React.ReactNode | React.ReactNode[],
   renderHeader?: (props: TPanelHeaderProps) => JSX.Element,
 }
 

@@ -6,7 +6,7 @@ import Icon from 'components/Icon'
 import Link, { TProps } from 'components/Link'
 
 
-const DEFAULT_LINK_PROPS = {
+const DEFAULT_LINK_PROPS: Partial<TProps> = {
   // eslint-disable-next-line no-script-url
   href: 'javascript:void(0)',
 }
@@ -19,8 +19,9 @@ const RIGHT_ICON = (
   <Icon name="star" inheritColor size={ICON_SIZES.normal} />
 )
 
-function DefaultLink(args: TProps): JSX.Element {
+function DefaultLink(args: Partial<TProps>): JSX.Element {
   return (
+    // @ts-ignore fix typing
     <Link {...args}>
       Click me!
     </Link>
