@@ -36,11 +36,13 @@ interface TStyledCheckboxProps {
 }
 
 export const StyledCheckbox = styled.span<TStyledCheckboxProps>`
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
 
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   line-height: 16px;
   box-shadow: ${({ disabled, checked, theme }) => css`inset 0 0 0 1px ${getShadowColor(disabled, checked, theme)}`};
 
@@ -108,5 +110,6 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
 
   &:hover ${StyledCheckbox} {
     box-shadow: ${({ disabled, checked, theme }) => css`inset 0 0 0 1px ${getHoverShadowColor(disabled, checked, theme)}`};
+    background: ${({ disabled, checked, theme }) => getHoverBackgroundColor(disabled, checked, theme)};
   }
 `

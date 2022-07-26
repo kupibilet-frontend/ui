@@ -11,7 +11,7 @@ interface TStyledRangeWrapperProps {
 const StyledRangeWrapper = styled.div<TStyledRangeWrapperProps>`
   .rc-slider-track {
     background-color: ${({ theme, disabled }) => (
-    disabled ? theme.color.colorBgSecondaryDisable : theme.color.colorBgContrastNormal
+    disabled ? theme.color.colorBgSecondaryDisable : theme.color.colorBgAccentNormal
   )} !important;
     
     display: flex;
@@ -23,7 +23,7 @@ const StyledRangeWrapper = styled.div<TStyledRangeWrapperProps>`
   }
 
   .rc-slider-step {
-    background-color: ${({ theme }) => theme.color.colorBgSecondaryNormal};
+    background-color: ${({ theme }) => theme.color.colorBgDarkNormal};
     height: 6px;
     top: 3px;
     border-radius: 3px;
@@ -67,15 +67,15 @@ const StyledHandle = styled.div<StyledHandlerProps>`
   left: 5px;
   z-index: 4;
   transform: translateX(-50%);
-  border: 2px solid ${({ theme }) => theme.color.colorBgContrastNormal};
+  border: 2px solid ${({ theme }) => theme.color.colorBorderAccentActive};
 
   &:hover {
-    background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBgContrastHover};
+    background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBorderAccentActive};
     box-shadow: 0px 2px 4px rgba(98, 112, 139, 0.6);
   }
   &:focus,
   &:active {
-    background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBgContrastActive};
+    background-color: ${({ theme, disabled }) => !disabled && theme.color.colorBorderAccentActive};
     box-shadow: 0px 2px 4px rgba(98, 112, 139, 0.6);
   }
 `
