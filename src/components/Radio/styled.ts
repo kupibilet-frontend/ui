@@ -9,31 +9,32 @@ interface TStyledRadioProps {
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgSecondaryDisable
-  if (checked) return theme.color.colorBgContrastActive
-  if (disabled) return theme.color.colorBgSecondaryDisable
+  if (disabled && checked) return theme.color.colorBgAccentDisable
+  if (checked) return theme.color.colorBgAccentNormal
+  if (disabled) return theme.color.colorBgAccentDisable
 
   return theme.color.colorBorderPrimaryNormal
 }
 
 const getHoverBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled) return theme.color.colorBgSecondaryDisable
-  if (checked) return theme.color.colorBgContrastHover
+  if (disabled) return theme.color.colorBgAccentDisable
+  if (checked) return theme.color.colorBgAccentHover
 
   return theme.color.colorBorderPrimaryHover
 }
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgSecondaryDisable
-  if (checked) return theme.color.colorBgContrastActive
+  if (disabled && checked) return theme.color.colorBgAccentDisable
+  if (checked) return theme.color.colorBgAccentNormal
+  if (disabled) return theme.color.colorBgPrimaryDisable
 
   return theme.color.colorBgPrimaryNormal
 }
 
 const getHoverRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (!checked && disabled) return theme.color.colorBgPrimaryNormal
-  if (disabled) return theme.color.colorBgSecondaryDisable
-  if (checked) return theme.color.colorBgContrastHover
+  if (!checked && disabled) return theme.color.colorBgPrimaryDisable
+  if (disabled) return theme.color.colorBgAccentDisable
+  if (checked) return theme.color.colorBgAccentHover
 
   return theme.color.colorBgPrimaryNormal
 }

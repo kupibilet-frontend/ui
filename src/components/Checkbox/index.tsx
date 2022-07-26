@@ -2,6 +2,7 @@ import React, { useCallback } from 'react'
 import { WrappedFieldProps } from 'redux-form'
 import _get from 'lodash/get'
 import Icon from 'components/Icon'
+import { ICON_SIZES } from 'components/Icon/consts'
 import {
   TLabelPlacement,
   CheckboxLabel,
@@ -47,7 +48,11 @@ export const Checkbox = React.memo((props: TProps) => {
       >
         {checked ? (
           <IconWrap checked={checked}>
-            <Icon name="checkmark" fill="background" />
+            <Icon
+              name="checkbox-check"
+              fill="background"
+              size={ICON_SIZES.xxsmall}
+            />
           </IconWrap>
         ) : (
           null

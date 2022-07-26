@@ -11,9 +11,9 @@ enum ICON_SIZES {
 
 const sizes = {
   [ICON_SIZES.normal]: 18,
-  [ICON_SIZES.xxsmall]: 15,
+  [ICON_SIZES.xxsmall]: 16,
   [ICON_SIZES.xsmall]: 24,
-  [ICON_SIZES.small]: 30,
+  [ICON_SIZES.small]: 28,
   [ICON_SIZES.medium]: 36,
   [ICON_SIZES.large]: 42,
   [ICON_SIZES.xlarge]: 54,
