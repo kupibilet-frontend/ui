@@ -24,9 +24,11 @@ interface TIconWrapProps {
 
 export const IconWrap = styled.span<TIconWrapProps>`
   animation: ${(props) => (props.checked ? css`${fadeInDown} 0.15s` : 'none')};
-  display: inline-block;
-  height: 18px;
-  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
 `
 
 interface TStyledCheckboxProps {
