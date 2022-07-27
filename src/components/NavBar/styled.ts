@@ -107,7 +107,7 @@ export const NavItem = styled.span<TNavItemProps>`
       height: 2px;
       left: 0;
       content: '';
-      background-color: ${({ theme }) => theme.color.secondary300};
+      background-color: ${({ theme }) => theme.color.colorBorderAccentNormal};
     }
   }
 `
