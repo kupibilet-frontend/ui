@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { borderRadiusMedium } from 'utils/borderRadius'
+import { borderRadiusSmall } from 'utils/borderRadius'
 
 interface TStyledWrapperProps {
   isSelected: boolean,
@@ -14,7 +14,7 @@ export const StyledWrapper = styled.span<TStyledWrapperProps>`
   height: 100%;
 
   color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
-  ${borderRadiusMedium.all}
+  ${borderRadiusSmall.all}
 
   display: flex;
   align-items: center;
