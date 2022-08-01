@@ -23,11 +23,11 @@ interface TLinkProps {
 }
 
 function getLinkColor(props: TLinkProps): string {
-  return props.theme.color.colorTextPrimaryNormal
+  return props.theme.color.colorTextLinkNormal
 }
 
 function getLinkHoverColor(props: TLinkProps): string {
-  return props.theme.color.colorTextPrimaryHover
+  return props.theme.color.colorTextLinkHover
 }
 
 const linkStyles = css`
