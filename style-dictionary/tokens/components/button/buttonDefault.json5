@@ -389,16 +389,16 @@
                     },
                     "text": {
                         "normal": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.default.value}"
                         },
                         "hover": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.active.value}"
                         },
                         "disable": {
-                            "value": "{color.text.primary.disable.value}"
+                            "value": "{color.text.accent.disable.value}"
                         }
                     }
                 },
@@ -450,16 +450,16 @@
                     },
                     "text": {
                         "normal": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.default.value}"
                         },
                         "hover": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.active.value}"
                         },
                         "disable": {
-                            "value": "{color.text.primary.disable.value}"
+                            "value": "{color.text.accent.disable.value}"
                         }
                     }
                 },
@@ -511,16 +511,16 @@
                     },
                     "text": {
                         "normal": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.default.value}"
                         },
                         "hover": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.text.primary.normal.value}"
+                            "value": "{color.text.accent.active.value}"
                         },
                         "disable": {
-                            "value": "{color.text.primary.disable.value}"
+                            "value": "{color.text.accent.disable.value}"
                         }
                     }
                 },
@@ -560,16 +560,16 @@
                 "color": {
                     "bg": {
                         "normal": {
-                            "value": "{color.bg.contrast.normal.value}"
+                            "value": "{color.bg.accent.normal.value}"
                         },
                         "hover": {
-                            "value": "{color.bg.contrast.hover.value}"
+                            "value": "{color.bg.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.bg.contrast.active.value}"
+                            "value": "{color.bg.accent.active.value}"
                         },
                         "disable": {
-                            "value": "{color.bg.contrast.disable.value}"
+                            "value": "{color.bg.accent.disable.value}"
                         }
                     },
                     "text": {
@@ -621,16 +621,16 @@
                 "color": {
                     "bg": {
                         "normal": {
-                            "value": "{color.bg.contrast.normal.value}"
+                            "value": "{color.bg.accent.normal.value}"
                         },
                         "hover": {
-                            "value": "{color.bg.contrast.hover.value}"
+                            "value": "{color.bg.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.bg.contrast.active.value}"
+                            "value": "{color.bg.accent.active.value}"
                         },
                         "disable": {
-                            "value": "{color.bg.contrast.disable.value}"
+                            "value": "{color.bg.accent.disable.value}"
                         }
                     },
                     "text": {
@@ -682,16 +682,16 @@
                 "color": {
                     "bg": {
                         "normal": {
-                            "value": "{color.bg.contrast.normal.value}"
+                            "value": "{color.bg.accent.normal.value}"
                         },
                         "hover": {
-                            "value": "{color.bg.contrast.hover.value}"
+                            "value": "{color.bg.accent.hover.value}"
                         },
                         "active": {
-                            "value": "{color.bg.contrast.active.value}"
+                            "value": "{color.bg.accent.active.value}"
                         },
                         "disable": {
-                            "value": "{color.bg.contrast.disable.value}"
+                            "value": "{color.bg.accent.disable.value}"
                         }
                     },
                     "text": {

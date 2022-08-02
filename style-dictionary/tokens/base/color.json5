@@ -254,7 +254,7 @@
             },
             "link": {
                 "normal": {
-                    "value": "rgba(0, 65, 163, 1)"
+                    "value": "rgba(0, 122, 204, 1)"
                 },
                 "hover": {
                     "value": "rgba(0, 138, 230, 1)"

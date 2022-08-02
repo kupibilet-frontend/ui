@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 27 Jun 2022 09:03:54 GMT
+ * Generated on Tue, 02 Aug 2022 15:21:25 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"SuisseIntl-SemiBold","size":"48","lineHeight":"64","fontWeight":"600"};
@@ -38,26 +38,28 @@ export const typography_mobile_text_description_normal = {"fontFamily":"SuisseIn
 export const typography_components_mobile_button_large_default = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"24","fontWeight":"500"};
 export const typography_components_mobile_button_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const typography_components_mobile_button_small_default = {"fontFamily":"SuisseIntl-Medium","size":"14","lineHeight":"16","fontWeight":"500"};
-export const typography_components_mobile_input_hint_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_mobile_input_hint_large_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_mobile_placeholder_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_mobile_placeholder_large_default = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"28","fontWeight":"500"};
-export const typography_components_mobile_input_text_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_mobile_input_text_large_default = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"28","fontWeight":"500"};
-export const typography_components_mobile_input_label_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_mobile_input_label_large_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
+export const typography_components_mobile_input_hint_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"12","lineHeight":"18","fontWeight":"400"};
+export const typography_components_mobile_input_hint_large_default = {"fontFamily":"SuisseIntl-Regular","size":"12","lineHeight":"18","fontWeight":"400"};
+export const typography_components_mobile_placeholder_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
+export const typography_components_mobile_placeholder_large_default = {"fontFamily":"SuisseIntl-Regular","size":"18","lineHeight":"32","fontWeight":"400"};
+export const typography_components_mobile_input_text_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
+export const typography_components_mobile_input_text_large_default = {"fontFamily":"SuisseIntl-Regular","size":"18","lineHeight":"32","fontWeight":"400"};
+export const typography_components_mobile_input_label_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"14","lineHeight":"20","fontWeight":"400"};
+export const typography_components_mobile_input_label_large_default = {"fontFamily":"SuisseIntl-Regular","size":"14","lineHeight":"20","fontWeight":"400"};
 export const typography_components_mobile_tag_label_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
+export const typography_components_mobile_tag_picker_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"14","lineHeight":"16","fontWeight":"500"};
 export const typography_components_mobile_airplane_seat_name_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const typography_components_desktop_button_large_default = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"24","fontWeight":"500"};
 export const typography_components_desktop_button_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const typography_components_desktop_button_small_default = {"fontFamily":"SuisseIntl-Medium","size":"14","lineHeight":"16","fontWeight":"500"};
-export const typography_components_desktop_input_label_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_desktop_input_label_large_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_desktop_placeholder_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_desktop_placeholder_large_default = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"28","fontWeight":"500"};
-export const typography_components_desktop_input_text_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_desktop_input_text_large_default = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"28","fontWeight":"500"};
-export const typography_components_desktop_input_hint_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
-export const typography_components_desktop_input_hint_large_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
+export const typography_components_desktop_input_label_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"14","lineHeight":"20","fontWeight":"400"};
+export const typography_components_desktop_input_label_large_default = {"fontFamily":"SuisseIntl-Regular","size":"14","lineHeight":"20","fontWeight":"400"};
+export const typography_components_desktop_placeholder_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
+export const typography_components_desktop_placeholder_large_default = {"fontFamily":"SuisseIntl-Regular","size":"18","lineHeight":"32","fontWeight":"400"};
+export const typography_components_desktop_input_text_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
+export const typography_components_desktop_input_text_large_default = {"fontFamily":"SuisseIntl-Regular","size":"18","lineHeight":"32","fontWeight":"400"};
+export const typography_components_desktop_input_hint_medium_default = {"fontFamily":"SuisseIntl-Regular","size":"12","lineHeight":"18","fontWeight":"400"};
+export const typography_components_desktop_input_hint_large_default = {"fontFamily":"SuisseIntl-Regular","size":"12","lineHeight":"18","fontWeight":"400"};
 export const typography_components_desktop_tag_label_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
+export const typography_components_desktop_tag_picker_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"14","lineHeight":"16","fontWeight":"500"};
 export const typography_components_desktop_airplane_seat_name_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};

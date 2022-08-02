@@ -14,7 +14,7 @@
                             "value": "{color.text.description.default.value}"
                         },
                         "disable":{
-                            "value": "{color.text.description.default.value}"
+                            "value": "{color.text.primary.disable.value}"
                         },
                         "error":{
                             "value": "{color.text.danger.default.value}"

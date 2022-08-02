@@ -357,20 +357,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "12",
+                            "lineHeight": "18",
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "12",
+                            "lineHeight": "18",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -379,20 +379,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "16",
                             "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "28",
-                            "fontWeight": "500"
+                            "lineHeight": "32",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -401,20 +401,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "16",
                             "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "28",
-                            "fontWeight": "500"
+                            "lineHeight": "32",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -423,20 +423,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "14",
+                            "lineHeight": "20",
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "14",
+                            "lineHeight": "20",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -448,6 +448,18 @@
                             "fontFamily": "{font.family.medium.default.value}",
                             "size": "12",
                             "lineHeight": "18",
+                            "fontWeight": "500"
+                        }
+                    }
+                }
+            },
+            "tagPicker":{
+                "medium":{
+                    "default":{
+                        "value": {
+                            "fontFamily": "{font.family.medium.default.value}",
+                            "size": "14",
+                            "lineHeight": "16",
                             "fontWeight": "500"
                         }
                     }
@@ -503,20 +515,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "14",
+                            "lineHeight": "20",
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "14",
+                            "lineHeight": "20",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -525,20 +537,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "16",
                             "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "28",
-                            "fontWeight": "500"
+                            "lineHeight": "32",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -547,20 +559,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "16",
                             "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
+                            "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "28",
-                            "fontWeight": "500"
+                            "lineHeight": "32",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -569,20 +581,20 @@
                 "medium":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "12",
+                            "lineHeight": "18",
+                            "fontWeight": "400"
                         }
                     }
                 },
                 "large":{
                     "default":{
                         "value": {
-                            "fontFamily": "{font.family.medium.default.value}",
-                            "size": "16",
-                            "lineHeight": "24",
-                            "fontWeight": "500"
+                            "fontFamily": "{font.family.regular.default.value}",
+                            "size": "12",
+                            "lineHeight": "18",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -594,6 +606,18 @@
                             "fontFamily": "{font.family.medium.default.value}",
                             "size": "12",
                             "lineHeight": "18",
+                            "fontWeight": "500"
+                        }
+                    }
+                }
+            },
+            "tagPicker":{
+                "medium":{
+                    "default":{
+                        "value": {
+                            "fontFamily": "{font.family.medium.default.value}",
+                            "size": "14",
+                            "lineHeight": "16",
                             "fontWeight": "500"
                         }
                     }

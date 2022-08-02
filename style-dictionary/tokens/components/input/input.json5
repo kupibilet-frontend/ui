@@ -15,6 +15,9 @@
                         },
                         "disable":{
                             "value": "{color.bg.primary.disable.value}"
+                        },
+                        "error":{
+                            "value": "{color.bg.primary.normal.value}"
                         }
                     },
                     "placeholder":{
@@ -64,7 +67,9 @@
                         "error":{
                             "value": "{color.border.danger.normal.value}"
                         },
-                        "dusable": "{color.border.transparent.normal.value}}"
+                        "disable":{
+                            "value": "{color.border.transparent.normal.value}"
+                        }
                     }
                 },
                 "typography": {
@@ -74,9 +79,6 @@
                         },
                         "inputText": {
                             "value": "{typography.componentsMobile.inputText.medium.default.value}"
-                        },
-                        "inputHint": {
-                            "value": "{typography.componentsMobile.inputHint.medium.default.value}"
                         }
                     },
                     "desktop": {
@@ -98,9 +100,9 @@
                         "default": {
                             "value": {
                                 "top": "{size.padding.8.default.value}",
-                                "right": "{size.padding.16.default.value}",
+                                "right": "{size.padding.12.default.value}",
                                 "bottom": "{size.padding.8.default.value}",
-                                "left": "{size.padding.16.default.value}",
+                                "left": "{size.padding.12.default.value}",
                                 "innerHorizontal": "{size.padding.12.default.value}"
                             }
                         }

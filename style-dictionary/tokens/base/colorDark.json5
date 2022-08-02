@@ -247,12 +247,12 @@
             },
             "info": {
                 "default": {
-                    "value": "rgba(0, 65, 163, 1)"
+                    "value": "rgba(15, 153, 245, 1)"
                 }
             },
             "link": {
                 "normal": {
-                    "value": "rgba(0, 65, 163, 1)"
+                    "value": "rgba(15, 153, 245, 1)"
                 },
                 "hover": {
                     "value": "rgba(0, 138, 230, 1)"
@@ -333,7 +333,7 @@
         "overlay": {
             "primary":{
                 "default":{
-                    "value": "rgba(33, 33, 38, 0.56)"
+                    "value": "rgba(94, 94, 100, 0.56)"
                 }
             }
         }

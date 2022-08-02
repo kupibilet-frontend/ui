@@ -3,7 +3,7 @@
         "default":{
             "medium":{
                 "color":{
-                    "text":{
+                    "inputLabel":{
                         "normal":{
                             "value": "{color.text.secondary.default.value}"
                         },

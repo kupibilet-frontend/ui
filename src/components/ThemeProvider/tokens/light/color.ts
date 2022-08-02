@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 27 Jun 2022 09:03:54 GMT
+ * Generated on Tue, 02 Aug 2022 15:21:25 GMT
  */
 
 export const colorBgLayoutDefault = "#fafafb";
@@ -67,7 +67,7 @@ export const colorTextAccentActive = "#007acc";
 export const colorTextAccentDisable = "#a0a2ab";
 export const colorTextSuccessDefault = "#85bc0c";
 export const colorTextInfoDefault = "#0041a3";
-export const colorTextLinkNormal = "#0041a3";
+export const colorTextLinkNormal = "#007acc";
 export const colorTextLinkHover = "#008ae6";
 export const colorTextLinkActive = "#007acc";
 export const colorTextWarningDefault = "#ff9000";

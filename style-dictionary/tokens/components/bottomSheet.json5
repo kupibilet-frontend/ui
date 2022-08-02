@@ -1,0 +1,106 @@
+{
+    "bottomSheet":{
+        "primary":{
+            "medium":{
+                "color":{
+                    "bg": {
+                        "default": {
+                            "value": "{color.bg.primary.normal.value}"
+                        }
+                    },
+                    "headline":{
+                        "default": {
+                            "value": "{color.text.primary.normal.value}" // цвет текста для заголовка
+                        }
+                    },
+                    "devider":{
+                        "default": {
+                            "value": "{color.border.primary.normal.value}" // цвет для линии свайпа для мобилок
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "default": {
+                            "value": "{typography.mobile.headline.h3.default.value}" // стиль текста для заголовка
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.desktop.headline.h3.default.value}" // стиль текста для заголовка
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.large.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.0.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.24.default.value}",
+                                "left": "{size.padding.16.default.value}",
+                                "innerHorizontal": "{size.padding.12.default.value}" // отступ между заголовком и кнопкой для WEB
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "secondary":{
+            "medium":{
+                "color":{
+                    "bg": {
+                        "default": {
+                            "value": "{color.bg.layout.default.value}"
+                        }
+                    },
+                    "text":{
+                        "default": {
+                            "value": "{color.text.primary.normal.value}" // цвет текста для заголовка
+                        }
+                    },
+                    "border":{
+                        "default": {
+                            "value": "{color.border.primary.normal.value}" // цвет для линии свайпа для мобилок
+                        }
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "default": {
+                            "value": "{typography.mobile.headline.h3.default.value}" // стиль текста для заголовка
+                        }
+                    },
+                    "desktop": {
+                        "default": {
+                            "value": "{typography.desktop.headline.h3.default.value}" // стиль текста для заголовка
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.large.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.0.default.value}",
+                                "right": "{size.padding.16.default.value}",
+                                "bottom": "{size.padding.24.default.value}",
+                                "left": "{size.padding.16.default.value}",
+                                "innerHorizontal": "{size.padding.12.default.value}" // отступ между заголовком и кнопкой для WEB
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 27 Jun 2022 09:03:54 GMT
+ * Generated on Tue, 02 Aug 2022 15:21:26 GMT
  */
 
 export const tag_label_normal_medium_color_bg_default = "#3a3a41";
@@ -28,7 +28,7 @@ export const tag_label_danger_medium_typography_desktop_default = {"fontFamily":
 export const tag_label_danger_medium_size_border_radius_default = "4px";
 export const tag_label_danger_medium_size_padding_default = {"top":"4px","right":"8px","bottom":"4px","left":"8px","innerHorizontal":"4px"};
 export const tag_label_info_medium_color_bg_default = "#001b73";
-export const tag_label_info_medium_color_text_default = "#0041a3";
+export const tag_label_info_medium_color_text_default = "#0f99f5";
 export const tag_label_info_medium_typography_mobile_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_info_medium_typography_desktop_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_info_medium_size_border_radius_default = "4px";

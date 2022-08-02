@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 27 Jun 2022 09:03:54 GMT
+ * Generated on Tue, 02 Aug 2022 15:21:25 GMT
  */
 
 export const colorBgLayoutDefault = "#101014";
@@ -66,8 +66,8 @@ export const colorTextAccentHover = "#008ae6";
 export const colorTextAccentActive = "#007acc";
 export const colorTextAccentDisable = "#51525a";
 export const colorTextSuccessDefault = "#85bc0c";
-export const colorTextInfoDefault = "#0041a3";
-export const colorTextLinkNormal = "#0041a3";
+export const colorTextInfoDefault = "#0f99f5";
+export const colorTextLinkNormal = "#0f99f5";
 export const colorTextLinkHover = "#008ae6";
 export const colorTextLinkActive = "#007acc";
 export const colorTextWarningDefault = "#ff9000";
@@ -85,4 +85,4 @@ export const colorBorderAccentActive = "#007acc";
 export const colorBorderSuccessNormal = "#85bc0c";
 export const colorBorderDangerNormal = "#e64926";
 export const colorBorderTransparentNormal = "rgba(0, 0, 0, 0)";
-export const colorOverlayPrimaryDefault = "rgba(33, 33, 38, 0.56)";
+export const colorOverlayPrimaryDefault = "rgba(94, 94, 100, 0.56)";
