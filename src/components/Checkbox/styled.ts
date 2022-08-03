@@ -24,9 +24,8 @@ interface TIconWrapProps {
 
 export const IconWrap = styled.span<TIconWrapProps>`
   animation: ${(props) => (props.checked ? css`${fadeInDown} 0.15s` : 'none')};
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  padding: 2px;
   height: 20px;
   width: 20px;
 `
