@@ -1,41 +1,26 @@
 import React from 'react'
 import styled, { DefaultTheme, css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
-import { borderRadiusLarge, borderRadiusMedium } from 'utils/borderRadius'
 import { IconSvg } from 'components/Icon/styled'
-import {
-  TEXTAREA_PADDINGS,
-  ICON_PADDINGS,
-  ICON_GROUP_PADDINGS,
-  SIZE,
-  TYPOGRAPHY,
-  INPUT_HEIGHT,
-} from './consts'
-import { TNeighboringInGroup, TInputSize } from './types'
+import { TNeighboringInGroup } from './types'
 
 const Error = styled.span`
   position: absolute;
-  top: calc(100% + 2px);
+  top: calc(100% + 4px);
   left: 0;
   display: flex;
   align-items: center;
-  padding: 3px 12px 5px;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-  opacity: 0.97;
+  font-size: ${({ theme }) => theme.input.input_hint_default_medium_typography_desktop_input_hint.size}px;
+  line-height: ${({ theme }) => theme.input.input_hint_default_medium_typography_desktop_input_hint.lineHeight}px;
+  color: ${({ theme }) => theme.input.input_hint_default_medium_color_input_hint_error};
   z-index: 2;
-  ${borderRadiusMedium.all}
-  background-color: ${({ theme }) => theme.color.error700};
 `
 
 interface TCommonInnerInputProps<T> {
   theme: DefaultTheme,
-  inputSize: TInputSize,
   neighboringInGroup?: TNeighboringInGroup,
   type?: string,
   placeholder: string,
-  hasInnerGroup?: boolean,
   leftIcon?: React.ReactNode,
   rightIcon?: React.ReactNode,
   disabled?: boolean,
@@ -44,77 +29,77 @@ interface TCommonInnerInputProps<T> {
   onFocus?: (event: React.FocusEvent<T>) => void,
 }
 
-function getInputBorderRadius(
-  neighboringInGroup: TNeighboringInGroup | undefined,
-  size: TInputSize,
-) {
-  const sizeToRadiusMapper: Record<TInputSize, any> = {
-    small: borderRadiusMedium,
-    medium: borderRadiusMedium,
-    large: borderRadiusLarge,
-  }
+type TGetInputBorderRadius = {
+  neighboringInGroup?: TNeighboringInGroup,
+  theme: DefaultTheme,
+}
 
-  const borderRadius = sizeToRadiusMapper[size as TInputSize]
+function getInputBorderRadius({ neighboringInGroup, theme }: TGetInputBorderRadius) {
+  const radius = theme.input.input_default_medium_size_border_radius_default
 
   if (neighboringInGroup === 'right') {
-    return borderRadius.left
+    return `border-radius: ${radius} 0 0 ${radius};`
   } else if (neighboringInGroup === 'left') {
-    return borderRadius.right
+    return `border-radius: 0 ${radius} ${radius} 0;`
   } else if (neighboringInGroup !== 'both') {
-    return borderRadius.all
+    return `border-radius: ${radius};`
   }
 
   return ''
 }
 
+type TGetInputPadding = {
+  theme: DefaultTheme,
+  leftIcon?: React.ReactNode,
+  rightIcon?: React.ReactNode,
+}
+
+const getInputPadding = ({ theme, leftIcon, rightIcon }: TGetInputPadding) => {
+  return `
+    padding-top: ${theme.input.input_default_medium_size_padding_default.top};
+    padding-bottom: ${theme.input.input_default_medium_size_padding_default.bottom};
+    padding-right: ${rightIcon ? 0 : theme.input.input_default_medium_size_padding_default.right};
+    padding-left: ${leftIcon ? 0 : theme.input.input_default_medium_size_padding_default.left};
+  `
+}
+
 function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
   return css`
-  position: relative;
-  flex-grow: 1;
-  flex-shrink: 1;
-  width: 100%;
-  height: 100%;
-  line-height: normal;
-  border: none;
-  min-height: ${INPUT_HEIGHT[props.inputSize]}px;
-  font-family: inherit;
-  opacity: 1;
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    height: 100%;
+    line-height: ${props.theme.input.input_default_medium_typography_desktop_input_text.lineHeight}px;
+    border: none;
+    font-family: inherit;
+    opacity: 1;
 
-  ${props.inputSize === 'large' ? 'letter-spacing: -0.1px' : null};
+    ${getInputPadding({ theme: props.theme, leftIcon: props.leftIcon, rightIcon: props.rightIcon })}
+    
+    font-size: ${props.theme.input.input_default_medium_typography_desktop_input_text.size}px;
+    color: ${props.theme.input.input_default_medium_color_input_text_normal};
 
-  padding-left: ${props.leftIcon ? '0' : `${SIZE[props.inputSize]}px`};
+    background-color: transparent;
 
-  padding-right: ${props.rightIcon ? '0' : `${SIZE[props.inputSize]}px`};
-  
-  font-size: ${TYPOGRAPHY[props.inputSize]}px;
-  color: ${props.theme.color.colorTextPrimaryNormal};
+    ${getInputBorderRadius({ neighboringInGroup: props.neighboringInGroup, theme: props.theme })}
 
-  background-color: transparent;
-  
-  ${(({ neighboringInGroup, disabled, hasInnerGroup, theme }) => {
-    if (hasInnerGroup && ['right', 'both'].includes(neighboringInGroup as string)) {
-      return `border-right: 1px solid ${disabled ? theme.color.misc100 : theme.color.misc200};`
-    }
-  })(props)}
-
-  ${getInputBorderRadius(props.neighboringInGroup, props.inputSize)}
-
-  &::placeholder {
-    color: ${({ theme }) => theme.color.colorTextPlaceholderDefault};
-  }
-
-  &:focus {
-    outline-style: none;
-  }
-
-  &:disabled {
-    color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
-    -webkit-text-fill-color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
     &::placeholder {
-      color: ${({ theme }) => theme.color.colorTextPrimaryDisable};
+      color: ${({ theme }) => theme.input.input_default_medium_color_placeholder_normal};
+    }
+
+    &:focus {
+      outline-style: none;
+    }
+
+    &:disabled {
+      color: ${({ theme }) => theme.input.input_default_medium_color_input_text_disable};
+      -webkit-text-fill-color: ${({ theme }) => theme.input.input_default_medium_color_input_text_disable};
+      &::placeholder {
+        color: ${({ theme }) => theme.input.input_default_medium_color_placeholder_disable};
+    }
   }
-  }
-  `
+`
 }
 
 const InnerInput = styled.input<TCommonInnerInputProps<HTMLInputElement>>`
@@ -124,34 +109,51 @@ const InnerInput = styled.input<TCommonInnerInputProps<HTMLInputElement>>`
 
 const InnerTextarea = styled.textarea<TCommonInnerInputProps<HTMLTextAreaElement>>`
   ${(props) => getCommonInputStyles(props)}
-
-  ${({ inputSize }) => (`
-  padding-top: ${TEXTAREA_PADDINGS[inputSize]}px;
-  padding-bottom: ${TEXTAREA_PADDINGS[inputSize]}px;
-  `
-  )}
-  
 `
+
+type TGetInputBorderColor = {
+  active?: boolean,
+  theme: DefaultTheme,
+  disabled?: boolean,
+  isHover?: boolean,
+  error?: boolean,
+}
+
+function getInputBorderColor(props: TGetInputBorderColor) {
+  const { error, active, theme, disabled, isHover } = props
+
+  if (active) return theme.input.input_default_medium_color_border_active
+  if (error) return theme.input.input_default_medium_color_border_error
+  if (disabled) return theme.input.input_default_medium_color_border_disable
+  if (isHover) return theme.input.input_default_medium_color_border_hover
+
+  return theme.input.input_default_medium_color_border_normal
+}
+
+type TGetInputWrapperBg = {
+  active?: boolean,
+  theme: DefaultTheme,
+  disabled?: boolean,
+  isHover?: boolean,
+  error?: boolean,
+}
+
+const getInputWrapperBg = ({ theme, active, disabled, isHover, error }: TGetInputWrapperBg) => {
+  if (disabled) return theme.input.input_default_medium_color_bg_disable
+  if (active) return theme.input.input_default_medium_color_bg_active
+  if (isHover) return theme.input.input_default_medium_color_bg_hover
+  if (error) return theme.input.input_default_medium_color_bg_error
+
+  return theme.input.input_default_medium_color_bg_normal
+}
 
 interface TInputWrapperProps {
   active: boolean,
   theme: DefaultTheme,
   disabled: boolean,
   neighboringInGroup: TNeighboringInGroup,
-  size: TInputSize,
   error: boolean,
 }
-
-function getInputBorderColor(props: TInputWrapperProps) {
-  const { error, active, theme, disabled } = props
-
-  if (active) return theme.color.colorBorderPrimaryActive
-  if (error) return theme.color.colorBorderDangerNormal
-  if (disabled) return theme.color.colorBgSecondaryDisable
-
-  return theme.color.colorBorderPrimaryNormal
-}
-
 
 const InputWrapper = styled.div<TInputWrapperProps>`
   position: relative;
@@ -159,18 +161,15 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: ${({ theme }) => theme.color.colorBgPrimaryNormal};
+  background-color: ${(props) => getInputWrapperBg(props)};
 
-  ${({ disabled, theme }) => disabled && `
-    background-color: ${theme.color.colorBgSecondaryDisable};
+  ${({ disabled }) => disabled && `
     pointer-events: none;
   `}
 
-  ${({ neighboringInGroup, size }) => getInputBorderRadius(neighboringInGroup, size)}
+  ${({ neighboringInGroup, theme }) => getInputBorderRadius({ neighboringInGroup, theme })}
 
   border: 1px solid ${getInputBorderColor};
-
-  border-style: solid;
 
   ${({ neighboringInGroup }) => {
     if (['left', 'both'].includes((neighboringInGroup || '').toString())) {
@@ -185,49 +184,39 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   transition-property: border-color;
 
   &:hover {
-    border-color: ${({ error, theme, disabled }) => (!disabled && !error) && theme.color.colorBorderPrimaryHover};
+    border-color: ${({ theme }) => getInputBorderColor({ theme, isHover: true })};
+    background-color: ${(props) => getInputWrapperBg({ ...props, isHover: true })};
     z-index: 1;
-  }
-
-  .combined-inputs-group {
-    height: 100%;
   }
 `
 
-interface TGetIconWrapPaddingsProps {
+interface TGetIconWrapPaddings {
   left?: boolean,
   right?: boolean,
-  isGroup: boolean,
-  disabled?: boolean,
-  size: TInputSize,
-  onMouseDown: React.MouseEventHandler<HTMLDivElement>,
+  theme: DefaultTheme,
 }
 
-function getIconWrapPaddings({ left, right, isGroup, size }: TGetIconWrapPaddingsProps) {
-  if (left && isGroup) {
+function getIconWrapPaddings({ left, right, theme }: TGetIconWrapPaddings) {
+  if (left) {
     return `
-      padding-left: ${ICON_GROUP_PADDINGS[size].outer};
-      padding-right: ${ICON_GROUP_PADDINGS[size].inner};
-    `
-  } else if (left) {
-    return `
-      padding-left: ${ICON_PADDINGS[size].outer};
-      padding-right: ${ICON_PADDINGS[size].inner};
-    `
-  } else if (right && isGroup) {
-    return `
-      padding-left: ${ICON_GROUP_PADDINGS[size].inner};
-      padding-right: ${ICON_GROUP_PADDINGS[size].outer};
+      padding-right: ${theme.input.input_default_medium_size_padding_default.innerHorizontal};
+      padding-left: ${theme.input.input_default_medium_size_padding_default.left};
     `
   } else if (right) {
     return `
-      padding-left: ${ICON_PADDINGS[size].inner};
-      padding-right: ${ICON_PADDINGS[size].outer};
+      padding-left: ${theme.input.input_default_medium_size_padding_default.innerHorizontal};
+      padding-right: ${theme.input.input_default_medium_size_padding_default.right};
     `
   }
 }
 
-const IconWrap = styled.div<TGetIconWrapPaddingsProps>`
+type TIconWrapProps = {
+  left?: boolean,
+  right?: boolean,
+  disabled?: boolean,
+}
+
+const IconWrap = styled.div<TIconWrapProps>`
   flex-grow: 0;
   flex-shrink: 0;
   height: 100%;
@@ -237,7 +226,9 @@ const IconWrap = styled.div<TGetIconWrapPaddingsProps>`
   align-items: center;
 
   ${IconSvg} {
-    ${({ disabled }) => disabled && 'opacity: 0.6;'}
+    ${({ disabled, theme }) => disabled && `
+      fill: ${theme.input.input_default_medium_color_input_text_disable};
+    `}
   }
 `
 

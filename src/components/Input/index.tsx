@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import { WrappedFieldProps } from 'redux-form'
-import ControlsGroup from 'components/ControlsGroup'
 import { TNeighboringInGroup, TInputSize } from './types'
 
 import {
@@ -26,7 +25,6 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   type?: string,
   active?: boolean,
   error?: React.ReactNode,
-  size?: TInputSize,
   disabled?: boolean,
   placeholder?: string,
   neighboringInGroup?: TNeighboringInGroup,
@@ -40,7 +38,6 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   children?: React.ReactElement[] | null,
   isTextarea?: boolean,
   rows?: number,
-  autoComplete?: 'no' | null,
   className?: string | null,
   readOnly?: boolean,
   'data-test'?: string | null,
@@ -55,7 +52,6 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     onChange: props.onChange || (() => null),
     value: props.value || '',
     active: props.active || false,
-    size: props.size || 'medium',
     type: props.type || 'text',
     name: props.name || 'input',
     error: props.error || false,
@@ -72,7 +68,6 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     onFocus: props.onFocus || (() => null),
     innerRef: props.innerRef || null,
     rows: props.rows || 0,
-    autoComplete: props.autoComplete || null,
     className: props.className || null,
     readOnly: props.readOnly ?? false,
     'data-test': props['data-test'] || null,
@@ -87,7 +82,6 @@ function renderInputElement<T>(
   innerInput: React.RefObject<T>,
 ): JSX.Element {
   const {
-    size,
     error = false,
     disabled = false,
     leftIcon,
@@ -108,7 +102,6 @@ function renderInputElement<T>(
     return (
       <InnerTextarea
         {...props}
-        inputSize={size}
         disabled={disabled}
         error={Boolean(error)}
         onFocus={(event: React.FocusEvent<HTMLTextAreaElement>) => handleFocus(null, event)}
@@ -125,7 +118,6 @@ function renderInputElement<T>(
   return (
     <InnerInput
       {...props}
-      inputSize={size}
       disabled={disabled}
       error={Boolean(error)}
       onFocus={(event: React.FocusEvent<HTMLInputElement>) => handleFocus(null, event)}
@@ -143,11 +135,9 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
   const normalizedProps = normalizeProps(props)
   const {
     active,
-    size,
     error,
     disabled,
     neighboringInGroup,
-    children,
     leftIcon,
     rightIcon,
     handleLeftIconPress,
@@ -155,7 +145,6 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     onFocus,
     onBlur,
     innerRef,
-    autoComplete,
   } = normalizedProps
   const [isActive, setIsActive] = useState<boolean>(false)
   const ref = useRef<T>(null)
@@ -196,7 +185,6 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
       disabled={disabled}
       error={Boolean(error)}
       neighboringInGroup={neighboringInGroup}
-      size={size}
     >
       {
           leftIcon ? (
@@ -206,9 +194,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
                   ? (event: TIconMouseEvent) => handleLeftIconPress(innerInput, event)
                   : onIconPress
               )}
-              size={size}
               disabled={disabled}
-              isGroup={leftIconsArray.length > 1}
               left
             >
               {leftIconsArray}
@@ -218,47 +204,30 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
           )
         }
       {
-          children ? (
-            <ControlsGroup className="combined-inputs-group">
-              {React.Children.map(children, (child: React.ReactElement) => (
-                React.cloneElement(child, {
-                  autoComplete,
-                  inputSize: size,
-                  name: child.props.name,
-                  hasInnerGroup: true,
-                  onFocus: (event: React.FocusEvent<T>) => handleFocus(child.props.onFocus, event),
-                  onBlur: (event: React.FocusEvent<T>) => handleBlur(child.props.onBlur, event),
-                })
-              ))}
-            </ControlsGroup>
-          ) : (
-            // @ts-ignore TODO: fix this
-            renderInputElement(normalizedProps, handleFocus, handleBlur, innerInput)
-          )
-        }
+        // @ts-ignore TODO: fix this
+        renderInputElement(normalizedProps, handleFocus, handleBlur, innerInput)
+      }
       {
-          rightIcon ? (
-            <IconWrap
-              onMouseDown={(
-                handleRightIconPress
-                  ? (event: TIconMouseEvent) => handleRightIconPress(innerInput, event)
-                  : onIconPress
-              )}
-              size={size}
-              disabled={disabled}
-              isGroup={rightIconsArray.length > 1}
-              right
-            >
-              {rightIconsArray}
-            </IconWrap>
-          ) : (
-            null
-          )
-        }
+        rightIcon ? (
+          <IconWrap
+            onMouseDown={(
+              handleRightIconPress
+                ? (event: TIconMouseEvent) => handleRightIconPress(innerInput, event)
+                : onIconPress
+            )}
+            disabled={disabled}
+            right
+          >
+            {rightIconsArray}
+          </IconWrap>
+        ) : (
+          null
+        )
+      }
       { error && !active && !isActive && (
-      <Error>
-        { error }
-      </Error>
+        <Error>
+          { error }
+        </Error>
       )}
     </InputWrapper>
   )

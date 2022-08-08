@@ -25,14 +25,12 @@ function InputTemplate<T extends HTMLInputElement | HTMLTextAreaElement>(args: T
 }
 
 const DEFAULT_INPUT_PROPS: TProps<HTMLInputElement> = {
-  size: 'small',
   type: 'text',
   name: 'input',
   placeholder: 'Только прямые рейсы',
 }
 
 const DEFAULT_TEXTAREA_PROPS: TProps<HTMLTextAreaElement> = {
-  size: 'small',
   type: 'text',
   name: 'input',
   placeholder: 'Только прямые рейсы',
@@ -101,57 +99,6 @@ InputAsTextarea.args = {
 
 
 // ----------------------------------------------
-// Input in ControlsGroup
-// ----------------------------------------------
-function InputInControlsGroup(args: TProps<HTMLInputElement>): JSX.Element {
-  const [{ firstValue, secondValue, thirdValue }, updateArgs] = useArgs()
-
-  function createOnChangeHandler(field: string) {
-    return function onValueChange(event: React.ChangeEvent<HTMLInputElement>): void {
-      updateArgs({ [field]: event.target.value })
-    }
-  }
-
-  return (
-    <Input {...args}>
-      <InnerInput
-        inputSize="medium"
-        value={firstValue}
-        onChange={createOnChangeHandler('firstValue')}
-        placeholder="First"
-      />
-      <InnerInput
-        inputSize="medium"
-        value={secondValue}
-        onChange={createOnChangeHandler('secondValue')}
-        placeholder="Second"
-      />
-      <InnerInput
-        inputSize="medium"
-        value={thirdValue}
-        onChange={createOnChangeHandler('thirdValue')}
-        placeholder="Third"
-      />
-    </Input>
-  )
-}
-
-InputInControlsGroup.args = {
-  ...DEFAULT_INPUT_PROPS,
-}
-
-// ----------------------------------------------
-// Input in ControlsGroup Error
-// ----------------------------------------------
-const InputInControlsGroupError: Story<TProps<HTMLInputElement>> = InputInControlsGroup.bind({})
-
-InputInControlsGroupError.args = {
-  ...DEFAULT_INPUT_PROPS,
-  error: 'Error! Please enter correct data',
-}
-
-
-// ----------------------------------------------
 // Input with react-hook-form
 // ----------------------------------------------
 interface TReactHookFormData {
@@ -187,8 +134,6 @@ export {
   InputWithIcons,
   InputWithIconsGroup,
   InputAsTextarea,
-  InputInControlsGroup,
-  InputInControlsGroupError,
   ReactHookFormExample,
 }
 
