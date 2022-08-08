@@ -1,12 +1,8 @@
 import React from 'react'
 import { Story } from '@storybook/react'
 import { useArgs } from '@storybook/client-api'
-import { useForm } from 'react-hook-form'
 import Icon from 'components/Icon'
-import Button from 'components/Button'
-import { Input, RHFInput, TProps } from 'components/Input'
-import { InnerInput } from 'components/Input/styled'
-
+import { Input, TProps } from 'components/Input'
 
 function InputTemplate<T extends HTMLInputElement | HTMLTextAreaElement>(args: TProps<T>) {
   const [{ value }, updateArgs] = useArgs()
@@ -97,36 +93,6 @@ InputAsTextarea.args = {
   isTextarea: true,
 }
 
-
-// ----------------------------------------------
-// Input with react-hook-form
-// ----------------------------------------------
-interface TReactHookFormData {
-  firstName: string,
-  lastName: string,
-}
-
-function ReactHookFormExample(props: TProps): JSX.Element {
-  const { register, handleSubmit, formState: { errors } } = useForm<TReactHookFormData>()
-
-  function onSubmit(data: TReactHookFormData) {
-    console.log('Submit!', data)
-  }
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <RHFInput {...register('firstName', { required: true })} />
-      {errors.firstName && <p>First Name is required</p>}
-
-      <RHFInput {...register('lastName', { required: true })} />
-      {errors.lastName && <p>Last Name is required</p>}
-
-      <Button type="submit">Submit</Button>
-    </form>
-  )
-}
-
-
 export {
   DefaultInput,
   ErrorInput,
@@ -134,7 +100,6 @@ export {
   InputWithIcons,
   InputWithIconsGroup,
   InputAsTextarea,
-  ReactHookFormExample,
 }
 
 export default {

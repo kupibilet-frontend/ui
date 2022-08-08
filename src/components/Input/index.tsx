@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { WrappedFieldProps } from 'redux-form'
-import { TNeighboringInGroup, TInputSize } from './types'
+import { TNeighboringInGroup } from './types'
 
 import {
   Error,
@@ -134,7 +134,7 @@ function renderInputElement<T>(
 function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
   const normalizedProps = normalizeProps(props)
   const {
-    active,
+    active: reduxFormFieldActive,
     error,
     disabled,
     neighboringInGroup,
@@ -146,12 +146,15 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     onBlur,
     innerRef,
   } = normalizedProps
-  const [isActive, setIsActive] = useState<boolean>(false)
+  const [isFocused, setIsFocused] = useState(false)
+
   const ref = useRef<T>(null)
   const innerInput = innerRef || ref
 
+  const isActive = reduxFormFieldActive || isFocused
+
   const onIconPress = (event: TIconMouseEvent): void => {
-    if (!isActive) {
+    if (!isFocused) {
       event.preventDefault()
 
       if (innerInput.current) innerInput.current.focus()
@@ -164,7 +167,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     if (onFocus) onFocus(event)
     if (onFocusArg) onFocusArg(event)
 
-    setIsActive(true)
+    setIsFocused(true)
   }
 
   const handleBlur = (
@@ -173,7 +176,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     if (onBlur) onBlur(event)
     if (onBlurArg) onBlurArg(event)
 
-    setIsActive(false)
+    setIsFocused(false)
   }
 
   const leftIconsArray = React.Children.toArray(leftIcon)
@@ -181,7 +184,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
 
   return (
     <InputWrapper
-      active={active || isActive}
+      active={isActive}
       disabled={disabled}
       error={Boolean(error)}
       neighboringInGroup={neighboringInGroup}
@@ -199,9 +202,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
             >
               {leftIconsArray}
             </IconWrap>
-          ) : (
-            null
-          )
+          ) : null
         }
       {
         // @ts-ignore TODO: fix this
@@ -220,11 +221,9 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
           >
             {rightIconsArray}
           </IconWrap>
-        ) : (
-          null
-        )
+        ) : null
       }
-      { error && !active && !isActive && (
+      { error && !isActive && (
         <Error>
           { error }
         </Error>
@@ -232,14 +231,6 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     </InputWrapper>
   )
 }
-
-
-// ReactHookForm wrapper for Input
-const RHFInput = React.forwardRef((props: TProps, ref) => (
-  // @ts-ignore TODO: fix ref's passing types
-  <InputControl {...props} innerRef={ref} uncontrolled />
-))
-
 
 export type TRFInputProps = WrappedFieldProps & TProps
 
@@ -255,7 +246,6 @@ const RFInput = ({ input, meta, ...props }: TRFInputProps): JSX.Element => (
 
 export {
   InputControl as Input,
-  RHFInput,
 }
 
 export default RFInput
