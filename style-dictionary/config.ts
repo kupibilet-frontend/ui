@@ -218,3 +218,50 @@ StyleDictionary.extend({
     },
   },
 }).buildAllPlatforms()
+
+StyleDictionary.registerFilter({
+  name: 'isInput',
+  matcher(prop) {
+    const inputTokenCategories = ['input', 'inputHint', 'inputLabel']
+    return inputTokenCategories.includes(prop.attributes.category)
+  },
+})
+
+// light input tokens
+StyleDictionary.extend({
+  source: [
+    source.common,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/light/input.ts`,
+          format: 'javascript/es6',
+          filter: 'isInput',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()
+
+
+// dark input tokens
+StyleDictionary.extend({
+  source: [
+    source.dark,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/dark/input.ts`,
+          format: 'javascript/es6',
+          filter: 'isInput',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()
