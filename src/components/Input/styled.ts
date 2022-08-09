@@ -72,6 +72,7 @@ function getCommonInputStyles<T>(props: TCommonInnerInputProps<T>) {
     height: 100%;
     line-height: ${props.theme.input.input_default_medium_typography_desktop_input_text.lineHeight}px;
     border: none;
+    min-height: 38px;
     font-family: inherit;
     opacity: 1;
 
@@ -184,7 +185,7 @@ const InputWrapper = styled.div<TInputWrapperProps>`
   transition-property: border-color;
 
   &:hover {
-    border-color: ${({ theme }) => getInputBorderColor({ theme, isHover: true })};
+    border-color: ${(props) => getInputBorderColor({ ...props, isHover: true })};
     background-color: ${(props) => getInputWrapperBg({ ...props, isHover: true })};
     z-index: 1;
   }

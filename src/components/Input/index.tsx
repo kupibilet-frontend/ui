@@ -38,7 +38,7 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   children?: React.ReactElement[] | null,
   isTextarea?: boolean,
   rows?: number,
-  autoComplete?: 'no' | null,
+  autoComplete?: 'off' | null,
   className?: string | null,
   readOnly?: boolean,
   'data-test'?: string | null,
