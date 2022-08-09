@@ -38,10 +38,10 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   children?: React.ReactElement[] | null,
   isTextarea?: boolean,
   rows?: number,
+  autoComplete?: 'no' | null,
   className?: string | null,
   readOnly?: boolean,
   'data-test'?: string | null,
-  uncontrolled?: boolean,
 }
 
 type TNormalizedProps<T> = Required<TProps<T>>
@@ -68,10 +68,10 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     onFocus: props.onFocus || (() => null),
     innerRef: props.innerRef || null,
     rows: props.rows || 0,
+    autoComplete: props.autoComplete || null,
     className: props.className || null,
     readOnly: props.readOnly ?? false,
     'data-test': props['data-test'] || null,
-    uncontrolled: props.uncontrolled ?? false,
   }
 }
 
@@ -87,16 +87,8 @@ function renderInputElement<T>(
     leftIcon,
     rightIcon,
     isTextarea,
-    uncontrolled,
     ...props
   } = normalizedProps
-
-  if (uncontrolled) {
-    // value is required in TNormalizedProps but ESLint thinks its optional
-    // @ts-ignore The operand of a 'delete' operator must be optional
-    // eslint-disable-next-line react/prop-types
-    delete props.value
-  }
 
   if (isTextarea) {
     return (
