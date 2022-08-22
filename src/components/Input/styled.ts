@@ -227,8 +227,8 @@ const IconWrap = styled.div<TIconWrapProps>`
   align-items: center;
 
   ${IconSvg} {
-    ${({ disabled, theme }) => disabled && `
-      fill: ${theme.input.input_default_medium_color_input_text_disable};
+    ${({ disabled, theme }) => `
+      fill: ${disabled ? theme.input.input_default_medium_color_input_text_disable : theme.input.input_default_medium_color_input_text_normal};
     `}
   }
 `
