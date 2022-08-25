@@ -3,7 +3,7 @@ import { WrappedFieldProps } from 'redux-form'
 import { TNeighboringInGroup } from './types'
 
 import {
-  Error,
+  InputHint,
   InnerInput,
   InputWrapper,
   IconWrap,
@@ -42,6 +42,7 @@ export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
   className?: string | null,
   readOnly?: boolean,
   'data-test'?: string | null,
+  helperText?: React.ReactNode,
 }
 
 type TNormalizedProps<T> = Required<TProps<T>>
@@ -72,6 +73,7 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     className: props.className || null,
     readOnly: props.readOnly ?? false,
     'data-test': props['data-test'] || null,
+    helperText: props.helperText || '',
   }
 }
 
@@ -137,6 +139,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     onFocus,
     onBlur,
     innerRef,
+    helperText,
   } = normalizedProps
   const [isFocused, setIsFocused] = useState(false)
 
@@ -174,53 +177,61 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
   const leftIconsArray = React.Children.toArray(leftIcon)
   const rightIconsArray = React.Children.toArray(rightIcon)
 
+  const isShowError = Boolean(error) && !isActive
+
+  const getHintText = () => {
+    if (isShowError) return error
+    if (helperText) return helperText
+    return ''
+  }
+
   return (
-    <InputWrapper
-      active={isActive}
-      disabled={disabled}
-      error={Boolean(error)}
-      neighboringInGroup={neighboringInGroup}
-    >
-      {
-          leftIcon ? (
+    <div>
+      <InputWrapper
+        active={isActive}
+        disabled={disabled}
+        error={Boolean(error)}
+        neighboringInGroup={neighboringInGroup}
+      >
+        {
+            leftIcon ? (
+              <IconWrap
+                onMouseDown={(
+                  handleLeftIconPress
+                    ? (event: TIconMouseEvent) => handleLeftIconPress(innerInput, event)
+                    : onIconPress
+                )}
+                disabled={disabled}
+                left
+              >
+                {leftIconsArray}
+              </IconWrap>
+            ) : null
+          }
+        {
+          // @ts-ignore TODO: fix this
+          renderInputElement(normalizedProps, handleFocus, handleBlur, innerInput)
+        }
+        {
+          rightIcon ? (
             <IconWrap
               onMouseDown={(
-                handleLeftIconPress
-                  ? (event: TIconMouseEvent) => handleLeftIconPress(innerInput, event)
+                handleRightIconPress
+                  ? (event: TIconMouseEvent) => handleRightIconPress(innerInput, event)
                   : onIconPress
               )}
               disabled={disabled}
-              left
+              right
             >
-              {leftIconsArray}
+              {rightIconsArray}
             </IconWrap>
           ) : null
         }
-      {
-        // @ts-ignore TODO: fix this
-        renderInputElement(normalizedProps, handleFocus, handleBlur, innerInput)
-      }
-      {
-        rightIcon ? (
-          <IconWrap
-            onMouseDown={(
-              handleRightIconPress
-                ? (event: TIconMouseEvent) => handleRightIconPress(innerInput, event)
-                : onIconPress
-            )}
-            disabled={disabled}
-            right
-          >
-            {rightIconsArray}
-          </IconWrap>
-        ) : null
-      }
-      { error && !isActive && (
-        <Error>
-          { error }
-        </Error>
-      )}
-    </InputWrapper>
+      </InputWrapper>
+      <InputHint error={isShowError} disabled={disabled}>
+        { getHintText() }
+      </InputHint>
+    </div>
   )
 }
 

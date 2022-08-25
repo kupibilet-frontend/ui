@@ -47,6 +47,7 @@ const ErrorInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
 ErrorInput.args = {
   ...DEFAULT_INPUT_PROPS,
   error: 'Error! Fix the value in input',
+  helperText: 'Helper text here',
 }
 
 // ----------------------------------------------

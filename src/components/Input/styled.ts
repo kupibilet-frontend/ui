@@ -4,16 +4,28 @@ import { switchTransition } from 'utils/transitions'
 import { IconSvg } from 'components/Icon/styled'
 import { TNeighboringInGroup } from './types'
 
-const Error = styled.span`
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
+type TInputHintProps = {
+  error: boolean,
+  disabled?: boolean,
+  theme: DefaultTheme,
+}
+
+function getInputHintColor({ error, theme, disabled }: TInputHintProps) {
+  if (disabled) return theme.input.input_hint_default_medium_color_input_hint_disable
+  if (error) return theme.input.input_hint_default_medium_color_input_hint_error
+
+  return theme.input.input_hint_default_medium_color_input_hint_normal
+}
+
+const InputHint = styled.div<TInputHintProps>`
   display: flex;
   align-items: center;
   font-size: ${({ theme }) => theme.input.input_hint_default_medium_typography_desktop_input_hint.size}px;
   line-height: ${({ theme }) => theme.input.input_hint_default_medium_typography_desktop_input_hint.lineHeight}px;
-  color: ${({ theme }) => theme.input.input_hint_default_medium_color_input_hint_error};
+  color: ${(props) => getInputHintColor(props)};
   z-index: 2;
+  min-height: ${({ theme }) => theme.input.input_hint_default_medium_typography_desktop_input_hint.lineHeight}px;
+  margin-top: 4px;
 `
 
 interface TCommonInnerInputProps<T> {
@@ -123,9 +135,9 @@ type TGetInputBorderColor = {
 function getInputBorderColor(props: TGetInputBorderColor) {
   const { error, active, theme, disabled, isHover } = props
 
+  if (disabled) return theme.input.input_default_medium_color_border_disable
   if (active) return theme.input.input_default_medium_color_border_active
   if (error) return theme.input.input_default_medium_color_border_error
-  if (disabled) return theme.input.input_default_medium_color_border_disable
   if (isHover) return theme.input.input_default_medium_color_border_hover
 
   return theme.input.input_default_medium_color_border_normal
@@ -234,7 +246,7 @@ const IconWrap = styled.div<TIconWrapProps>`
 `
 
 export {
-  Error,
+  InputHint,
   InnerInput,
   InputWrapper,
   IconWrap,
