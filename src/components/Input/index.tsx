@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { WrappedFieldProps } from 'redux-form'
-import { TNeighboringInGroup } from './types'
+import { TInputProps, TNormalizedProps, TIconMouseEvent, TInputSize } from './types'
 
 import {
   InputHint,
@@ -10,45 +10,10 @@ import {
   InnerTextarea,
 } from './styled'
 
-
-type TIconMouseEvent = React.MouseEvent<Element, MouseEvent>
-
-type TIconPressHandlerProp = ((
-  element: HTMLElement | React.RefObject<HTMLElement>,
-  event: TIconMouseEvent
-) => void) | null
-
-export interface TProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> {
-  onChange?: (event: React.ChangeEvent<THTMLElement>) => void,
-  value?: string,
-  name?: string,
-  type?: string,
-  active?: boolean,
-  error?: React.ReactNode,
-  disabled?: boolean,
-  placeholder?: string,
-  neighboringInGroup?: TNeighboringInGroup,
-  onBlur?: (event: React.FocusEvent<THTMLElement>) => void,
-  onFocus?: (event: React.FocusEvent<THTMLElement>) => void,
-  leftIcon?: React.ReactNode,
-  rightIcon?: React.ReactNode,
-  handleLeftIconPress?: TIconPressHandlerProp,
-  handleRightIconPress?: TIconPressHandlerProp,
-  innerRef?: React.RefObject<THTMLElement> | null,
-  children?: React.ReactElement[] | null,
-  isTextarea?: boolean,
-  rows?: number,
-  autoComplete?: 'no' | null,
-  className?: string | null,
-  readOnly?: boolean,
-  'data-test'?: string | null,
-  helperText?: React.ReactNode,
-}
-
-type TNormalizedProps<T> = Required<TProps<T>>
+export const normalizeInputSize = (size?: TInputSize) => size || 'medium'
 
 // Since defaultProps don't work in TypeScript properly, we need to use this helper
-function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
+function normalizeProps<T>(props: TInputProps<T>): TNormalizedProps<T> {
   return {
     onChange: props.onChange || (() => null),
     value: props.value || '',
@@ -74,6 +39,7 @@ function normalizeProps<T>(props: TProps<T>): TNormalizedProps<T> {
     readOnly: props.readOnly ?? false,
     'data-test': props['data-test'] || null,
     helperText: props.helperText || '',
+    size: normalizeInputSize(props.size),
   }
 }
 
@@ -89,6 +55,7 @@ function renderInputElement<T>(
     leftIcon,
     rightIcon,
     isTextarea,
+    size,
     ...props
   } = normalizedProps
 
@@ -105,6 +72,7 @@ function renderInputElement<T>(
         leftIcon={leftIcon}
         rightIcon={rightIcon}
         as="textarea"
+        inputSize={size}
       />
     )
   }
@@ -120,12 +88,13 @@ function renderInputElement<T>(
       ref={innerInput}
       leftIcon={leftIcon}
       rightIcon={rightIcon}
+      inputSize={size}
     />
   )
 }
 
 
-function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
+function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element {
   const normalizedProps = normalizeProps(props)
   const {
     active: reduxFormFieldActive,
@@ -140,6 +109,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
     onBlur,
     innerRef,
     helperText,
+    size,
   } = normalizedProps
   const [isFocused, setIsFocused] = useState(false)
 
@@ -192,10 +162,12 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
         disabled={disabled}
         error={Boolean(error)}
         neighboringInGroup={neighboringInGroup}
+        size={size}
       >
         {
             leftIcon ? (
               <IconWrap
+                size={size}
                 onMouseDown={(
                   handleLeftIconPress
                     ? (event: TIconMouseEvent) => handleLeftIconPress(innerInput, event)
@@ -215,6 +187,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
         {
           rightIcon ? (
             <IconWrap
+              size={size}
               onMouseDown={(
                 handleRightIconPress
                   ? (event: TIconMouseEvent) => handleRightIconPress(innerInput, event)
@@ -235,7 +208,7 @@ function InputControl<T extends HTMLElement>(props: TProps<T>): JSX.Element {
   )
 }
 
-export type TRFInputProps = WrappedFieldProps & TProps
+export type TRFInputProps = WrappedFieldProps & TInputProps
 
 // ReduxForm wrapper for Input
 const RFInput = ({ input, meta, ...props }: TRFInputProps): JSX.Element => (

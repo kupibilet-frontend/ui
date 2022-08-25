@@ -2,9 +2,10 @@ import React from 'react'
 import { Story } from '@storybook/react'
 import { useArgs } from '@storybook/client-api'
 import Icon from 'components/Icon'
-import { Input, TProps } from 'components/Input'
+import { Input } from 'components/Input'
+import { TInputProps } from 'components/Input/types'
 
-function InputTemplate<T extends HTMLInputElement | HTMLTextAreaElement>(args: TProps<T>) {
+function InputTemplate<T extends HTMLInputElement | HTMLTextAreaElement>(args: TInputProps<T>) {
   const [{ value }, updateArgs] = useArgs()
 
   function onValueChange(event: React.ChangeEvent<T>): void {
@@ -20,13 +21,13 @@ function InputTemplate<T extends HTMLInputElement | HTMLTextAreaElement>(args: T
   )
 }
 
-const DEFAULT_INPUT_PROPS: TProps<HTMLInputElement> = {
+const DEFAULT_INPUT_PROPS: TInputProps<HTMLInputElement> = {
   type: 'text',
   name: 'input',
   placeholder: 'Только прямые рейсы',
 }
 
-const DEFAULT_TEXTAREA_PROPS: TProps<HTMLTextAreaElement> = {
+const DEFAULT_TEXTAREA_PROPS: TInputProps<HTMLTextAreaElement> = {
   type: 'text',
   name: 'input',
   placeholder: 'Только прямые рейсы',
@@ -35,14 +36,14 @@ const DEFAULT_TEXTAREA_PROPS: TProps<HTMLTextAreaElement> = {
 // ----------------------------------------------
 // Default Input
 // ----------------------------------------------
-const DefaultInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const DefaultInput: Story<TInputProps<HTMLInputElement>> = InputTemplate.bind({})
 
 DefaultInput.args = DEFAULT_INPUT_PROPS
 
 // ----------------------------------------------
 // Error Input
 // ----------------------------------------------
-const ErrorInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const ErrorInput: Story<TInputProps<HTMLInputElement>> = InputTemplate.bind({})
 
 ErrorInput.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -53,7 +54,7 @@ ErrorInput.args = {
 // ----------------------------------------------
 // Disabled Input
 // ----------------------------------------------
-const DisabledInput: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const DisabledInput: Story<TInputProps<HTMLInputElement>> = InputTemplate.bind({})
 
 DisabledInput.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -63,7 +64,7 @@ DisabledInput.args = {
 // ----------------------------------------------
 // Input with Icons
 // ----------------------------------------------
-const InputWithIcons: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const InputWithIcons: Story<TInputProps<HTMLInputElement>> = InputTemplate.bind({})
 
 InputWithIcons.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -74,7 +75,7 @@ InputWithIcons.args = {
 // ----------------------------------------------
 // Input with Icons group
 // ----------------------------------------------
-const InputWithIconsGroup: Story<TProps<HTMLInputElement>> = InputTemplate.bind({})
+const InputWithIconsGroup: Story<TInputProps<HTMLInputElement>> = InputTemplate.bind({})
 
 InputWithIconsGroup.args = {
   ...DEFAULT_INPUT_PROPS,
@@ -87,7 +88,7 @@ InputWithIconsGroup.args = {
 // ----------------------------------------------
 // Input as Textarea
 // ----------------------------------------------
-const InputAsTextarea: Story<TProps<HTMLTextAreaElement>> = InputTemplate.bind({})
+const InputAsTextarea: Story<TInputProps<HTMLTextAreaElement>> = InputTemplate.bind({})
 
 InputAsTextarea.args = {
   ...DEFAULT_TEXTAREA_PROPS,
