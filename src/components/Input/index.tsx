@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { WrappedFieldProps } from 'redux-form'
+import { FormHelperText } from 'components/FormHelperText'
 import { TInputProps, TNormalizedProps, TIconMouseEvent, TInputSize } from './types'
 
 import {
-  InputHint,
   InnerInput,
   InputWrapper,
   IconWrap,
@@ -147,13 +147,8 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
   const leftIconsArray = React.Children.toArray(leftIcon)
   const rightIconsArray = React.Children.toArray(rightIcon)
 
-  const isShowError = Boolean(error)
-  const isShowInputHint = isShowError || helperText
-
-  const getHintText = () => {
-    if (isShowError) return error
-    if (helperText) return helperText
-    return ''
+  const getError = () => {
+    return isActive ? '' : error
   }
 
   return (
@@ -161,7 +156,7 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
       <InputWrapper
         active={isActive}
         disabled={disabled}
-        error={Boolean(error)}
+        error={Boolean(getError())}
         neighboringInGroup={neighboringInGroup}
         size={size}
       >
@@ -202,13 +197,11 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
           ) : null
         }
       </InputWrapper>
-      {
-        isShowInputHint && (
-          <InputHint error={isShowError} disabled={disabled}>
-            { getHintText() }
-          </InputHint>
-        )
-      }
+      <FormHelperText
+        error={getError()}
+        helperText={helperText}
+        disabled={disabled}
+      />
     </div>
   )
 }

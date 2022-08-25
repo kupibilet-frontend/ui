@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { InputHint } from 'components/Input/styled'
+import { FormHelperText } from 'components/FormHelperText'
 import { TogglerWrapper, ItemsWrapper } from './styled'
 
 type TProps = {
@@ -48,17 +48,13 @@ const TogglerGroup = ({
 }: TProps): JSX.Element => {
   const [isFocused, setFocus] = React.useState(false)
 
-  const isShowError = Boolean(errorMessage) && !isFocused
-
-  const getHintText = () => {
-    if (isShowError) return errorMessage
-    if (helperText) return helperText
-    return ''
+  const getError = () => {
+    return isFocused ? '' : errorMessage
   }
 
   return (
     <TogglerWrapper {...props}>
-      <ItemsWrapper hasError={Boolean(errorMessage)}>
+      <ItemsWrapper hasError={Boolean(getError())}>
         {React.Children.toArray(children).map((element, index: number, array) => {
           let hasDelimiter = true
           if ((element as ReactElement).props?.value === currentValue) {
@@ -83,9 +79,7 @@ const TogglerGroup = ({
           })
         })}
       </ItemsWrapper>
-      <InputHint error={isShowError}>
-        {getHintText()}
-      </InputHint>
+      <FormHelperText error={getError()} helperText={helperText} />
     </TogglerWrapper>
   )
 }
