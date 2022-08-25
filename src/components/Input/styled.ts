@@ -24,7 +24,6 @@ const InputHint = styled.div<TInputHintProps>`
   line-height: ${({ theme }) => theme.input.input_hint_default_medium_typography_desktop_input_hint.lineHeight}px;
   color: ${(props) => getInputHintColor(props)};
   z-index: 2;
-  min-height: ${({ theme }) => theme.input.input_hint_default_medium_typography_desktop_input_hint.lineHeight}px;
   margin-top: 4px;
 `
 

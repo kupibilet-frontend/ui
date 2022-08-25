@@ -147,7 +147,8 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
   const leftIconsArray = React.Children.toArray(leftIcon)
   const rightIconsArray = React.Children.toArray(rightIcon)
 
-  const isShowError = Boolean(error) && !isActive
+  const isShowError = Boolean(error)
+  const isShowInputHint = isShowError || helperText
 
   const getHintText = () => {
     if (isShowError) return error
@@ -201,9 +202,13 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
           ) : null
         }
       </InputWrapper>
-      <InputHint error={isShowError} disabled={disabled}>
-        { getHintText() }
-      </InputHint>
+      {
+        isShowInputHint && (
+          <InputHint error={isShowError} disabled={disabled}>
+            { getHintText() }
+          </InputHint>
+        )
+      }
     </div>
   )
 }
