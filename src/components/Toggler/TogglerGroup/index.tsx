@@ -46,15 +46,9 @@ const TogglerGroup = ({
   helperText = '',
   ...props
 }: TProps): JSX.Element => {
-  const [isFocused, setFocus] = React.useState(false)
-
-  const getError = () => {
-    return isFocused ? '' : errorMessage
-  }
-
   return (
     <TogglerWrapper {...props}>
-      <ItemsWrapper hasError={Boolean(getError())}>
+      <ItemsWrapper hasError={Boolean(errorMessage)}>
         {React.Children.toArray(children).map((element, index: number, array) => {
           let hasDelimiter = true
           if ((element as ReactElement).props?.value === currentValue) {
@@ -73,13 +67,12 @@ const TogglerGroup = ({
             currentValue,
             errorMessage,
             name,
-            setFocus,
             hasDelimiter,
             ...props,
           })
         })}
       </ItemsWrapper>
-      <FormHelperText error={getError()} helperText={helperText} />
+      <FormHelperText error={errorMessage} helperText={helperText} />
     </TogglerWrapper>
   )
 }

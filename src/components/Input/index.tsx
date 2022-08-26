@@ -147,16 +147,12 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
   const leftIconsArray = React.Children.toArray(leftIcon)
   const rightIconsArray = React.Children.toArray(rightIcon)
 
-  const getError = () => {
-    return isActive ? '' : error
-  }
-
   return (
     <div>
       <InputWrapper
         active={isActive}
         disabled={disabled}
-        error={Boolean(getError())}
+        error={Boolean(error)}
         neighboringInGroup={neighboringInGroup}
         size={size}
       >
@@ -198,7 +194,7 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
         }
       </InputWrapper>
       <FormHelperText
-        error={getError()}
+        error={error}
         helperText={helperText}
         disabled={disabled}
       />
