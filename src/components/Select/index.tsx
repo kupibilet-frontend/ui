@@ -13,6 +13,7 @@ import Suggestion from 'components/Suggestion'
 import { shadowElevate } from 'utils/shadows'
 import { borderRadiusMedium } from 'utils/borderRadius'
 import noop from 'lodash/noop'
+import { DEFAULT_INPUT_HEIGHT } from 'components/Input/styled'
 
 export const StyledContainer = styled.div`
   margin: 3px 0 0;
@@ -20,17 +21,12 @@ export const StyledContainer = styled.div`
   width: 100%;
   padding: 3px 0;
   position: absolute;
-  top: 100%;
+  top: ${DEFAULT_INPUT_HEIGHT}px;
   ${shadowElevate}
   ${borderRadiusMedium.all}
   overflow: hidden;
   z-index: 10;
   background: ${({ theme }) => theme.color.background};
-
-  ${mq.mobile`
-    top: initial;
-  `}
-
 `
 
 const SectionHeader = styled.div`

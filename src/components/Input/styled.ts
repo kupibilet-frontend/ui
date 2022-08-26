@@ -24,6 +24,8 @@ type TGetInputBorderRadius = {
   size: TInputSize,
 }
 
+const DEFAULT_INPUT_HEIGHT = 40
+
 function getInputBorderRadius({ neighboringInGroup, theme, size }: TGetInputBorderRadius) {
   const radius = theme.input[`input_default_${size}_size_border_radius_default`]
 
@@ -241,4 +243,5 @@ export {
   InputWrapper,
   IconWrap,
   InnerTextarea,
+  DEFAULT_INPUT_HEIGHT,
 }
