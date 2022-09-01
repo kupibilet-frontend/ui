@@ -9,8 +9,8 @@ type TProps = {
 }
 
 export const FormHelperText = ({
-  error = '',
-  helperText = '',
+  error,
+  helperText,
   disabled,
 }: TProps) => {
   if (!error && !helperText) return null
