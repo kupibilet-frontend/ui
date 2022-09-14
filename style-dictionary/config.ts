@@ -219,3 +219,27 @@ StyleDictionary.extend({
     },
   },
 }).buildAllPlatforms()
+
+
+StyleDictionary.registerFilter({
+  name: 'isSwitcher',
+  matcher: (prop) => prop.attributes.category === 'switcher',
+})
+
+StyleDictionary.extend({
+  source: [
+    source.common,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/switcher.ts`,
+          format: 'javascript/es6',
+          filter: 'isSwitcher',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()

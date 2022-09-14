@@ -13,6 +13,8 @@ import * as seatTokenDark from './tokens/dark/seat'
 import * as tagTokenLight from './tokens/light/tag'
 import * as tagTokenDark from './tokens/dark/tag'
 
+import * as switchTokens from './tokens/switcher'
+
 export const font = `
   font: 400 16px / 20px 'KB Suisse Intl';
   -moz-osx-font-smoothing: grayscale;
@@ -27,6 +29,7 @@ const lightTheme: DefaultTheme = {
   button: buttonTokensLight,
   seat: seatTokenLight,
   tag: tagTokenLight,
+  switch: switchTokens,
 }
 
 const darkTheme: DefaultTheme = {
@@ -35,6 +38,7 @@ const darkTheme: DefaultTheme = {
   button: buttonTokensDark,
   seat: seatTokenDark,
   tag: tagTokenDark,
+  switch: switchTokens,
 }
 
 export { lightTheme, darkTheme }
