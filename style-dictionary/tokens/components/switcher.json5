@@ -11,7 +11,7 @@
                             "value": "{color.bg.dark.normal.value}"
                         },
                         "active": {
-                            "value": "{color.bg.dark.normal.value}"
+                            "value": "{color.bg.accent.active.value}"
                         },
                         "disable": {
                             "value": "{color.bg.primary.disable.value}"
@@ -19,16 +19,16 @@
                     },
                     "border":{
                         "normal": {
-                            "value": "{color.border.transparent.normal.value}"
+                            "value": "{color.bg.dark.normal.value}"
                         },
                         "hover": {
                             "value": "{color.border.primary.hover.value}"
                         },
                         "active": {
-                            "value": "{color.border.transparent.normal.value}"
+                            "value": "{color.bg.accent.active.value}"
                         },
                         "disable": {
-                            "value": "{color.border.transparent.normal.value}"
+                            "value": "{color.bg.primary.disable.value}"
                         }
                     },
                     "switcherIcon":{
