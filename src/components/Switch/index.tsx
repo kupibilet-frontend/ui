@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const WIDTH = 32
 const HEIGHT = 20
 const BUTTON_SIZE = 20
+const SHIFT = WIDTH - BUTTON_SIZE
 
 const InnerInput = styled.input`
   position: relative;
@@ -21,13 +22,12 @@ const InnerInput = styled.input`
     position: absolute;
     top: 0;
     left: 0;
-    /* margin: 2px; */
     width: ${BUTTON_SIZE}px;
     height: ${BUTTON_SIZE}px;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 150ms ease, background-color 150ms ease;
-    transform: translateX(${({ checked }) => (checked ? '12px' : 0)});
+    transform: translateX(${({ checked }) => (checked ? `${SHIFT}px` : 0)});
 
     background-color: ${({ theme }) => theme.switch.switcher_default_medium_color_switcher_icon_normal};
     border: 2px solid ${({ theme }) => theme.switch.switcher_default_medium_color_bg_normal};
@@ -55,7 +55,6 @@ const InnerInput = styled.input`
     background-color: ${({ theme }) => theme.switch.switcher_default_medium_color_bg_active};
 
     &::after {
-      transform: translateX('12px');
       background-color: ${({ theme }) => theme.switch.switcher_default_medium_color_switcher_icon_active};
       border: 2px solid ${({ theme }) => theme.switch.switcher_default_medium_color_border_active};
     }
