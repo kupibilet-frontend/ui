@@ -238,10 +238,13 @@ const IconWrap = styled.div<TIconWrapProps>`
   }
 `
 
+const InputContainer = styled.div``
+
 export {
   InnerInput,
   InputWrapper,
   IconWrap,
   InnerTextarea,
   DEFAULT_INPUT_HEIGHT,
+  InputContainer,
 }

@@ -8,6 +8,7 @@ import {
   InputWrapper,
   IconWrap,
   InnerTextarea,
+  InputContainer,
 } from './styled'
 
 export const normalizeInputSize = (size?: TInputSize) => size || 'medium'
@@ -148,7 +149,7 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
   const rightIconsArray = React.Children.toArray(rightIcon)
 
   return (
-    <div>
+    <InputContainer>
       <InputWrapper
         active={isActive}
         disabled={disabled}
@@ -198,7 +199,7 @@ function InputControl<T extends HTMLElement>(props: TInputProps<T>): JSX.Element
         helperText={helperText}
         disabled={disabled}
       />
-    </div>
+    </InputContainer>
   )
 }
 
