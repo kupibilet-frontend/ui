@@ -1,0 +1,52 @@
+{
+    "switcher":{
+        "default":{
+            "medium":{
+                "color":{
+                    "bg": {
+                        "normal": {
+                            "value": "{color.bg.dark.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.bg.dark.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.bg.accent.active.value}"
+                        },
+                        "disable": {
+                            "value": "{color.bg.primary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal": {
+                            "value": "{color.bg.dark.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.border.primary.hover.value}"
+                        },
+                        "active": {
+                            "value": "{color.bg.accent.active.value}"
+                        },
+                        "disable": {
+                            "value": "{color.bg.primary.disable.value}"
+                        }
+                    },
+                    "switcherIcon":{
+                        "normal": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -96,6 +96,12 @@
                             "value": "{size.borderRadius.medium.default.value}"
                         }
                     },
+                    "height": {
+                        "default": {
+                            "value": "40"
+                        }
+                    },
+                    
                     "padding": {
                         "default": {
                             "value": {

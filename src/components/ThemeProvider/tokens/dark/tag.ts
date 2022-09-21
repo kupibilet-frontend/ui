@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 02 Aug 2022 15:21:26 GMT
+ * Generated on Wed, 21 Sep 2022 14:18:06 GMT
  */
 
 export const tag_label_normal_medium_color_bg_default = "#3a3a41";
@@ -15,8 +15,8 @@ export const tag_label_warning_medium_typography_mobile_default = {"fontFamily":
 export const tag_label_warning_medium_typography_desktop_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_warning_medium_size_border_radius_default = "4px";
 export const tag_label_warning_medium_size_padding_default = {"top":"4px","right":"8px","bottom":"4px","left":"8px","innerHorizontal":"4px"};
-export const tag_label_success_medium_color_bg_default = "#304f02";
-export const tag_label_success_medium_color_text_default = "#85bc0c";
+export const tag_label_success_medium_color_bg_default = "#0f381e";
+export const tag_label_success_medium_color_text_default = "#4af57a";
 export const tag_label_success_medium_typography_mobile_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_success_medium_typography_desktop_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_success_medium_size_border_radius_default = "4px";
@@ -33,8 +33,8 @@ export const tag_label_info_medium_typography_mobile_default = {"fontFamily":"Su
 export const tag_label_info_medium_typography_desktop_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_info_medium_size_border_radius_default = "4px";
 export const tag_label_info_medium_size_padding_default = {"top":"4px","right":"8px","bottom":"4px","left":"8px","innerHorizontal":"4px"};
-export const tag_label_primary_medium_color_bg_default = "#001b73";
-export const tag_label_primary_medium_color_text_default = "#0f99f5";
+export const tag_label_primary_medium_color_bg_default = "#0f381e";
+export const tag_label_primary_medium_color_text_default = "#4af57a";
 export const tag_label_primary_medium_typography_mobile_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_primary_medium_typography_desktop_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const tag_label_primary_medium_size_border_radius_default = "4px";

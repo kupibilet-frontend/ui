@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 02 Aug 2022 15:21:25 GMT
+ * Generated on Wed, 21 Sep 2022 14:18:05 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"SuisseIntl-SemiBold","size":"48","lineHeight":"64","fontWeight":"600"};
