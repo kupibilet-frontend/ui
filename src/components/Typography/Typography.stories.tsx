@@ -11,7 +11,6 @@ const TypographyPreview: Story = () => (
       flexDirection: 'column',
       width: '100vw',
       alignItems: 'center',
-      fontFamily: 'KB Suisse Intl',
       color: 'black',
     }}
   >
