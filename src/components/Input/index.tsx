@@ -38,7 +38,7 @@ function normalizeProps<T>(props: TInputProps<T>): TNormalizedProps<T> {
     autoComplete: props.autoComplete || null,
     className: props.className || null,
     readOnly: props.readOnly ?? false,
-    'data-test': props['data-test'] || null,
+    'data-testid': props['data-testid'] || null,
     helperText: props.helperText || '',
     size: normalizeInputSize(props.size),
   }
