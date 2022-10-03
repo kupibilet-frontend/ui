@@ -2,6 +2,10 @@ import 'styled-components'
 import { TColor } from './types'
 import * as buttonTokensLight from './tokens/light/button'
 import * as buttonTokensDark from './tokens/dark/button'
+
+import * as inputTokensLight from './tokens/light/input'
+import * as inputTokensDark from './tokens/dark/input'
+
 import * as typographyTokens from './tokens/typography'
 
 import * as seatTokenLight from './tokens/light/seat'
@@ -16,6 +20,7 @@ declare module 'styled-components' {
       color: TColor,
       typography: typeof typographyTokens,
       button: typeof buttonTokensLight | typeof buttonTokensDark,
+      input: typeof inputTokensLight | typeof inputTokensDark,
       seat: typeof seatTokenLight | typeof seatTokenDark,
       tag: typeof tagTokenLight | typeof tagTokenDark,
       queries: Record<string, string>
