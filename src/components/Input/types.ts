@@ -32,7 +32,7 @@ export type TInputProps<THTMLElement = HTMLInputElement | HTMLTextAreaElement> =
   autoComplete?: 'no' | null,
   className?: string | null,
   readOnly?: boolean,
-  'data-test'?: string | null,
+  'data-testid'?: string | null,
   helperText?: React.ReactNode,
   size?: TInputSize,
 }
