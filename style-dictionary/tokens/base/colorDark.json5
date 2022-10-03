@@ -36,13 +36,13 @@
             },
             "accent":{
                 "normal": {
-                    "value":"rgba(15, 153, 245, 1)"
+                    "value":"rgba(49, 165, 91, 1)"
                 },
                 "hover": {
-                    "value":"rgba(0, 138, 230, 1)"
+                    "value":"rgba(52, 173, 96, 1)"
                 },
                 "active": {
-                    "value":"rgba(0, 122, 204, 1)"
+                    "value":"rgba(47, 157, 87, 1)"
                 },
                 "disable":{
                     "value":"rgba(58, 58, 65, 1)"
@@ -89,13 +89,13 @@
             },
             "statusPrimary": {
                 "normal":{
-                    "value":"rgba(0, 27, 115, 1)"
+                    "value":"rgba(15, 56, 30, 1)"
                 },
                 "hover":{
-                    "value":"rgba(0, 24, 102, 1)"
+                    "value":"rgba(13, 48, 26, 1)"
                 },
                 "active":{
-                    "value":"rgba(0, 21, 92, 1)"
+                    "value":"rgba(11, 40, 22, 1)"
                 }
             },
             "statusInfo": {
@@ -144,24 +144,24 @@
             },
             "statusSuccess": {
                 "normal":{
-                    "value": "rgba(48, 79, 2, 1)"
+                    "value": "rgba(15, 56, 30, 1)"
                 },
                 "hover":{
-                    "value":"rgba(42, 69, 2, 1)"
+                    "value":"rgba(13, 48, 26, 1)"
                 },
                 "active":{
-                    "value":"rgba(36, 59, 2, 1)"
+                    "value":"rgba(11, 40, 22, 1)"
                 }
             },
             "bonusDefault": {
                 "normal":{
-                    "value": "rgba(15, 153, 245, 1)"
+                    "value": "rgba(55, 184, 102, 1)"
                 },
                 "hover":{
-                    "value":"rgba(0, 138, 230, 1)"
+                    "value":"rgba(52, 173, 96, 1)"
                 },
                 "active":{
-                    "value":"rgba(0, 122, 204, 1)"
+                    "value":"rgba(47, 157, 87, 1)"
                 },
                 "disable":{
                     "value":"rgba(238, 239, 242, 1)"
@@ -228,13 +228,13 @@
             },
             "accent": {
                 "default": {
-                    "value": "rgba(15, 153, 245, 1)"
+                    "value": "rgba(74, 245, 122, 1)"
                 },
                 "hover": {
-                    "value": "rgba(0, 138, 230, 1)"
+                    "value": "rgba(13, 242, 77, 1)"
                 },
                 "active": {
-                    "value": "rgba(0, 122, 204, 1)"
+                    "value": "rgba(11, 213, 68, 1)"
                 },
                 "disable": {
                     "value": "rgba(81, 82, 90, 1)"
@@ -242,7 +242,7 @@
             },
             "success": {
                 "default": {
-                    "value": "rgba(133, 188, 12, 1)"
+                    "value": "rgba(74, 245, 122, 1)"
                 }
             },
             "info": {
@@ -297,26 +297,26 @@
                     "value": "rgba(81, 82, 90, 1)"
                 },
                 "hover":{
-                    "value": "rgba(0, 138, 230, 1)"
+                    "value": "rgba(52, 173, 96, 1)"
                 },
                 "active":{
-                    "value": "rgba(0, 122, 204, 1)"
+                    "value": "rgba(47, 157, 87, 1)"
                 }
             },
             "accent":{
                 "normal":{
-                    "value": "rgba(15, 153, 245, 1)"
+                    "value": "rgba(49, 165, 91, 1)"
                 },
                 "hover":{
-                    "value": "rgba(0, 138, 230, 1)"
+                    "value": "rgba(52, 173, 96, 1)"
                 },
                 "active":{
-                    "value": "rgba(0, 122, 204, 1)"
+                    "value": "rgba(47, 157, 87, 1)"
                 }
             },
             "success":{
                 "normal":{
-                    "value": "rgba(133, 188, 12, 1)"
+                    "value": "rgba(74, 245, 122, 1)"
                 }
             },
             "danger":{

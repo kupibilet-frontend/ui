@@ -1,0 +1,52 @@
+{
+    "checkBox":{
+        "default":{
+            "medium":{
+                "color":{
+                    "bg": {
+                        "normal": {
+                            "value": "{color.bg.primary.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.bg.primary.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.bg.accent.active.value}"
+                        },
+                        "disable": {
+                            "value": "{color.bg.primary.disable.value}"
+                        }
+                    },
+                    "border":{
+                        "normal": {
+                            "value": "{color.border.primary.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.border.primary.hover.value}"
+                        },
+                        "active": {
+                            "value": "{color.border.transparent.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.border.transparent.normal.value}"
+                        }
+                    },
+                    "checkBoxIcon":{
+                        "normal": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
