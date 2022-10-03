@@ -3,13 +3,10 @@ import styled, { css } from 'styled-components'
 import { shadowElevate } from 'utils/shadows'
 import { borderRadiusMedium } from 'utils/borderRadius'
 import mq from 'utils/media-queries'
+import { DEFAULT_INPUT_HEIGHT } from 'components/Input/styled'
 
 export default css`
   position: relative;
-
-  ${mq.mobile`
-    position: static;
-  `}
 
   .react-autosuggest__container {}
   .react-autosuggest__container--open {}
@@ -49,7 +46,7 @@ export const SuggestionsContainer = styled.div`
   margin: 3px 0 0;
   padding: 3px 0;
   position: absolute;
-  top: 100%;
+  top: ${DEFAULT_INPUT_HEIGHT}px;
   width: 300px;
   ${shadowElevate}
   ${borderRadiusMedium.all}
@@ -61,8 +58,6 @@ export const SuggestionsContainer = styled.div`
 
   ${mq.mobile`
     padding: 0;
-    top: initial;
-    margin: 12px auto 0;
     box-shadow: none;
     width: 100%;
   `}
