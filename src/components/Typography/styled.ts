@@ -15,6 +15,7 @@ export const StyledTypography = styled.span<TStyledTypography>`
   font-size: ${({ theme, tokenName }) => theme.typography[tokenName].size}px;
   font-weight: ${({ theme, tokenName }) => theme.typography[tokenName].fontWeight};
   line-height: ${({ theme, tokenName }) => theme.typography[tokenName].lineHeight}px;
+  font-family: ${({ theme, tokenName }) => theme.typography[tokenName].fontFamily};
   text-decoration: none;
   text-decoration-skip-ink: none;
   margin: 0;
@@ -23,5 +24,6 @@ export const StyledTypography = styled.span<TStyledTypography>`
     font-size: ${({ theme, mobileTokenName }) => theme.typography[mobileTokenName].size}px;
     font-weight: ${({ theme, mobileTokenName }) => theme.typography[mobileTokenName].fontWeight};
     line-height: ${({ theme, mobileTokenName }) => theme.typography[mobileTokenName].lineHeight}px;
+    font-family: ${({ theme, mobileTokenName }) => theme.typography[mobileTokenName].fontFamily};
   }
 `
