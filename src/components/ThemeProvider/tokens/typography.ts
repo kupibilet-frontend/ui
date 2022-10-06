@@ -1,14 +1,14 @@
 /**
  * Do not edit directly
- * Generated on Thu, 29 Sep 2022 10:14:14 GMT
+ * Generated on Fri, 30 Sep 2022 12:31:58 GMT
  */
 
-export const typography_desktop_headline_hero_default = {"fontFamily":"SuisseIntl-SemiBold","size":"48","lineHeight":"64","fontWeight":"600"};
-export const typography_desktop_headline_h1_default = {"fontFamily":"SuisseIntl-SemiBold","size":"36","lineHeight":"48","fontWeight":"600"};
-export const typography_desktop_headline_h2_default = {"fontFamily":"SuisseIntl-SemiBold","size":"28","lineHeight":"40","fontWeight":"600"};
-export const typography_desktop_headline_h3_default = {"fontFamily":"SuisseIntl-SemiBold","size":"22","lineHeight":"32","fontWeight":"600"};
-export const typography_desktop_headline_h4_default = {"fontFamily":"SuisseIntl-SemiBold","size":"18","lineHeight":"28","fontWeight":"600"};
-export const typography_desktop_headline_h5_default = {"fontFamily":"SuisseIntl-SemiBold","size":"16","lineHeight":"24","fontWeight":"600"};
+export const typography_desktop_headline_hero_default = {"fontFamily":"Kupibilet_DemiBold","size":"48","lineHeight":"64","fontWeight":"600"};
+export const typography_desktop_headline_h1_default = {"fontFamily":"Kupibilet_DemiBold","size":"36","lineHeight":"48","fontWeight":"600"};
+export const typography_desktop_headline_h2_default = {"fontFamily":"Kupibilet_DemiBold","size":"28","lineHeight":"40","fontWeight":"600"};
+export const typography_desktop_headline_h3_default = {"fontFamily":"Kupibilet_DemiBold","size":"22","lineHeight":"32","fontWeight":"600"};
+export const typography_desktop_headline_h4_default = {"fontFamily":"Kupibilet_DemiBold","size":"18","lineHeight":"28","fontWeight":"600"};
+export const typography_desktop_headline_h5_default = {"fontFamily":"Kupibilet_DemiBold","size":"16","lineHeight":"24","fontWeight":"600"};
 export const typography_desktop_text_accent_normal = {"fontFamily":"SuisseIntl-Regular","size":"24","lineHeight":"36","fontWeight":"400"};
 export const typography_desktop_text_large_normal = {"fontFamily":"SuisseIntl-Regular","size":"18","lineHeight":"28","fontWeight":"400"};
 export const typography_desktop_text_large_bold = {"fontFamily":"SuisseIntl-Medium","size":"18","lineHeight":"28","fontWeight":"500"};
@@ -19,12 +19,12 @@ export const typography_desktop_text_small_bold = {"fontFamily":"SuisseIntl-Medi
 export const typography_desktop_text_caption_normal = {"fontFamily":"SuisseIntl-Regular","size":"12","lineHeight":"18","fontWeight":"400"};
 export const typography_desktop_text_caption_bold = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"500"};
 export const typography_desktop_text_description_normal = {"fontFamily":"SuisseIntl-Regular","size":"10","lineHeight":"16","fontWeight":"400"};
-export const typography_mobile_headline_hero_default = {"fontFamily":"SuisseIntl-SemiBold","size":"28","lineHeight":"36","fontWeight":"600"};
-export const typography_mobile_headline_h1_default = {"fontFamily":"SuisseIntl-SemiBold","size":"24","lineHeight":"32","fontWeight":"600"};
-export const typography_mobile_headline_h2_default = {"fontFamily":"SuisseIntl-SemiBold","size":"20","lineHeight":"26","fontWeight":"600"};
-export const typography_mobile_headline_h3_default = {"fontFamily":"SuisseIntl-SemiBold","size":"18","lineHeight":"24","fontWeight":"600"};
-export const typography_mobile_headline_h4_default = {"fontFamily":"SuisseIntl-SemiBold","size":"16","lineHeight":"24","fontWeight":"600"};
-export const typography_mobile_headline_h5_default = {"fontFamily":"SuisseIntl-SemiBold","size":"14","lineHeight":"20","fontWeight":"600"};
+export const typography_mobile_headline_hero_default = {"fontFamily":"Kupibilet_DemiBold","size":"28","lineHeight":"36","fontWeight":"600"};
+export const typography_mobile_headline_h1_default = {"fontFamily":"Kupibilet_DemiBold","size":"24","lineHeight":"32","fontWeight":"600"};
+export const typography_mobile_headline_h2_default = {"fontFamily":"Kupibilet_DemiBold","size":"20","lineHeight":"26","fontWeight":"600"};
+export const typography_mobile_headline_h3_default = {"fontFamily":"Kupibilet_DemiBold","size":"18","lineHeight":"24","fontWeight":"600"};
+export const typography_mobile_headline_h4_default = {"fontFamily":"Kupibilet_DemiBold","size":"16","lineHeight":"24","fontWeight":"600"};
+export const typography_mobile_headline_h5_default = {"fontFamily":"Kupibilet_DemiBold","size":"14","lineHeight":"20","fontWeight":"600"};
 export const typography_mobile_text_accent_normal = {"fontFamily":"SuisseIntl-Regular","size":"18","lineHeight":"26","fontWeight":"400"};
 export const typography_mobile_text_large_normal = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
 export const typography_mobile_text_large_bold = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
