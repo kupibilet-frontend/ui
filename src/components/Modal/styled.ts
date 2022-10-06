@@ -4,6 +4,8 @@ import { queries } from 'utils/media-queries'
 import Button from 'components/Button'
 import Icon from 'components/Icon'
 import { OVERLAY_Z_INDEX } from 'components/Overlay'
+import Typography from 'components/Typography'
+
 import { getWidth, isCompact, isSetSize } from './utils'
 import { ModalSize } from './types'
 
@@ -11,18 +13,8 @@ interface TProps {
   size: ModalSize,
 }
 
-export const H4 = styled.h4`
-  font-size: 18px;
-  line-height: 28px;
+export const H4 = styled(Typography)`
   margin: 0;
-  font-weight: 500;
-  
-  ${({ theme }) => css`
-    @media ${theme.queries.isMobile} {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  `}
 `
 
 export const ModalContent = styled.div<TProps>`
