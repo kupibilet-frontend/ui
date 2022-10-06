@@ -6,23 +6,14 @@ import Icon from 'components/Icon'
 import { OVERLAY_Z_INDEX } from 'components/Overlay2021'
 import { getWidth, isCompact, isSetSize } from 'components/Modal/utils'
 import { ModalSize } from 'components/Modal/types'
+import Typography from 'components/Typography'
 
 interface TProps {
   size: ModalSize,
 }
 
-export const H4 = styled.h4`
-  font-size: 18px;
-  line-height: 28px;
+export const ModalTitle = styled(Typography)`
   margin: 0;
-  font-weight: 500;
-  
-  ${({ theme }) => css`
-    @media ${theme.queries.isMobile} {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  `}
 `
 
 export const ModalContent = styled.div<TProps>`

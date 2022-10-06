@@ -16,7 +16,7 @@ import {
   CloseButton,
   SubmitButton,
   StyledIcon,
-  H4,
+  ModalTitle,
 } from './styled'
 
 export interface TProps extends TWithMediaProps {
@@ -47,7 +47,7 @@ export const Modal2021 = React.memo((props: TProps) => {
     size = 'wide',
     renderHeader = ({ heading: header, size: modalSize = 'wide' }: TProps) => (header ? (
       <Header size={modalSize}>
-        <H4>{header}</H4>
+        <ModalTitle variant="h4">{header}</ModalTitle>
       </Header>
     ) : null),
     closeOnOutsideClick = true,
