@@ -17,7 +17,7 @@ import * as tagTokenLight from './tokens/light/tag'
 import * as tagTokenDark from './tokens/dark/tag'
 
 export const font = `
-  font: 400 16px / 20px 'KB Suisse Intl';
+  font: 400 16px / 20px 'SuisseIntl-Regular';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 `
