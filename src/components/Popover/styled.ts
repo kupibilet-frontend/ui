@@ -11,7 +11,7 @@ interface TGetBackgroundImage {
 }
 
 const getBackgroundImage = ({ theme }: TGetBackgroundImage) => {
-  const iconSrc = getPopoverArrow(theme.color.colorTextContrastDefault)
+  const iconSrc = getPopoverArrow(theme.color.colorBgContrastNormal)
 
   if (iconSrc) {
     return `background-image: ${iconSrc}`
@@ -72,14 +72,17 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   animation: 0.15s ease-out forwards ${CONTAINER_ANIMATION_KEYFRAMES};
   flex-shrink: 0;
   flex-grow: 1;
-  min-width: 240px;
-  max-width: ${({ size }) => POPOVER_SIZES[size]};
   background: ${({ theme }) => theme.color.colorBgContrastNormal};
   color: ${({ theme }) => theme.color.colorTextContrastDefault};
   border-radius: 6px;
   padding: 12px;
   display: flex;
   flex-direction: column;
+
+  ${({ size, autoWidth }) => !autoWidth && css`
+    min-width: 240px;
+    max-width: ${POPOVER_SIZES[size]};
+  `}
 
   @media ${queries.isHandheld} {
     max-width: auto;

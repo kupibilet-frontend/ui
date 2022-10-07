@@ -22,6 +22,7 @@ function Popover(props: TPopoverProps): JSX.Element {
     size = 'normal',
     zIndex = OVERLAY_Z_INDEX - 1,
     className = '',
+    autoWidth = false,
   } = props
 
   const {
@@ -63,7 +64,7 @@ function Popover(props: TPopoverProps): JSX.Element {
               >
                 <PopoverIcon side={side} />
               </PopoverIconContainer>
-              <PopoverBackground size={size}>
+              <PopoverBackground size={size} autoWidth={autoWidth}>
                 {header && (
                   <Header>
                     <HeaderText>
