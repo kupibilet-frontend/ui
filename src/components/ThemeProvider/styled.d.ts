@@ -14,6 +14,8 @@ import * as seatTokenDark from './tokens/dark/seat'
 import * as tagTokenLight from './tokens/light/tag'
 import * as tagTokenDark from './tokens/dark/tag'
 
+import * as switchTokens from './tokens/switcher'
+
 declare module 'styled-components' {
   export interface DefaultTheme {
       font: string,
@@ -23,6 +25,7 @@ declare module 'styled-components' {
       input: typeof inputTokensLight | typeof inputTokensDark,
       seat: typeof seatTokenLight | typeof seatTokenDark,
       tag: typeof tagTokenLight | typeof tagTokenDark,
+      switch: typeof switchTokens,
       queries: Record<string, string>
   }
 }
