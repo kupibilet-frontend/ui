@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { Error } from 'components/Input/styled'
 import { borderRadiusMedium } from 'utils/borderRadius'
 
 export const TogglerWrapper = styled.div`
@@ -29,8 +28,4 @@ export const ItemsWrapper = styled.div<TItemsWrapperProps>`
     `}
     background: ${theme.color.colorBgSecondaryNormal};
   `}
-`
-
-export const StyledError = styled(Error)`
-  top: calc(100% + 1px);
 `

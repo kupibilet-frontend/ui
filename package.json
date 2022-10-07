@@ -1,6 +1,6 @@
 {
   "name": "@kupibilet/ui",
-  "version": "24.0.1",
+  "version": "24.3.0",
   "description": "UI kit for kupibilet web app",
   "publishConfig": {
     "kupibilet-dev:registry": "https://registry.npmjs.org"
@@ -89,9 +89,9 @@
     "polished": "^2.2.0",
     "prop-types": "^15.6.0",
     "raw-loader": "~0.5.1",
-    "react": "^16.5.0",
+    "react": "17.0.2",
     "react-addons-shallow-compare": "~15.6.2",
-    "react-dom": "^16.5.0",
+    "react-dom": "17.0.2",
     "react-onclickoutside": "^6.6.0",
     "react-redux": "^5.0.6",
     "react-test-renderer": "^16.0.0",
@@ -127,7 +127,6 @@
     "rc-slider": "^9.7.1",
     "rc-tabs": "^11.7.3",
     "react-autosuggest": "^10.0.0",
-    "react-hook-form": "^7.12.2",
     "react-popper": "^2.2.5",
     "react-portal": "^4.1.4",
     "react-responsive": "8.2.0",
@@ -143,9 +142,9 @@
     "moment": "^2.29.1",
     "polished": "^1.3.0",
     "prop-types": "^15.6.0",
-    "react": "^15.5.0 || ^16.3.0",
+    "react": "17.0.2",
     "react-addons-shallow-compare": "~15.5.2",
-    "react-dom": "^15.5.0 || ^16.3.0",
+    "react-dom": "17.0.2",
     "react-onclickoutside": "^6.4.0",
     "styled-components": "5.3.5"
   }

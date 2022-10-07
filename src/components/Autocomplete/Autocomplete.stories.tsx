@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Autocomplete, { TProps, TSuggestion, ReactAutosuggest, TSection } from 'components/Autocomplete'
 import Suggestion from 'components/Suggestion'
-import { Input, TProps as TPropsInput } from 'components/Input'
+import { Input } from 'components/Input'
+import { TInputProps } from 'components/Input/types'
 import { Story } from '@storybook/react'
 import groupBy from 'lodash/groupBy'
 import get from 'lodash/get'
@@ -127,7 +128,7 @@ AirportWithMultiplySections.args = {
 export const AutocompleteWithCustomInput = AutocompleteTemplate.bind({})
 AutocompleteWithCustomInput.args = {
   renderInputComponent: (props) => (
-    <Input leftIcon={<Icon name="man" fill="misc500" />} {...props as TPropsInput} />
+    <Input leftIcon={<Icon name="man" fill="misc500" />} {...props as TInputProps} />
   ),
 }
 

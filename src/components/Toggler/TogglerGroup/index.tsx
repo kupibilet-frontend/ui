@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
-import { TogglerWrapper, ItemsWrapper, StyledError } from './styled'
+import { FormHelperText } from 'components/FormHelperText'
+import { TogglerWrapper, ItemsWrapper } from './styled'
 
 type TProps = {
   /**
@@ -27,6 +28,8 @@ type TProps = {
   * Имя контрола
   */
   name?: string,
+
+  helperText?: React.ReactNode,
 }
 
 /**
@@ -40,10 +43,9 @@ const TogglerGroup = ({
   currentValue = '',
   errorMessage = '',
   name = '',
+  helperText = '',
   ...props
 }: TProps): JSX.Element => {
-  const [isFocused, setFocus] = React.useState(false)
-
   return (
     <TogglerWrapper {...props}>
       <ItemsWrapper hasError={Boolean(errorMessage)}>
@@ -65,17 +67,12 @@ const TogglerGroup = ({
             currentValue,
             errorMessage,
             name,
-            setFocus,
             hasDelimiter,
             ...props,
           })
         })}
       </ItemsWrapper>
-      {errorMessage && !isFocused && (
-        <StyledError>
-          {errorMessage}
-        </StyledError>
-      )}
+      <FormHelperText error={errorMessage} helperText={helperText} />
     </TogglerWrapper>
   )
 }

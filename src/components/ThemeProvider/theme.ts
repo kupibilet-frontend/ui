@@ -7,6 +7,9 @@ import * as typographyTokens from './tokens/typography'
 import * as buttonTokensLight from './tokens/light/button'
 import * as buttonTokensDark from './tokens/dark/button'
 
+import * as inputTokensLight from './tokens/light/input'
+import * as inputTokensDark from './tokens/dark/input'
+
 import * as seatTokenLight from './tokens/light/seat'
 import * as seatTokenDark from './tokens/dark/seat'
 
@@ -27,6 +30,7 @@ const lightTheme: DefaultTheme = {
   queries,
   color: colorsLight,
   button: buttonTokensLight,
+  input: inputTokensLight,
   seat: seatTokenLight,
   tag: tagTokenLight,
   switch: switchTokens,
@@ -36,6 +40,7 @@ const darkTheme: DefaultTheme = {
   ...lightTheme,
   color: colorsDark,
   button: buttonTokensDark,
+  input: inputTokensDark,
   seat: seatTokenDark,
   tag: tagTokenDark,
   switch: switchTokens,
