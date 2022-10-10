@@ -19,7 +19,7 @@ import * as tagTokenDark from './tokens/dark/tag'
 import * as switchTokens from './tokens/switcher'
 
 export const font = `
-  font: 400 16px / 20px 'SuisseIntl-Regular';
+  font: 400 16px / 20px 'KB Suisse Intl';
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 `
