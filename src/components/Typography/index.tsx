@@ -50,7 +50,7 @@ const calculateTokenVariant = (variant: TVariant): TVariantToken => {
   }
 }
 
-export interface TTypographyProps {
+export interface TTypographyProps extends Omit<React.HTMLProps<HTMLHtmlElement>, 'as'> {
   variant?: TVariant,
   color?: COLOR_NAMES,
   isBold?: boolean,
