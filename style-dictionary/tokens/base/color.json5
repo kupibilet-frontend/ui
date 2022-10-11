@@ -11,10 +11,10 @@
                     "value":"rgba(255, 255, 255, 1)"
                 },
                 "hover": {
-                    "value":"rgba(245, 255, 248, 1)"
+                    "value":"rgba(247, 247, 248, 1)"
                 },
                 "active": {
-                    "value":"rgba(240, 255, 245, 1)"
+                    "value":"rgba(247, 247, 248, 1)"
                 },
                 "disable":{
                     "value":"rgba(237, 238, 243, 1)"

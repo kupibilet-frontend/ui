@@ -1,12 +1,12 @@
 /**
  * Do not edit directly
- * Generated on Fri, 07 Oct 2022 12:54:31 GMT
+ * Generated on Tue, 11 Oct 2022 16:17:57 GMT
  */
 
 export const colorBgLayoutDefault = "#fafafb";
 export const colorBgPrimaryNormal = "#ffffff";
-export const colorBgPrimaryHover = "#f5fff8";
-export const colorBgPrimaryActive = "#f0fff5";
+export const colorBgPrimaryHover = "#f7f7f8";
+export const colorBgPrimaryActive = "#f7f7f8";
 export const colorBgPrimaryDisable = "#edeef3";
 export const colorBgSecondaryNormal = "#edeef3";
 export const colorBgSecondaryHover = "#e6e8ef";

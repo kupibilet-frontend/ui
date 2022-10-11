@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 07 Oct 2022 12:54:32 GMT
+ * Generated on Tue, 11 Oct 2022 16:17:58 GMT
  */
 
 export const switcher_default_medium_color_bg_normal = "#d0d1d7";
