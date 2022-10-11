@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import { borderRadiusLarge } from 'utils/borderRadius'
 import { queries } from 'utils/media-queries'
 
 export const OVERLAY_Z_INDEX = 10
@@ -30,6 +31,7 @@ const slide = keyframes`
 
 interface TProps {
   isOnBottom: boolean,
+  isNativeView?: boolean,
 }
 
 export const Wrapper = styled.div<TProps>`
@@ -55,6 +57,7 @@ export const Wrapper = styled.div<TProps>`
 
   @media ${queries.isMobile} {
     ${({ isOnBottom }) => (isOnBottom ? '' : 'background: white;')}
+    ${({ isNativeView }) => (isNativeView ? '' : 'background: white;')}
   }
 `
 
@@ -74,6 +77,14 @@ export const OverlayContentWrap = styled.div<TProps>`
   @media ${queries.isMobile} {
     height: 100%;
     ${({ isOnBottom }) => (isOnBottom ? '' : 'background: white;')}
+
+    ${({ isNativeView }) => isNativeView && `
+      position: fixed;
+      bottom: 0;
+      height: 95%;
+      overflow: auto;
+      ${borderRadiusLarge.top}
+    `}
   }
 
   &:before {
