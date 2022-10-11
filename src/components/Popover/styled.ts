@@ -125,4 +125,6 @@ export {
   PopoverIconContainer,
   PopoverIcon,
   TextCaption,
+  getBackgroundImage,
+  CONTAINER_ANIMATION_KEYFRAMES,
 }
