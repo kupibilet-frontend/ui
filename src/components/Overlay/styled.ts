@@ -56,8 +56,7 @@ export const Wrapper = styled.div<TProps>`
   }
 
   @media ${queries.isMobile} {
-    ${({ isOnBottom }) => (isOnBottom ? '' : 'background: white;')}
-    ${({ isNativeView }) => (isNativeView ? '' : 'background: white;')}
+    ${({ isOnBottom, isNativeView }) => (isOnBottom || isNativeView ? '' : 'background: white;')}
   }
 `
 
