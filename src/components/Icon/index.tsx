@@ -33,7 +33,7 @@ const Icon = ({
   paid = false,
   currency = 'RUB',
   fill = 'colorTextPrimaryNormal',
-  stroke = 'colorTextPrimaryNormal',
+  stroke,
   onClick,
   ...restProps
 }: TIconProps): JSX.Element => (
