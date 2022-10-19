@@ -75,7 +75,7 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   background: ${({ theme }) => theme.color.colorBgContrastNormal};
   color: ${({ theme }) => theme.color.colorTextContrastDefault};
   border-radius: 6px;
-  padding: 12px;
+  padding: ${({ header }) => (header ? '12px' : '8px')} 12px;
   display: flex;
   flex-direction: column;
 

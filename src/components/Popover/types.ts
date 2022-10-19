@@ -42,7 +42,9 @@ interface TPopoverIconProps {
   side: BasePlacement,
 }
 
-type TPopoverBackgroundProps = Pick<TPopoverWithDefaultsProps, 'size' | 'autoWidth'>
+type TPopoverBackgroundProps = Pick<TPopoverWithDefaultsProps, 'size' | 'autoWidth'> & {
+  header: TPopoverProps['header']
+}
 
 
 export {

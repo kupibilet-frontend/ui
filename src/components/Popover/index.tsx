@@ -64,7 +64,7 @@ function Popover(props: TPopoverProps): JSX.Element {
               >
                 <PopoverIcon side={side} />
               </PopoverIconContainer>
-              <PopoverBackground size={size} autoWidth={autoWidth}>
+              <PopoverBackground size={size} autoWidth={autoWidth} header={header}>
                 {header && (
                   <Header>
                     <HeaderText>
