@@ -33,3 +33,13 @@ export const SkeletonWithChildren = Template.bind({})
 SkeletonWithChildren.args = {
   children: <div style={{ width: '50px', height: '50px' }} />,
 }
+
+const TemplateWithContainer: ComponentStory<typeof Skeleton> = (args) => (
+  <div style={{ width: '500px', height: '30px', background: 'orange' }}>
+    <Skeleton {...args}>
+      {args.children}
+    </Skeleton>
+  </div>
+)
+
+export const SkeletonWithContainer = TemplateWithContainer.bind({})

@@ -11,7 +11,7 @@ const choiceOfWidth = ({ hasChildren, width }:StylesProps) => {
     return 'fit-content'
   }
 
-  return ''
+  return '100%'
 }
 
 const choiceOfHeight = ({ hasChildren, height }:StylesProps) => {
@@ -21,7 +21,7 @@ const choiceOfHeight = ({ hasChildren, height }:StylesProps) => {
     return 'auto'
   }
 
-  return ''
+  return '100%'
 }
 
 const skeletonAnimation = keyframes`
@@ -63,11 +63,11 @@ const StyledSkeleton = styled.div<StylesProps>`
 type SkeletonProps = {
   width?: number;
   height?: number;
-  variant: 'circular' | 'rounded'
+  variant?: 'circular' | 'rounded'
 }
 
 // eslint-disable-next-line react/prop-types
-export const Skeleton: React.FC<SkeletonProps> = ({ width, height, children, variant }) => {
+export const Skeleton: React.FC<SkeletonProps> = ({ width, height, children, variant = 'rounded' }) => {
   const hasChildren = Boolean(children)
 
   return (
