@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 18 Oct 2022 15:22:03 GMT
+ * Generated on Thu, 27 Oct 2022 11:02:20 GMT
  */
 
 export const airplane_seat_category_one_medium_color_bg_normal = "#212126";

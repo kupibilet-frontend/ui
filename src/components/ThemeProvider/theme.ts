@@ -18,6 +18,8 @@ import * as tagTokenDark from './tokens/dark/tag'
 
 import * as switchTokens from './tokens/switcher'
 
+import * as checkboxTokens from './tokens/checkbox'
+
 export const font = `
   font: 400 16px / 20px 'KB Suisse Intl';
   -moz-osx-font-smoothing: grayscale;
@@ -34,6 +36,7 @@ const lightTheme: DefaultTheme = {
   seat: seatTokenLight,
   tag: tagTokenLight,
   switch: switchTokens,
+  checkbox: checkboxTokens,
 }
 
 const darkTheme: DefaultTheme = {
@@ -44,6 +47,7 @@ const darkTheme: DefaultTheme = {
   seat: seatTokenDark,
   tag: tagTokenDark,
   switch: switchTokens,
+  checkbox: checkboxTokens,
 }
 
 export { lightTheme, darkTheme }

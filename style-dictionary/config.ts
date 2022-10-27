@@ -288,3 +288,26 @@ StyleDictionary.extend({
     },
   },
 }).buildAllPlatforms()
+
+StyleDictionary.registerFilter({
+  name: 'isCheckbox',
+  matcher: (prop) => prop.attributes.category === 'checkBox',
+})
+
+StyleDictionary.extend({
+  source: [
+    source.common,
+  ],
+  platforms: {
+    js: {
+      transforms: transforms.component,
+      files: [
+        {
+          destination: `${destinationRoot}/checkbox.ts`,
+          format: 'javascript/es6',
+          filter: 'isCheckbox',
+        },
+      ],
+    },
+  },
+}).buildAllPlatforms()
