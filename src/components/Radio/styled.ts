@@ -9,34 +9,34 @@ interface TStyledRadioProps {
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgAccentDisable
+  if (disabled && checked) return theme.radio.radio_button_default_medium_color_bg_disable
   if (checked) return theme.color.colorBgAccentNormal
-  if (disabled) return theme.color.colorBgAccentDisable
+  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
 
-  return theme.color.colorBorderPrimaryNormal
+  return theme.radio.radio_button_default_medium_color_border_normal
 }
 
 const getHoverBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled) return theme.color.colorBgAccentDisable
-  if (checked) return theme.color.colorBgAccentHover
+  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (checked) return theme.radio.radio_button_default_medium_color_border_hover
 
-  return theme.color.colorBorderPrimaryHover
+  return theme.radio.radio_button_default_medium_color_border_hover
 }
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgAccentDisable
+  if (disabled && checked) return theme.radio.radio_button_default_medium_color_bg_disable
   if (checked) return theme.color.colorBgAccentNormal
-  if (disabled) return theme.color.colorBgPrimaryDisable
+  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
 
-  return theme.color.colorBgPrimaryNormal
+  return theme.radio.radio_button_default_medium_color_bg_normal
 }
 
 const getHoverRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (!checked && disabled) return theme.color.colorBgPrimaryDisable
-  if (disabled) return theme.color.colorBgAccentDisable
-  if (checked) return theme.color.colorBgAccentHover
+  if (!checked && disabled) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (checked) return theme.radio.radio_button_default_medium_color_border_hover
 
-  return theme.color.colorBgPrimaryNormal
+  return theme.radio.radio_button_default_medium_color_bg_normal
 }
 
 export const RadioInput = styled.input`
@@ -64,7 +64,7 @@ export const StyledRadio = styled.div<TStyledRadioProps>`
     content: '';
     width: 8px;
     height: 8px;
-    background: ${({ theme }) => theme.color.background};
+    background: ${({ theme }) => theme.radio.radio_button_default_medium_color_radio_button_icon_normal};
     display: inline-flex;
     border-radius: 50%;
     opacity: ${({ checked }) => (checked ? 1 : 0)};

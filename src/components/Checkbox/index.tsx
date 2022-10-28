@@ -50,7 +50,7 @@ export const Checkbox = React.memo((props: TProps) => {
           <IconWrap checked={checked}>
             <Icon
               name="checkbox-check"
-              fill="background"
+              fill="colorBgPrimaryNormal"
               size={ICON_SIZES.xxsmall}
             />
           </IconWrap>

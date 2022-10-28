@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 27 Oct 2022 11:02:20 GMT
+ * Generated on Fri, 28 Oct 2022 09:56:23 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"Kupibilet_DemiBold","size":"48","lineHeight":"64","fontWeight":"600"};

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 27 Oct 2022 11:02:20 GMT
+ * Generated on Fri, 28 Oct 2022 09:56:23 GMT
  */
 
 export const button_composite_primary_small_color_bg_normal = "#37b866";

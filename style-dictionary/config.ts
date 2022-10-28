@@ -11,303 +11,116 @@ const source = {
   dark: './style-dictionary/tokens/**/!(color|*.).json5',
 }
 
-// typography tokens
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/typography.ts`,
-          format: 'javascript/es6',
-          filter: {
-            attributes: {
-              category: 'typography',
+// type TTheme = 'dark' | 'light'
+
+// type TComponents = 'checkbox' | 'radio' | 'switcher' | 'input' | 'tag' | 'seat' | 'button'
+
+// type TConfigs = {
+//   themes: TTheme[]
+//   filterName: string
+//   matcher: (prop: any) => void
+//   destination: (theme: TTheme) => `${typeof destinationRoot}/${TComponents}.ts` | `${typeof destinationRoot}/${TTheme}/${TComponents}.ts`
+// }
+
+const defaultMatcher = (category) => (prop) => prop.attributes.category === category
+const categoriesMatcher = (categories) => (prop) => categories.includes(prop.attributes.category)
+
+// yarn tokens крашится на типах, но вы можете их использовать при добавлении новых токенов
+// const configs: TConfigs[] = [
+const configs = [
+  {
+    themes: ['light'],
+    filterName: 'isColor',
+    transform: transforms.component,
+    matcher: defaultMatcher('typography'),
+    destination: () => `${destinationRoot}/typography.ts`,
+  },
+  {
+    themes: ['light', 'dark'],
+    filterName: 'isColor',
+    transform: transforms.color,
+    matcher: defaultMatcher('color'),
+    destination: (theme) => `${destinationRoot}/${theme}/color.ts`,
+  },
+  {
+    themes: ['light', 'dark'],
+    filterName: 'isButton',
+    transform: transforms.component,
+    matcher: categoriesMatcher(['buttonComposite', 'buttonDefault', 'buttonIcon']),
+    destination: (theme) => `${destinationRoot}/${theme}/button.ts`,
+  },
+  {
+    themes: ['light', 'dark'],
+    filterName: 'isSeat',
+    transform: transforms.component,
+    matcher: defaultMatcher('airplaneSeat'),
+    destination: (theme) => `${destinationRoot}/${theme}/seat.ts`,
+  },
+  {
+    themes: ['light', 'dark'],
+    filterName: 'isTagLabel',
+    transform: transforms.component,
+    matcher: defaultMatcher('tagLabel'),
+    destination: (theme) => `${destinationRoot}/${theme}/tag.ts`,
+  },
+  {
+    themes: ['light', 'dark'],
+    filterName: 'isInput',
+    transform: transforms.component,
+    matcher: categoriesMatcher(['input', 'inputHint', 'inputLabel']),
+    destination: (theme) => `${destinationRoot}/${theme}/input.ts`,
+  },
+  {
+    themes: ['light'],
+    filterName: 'isSwitcher',
+    transform: transforms.component,
+    matcher: defaultMatcher('switcher'),
+    destination: () => `${destinationRoot}/switcher.ts`,
+  },
+  {
+    themes: ['light'],
+    filterName: 'isCheckbox',
+    transform: transforms.component,
+    matcher: defaultMatcher('checkBox'),
+    destination: () => `${destinationRoot}/checkbox.ts`,
+  },
+  {
+    themes: ['light'],
+    filterName: 'isRadio',
+    transform: transforms.component,
+    matcher: defaultMatcher('radioButton'),
+    destination: () => `${destinationRoot}/radio.ts`,
+  },
+]
+
+configs.forEach(({ themes, filterName, transform, matcher, destination }) => {
+  StyleDictionary.registerFilter({
+    name: filterName,
+    matcher,
+  })
+
+  const sourceMapper = {
+    light: source.common,
+    dark: source.dark,
+  }
+
+  themes.forEach((theme) => {
+    StyleDictionary.extend({
+      source: [
+        sourceMapper[theme],
+      ],
+      platforms: {
+        js: {
+          transforms: transform,
+          files: [
+            {
+              destination: destination(theme),
+              format: 'javascript/es6',
+              filter: filterName,
             },
-          },
+          ],
         },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-// light color tokens
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.color,
-      files: [
-        {
-          destination: `${destinationRoot}/light/color.ts`,
-          format: 'javascript/es6',
-          filter: {
-            attributes: {
-              category: 'color',
-            },
-          },
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-// dark color tokens
-StyleDictionary.extend({
-  source: [
-    source.dark,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.color,
-      files: [
-        {
-          destination: `${destinationRoot}/dark/color.ts`,
-          format: 'javascript/es6',
-          filter: {
-            attributes: {
-              category: 'color',
-            },
-          },
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-StyleDictionary.registerFilter({
-  name: 'isButton',
-  matcher(prop) {
-    const buttonTokenCategories = ['buttonComposite', 'buttonDefault', 'buttonIcon']
-    return buttonTokenCategories.includes(prop.attributes.category)
-  },
+      },
+    }).buildAllPlatforms()
+  })
 })
-
-// light button tokens
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/light/button.ts`,
-          format: 'javascript/es6',
-          filter: 'isButton',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-// dark button tokens
-StyleDictionary.extend({
-  source: [
-    source.dark,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/dark/button.ts`,
-          format: 'javascript/es6',
-          filter: 'isButton',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-StyleDictionary.registerFilter({
-  name: 'isSeat',
-  matcher: (prop) => prop.attributes.category === 'airplaneSeat',
-})
-
-// light seat tokens
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/light/seat.ts`,
-          format: 'javascript/es6',
-          filter: 'isSeat',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-// dark seat tokens
-StyleDictionary.extend({
-  source: [
-    source.dark,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/dark/seat.ts`,
-          format: 'javascript/es6',
-          filter: 'isSeat',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-StyleDictionary.registerFilter({
-  name: 'isTagLabel',
-  matcher: (prop) => prop.attributes.category === 'tagLabel',
-})
-
-// light seat tokens
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/light/tag.ts`,
-          format: 'javascript/es6',
-          filter: 'isTagLabel',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-// dark seat tokens
-StyleDictionary.extend({
-  source: [
-    source.dark,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/dark/tag.ts`,
-          format: 'javascript/es6',
-          filter: 'isTagLabel',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-StyleDictionary.registerFilter({
-  name: 'isInput',
-  matcher(prop) {
-    const inputTokenCategories = ['input', 'inputHint', 'inputLabel']
-    return inputTokenCategories.includes(prop.attributes.category)
-  },
-})
-
-// light input tokens
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/light/input.ts`,
-          format: 'javascript/es6',
-          filter: 'isInput',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-// dark input tokens
-StyleDictionary.extend({
-  source: [
-    source.dark,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/dark/input.ts`,
-          format: 'javascript/es6',
-          filter: 'isInput',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-StyleDictionary.registerFilter({
-  name: 'isSwitcher',
-  matcher: (prop) => prop.attributes.category === 'switcher',
-})
-
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/switcher.ts`,
-          format: 'javascript/es6',
-          filter: 'isSwitcher',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-StyleDictionary.registerFilter({
-  name: 'isCheckbox',
-  matcher: (prop) => prop.attributes.category === 'checkBox',
-})
-
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/checkbox.ts`,
-          format: 'javascript/es6',
-          filter: 'isCheckbox',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
