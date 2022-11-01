@@ -10,14 +10,14 @@ export type TSwitchProps = {
   disabled?: boolean
   label?: string
   labelPlacement?: TLabelPlacement
-  labelProps?: TTypographyProps
+  labelProps?: Partial<TTypographyProps>
 } & React.HTMLProps<HTMLInputElement>
 
 export function Switch(props: TSwitchProps): JSX.Element {
   const { checked, className, label, labelProps, labelPlacement = 'end', disabled, ...rest } = props
 
   return (
-    <SwitchWrapper className={className} disabled={disabled} checked={checked}>
+    <SwitchWrapper className={className} disabled={disabled} checked={checked} labelProps={{ variant: labelProps?.variant || 'medium' }}>
       {/* @ts-ignore */}
       <InnerInput
         type="checkbox"
