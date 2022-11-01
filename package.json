@@ -63,7 +63,7 @@
     "@babel/preset-typescript": "^7.12.7",
     "@babel/types": "^7.12.12",
     "@emotion/core": "^10.0.10",
-    "@kupibilet/icons": "5.9.30",
+    "@kupibilet/icons": "5.9.31",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/client-api": "^6.5.9",
     "@storybook/react": "^6.5.9",
