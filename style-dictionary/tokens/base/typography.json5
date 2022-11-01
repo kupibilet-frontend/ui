@@ -391,7 +391,7 @@
                         "value": {
                             "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "32",
+                            "lineHeight": "28",
                             "fontWeight": "400"
                         }
                     }
@@ -413,7 +413,7 @@
                         "value": {
                             "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "32",
+                            "lineHeight": "28",
                             "fontWeight": "400"
                         }
                     }
@@ -473,6 +473,30 @@
                             "size": "16",
                             "lineHeight": "24",
                             "fontWeight": "500"
+                        }
+                    }
+                }
+            },
+            "informationCardHeadline":{
+                "medium":{
+                    "default":{
+                        "value": {
+                            "fontFamily": "{font.family.medium.default.value}",
+                            "size": "14",
+                            "lineHeight": "20",
+                            "fontWeight": "500"
+                        }
+                    }
+                }
+            },
+            "informationCardDescription":{
+                "medium":{
+                    "default":{
+                        "value": {
+                            "fontFamily": "{font.family.medium.default.value}",
+                            "size": "12",
+                            "lineHeight": "16",
+                            "fontWeight": "400"
                         }
                     }
                 }
@@ -549,7 +573,7 @@
                         "value": {
                             "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "32",
+                            "lineHeight": "28",
                             "fontWeight": "400"
                         }
                     }
@@ -571,7 +595,7 @@
                         "value": {
                             "fontFamily": "{font.family.regular.default.value}",
                             "size": "18",
-                            "lineHeight": "32",
+                            "lineHeight": "28",
                             "fontWeight": "400"
                         }
                     }
@@ -631,6 +655,30 @@
                             "size": "16",
                             "lineHeight": "24",
                             "fontWeight": "500"
+                        }
+                    }
+                }
+            },
+            "informationCardHeadline":{
+                "medium":{
+                    "default":{
+                        "value": {
+                            "fontFamily": "{font.family.medium.default.value}",
+                            "size": "14",
+                            "lineHeight": "16",
+                            "fontWeight": "500"
+                        }
+                    }
+                }
+            },
+            "informationCardDescription":{
+                "medium":{
+                    "default":{
+                        "value": {
+                            "fontFamily": "{font.family.medium.default.value}",
+                            "size": "12",
+                            "lineHeight": "18",
+                            "fontWeight": "400"
                         }
                     }
                 }

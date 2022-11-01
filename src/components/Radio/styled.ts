@@ -1,6 +1,9 @@
+import Typography from 'components/Typography'
 import styled, { css, DefaultTheme } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
+import { getLabelColor } from './helpers'
 
+import { TProps } from './index'
 
 interface TStyledRadioProps {
   disabled: boolean,
@@ -9,8 +12,8 @@ interface TStyledRadioProps {
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.radio.radio_button_default_medium_color_bg_disable
-  if (checked) return theme.color.colorBgAccentNormal
+  if (disabled && checked) return theme.radio.radio_button_default_medium_color_border_disable
+  if (checked) return theme.radio.radio_button_default_medium_color_border_active
   if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
 
   return theme.radio.radio_button_default_medium_color_border_normal
@@ -25,7 +28,7 @@ const getHoverBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) =>
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (disabled && checked) return theme.radio.radio_button_default_medium_color_bg_disable
-  if (checked) return theme.color.colorBgAccentNormal
+  if (checked) return theme.radio.radio_button_default_medium_color_bg_active
   if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
 
   return theme.radio.radio_button_default_medium_color_bg_normal
@@ -81,19 +84,16 @@ interface TLabelTextProps {
   disabled: boolean,
 }
 
-export const LabelText = styled.span<TLabelTextProps>`
+export const LabelText = styled(Typography)<TLabelTextProps>`
   ${switchTransition};
   transition-property: color;
-  margin-left: 6px;
   width: 100%;
-  ${({ disabled, theme }) => (disabled
-    && css`color: ${theme.color.colorTextPrimaryNormal};`
-  )}
 `
 
-interface TRadioLabelProps {
+type TRadioLabelProps = {
   disabled: boolean,
-}
+  checked: boolean,
+} & Pick<TProps, 'labelVariant'>
 
 export const RadioLabel = styled.label<TRadioLabelProps>`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
@@ -102,8 +102,15 @@ export const RadioLabel = styled.label<TRadioLabelProps>`
   position: relative;
   user-select: none;
   width: 100%;
+  gap: ${({ labelVariant }) => (labelVariant === 'large' ? '12px' : '8px')};
+  ${({ disabled }) => (disabled && css`
+    cursor: default;
+    pointer-events: none;
+  `)};
+
+  color: ${({ theme, disabled, checked }) => getLabelColor(theme, disabled, checked)};   
 
   ${LabelText}:hover {
-    color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
+    color: ${({ theme }) => theme.radio.radio_button_default_medium_color_text_hover};
   };
 `

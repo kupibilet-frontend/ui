@@ -4,7 +4,7 @@ import { useArgs } from '@storybook/client-api'
 import { Story } from '@storybook/react'
 
 const RadioTemplate = (args: TProps): JSX.Element => {
-  const [{ value, disabled }, updateArgs] = useArgs()
+  const [{ value, disabled, labelVariant }, updateArgs] = useArgs()
 
   const handleChange = (newValue: TValue) => {
     updateArgs({ value: newValue })
@@ -18,6 +18,7 @@ const RadioTemplate = (args: TProps): JSX.Element => {
         value="base"
         checked={value === 'base'}
         onChange={handleChange}
+        labelVariant={labelVariant}
       />
       <Radio
         disabled={disabled}
@@ -25,6 +26,7 @@ const RadioTemplate = (args: TProps): JSX.Element => {
         value="travel"
         checked={value === 'travel'}
         onChange={handleChange}
+        labelVariant={labelVariant}
       />
     </div>
   )

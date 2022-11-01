@@ -11,7 +11,10 @@
                             "value": "{color.bg.primary.normal.value}"
                         },
                         "active": {
-                            "value": "{color.bg.accent.active.value}"
+                            "value": "{color.bg.accent.normal.value}"
+                        },
+                        "activeHover": {
+                            "value": "{color.bg.accent.hover.value}"
                         },
                         "disable": {
                             "value": "{color.bg.primary.disable.value}"
@@ -43,6 +46,20 @@
                         },
                         "disable": {
                             "value": "{color.text.staticWhite.normal.value}"
+                        }
+                    },
+                    "text":{
+                        "normal": {
+                            "value": "{color.text.secondary.default.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.primary.disable.value}"
                         }
                     }
                 }

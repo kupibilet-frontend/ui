@@ -3,6 +3,7 @@ import { WrappedFieldProps } from 'redux-form'
 import _get from 'lodash/get'
 import Icon from 'components/Icon'
 import { ICON_SIZES } from 'components/Icon/consts'
+import { TTypographyProps } from 'components/Typography'
 import {
   TLabelPlacement,
   CheckboxLabel,
@@ -20,6 +21,7 @@ export type TProps = {
   name?: string,
   className?: string,
   labelPlacement?: TLabelPlacement,
+  labelVariant?: Extract<TTypographyProps['variant'], 'medium' | 'large'>
 }
 
 export const Checkbox = React.memo((props: TProps) => {
@@ -31,6 +33,7 @@ export const Checkbox = React.memo((props: TProps) => {
     name = '',
     className = '',
     labelPlacement = 'end',
+    labelVariant = 'medium',
     ...restProps
   } = props
 
@@ -40,6 +43,7 @@ export const Checkbox = React.memo((props: TProps) => {
       disabled={disabled}
       className={className}
       labelPlacement={labelPlacement}
+      labelVariant={labelVariant}
     >
       <StyledCheckbox
         classname="checkmark"
@@ -66,7 +70,7 @@ export const Checkbox = React.memo((props: TProps) => {
           {...restProps}
         />
       </StyledCheckbox>
-      <LabelText className="label-text" disabled={disabled} labelPlacement={labelPlacement}>
+      <LabelText className="label-text" disabled={disabled} labelPlacement={labelPlacement} variant={labelVariant}>
         {children}
       </LabelText>
 
