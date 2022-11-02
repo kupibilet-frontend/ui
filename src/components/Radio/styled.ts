@@ -14,13 +14,13 @@ interface TStyledRadioProps {
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (disabled && checked) return theme.radio.radio_button_default_medium_color_border_disable
   if (checked) return theme.radio.radio_button_default_medium_color_border_active
-  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (disabled) return theme.radio.radio_button_default_medium_color_border_disable
 
   return theme.radio.radio_button_default_medium_color_border_normal
 }
 
 const getHoverBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (disabled) return theme.radio.radio_button_default_medium_color_border_disable
   if (checked) return theme.radio.radio_button_default_medium_color_border_hover
 
   return theme.radio.radio_button_default_medium_color_border_hover
@@ -37,7 +37,7 @@ const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => 
 const getHoverRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
   if (!checked && disabled) return theme.radio.radio_button_default_medium_color_bg_disable
   if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
-  if (checked) return theme.radio.radio_button_default_medium_color_border_hover
+  if (checked) return theme.radio.radio_button_default_medium_color_bg_active_hover
 
   return theme.radio.radio_button_default_medium_color_bg_normal
 }
