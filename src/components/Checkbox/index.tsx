@@ -21,7 +21,7 @@ export type TProps = {
   name?: string,
   className?: string,
   labelPlacement?: TLabelPlacement,
-  labelVariant?: Extract<TTypographyProps['variant'], 'medium' | 'large'>
+  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
 }
 
 export const Checkbox = React.memo((props: TProps) => {
@@ -33,7 +33,7 @@ export const Checkbox = React.memo((props: TProps) => {
     name = '',
     className = '',
     labelPlacement = 'end',
-    labelVariant = 'medium',
+    labelProps,
     ...restProps
   } = props
 
@@ -43,7 +43,7 @@ export const Checkbox = React.memo((props: TProps) => {
       disabled={disabled}
       className={className}
       labelPlacement={labelPlacement}
-      labelVariant={labelVariant}
+      labelProps={{ variant: labelProps?.variant || 'medium', ...labelProps }}
     >
       <StyledCheckbox
         classname="checkmark"
@@ -70,7 +70,13 @@ export const Checkbox = React.memo((props: TProps) => {
           {...restProps}
         />
       </StyledCheckbox>
-      <LabelText className="label-text" disabled={disabled} labelPlacement={labelPlacement} variant={labelVariant}>
+      <LabelText
+        className="label-text"
+        disabled={disabled}
+        labelPlacement={labelPlacement}
+        variant="medium"
+        {...labelProps}
+      >
         {children}
       </LabelText>
 

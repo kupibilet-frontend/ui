@@ -5,7 +5,7 @@ import { useArgs } from '@storybook/client-api'
 import { Story } from '@storybook/react'
 
 export const Default = (args: TProps): JSX.Element => {
-  const [{ checked, disabled, labelPlacement, labelVariant }, updateArgs] = useArgs()
+  const [{ checked, disabled, labelPlacement, labelProps }, updateArgs] = useArgs()
 
   const handleChange = (): void => {
     updateArgs({ checked: !checked })
@@ -17,7 +17,7 @@ export const Default = (args: TProps): JSX.Element => {
       disabled={disabled}
       onChange={handleChange}
       labelPlacement={labelPlacement}
-      labelVariant={labelVariant}
+      labelProps={labelProps}
     >
       Авиабилеты
     </Checkbox>

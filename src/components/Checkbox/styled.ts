@@ -82,7 +82,7 @@ type TCheckboxLabelProps = {
   checked: boolean,
   disabled: boolean,
   labelPlacement: TLabelPlacement
-} & Pick<TProps, 'labelVariant'>
+} & Pick<TProps, 'labelProps'>
 
 export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
@@ -93,7 +93,7 @@ export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   position: relative;
   user-select: none;
   width: 100%;
-  gap: ${({ labelVariant }) => (labelVariant === 'large' ? '12px' : '8px')};
+  gap: ${({ labelProps }) => (labelProps?.variant === 'large' ? '12px' : '8px')};
 
 
   ${({ labelPlacement }) => labelPlacement === 'start' && css`

@@ -93,7 +93,7 @@ export const LabelText = styled(Typography)<TLabelTextProps>`
 type TRadioLabelProps = {
   disabled: boolean,
   checked: boolean,
-} & Pick<TProps, 'labelVariant'>
+} & Pick<TProps, 'labelProps'>
 
 export const RadioLabel = styled.label<TRadioLabelProps>`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
@@ -102,7 +102,7 @@ export const RadioLabel = styled.label<TRadioLabelProps>`
   position: relative;
   user-select: none;
   width: 100%;
-  gap: ${({ labelVariant }) => (labelVariant === 'large' ? '12px' : '8px')};
+  gap: ${({ labelProps }) => (labelProps?.variant === 'large' ? '12px' : '8px')};
   ${({ disabled }) => (disabled && css`
     cursor: default;
     pointer-events: none;

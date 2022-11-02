@@ -33,7 +33,7 @@ export interface TProps {
   onChange?: (value: TValue) => void,
   className?: string,
 
-  labelVariant?: Extract<TTypographyProps['variant'], 'medium' | 'large'>
+  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
 }
 
 /**
@@ -48,7 +48,7 @@ const Radio = (props: TProps): JSX.Element => {
     disabled = false,
     checked = false,
     onChange = () => null,
-    labelVariant = 'medium',
+    labelProps,
   } = props
 
   return (
@@ -56,7 +56,7 @@ const Radio = (props: TProps): JSX.Element => {
       checked={checked}
       disabled={disabled}
       className={className}
-      labelVariant={labelVariant}
+      labelProps={{ variant: labelProps?.variant || 'medium', ...labelProps }}
     >
       <StyledRadio
         disabled={disabled}
@@ -69,7 +69,7 @@ const Radio = (props: TProps): JSX.Element => {
         checked={checked}
         onChange={() => onChange(value)}
       />
-      <LabelText disabled={disabled} variant={labelVariant}>
+      <LabelText disabled={disabled} variant="medium" {...labelProps}>
         {label}
       </LabelText>
     </RadioLabel>
