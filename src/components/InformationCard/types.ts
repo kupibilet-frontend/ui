@@ -7,6 +7,7 @@ export type TInformationCardProps = {
   action?: React.ReactChild,
   layoutTheme: 'default' | 'button_default' | 'button_icon',
   children: React.ReactElement | React.ReactElement[],
+  className: string,
 }
 
 type TInformationCardChild = Partial<

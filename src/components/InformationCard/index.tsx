@@ -21,6 +21,7 @@ export const InformationCard = ({
   icon,
   action,
   layoutTheme = 'default',
+  className,
 }: TInformationCardProps): JSX.Element => {
   const { isMobile } = useWithMedia2021()
   const iconName = icon ?? 'exclamation-circle-filled'
@@ -34,7 +35,11 @@ export const InformationCard = ({
   )
 
   return (
-    <Container layoutTheme={layoutTheme} severity={severity}>
+    <Container
+      layoutTheme={layoutTheme}
+      severity={severity}
+      className={className}
+    >
       <StyledIcon
         name={iconName}
         layoutTheme={layoutTheme}
