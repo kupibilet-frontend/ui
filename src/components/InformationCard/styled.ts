@@ -57,15 +57,14 @@ const actionCss = ({
   severity,
 }: WithStyledTheme<Pick<TInformationCardProps, 'layoutTheme' | 'severity'>>) => {
   const marginToken = `information_card_${layoutTheme}_${severity}_medium_size_padding_default` as const
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  const marginTop = 'innerVerticalButton' in theme.informationCard[marginToken] ? theme.informationCard[marginToken]!.innerVerticalButton : 0
 
   return css`
     margin-left: ${theme.informationCard[marginToken]?.innerHorizontalIcon};
 
     @media ${queries2021.isMobile} {
       ${layoutTheme === 'button_default' && 'margin-left: 0;'};
-      margin-top: ${marginTop};
+      // types of tokens are inconsistent
+      margin-top: ${(theme.informationCard[marginToken] as unknown as Record<string, string>).innerVerticalButton ?? 0};
     }
   `
 }
