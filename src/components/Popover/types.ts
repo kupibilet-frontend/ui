@@ -32,6 +32,8 @@ type TPopoverProps = {
    * allow popover usage with styled components
    */
   className?: string,
+
+  autoWidth?: boolean,
 }
 
 type TPopoverWithDefaultsProps = Required<TPopoverProps>
@@ -40,7 +42,9 @@ interface TPopoverIconProps {
   side: BasePlacement,
 }
 
-type TPopoverBackgroundProps = Pick<TPopoverWithDefaultsProps, 'size'>
+type TPopoverBackgroundProps = Pick<TPopoverWithDefaultsProps, 'size' | 'autoWidth'> & {
+  header: TPopoverProps['header']
+}
 
 
 export {
