@@ -1,6 +1,6 @@
 {
   "name": "@kupibilet/ui",
-  "version": "24.5.0",
+  "version": "24.6.0",
   "description": "UI kit for kupibilet web app",
   "publishConfig": {
     "kupibilet-dev:registry": "https://registry.npmjs.org"
