@@ -32,6 +32,7 @@ interface TIconSvgProps {
   size: ICON_SIZES,
   striked: boolean,
   fill: COLOR_NAMES,
+  stroke?: COLOR_NAMES,
 }
 
 const IconSvg = styled.svg<TIconSvgProps>`
@@ -40,6 +41,9 @@ const IconSvg = styled.svg<TIconSvgProps>`
   height: ${({ size }) => sizes[size]}px;
   width: ${({ size }) => sizes[size]}px;
   fill: ${({ theme, fill }) => getThemeColor(theme, fill)};
+  ${({ theme, stroke }) => stroke && css`
+   stroke: ${() => getThemeColor(theme, stroke)};
+ `}
   opacity: ${({ striked }) => (striked ? 0.6 : 1)};
 
   ${({ rotate }) => {
