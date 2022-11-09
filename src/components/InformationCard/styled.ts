@@ -6,7 +6,7 @@ import { TUseWithMedia2021 } from 'hooks/useWithMedia'
 import { TInformationCardProps } from './types'
 
 type WithStyledTheme<K> = K & { theme: DefaultTheme }
-type TTokenData = Pick<TInformationCardProps, 'layoutTheme' | 'severity'>
+type TTokenData = Pick<Required<TInformationCardProps>, 'layoutTheme' | 'severity'>
 
 type TInformationCardChild = TTokenData & Pick<TUseWithMedia2021, 'isMobile'>
 

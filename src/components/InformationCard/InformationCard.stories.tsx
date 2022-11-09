@@ -13,7 +13,7 @@ const InformationCardStory = (args: TInformationCardProps): JSX.Element => {
   )
 }
 
-const DEFAULT_PROPS: Partial<TInformationCardProps> = {
+const DEFAULT_PROPS: TInformationCardProps = {
   title: 'В документах не отражены изменения в заказе',
   description: 'Примите изменения, для отображения изменений',
   severity: 'info',
