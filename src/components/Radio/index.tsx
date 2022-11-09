@@ -69,9 +69,11 @@ const Radio = (props: TProps): JSX.Element => {
         checked={checked}
         onChange={() => onChange(value)}
       />
-      <LabelText disabled={disabled} variant="medium" {...labelProps}>
-        {label}
-      </LabelText>
+      {label && (
+        <LabelText disabled={disabled} variant="medium" {...labelProps}>
+          {label}
+        </LabelText>
+      )}
     </RadioLabel>
   )
 }
