@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 01 Nov 2022 14:14:45 GMT
+ * Generated on Wed, 09 Nov 2022 14:17:02 GMT
  */
 
 export const information_card_button_default_danger_medium_color_bg_default = "#fcede8";

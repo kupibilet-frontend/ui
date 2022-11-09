@@ -91,6 +91,17 @@ const configs = [
     matcher: defaultMatcher('radioButton'),
     destination: () => `${destinationRoot}/radio.ts`,
   },
+  {
+    themes: ['light'],
+    filterName: 'isInformationCard',
+    transform: transforms.component,
+    matcher: categoriesMatcher([
+      'informationCardDefault',
+      'informationCardButtonDefault',
+      'informationCardButtonIcon',
+    ]),
+    destination: () => `${destinationRoot}/informationCard.ts`,
+  },
 ]
 
 configs.forEach(({ themes, filterName, transform, matcher, destination }) => {
@@ -124,51 +135,3 @@ configs.forEach(({ themes, filterName, transform, matcher, destination }) => {
     }).buildAllPlatforms()
   })
 })
-
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/switcher.ts`,
-          format: 'javascript/es6',
-          filter: 'isSwitcher',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
-
-
-StyleDictionary.registerFilter({
-  name: 'isInformationCard',
-  matcher(prop) {
-    return [
-      'informationCardDefault',
-      'informationCardButtonDefault',
-      'informationCardButtonIcon',
-    ].includes(prop.attributes.category)
-  },
-})
-
-StyleDictionary.extend({
-  source: [
-    source.common,
-  ],
-  platforms: {
-    js: {
-      transforms: transforms.component,
-      files: [
-        {
-          destination: `${destinationRoot}/informationCard.ts`,
-          format: 'javascript/es6',
-          filter: 'isInformationCard',
-        },
-      ],
-    },
-  },
-}).buildAllPlatforms()
