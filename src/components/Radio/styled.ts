@@ -101,6 +101,7 @@ export const RadioLabel = styled.label<TRadioLabelProps>`
   align-items: center;
   position: relative;
   user-select: none;
+  width: 100%;
   gap: ${({ labelProps }) => (labelProps?.variant === 'large' ? '12px' : '8px')};
   ${({ disabled }) => (disabled && css`
     cursor: default;
