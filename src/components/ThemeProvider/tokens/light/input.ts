@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 07 Oct 2022 12:54:32 GMT
+ * Generated on Tue, 01 Nov 2022 18:38:36 GMT
  */
 
 export const input_label_default_medium_color_input_label_normal = "#62657f";

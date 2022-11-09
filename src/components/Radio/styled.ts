@@ -1,6 +1,9 @@
+import Typography from 'components/Typography'
 import styled, { css, DefaultTheme } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
+import { getLabelColor } from './helpers'
 
+import { TProps } from './index'
 
 interface TStyledRadioProps {
   disabled: boolean,
@@ -9,34 +12,34 @@ interface TStyledRadioProps {
 }
 
 const getBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgAccentDisable
-  if (checked) return theme.color.colorBgAccentNormal
-  if (disabled) return theme.color.colorBgAccentDisable
+  if (disabled && checked) return theme.radio.radio_button_default_medium_color_border_disable
+  if (checked) return theme.radio.radio_button_default_medium_color_border_active
+  if (disabled) return theme.radio.radio_button_default_medium_color_border_disable
 
-  return theme.color.colorBorderPrimaryNormal
+  return theme.radio.radio_button_default_medium_color_border_normal
 }
 
 const getHoverBorderColor = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled) return theme.color.colorBgAccentDisable
-  if (checked) return theme.color.colorBgAccentHover
+  if (disabled) return theme.radio.radio_button_default_medium_color_border_disable
+  if (checked) return theme.radio.radio_button_default_medium_color_border_hover
 
-  return theme.color.colorBorderPrimaryHover
+  return theme.radio.radio_button_default_medium_color_border_hover
 }
 
 const getRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (disabled && checked) return theme.color.colorBgAccentDisable
-  if (checked) return theme.color.colorBgAccentNormal
-  if (disabled) return theme.color.colorBgPrimaryDisable
+  if (disabled && checked) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (checked) return theme.radio.radio_button_default_medium_color_bg_active
+  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
 
-  return theme.color.colorBgPrimaryNormal
+  return theme.radio.radio_button_default_medium_color_bg_normal
 }
 
 const getHoverRadioBackground = ({ theme, checked, disabled }: TStyledRadioProps) => {
-  if (!checked && disabled) return theme.color.colorBgPrimaryDisable
-  if (disabled) return theme.color.colorBgAccentDisable
-  if (checked) return theme.color.colorBgAccentHover
+  if (!checked && disabled) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (disabled) return theme.radio.radio_button_default_medium_color_bg_disable
+  if (checked) return theme.radio.radio_button_default_medium_color_bg_active_hover
 
-  return theme.color.colorBgPrimaryNormal
+  return theme.radio.radio_button_default_medium_color_bg_normal
 }
 
 export const RadioInput = styled.input`
@@ -64,7 +67,7 @@ export const StyledRadio = styled.div<TStyledRadioProps>`
     content: '';
     width: 8px;
     height: 8px;
-    background: ${({ theme }) => theme.color.background};
+    background: ${({ theme }) => theme.radio.radio_button_default_medium_color_radio_button_icon_normal};
     display: inline-flex;
     border-radius: 50%;
     opacity: ${({ checked }) => (checked ? 1 : 0)};
@@ -81,19 +84,16 @@ interface TLabelTextProps {
   disabled: boolean,
 }
 
-export const LabelText = styled.span<TLabelTextProps>`
+export const LabelText = styled(Typography)<TLabelTextProps>`
   ${switchTransition};
   transition-property: color;
-  margin-left: 6px;
   width: 100%;
-  ${({ disabled, theme }) => (disabled
-    && css`color: ${theme.color.colorTextPrimaryNormal};`
-  )}
 `
 
-interface TRadioLabelProps {
+type TRadioLabelProps = {
   disabled: boolean,
-}
+  checked: boolean,
+} & Pick<TProps, 'labelProps'>
 
 export const RadioLabel = styled.label<TRadioLabelProps>`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
@@ -102,8 +102,15 @@ export const RadioLabel = styled.label<TRadioLabelProps>`
   position: relative;
   user-select: none;
   width: 100%;
+  gap: ${({ labelProps }) => (labelProps?.variant === 'large' ? '12px' : '8px')};
+  ${({ disabled }) => (disabled && css`
+    cursor: default;
+    pointer-events: none;
+  `)};
+
+  color: ${({ theme, disabled, checked }) => getLabelColor(theme, disabled, checked)};   
 
   ${LabelText}:hover {
-    color: ${({ theme }) => theme.color.colorTextPrimaryNormal};
+    color: ${({ theme }) => theme.radio.radio_button_default_medium_color_text_hover};
   };
 `

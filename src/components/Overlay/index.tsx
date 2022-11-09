@@ -18,7 +18,8 @@ interface TProps extends TWithMediaProps {
   closePortal: () => void,
   isOnBottom: boolean,
   children: React.ReactElement,
-  isModalOverlay: boolean;
+  isModalOverlay: boolean,
+  isNativeView: boolean,
 }
 
 class Overlay extends React.PureComponent<TProps> {
@@ -49,6 +50,7 @@ class Overlay extends React.PureComponent<TProps> {
     const {
       closePortal,
       isOnBottom,
+      isNativeView,
       children,
     } = this.props
 
@@ -56,8 +58,9 @@ class Overlay extends React.PureComponent<TProps> {
       <Wrapper
         onMouseDown={this.close}
         isOnBottom={isOnBottom}
+        isNativeView={isNativeView}
       >
-        <OverlayContentWrap isOnBottom={isOnBottom}>
+        <OverlayContentWrap isOnBottom={isOnBottom} isNativeView={isNativeView}>
           <OverlayContent onMouseDown={this.stopPropagation} isOnBottom={isOnBottom}>
             {React.cloneElement(children, { closePortal })}
           </OverlayContent>

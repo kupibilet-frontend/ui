@@ -3,12 +3,15 @@ import styled, { css } from 'styled-components'
 import { switchTransition } from 'utils/transitions'
 import { floatFromTop } from 'utils/animations'
 import { borderRadiusSmall } from 'utils/borderRadius'
+import Typography from 'components/Typography'
 import {
   getBackgroundColor,
   getHoverBackgroundColor,
   getShadowColor,
   getHoverShadowColor,
+  getLabelColor,
 } from './helpers'
+import { TProps } from './index'
 
 export type TLabelPlacement = 'start' | 'end'
 
@@ -63,50 +66,44 @@ interface TLabelTextProps {
   labelPlacement: TLabelPlacement,
 }
 
-export const LabelText = styled.span<TLabelTextProps>`
+export const LabelText = styled(Typography)<TLabelTextProps>`
   ${switchTransition};
   transition-property: color;
-  margin-left: 6px;
   width: 100%;
   
   ${({ disabled, theme }) => (disabled
     && css`color: ${theme.color.text300};`
   )}
 
-  ${({ labelPlacement }) => (
-    labelPlacement === 'start' ? 'margin-right: 6px;' : 'margin-left: 6px;'
-  )}
+
 `
 
-interface TCheckboxLabelProps {
+type TCheckboxLabelProps = {
   checked: boolean,
   disabled: boolean,
   labelPlacement: TLabelPlacement
-}
+} & Pick<TProps, 'labelProps'>
 
 export const CheckboxLabel = styled.label<TCheckboxLabelProps>`
   cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
   display: inline-flex;
-  align-items: start;
+  align-items: center;
   font-size: 16px;
   line-height: 18px;
   position: relative;
   user-select: none;
   width: 100%;
+  gap: ${({ labelProps }) => (labelProps?.variant === 'large' ? '12px' : '8px')};
+
 
   ${({ labelPlacement }) => labelPlacement === 'start' && css`
     flex-direction: row-reverse;
   `}
 
-  color: ${({ theme, disabled, checked }) => {
-    if (disabled) return theme.color.colorTextPrimaryDisable
-    if (checked) return theme.color.colorTextPrimaryNormal
-
-    return theme.color.colorTextSecondaryDefault
-  }};
+  color: ${({ theme, disabled, checked }) => getLabelColor(theme, disabled, checked)};
 
   &:hover {
-    color: ${({ theme, disabled }) => (disabled ? theme.color.colorTextPrimaryDisable : theme.color.colorTextPrimaryNormal)};
+    color: ${({ theme }) => theme.checkbox.check_box_default_medium_color_text_hover};
   }
 
   &:hover ${StyledCheckbox} {

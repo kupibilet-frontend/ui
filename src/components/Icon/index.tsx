@@ -11,6 +11,7 @@ export interface TIconProps {
   size?: ICON_SIZES,
   prefix?: string,
   fill?: COLOR_NAMES,
+  stroke?: COLOR_NAMES,
   className?: string | null,
   inheritColor?: boolean,
   striked?: boolean,
@@ -32,6 +33,7 @@ const Icon = ({
   paid = false,
   currency = 'RUB',
   fill = 'colorTextPrimaryNormal',
+  stroke,
   onClick,
   ...restProps
 }: TIconProps): JSX.Element => (
@@ -44,6 +46,7 @@ const Icon = ({
       size={size}
       name={name}
       fill={fill}
+      stroke={stroke}
       rotate={rotate ? 'true' : ''}
       striked={striked}
       className={cn(className, { 'icon-inherit-color': inheritColor })}

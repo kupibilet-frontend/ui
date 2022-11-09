@@ -1,3 +1,4 @@
+import { TTypographyProps } from 'components/Typography'
 import React from 'react'
 import {
   RadioLabel,
@@ -31,6 +32,8 @@ export interface TProps {
   */
   onChange?: (value: TValue) => void,
   className?: string,
+
+  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
 }
 
 /**
@@ -45,10 +48,16 @@ const Radio = (props: TProps): JSX.Element => {
     disabled = false,
     checked = false,
     onChange = () => null,
+    labelProps,
   } = props
 
   return (
-    <RadioLabel disabled={disabled} className={className}>
+    <RadioLabel
+      checked={checked}
+      disabled={disabled}
+      className={className}
+      labelProps={{ variant: labelProps?.variant || 'medium', ...labelProps }}
+    >
       <StyledRadio
         disabled={disabled}
         checked={checked}
@@ -60,7 +69,7 @@ const Radio = (props: TProps): JSX.Element => {
         checked={checked}
         onChange={() => onChange(value)}
       />
-      <LabelText disabled={disabled}>
+      <LabelText disabled={disabled} variant="medium" {...labelProps}>
         {label}
       </LabelText>
     </RadioLabel>

@@ -15,6 +15,7 @@ export { OVERLAY_Z_INDEX } from './styled'
 interface TProps extends TWithMediaProps {
   closePortal: () => void,
   isOnBottom: boolean,
+  isNativeView: boolean,
   children: React.ReactElement,
 }
 
@@ -27,6 +28,7 @@ class Overlay2021 extends React.PureComponent<TProps> {
     const {
       closePortal,
       isOnBottom,
+      isNativeView,
       children,
     } = this.props
 
@@ -34,8 +36,9 @@ class Overlay2021 extends React.PureComponent<TProps> {
       <Wrapper
         onMouseDown={closePortal}
         isOnBottom={isOnBottom}
+        isNativeView={isNativeView}
       >
-        <OverlayContentWrap isOnBottom={isOnBottom}>
+        <OverlayContentWrap isOnBottom={isOnBottom} isNativeView={isNativeView}>
           <OverlayContent onMouseDown={this.stopPropagation} isOnBottom={isOnBottom}>
             {React.cloneElement(children, { closePortal })}
           </OverlayContent>
