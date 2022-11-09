@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story } from '@storybook/react'
-import { InformationCard, InformationCardTitle, InformationCardText } from 'components/InformationCard'
+import { InformationCard } from 'components/InformationCard'
 import Icon from 'components/Icon'
 import Button from 'components/Button'
 import { TInformationCardProps } from './types'
@@ -9,14 +9,13 @@ const InformationCardStory = (args: TInformationCardProps): JSX.Element => {
   return (
     <InformationCard
       {...args}
-    >
-      <InformationCardTitle>В документах не отражены изменения в заказе</InformationCardTitle>
-      <InformationCardText>Примите изменения, для отображения изменений</InformationCardText>
-    </InformationCard>
+    />
   )
 }
 
 const DEFAULT_PROPS: Partial<TInformationCardProps> = {
+  title: 'В документах не отражены изменения в заказе',
+  description: 'Примите изменения, для отображения изменений',
   severity: 'info',
   layoutTheme: 'default',
 }

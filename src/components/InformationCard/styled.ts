@@ -2,20 +2,26 @@ import Icon from 'components/Icon'
 import Typography from 'components/Typography'
 import styled, { css, DefaultTheme } from 'styled-components'
 import { queries2021 } from 'utils/media-queries'
-import { TInformationCardProps, TInformationCardTextProps, TInformationCardTitleProps } from './types'
+import { TUseWithMedia2021 } from 'hooks/useWithMedia'
+import { TInformationCardProps } from './types'
 
 type WithStyledTheme<K> = K & { theme: DefaultTheme }
+type TTokenData = Pick<TInformationCardProps, 'layoutTheme' | 'severity'>
+
+type TInformationCardChild = TTokenData & Pick<TUseWithMedia2021, 'isMobile'>
 
 const containerCss = ({
   theme,
   layoutTheme,
   severity,
-}: WithStyledTheme<TInformationCardProps>) => {
+}: WithStyledTheme<TTokenData>) => {
   const paddingToken = `information_card_${layoutTheme}_${severity}_medium_size_padding_default` as const
   const bgColorToken = `information_card_${layoutTheme}_${severity}_medium_color_bg_default` as const
   const borderRadiusToken = `information_card_${layoutTheme}_${severity}_medium_size_border_radius_default` as const
 
   return css`
+    display: flex;
+    overflow: hidden;
     padding-top: ${theme.informationCard[`information_card_${layoutTheme}_${severity}_medium_size_padding_default`]?.top};
     padding-left: ${theme.informationCard[paddingToken]?.left};
     padding-bottom: ${theme.informationCard[paddingToken]?.bottom};
@@ -25,9 +31,7 @@ const containerCss = ({
   `
 }
 
-export const Container = styled.div<TInformationCardProps>`
-  display: flex;
-  overflow: hidden;
+export const Container = styled.div<TTokenData>`
   ${containerCss}
 `
 
@@ -35,19 +39,19 @@ const iconCss = ({
   theme,
   layoutTheme,
   severity,
-}: WithStyledTheme<Pick<TInformationCardProps, 'layoutTheme' | 'severity'>>) => {
+}: WithStyledTheme<TTokenData>) => {
   const marginToken = `information_card_${layoutTheme}_${severity}_medium_size_padding_default` as const
   const colorToken = `information_card_${layoutTheme}_${severity}_medium_color_icon_default` as const
 
   return css`
+    width: 20px;
+    height: 20px;
     margin-right: ${theme.informationCard[marginToken]?.innerHorizontalIcon};
     fill: ${theme.informationCard[colorToken]};
   `
 }
 
-export const StyledIcon = styled(Icon)<WithStyledTheme<Pick<TInformationCardProps, 'layoutTheme' | 'severity'>>>`
-  width: 20px;
-  height: 20px;
+export const StyledIcon = styled(Icon)<TTokenData>`
   ${iconCss}
 `
 
@@ -55,10 +59,12 @@ const actionCss = ({
   theme,
   layoutTheme,
   severity,
-}: WithStyledTheme<Pick<TInformationCardProps, 'layoutTheme' | 'severity'>>) => {
+}: WithStyledTheme<TTokenData>) => {
   const marginToken = `information_card_${layoutTheme}_${severity}_medium_size_padding_default` as const
 
   return css`
+    display: flex;
+    align-items: flex-start;
     margin-left: ${theme.informationCard[marginToken]?.innerHorizontalIcon};
 
     @media ${queries2021.isMobile} {
@@ -69,7 +75,7 @@ const actionCss = ({
   `
 }
 
-export const ActionInner = styled.div<Pick<TInformationCardProps, 'layoutTheme' | 'severity'>>`
+export const ActionInner = styled.div<TTokenData>`
   ${actionCss}
 `
 
@@ -91,7 +97,7 @@ const titleCss = ({
   layoutTheme,
   severity,
   isMobile,
-}: WithStyledTheme<Required<TInformationCardTitleProps>>) => {
+}: WithStyledTheme<TInformationCardChild>) => {
   const colorToken = `information_card_${layoutTheme}_${severity}_medium_color_headline_default` as const
 
   const media = isMobile ? 'mobile' : 'desktop'
@@ -106,16 +112,16 @@ const titleCss = ({
   `
 }
 
-export const InformationCardTitleInner = styled(Typography)<Required<TInformationCardTitleProps>>`
+export const InformationCardTitle = styled(Typography)<TInformationCardChild>`
   ${titleCss}
 `
 
-const textCss = ({
+const descriptionCss = ({
   theme,
   layoutTheme,
   severity,
   isMobile,
-}: WithStyledTheme<Required<TInformationCardTitleProps>>) => {
+}: WithStyledTheme<TInformationCardChild>) => {
   const colorToken = `information_card_${layoutTheme}_${severity}_medium_color_description_default` as const
 
   const media = isMobile ? 'mobile' : 'desktop'
@@ -132,6 +138,6 @@ const textCss = ({
   `
 }
 
-export const InformationCardTextInner = styled(Typography)<Required<TInformationCardTextProps>>`
-  ${textCss}
+export const InformationCardDescription = styled(Typography)<TInformationCardChild>`
+  ${descriptionCss}
 `

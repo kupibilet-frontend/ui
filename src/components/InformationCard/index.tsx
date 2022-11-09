@@ -4,19 +4,18 @@ import {
   ActionInner,
   Container,
   FlexGrow,
-  InformationCardTextInner,
-  InformationCardTitleInner,
+  InformationCardDescription,
+  InformationCardTitle,
   InnerContainer,
   StyledIcon,
 } from './styled'
 import {
   TInformationCardProps,
-  TInformationCardTextProps,
-  TInformationCardTitleProps,
 } from './types'
 
 export const InformationCard = ({
-  children,
+  title,
+  description,
   severity,
   icon,
   action,
@@ -47,54 +46,27 @@ export const InformationCard = ({
       />
       <InnerContainer>
         <FlexGrow>
-          {React.Children.map(children, (child) => {
-            return React.cloneElement(child, {
-              severity,
-              layoutTheme,
-              isMobile,
-            })
-          })}
+          <InformationCardTitle
+            variant="small"
+            isBold
+            layoutTheme={layoutTheme}
+            severity={severity}
+            isMobile={isMobile}
+          >
+            {title}
+          </InformationCardTitle>
+          <InformationCardDescription
+            variant="caption"
+            layoutTheme={layoutTheme}
+            severity={severity}
+            isMobile={isMobile}
+          >
+            {description}
+          </InformationCardDescription>
         </FlexGrow>
         {layoutTheme === 'button_default' && actionComponent}
       </InnerContainer>
       {layoutTheme === 'button_icon' ? actionComponent : <></>}
     </Container>
-  )
-}
-
-export const InformationCardTitle = ({
-  children,
-  layoutTheme = 'default',
-  severity = 'info',
-  isMobile = false,
-}: TInformationCardTitleProps): JSX.Element => {
-  return (
-    <InformationCardTitleInner
-      variant="small"
-      isBold
-      layoutTheme={layoutTheme}
-      severity={severity}
-      isMobile={isMobile}
-    >
-      {children}
-    </InformationCardTitleInner>
-  )
-}
-
-export const InformationCardText = ({
-  children,
-  layoutTheme = 'default',
-  severity = 'info',
-  isMobile = false,
-} : TInformationCardTextProps): JSX.Element => {
-  return (
-    <InformationCardTextInner
-      variant="caption"
-      layoutTheme={layoutTheme}
-      severity={severity}
-      isMobile={isMobile}
-    >
-      {children}
-    </InformationCardTextInner>
   )
 }
