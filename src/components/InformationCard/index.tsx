@@ -47,8 +47,6 @@ export const InformationCard = ({
       <InnerContainer>
         <FlexGrow>
           <InformationCardTitle
-            variant="small"
-            isBold
             layoutTheme={layoutTheme}
             severity={severity}
             isMobile={isMobile}
@@ -56,7 +54,6 @@ export const InformationCard = ({
             {title}
           </InformationCardTitle>
           <InformationCardDescription
-            variant="caption"
             layoutTheme={layoutTheme}
             severity={severity}
             isMobile={isMobile}

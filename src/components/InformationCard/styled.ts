@@ -1,5 +1,4 @@
 import Icon from 'components/Icon'
-import Typography from 'components/Typography'
 import styled, { css, DefaultTheme } from 'styled-components'
 import { queries2021 } from 'utils/media-queries'
 import { TUseWithMedia2021 } from 'hooks/useWithMedia'
@@ -112,7 +111,7 @@ const titleCss = ({
   `
 }
 
-export const InformationCardTitle = styled(Typography)<TInformationCardChild>`
+export const InformationCardTitle = styled.div<TInformationCardChild>`
   ${titleCss}
 `
 
@@ -138,6 +137,6 @@ const descriptionCss = ({
   `
 }
 
-export const InformationCardDescription = styled(Typography)<TInformationCardChild>`
+export const InformationCardDescription = styled.div<TInformationCardChild>`
   ${descriptionCss}
 `
