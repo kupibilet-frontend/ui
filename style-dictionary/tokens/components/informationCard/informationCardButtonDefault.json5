@@ -1,0 +1,197 @@
+{
+    "informationCardButtonDefault":{
+        "danger":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "default":{
+                            "value": "{color.bg.statusDanger.normal.value}"
+                        } 
+                    },
+                    "icon":{
+                        "default":{
+                            "value": "{color.text.danger.default.value}"
+                        } 
+                    },
+                    "headline":{
+                        "default":{
+                            "value": "{color.text.primary.normal.value}"
+                        } 
+                    },
+                    "description":{
+                        "default":{
+                            "value": "{color.text.secondary.default.value}"
+                        } 
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "headline": {
+                            "value": "{typography.componentsMobile.informationCardHeadline.medium.default.value}"
+                        },
+                        "description": {
+                            "value": "{typography.componentsMobile.informationCardDescription.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "headline": {
+                            "value": "{typography.componentsDesktop.informationCardHeadline.medium.default.value}"
+                        },
+                        "description": {
+                            "value": "{typography.componentsDesktop.informationCardDescription.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.12.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.12.default.value}",
+                                "innerHorizontalIcon": "{size.padding.8.default.value}",
+                                "innerVerticalButton": "{size.padding.8.default.value}",
+                                "innerVerticalDescription": "{size.padding.4.default.value}"
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "info":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "default":{
+                            "value": "{color.bg.statusInfo.normal.value}"
+                        } 
+                    },
+                    "icon":{
+                        "default":{
+                            "value": "{color.text.info.default.value}"
+                        } 
+                    },
+                    "headline":{
+                        "default":{
+                            "value": "{color.text.primary.normal.value}"
+                        } 
+                    },
+                    "description":{
+                        "default":{
+                            "value": "{color.text.secondary.default.value}"
+                        } 
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "headline": {
+                            "value": "{typography.componentsMobile.informationCardHeadline.medium.default.value}"
+                        },
+                        "description": {
+                            "value": "{typography.componentsMobile.informationCardDescription.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "headline": {
+                            "value": "{typography.componentsDesktop.informationCardHeadline.medium.default.value}"
+                        },
+                        "description": {
+                            "value": "{typography.componentsDesktop.informationCardDescription.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.12.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.12.default.value}",
+                                "innerHorizontalIcon": "{size.padding.8.default.value}",
+                                "innerVerticalButton": "{size.padding.8.default.value}",
+                                "innerVerticalDescription": "{size.padding.4.default.value}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "warning":{
+            "medium":{
+                "color":{
+                    "bg":{
+                        "default":{
+                            "value": "{color.bg.statusWarning.normal.value}"
+                        } 
+                    },
+                    "icon":{
+                        "default":{
+                            "value": "{color.text.warning.default.value}"
+                        } 
+                    },
+                    "headline":{
+                        "default":{
+                            "value": "{color.text.primary.normal.value}"
+                        } 
+                    },
+                    "description":{
+                        "default":{
+                            "value": "{color.text.secondary.default.value}"
+                        } 
+                    }
+                },
+                "typography": {
+                    "mobile": {
+                        "headline": {
+                            "value": "{typography.componentsMobile.informationCardHeadline.medium.default.value}"
+                        },
+                        "description": {
+                            "value": "{typography.componentsMobile.informationCardDescription.medium.default.value}"
+                        }
+                    },
+                    "desktop": {
+                        "headline": {
+                            "value": "{typography.componentsDesktop.informationCardHeadline.medium.default.value}"
+                        },
+                        "description": {
+                            "value": "{typography.componentsDesktop.informationCardDescription.medium.default.value}"
+                        }
+                    }
+                },
+                "size": {
+                    "borderRadius": {
+                        "default": {
+                            "value": "{size.borderRadius.medium.default.value}"
+                        }
+                    },
+                    "padding": {
+                        "default": {
+                            "value": {
+                                "top": "{size.padding.12.default.value}",
+                                "right": "{size.padding.12.default.value}",
+                                "bottom": "{size.padding.12.default.value}",
+                                "left": "{size.padding.12.default.value}",
+                                "innerHorizontalIcon": "{size.padding.8.default.value}",
+                                "innerVerticalButton": "{size.padding.8.default.value}",
+                                "innerVerticalDescription": "{size.padding.4.default.value}"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
