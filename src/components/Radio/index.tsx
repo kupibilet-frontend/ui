@@ -18,7 +18,7 @@ export interface TProps {
   /**
   * Отображаемая подпись опции
   */
-  label: React.ReactNode,
+  label?: React.ReactNode,
   /**
   * Недоступность выбора опции
   */
