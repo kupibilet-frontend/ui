@@ -33,7 +33,7 @@ export interface TProps {
   onChange?: (value: TValue) => void,
   className?: string,
 
-  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
+  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant?: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
 }
 
 /**
