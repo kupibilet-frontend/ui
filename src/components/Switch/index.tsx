@@ -8,13 +8,23 @@ export type TLabelPlacement = 'end' | 'start'
 export type TSwitchProps = {
   className?: string
   disabled?: boolean
+  name?: string,
   label?: string
   labelPlacement?: TLabelPlacement
   labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
 } & React.HTMLProps<HTMLInputElement>
 
 export function Switch(props: TSwitchProps): JSX.Element {
-  const { checked, className, label, labelProps, labelPlacement = 'end', disabled, ...rest } = props
+  const {
+    checked,
+    className,
+    label,
+    labelProps,
+    labelPlacement = 'end',
+    name = '',
+    disabled,
+    ...rest
+  } = props
 
   return (
     <SwitchWrapper className={className} disabled={disabled} checked={checked} labelProps={{ variant: labelProps?.variant || 'medium', ...labelProps }}>
@@ -24,6 +34,7 @@ export function Switch(props: TSwitchProps): JSX.Element {
         checked={checked ?? false}
         labelPlacement={labelPlacement}
         disabled={disabled}
+        name={name}
         {...rest}
       />
       {Boolean(label) && (
