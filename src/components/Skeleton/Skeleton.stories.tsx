@@ -35,7 +35,7 @@ SkeletonWithChildren.args = {
 }
 
 const TemplateWithContainer: ComponentStory<typeof Skeleton> = (args) => (
-  <div style={{ width: '500px', height: '30px', background: 'orange' }}>
+  <div style={{ width: '500px', height: '30px' }}>
     <Skeleton {...args}>
       {args.children}
     </Skeleton>

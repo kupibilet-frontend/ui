@@ -43,11 +43,11 @@ const StyledSkeleton = styled.div<StylesProps>`
   border-radius: ${({ variant }) => (variant === 'circular' ? '50%' : '4px')};
   width: ${choiceOfWidth};
   height: ${choiceOfHeight};
-  background: ${({ theme }) => theme.color.colorBgSecondaryNormal};
+  background: ${({ theme }) => theme.skeleton.skeleton_default_default_color_bg_default};
   &::after {
     content: '';
-    animation: ${skeletonAnimation} 1.6s linear .1s infinite;
-    background: ${({ theme }) => theme.color.colorBgPrimaryNormal};
+    animation: ${skeletonAnimation} .8s linear .8s infinite;
+    background: ${({ theme }) => theme.skeleton.skeleton_default_default_color_primary_default};
     filter: blur(8.5px);
     position: absolute;
     transform: translateX(-100%); 

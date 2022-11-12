@@ -91,6 +91,13 @@ const configs = [
     matcher: defaultMatcher('radioButton'),
     destination: () => `${destinationRoot}/radio.ts`,
   },
+  {
+    themes: ['light'],
+    filterName: 'isSkeleton',
+    transform: transforms.component,
+    matcher: defaultMatcher('skeleton'),
+    destination: () => `${destinationRoot}/skeleton.ts`,
+  },
 ]
 
 configs.forEach(({ themes, filterName, transform, matcher, destination }) => {

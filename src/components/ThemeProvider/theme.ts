@@ -22,6 +22,8 @@ import * as checkboxTokens from './tokens/checkbox'
 
 import * as radioTokens from './tokens/radio'
 
+import * as skeletonTokens from './tokens/skeleton'
+
 export const font = `
   font: 400 16px / 20px 'KB Suisse Intl';
   -moz-osx-font-smoothing: grayscale;
@@ -40,6 +42,7 @@ const lightTheme: DefaultTheme = {
   switch: switchTokens,
   checkbox: checkboxTokens,
   radio: radioTokens,
+  skeleton: skeletonTokens,
 }
 
 const darkTheme: DefaultTheme = {
@@ -52,6 +55,8 @@ const darkTheme: DefaultTheme = {
   switch: switchTokens,
   checkbox: checkboxTokens,
   radio: radioTokens,
+  skeleton: skeletonTokens,
 }
+
 
 export { lightTheme, darkTheme }

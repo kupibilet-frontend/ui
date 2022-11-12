@@ -20,6 +20,8 @@ import * as checkboxTokens from './tokens/checkbox'
 
 import * as radioTokens from './tokens/radio'
 
+import * as skeleton from './tokens/skeleton'
+
 declare module 'styled-components' {
   export interface DefaultTheme {
       font: string,
@@ -32,6 +34,7 @@ declare module 'styled-components' {
       switch: typeof switchTokens,
       checkbox: typeof checkboxTokens,
       radio: typeof radioTokens,
+      skeleton: typeof skeleton,
       queries: Record<string, string>
   }
 }
