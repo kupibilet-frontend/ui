@@ -25,6 +25,7 @@ export interface TProps extends TWithMediaProps {
   closeOnEsc?: boolean,
   shouldRenderCloseIcon?: boolean,
   isOnBottom?: boolean,
+  isNativeView?: boolean,
   onSubmitClick?: () => void,
   submitText?: React.ReactChild,
   submitButtonCloseText?: React.ReactChild,
@@ -61,6 +62,7 @@ export const Modal = React.memo((props: TProps) => {
     closeOnEsc = true,
     shouldRenderCloseIcon = true,
     isOnBottom = false,
+    isNativeView = true,
     submitText = 'Продолжить',
     submitButtonCloseText = 'Отменить',
     defaultButtonCloseText = 'Закрыть',
@@ -94,10 +96,10 @@ export const Modal = React.memo((props: TProps) => {
   }, [onClose])
 
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (event.keyCode === 27 && closeOnEsc) {
+    if (event.keyCode === 27 && closeOnEsc && isOpen) {
       closePortal()
     }
-  }, [closeOnEsc, closePortal])
+  }, [closeOnEsc, closePortal, isOpen])
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown)
@@ -140,6 +142,7 @@ export const Modal = React.memo((props: TProps) => {
           isModalOverlay
           closePortal={closeOnOutsideClick ? closePortal : () => null}
           isOnBottom={isOnBottom}
+          isNativeView={isNativeView}
         >
           <ModalContent size={size}>
             {renderHeader && renderHeader({

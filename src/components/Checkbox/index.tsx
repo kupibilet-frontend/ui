@@ -3,6 +3,7 @@ import { WrappedFieldProps } from 'redux-form'
 import _get from 'lodash/get'
 import Icon from 'components/Icon'
 import { ICON_SIZES } from 'components/Icon/consts'
+import { TTypographyProps } from 'components/Typography'
 import {
   TLabelPlacement,
   CheckboxLabel,
@@ -20,6 +21,7 @@ export type TProps = {
   name?: string,
   className?: string,
   labelPlacement?: TLabelPlacement,
+  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
 }
 
 export const Checkbox = React.memo((props: TProps) => {
@@ -31,6 +33,7 @@ export const Checkbox = React.memo((props: TProps) => {
     name = '',
     className = '',
     labelPlacement = 'end',
+    labelProps,
     ...restProps
   } = props
 
@@ -40,6 +43,7 @@ export const Checkbox = React.memo((props: TProps) => {
       disabled={disabled}
       className={className}
       labelPlacement={labelPlacement}
+      labelProps={{ variant: labelProps?.variant || 'medium', ...labelProps }}
     >
       <StyledCheckbox
         classname="checkmark"
@@ -50,7 +54,7 @@ export const Checkbox = React.memo((props: TProps) => {
           <IconWrap checked={checked}>
             <Icon
               name="checkbox-check"
-              fill="background"
+              fill="colorBgPrimaryNormal"
               size={ICON_SIZES.xxsmall}
             />
           </IconWrap>
@@ -66,7 +70,13 @@ export const Checkbox = React.memo((props: TProps) => {
           {...restProps}
         />
       </StyledCheckbox>
-      <LabelText className="label-text" disabled={disabled} labelPlacement={labelPlacement}>
+      <LabelText
+        className="label-text"
+        disabled={disabled}
+        labelPlacement={labelPlacement}
+        variant="medium"
+        {...labelProps}
+      >
         {children}
       </LabelText>
 
