@@ -23,6 +23,7 @@ function Popover(props: TPopoverProps): JSX.Element {
     zIndex = OVERLAY_Z_INDEX - 1,
     className = '',
     autoWidth = false,
+    isHidden = false,
   } = props
 
   const {
@@ -37,6 +38,8 @@ function Popover(props: TPopoverProps): JSX.Element {
     side,
   } = usePopover(placement)
 
+  const isPopoverShow = isOpen && !isHidden
+
   return (
     <>
       <div
@@ -48,7 +51,7 @@ function Popover(props: TPopoverProps): JSX.Element {
       >
         {children}
       </div>
-      {isOpen && (
+      {isPopoverShow && (
         <Portal>
           <GlobalStylesScope>
             <div
