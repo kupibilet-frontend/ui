@@ -18,7 +18,7 @@ export interface TProps {
   /**
   * Отображаемая подпись опции
   */
-  label: React.ReactNode,
+  label?: React.ReactNode,
   /**
   * Недоступность выбора опции
   */
@@ -33,7 +33,7 @@ export interface TProps {
   onChange?: (value: TValue) => void,
   className?: string,
 
-  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
+  labelProps?: Omit<Partial<TTypographyProps>, 'children'> & { variant?: Extract<TTypographyProps['variant'], 'medium' | 'large'> }
 }
 
 /**
@@ -69,9 +69,11 @@ const Radio = (props: TProps): JSX.Element => {
         checked={checked}
         onChange={() => onChange(value)}
       />
-      <LabelText disabled={disabled} variant="medium" {...labelProps}>
-        {label}
-      </LabelText>
+      {label && (
+        <LabelText disabled={disabled} variant="medium" {...labelProps}>
+          {label}
+        </LabelText>
+      )}
     </RadioLabel>
   )
 }
