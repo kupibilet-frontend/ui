@@ -21,6 +21,7 @@ import * as switchTokens from './tokens/switcher'
 import * as checkboxTokens from './tokens/checkbox'
 
 import * as radioTokens from './tokens/radio'
+import * as informationCardTokens from './tokens/informationCard'
 
 export const font = `
   font: 400 16px / 20px 'KB Suisse Intl';
@@ -40,6 +41,7 @@ const lightTheme: DefaultTheme = {
   switch: switchTokens,
   checkbox: checkboxTokens,
   radio: radioTokens,
+  informationCard: informationCardTokens,
 }
 
 const darkTheme: DefaultTheme = {
@@ -52,6 +54,7 @@ const darkTheme: DefaultTheme = {
   switch: switchTokens,
   checkbox: checkboxTokens,
   radio: radioTokens,
+  informationCard: informationCardTokens,
 }
 
 export { lightTheme, darkTheme }
