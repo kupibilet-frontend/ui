@@ -64,12 +64,15 @@ export const InnerInput = styled.input<Pick<TSwitchProps, 'labelPlacement'>>`
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.switch.switcher_default_medium_color_bg_hover};
+    @media (hover: hover) {
+      background-color: ${({ theme }) => theme.switch.switcher_default_medium_color_bg_hover};
 
-    &::after {
-      background-color: ${({ theme }) => theme.switch.switcher_default_medium_color_switcher_icon_hover};
-      box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.switch.switcher_default_medium_color_border_hover};
+      &::after {
+        background-color: ${({ theme }) => theme.switch.switcher_default_medium_color_switcher_icon_hover};
+        box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.switch.switcher_default_medium_color_border_hover};
+      }
     }
+  
   }
 
   &:checked {
