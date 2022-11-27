@@ -57,6 +57,7 @@ const StyledSkeleton = styled.div<StylesProps>`
     top: 0;
     width: 15%;
     max-width: 64px;
+    min-width: 24px;
 }
 `
 
