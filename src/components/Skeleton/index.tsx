@@ -26,7 +26,7 @@ const choiceOfHeight = ({ hasChildren, height }:StylesProps) => {
 
 const skeletonAnimation = keyframes`
   0% {
-    left: -100%;
+    left: -50%;
   }
   50% {
     left: 50%;
@@ -46,7 +46,7 @@ const StyledSkeleton = styled.div<StylesProps>`
   background: ${({ theme }) => theme.skeleton.skeleton_default_default_color_bg_default};
   &::after {
     content: '';
-    animation: ${skeletonAnimation} 1.6s linear 1.6s infinite;
+    animation: ${skeletonAnimation} 1.6s linear 1s infinite;
     background: ${({ theme }) => theme.skeleton.skeleton_default_default_color_primary_default};
     filter: blur(8.5px);
     position: absolute;
@@ -56,6 +56,7 @@ const StyledSkeleton = styled.div<StylesProps>`
     right: 0;
     top: 0;
     width: 15%;
+    max-width: 64px;
 }
 `
 
