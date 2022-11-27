@@ -46,7 +46,7 @@ const StyledSkeleton = styled.div<StylesProps>`
   background: ${({ theme }) => theme.skeleton.skeleton_default_default_color_bg_default};
   &::after {
     content: '';
-    animation: ${skeletonAnimation} .8s linear .8s infinite;
+    animation: ${skeletonAnimation} 1.6s linear 1.6s infinite;
     background: ${({ theme }) => theme.skeleton.skeleton_default_default_color_primary_default};
     filter: blur(8.5px);
     position: absolute;

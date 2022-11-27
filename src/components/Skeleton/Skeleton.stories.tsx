@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof Skeleton> = (args) => (
 
 export const SkeletonBase = Template.bind({})
 SkeletonBase.args = {
-  width: 200,
+  width: 250,
   height: 50,
 }
 
@@ -31,15 +31,53 @@ SkeletonCircular.args = {
 
 export const SkeletonWithChildren = Template.bind({})
 SkeletonWithChildren.args = {
-  children: <div style={{ width: '50px', height: '50px' }} />,
+  children: <div style={{ width: '50px', height: '70px' }} />,
 }
 
 const TemplateWithContainer: ComponentStory<typeof Skeleton> = (args) => (
-  <div style={{ width: '500px', height: '30px' }}>
+  <div style={{ width: '1100px' }}>
     <Skeleton {...args}>
+      {args.children}
+    </Skeleton>
+    <br />
+    <Skeleton width={1000} {...args}>
+      {args.children}
+    </Skeleton>
+    <Skeleton width={50} height={50} variant="circular" {...args}>
+      {args.children}
+    </Skeleton>
+    <Skeleton width={400} {...args}>
       {args.children}
     </Skeleton>
   </div>
 )
 
 export const SkeletonWithContainer = TemplateWithContainer.bind({})
+SkeletonWithContainer.args = {
+  height: 50,
+}
+
+const TemplateWithContainerFlex: ComponentStory<typeof Skeleton> = (args) => (
+  <div style={{ width: '1100px', display: 'flex' }}>
+    <div>
+      <Skeleton {...args}>
+        {args.children}
+      </Skeleton>
+      <br />
+      <Skeleton width={1000} {...args}>
+        {args.children}
+      </Skeleton>
+      <Skeleton width={50} height={50} variant="circular" {...args}>
+        {args.children}
+      </Skeleton>
+      <Skeleton width={400} {...args}>
+        {args.children}
+      </Skeleton>
+    </div>
+  </div>
+)
+
+export const SkeletonWithContainerFlex = TemplateWithContainerFlex.bind({})
+SkeletonWithContainerFlex.args = {
+  height: 50,
+}
