@@ -10,7 +10,7 @@ const StyledTab = styled(Tab)`
   border-radius: 100px;
   line-height: 24px;
   user-select: none;
-  color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
+  color: ${({ theme }) => theme.color.colorTextSecondaryNormal};
   ${({ isActive, theme }) => {
     if (isActive) {
       return `
@@ -27,7 +27,7 @@ const StyledTab = styled(Tab)`
     return `
       background: transparent;
       &:hover {
-        color: ${theme.color.colorTextSecondaryDefault};
+        color: ${theme.color.colorTextSecondaryNormal};
       }
     `
   }}

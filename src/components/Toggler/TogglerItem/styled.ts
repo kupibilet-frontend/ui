@@ -13,7 +13,7 @@ export const StyledWrapper = styled.span<TStyledWrapperProps>`
   text-align: center;
   height: 100%;
 
-  color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
+  color: ${({ theme }) => theme.color.colorTextSecondaryNormal};
   ${borderRadiusSmall.all}
 
   display: flex;
