@@ -21,7 +21,7 @@ export const StyledWrapper = styled.span<TStyledWrapperProps>`
   justify-content: center;
 
   ${({ isSelected }) => isSelected && css`
-    color: ${({ theme }) => theme.color.colorTextAccentDefault};
+    color: ${({ theme }) => theme.color.colorTextAccentNormal};
     background-color: ${({ theme }) => theme.color.colorBgPrimaryNormal};
     font-weight: 500;
     box-shadow: 0px 1px 3px rgba(98, 112, 139, 0.2);
