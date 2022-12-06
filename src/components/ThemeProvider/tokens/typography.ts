@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 01 Nov 2022 18:38:35 GMT
+ * Generated on Wed, 30 Nov 2022 08:34:24 GMT
  */
 
 export const typography_desktop_headline_hero_default = {"fontFamily":"Kupibilet_DemiBold","size":"48","lineHeight":"64","fontWeight":"600"};
@@ -66,4 +66,4 @@ export const typography_components_desktop_tag_label_medium_default = {"fontFami
 export const typography_components_desktop_tag_picker_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"14","lineHeight":"16","fontWeight":"500"};
 export const typography_components_desktop_airplane_seat_name_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"16","lineHeight":"24","fontWeight":"500"};
 export const typography_components_desktop_information_card_headline_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"14","lineHeight":"16","fontWeight":"500"};
-export const typography_components_desktop_information_card_description_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"18","fontWeight":"400"};
+export const typography_components_desktop_information_card_description_medium_default = {"fontFamily":"SuisseIntl-Medium","size":"12","lineHeight":"16","fontWeight":"400"};

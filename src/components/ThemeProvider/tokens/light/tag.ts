@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 01 Nov 2022 18:38:35 GMT
+ * Generated on Wed, 30 Nov 2022 08:34:24 GMT
  */
 
 export const tag_label_normal_medium_color_bg_default = "#edeef3";

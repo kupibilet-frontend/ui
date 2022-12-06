@@ -11,7 +11,7 @@ interface TGetBackgroundImage {
 }
 
 const getBackgroundImage = ({ theme }: TGetBackgroundImage) => {
-  const iconSrc = getPopoverArrow(theme.color.colorTextContrastDefault)
+  const iconSrc = getPopoverArrow(theme.color.colorTextContrastNormal)
 
   if (iconSrc) {
     return `background-image: ${iconSrc}`
@@ -75,7 +75,7 @@ const PopoverBackground = styled.div<TPopoverBackgroundProps>`
   min-width: 240px;
   max-width: ${({ size }) => POPOVER_SIZES[size]};
   background: ${({ theme }) => theme.color.colorBgContrastNormal};
-  color: ${({ theme }) => theme.color.colorTextContrastDefault};
+  color: ${({ theme }) => theme.color.colorTextContrastNormal};
   border-radius: 6px;
   padding: 12px;
   display: flex;

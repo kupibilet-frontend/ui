@@ -19,8 +19,8 @@ const TypographyPreview: Story = () => (
       hero: Пример заголовка headline-hero-default
     </Typography>
 
-    <Typography variant="h1" color="colorTextAccentDefault">
-      h1: Пример заголовка headline-1-default colorTextAccentDefault
+    <Typography variant="h1" color="colorTextAccentNormal">
+      h1: Пример заголовка headline-1-default colorTextAccentNormal
     </Typography>
 
     <Typography variant="h2">
