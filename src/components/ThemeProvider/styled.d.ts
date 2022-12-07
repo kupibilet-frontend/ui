@@ -19,6 +19,7 @@ import * as switchTokens from './tokens/switcher'
 import * as checkboxTokens from './tokens/checkbox'
 
 import * as radioTokens from './tokens/radio'
+import * as informationCardTokens from './tokens/informationCard'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -32,6 +33,7 @@ declare module 'styled-components' {
       switch: typeof switchTokens,
       checkbox: typeof checkboxTokens,
       radio: typeof radioTokens,
+      informationCard: typeof informationCardTokens,
       queries: Record<string, string>
   }
 }

@@ -91,6 +91,17 @@ const configs = [
     matcher: defaultMatcher('radioButton'),
     destination: () => `${destinationRoot}/radio.ts`,
   },
+  {
+    themes: ['light'],
+    filterName: 'isInformationCard',
+    transform: transforms.component,
+    matcher: categoriesMatcher([
+      'informationCardDefault',
+      'informationCardButtonDefault',
+      'informationCardButtonIcon',
+    ]),
+    destination: () => `${destinationRoot}/informationCard.ts`,
+  },
 ]
 
 configs.forEach(({ themes, filterName, transform, matcher, destination }) => {
