@@ -5,16 +5,16 @@
                 "color":{
                     "inputHint":{
                         "normal":{
-                            "value": "{color.text.description.default.value}"
+                            "value": "{color.text.description.normal.value}"
                         },
                         "hover":{
-                            "value": "{color.text.description.default.value}"
+                            "value": "{color.text.description.normal.value}"
                         },
                         "active":{
-                            "value": "{color.text.description.default.value}"
+                            "value": "{color.text.description.normal.value}"
                         },
                         "disable":{
-                            "value": "{color.text.primary.disable.value}"
+                            "value": "{color.text.description.disable.value}"
                         },
                         "error":{
                             "value": "{color.text.danger.default.value}"

@@ -13,11 +13,11 @@
                         "active": {
                             "value": "{color.bg.accent.normal.value}"
                         },
-                        "activeHover": {
+                         "activeHover": {
                             "value": "{color.bg.accent.hover.value}"
                         },
                         "disable": {
-                            "value": "{color.bg.primary.disable.value}"
+                            "value": "{color.bg.dark.disable.value}"
                         }
                     },
                     "border":{
@@ -48,9 +48,9 @@
                             "value": "{color.text.staticWhite.normal.value}"
                         }
                     },
-                    "text":{
+                     "text":{
                         "normal": {
-                            "value": "{color.text.secondary.default.value}"
+                            "value": "{color.text.secondary.normal.value}"
                         },
                         "hover": {
                             "value": "{color.text.primary.normal.value}"

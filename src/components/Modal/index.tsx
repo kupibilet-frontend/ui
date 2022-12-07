@@ -96,10 +96,10 @@ export const Modal = React.memo((props: TProps) => {
   }, [onClose])
 
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (event.keyCode === 27 && closeOnEsc) {
+    if (event.keyCode === 27 && closeOnEsc && isOpen) {
       closePortal()
     }
-  }, [closeOnEsc, closePortal])
+  }, [closeOnEsc, closePortal, isOpen])
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown)

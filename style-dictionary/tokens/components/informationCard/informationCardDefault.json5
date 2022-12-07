@@ -20,7 +20,7 @@
                     },
                     "description":{
                         "default":{
-                            "value": "{color.text.secondary.default.value}"
+                            "value": "{color.text.secondary.normal.value}"
                         } 
                     }
                 },
@@ -83,7 +83,7 @@
                     },
                     "description":{
                         "default":{
-                            "value": "{color.text.secondary.default.value}"
+                            "value": "{color.text.secondary.normal.value}"
                         } 
                     }
                 },
@@ -146,7 +146,7 @@
                     },
                     "description":{
                         "default":{
-                            "value": "{color.text.secondary.default.value}"
+                            "value": "{color.text.secondary.normal.value}"
                         } 
                     }
                 },

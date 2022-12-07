@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Nov 2022 14:17:01 GMT
+ * Generated on Wed, 30 Nov 2022 08:34:24 GMT
  */
 
 export const check_box_default_medium_color_bg_normal = "#ffffff";

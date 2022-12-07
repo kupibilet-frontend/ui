@@ -677,7 +677,7 @@
                         "value": {
                             "fontFamily": "{font.family.medium.default.value}",
                             "size": "12",
-                            "lineHeight": "18",
+                            "lineHeight": "16",
                             "fontWeight": "400"
                         }
                     }
