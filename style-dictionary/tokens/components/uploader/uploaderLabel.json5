@@ -1,9 +1,9 @@
 {
-    "inputLabel":{
+    "uploaderLabel":{
         "default":{
             "medium":{
                 "color":{
-                    "inputLabel":{
+                    "uploaderLabel":{
                         "normal":{
                             "value": "{color.text.secondary.normal.value}"
                         },

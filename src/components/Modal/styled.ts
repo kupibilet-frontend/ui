@@ -78,7 +78,7 @@ export const Content = styled.div`
   flex-grow: 1;
   margin-bottom: 18px;
   padding: 0 42px;
-  color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
+  color: ${({ theme }) => theme.color.colorTextSecondaryNormal};
 
   @media ${queries.isMobile} {
     padding: 0 30px;

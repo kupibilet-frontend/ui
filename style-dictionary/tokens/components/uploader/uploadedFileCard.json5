@@ -1,0 +1,78 @@
+{
+    "uploadedFileCard":{
+        "default":{
+            "medium":{
+                "color":{
+                    "bg": {
+                        "normal": {
+                            "value": "{color.bg.primary.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.bg.primary.normal.value}"
+                        },
+                        "loading": {
+                            "value": "{color.bg.secondary.normal.value}"
+                        },
+                        "error": {
+                            "value": "{color.bg.accent.active.value}"
+                        },
+                        "disable": {
+                            "value": "{color.bg.primary.disable.value}"
+                        }
+                    },
+                    "fileName":{
+                        "normal": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "loading": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "error": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.primary.normal.value}"
+                        }
+                    },
+                    "icon":{
+                        "normal": {
+                            "value": "{color.text.success.default.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "loading": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "error": {
+                            "value": "{color.text.danger.default.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.primary.disable.value}"
+                        }
+                    },
+                    "status":{
+                        "normal": {
+                            "value": "{color.text.description.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.description.normal.value}"
+                        },
+                        "loading": {
+                            "value": "{color.text.primary.normal.value}"
+                        },
+                        "error": {
+                            "value": "{color.text.danger.default.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.description.disable.value}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

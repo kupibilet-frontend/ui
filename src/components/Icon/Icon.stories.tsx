@@ -25,7 +25,7 @@ const Default: Story<TIconProps> = Template.bind({})
 Default.args = {
   name: 'checkmark',
   size: ICON_SIZES.large,
-  fill: 'colorTextAccentDefault',
+  fill: 'colorTextAccentNormal',
   striked: false,
   paid: false,
   rotate: false,

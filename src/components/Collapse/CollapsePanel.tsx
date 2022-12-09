@@ -61,7 +61,7 @@ const CollapseButtonIcon = styled(Icon)`
 `
 
 export const StyledPanelContent = styled.div`
-  color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
+  color: ${({ theme }) => theme.color.colorTextSecondaryNormal};
   border-bottom: 1px solid ${({ theme }) => theme.color.misc200};
 `
 

@@ -10,7 +10,7 @@
                     },
                     "text":{
                         "default":{
-                            "value": "{color.text.secondary.default.value}"
+                            "value": "{color.text.secondary.normal.value}"
                         } 
                     }
                 },
@@ -240,7 +240,7 @@
                     },
                     "text":{
                         "default":{
-                            "value": "{color.text.accent.default.value}"
+                            "value": "{color.text.accent.normal.value}"
                         } 
                     }
                 },

@@ -1,0 +1,52 @@
+{
+    "uploader":{
+        "default":{
+            "medium":{
+                "color":{
+                    "bg": {
+                        "normal": {
+                            "value": "{color.bg.statusDefault.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.bg.statusDefault.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.bg.statusDefault.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.bg.statusDefault.disable.value}"
+                        }
+                    },
+                    "text":{
+                        "normal": {
+                            "value": "{color.text.link.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.secondary.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.text.link.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.secondary.disable.value}"
+                        }
+                    },
+                    "icon":{
+                        "normal": {
+                            "value": "{color.text.link.normal.value}"
+                        },
+                        "hover": {
+                            "value": "{color.text.secondary.normal.value}"
+                        },
+                        "active": {
+                            "value": "{color.text.link.normal.value}"
+                        },
+                        "disable": {
+                            "value": "{color.text.secondary.disable.value}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
