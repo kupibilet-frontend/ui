@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 12 Nov 2022 06:27:35 GMT
+ * Generated on Wed, 30 Nov 2022 08:34:24 GMT
  */
 
 export const input_label_default_medium_color_input_label_normal = "#d0d1d7";
@@ -29,7 +29,7 @@ export const input_default_medium_color_border_normal = "#51525a";
 export const input_default_medium_color_border_hover = "#34ad60";
 export const input_default_medium_color_border_active = "#2f9d57";
 export const input_default_medium_color_border_error = "#e64926";
-export const input_default_medium_color_border_disable = "rgba(0, 0, 0, 0)";
+export const input_default_medium_color_border_disable = "rgba(0, 0, 0, 0)}";
 export const input_default_medium_typography_mobile_placeholder = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
 export const input_default_medium_typography_mobile_input_text = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
 export const input_default_medium_typography_desktop_placeholder = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
@@ -41,6 +41,6 @@ export const input_hint_default_medium_color_input_hint_normal = "#b5b6c0";
 export const input_hint_default_medium_color_input_hint_hover = "#b5b6c0";
 export const input_hint_default_medium_color_input_hint_active = "#b5b6c0";
 export const input_hint_default_medium_color_input_hint_disable = "#51525a";
-export const input_hint_default_medium_color_input_hint_error = "#e64926";
+export const input_hint_default_medium_color_input_hint_error = "#ff6240";
 export const input_hint_default_medium_typography_mobile_input_hint = {"fontFamily":"SuisseIntl-Regular","size":"12","lineHeight":"18","fontWeight":"400"};
 export const input_hint_default_medium_typography_desktop_input_hint = {"fontFamily":"SuisseIntl-Regular","size":"12","lineHeight":"18","fontWeight":"400"};

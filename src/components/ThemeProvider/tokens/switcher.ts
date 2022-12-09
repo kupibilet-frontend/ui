@@ -1,13 +1,13 @@
 /**
  * Do not edit directly
- * Generated on Sat, 12 Nov 2022 06:27:36 GMT
+ * Generated on Wed, 30 Nov 2022 08:34:24 GMT
  */
 
 export const switcher_default_medium_color_bg_normal = "#d0d1d7";
 export const switcher_default_medium_color_bg_hover = "#d0d1d7";
 export const switcher_default_medium_color_bg_active = "#37b866";
 export const switcher_default_medium_color_bg_active_hover = "#32a95e";
-export const switcher_default_medium_color_bg_disable = "#edeef3";
+export const switcher_default_medium_color_bg_disable = "#eeeff2";
 export const switcher_default_medium_color_border_normal = "rgba(0, 0, 0, 0)";
 export const switcher_default_medium_color_border_hover = "#32a95e";
 export const switcher_default_medium_color_border_active = "rgba(0, 0, 0, 0)";

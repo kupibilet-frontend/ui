@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 12 Nov 2022 06:27:35 GMT
+ * Generated on Wed, 30 Nov 2022 08:34:24 GMT
  */
 
 export const input_label_default_medium_color_input_label_normal = "#62657f";
@@ -29,7 +29,7 @@ export const input_default_medium_color_border_normal = "#d0d1d7";
 export const input_default_medium_color_border_hover = "#32a95e";
 export const input_default_medium_color_border_active = "#2e9955";
 export const input_default_medium_color_border_error = "#ff6240";
-export const input_default_medium_color_border_disable = "rgba(0, 0, 0, 0)";
+export const input_default_medium_color_border_disable = "rgba(0, 0, 0, 0)}";
 export const input_default_medium_typography_mobile_placeholder = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
 export const input_default_medium_typography_mobile_input_text = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};
 export const input_default_medium_typography_desktop_placeholder = {"fontFamily":"SuisseIntl-Regular","size":"16","lineHeight":"24","fontWeight":"400"};

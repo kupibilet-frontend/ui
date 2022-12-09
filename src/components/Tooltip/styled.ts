@@ -67,7 +67,7 @@ const TooltipBackground = styled.div<TTooltipCommonProps>`
   min-width: 90px;
   white-space: nowrap;
   background: ${getBackgroundColor};
-  color: ${({ theme }) => theme.color.colorTextContrastDefault};
+  color: ${({ theme }) => theme.color.colorTextContrastNormal};
   border-radius: 100px;
   padding: 0 12px;
   display: flex;

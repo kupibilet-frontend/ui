@@ -98,6 +98,17 @@ const configs = [
     matcher: defaultMatcher('skeleton'),
     destination: () => `${destinationRoot}/skeleton.ts`,
   },
+  {
+    themes: ['light'],
+    filterName: 'isInformationCard',
+    transform: transforms.component,
+    matcher: categoriesMatcher([
+      'informationCardDefault',
+      'informationCardButtonDefault',
+      'informationCardButtonIcon',
+    ]),
+    destination: () => `${destinationRoot}/informationCard.ts`,
+  },
 ]
 
 configs.forEach(({ themes, filterName, transform, matcher, destination }) => {

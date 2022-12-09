@@ -1761,10 +1761,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kupibilet/icons@^5.9.28":
-  version "5.9.28"
-  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.9.28.tgz#973de900d02cdcfaab35235ff4fcb3ca4c57a46d"
-  integrity sha512-e+jeMkJDjjdQmWgN2tkvqIV5JygjyDGTOYb7LEtRNWjKZTxu5Lg2AdmWi2I2ucWydt00RArZluZm0vdsvNZY8g==
+"@kupibilet/icons@5.9.31":
+  version "5.9.31"
+  resolved "https://registry.yarnpkg.com/@kupibilet/icons/-/icons-5.9.31.tgz#5ac8cfe74623aaaa78f5f9cad1a4529be961722c"
+  integrity sha512-um2eRyw64l0H4GsGKo/7oDcd3CTwS7/fK2w60bt5ktdLeGc2MlPWkOz+fSEhE0tUn8kIhgPNPq5IEdmcF90NiQ==
 
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"

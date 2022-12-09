@@ -53,7 +53,7 @@ interface TNavItemProps {
 export const NavItem = styled.span<TNavItemProps>`
   display: inline-block;
   position: relative;
-  color: ${({ theme }) => theme.color.colorTextSecondaryDefault};
+  color: ${({ theme }) => theme.color.colorTextSecondaryNormal};
   font-size: 18px;
   padding: 11px 15px;
   line-height: 26px;

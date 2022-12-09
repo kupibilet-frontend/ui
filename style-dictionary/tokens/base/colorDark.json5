@@ -85,6 +85,9 @@
                 },
                 "active":{
                     "value":"rgba(46, 46, 51, 1)"
+                },
+                "disable":{
+                    "value":"rgba(58, 58, 65, 1)"
                 }
             },
             "statusPrimary": {
@@ -147,29 +150,20 @@
                     "value": "rgba(15, 56, 30, 1)"
                 },
                 "hover":{
-                    "value":"rgba(13, 48, 26, 1)"
+                    "value":"rgba(11, 40, 22, 1)"
                 },
                 "active":{
-                    "value":"rgba(11, 40, 22, 1)"
+                    "value":"rgba(36, 59, 2, 1)"
                 }
             },
             "bonusDefault": {
                 "normal":{
                     "value": "rgba(55, 184, 102, 1)"
-                },
-                "hover":{
-                    "value":"rgba(52, 173, 96, 1)"
-                },
-                "active":{
-                    "value":"rgba(47, 157, 87, 1)"
-                },
-                "disable":{
-                    "value":"rgba(238, 239, 242, 1)"
                 }
             },
             "bonusGold": {
                 "normal":{
-                    "value": "rgba(252, 133, 24, 1)"
+                    "value": "rgba(215, 103, 0, 1)"
                 }
             },
             "bonusPlatinum": {
@@ -181,6 +175,9 @@
                 "normal":{
                     "value": "rgba(70, 71, 78, 1)",
                     "description": "Используется для серого фона компонентов, которым не хватает контраста с secondary"
+                },
+                "disable":{
+                    "value":"rgba(58, 58, 65, 1)"
                 }
             },
             "transparent":{
@@ -207,27 +204,39 @@
                 }
             },
             "secondary": {
-                "default": {
+                "normal": {
                     "value": "rgba(208, 209, 215, 1)"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1)"
                 }
             },
             "description": {
-                "default": {
+                "normal": {
                     "value": "rgba(181, 182, 192, 1))"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1)"
                 }
             },
             "placeholder": {
-                "default": {
+                "normal": {
                     "value": "rgba(129, 130, 140, 1)"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1)"
                 }
             },
             "contrast": {
-                "default": {
+                "normal": {
                     "value": "rgba(16, 16, 20, 1)"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1)"
                 }
             },
             "accent": {
-                "default": {
+                "normal": {
                     "value": "rgba(74, 245, 122, 1)"
                 },
                 "hover": {
@@ -259,6 +268,9 @@
                 },
                 "active": {
                     "value": "rgba(0, 122, 204, 1)"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1)"
                 }
             },
             "warning": {
@@ -268,7 +280,7 @@
             },
             "danger": {
                 "default": {
-                    "value": "rgba(230, 73, 38, 1)"
+                    "value": "rgba(255, 98, 64, 1)"
                 }
             },
             "staticWhite": {
@@ -277,6 +289,9 @@
                 },
                 "hover": {
                     "value": "rgba(255, 255, 255, 0.75)"
+                },
+                "disable": {
+                    "value": "rgba(81, 82, 90, 1))"
                 }
             }
             
@@ -316,7 +331,7 @@
             },
             "success":{
                 "normal":{
-                    "value": "rgba(74, 245, 122, 1)"
+                    "value": "rgba(49, 165, 91, 1)"
                 }
             },
             "danger":{

@@ -22,19 +22,19 @@
                     },
                     "placeholder":{
                         "normal":{
-                            "value": "{color.text.placeholder.default.value}"
+                            "value": "{color.text.placeholder.normal.value}"
                         },
                         "hover":{
-                            "value": "{color.text.placeholder.default.value}"
+                            "value": "{color.text.placeholder.normal.value}"
                         },
                         "active":{
-                            "value": "{color.text.placeholder.default.value}"
+                            "value": "{color.text.placeholder.normal.value}"
                         },
                         "disable":{
                             "value": "{color.text.primary.disable.value}"
                         },
                         "error":{
-                            "value": "{color.text.placeholder.default.value}"
+                            "value": "{color.text.placeholder.normal.value}"
                         }
                     },
                     "inputText":{
@@ -68,8 +68,8 @@
                             "value": "{color.border.danger.normal.value}"
                         },
                         "disable":{
-                            "value": "{color.border.transparent.normal.value}"
-                        }
+                            "value": "{color.border.transparent.normal.value}}"
+                        } 
                     }
                 },
                 "typography": {
@@ -79,7 +79,7 @@
                         },
                         "inputText": {
                             "value": "{typography.componentsMobile.inputText.medium.default.value}"
-                        }
+                        },
                     },
                     "desktop": {
                         "placeholder": {
@@ -101,7 +101,6 @@
                             "value": "40"
                         }
                     },
-                    
                     "padding": {
                         "default": {
                             "value": {

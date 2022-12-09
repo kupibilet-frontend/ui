@@ -21,6 +21,7 @@ import * as switchTokens from './tokens/switcher'
 import * as checkboxTokens from './tokens/checkbox'
 
 import * as radioTokens from './tokens/radio'
+import * as informationCardTokens from './tokens/informationCard'
 
 import * as skeletonTokens from './tokens/skeleton'
 
@@ -43,6 +44,7 @@ const lightTheme: DefaultTheme = {
   checkbox: checkboxTokens,
   radio: radioTokens,
   skeleton: skeletonTokens,
+  informationCard: informationCardTokens,
 }
 
 const darkTheme: DefaultTheme = {
@@ -56,6 +58,7 @@ const darkTheme: DefaultTheme = {
   checkbox: checkboxTokens,
   radio: radioTokens,
   skeleton: skeletonTokens,
+  informationCard: informationCardTokens,
 }
 
 
