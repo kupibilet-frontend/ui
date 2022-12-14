@@ -17,6 +17,7 @@ type TProps = {
   onBlur?: () => void,
   className?: string,
   hasDelimiter?: boolean,
+  disabled?: boolean,
 }
 
 const ENTER_KEY_CODE = 13
@@ -32,6 +33,7 @@ const TogglerItem = ({
   onBlur,
   className = '',
   hasDelimiter = true,
+  disabled = false,
   ...props
 }: TProps): JSX.Element => {
   const isSelected = value === currentValue
@@ -43,6 +45,7 @@ const TogglerItem = ({
       as="div"
       onClick={() => onChange(value)}
       className={className}
+      disabled={disabled}
     >
       {children}
     </StyledWrapper>
