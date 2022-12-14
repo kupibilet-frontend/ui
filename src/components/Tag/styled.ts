@@ -35,6 +35,9 @@ export const Wrapper = styled.div<ITagProps>`
   background: ${({ theme, variant }) => theme.tag[`tag_label_${variant}_medium_color_bg_default`]};
   color: ${({ theme, variant }) => theme.tag[`tag_label_${variant}_medium_color_text_default`]};
   ${({ theme, variant }) => getPadding(theme, variant)}
+  .icon-inherit-color {
+    fill: ${({ theme, variant }) => theme.tag[`tag_label_${variant}_medium_color_text_default`]};
+  }
 `
 
 export const StyledIcon = styled(Icon)<ITagProps>`

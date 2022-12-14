@@ -63,7 +63,7 @@
     "@babel/preset-typescript": "^7.12.7",
     "@babel/types": "^7.12.12",
     "@emotion/core": "^10.0.10",
-    "@kupibilet/icons": "5.9.31",
+    "@kupibilet/icons": "5.9.32",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/client-api": "^6.5.9",
     "@storybook/react": "^6.5.9",
@@ -136,7 +136,7 @@
     "section-iterator": "^2.0.0"
   },
   "peerDependencies": {
-    "@kupibilet/icons": "^5.9.4",
+    "@kupibilet/icons": "^5.9.32",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "moment": "^2.29.1",
