@@ -3,7 +3,7 @@
   "version": "24.7.0",
   "description": "UI kit for kupibilet web app",
   "publishConfig": {
-    "kupibilet-dev:registry": "https://registry.npmjs.org"
+    "@kupibilet:registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "lint": "yarn lint:js && yarn lint:css",
