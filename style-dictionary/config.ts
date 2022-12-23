@@ -93,6 +93,13 @@ const configs = [
   },
   {
     themes: ['light'],
+    filterName: 'isSkeleton',
+    transform: transforms.component,
+    matcher: defaultMatcher('skeleton'),
+    destination: () => `${destinationRoot}/skeleton.ts`,
+  },
+  {
+    themes: ['light'],
     filterName: 'isInformationCard',
     transform: transforms.component,
     matcher: categoriesMatcher([
