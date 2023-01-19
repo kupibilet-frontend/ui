@@ -3,6 +3,7 @@ import { borderRadiusSmall } from 'utils/borderRadius'
 
 interface TStyledWrapperProps {
   isSelected: boolean,
+  disabled: boolean,
 }
 
 export const StyledWrapper = styled.span<TStyledWrapperProps>`
@@ -26,6 +27,13 @@ export const StyledWrapper = styled.span<TStyledWrapperProps>`
     font-weight: 500;
     box-shadow: 0px 1px 3px rgba(98, 112, 139, 0.2);
   `}
+
+  ${({ disabled }) => disabled && css`
+    pointer-events: none;
+    cursor: default;
+    color: ${({ theme }) => theme.color.colorTextAccentDisable};
+  `}
+
   ${({ theme }) => css`
     @media ${theme.queries.isMobile} {
       font-size: 14px;

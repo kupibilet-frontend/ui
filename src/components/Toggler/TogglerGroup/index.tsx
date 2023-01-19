@@ -30,6 +30,8 @@ type TProps = {
   name?: string,
 
   helperText?: React.ReactNode,
+
+  disabled?: boolean,
 }
 
 /**
@@ -44,6 +46,7 @@ const TogglerGroup = ({
   errorMessage = '',
   name = '',
   helperText = '',
+  disabled = false,
   ...props
 }: TProps): JSX.Element => {
   return (
@@ -68,6 +71,7 @@ const TogglerGroup = ({
             errorMessage,
             name,
             hasDelimiter,
+            disabled,
             ...props,
           })
         })}

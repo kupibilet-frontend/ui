@@ -34,6 +34,8 @@ type TPopoverProps = {
   className?: string,
 
   autoWidth?: boolean,
+
+  isHidden?: boolean,
 }
 
 type TPopoverWithDefaultsProps = Required<TPopoverProps>
