@@ -20,6 +20,7 @@ export const GenderToggler = (args: TTogglerProps): JSX.Element => {
       {...args}
       onChange={onChange}
       name="gender"
+      disabled
     >
       <TogglerItem value="male">
         Мужской
